@@ -1,0 +1,94 @@
+body {
+    position: relative;
+}
+
+.bg-slate-gray {
+    background-color: hsla(0, 0%, 20%, 1);
+}
+
+.bg-slate-gray-darker {
+    background-color: hsla(0, 0%, 8%, 1);
+}
+
+.bg-nearly-black {
+    background-color: hsla(0, 0%, 3%, 1);
+}
+
+.bg-purple-blue {
+    background-color: hsla(270, 91%, 24%, 1);
+}
+
+.bg-orange {
+    background-color: hsla(30, 100%, 50%, 1);
+}
+
+.active {
+    background-color: hsla(30, 100%, 50%, 1);
+}
+
+.fill-color-white {
+    fill: hsla(0, 100%, 100%, 1);
+    color: hsla(0, 100%, 100%, 1);
+}
+
+.courier-new {
+    font-family: "Courier New", courier, sans-serif;
+}
+
+.source-code-pro {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.shadows-into-light {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.navbar-hover li:hover{
+    background-color: hsla(30, 100%, 50%, 1);
+}
+
+.navbar-a a{
+    color: hsla(0, 100%, 100%, 1) !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    padding: 0.5rem 3.5rem !important;
+}
+
+.full-screen {
+    height: 100vh;
+}
+
+#home hr {
+    border-color: hsla(0, 100%, 100%, 1);
+    width: 80%;
+}
+
+.container-fluid a:hover {
+    color: hsla(30, 100%, 65%, 1);
+    fill: hsla(30, 100%, 65%, 1);
+}
+
+.container-fluid h1, h2, h3, h4, h5, h6, p {
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+}
+
+.social-media {
+    font-size: 2rem;
+}
+
+#AboutMe, #Experience, #Education, #Skills, #Portfolio {
+    min-height: 50vh;
+}
+
+#Footer {
+    height: 10rem;
+}
+
+.table-hover-bg {
+    background-color: #ccc;
+}
+
+.portfolio-hover button:hover {
+    background-color: hsla(30, 100%, 65%, 1);
+}
