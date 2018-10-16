@@ -2,6 +2,11 @@ body {
     position: relative;
 }
 
+img {
+    max-width: 100%;
+    height:auto;
+}
+
 .bg-slate-gray {
     background-color: hsla(0, 0%, 20%, 1);
 }
