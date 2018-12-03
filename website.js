@@ -1,13 +1,5 @@
-$(document).ready(() => {
+$(function() {
 
-	$(function() {
-		$('a[href^="#"]').click(function (event) {
-			event.preventDefault();
-
-			$('html, body').animate({
-				scrollTop: $($.attr(this, 'href')).offset()
-			}, 500);
-		});
-	});
+	$(document).snowfall({flakeCount: 100, maxSpeed: 10, round: true, maxSize: 7});
 
 });
