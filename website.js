@@ -1,5 +1,10 @@
-$(function() {
-
-	$(document).snowfall({flakeCount: 100, maxSpeed: 10, round: true, maxSize: 7});
-
+$(document).ready(() => {
+	$(function() {
+		$('a[href^="#"]').click(function (event) {
+			event.preventDefault();
+			$('html, body').animate({
+				scrollTop: $($.attr(this, 'href')).offset().top-100
+			}, 500);
+		});
+	});
 });
