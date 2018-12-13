@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c98a2744-57aa-44aa-9d36-da5a1bdae6d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/.bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/dist/snowfall.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/dist/snowfall.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/src/snowfall.jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery-snowfall/src/snowfall.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/.bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/dist/snowfall.jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/dist/snowfall.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/src/snowfall.jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-snowfall/src/snowfall.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website.js" beforeDir="false" afterPath="$PROJECT_DIR$/website.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="533" column="13" lean-forward="true" selection-start-line="533" selection-start-column="13" selection-end-line="533" selection-end-column="13" />
+            <state relative-caret-position="9614">
+              <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -60,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="33" column="25" selection-end-line="103" />
+            <state relative-caret-position="473">
+              <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -69,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="207">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -101,17 +102,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/website.js" />
-        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -130,26 +131,6 @@
               <item name="jackdomleo.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="jackdomleo.com" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jackdomleo.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jackdomleo.com" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="jquery-snowfall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jackdomleo.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jackdomleo.com" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="jquery-snowfall" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jackdomleo.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jackdomleo.com" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="jquery-snowfall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jackdomleo.com" type="b2602c69:ProjectViewProjectNode" />
@@ -183,6 +164,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="website.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/website.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.website.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -207,6 +198,10 @@
       <workItem from="1541285490998" duration="4193000" />
       <workItem from="1543080594596" duration="55000" />
       <workItem from="1543846169119" duration="2147000" />
+      <workItem from="1543848326461" duration="709000" />
+      <workItem from="1543850541076" duration="629000" />
+      <workItem from="1543928251104" duration="478000" />
+      <workItem from="1544742250636" duration="537000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Education table to be responsive.&#10;Other qualifications.">
       <created>1539640941046</created>
@@ -271,17 +266,37 @@
       <option name="project" value="LOCAL" />
       <updated>1541289666513</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Initial commit.">
+      <created>1543848368422</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543848368422</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added snowfall.">
+      <created>1543848386836</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1543848386836</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Minor snowfall fix.">
+      <created>1543848970944</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543848970944</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85314000" />
+    <option name="totallyTimeSpent" value="87667000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25906184" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2708018" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,31 +330,34 @@
     <MESSAGE value="Added Grav to Skills.&#10;Updated skill progress bars.&#10;Changed flybmi modal text.&#10;Centered dates in Education table." />
     <MESSAGE value="Updated to Font Awesome 5.4.1" />
     <MESSAGE value="Applied quote carousel and other small changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Applied quote carousel and other small changes." />
+    <MESSAGE value="Initial commit." />
+    <MESSAGE value="Added snowfall." />
+    <MESSAGE value="Minor snowfall fix." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor snowfall fix." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="33" column="25" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/jquery-snowfall/dist/snowfall.jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/website.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="207">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="533" column="13" lean-forward="true" selection-start-line="533" selection-start-column="13" selection-end-line="533" selection-end-column="13" />
+        <state relative-caret-position="9614">
+          <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
