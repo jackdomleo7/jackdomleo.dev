@@ -31,10 +31,6 @@ img {
     background-color: hsla(30, 100%, 50%, 1);
 }
 
-.carousel-inner .active {
-    background-color: hsla(0, 0%, 8%, 1);;
-}
-
 .fill-color-white {
     fill: hsla(0, 100%, 100%, 1);
     color: hsla(0, 100%, 100%, 1);
