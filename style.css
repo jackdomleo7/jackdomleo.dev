@@ -106,3 +106,7 @@ a:hover {
 .progress {
     height: 1.75rem;
 }
+
+.progress-bar {
+    height: 1.75rem;
+}
