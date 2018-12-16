@@ -7,6 +7,10 @@ img {
     height:auto;
 }
 
+hr {
+    width: 80%;
+}
+
 .bg-slate-gray {
     background-color: hsla(0, 0%, 20%, 1);
 }
@@ -68,9 +72,10 @@ img {
     width: 80%;
 }
 
-.container-fluid a:hover {
+a:hover {
     color: hsla(30, 100%, 65%, 1);
     fill: hsla(30, 100%, 65%, 1);
+    text-decoration: none;
 }
 
 .container-fluid h1, h2, h3, h4, h5, h6, p {
@@ -96,4 +101,8 @@ img {
 
 .portfolio-hover button:hover {
     background-color: hsla(30, 100%, 65%, 1);
+}
+
+.progress {
+    height: 1.75rem;
 }
