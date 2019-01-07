@@ -1,0 +1,14 @@
+{
+  "short_name": "J Domleo",
+  "name": "Jack Domleo",
+  "icons": [
+    {
+      "src": "images/j-icon.gif",
+      "type": "image/gif",
+      "sizes": "50x50"
+    }
+  ],
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#FF8000"
+}
