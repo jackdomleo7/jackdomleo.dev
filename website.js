@@ -10,9 +10,8 @@ $(document).ready(() => {
 
 	(function(){
 		var words = [
-			'Software Developer',
 			'Web Designer',
-			'Programmer',
+			'Junior Developer',
 			'Web Developer',
 		], i = 0;
 		setInterval(function(){
