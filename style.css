@@ -101,6 +101,12 @@ a:hover {
     text-decoration: none;
 }
 
+.heading > span {
+    border-bottom: 3px solid hsla(30, 100%, 50%, 1);
+    padding-bottom: 6px !important;
+    line-height: 50px;
+}
+
 .container-fluid h1, h2, h3, h4, h5, h6, p {
     margin-left: 1.8rem;
     margin-right: 1.8rem;
