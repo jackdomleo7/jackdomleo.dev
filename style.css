@@ -141,3 +141,45 @@ a:hover {
 #qualifications>div>p {
     margin-left: 2px;
 }
+
+#html:hover > div > h4 > i {
+    color: #dd4b24;
+}
+
+#css:hover > div > h4 > i {
+    color: #254bdc;
+}
+
+#grav:hover > div > h4 > i {
+    color: #211d1e;
+}
+
+#php:hover > div > h4 > i {
+    color: #6b7cb0;
+}
+
+#js:hover > div > h4 > i {
+    color: #e8d44d;
+}
+
+#nodejs:hover > div > h4 > i {
+    color: #6d9c68;
+}
+
+#reactjs:hover > div > h4 > i {
+    color: #00d2f7;
+}
+
+#python:hover > div > h4 > i {
+    background: -webkit-linear-gradient(-60deg, #366a99 50%, #f8ca40 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#adobe:hover > div > h4 > i {
+    color: #e71b24;
+}
+
+#mailchimp:hover > div > h4 > i {
+    color: #f7d919;
+}
