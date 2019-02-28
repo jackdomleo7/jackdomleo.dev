@@ -21,10 +21,6 @@ hr {
     width: 80%;
 }
 
-td:hover {
-    background-color: hsla(30, 100%, 65%, 1) !important;
-}
-
 @media screen and (max-width: 401px) {
     .name {
         font-size: 4rem;
@@ -136,4 +132,12 @@ a:hover {
 
 .progress-bar {
     height: 1.75rem;
+}
+
+#qualifications>div>h6 {
+    margin-right: 2px;
+}
+
+#qualifications>div>p {
+    margin-left: 2px;
 }
