@@ -189,3 +189,7 @@ a:hover {
 #mailchimp:hover > div > h4 > i {
     color: #f7d919;
 }
+
+#git:hover > div > h4 > i {
+    color: #e84d31;
+}
