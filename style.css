@@ -177,7 +177,7 @@ a:hover {
 }
 
 #python:hover > div > h4 > i {
-    background: -webkit-linear-gradient(-60deg, #366a99 50%, #f8ca40 50%);
+    background: -webkit-linear-gradient(-65deg, #366a99 52%, #f8ca40 48%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
