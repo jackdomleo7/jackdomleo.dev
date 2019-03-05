@@ -158,10 +158,18 @@ a:hover {
 
 #grav:hover > div > h4 > i {
     color: #211d1e;
+    background-color: #f7f7f7;
+    border-radius: 10px;
 }
 
 #php:hover > div > h4 > i {
-    color: #6b7cb0;
+    background-color: #6b7cb0;
+    border-radius: 59px / 50px;
+    height: 23px;
+}
+
+#php > div > h4 > i {
+    font-size: 1.6rem;
 }
 
 #js:hover > div > h4 > i {
@@ -186,8 +194,14 @@ a:hover {
     color: #e71b24;
 }
 
+#mailchimp > div > h4 > i {
+    padding-left: 3px;
+}
+
 #mailchimp:hover > div > h4 > i {
-    color: #f7d919;
+    background-color: #f7d919;
+    border-radius: 4px;
+    width: 26px;
 }
 
 #git:hover > div > h4 > i {
