@@ -204,6 +204,10 @@ a:hover {
     width: 26px;
 }
 
+#seo:hover > div > h4 > i {
+    color: #38a656;
+}
+
 #git:hover > div > h4 > i {
     color: #e84d31;
 }
