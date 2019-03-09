@@ -207,3 +207,13 @@ a:hover {
 #git:hover > div > h4 > i {
     color: #e84d31;
 }
+
+.skill {
+    text-decoration: none;
+    color: #000000;
+}
+
+.skill:hover {
+    text-decoration: none;
+    color: #000000;
+}
