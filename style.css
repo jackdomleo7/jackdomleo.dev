@@ -140,14 +140,6 @@ a:hover {
     height: 1.75rem;
 }
 
-#qualifications>div>h6 {
-    margin-right: 2px;
-}
-
-#qualifications>div>p {
-    margin-left: 2px;
-}
-
 #html:hover > div > h4 > i {
     color: #dd4b24;
 }
@@ -221,3 +213,90 @@ a:hover {
     text-decoration: none;
     color: #000000;
 }
+
+figure.qualification {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 250px;
+  height: 350px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.qualification * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+figure.qualification .image {
+  max-height: 220px;
+  overflow: hidden;
+}
+figure.qualification img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+figure.qualification figcaption {
+  margin: 0 15px 0;
+  padding: 15px;
+  position: relative;
+  background-color: #ffffff;
+}
+figure.qualification .date {
+  background-color: #ff7f00;
+  top: 15px;
+  color: #fff;
+  left: 0;
+  min-height: 48px;
+  min-width: 48px;
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+figure.qualification .date span {
+  display: block;
+  line-height: 24px;
+}
+figure.qualification .date .month {
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+figure.qualification h3,
+figure.qualification p {
+  margin: 0;
+  padding: 0;
+}
+figure.qualification h3 {
+  min-height: 50px;
+  margin-bottom: 10px;
+  margin-left: 45px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+}
+figure.qualification h4 {
+    margin-left: 0;
+    font-size: 1rem;
+}
+figure.qualification p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+figure.qualification a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
