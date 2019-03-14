@@ -1,6 +1,6 @@
 {
-  "short_name": "J Domleo",
-  "name": "Jack Domleo",
+  "short_name": "Jack Domleo",
+  "name": "Jack Domleo Portfolio",
   "icons": [
     {
       "src": "images/j-icon.gif",
@@ -10,5 +10,5 @@
   ],
   "start_url": "/",
   "display": "browser",
-  "theme_color": "#FF8000"
+  "theme_color": "#f87000"
 }
