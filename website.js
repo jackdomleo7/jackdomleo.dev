@@ -1,4 +1,6 @@
 $(document).ready(() => {
+
+	//Smooth scroll
 	$(function() {
 		$('a[href^="#"]').click(function (event) {
 			event.preventDefault();
@@ -7,18 +9,4 @@ $(document).ready(() => {
 			}, 500);
 		});
 	});
-
-	(function(){
-		var words = [
-			'Web Designer',
-			'Junior Developer',
-			'Web Developer',
-		], i = 0;
-		setInterval(function(){
-			$('#changingword').fadeOut(function(){
-				$(this).html(words[i=(i+1)%words.length]).fadeIn();
-			});
-		}, 3000);
-
-	})();
 });
