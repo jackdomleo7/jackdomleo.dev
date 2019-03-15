@@ -471,6 +471,15 @@ li.nav-item:hover > a {
     background-color: hsla(30, 100%, 65%, 1);
 }
 
+.modal-footer > a > i {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.modal-footer > a > i:hover {
+  color: hsla(30, 100%, 65%, 1);
+}
+
 
 /* Footer */
 
