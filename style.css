@@ -58,7 +58,7 @@ li.nav-item:hover > a {
 }
 
 .navbar-nav > li > a {
-  border-top: 3px hsla(0, 0%, 5%, 1) solid;
+  border: 3px hsla(0, 0%, 5%, 1) solid;
 }
 
 .navbar-a a{
