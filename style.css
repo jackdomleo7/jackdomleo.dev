@@ -250,12 +250,6 @@ li.nav-item:hover > a {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .fab {
-    font-size: 0.8rem;
-  }
-}
-
 .social-icons-row i:hover {
   background: #fff;
 }
