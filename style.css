@@ -379,13 +379,14 @@ li.nav-item:hover > a {
   color: #fff;
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  margin: auto;
   width: 250px;
   height: 350px;
   background-color: #ffffff;
   color: #000000;
   text-align: left;
   font-size: 16px;
+  border-radius: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 .qualification:hover {
