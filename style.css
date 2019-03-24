@@ -58,7 +58,7 @@ li.nav-item:hover > a {
 }
 
 .navbar-nav > li > a {
-  border: 3px hsla(0, 0%, 5%, 1) solid;
+  border: 3px transparent solid;
 }
 
 .navbar-a a{
@@ -473,6 +473,161 @@ li.nav-item:hover > a {
 
 .modal-footer > a > i:hover {
   color: hsla(30, 100%, 65%, 1);
+}
+
+figure.portfolio-item {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  background: #ffffff;
+}
+
+figure.portfolio-item h3 {
+  margin-right: 0.8rem;
+  margin-left: 0.8rem;
+}
+
+figure.portfolio-item img {
+  opacity: 1;
+  border-radius: 8px;
+  position: relative;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.portfolio-item .center {
+  border-radius: 5px;
+  display: block;
+  content: '';
+  position: absolute;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  height: 70px;
+  width: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+figure.portfolio-item .center i {
+  font-size: 2rem;
+  color: #ffffff;
+  line-height: 70px;
+  opacity: 0.3;
+}
+
+figure.portfolio-item figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+figure.portfolio-item figcaption > div {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+
+figure.portfolio-item figcaption a {
+  opacity: 0.7;
+}
+
+figure.portfolio-item figcaption a:hover {
+  opacity: 1;
+}
+
+figure.portfolio-item figcaption h3 {
+  background-color: #222;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+}
+
+figure.portfolio-item figcaption .left h3 {
+  border-radius: 5px 0 0 5px;
+  top: 50%;
+  padding: 4px 35px 4px 10px;
+  right: 0;
+  -webkit-transform: translate(100%, 0px);
+  transform: translate(100%, 0px);
+}
+
+figure.portfolio-item figcaption .right h3 {
+  border-radius: 0 5px 5px 0;
+  bottom: 50%;
+  padding: 4px 10px 4px 35px;
+  padding-left: 30px;
+  -webkit-transform: translate(-100%, 0px);
+  transform: translate(-100%, 0px);
+}
+
+figure.portfolio-item a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+figure.portfolio-item .tmd-orange {
+  background-color: #f15a25;
+}
+
+figure.portfolio-item .bmi-blue {
+  background-color: #1787bc;
+}
+
+figure.portfolio-item .white {
+  background-color: #ffffff;
+  color: #444444;
+}
+
+figure.portfolio-item:hover img,
+figure.portfolio-item.hover img {
+  opacity: 0.5;
+}
+
+figure.portfolio-item:hover figcaption .left h3,
+figure.portfolio-item.hover figcaption .left h3 {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0px);
+  transform: translate(0%, 0px);
+}
+
+figure.portfolio-item:hover figcaption .right h3,
+figure.portfolio-item.hover figcaption .right h3 {
+  opacity: 1;
+  -webkit-transform: translate(0%, 0px);
+  transform: translate(0%, 0px);
+}
+
+figure.portfolio-item:hover .center,
+figure.portfolio-item.hover .center {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+figure.portfolio-item:hover .center i,
+figure.portfolio-item.hover .center i {
+  -webkit-transform: translate(0%, -10px);
+  transform: translate(0%, -10px);
 }
 
 
