@@ -299,78 +299,111 @@ li.nav-item:hover > a {
     background-color: hsla(30, 100%, 50%, 1);
 }
 
-#html:hover > div > h4 > i {
+#html:hover i {
     color: #dd4b24;
 }
 
-#css:hover > div > h4 > i {
+#bootstrap:hover i {
+  color: #543c78;
+}
+
+#css:hover i {
     color: #254bdc;
 }
 
-#grav:hover > div > h4 > i {
+#sass:hover i {
+  color: #c66495;
+}
+
+#grav:hover i {
     color: #211d1e;
     background-color: #f7f7f7;
     border-radius: 10px;
 }
 
-#php:hover > div > h4 > i {
-    background-color: #6b7cb0;
-    border-radius: 59px / 50px;
-    height: 23px;
+#js h4 {
+  position: relative;
 }
 
-#php > div > h4 > i {
-    font-size: 1.6rem;
+#js i {
+  position: relative;
+  z-index: 5;
 }
 
-#js:hover > div > h4 > i {
+.js-square {
+  width: 15px;
+  height: 13px;
+  left: 111px;
+  top: 11px;
+  z-index: 3;
+  position: absolute;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.5px) {
+  .js-square {
+    left: 5px;
+    top: 40px;
+  }
+}
+
+#js:hover i {
     color: #e8d44d;
 }
 
-#nodejs:hover > div > h4 > i {
+#js:hover .js-square {
+  background-color: #000;
+}
+
+#nodejs:hover i {
     color: #6d9c68;
 }
 
-#reactjs:hover > div > h4 > i {
+#reactjs:hover i {
     color: #00d2f7;
 }
 
-#python:hover > div > h4 > i {
+#python:hover i {
     background: -webkit-linear-gradient(-60deg, #366a99 50%, #f8ca40 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#adobe:hover > div > h4 > i {
+#adobe:hover i {
     color: #e71b24;
 }
 
-#mailchimp > div > h4 > i {
+#mailchimp i {
     padding-left: 3px;
 }
 
-#mailchimp:hover > div > h4 > i {
+#mailchimp:hover i {
     background-color: #f7d919;
     border-radius: 4px;
     width: 26px;
 }
 
-#seo:hover > div > h4 > i {
+#seo:hover i {
     color: #38a656;
 }
 
-#git:hover > div > h4 > i {
+#git:hover i {
     color: #e84d31;
 }
 
-.skill {
-    text-decoration: none;
-    color: #000000;
+#Skills h4 {
+    text-decoration: none !important;
+    color: #000000 !important;
 }
 
-.skill:hover {
-    text-decoration: none;
-    color: #000000;
+#Skills h4:hover {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
+
+.subskills h4,
+.subskills .progress {
+  margin-left: 3.5rem;
 }
 
 
