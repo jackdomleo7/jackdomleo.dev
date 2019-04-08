@@ -315,6 +315,10 @@ li.nav-item:hover > a {
   color: #c66495;
 }
 
+#less:hover i {
+  color: #1f4471;
+}
+
 #grav:hover i {
     color: #211d1e;
     background-color: #f7f7f7;
