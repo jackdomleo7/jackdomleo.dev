@@ -1,20 +1,12 @@
-$primary-orange: #ff7f00;
-$secondary-orange: #f87000;
-$primary-black: rgba(0, 0, 0, 0.95);
-
-$flybmi-blue: #1787bc;
-$tmd-orange: #f15a25;
+@import "./variables";
+@import "./mixins";
 
 html {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    @include box-sizing(border-box);
 }
 
 *, *:before, *:after {
-    -webkit-box-sizing: inherit;
-       -moz-box-sizing: inherit;
-            box-sizing: inherit;
+    @include box-sizing(inherit);
 }
 
 body {
@@ -104,9 +96,8 @@ li.nav-item:hover > a {
   font-family: 'Roboto', sans-serif;
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   font-size: 50px;
+  @include transform(translateY(-50%));
 }
 
 @media only screen and (min-width: 320px) {
@@ -137,8 +128,7 @@ li.nav-item:hover > a {
 
 .inner-text > a {
   text-decoration: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  @include transition(all 0.3s ease);
 }
 
 .name {
@@ -254,8 +244,7 @@ li.nav-item:hover > a {
   color: white;
   margin: 0px 20px;
   padding: 20px 30px;
-  -webkit-transition: all 500ms ease-in-out;
-          transition: all 500ms ease-in-out;
+  @include transition(all 500ms ease-in-out);
 }
 
 @media only screen and (max-width: 550px) {
@@ -385,9 +374,8 @@ li.nav-item:hover > a {
 
 #python:hover i {
     background: -webkit-linear-gradient(-60deg, #366a99 50%, #f8ca40 50%);
-    -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include background-clip(text);
 }
 
 #adobe:hover i {
@@ -442,16 +430,13 @@ li.nav-item:hover > a {
   text-align: left;
   font-size: 16px;
   border-radius: 15px;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  @include box-shadow(0 0 5px rgba(0, 0, 0, 0.15));
 }
 .qualification:hover {
-    -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+  @include box-shadow(0 0 35px rgba(0, 0, 0, 0.2));
 }
 .qualification * {
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  @include transition(all 0.3s ease);
 }
 .qualification .image {
   max-height: 220px;
@@ -524,7 +509,7 @@ li.nav-item:hover > a {
 /* Portfolio */
 
 .portfolio-hover button:hover {
-    background-color: $primary-orange;
+  background-color: $primary-orange;
 }
 
 .modal-footer > a > i {
@@ -554,8 +539,7 @@ figure.portfolio-item img {
   opacity: 1;
   border-radius: 8px;
   position: relative;
-  -webkit-transition: opacity 0.35s;
-          transition: opacity 0.35s;
+  @include transition(opacity 0.35s);
 }
 
 figure.portfolio-item .center {
@@ -568,14 +552,11 @@ figure.portfolio-item .center {
   left: 50%;
   height: 70px;
   width: 70px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
   opacity: 0;
   text-align: center;
-  -webkit-transform: translate(-50%, -50%) rotate(0deg);
-          transform: translate(-50%, -50%) rotate(0deg);
-  -webkit-transition: all 0.4s;
-          transition: all 0.4s;
+  @include box-shadow(0 0 10px rgba(0, 0, 0, 0.85));
+  @include transform(translate(-50%, -50%) rotate(0deg));
+  @include transition(all 0.4s);
 }
 
 figure.portfolio-item .center i {
@@ -618,7 +599,7 @@ figure.portfolio-item figcaption h3 {
   opacity: 0;
   position: absolute;
   -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
-          transition: opacity 0.45s,-webkit-transform 0.45s,transform 0.45s;
+          transition: opacity 0.45s, -webkit-transform 0.45s;
 }
 
 figure.portfolio-item figcaption .left h3 {
@@ -626,8 +607,7 @@ figure.portfolio-item figcaption .left h3 {
   top: 50%;
   padding: 4px 35px 4px 10px;
   right: 0;
-  -webkit-transform: translate(100%, 0px);
-          transform: translate(100%, 0px);
+  @include transform(translate(100%, 0px));
 }
 
 figure.portfolio-item figcaption .right h3 {
@@ -635,8 +615,7 @@ figure.portfolio-item figcaption .right h3 {
   bottom: 50%;
   padding: 4px 10px 4px 35px;
   padding-left: 30px;
-  -webkit-transform: translate(-100%, 0px);
-          transform: translate(-100%, 0px);
+  @include transform(translate(-100%, 0px));
 }
 
 figure.portfolio-item a {
@@ -666,30 +645,22 @@ figure.portfolio-item.hover img {
 }
 
 figure.portfolio-item:hover figcaption .left h3,
-figure.portfolio-item.hover figcaption .left h3 {
-  opacity: 1;
-  -webkit-transform: translate(0%, 0px);
-          transform: translate(0%, 0px);
-}
-
+figure.portfolio-item.hover figcaption .left h3,
 figure.portfolio-item:hover figcaption .right h3,
 figure.portfolio-item.hover figcaption .right h3 {
   opacity: 1;
-  -webkit-transform: translate(0%, 0px);
-          transform: translate(0%, 0px);
+  @include transform(translate(0%, 0px));
 }
 
 figure.portfolio-item:hover .center,
 figure.portfolio-item.hover .center {
   opacity: 1;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  @include transform(translate(-50%, -50%) rotate(45deg));
 }
 
 figure.portfolio-item:hover .center i,
 figure.portfolio-item.hover .center i {
-  -webkit-transform: translate(0%, -10px);
-          transform: translate(0%, -10px);
+  @include transform(translate(0%, -10px));
 }
 
 
