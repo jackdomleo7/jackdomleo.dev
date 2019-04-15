@@ -190,7 +190,7 @@ li.nav-item:hover > a {
 
 .intro {
   display: block;
-  font-family: Oswald, sans-serif;
+  font-family: Oswald, cursive;
   font-size: 1.4rem;
   font-weight: 0;
   margin: 0.8rem;
@@ -337,23 +337,6 @@ li.nav-item:hover > a {
 #js i {
   position: relative;
   z-index: 5;
-}
-
-.js-square {
-  width: 15px;
-  height: 13px;
-  left: 111px;
-  top: 11px;
-  z-index: 3;
-  position: absolute;
-  background-color: transparent;
-}
-
-@media screen and (min-width: 768px) and (max-width: 991.5px) {
-  .js-square {
-    left: 5px;
-    top: 40px;
-  }
 }
 
 #js:hover i {
