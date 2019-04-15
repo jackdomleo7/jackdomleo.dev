@@ -12,7 +12,6 @@
 
 @mixin box-sizing($property){
     -webkit-box-sizing: $property;
-       -moz-box-sizing: $property;
             box-sizing: $property;
 }
 
