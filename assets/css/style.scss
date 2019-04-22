@@ -5,7 +5,9 @@ html {
     @include box-sizing(border-box);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     @include box-sizing(inherit);
 }
 
@@ -32,24 +34,23 @@ hr {
     background-color: $primary-black;
 }
 
-a:hover {
-    color: $primary-orange;
-    fill: $primary-orange;
-    text-decoration: none;
+a {
+	&:hover {
+		color: $primary-orange;
+		fill: $primary-orange;
+		text-decoration: none;
+	}
 }
 
-.heading > span {
+.heading {
+  span {
     border-bottom: 3px solid $primary-orange;
     padding-bottom: 6px !important;
     line-height: 50px;
+  }
 }
 
-.container-fluid h1, h2, h3, h4, h5, h6, p {
-    margin-left: 1.8rem;
-    margin-right: 1.8rem;
-}
-
-#AboutMe, #Experience, #Education, #Skills, #Portfolio {
+section {
     min-height: 80vh;
 }
 
@@ -60,589 +61,639 @@ a:hover {
     border: 3px $primary-orange solid !important;
 }
 
-li.nav-item:hover > a {
-    border-bottom: 3px $primary-orange solid;
+.nav-item {
+	&:hover {
+		a {
+			border-bottom: 3px $primary-orange solid;
+		}
+	}
 }
 
-.navbar-nav > li > a {
-  border: 3px transparent solid;
-}
-
-.navbar-a a{
+.navbar-nav {
+  a {
+    border: 3px transparent solid;
     color: white !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
     padding: 0.5rem 3.5rem !important;
+  }
 }
 
 
 /* Home */
 
-#home hr {
-    border-color: white;
-    width: 80%;
-}
-
 .hero {
-  background-size: cover;
-  background-color: $primary-black;
-  background-blend-mode: multiply;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
+	background-size: cover;
+	background-color: $primary-black;
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	height: 100vh;
+	width: 100%;
 }
 
 .inner-text {
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-  top: 50%;
-  font-size: 50px;
-  @include transform(translateY(-50%));
-}
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	top: 50%;
+	font-size: 50px;
+	@include transform(translateY(-50%));
 
-@media only screen and (min-width: 320px) {
-  .inner-text {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
+	@media only screen and (min-width: 320px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 
-@media only screen and (min-width: 400px) {
-  .inner-text {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
+	@media only screen and (min-width: 400px) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 
-@media only screen and (min-width: 680px) {
-  .inner-text {
-    font-size: 75px;
-  }
-}
+	@media only screen and (min-width: 680px) {
+		font-size: 75px;
+	}
 
-@media only screen and (min-width: 950px) {
-  .inner-text {
-    font-size: 100px;
-  }
-}
+	@media only screen and (min-width: 950px) {
+		font-size: 100px;
+	}
 
-.inner-text > a {
-  text-decoration: none;
-  @include transition(all 0.3s ease);
+	a {
+		text-decoration: none;
+		@include transition(all 0.3s ease);
+	}
 }
 
 .name {
-  color: white;
-  display: block;
-  font-size: 6rem;
-  font-weight: 900;
-  margin: 0;
-  line-height: 1;
-}
+	color: white;
+	display: block;
+	font-size: 6rem;
+	font-weight: 900;
+	margin: 0;
+	line-height: 1;
 
-@media only screen and (max-width: 480px) {
-  .name {
-    font-size: 4rem;
-    position: relative;
-    top: 0.6rem;
-  }
-}
+	@media only screen and (max-width: 480px) {
+		font-size: 4rem;
+		position: relative;
+		top: 0.6rem;
+	}
 
-.name > span {
-  font-weight: 100;
-  margin: 0;
-  line-height: 1;
-  color: $secondary-orange;
+	span {
+		font-weight: 100;
+		margin: 0;
+		line-height: 1;
+		color: $secondary-orange;
+	}
 }
 
 .job-title {
-  display: block;
-  font-size: 2.4rem;
-  font-weight: 900;
-  margin: 0;
-  line-height: 2;
-  color: $secondary-orange;
-}
+	display: block;
+	font-size: 2.4rem;
+	font-weight: 900;
+	margin: 0;
+	line-height: 2;
+	color: $secondary-orange;
 
-@media only screen and (max-width: 480px) {
-  .job-title {
-    font-size: 1.8rem;
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    top: 0.6rem;
-  }
-}
+	@media only screen and (max-width: 480px) {
+		font-size: 1.8rem;
+		position: relative;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		top: 0.6rem;
+	}
 
-.job-title > span {
-  font-weight: 100;
-  margin: 0;
-  line-height: 2;
-  color: white;
-}
+	span {
+		font-weight: 100;
+		margin: 0;
+		line-height: 2;
+		color: white;
 
-@media only screen and (max-width: 480px) {
-  .job-title > span {
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
+		@media only screen and (max-width: 480px) {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .intro {
-  display: block;
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 1.4rem;
-  margin: 0.8rem;
-  line-height: 1;
-  color: $secondary-orange;
-}
+	display: block;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 1.4rem;
+	margin: 0.8rem;
+	line-height: 1;
+	color: white;
 
-@media only screen and (max-width: 480px) {
-  .intro {
-    font-size: 1.2rem;
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    top: 0.6rem;
-  }
+	@media only screen and (max-width: 480px) {
+		font-size: 1.2rem;
+		position: relative;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		top: 0.6rem;
+	}
 }
 
 .hero-down {
-  position: absolute;
-  margin: 0 -13px;
-  top: 90vh;
-  font-size: 2em;
-  height: 2em;
-  color: #f5f5f5;
-  border-radius: 100%;
-}
+	position: absolute;
+	margin: 0 -13px;
+	top: 90vh;
+	font-size: 2em;
+	height: 2em;
+	color: #f5f5f5;
+	border-radius: 100%;
 
-.hero-down:hover {
-  color: white;
-}
+	&:hover {
+		color: white;
+	}
 
-.hero-down i {
-  vertical-align: bottom;
-  position: relative;
-  top: 0.1rem;
+	i {
+		vertical-align: bottom;
+		position: relative;
+		top: 0.1rem;
+	}
 }
 
 .white {
-  color: white;
+	color: white;
 }
 
 .social-icons-row {
-  margin: 0px auto;
-  width: 100%;
-}
+	margin: 0px auto;
+	width: 100%;
 
-.social-icons-row i {
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 2.9rem;
-  color: white;
-  margin: 0px 20px;
-  padding: 20px 30px;
-  @include transition(all 500ms ease-in-out);
-}
+	i {
+		border-radius: 3px;
+		cursor: pointer;
+		font-size: 2.9rem;
+		color: white;
+		margin: 0px 20px;
+		padding: 20px 30px;
+		@include transition(all 500ms ease-in-out);
 
-@media only screen and (max-width: 550px) {
-  .social-icons-row i {
-    padding: 10px 10px;
-    margin: 20px 10px;
-    font-size: 2.5rem;
-  }
-}
+		@media only screen and (max-width: 550px) {
+			padding: 10px 10px;
+			margin: 20px 10px;
+			font-size: 2.5rem;
+		}
 
-.social-icons-row i:hover {
-  background: white;
+		&:hover {
+			background: white;
+		}
+	}
 }
 
 .fa-codepen:hover {
-  color: #1e1e26;
+	color: #1e1e26;
 }
 
 .fa-github:hover {
-  color: #24292d;
+	color: #24292d;
 }
 
 .fa-linkedin-in:hover {
-  color: #007bb5;
+	color: #007bb5;
 }
 
-.codecademy > svg {
-  fill: white;
-  width: 3.2rem;
-  position: relative;
-  top: -3px;
-}
+.codecademy {
+	svg {
+		fill: white;
+		width: 3.2rem;
+		position: relative;
+		top: -3px;
 
-.codecademy:hover > svg {
-  fill: #0e1234;
-}
-
-.fa-chevron-up {
-  color: white;
+		&:hover {
+			fill: #0e1234;
+		}
+	}
 }
 
 
 /* Experience */
 
-#flybmi-logo-hover:hover {
-  cursor: help;
+#flybmi-logo {
+	&:hover {
+		cursor: help;
+	}
 }
 
 
 /* Skills */
 
-.progress, .progress-bar {
+.progress {
     height: 1.75rem;
 }
 
-.progress-orange {
+.progress-bar {
     background-color: $primary-orange;
 }
 
-#html:hover i {
-    color: #dd4b24;
+#html {
+	&:hover {
+		i {
+			color: $html;
+		}
+	}
 }
 
-#bootstrap:hover i {
-  color: #543c78;
+#bootstrap {
+	&:hover {
+		i {
+			color: $bootstrap;
+		}
+	}
 }
 
-#css:hover i {
-    color: #254bdc;
+#css {
+	&:hover {
+		i {
+			color: $css;
+		}
+	}
 }
 
-#sass:hover i {
-  color: #c66495;
+#sass {
+	&:hover {
+		i {
+			color: $sass;
+		}
+	}
 }
 
-#less:hover i {
-  color: #1f4471;
+#less {
+	&:hover {
+		i {
+			color: $less;
+		}
+	}
 }
 
-#grav:hover i {
-    color: #211d1e;
-    background-color: #f7f7f7;
-    border-radius: 10px;
+#grav {
+	&:hover {
+		i {
+			color: $grav-black;
+			background-color: $grav-white;
+			border-radius: 10px;
+		}
+	}
 }
 
-#js h4 {
-  position: relative;
+#js {
+	&:hover {
+		i {
+			color: $javascript;
+		}
+	}
 }
 
-#js i {
-  position: relative;
-  z-index: 5;
+#nodejs {
+	&:hover {
+		i {
+			color: $node-js;
+		}
+	}
 }
 
-#js:hover i {
-    color: #e8d44d;
+#reactjs {
+	&:hover {
+		i {
+			color: $react-js;
+		}
+	}
 }
 
-#js:hover .js-square {
-  background-color: black;
+#python {
+	&:hover {
+		i {
+			background: -webkit-linear-gradient(-60deg, $python-blue 50%, $python-yellow 50%);
+			-webkit-text-fill-color: transparent;
+			@include background-clip(text);
+		}
+	}
 }
 
-#nodejs:hover i {
-    color: #6d9c68;
+#adobe {
+	&:hover {
+		i {
+			color: $adobe;
+		}
+	}
 }
 
-#reactjs:hover i {
-    color: #00d2f7;
+#mailchimp {
+	i {
+		padding-left: 3px;
+	}
+
+	&:hover {
+		i {
+			background-color: $mailchimp;
+			border-radius: 4px;
+			width: 26px;
+		}
+	}
 }
 
-#python:hover i {
-    background: -webkit-linear-gradient(-60deg, #366a99 50%, #f8ca40 50%);
-    -webkit-text-fill-color: transparent;
-    @include background-clip(text);
+#seo {
+	&:hover {
+		i {
+			color: $seo;
+		}
+	}
 }
 
-#adobe:hover i {
-    color: #e71b24;
+#git {
+	&:hover {
+		i {
+			color: $git;
+		}
+	}
 }
 
-#mailchimp i {
-    padding-left: 3px;
+#Skills {
+	h4 {
+		text-decoration: none !important;
+		color: black !important;
+		
+		&:hover {
+			text-decoration: none !important;
+    		color: black !important;
+		}
+	}
 }
 
-#mailchimp:hover i {
-    background-color: #f7d919;
-    border-radius: 4px;
-    width: 26px;
-}
-
-#seo:hover i {
-    color: #38a656;
-}
-
-#git:hover i {
-    color: #e84d31;
-}
-
-#Skills h4 {
-    text-decoration: none !important;
-    color: black !important;
-}
-
-#Skills h4:hover {
-    text-decoration: none !important;
-    color: black !important;
-}
-
-.subskills h4,
-.subskills .progress {
-  margin-left: 3.5rem;
+.subskills {
+	h4, .progress {
+		margin-left: 3.5rem;
+	}
 }
 
 
 /* Qualifications */
 
 .qualification {
-  color: white;
-  position: relative;
-  overflow: hidden;
-  margin: auto;
-  width: 250px;
-  height: 350px;
-  background-color: white;
-  color: black;
-  text-align: left;
-  font-size: 16px;
-  border-radius: 15px;
-  @include box-shadow(0 0 5px rgba(0, 0, 0, 0.15));
+	color: white;
+	position: relative;
+	overflow: hidden;
+	margin: auto;
+	width: 250px;
+	height: 350px;
+	background-color: white;
+	color: black;
+	text-align: left;
+	font-size: 16px;
+	border-radius: 15px;
+	@include box-shadow(0 0 5px rgba(0, 0, 0, 0.15));
+
+	&:hover {
+		@include box-shadow(0 0 35px rgba(0, 0, 0, 0.2));
+	}
+
+	* {
+		@include transition(all 0.3s ease);
+	}
+
+	.image {
+		max-height: 220px;
+		overflow: hidden;
+	}
+
+	img {
+		max-width: 100%;
+		vertical-align: top;
+		position: relative;
+	}
+
+	figcaption {
+		margin: 0 15px 0;
+		padding: 15px;
+		position: relative;
+		background-color: white;
+	}
+
+	.date {
+		background-color: $secondary-orange;
+		top: 15px;
+		color: white;
+		left: 0;
+		min-height: 48px;
+		min-width: 48px;
+		position: absolute;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			line-height: 24px;
+		}
+
+		.month {
+			font-size: 16px;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	h3, p {
+		margin: 0;
+		padding: 0;
+	}
+
+	h3 {
+		min-height: 50px;
+		margin-bottom: 10px;
+		margin-left: 45px;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	h4 {
+		margin-left: 0;
+		font-size: 1rem;
+	}
+
+	p {
+		font-size: 0.9em;
+		margin-bottom: 20px;
+		line-height: 1.6em;
+	}
+
+	a {
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		z-index: 1;
+	}
 }
-.qualification:hover {
-  @include box-shadow(0 0 35px rgba(0, 0, 0, 0.2));
-}
-.qualification * {
-  @include transition(all 0.3s ease);
-}
-.qualification .image {
-  max-height: 220px;
-  overflow: hidden;
-}
-.qualification img {
-  max-width: 100%;
-  vertical-align: top;
-  position: relative;
-}
-.qualification figcaption {
-  margin: 0 15px 0;
-  padding: 15px;
-  position: relative;
-  background-color: white;
-}
-.qualification .date {
-  background-color: $secondary-orange;
-  top: 15px;
-  color: white;
-  left: 0;
-  min-height: 48px;
-  min-width: 48px;
-  position: absolute;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.qualification .date span {
-  display: block;
-  line-height: 24px;
-}
-.qualification .date .month {
-  font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.qualification h3,
-.qualification p {
-  margin: 0;
-  padding: 0;
-}
-.qualification h3 {
-  min-height: 50px;
-  margin-bottom: 10px;
-  margin-left: 45px;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 1rem;
-}
-.qualification h4 {
-    margin-left: 0;
-    font-size: 1rem;
-}
-.qualification p {
-  font-size: 0.9em;
-  margin-bottom: 20px;
-  line-height: 1.6em;
-}
-.qualification a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 1;
-}
+
 
 
 /* Portfolio */
 
-.portfolio-hover button:hover {
-  background-color: $primary-orange;
+.portfolio {
+	button {
+		&:hover {
+			background-color: $primary-orange;
+		}
+	}
 }
 
-.modal-footer > a > i {
-  font-size: 2rem;
-  color: black;
+.modal-footer {
+	i {
+		font-size: 2rem;
+		color: black;
+		  
+		&:hover {
+			color: $primary-orange;
+		}
+	}
 }
 
-.modal-footer > a > i:hover {
-  color: $primary-orange;
-}
 
-figure.portfolio-item {
-  color: white;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  width: 100%;
-  background: white;
-}
+.portfolio-item {
+	color: white;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	background: white;
 
-figure.portfolio-item h3 {
-  margin-right: 0.8rem;
-  margin-left: 0.8rem;
-}
+	&:hover {
+		img {
+			opacity: 0.5;
+		}
 
-figure.portfolio-item img {
-  opacity: 1;
-  border-radius: 8px;
-  position: relative;
-  @include transition(opacity 0.35s);
-}
+		figcaption {
+			.right, .left {
+				h3 {
+					opacity: 1;
+					@include transform(translate(0%, 0px));
+				}
+			}
+		}
 
-figure.portfolio-item .center {
-  border-radius: 5px;
-  display: block;
-  content: '';
-  position: absolute;
-  background-color: black;
-  top: 50%;
-  left: 50%;
-  height: 70px;
-  width: 70px;
-  opacity: 0;
-  text-align: center;
-  @include box-shadow(0 0 10px rgba(0, 0, 0, 0.85));
-  @include transform(translate(-50%, -50%) rotate(0deg));
-  @include transition(all 0.4s);
-}
+		.center {
+			opacity: 1;
+			@include transform(translate(-50%, -50%) rotate(45deg));
 
-figure.portfolio-item .center i {
-  font-size: 2rem;
-  color: white;
-  line-height: 70px;
-  opacity: 0.3;
-}
+			i {
+				@include transform(translate(0%, -10px));
+			}
+		}
+	}
 
-figure.portfolio-item figcaption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-}
+	h3 {
+		margin-right: 0.8rem;
+		margin-left: 0.8rem;
+	}
 
-figure.portfolio-item figcaption > div {
-  float: left;
-  height: 100%;
-  overflow: hidden;
-  width: 50%;
-  position: relative;
-}
+	img {
+		opacity: 1;
+		border-radius: 8px;
+		position: relative;
+		@include transition(opacity 0.35s);
+	}
 
-figure.portfolio-item figcaption a {
-  opacity: 0.7;
-}
+	.center {
+		border-radius: 5px;
+		display: block;
+		content: '';
+		position: absolute;
+		background-color: black;
+		top: 50%;
+		left: 50%;
+		height: 70px;
+		width: 70px;
+		opacity: 0;
+		text-align: center;
+		@include box-shadow(0 0 10px rgba(0, 0, 0, 0.85));
+		@include transform(translate(-50%, -50%) rotate(0deg));
+		@include transition(all 0.4s);
 
-figure.portfolio-item figcaption a:hover {
-  opacity: 1;
-}
+		i {
+			font-size: 2rem;
+			color: white;
+			line-height: 70px;
+			opacity: 0.3;
+		}
+	}
 
-figure.portfolio-item figcaption h3 {
-  background-color: #222;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  opacity: 0;
-  position: absolute;
-  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
-          transition: opacity 0.45s, -webkit-transform 0.45s;
-}
+	figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: left;
 
-figure.portfolio-item figcaption .left h3 {
-  border-radius: 5px 0 0 5px;
-  top: 50%;
-  padding: 4px 35px 4px 10px;
-  right: 0;
-  @include transform(translate(100%, 0px));
-}
+		div {
+			float: left;
+			height: 100%;
+			overflow: hidden;
+			width: 50%;
+			position: relative;
+		}
 
-figure.portfolio-item figcaption .right h3 {
-  border-radius: 0 5px 5px 0;
-  bottom: 50%;
-  padding: 4px 10px 4px 35px;
-  padding-left: 30px;
-  @include transform(translate(-100%, 0px));
-}
+		a {
+			opacity: 0.7;
 
-figure.portfolio-item a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
+			&:hover {
+				opacity: 1;
+			}
+		}
 
-figure.portfolio-item .tmd-orange {
-  background-color: $tmd-orange;
-}
+		h3 {
+			background-color: #222;
+			font-weight: 800;
+			text-transform: uppercase;
+			font-size: 0.8rem;
+			opacity: 0;
+			position: absolute;
+			-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+					transition: opacity 0.45s, -webkit-transform 0.45s;
+		}
 
-figure.portfolio-item .bmi-blue {
-  background-color: $flybmi-blue;
-}
+		.left {
+			h3 {
+				border-radius: 5px 0 0 5px;
+				top: 50%;
+				padding: 4px 35px 4px 10px;
+				right: 0;
+				@include transform(translate(100%, 0px));
+			}
+		}
 
-figure.portfolio-item .white {
-  background-color: white;
-  color: #444444;
-}
+		.right {
+			h3 {
+				border-radius: 0 5px 5px 0;
+				bottom: 50%;
+				padding: 4px 10px 4px 35px;
+				padding-left: 30px;
+				@include transform(translate(-100%, 0px));
+			}
+		}
+	}
 
-figure.portfolio-item:hover img,
-figure.portfolio-item.hover img {
-  opacity: 0.5;
-}
+	a {
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+	}
 
-figure.portfolio-item:hover figcaption .left h3,
-figure.portfolio-item.hover figcaption .left h3,
-figure.portfolio-item:hover figcaption .right h3,
-figure.portfolio-item.hover figcaption .right h3 {
-  opacity: 1;
-  @include transform(translate(0%, 0px));
-}
+	.tmd-orange {
+		background-color: $tmd-orange;
+	}
 
-figure.portfolio-item:hover .center,
-figure.portfolio-item.hover .center {
-  opacity: 1;
-  @include transform(translate(-50%, -50%) rotate(45deg));
-}
+	.bmi-blue {
+		background-color: $flybmi-blue;
+	}
 
-figure.portfolio-item:hover .center i,
-figure.portfolio-item.hover .center i {
-  @include transform(translate(0%, -10px));
+	.white {
+		background-color: white;
+		color: #444444;
+	}
 }
 
 
