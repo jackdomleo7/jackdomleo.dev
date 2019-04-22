@@ -240,15 +240,15 @@ section {
 }
 
 .fa-codepen:hover {
-	color: #1e1e26;
+	color: $codepen;
 }
 
 .fa-github:hover {
-	color: #24292d;
+	color: $github;
 }
 
 .fa-linkedin-in:hover {
-	color: #007bb5;
+	color: $linked-in;
 }
 
 .codecademy {
@@ -259,7 +259,7 @@ section {
 		top: -3px;
 
 		&:hover {
-			fill: #0e1234;
+			fill: $codecademy;
 		}
 	}
 }
