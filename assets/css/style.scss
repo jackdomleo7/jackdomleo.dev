@@ -73,10 +73,8 @@ section {
   a {
     border: 3px transparent solid;
 	color: white !important;
-	font: {
-		family: Arial, Helvetica, sans-serif;
-		size: 1.25rem;
-	}
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25rem;
     padding: 0.5rem 3.5rem !important;
   }
 }
@@ -85,37 +83,29 @@ section {
 /* Home */
 
 .hero {
-	background: {
-		attachment: fixed;
-		blend-mode: multiply;
-		color: $primary-black;
-		size: cover;
-	}
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+	background-color: $primary-black;
+	background-size: cover;
 	height: 100vh;
 	width: 100%;
 }
 
 .inner-text {
-	font: {
-		family: 'Roboto', sans-serif;
-		size: 50px;
-	}
+	font-family: 'Roboto', sans-serif;
+	font-size: 50px;
 	position: relative;
 	top: 50%;
 	@include transform(translateY(-50%));
 
 	@media only screen and (min-width: 320px) {
-		padding: {
-			left: 15px;
-			right: 15px;
-		}
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 	@media only screen and (min-width: 400px) {
-		padding: {
-			left: 40px;
-			right: 40px;
-		}
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 
 	@media only screen and (min-width: 680px) {
@@ -135,10 +125,8 @@ section {
 .name {
 	color: white;
 	display: block;
-	font: {
-		size: 6rem;
-		weight: 900;
-	}
+	font-size: 6rem;
+	font-weight: 900;
 	line-height: 1;
 	margin: 0;
 
@@ -159,19 +147,15 @@ section {
 .job-title {
 	color: $secondary-orange;
 	display: block;
-	font: {
-		size: 2.4rem;
-		weight: 900;
-	}
+	font-size: 2.4rem;
+	font-weight: 900;
 	line-height: 2;
 	margin: 0;
 
 	@media only screen and (max-width: 480px) {
 		font-size: 1.8rem;
-		margin: {
-			bottom: 10px;
-			top: 20px;
-		}
+		margin-bottom: 10px;
+		margin-top: 20px;
 		position: relative;
 		top: 0.6rem;
 	}
@@ -183,10 +167,8 @@ section {
 		margin: 0;
 
 		@media only screen and (max-width: 480px) {
-			margin: {
-				bottom: 10px;
-				top: 20px;
-			}
+			margin-bottom: 10px;
+			margin-top: 20px;
 		}
 	}
 }
@@ -194,19 +176,15 @@ section {
 .intro {
 	color: white;
 	display: block;
-	font: {
-		family: 'Gloria Hallelujah', cursive;
-		size: 1.4rem;
-	}
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 1.4rem;
 	line-height: 1;
 	margin: 0.8rem;
 
 	@media only screen and (max-width: 480px) {
 		font-size: 1.2rem;
-		margin: {
-			bottom: 10px;
-			top: 20px;
-		}
+		margin-bottom: 10px;
+		margin-top: 20px;
 		position: relative;
 		top: 0.6rem;
 	}
@@ -458,7 +436,6 @@ section {
 .qualification {
 	background-color: white;
 	border-radius: 15px;
-	@include box-shadow(0 0 5px rgba(0, 0, 0, 0.15));
 	color: black;
 	font-size: 16px;
 	height: 350px;
@@ -467,6 +444,7 @@ section {
 	position: relative;
 	text-align: left;
 	width: 250px;
+	@include box-shadow(0 0 5px rgba(0, 0, 0, 0.15));
 
 	&:hover {
 		@include box-shadow(0 0 35px rgba(0, 0, 0, 0.2));
@@ -497,20 +475,14 @@ section {
 	.date {
 		background-color: $secondary-orange;
 		color: white;
-		font: {
-			size: 18px;
-			weight: 700;
-		}
+		font-size: 18px;
+		font-weight: 700;
 		left: 0;
-		min: {
-			height: 48px;
-			width: 48px;
-		}
+		min-height: 48px;
+		min-width: 48px;
 		position: absolute;
-		text: {
-			align: center;
-			transform: uppercase;
-		}
+		text-align: center;
+		text-transform: uppercase;
 		top: 15px;
 
 		span {
@@ -531,14 +503,10 @@ section {
 
 	h3 {
 		display: inline-block;
-		font: {
-			size: 1rem;
-			weight: 600;
-		}
-		margin: {
-			bottom: 10px;
-			left: 45px;
-		}
+		font-size: 1rem;
+		font-weight: 600;
+		margin-bottom: 10px;
+		margin-left: 45px;
 		min-height: 50px;
 	}
 
@@ -636,7 +604,6 @@ section {
 	.center {
 		background-color: black;
 		border-radius: 5px;
-		@include box-shadow(0 0 10px rgba(0, 0, 0, 0.85));
 		content: '';
 		display: block;
 		height: 70px;
@@ -645,9 +612,10 @@ section {
 		position: absolute;
 		text-align: center;
 		top: 50%;
+		width: 70px;
+		@include box-shadow(0 0 10px rgba(0, 0, 0, 0.85));
 		@include transform(translate(-50%, -50%) rotate(0deg));
 		@include transition(all 0.4s);
-		width: 70px;
 
 		i {
 			color: white;
@@ -683,10 +651,8 @@ section {
 
 		h3 {
 			background-color: #222;
-			font: {
-				size: 0.8rem;
-				weight: 800;
-			}
+			font-size: 0.8rem;
+			font-weight: 800;
 			opacity: 0;
 			position: absolute;
 			text-transform: uppercase;
