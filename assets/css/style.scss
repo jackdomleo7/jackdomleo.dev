@@ -239,16 +239,24 @@ section {
 	}
 }
 
-.fa-codepen:hover {
-	color: $codepen;
-}
+.fa {
+	&-codepen {
+		&:hover {
+			color: $codepen;
+		}
+	}
 
-.fa-github:hover {
-	color: $github;
-}
+	&-github {
+		&:hover {
+			color: $github;
+		}
+	}
 
-.fa-linkedin-in:hover {
-	color: $linked-in;
+	&-linkedin-in {
+		&:hover {
+			color: $linked-in;
+		}
+	}
 }
 
 .codecademy {
@@ -283,11 +291,11 @@ section {
 /* Skills */
 
 .progress {
-    height: 1.75rem;
-}
-
-.progress-bar {
-    background-color: $primary-orange;
+	height: 1.75rem;
+	
+	&-bar {
+		background-color: $primary-orange;
+	}
 }
 
 #html {
@@ -539,6 +547,154 @@ section {
 	button {
 		&:hover {
 			background-color: $primary-orange;
+			border-radius: 4px;
+		}
+	}
+
+	&-item {
+		background: white;
+		color: white;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		&:hover {
+			img {
+				opacity: 0.5;
+			}
+
+			figcaption {
+				.right, .left {
+					h3 {
+						opacity: 1;
+						@include transform(translate(0%, 0px));
+					}
+				}
+			}
+
+			.center {
+				opacity: 1;
+				@include transform(translate(-50%, -50%) rotate(45deg));
+
+				i {
+					@include transform(translate(0%, -10px));
+				}
+			}
+		}
+
+		h3 {
+			margin: {
+				left: 0.8rem;
+				right: 0.8rem;
+			}
+		}
+
+		img {
+			border-radius: 8px;
+			opacity: 1;
+			position: relative;
+			@include transition(opacity 0.35s);
+		}
+
+		.center {
+			background-color: black;
+			border-radius: 5px;
+			content: '';
+			display: block;
+			height: 70px;
+			left: 50%;
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			width: 70px;
+			@include box-shadow(0 0 10px rgba(0, 0, 0, 0.85));
+			@include transform(translate(-50%, -50%) rotate(0deg));
+			@include transition(all 0.4s);
+
+			i {
+				color: white;
+				font-size: 2rem;
+				line-height: 70px;
+				opacity: 0.3;
+			}
+		}
+
+		figcaption {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			text-align: left;
+			top: 0;
+			width: 100%;
+
+			div {
+				float: left;
+				height: 100%;
+				overflow: hidden;
+				position: relative;
+				width: 50%;
+			}
+
+			a {
+				opacity: 0.7;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			h3 {
+				background-color: #222;
+				font-size: 0.8rem;
+				font-weight: 800;
+				opacity: 0;
+				position: absolute;
+				text-transform: uppercase;
+				-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+						transition: opacity 0.45s, -webkit-transform 0.45s;
+			}
+
+			.left {
+				h3 {
+					border-radius: 5px 0 0 5px;
+					padding: 4px 35px 4px 10px;
+					right: 0;
+					top: 50%;
+					@include transform(translate(100%, 0px));
+				}
+			}
+
+			.right {
+				h3 {
+					border-radius: 0 5px 5px 0;
+					bottom: 50%;
+					padding: 4px 10px 4px 30px;
+					@include transform(translate(-100%, 0px));
+				}
+			}
+		}
+
+		a {
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		.tmd-orange {
+			background-color: $tmd-orange;
+		}
+
+		.bmi-blue {
+			background-color: $flybmi-blue;
+		}
+
+		.white {
+			background-color: white;
+			color: #444444;
 		}
 	}
 }
@@ -551,154 +707,6 @@ section {
 		&:hover {
 			color: $tmd-orange;
 		}
-	}
-}
-
-
-.portfolio-item {
-	background: white;
-	color: white;
-	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-
-	&:hover {
-		img {
-			opacity: 0.5;
-		}
-
-		figcaption {
-			.right, .left {
-				h3 {
-					opacity: 1;
-					@include transform(translate(0%, 0px));
-				}
-			}
-		}
-
-		.center {
-			opacity: 1;
-			@include transform(translate(-50%, -50%) rotate(45deg));
-
-			i {
-				@include transform(translate(0%, -10px));
-			}
-		}
-	}
-
-	h3 {
-		margin: {
-			left: 0.8rem;
-			right: 0.8rem;
-		}
-	}
-
-	img {
-		border-radius: 8px;
-		opacity: 1;
-		position: relative;
-		@include transition(opacity 0.35s);
-	}
-
-	.center {
-		background-color: black;
-		border-radius: 5px;
-		content: '';
-		display: block;
-		height: 70px;
-		left: 50%;
-		opacity: 0;
-		position: absolute;
-		text-align: center;
-		top: 50%;
-		width: 70px;
-		@include box-shadow(0 0 10px rgba(0, 0, 0, 0.85));
-		@include transform(translate(-50%, -50%) rotate(0deg));
-		@include transition(all 0.4s);
-
-		i {
-			color: white;
-			font-size: 2rem;
-			line-height: 70px;
-			opacity: 0.3;
-		}
-	}
-
-	figcaption {
-		height: 100%;
-		left: 0;
-		position: absolute;
-		text-align: left;
-		top: 0;
-		width: 100%;
-
-		div {
-			float: left;
-			height: 100%;
-			overflow: hidden;
-			position: relative;
-			width: 50%;
-		}
-
-		a {
-			opacity: 0.7;
-
-			&:hover {
-				opacity: 1;
-			}
-		}
-
-		h3 {
-			background-color: #222;
-			font-size: 0.8rem;
-			font-weight: 800;
-			opacity: 0;
-			position: absolute;
-			text-transform: uppercase;
-			-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
-					transition: opacity 0.45s, -webkit-transform 0.45s;
-		}
-
-		.left {
-			h3 {
-				border-radius: 5px 0 0 5px;
-				padding: 4px 35px 4px 10px;
-				right: 0;
-				top: 50%;
-				@include transform(translate(100%, 0px));
-			}
-		}
-
-		.right {
-			h3 {
-				border-radius: 0 5px 5px 0;
-				bottom: 50%;
-				padding: 4px 10px 4px 30px;
-				@include transform(translate(-100%, 0px));
-			}
-		}
-	}
-
-	a {
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-	.tmd-orange {
-		background-color: $tmd-orange;
-	}
-
-	.bmi-blue {
-		background-color: $flybmi-blue;
-	}
-
-	.white {
-		background-color: white;
-		color: #444444;
 	}
 }
 
