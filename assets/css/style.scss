@@ -37,8 +37,11 @@ hr {
 a {
 	&:hover {
 		color: $primary-orange;
-		fill: $primary-orange;
 		text-decoration: none;
+
+		svg {
+			fill: $primary-orange;
+		}
 	}
 }
 
@@ -215,46 +218,48 @@ section {
 }
 
 .social-icons-row {
-	margin: 0px auto;
+	margin: 0 auto;
 	width: 100%;
 
-	i {
-		border-radius: 3px;
-		color: white;
-		cursor: pointer;
-		font-size: 2.9rem;
-		margin: 0px 20px;
-		padding: 20px 30px;
-		@include transition(all 500ms ease-in-out);
+	a {
+		&:hover {
+			i {
+				background-color: white;
+			}
 
-		@media only screen and (max-width: 550px) {
-			font-size: 2.5rem;
-			margin: 20px 10px;
-			padding: 10px 10px;
+			.fa- {
+				&codepen {
+					color: $codepen;
+				}
+
+				&github {
+					color: $github;
+				}
+
+				&linkedin-in {
+					color: $linked-in;
+				}
+
+				&stack-overflow {
+					color: $stack-oveflow;
+				}
+			}
 		}
 
-		&:hover {
-			background-color: white;
-		}
-	}
-}
+		i {
+			border-radius: 3px;
+			color: white;
+			cursor: pointer;
+			font-size: 2.9rem;
+			margin: 0 20px;
+			padding: 20px 30px;
+			@include transition(all 500ms ease-in-out);
 
-.fa {
-	&-codepen {
-		&:hover {
-			color: $codepen;
-		}
-	}
-
-	&-github {
-		&:hover {
-			color: $github;
-		}
-	}
-
-	&-linkedin-in {
-		&:hover {
-			color: $linked-in;
+			@media only screen and (max-width: 550px) {
+				font-size: 2.5rem;
+				margin: 20px 10px;
+				padding: 10px 10px;
+			}
 		}
 	}
 }
@@ -265,10 +270,6 @@ section {
 		position: relative;
 		top: -3px;
 		width: 3.2rem;
-
-		&:hover {
-			fill: $codecademy;
-		}
 	}
 }
 
@@ -716,4 +717,8 @@ section {
 footer {
 	max-height: 100%;
     min-height: 6rem;
+
+	a {
+		color: #fff;
+	}
 }
