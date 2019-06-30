@@ -3,12 +3,12 @@
   "name": "Jack Domleo Portfolio",
   "icons": [
     {
-      "src": "images/j-icon.gif",
+      "src": "assets/images/favicon.gif",
       "type": "image/gif",
       "sizes": "50x50"
     }
   ],
   "start_url": "/",
   "display": "browser",
-  "theme_color": "#f87000"
+  "theme_color": "#ff7f00"
 }
