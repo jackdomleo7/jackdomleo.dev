@@ -3,7 +3,7 @@
   "name": "Jack Domleo Portfolio",
   "icons": [
     {
-      "src": "assets/images/favicon.gif",
+      "src": "favicon.ico",
       "type": "image/gif",
       "sizes": "50x50"
     }
