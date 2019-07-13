@@ -17,7 +17,7 @@ body {
 
 ::selection {
     background: $primary-orange;
-    color: white;
+    color: #fff;
     text-shadow: none;
 }
 
@@ -75,7 +75,7 @@ section {
 .navbar-nav {
   a {
     border: 3px transparent solid;
-	color: white !important;
+	color: #fff !important;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.25rem;
     padding: 0.5rem 3.5rem !important;
@@ -86,12 +86,8 @@ section {
 /* Home */
 
 .hero {
-	background-attachment: fixed;
-	background-blend-mode: multiply;
 	background-color: $primary-black;
-	background-size: cover;
 	height: 100vh;
-	width: 100%;
 }
 
 .inner-text {
@@ -126,10 +122,9 @@ section {
 }
 
 .name {
-	color: white;
-	display: block;
+	color: #fff;
 	font-size: 6rem;
-	font-weight: 900;
+	font-weight: bold;
 	line-height: 1;
 	margin: 0;
 
@@ -149,9 +144,8 @@ section {
 
 .job-title {
 	color: $secondary-orange;
-	display: block;
 	font-size: 2.4rem;
-	font-weight: 900;
+	font-weight: bold;
 	line-height: 2;
 	margin: 0;
 
@@ -164,7 +158,7 @@ section {
 	}
 
 	span {
-		color: white;
+		color: #fff;
 		font-weight: 100;
 		line-height: 2;
 		margin: 0;
@@ -177,7 +171,7 @@ section {
 }
 
 .intro {
-	color: white;
+	color: #fff;
 	display: block;
 	font-family: 'Gloria Hallelujah', cursive;
 	font-size: 1.4rem;
@@ -203,7 +197,7 @@ section {
 	top: 90vh;
 
 	&:hover {
-		color: white;
+		color: #fff;
 	}
 
 	i {
@@ -213,8 +207,8 @@ section {
 	}
 }
 
-.white {
-	color: white;
+.#fff {
+	color: #fff;
 }
 
 .social-icons-row {
@@ -224,7 +218,7 @@ section {
 	a {
 		&:hover {
 			i {
-				background-color: white;
+				background-color: #fff;
 			}
 
 			.fa- {
@@ -248,7 +242,7 @@ section {
 
 		i {
 			border-radius: 3px;
-			color: white;
+			color: #fff;
 			cursor: pointer;
 			font-size: 2.9rem;
 			margin: 0 20px;
@@ -261,15 +255,6 @@ section {
 				padding: 10px 10px;
 			}
 		}
-	}
-}
-
-.codecademy {
-	svg {
-		fill: white;
-		position: relative;
-		top: -3px;
-		width: 3.2rem;
 	}
 }
 
@@ -439,11 +424,11 @@ section {
 
 #Skills {
 	h4 {
-		color: black !important;
+		color: #000 !important;
 		text-decoration: none !important;
 		
 		&:hover {
-			color: black !important;
+			color: #000 !important;
 			text-decoration: none !important;
 		}
 	}
@@ -459,9 +444,9 @@ section {
 /* Qualifications */
 
 .qualification {
-	background-color: white;
+	background-color: #fff;
 	border-radius: 15px;
-	color: black;
+	color: #000;
 	font-size: 16px;
 	height: 350px;
 	margin: auto;
@@ -491,7 +476,7 @@ section {
 	}
 
 	figcaption {
-		background-color: white;
+		background-color: #fff;
 		margin: 0 15px 0;
 		padding: 15px;
 		position: relative;
@@ -499,7 +484,7 @@ section {
 
 	.date {
 		background-color: $secondary-orange;
-		color: white;
+		color: #fff;
 		font-size: 18px;
 		font-weight: 700;
 		left: 0;
@@ -569,8 +554,8 @@ section {
 	}
 
 	&-item {
-		background: white;
-		color: white;
+		background: #fff;
+		color: #fff;
 		margin: 0 auto;
 		overflow: hidden;
 		position: relative;
@@ -615,7 +600,7 @@ section {
 		}
 
 		.center {
-			background-color: black;
+			background-color: #000;
 			border-radius: 5px;
 			content: '';
 			display: block;
@@ -631,7 +616,7 @@ section {
 			@include transition(all 0.4s);
 
 			i {
-				color: white;
+				color: #fff;
 				font-size: 2rem;
 				line-height: 70px;
 				opacity: 0.3;
@@ -710,15 +695,15 @@ section {
 		}
 
 		.white {
-			background-color: white;
-			color: #444444;
+			background-color: #fff;
+			color: #444;
 		}
 	}
 }
 
 .modal-footer {
 	i {
-		color: black;
+		color: #000;
 		font-size: 2rem;
 		  
 		&:hover {
@@ -736,5 +721,14 @@ footer {
 
 	a {
 		color: #fff;
+	}
+}
+
+.codecademy {
+	svg {
+		fill: #fff;
+		position: relative;
+		top: -3px;
+		width: 3.2rem;
 	}
 }
