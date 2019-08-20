@@ -1,0 +1,34 @@
+@import "../colours";
+
+.button {
+  background-color: transparent;
+  border: 1px solid $orange;
+  border-radius: 6px;
+  color: $orange;
+  cursor: pointer;
+  height: 40px;
+  outline: none;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    background-color: $orange;
+    color: #fff;
+  }
+
+  &:focus,
+  &:active {
+    border-color: #fff;
+  }
+
+  &:active {
+    background-color: lighten($orange, 10%);
+    border-color: lighten($orange, 10%);
+  }
+
+  &__icon {
+    color: #fff;
+  }
+}

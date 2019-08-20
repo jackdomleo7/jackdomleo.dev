@@ -1,0 +1,33 @@
+@import "../colours";
+
+.text-colour-- {
+  &white {
+    color: $off-white;
+  }
+
+  &orange {
+    color: $orange;
+  }
+
+  &dark-grey {
+    color: $dark-grey;
+  }
+
+  &light-grey {
+    color: $light-grey;
+  }
+}
+
+.font-weight-- {
+  &thin {
+    font-weight: 100;
+  }
+
+  &bold {
+    font-weight: bold;
+  }
+}
+
+.text-align--center {
+  text-align: center;
+}

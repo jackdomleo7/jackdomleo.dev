@@ -1,0 +1,30 @@
+@import "../colours";
+@import "../utilities/typography";
+
+.about {
+  min-height: 80vh;
+
+  &__introduction {
+    &:before,
+    &:after {
+      content: '"';
+    }
+  }
+}
+
+.identity-card {
+  background-color: fade_out($light-grey, 0.9);
+  border-radius: 12px;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  width: 75%;
+
+  &__name {
+    font-size: 1.4rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+}
