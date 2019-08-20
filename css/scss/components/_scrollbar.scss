@@ -1,0 +1,32 @@
+@import "../colours";
+
+* {
+  $scrollbar-width: 16px;
+
+  // Chrome & Opera
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-width;
+
+    &-track,
+    &-square {
+      background-color: $light-grey;
+    }
+
+    &-thumb {
+      background-color: $orange;
+
+      &:hover {
+        background-color: darken($orange, 2%);
+      }
+    }
+
+    &-track,
+    &-thumb {
+      border-radius: $scrollbar-width;
+    }
+  }
+
+  // Firefox
+  scrollbar-color: $orange $light-grey;
+}

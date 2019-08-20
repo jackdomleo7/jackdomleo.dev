@@ -1,0 +1,102 @@
+@import "../colours";
+
+@mixin footer-icons-colors($color) {
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+  &:hover {
+    color: $color;
+  }
+}
+
+.footer {
+  &__icons {
+    font-size: 3rem;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+
+    & .fa-html5 {
+      @include footer-icons-colors(#e34f27);
+    }
+
+    & .fa-css3-alt {
+      @include footer-icons-colors(#254bde);
+    }
+
+    & .fa-bootstrap {
+      @include footer-icons-colors(#5c3e84);
+    }
+
+    & .fa-sass {
+      @include footer-icons-colors(#c76395);
+    }
+
+    & .fa-autoprefixer {
+      @include footer-icons-colors(#d73533);
+    }
+
+    & .fa-js-square {
+      @include footer-icons-colors(#f0d81c);
+    }
+
+    & .fa-node {
+      @include footer-icons-colors(#87c349);
+    }
+
+    & .fa-npm {
+      @include footer-icons-colors(#c63635);
+    }
+
+    & .fa-gulp {
+      @include footer-icons-colors(#e04a4c);
+    }
+
+    & .fa-vuejs {
+      @include footer-icons-colors(#3eb37f);
+    }
+
+    & .fa-git-alt {
+      @include footer-icons-colors(#e94e32);
+    }
+
+    & .fa-terminal {
+      @include footer-icons-colors(#086fbe);
+    }
+
+    & .fa-markdown {
+      @include footer-icons-colors(#000);
+      border-radius: 6px;
+
+      &:hover {
+        background-color: $off-white;
+      }
+    }
+
+    & .fa-grav {
+      @include footer-icons-colors(#211d1e);
+      border-radius: 50%;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    & .fa-mailchimp {
+      @include footer-icons-colors(#000);
+      border-radius: 6px;
+
+      &:hover {
+        background-color: #f8da18;
+      }
+    }
+
+    & .fa-python {
+      &:hover {
+        background: -webkit-linear-gradient(-60deg, #3670a0 50%, #f9ce43 50%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

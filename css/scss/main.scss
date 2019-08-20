@@ -1,0 +1,14 @@
+@import "global";
+
+@import "utilities/browser-upgrade";
+@import "utilities/cursor";
+@import "utilities/typography";
+
+@import "components/scrollbar";
+@import "components/button";
+
+@import 'sections/navbar';
+@import "sections/home";
+@import "sections/about";
+@import "sections/projects";
+@import "sections/footer";

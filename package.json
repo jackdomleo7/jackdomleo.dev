@@ -1,0 +1,20 @@
+{
+  "name": "copy-jackdomleo.dev",
+  "version": "1.0.0",
+  "scripts": {
+    "stylelint": "stylelint \"**/*.scss\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-css-purge": "^3.0.9",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.22.10"
+  }
+}

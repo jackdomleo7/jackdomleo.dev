@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jack Domleo
+    Web Developer
+    Nottingham, United Kingdom
+
+# THANKS
+
+    Jack Domleo
+    Web Developer
+    Nottingham, United Kingdom
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, SCSS, JavaScript
+    Apache Server Configs, Normalize.css, Gulp, Bootstrap-grid.css, Autoprefixer, gulp, Stylelint, gulp
