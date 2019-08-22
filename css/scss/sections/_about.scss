@@ -21,6 +21,10 @@
 
   &__name {
     font-size: 1.4rem;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__list {
