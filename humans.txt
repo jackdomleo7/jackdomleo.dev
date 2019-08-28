@@ -16,4 +16,4 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5, JavaScript, SCSS
-    Autoprefixer, BEM, Bootstrap Grid, Git, GitHub, GitHub Pages, Gulp, HTML5 Boilerplate, Normalize.css
+    Autoprefixer, BEM, Bootstrap Grid, Git, GitHub, GitHub Pages, Gulp, HTML5 Boilerplate, Normalize.css, realfavicongenerator.net
