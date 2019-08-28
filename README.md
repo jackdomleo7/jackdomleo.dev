@@ -1,4 +1,4 @@
-![Favicon 192px * 192px](img/favicons/favicon-192x192.png)
+![Favicon 194px * 194px](img/favicons/favicon-194x194.png)
 # [jackdomleo.dev](https://jackdomleo.dev "Click to visit live site")
 
 
