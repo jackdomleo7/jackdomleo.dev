@@ -1,8 +1,17 @@
 @import "../colours";
 
 .browser-upgrade {
-  background: #ffae42;
+  background-color: #ffae42;
   color: $dark-grey;
   font-size: 1.2em;
   padding: 0.2em 0;
+  position: fixed;
+  top: 31px;
+  width: 100%;
+  z-index: 1030;
+
+  a {
+    color: $dark-grey;
+    text-decoration: underline;
+  }
 }
