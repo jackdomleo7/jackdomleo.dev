@@ -21,14 +21,6 @@
       padding-right: 40px;
     }
 
-    @media only screen and (min-width: 680px) {
-      font-size: 75px;
-    }
-
-    @media only screen and (min-width: 950px) {
-      font-size: 100px;
-    }
-
     &__name {
       font-size: 6rem;
       line-height: 1;
@@ -55,7 +47,7 @@
     }
 
     &__intro {
-      font-family: 'Gloria Hallelujah', cursive;
+      font-family: 'Gloria Hallelujah', Arial, cursive;
       font-size: 1.4rem;
       line-height: 1;
       margin: 0.8rem;
