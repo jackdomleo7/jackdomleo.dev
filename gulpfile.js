@@ -7,6 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var cssPurge = require('gulp-css-purge');
 var sourcemap = require('gulp-sourcemaps');
+var sitemap = require('gulp-sitemap');
 
 sass.compiler = require('sass');
 
@@ -30,4 +31,15 @@ function compileJs() {
     .pipe(dest('js/'));
 }
 
-exports.default = series(compileScss, compileJs);
+function generateSitemap() {
+  return src('*.html', {
+    read: false
+  })
+    .pipe(sitemap({
+      siteUrl: 'http://jackdomleo.dev',
+      images: true
+    }))
+    .pipe(dest('./'));
+}
+
+exports.default = series(compileScss, compileJs, generateSitemap);
