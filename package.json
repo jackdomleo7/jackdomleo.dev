@@ -1,19 +1,26 @@
 {
   "name": "jackdomleo.dev",
   "version": "1.0.0",
+  "main": "gulpfile.js",
   "scripts": {
-    "stylelint": "stylelint \"**/*.scss\""
+
   },
-  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDomleo/jackdomleo.dev.git"
+  },
+  "author": "Jack Domleo",
+  "license": "ISC",
+  "homepage": "https://github.com/JDomleo/jackdomleo.dev#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp-autoprefixer": "^7.0.0",
     "gulp-css-purge": "^3.0.9",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sitemap": "^7.5.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.22.10"
+    "sass": "^1.23.0-module.beta.1"
   }
 }
