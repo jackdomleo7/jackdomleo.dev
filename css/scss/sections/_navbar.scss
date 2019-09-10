@@ -3,7 +3,6 @@
 .navbar {
   $navbar__list-item__link--padding-y: 0.6rem;
   $navbar__list-item__link--padding-x: 2rem;
-
   height: 50px;
   left: 0;
   overflow: hidden;
@@ -77,7 +76,7 @@
       box-shadow: 0 1px 50px fade_out($light-grey, 0.5);
       height: auto;
 
-      & .navbar__list {
+      .navbar__list {
         display: block;
       }
     }

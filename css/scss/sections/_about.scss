@@ -5,8 +5,8 @@
   min-height: 80vh;
 
   &__introduction {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: '"';
     }
   }

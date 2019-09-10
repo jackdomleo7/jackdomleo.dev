@@ -6,8 +6,8 @@ html {
 
 html,
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@ nav {
 }
 
 img {
-  height:auto;
+  height: auto;
   max-width: 100%;
 }
 
