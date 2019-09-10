@@ -2,9 +2,7 @@
   "name": "jackdomleo.dev",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "scripts": {
-
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JDomleo/jackdomleo.dev.git"
