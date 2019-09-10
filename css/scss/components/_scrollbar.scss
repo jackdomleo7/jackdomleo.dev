@@ -5,8 +5,8 @@
 
   // Chrome & Opera
   &::-webkit-scrollbar {
-    width: $scrollbar-width;
     height: $scrollbar-width;
+    width: $scrollbar-width;
 
     &-track,
     &-square {

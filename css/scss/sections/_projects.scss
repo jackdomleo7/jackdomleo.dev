@@ -9,7 +9,7 @@
     }
 
     &__body {
-      tr:nth-child(odd) {
+      tr:nth-child( odd ) {
         background-color: fade_out($light-grey, 0.9);
       }
     }
