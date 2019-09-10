@@ -13,3 +13,8 @@ Compiles JavaScript files and converts SCSS into a CSS file
 ```
 gulp
 ```
+
+Lints all SCSS and highlights errors
+```
+npm run stylelint:fix
+```
