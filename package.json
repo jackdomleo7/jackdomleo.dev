@@ -2,7 +2,9 @@
   "name": "jackdomleo.dev",
   "version": "1.0.0",
   "main": "gulpfile.js",
-  "scripts": {},
+  "scripts": {
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JDomleo/jackdomleo.dev.git"
@@ -19,6 +21,9 @@
     "gulp-sitemap": "^7.5.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.23.0-module.beta.1"
+    "sass": "^1.23.0-module.beta.1",
+    "stylelint": "^10.1.0",
+    "stylelint-order": "^3.1.0",
+    "stylelint-scss": "^3.10.1"
   }
 }
