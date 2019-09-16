@@ -4,8 +4,24 @@
         
         <loc>http://jackdomleo.dev/</loc>
     
+        <image:image>
+            <image:loc>http://jackdomleo.dev/img1_wide.jpg</image:loc>
+        </image:image>
+    
+        <image:image>
+            <image:loc>http://jackdomleo.dev/img2_wide.jpg</image:loc>
+        </image:image>
+    
+        <image:image>
+            <image:loc>http://jackdomleo.dev/img3_wide.jpg</image:loc>
+        </image:image>
+    
+        <image:image>
+            <image:loc>http://jackdomleo.dev/img4_wide.jpg</image:loc>
+        </image:image>
+    
         
-        <lastmod>2019-09-11T15:01:54.983Z</lastmod>
+        <lastmod>2019-09-16T16:00:16.573Z</lastmod>
     
     </url>
 </urlset>
