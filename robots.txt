@@ -3,3 +3,6 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
+
+# Sitemap files
+Sitemap: https://jackdomleo.dev/sitemap.xml
