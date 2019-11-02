@@ -1,5 +1,7 @@
 # jackdomleo.dev
 
+---
+
 ## Project setup
 ```
 npm install
@@ -22,3 +24,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+---
+
+## Tech
+
+Normalize.css - [v8.0.1](https://github.com/necolas/normalize.css/releases/tag/8.0.1)
