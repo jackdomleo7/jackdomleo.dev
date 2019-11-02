@@ -1,29 +1,40 @@
 {
   "name": "jackdomleo.dev",
-  "version": "1.0.0",
-  "main": "gulpfile.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "stylelint:fix": "stylelint \"**/*.scss\" --fix"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JDomleo/jackdomleo.dev.git"
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.3.0",
+    "vue-router": "^3.1.3"
   },
-  "author": "Jack Domleo",
-  "license": "ISC",
-  "homepage": "https://github.com/JDomleo/jackdomleo.dev#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
-    "gulp-css-purge": "^3.0.9",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sitemap": "^7.5.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
-    "sass": "^1.23.0-module.beta.1",
-    "stylelint": "^10.1.0",
-    "stylelint-order": "^3.1.0",
-    "stylelint-scss": "^3.10.1"
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-typescript": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "lint-staged": "^9.4.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "typescript": "~3.5.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }

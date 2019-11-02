@@ -1,20 +1,24 @@
-![Favicon 194px * 194px](img/favicons/favicon-194x194.png)
-# [jackdomleo.dev](https://jackdomleo.dev "Click to visit live site")
+# jackdomleo.dev
 
-
-## Local setup
-- `git clone`
-- `npm i`
-- Open _index.html_
-
-## Scripts
-
-Compiles JavaScript files and converts SCSS into a CSS file
+## Project setup
 ```
-gulp
+npm install
 ```
 
-Lints all SCSS and highlights errors
+### Compiles and hot-reloads for development
 ```
-npm run stylelint:fix
+npm run serve
 ```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
