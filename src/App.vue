@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="app" class="app">
+    <header class="app__header"></header>
+    <main class="app__main"></main>
+    <footer class="app__footer"></footer>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
 
 @Component({
   components: {
-    HelloWorld,
+
   },
 })
 export default class App extends Vue {}
@@ -19,4 +19,24 @@ export default class App extends Vue {}
 
 <style lang="scss">
 @import "./scss/main";
+
+.app {
+  display: grid;
+  grid-template: auto / 100vw;
+  grid-template-areas: "header"
+    "main"
+    "footer";
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__main {
+    grid-area: main;
+  }
+
+  &__footer {
+    grid-area: footer;
+  }
+}
 </style>
