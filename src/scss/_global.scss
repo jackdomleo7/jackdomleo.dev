@@ -1,3 +1,11 @@
+@import "./colours";
+
+::selection {
+  background-color: $blue;
+  color: $grey-50;
+  text-shadow: none;
+}
+
 html {
   box-sizing: border-box;
 }
