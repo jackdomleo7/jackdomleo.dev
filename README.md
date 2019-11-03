@@ -32,3 +32,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 Normalize.css - [v8.0.1](https://github.com/necolas/normalize.css/releases/tag/8.0.1)
 
 Balloon.css - [v1.0.0](https://github.com/kazzkiq/balloon.css/releases/tag/v1.0.0)
+
+Font - [Exo (Google Fonts)](https://fonts.google.com/specimen/Exo?selection.family=Exo)
