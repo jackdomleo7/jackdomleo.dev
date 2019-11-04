@@ -1,17 +1,30 @@
 <template>
   <header class="top-app-bar">
-    <router-link to="/" class="top-app-bar__logo-link">
-      <img class="top-app-bar__logo" src="img/jack-full-name-white.png" alt="Jack" />
-    </router-link>
-    <nav class="top-app-bar__nav">
-      <ul class="top-app-bar__nav-items">
-        <li v-for="(navLink, index) in navLinks" :key="index" class="top-app-bar__nav-item">
-          <router-link :to="navLink.link" class="top-app-bar__nav-link">
-            {{ navLink.text }}
-          </router-link>
+    <div class="top-app-bar__navigation">
+      <router-link to="/" class="top-app-bar__logo-link">
+        <img class="top-app-bar__logo" src="img/nav-logo.png" alt="Jack" />
+      </router-link>
+      <nav class="top-app-bar__nav">
+        <ul class="top-app-bar__nav-items">
+          <li v-for="(navLink, index) in navLinks" :key="index" class="top-app-bar__nav-item">
+            <router-link :to="navLink.link" class="top-app-bar__nav-link">
+              {{ navLink.text }}
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="top-app-bar__social">
+      <ul class="top-app-bar__social-items">
+        <li v-for="socialLink in socialLinks" :key="socialLink" class="top-app-bar__social-item">
+          <a :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down">
+            <svg class="top-app-bar__social-icon">
+              <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-    </nav>
+    </div>
   </header>
 </template>
 
@@ -38,6 +51,24 @@ export default class TopAppBar extends Vue {
       link: '/projects',
     },
   ];
+
+  private readonly socialLinks: object[] = [
+    {
+      label: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/jack-domleo/',
+      icon: 'linkedin'
+    },
+    {
+      label: 'GitHub',
+      link: 'https://github.com/JDomleo',
+      icon: 'github'
+    },
+    {
+      label: 'CodePen',
+      link: 'https://codepen.io/JackDomleo/',
+      icon: 'codepen'
+    }
+  ];
 }
 </script>
 
@@ -45,12 +76,68 @@ export default class TopAppBar extends Vue {
 @import "../scss/colours";
 
 .top-app-bar {
-  align-items: stretch;
   background-color: transparent;
   display: flex;
-  flex-flow: row nowrap;
+  justify-content: space-between;
   padding: 3rem 5rem 0;
   width: 100vw;
+
+  &__navigation {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__social {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+
+    &-icon {
+      color: $orange-500;
+      height: 1.5rem;
+      transition: 0.2s color ease-in-out;
+      width: 1.5rem;
+    }
+
+    &-item {
+      display: inline-block;
+      padding: 0 0.5rem;
+
+      &s {
+        list-style-type: none;
+        padding-left: 0;
+
+        &:hover {
+          .top-app-bar__social-item {
+            .top-app-bar__social-icon {
+              color: fade_out($orange-500, 0.4);
+            }
+
+            &:hover {
+              .top-app-bar__social-icon {
+                color: $orange-500;
+              }
+            }
+          }
+        }
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  &__nav,
+  &__social {
+    animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: linear;
+    opacity: 0;
+  }
 
   &__logo {
     animation-delay: 1s;
@@ -68,13 +155,7 @@ export default class TopAppBar extends Vue {
   }
 
   &__nav {
-    animation-delay: 0.5s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-name: fadeIn;
-    animation-timing-function: linear;
     display: inline-block;
-    opacity: 0;
 
     &-item {
       display: inline-block;
