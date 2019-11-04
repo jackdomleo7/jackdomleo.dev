@@ -27,8 +27,8 @@ export default class App extends Vue {}
   display: grid;
   grid-template: auto / 100vw;
   grid-template-areas: "top-app-bar"
-  "main"
-  "footer";
+    "main"
+    "footer";
 
   &__top-app-bar {
     grid-area: top-app-bar;
