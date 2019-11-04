@@ -1,6 +1,6 @@
 <template>
   <header class="top-app-bar">
-    <div class="top-app-bar__navigation">
+    <section class="top-app-bar__navigation">
       <router-link to="/" class="top-app-bar__logo-link">
         <img class="top-app-bar__logo" src="img/nav-logo.png" alt="Jack" />
       </router-link>
@@ -13,18 +13,18 @@
           </li>
         </ul>
       </nav>
-    </div>
-    <div class="top-app-bar__social">
-      <ul class="top-app-bar__social-items">
-        <li v-for="socialLink in socialLinks" :key="socialLink" class="top-app-bar__social-item">
-          <a :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down">
-            <svg class="top-app-bar__social-icon">
+    </section>
+    <section class="top-app-bar__social">
+      <ul class="social__list">
+        <li v-for="socialLink in socialLinks" :key="socialLink" class="social__item">
+          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down">
+            <svg class="social__icon">
               <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
             </svg>
           </a>
         </li>
       </ul>
-    </div>
+    </section>
   </header>
 </template>
 
@@ -56,18 +56,18 @@ export default class TopAppBar extends Vue {
     {
       label: 'LinkedIn',
       link: 'https://www.linkedin.com/in/jack-domleo/',
-      icon: 'linkedin'
+      icon: 'linkedin',
     },
     {
       label: 'GitHub',
       link: 'https://github.com/JDomleo',
-      icon: 'github'
+      icon: 'github',
     },
     {
       label: 'CodePen',
       link: 'https://codepen.io/JackDomleo/',
-      icon: 'codepen'
-    }
+      icon: 'codepen',
+    },
   ];
 }
 </script>
@@ -92,41 +92,6 @@ export default class TopAppBar extends Vue {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
-
-    &-icon {
-      color: $orange-500;
-      height: 1.5rem;
-      transition: 0.2s color ease-in-out;
-      width: 1.5rem;
-    }
-
-    &-item {
-      display: inline-block;
-      padding: 0 0.5rem;
-
-      &s {
-        list-style-type: none;
-        padding-left: 0;
-
-        &:hover {
-          .top-app-bar__social-item {
-            .top-app-bar__social-icon {
-              color: fade_out($orange-500, 0.4);
-            }
-
-            &:hover {
-              .top-app-bar__social-icon {
-                color: $orange-500;
-              }
-            }
-          }
-        }
-      }
-
-      a {
-        display: block;
-      }
-    }
   }
 
   &__nav,
@@ -182,6 +147,44 @@ export default class TopAppBar extends Vue {
         color: $blue;
       }
     }
+  }
+}
+
+.social {
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+
+    &:hover {
+      .social__item {
+        .social__icon {
+          color: fade_out($orange-500, 0.4);
+        }
+
+        &:hover {
+          .social__icon {
+            color: $orange-500;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0 0.5rem;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__icon {
+    $square-dimensions: 1.5rem;
+    color: $orange-500;
+    height: $square-dimensions;
+    transition: 0.2s color ease-in-out;
+    width: $square-dimensions;
   }
 }
 
