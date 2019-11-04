@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <header class="app__header"></header>
+    <top-app-bar class="app__top-app-bar"></top-app-bar>
     <main class="app__main"></main>
     <footer class="app__footer"></footer>
   </div>
@@ -8,10 +8,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import TopAppBar from '@/components/TopAppBar.vue';
 
 @Component({
   components: {
-
+    TopAppBar,
   },
 })
 export default class App extends Vue {}
@@ -23,12 +24,12 @@ export default class App extends Vue {}
 .app {
   display: grid;
   grid-template: auto / 100vw;
-  grid-template-areas: "header"
+  grid-template-areas: "top-app-bar"
     "main"
     "footer";
 
-  &__header {
-    grid-area: header;
+  &__top-app-bar {
+    grid-area: top-app-bar;
   }
 
   &__main {
