@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-
+  <div class="home" style="height: 150vh;">
+hello
   </div>
 </template>
 
