@@ -25,11 +25,14 @@
         </li>
       </ul>
     </section>
-    <button class="navigation__hamburger-button">
+    <button @click="isMobileNavExpanded = !isMobileNavExpanded" class="navigation__hamburger-button" :aria-label="(isMobileNavExpanded ? 'Collapse' : 'Expand') + ' menu'" data-balloon-pos="left">
       <svg class="navigation__hamburger">
         <use xlink:href="assets/svg-sprite.svg#icon-hamburger"></use>
       </svg>
     </button>
+    <section class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''">
+      nav stuff
+    </section>
   </header>
 </template>
 
@@ -42,6 +45,8 @@ import { Component, Vue } from 'vue-property-decorator';
   },
 })
 export default class TopAppBar extends Vue {
+  private isMobileNavExpanded: boolean = false;
+
   private readonly navLinks: object[] = [
     {
       text: 'Home',
@@ -118,6 +123,7 @@ $dropdown-navigation-max-screen-width: 660px;
     background-color: $grey-800;
     padding: 0.5rem 1rem 0;
     position: fixed;
+    z-index: 1000;
   }
 
   &__navigation {
@@ -130,6 +136,24 @@ $dropdown-navigation-max-screen-width: 660px;
 
     @media (max-width: $dropdown-navigation-max-screen-width) {
       display: none;
+    }
+  }
+
+  &__mobile {
+    background-color: fade_out($grey-800, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    left: 0;
+    overflow-y: hidden;
+    position: absolute;
+    top: 100%;
+    transition: 0.2s height ease-in-out;
+    width: 100vw;
+    z-index: 999;
+
+    &--expanded {
+      height: 80vh;
     }
   }
 }
