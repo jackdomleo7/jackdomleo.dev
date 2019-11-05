@@ -95,6 +95,11 @@ export default class TopAppBar extends Vue {
 }
 
 .top-app-bar {
+  %flexbox-navigation {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+  }
   background-color: transparent;
   display: flex;
   justify-content: space-between;
@@ -102,16 +107,12 @@ export default class TopAppBar extends Vue {
   width: 100vw;
 
   &__navigation {
-    align-items: stretch;
-    display: flex;
-    flex-flow: row nowrap;
+    @extend %flexbox-navigation;
   }
 
   &__social {
     @extend %fade-in-animation;
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
+    @extend %flexbox-navigation;
   }
 }
 
