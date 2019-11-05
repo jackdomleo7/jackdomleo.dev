@@ -35,6 +35,9 @@
         <ul class="mobile__list">
           <li v-for="(navLink, index) in navLinks" :key="index" class="mobile__item">
             <router-link :to="navLink.link" class="mobile__link">
+              <svg class="mobile__icon">
+                <use :xlink:href="'assets/svg-sprite.svg#icon-' + navLink.icon"></use>
+              </svg>
               {{ navLink.text }}
             </router-link>
           </li>
@@ -59,14 +62,17 @@ export default class TopAppBar extends Vue {
     {
       text: 'Home',
       link: '/',
+      icon: 'home'
     },
     {
       text: 'About',
       link: '/about',
+      icon: 'user'
     },
     {
       text: 'Projects',
       link: '/projects',
+      icon: 'code'
     },
   ];
 
@@ -327,6 +333,13 @@ $dropdown-navigation-max-screen-width: 660px;
     display: flex;
     height: 100%;
     text-decoration: none;
+  }
+
+  &__icon {
+    $icon-dimensions: 1.5rem;
+    height: $icon-dimensions;
+    margin-right: 1rem;
+    width: $icon-dimensions;
   }
 }
 </style>
