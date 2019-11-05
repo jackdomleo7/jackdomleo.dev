@@ -17,7 +17,7 @@
     <section class="top-app-bar__social">
       <ul class="social__list">
         <li v-for="(socialLink, index) in socialLinks" :key="index" class="social__item">
-          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down">
+          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down" target="_blank">
             <svg class="social__icon">
               <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
             </svg>
@@ -43,6 +43,17 @@
           </li>
         </ul>
       </nav>
+      <div>
+        <ul class="mobile-social__list">
+          <li class="mobile-social__item" v-for="(socialLink, index) in socialLinks" :key="index">
+            <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="up" target="_blank">
+              <svg class="mobile-social__icon">
+                <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   </header>
 </template>
@@ -100,6 +111,7 @@ export default class TopAppBar extends Vue {
 @import "../scss/colours";
 
 $dropdown-navigation-max-screen-width: 660px;
+$icon-dimensions: 1.5rem;
 
 %fade-in-animation {
   animation-delay: 0.5s;
@@ -171,7 +183,7 @@ $dropdown-navigation-max-screen-width: 660px;
     }
 
     &--expanded {
-      height: 80vh;
+      height: 20rem;
     }
   }
 }
@@ -297,11 +309,10 @@ $dropdown-navigation-max-screen-width: 660px;
   }
 
   &__icon {
-    $square-dimensions: 1.5rem;
     color: $orange-500;
-    height: $square-dimensions;
+    height: $icon-dimensions;
     transition: 0.2s color ease-in-out;
-    width: $square-dimensions;
+    width: $icon-dimensions;
   }
 }
 
@@ -345,13 +356,47 @@ $dropdown-navigation-max-screen-width: 660px;
     display: flex;
     height: 100%;
     text-decoration: none;
+
+    &.router-link-exact-active {
+      .mobile__icon {
+        color: $blue;
+      }
+    }
   }
 
   &__icon {
-    $icon-dimensions: 1.5rem;
     height: $icon-dimensions;
     margin-right: 1rem;
     width: $icon-dimensions;
+  }
+
+  &-social {
+    &__list {
+      color: $grey-50;
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin-top: 0;
+      padding-left: 0;
+    }
+
+    &__item {
+      padding: 0 0.5rem;
+    }
+
+    &__link {
+      align-items: center;
+      color: inherit;
+      display: flex;
+      height: 3rem;
+      justify-content: center;
+      width: 3rem;
+    }
+
+    &__icon {
+      height: $icon-dimensions;
+      width: $icon-dimensions;
+    }
   }
 }
 </style>
