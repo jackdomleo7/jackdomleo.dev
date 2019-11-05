@@ -16,7 +16,7 @@
     </section>
     <section class="top-app-bar__social">
       <ul class="social__list">
-        <li v-for="socialLink in socialLinks" :key="socialLink" class="social__item">
+        <li v-for="(socialLink, index) in socialLinks" :key="index" class="social__item">
           <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down">
             <svg class="social__icon">
               <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
@@ -30,8 +30,16 @@
         <use xlink:href="assets/svg-sprite.svg#icon-hamburger"></use>
       </svg>
     </button>
-    <section v-if="screenWidth < 660" class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''">
-      nav stuff
+    <section class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''">
+      <nav class="mobile__nav">
+        <ul class="mobile__list">
+          <li v-for="(navLink, index) in navLinks" :key="index" class="mobile__item">
+            <router-link :to="navLink.link" class="mobile__link">
+              {{ navLink.text }}
+            </router-link>
+          </li>
+        </ul>
+      </nav>
     </section>
   </header>
 </template>
@@ -46,7 +54,6 @@ import { Component, Vue } from 'vue-property-decorator';
 })
 export default class TopAppBar extends Vue {
   private isMobileNavExpanded: boolean = false;
-  private screenWidth: number = screen.width;
 
   private readonly navLinks: object[] = [
     {
@@ -285,6 +292,41 @@ $dropdown-navigation-max-screen-width: 660px;
     height: $square-dimensions;
     transition: 0.2s color ease-in-out;
     width: $square-dimensions;
+  }
+}
+
+.mobile {
+  &__nav {
+    color: $grey-50;
+    font-size: 1.25rem;
+    padding: 2rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  &__item {
+    height: 3rem;
+    margin: 1rem 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    height: 100%;
+    text-decoration: none;
   }
 }
 </style>
