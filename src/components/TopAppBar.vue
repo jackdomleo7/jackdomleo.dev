@@ -82,6 +82,16 @@ export default class TopAppBar extends Vue {
   animation-name: fadeIn;
   animation-timing-function: linear;
   opacity: 0;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .top-app-bar {
@@ -115,6 +125,28 @@ export default class TopAppBar extends Vue {
     margin: 0 0.5rem;
     opacity: 0;
     width: 5rem;
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3) translate3d(0, 0, 0);
+      }
+
+      50% {
+        opacity: 0.9;
+        transform: scale(1.1);
+      }
+
+      80% {
+        opacity: 1;
+        transform: scale(0.89);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1) translate3d(0, 0, 0);
+      }
+    }
 
     &-link {
       display: inline-block;
@@ -188,37 +220,6 @@ export default class TopAppBar extends Vue {
     height: $square-dimensions;
     transition: 0.2s color ease-in-out;
     width: $square-dimensions;
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3) translate3d(0, 0, 0);
-  }
-
-  50% {
-    opacity: 0.9;
-    transform: scale(1.1);
-  }
-
-  80% {
-    opacity: 1;
-    transform: scale(0.89);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 </style>
