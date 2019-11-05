@@ -30,7 +30,7 @@
         <use xlink:href="assets/svg-sprite.svg#icon-hamburger"></use>
       </svg>
     </button>
-    <section class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''">
+    <section v-if="screenWidth < 660" class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''">
       nav stuff
     </section>
   </header>
@@ -46,6 +46,7 @@ import { Component, Vue } from 'vue-property-decorator';
 })
 export default class TopAppBar extends Vue {
   private isMobileNavExpanded: boolean = false;
+  private screenWidth: number = screen.width;
 
   private readonly navLinks: object[] = [
     {
