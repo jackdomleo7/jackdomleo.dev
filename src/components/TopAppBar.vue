@@ -62,17 +62,17 @@ export default class TopAppBar extends Vue {
     {
       text: 'Home',
       link: '/',
-      icon: 'home'
+      icon: 'home',
     },
     {
       text: 'About',
       link: '/about',
-      icon: 'user'
+      icon: 'user',
     },
     {
       text: 'Projects',
       link: '/projects',
-      icon: 'code'
+      icon: 'code',
     },
   ];
 
