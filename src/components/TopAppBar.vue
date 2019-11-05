@@ -1,13 +1,13 @@
 <template>
   <header class="top-app-bar">
     <section class="top-app-bar__navigation">
-      <router-link to="/" class="top-app-bar__logo-link">
-        <img class="top-app-bar__logo" src="img/nav-logo.png" alt="Jack" />
+      <router-link to="/" class="navigation__logo-link">
+        <img class="navigation__logo" src="img/nav-logo.png" alt="Jack" />
       </router-link>
-      <nav class="top-app-bar__nav">
-        <ul class="top-app-bar__nav-items">
-          <li v-for="(navLink, index) in navLinks" :key="index" class="top-app-bar__nav-item">
-            <router-link :to="navLink.link" class="top-app-bar__nav-link">
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li v-for="(navLink, index) in navLinks" :key="index" class="navigation__item">
+            <router-link :to="navLink.link" class="navigation__link">
               {{ navLink.text }}
             </router-link>
           </li>
@@ -75,6 +75,15 @@ export default class TopAppBar extends Vue {
 <style lang="scss" scoped>
 @import "../scss/colours";
 
+%fade-in-animation {
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+
 .top-app-bar {
   background-color: transparent;
   display: flex;
@@ -89,21 +98,14 @@ export default class TopAppBar extends Vue {
   }
 
   &__social {
+    @extend %fade-in-animation;
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
   }
+}
 
-  &__nav,
-  &__social {
-    animation-delay: 0.5s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-name: fadeIn;
-    animation-timing-function: linear;
-    opacity: 0;
-  }
-
+.navigation {
   &__logo {
     animation-delay: 1s;
     animation-duration: 0.5s;
@@ -120,32 +122,33 @@ export default class TopAppBar extends Vue {
   }
 
   &__nav {
+    @extend %fade-in-animation;
     display: inline-block;
+  }
 
-    &-item {
-      display: inline-block;
-      padding: 0 0.625rem;
-      text-transform: uppercase;
+  &__list {
+    color: $grey-75;
+    font-size: 0.875rem;
+    list-style-type: none;
+    text-transform: uppercase;
+  }
 
-      &s {
-        color: $grey-75;
-        font-size: 0.875rem;
-        list-style-type: none;
-      }
+  &__item {
+    display: inline-block;
+    padding: 0 0.625rem;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.2s color ease-in-out;
+
+    &:hover {
+      color: $grey-600;
     }
 
-    &-link {
-      color: inherit;
-      text-decoration: none;
-      transition: 0.2s color ease-in-out;
-
-      &:hover {
-        color: $grey-600;
-      }
-
-      &.router-link-exact-active {
-        color: $blue;
-      }
+    &.router-link-exact-active {
+      color: $blue;
     }
   }
 }
