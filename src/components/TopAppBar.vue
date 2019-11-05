@@ -25,6 +25,11 @@
         </li>
       </ul>
     </section>
+    <button class="navigation__hamburger-button">
+      <svg class="navigation__hamburger">
+        <use xlink:href="assets/svg-sprite.svg#icon-hamburger"></use>
+      </svg>
+    </button>
   </header>
 </template>
 
@@ -75,6 +80,8 @@ export default class TopAppBar extends Vue {
 <style lang="scss" scoped>
 @import "../scss/colours";
 
+$dropdown-navigation-max-screen-width: 660px;
+
 %fade-in-animation {
   animation-delay: 0.5s;
   animation-duration: 3s;
@@ -94,17 +101,24 @@ export default class TopAppBar extends Vue {
   }
 }
 
+%flexbox-navigation {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 .top-app-bar {
-  %flexbox-navigation {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-  }
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   padding: 3rem 5rem 0;
   width: 100vw;
+
+  @media (max-width: $dropdown-navigation-max-screen-width) {
+    background-color: $grey-800;
+    padding: 0.5rem 1rem 0;
+    position: fixed;
+  }
 
   &__navigation {
     @extend %flexbox-navigation;
@@ -113,6 +127,10 @@ export default class TopAppBar extends Vue {
   &__social {
     @extend %fade-in-animation;
     @extend %flexbox-navigation;
+
+    @media (max-width: $dropdown-navigation-max-screen-width) {
+      display: none;
+    }
   }
 }
 
@@ -157,6 +175,10 @@ export default class TopAppBar extends Vue {
   &__nav {
     @extend %fade-in-animation;
     display: inline-block;
+
+    @media (max-width: $dropdown-navigation-max-screen-width) {
+      display: none;
+    }
   }
 
   &__list {
@@ -182,6 +204,23 @@ export default class TopAppBar extends Vue {
 
     &.router-link-exact-active {
       color: $blue;
+    }
+  }
+
+  &__hamburger {
+    color: $grey-50;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    &-button {
+      @extend %fade-in-animation;
+      background-color: transparent;
+      border: none;
+      display: none;
+
+      @media (max-width: $dropdown-navigation-max-screen-width) {
+        display: inline-block;
+      }
     }
   }
 }
