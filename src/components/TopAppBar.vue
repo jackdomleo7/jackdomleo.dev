@@ -154,8 +154,8 @@ $dropdown-navigation-max-screen-width: 660px;
   }
 
   &__mobile {
-    background-color: fade_out($grey-800, 0.3);
-    display: flex;
+    background-color: fade_out($grey-800, 0.2);
+    display: none;
     flex-direction: column;
     height: 0;
     left: 0;
@@ -165,6 +165,10 @@ $dropdown-navigation-max-screen-width: 660px;
     transition: 0.2s height ease-in-out;
     width: 100vw;
     z-index: 999;
+
+    @media (max-width: $dropdown-navigation-max-screen-width) {
+      display: flex;
+    }
 
     &--expanded {
       height: 80vh;
@@ -305,7 +309,15 @@ $dropdown-navigation-max-screen-width: 660px;
   &__nav {
     color: $grey-50;
     font-size: 1.25rem;
-    padding: 2rem;
+    padding: 2rem 5rem;
+
+    @media (max-width: 550px) {
+      padding: 2rem 4rem;
+    }
+
+    @media (max-width: 440px) {
+      padding: 2rem 3rem;
+    }
   }
 
   &__list {
