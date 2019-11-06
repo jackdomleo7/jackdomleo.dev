@@ -166,7 +166,7 @@ $icon-dimensions: 1.5rem;
   }
 
   &__mobile {
-    background-color: fade_out($grey-800, 0.2);
+    background-color: fade_out($grey-800, 0.02);
     display: none;
     flex-direction: column;
     height: 0;
