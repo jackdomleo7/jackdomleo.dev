@@ -17,7 +17,7 @@
     <section class="top-app-bar__social">
       <ul class="social__list">
         <li v-for="(socialLink, index) in socialLinks" :key="index" class="social__item">
-          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down" target="_blank">
+          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down" target="_blank" rel="noreferrer">
             <svg class="social__icon">
               <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
             </svg>
@@ -46,7 +46,7 @@
       <div>
         <ul class="mobile-social__list">
           <li class="mobile-social__item" v-for="(socialLink, index) in socialLinks" :key="index">
-            <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="up" target="_blank">
+            <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="up" target="_blank" rel="noreferrer">
               <svg class="mobile-social__icon">
                 <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
               </svg>
@@ -132,12 +132,6 @@ $icon-dimensions: 1.5rem;
   }
 }
 
-%flexbox-navigation {
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-}
-
 .top-app-bar {
   background-color: transparent;
   display: flex;
@@ -153,12 +147,17 @@ $icon-dimensions: 1.5rem;
   }
 
   &__navigation {
-    @extend %flexbox-navigation;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    user-select: none;
   }
 
   &__social {
     @extend %fade-in-animation;
-    @extend %flexbox-navigation;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
 
     @media (max-width: $dropdown-navigation-max-screen-width) {
       display: none;
