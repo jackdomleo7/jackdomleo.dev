@@ -137,7 +137,7 @@ $icon-dimensions: 1.5rem;
   display: flex;
   justify-content: space-between;
   padding: 3rem 5rem 0;
-  width: 100vw;
+  width: 100%;
 
   @media (max-width: $dropdown-navigation-max-screen-width) {
     background-color: $grey-800;

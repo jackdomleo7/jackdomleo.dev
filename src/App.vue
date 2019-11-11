@@ -27,7 +27,7 @@ export default class App extends Vue {}
 <style lang="scss" scoped>
 .app {
   display: grid;
-  grid-template: auto / 100vw;
+  grid-template: auto / 1fr;
   grid-template-areas: "top-app-bar"
     "main"
     "footer";
