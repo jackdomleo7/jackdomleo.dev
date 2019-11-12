@@ -25,7 +25,7 @@
         </li>
       </ul>
     </section>
-    <button @click="isMobileNavExpanded = !isMobileNavExpanded" class="navigation__hamburger-button" :aria-label="(isMobileNavExpanded ? 'Collapse' : 'Expand') + ' menu'" data-balloon-pos="left">
+    <button @click="isMobileNavExpanded = !isMobileNavExpanded" class="navigation__hamburger-button">
       <svg class="navigation__hamburger">
         <use xlink:href="assets/svg-sprite.svg#icon-hamburger"></use>
       </svg>
@@ -143,6 +143,7 @@ $icon-dimensions: 1.5rem;
     background-color: $grey-800;
     padding: 0.5rem 1rem 0;
     position: fixed;
+    top: 0;
     z-index: 1000;
   }
 
