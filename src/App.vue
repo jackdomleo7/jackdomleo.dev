@@ -1,20 +1,20 @@
 <template>
   <div id="app" class="app">
-    <top-app-bar class="app__top-app-bar"></top-app-bar>
-    <main class="app__main">
-      <router-view/>
-    </main>
-    <footer class="app__footer"></footer>
+    <top-app-bar></top-app-bar>
+    <main-activity></main-activity>
+    <footer></footer>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import TopAppBar from '@/components/TopAppBar.vue';
+import MainActivity from '@/components/MainActivity.vue';
 
 @Component({
   components: {
     TopAppBar,
+    MainActivity
   },
 })
 export default class App extends Vue {}
@@ -25,23 +25,5 @@ export default class App extends Vue {}
 </style>
 
 <style lang="scss" scoped>
-.app {
-  display: grid;
-  grid-template: auto / 1fr;
-  grid-template-areas: "top-app-bar"
-    "main"
-    "footer";
 
-  &__top-app-bar {
-    grid-area: top-app-bar;
-  }
-
-  &__main {
-    grid-area: main;
-  }
-
-  &__footer {
-    grid-area: footer;
-  }
-}
 </style>
