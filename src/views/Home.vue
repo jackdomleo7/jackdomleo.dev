@@ -68,8 +68,12 @@
       font-size: 2.6rem;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 525px) {
       font-size: 2rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 1.6rem;
     }
   }
 }
