@@ -14,7 +14,7 @@ import MainActivity from '@/components/MainActivity.vue';
 @Component({
   components: {
     TopAppBar,
-    MainActivity
+    MainActivity,
   },
 })
 export default class App extends Vue {}
