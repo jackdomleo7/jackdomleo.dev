@@ -4,17 +4,20 @@
       <h1 class="intro__welcome">Hello there!<br>Let me introduce myself...<br>I'm Jack Domleo.</h1>
     </section>
     <section class="home__spotlight spotlight">
-      <figure class="spotlight__me">
+      <figure class="spotlight__tile">
         <div class="spotlight__portrait">
           <img src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
         </div>
       </figure>
-      <figure style=" background-color: deepskyblue;
-  margin: 0;">CSS Is Awesome</figure>
-      <figure style=" background-color: orangered;
-  margin: 0;">Mitrefinch logo</figure>
-      <figure style=" background-color: lawngreen;
-  margin: 0;">Something else</figure>
+      <figure class="spotlight__tile">CSS Is Awesome</figure>
+      <figure class="spotlight__tile">
+        <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer">
+          <svg class="spotlight__logo" aria-label="Mitrefinch Ltd">
+            <use xlink:href="assets/svg-sprite.svg#logo-mitrefinch"></use>
+          </svg>
+        </a>
+      </figure>
+      <figure class="spotlight__tile">Something else</figure>
     </section>
   </div>
 </template>
@@ -95,10 +98,18 @@
     grid-template: 1fr / 1fr;
   }
 
-  &__me {
+  &__tile {
+    align-items: center;
     background-color: fade_out($grey-900, 0.5);
+    display: flex;
+    justify-content: center;
     margin: 0;
     padding: 1rem;
+
+    &-link {
+      display: flex;
+      height: 100%;
+    }
   }
 
   &__portrait {
@@ -131,6 +142,15 @@
 
     img {
       display: block;
+    }
+  }
+
+  &__logo {
+    color: $grey-50;
+    transition: color ease-in-out 0.2s;
+
+    &:hover {
+      color: #ed293d;
     }
   }
 }
