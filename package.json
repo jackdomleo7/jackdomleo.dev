@@ -20,7 +20,6 @@
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-typescript": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
-    "lint-staged": "^9.4.2",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "stylelint": "^11.1.1",
@@ -28,14 +27,5 @@
     "stylelint-scss": "^3.12.0",
     "typescript": "~3.5.3",
     "vue-template-compiler": "^2.6.10"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*": [
-      "npm run lint",
-      "git add"
-    ]
   }
 }
