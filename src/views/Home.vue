@@ -9,7 +9,11 @@
           <img src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
         </div>
       </figure>
-      <figure class="spotlight__tile">CSS Is Awesome</figure>
+      <figure class="spotlight__tile">
+        <div class="spotlight__css-is-awesome">
+          <h3>CSS<br>IS<br>AWESOME</h3>
+        </div>
+      </figure>
       <figure class="spotlight__tile">
         <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer">
           <svg class="spotlight__logo" aria-label="Mitrefinch Ltd">
@@ -147,6 +151,25 @@
 
     img {
       display: block;
+    }
+  }
+
+  &__css-is-awesome {
+    border: solid 0.4rem $grey-50;
+    padding: 1rem;
+    width: 65%;
+
+    h3 {
+      font-size: 2rem;
+      margin: 0;
+
+      @for $i from 0 through 40 {
+        $pixels: $i * 10;
+        $rems: $i / 20;
+        @media (min-width: calc(350px + #{$pixels}px)) {
+          font-size: calc(2rem + #{$rems}rem);
+        }
+      }
     }
   }
 
