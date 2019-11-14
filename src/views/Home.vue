@@ -165,7 +165,7 @@
 
       @for $i from 0 through 40 {
         $pixels: $i * 10;
-        $rems: $i / 20;
+        $rems: $i / 26;
         @media (min-width: calc(350px + #{$pixels}px)) {
           font-size: calc(2rem + #{$rems}rem);
         }
