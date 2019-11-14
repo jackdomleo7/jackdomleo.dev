@@ -106,9 +106,14 @@
     margin: 0;
     padding: 1rem;
 
+    @media (min-width: 2400px) {
+      padding: 2rem;
+    }
+
     &-link {
       display: flex;
       height: 100%;
+      width: 100%;
     }
   }
 
@@ -148,6 +153,7 @@
   &__logo {
     color: $grey-50;
     transition: color ease-in-out 0.2s;
+    width: 100%;
 
     &:hover {
       color: #ed293d;
