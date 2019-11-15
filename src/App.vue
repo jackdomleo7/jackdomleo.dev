@@ -17,7 +17,15 @@ import MainActivity from '@/components/MainActivity.vue';
     MainActivity,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  private mounted() {
+    const path = localStorage.getItem('path');
+    if (path) {
+      localStorage.removeItem('path');
+      this.$router.push(path);
+    }
+  }
+}
 </script>
 
 <style lang="scss">
