@@ -22,7 +22,7 @@
         </a>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
-        <p>&lt;!-- TODO: Put something here --&gt;</p>
+        <p style="font-family: "Courier New", sans-serif;">&lt;!-- TODO: Put something here --&gt;</p>
       </figure>
     </section>
   </div>
