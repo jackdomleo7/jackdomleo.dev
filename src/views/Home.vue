@@ -41,6 +41,9 @@ export default class Home extends Vue {
   private cssIsAwesomeHeight: number = 0;
 
   private mounted() {
+    this.setSpotlightTileHeight();
+    this.setCssIsAwesomeWidth();
+
     window.addEventListener('load', () => {
       this.setSpotlightTileHeight();
       this.setCssIsAwesomeWidth();
