@@ -51,11 +51,15 @@ export default class Home extends Vue {
   }
 
   private setSpotlightTileHeight() {
-    this.spotlightTileWidth = (this.$refs.spotlight__tile.clientWidth) / 16;
+    this.spotlightTileWidth = this.toRem(this.$refs.spotlight__tile.clientWidth);
   }
 
   private setCssIsAwesomeWidth() {
-    this.cssIsAwesomeHeight = (this.$refs.css_is_awesome.clientHeight) / 16;
+    this.cssIsAwesomeHeight = this.toRem(this.$refs.css_is_awesome.clientHeight);
+  }
+
+  private toRem(value: number) {
+    return value / 16;
   }
 }
 </script>
