@@ -15,13 +15,15 @@
         </div>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
-        <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer">
-          <svg class="spotlight__logo" aria-label="Mitrefinch Ltd">
+        <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer" aria-label="Link to Mitrefinch's website">
+          <svg class="spotlight__logo" aria-label="Mitrefinch Ltd logo">
             <use xlink:href="assets/svg-sprite.svg#logo-mitrefinch"></use>
           </svg>
         </a>
       </figure>
-      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">Something else</figure>
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
+        <p>&lt;!-- TODO: Put something here --&gt;</p>
+      </figure>
     </section>
   </div>
 </template>
@@ -72,9 +74,18 @@ export default class Home extends Vue {
   grid-template: auto / 1.1fr 0.9fr;
   grid-template-areas: "intro spotlight";
 
-  @media (max-width: 1290px) {
+  @media (max-width: 1490px) {
+    grid-template: auto / 1fr 1fr;
+  }
+
+  @media (max-width: 1300px) {
     grid-template: auto auto / 1fr;
     grid-template-areas: "intro" "spotlight";
+
+    .home__intro,
+    .home__spotlight {
+      margin: 0;
+    }
   }
 
   &__intro {
@@ -84,6 +95,10 @@ export default class Home extends Vue {
     @media (max-width: 1290px) {
       margin-right: 0;
     }
+
+    @media (max-width: 1490px) {
+      margin-right: 1rem;
+    }
   }
 
   &__spotlight {
@@ -92,6 +107,10 @@ export default class Home extends Vue {
 
     @media (max-width: 1290px) {
       margin-left: 0;
+    }
+
+    @media (max-width: 1490px) {
+      margin-left: 1rem;
     }
   }
 }
@@ -125,7 +144,7 @@ export default class Home extends Vue {
   grid-template: 1fr 1fr / 1fr 1fr;
   justify-content: center;
 
-  @media (max-width: 680px) {
+  @media (max-width: 690px) {
     grid-template: 1fr / 1fr;
   }
 
