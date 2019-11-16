@@ -22,7 +22,7 @@
         </a>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
-        <p style="font-family: "Courier New", sans-serif;">&lt;!-- TODO: Put something here --&gt;</p>
+        <p class="spotlight__todo">&lt;!-- TODO: Put something here --&gt;</p>
       </figure>
     </section>
   </div>
@@ -230,6 +230,10 @@ export default class Home extends Vue {
     &:hover {
       color: #ed293d;
     }
+  }
+
+  &__todo {
+    font-family: "Courier New", sans-serif;
   }
 }
 </style>
