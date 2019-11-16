@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <section class="home__intro intro">
-      <h1 class="intro__welcome">Hello there!<br>Let me introduce myself...<br>I'm Jack Domleo.</h1>
+      <h1 class="intro__welcome h-card">Hello there!<br>Let me introduce myself...<br>I'm <span class="p-name">Jack Domleo</span>.</h1>
     </section>
     <section class="home__spotlight spotlight">
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
