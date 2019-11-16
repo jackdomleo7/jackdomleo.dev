@@ -4,37 +4,49 @@
       <h1 class="intro__welcome">Hello there!<br>Let me introduce myself...<br>I'm Jack Domleo.</h1>
     </section>
     <section class="home__spotlight spotlight">
-      <figure class="spotlight__tile">
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">
         <div class="spotlight__portrait">
           <img src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
         </div>
       </figure>
-      <figure class="spotlight__tile">
+      <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">
         <div class="spotlight__css-is-awesome">
           <h3>CSS<br>IS<br>AWESOME</h3>
         </div>
       </figure>
-      <figure class="spotlight__tile">
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">
         <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer">
           <svg class="spotlight__logo" aria-label="Mitrefinch Ltd">
             <use xlink:href="assets/svg-sprite.svg#logo-mitrefinch"></use>
           </svg>
         </a>
       </figure>
-      <figure class="spotlight__tile">Something else</figure>
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">Something else</figure>
     </section>
   </div>
 </template>
 
 <script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
-  @Component({
-    components: {
+@Component({
+  components: {
 
-    },
-  })
-  export default class Home extends Vue {}
+  },
+})
+export default class Home extends Vue {
+  private spotlightTileWidthRem: number = 0;
+
+  private mounted() {
+    window.addEventListener('load', this.setSpotlightTileHeight);
+
+    window.addEventListener('resize', this.setSpotlightTileHeight);
+  }
+
+  private setSpotlightTileHeight() {
+    this.spotlightTileWidthRem = (this.$refs.spotlight__tile.clientWidth) / 16;
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -109,6 +121,7 @@
     justify-content: center;
     margin: 0;
     padding: 1rem;
+    width: 100%;
 
     @media (min-width: 2400px) {
       padding: 2rem;
