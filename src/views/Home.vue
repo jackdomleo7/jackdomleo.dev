@@ -4,24 +4,24 @@
       <h1 class="intro__welcome">Hello there!<br>Let me introduce myself...<br>I'm Jack Domleo.</h1>
     </section>
     <section class="home__spotlight spotlight">
-      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
         <div class="spotlight__portrait">
           <img src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
         </div>
       </figure>
-      <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">
-        <div class="spotlight__css-is-awesome">
+      <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
+        <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'rem'" ref="css_is_awesome">
           <h3>CSS<br>IS<br>AWESOME</h3>
         </div>
       </figure>
-      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
         <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer">
           <svg class="spotlight__logo" aria-label="Mitrefinch Ltd">
             <use xlink:href="assets/svg-sprite.svg#logo-mitrefinch"></use>
           </svg>
         </a>
       </figure>
-      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidthRem + 'rem'">Something else</figure>
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">Something else</figure>
     </section>
   </div>
 </template>
@@ -35,16 +35,27 @@ import { Component, Vue } from 'vue-property-decorator';
   },
 })
 export default class Home extends Vue {
-  private spotlightTileWidthRem: number = 0;
+  private spotlightTileWidth: number = 0;
+  private cssIsAwesomeHeight: number = 0;
 
   private mounted() {
-    window.addEventListener('load', this.setSpotlightTileHeight);
+    window.addEventListener('load', () => {
+      this.setSpotlightTileHeight();
+      this.setCssIsAwesomeWidth();
+    });
 
-    window.addEventListener('resize', this.setSpotlightTileHeight);
+    window.addEventListener('resize', () => {
+      this.setSpotlightTileHeight();
+      this.setCssIsAwesomeWidth();
+    });
   }
 
   private setSpotlightTileHeight() {
-    this.spotlightTileWidthRem = (this.$refs.spotlight__tile.clientWidth) / 16;
+    this.spotlightTileWidth = (this.$refs.spotlight__tile.clientWidth) / 16;
+  }
+
+  private setCssIsAwesomeWidth() {
+    this.cssIsAwesomeHeight = (this.$refs.css_is_awesome.clientHeight) / 16;
   }
 }
 </script>
@@ -110,7 +121,7 @@ export default class Home extends Vue {
   grid-template: 1fr 1fr / 1fr 1fr;
   justify-content: center;
 
-  @media (max-width: 480px) {
+  @media (max-width: 680px) {
     grid-template: 1fr / 1fr;
   }
 
@@ -170,7 +181,6 @@ export default class Home extends Vue {
   &__css-is-awesome {
     border: solid 0.4rem $grey-50;
     padding: 1rem;
-    width: 65%;
 
     h3 {
       font-size: 2rem;
