@@ -13,6 +13,7 @@ export default class MainActivity extends Vue {}
 
 <style lang="scss" scoped>
 .main-activity {
+  flex: 1;
   padding: 2rem 5rem;
 
   @media (max-width: 660px) {
