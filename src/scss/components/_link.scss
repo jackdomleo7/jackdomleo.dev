@@ -1,0 +1,26 @@
+@import "../colours";
+
+.link {
+  &--paragraph {
+    color: $pink;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      background-color: $pink;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 0) scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    &:hover::before {
+      transform: translate(-50%, 0) scaleX(1);
+    }
+  }
+}
