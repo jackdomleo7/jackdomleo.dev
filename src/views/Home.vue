@@ -5,9 +5,11 @@
     </section>
     <section class="home__spotlight spotlight">
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
-        <div class="spotlight__portrait">
-          <img src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
-        </div>
+        <router-link to="/about">
+          <div class="spotlight__portrait">
+            <img src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
+          </div>
+        </router-link>
       </figure>
       <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
         <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'rem'" ref="css_is_awesome">
