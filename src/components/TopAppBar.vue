@@ -140,6 +140,14 @@ $icon-dimensions: 1.5rem;
   padding: 3rem 5rem 0;
   width: 100%;
 
+  @media (min-width: 2000px) {
+    padding: 3.5rem 6rem 1rem;
+  }
+
+  @media (min-width: 3500px) {
+    padding: 4rem 7rem 2rem;
+  }
+
   @media (max-width: $dropdown-navigation-max-screen-width) {
     background-color: $grey-800;
     padding: 0.5rem 1rem 0;
@@ -209,6 +217,14 @@ $icon-dimensions: 1.5rem;
     opacity: 0;
     width: 5rem;
 
+    @media (min-width: 2000px) {
+      width: 7.5rem;
+    }
+
+    @media (min-width: 3500px) {
+      width: 10rem;
+    }
+
     @keyframes bounceIn {
       0% {
         opacity: 0;
@@ -250,11 +266,23 @@ $icon-dimensions: 1.5rem;
     font-size: 0.875rem;
     list-style-type: none;
     text-transform: uppercase;
+
+    @media (min-width: 2000px) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: 3500px) {
+      font-size: 2.2rem;
+    }
   }
 
   &__item {
     display: inline-block;
     padding: 0 0.625rem;
+
+    @media (min-width: 2000px) {
+      padding: 0 1.2rem;
+    }
   }
 
   &__link {
@@ -312,6 +340,10 @@ $icon-dimensions: 1.5rem;
   &__item {
     display: inline-block;
     padding: 0 0.5rem;
+
+    @media (min-width: 2000px) {
+      padding: 0 1rem;
+    }
   }
 
   &__link {
@@ -323,6 +355,16 @@ $icon-dimensions: 1.5rem;
     height: $icon-dimensions;
     transition: 0.2s color ease-in-out;
     width: $icon-dimensions;
+
+    @media (min-width: 2000px) {
+      height: $icon-dimensions * 1.4;
+      width: $icon-dimensions * 1.4;
+    }
+
+    @media (min-width: 3500px) {
+      height: $icon-dimensions * 2;
+      width: $icon-dimensions * 2;
+    }
   }
 }
 
