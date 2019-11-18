@@ -124,19 +124,39 @@ export default class Home extends Vue {
 
   &__welcome {
     color: $grey-75;
-    font-size: 3rem;
+    font-size: 1.6rem;
     line-height: 1.5;
 
-    @media (max-width: 730px) {
-      font-size: 2.6rem;
-    }
-
-    @media (max-width: 525px) {
+    @media (min-width: 420px) {
       font-size: 2rem;
     }
 
-    @media (max-width: 420px) {
-      font-size: 1.6rem;
+    @media (min-width: 525px) {
+      font-size: 2.6rem;
+    }
+
+    @media (min-width: 730px) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 3.6rem;
+    }
+
+    @media (min-width: 2000px) {
+      font-size: 4rem;
+    }
+
+    @media (min-width: 2500px) {
+      font-size: 5rem;
+    }
+
+    @media (min-width: 3000px) {
+      font-size: 6rem;
+    }
+
+    @media (min-width: 3500px) {
+      font-size: 7rem;
     }
   }
 }
