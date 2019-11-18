@@ -31,11 +31,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component({
-  components: {
-
-  },
-})
+@Component
 export default class Home extends Vue {
   private spotlightTileWidth: number = 0;
   private cssIsAwesomeHeight: number = 0;
