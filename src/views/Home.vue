@@ -11,7 +11,7 @@
       </figure>
       <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
         <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'rem'" ref="css_is_awesome">
-          <h3>CSS<br>IS<br>AWESOME</h3>
+          <h3 class="css-is-awesome">CSS<br>IS<br>AWESOME</h3>
         </div>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
@@ -234,6 +234,32 @@ export default class Home extends Vue {
 
   &__todo {
     font-family: "Courier New", sans-serif;
+  }
+}
+
+.css-is-awesome {
+  animation-delay: 0.5s;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-name: slideIn;
+  animation-timing-function: linear;
+  opacity: 0;
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-60%);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translateX(20%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }
 </style>
