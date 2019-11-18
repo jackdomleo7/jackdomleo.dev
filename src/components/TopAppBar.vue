@@ -55,6 +55,7 @@
         </ul>
       </div>
     </section>
+    <div v-if="isMobileNavExpanded" class="top-app-bar__mobile-mask" @click="isMobileNavExpanded = false"></div>
   </header>
 </template>
 
@@ -180,6 +181,15 @@ $icon-dimensions: 1.5rem;
 
     @media (max-width: $dropdown-navigation-max-screen-width) {
       display: flex;
+    }
+
+    &-mask {
+      height: 100vh;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      z-index: 998;
     }
 
     &--expanded {
