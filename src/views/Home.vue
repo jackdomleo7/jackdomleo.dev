@@ -1,13 +1,13 @@
 <template>
-  <div class="home">
+  <div class="home h-card">
     <section class="home__intro intro">
-      <h1 class="intro__welcome h-card">Hello there!<br>Let me introduce myself...<br>I'm <span class="p-name">Jack Domleo</span>.</h1>
+      <h1 class="intro__welcome">Hello there!<br>Let me introduce myself...<br>I'm <span class="p-name">Jack Domleo</span>.</h1>
     </section>
     <section class="home__spotlight spotlight">
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
         <router-link to="/about">
           <div class="spotlight__portrait">
-            <img src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
+            <img class="u-photo" src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
           </div>
         </router-link>
       </figure>
