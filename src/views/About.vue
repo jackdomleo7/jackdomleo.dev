@@ -1,8 +1,6 @@
 <template>
   <div class="about h-card">
-    <section class="about__title">
-      <h1>About me</h1>
-    </section>
+    <h1 class="page--title">About me</h1>
     <article class="about__article">
       <div class="article__content">
         <p>Hi, I'm <span class="p-name">Jack Domleo</span>, an enthusiastic web developer based in <a class="link--paragraph" href="https://www.google.com/maps/place/Nottingham/@52.9541053,-1.2401011,12z/data=!3m1!4b1!4m5!3m4!1s0x487832d2390779cd:0x108063201919db15!8m2!3d52.9547832!4d-1.1581086" rel="noreferrer" target="_blank"><address><span class="p-locality">Nottingham</span>, <span class="p-country-name">UK</span></address></a>, with a strong passion for front-end development and UI/UX.</p>
@@ -28,13 +26,6 @@ export default class About extends Vue {}
 @import "../scss/colours";
 
 .about {
-  &__title {
-    h1 {
-      font-size: 2.8rem;
-      margin: 0;
-    }
-  }
-
   &__article {
     margin: 4rem 0;
   }
