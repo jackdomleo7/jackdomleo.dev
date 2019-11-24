@@ -4,7 +4,7 @@
       <h1 class="intro__welcome">Hello there!<br>Let me introduce myself...<br>I'm <span class="p-name">Jack Domleo</span>.</h1>
     </section>
     <section class="home__spotlight spotlight">
-      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
+      <figure class="spotlight__tile" id="spotlight__portrait" :style="'height:' + spotlightTileWidth + 'rem'">
         <router-link to="/about">
           <div class="spotlight__portrait">
             <img class="u-photo" src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
@@ -12,7 +12,7 @@
         </router-link>
       </figure>
       <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
-        <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'rem'" ref="css_is_awesome">
+        <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'rem'" id="css-is-swesome">
           <h3 class="css-is-awesome">CSS<br>IS<br>AWESOME</h3>
         </div>
       </figure>
@@ -54,11 +54,11 @@ export default class Home extends Vue {
   }
 
   private setSpotlightTileHeight() {
-    this.spotlightTileWidth = this.toRem(this.$refs.spotlight__tile.clientWidth);
+    this.spotlightTileWidth = this.toRem(document.getElementById('spotlight__portrait')!.clientWidth);
   }
 
   private setCssIsAwesomeWidth() {
-    this.cssIsAwesomeHeight = this.toRem(this.$refs.css_is_awesome.clientHeight);
+    this.cssIsAwesomeHeight = this.toRem(document.getElementById('css-is-swesome')!.clientHeight);
   }
 
   private toRem(value: number) {
