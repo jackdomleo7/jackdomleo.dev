@@ -4,26 +4,26 @@
       <h1 class="intro__welcome">Hello there!<br>Let me introduce myself...<br>I'm <span class="p-name">Jack Domleo</span>.</h1>
     </section>
     <section class="home__spotlight spotlight">
-      <figure class="spotlight__tile" id="spotlight__portrait" :style="'height:' + spotlightTileWidth + 'rem'">
+      <figure class="spotlight__tile" id="spotlight__portrait" :style="'height:' + spotlightTileWidth + 'px'">
         <router-link to="/about">
           <div class="spotlight__portrait">
             <img class="u-photo" src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
           </div>
         </router-link>
       </figure>
-      <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
-        <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'rem'" id="css-is-swesome">
+      <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
+        <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'px'" id="css-is-swesome">
           <h3 class="css-is-awesome">CSS<br>IS<br>AWESOME</h3>
         </div>
       </figure>
-      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
         <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer" aria-label="Link to Mitrefinch's website">
           <svg class="spotlight__logo" aria-label="Mitrefinch Ltd logo">
             <use xlink:href="assets/svg-sprite.svg#logo-mitrefinch"></use>
           </svg>
         </a>
       </figure>
-      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'rem'">
+      <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
         <p class="spotlight__todo">&lt;!-- TODO: Put something here --&gt;</p>
       </figure>
     </section>
@@ -54,15 +54,11 @@ export default class Home extends Vue {
   }
 
   private setSpotlightTileHeight() {
-    this.spotlightTileWidth = this.toRem(document.getElementById('spotlight__portrait')!.clientWidth);
+    this.spotlightTileWidth = document.getElementById('spotlight__portrait')!.clientWidth;
   }
 
   private setCssIsAwesomeWidth() {
-    this.cssIsAwesomeHeight = this.toRem(document.getElementById('css-is-swesome')!.clientHeight);
-  }
-
-  private toRem(value: number) {
-    return value / 16;
+    this.cssIsAwesomeHeight = document.getElementById('css-is-swesome')!.clientHeight;
   }
 }
 </script>
