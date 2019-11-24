@@ -1,0 +1,7 @@
+@import "../colours";
+
+.link {
+  &--paragraph {
+    color: $grey-500;
+  }
+}

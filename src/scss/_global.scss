@@ -1,0 +1,47 @@
+@import "./colours";
+
+::selection {
+  background-color: $blue;
+  color: $grey-50;
+  text-shadow: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+}
+
+body {
+  background: linear-gradient(135deg, rgba(66, 66, 66, 0.46) 0%, rgba(66, 66, 66, 0.46) 12.5%, rgba(68, 68, 68, 0.46) 12.5%, rgba(68, 68, 68, 0.46) 25%, rgba(71, 71, 71, 0.46) 25%, rgba(71, 71, 71, 0.46) 37.5%, rgba(73, 73, 73, 0.46) 37.5%, rgba(73, 73, 73, 0.46) 50%, rgba(75, 75, 75, 0.46) 50%, rgba(75, 75, 75, 0.46) 62.5%, rgba(77, 77, 77, 0.46) 62.5%, rgba(77, 77, 77, 0.46) 75%, rgba(80, 80, 80, 0.46) 75%, rgba(80, 80, 80, 0.46) 87.5%, rgba(82, 82, 82, 0.46) 87.5%, rgba(82, 82, 82, 0.46) 100%), linear-gradient(45deg, rgb(41, 41, 41) 0%, rgb(41, 41, 41) 12.5%, rgb(43, 43, 43) 12.5%, rgb(43, 43, 43) 25%, rgb(46, 46, 46) 25%, rgb(46, 46, 46) 37.5%, rgb(48, 48, 48) 37.5%, rgb(48, 48, 48) 50%, rgb(50, 50, 50) 50%, rgb(50, 50, 50) 62.5%, rgb(52, 52, 52) 62.5%, rgb(52, 52, 52) 75%, rgb(55, 55, 55) 75%, rgb(55, 55, 55) 87.5%, rgb(57, 57, 57) 87.5%, rgb(57, 57, 57) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: $grey-75;
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Exo, Verdana, Arial, sans-serif;
+}
+
+address {
+  display: inline;
+}
