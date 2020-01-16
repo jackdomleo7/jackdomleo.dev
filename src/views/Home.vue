@@ -13,7 +13,7 @@
       </figure>
       <figure class="spotlight__tile" ref="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
         <div class="spotlight__css-is-awesome" :style="'width:' + cssIsAwesomeHeight + 'px'" id="css-is-swesome">
-          <h3 class="css-is-awesome">CSS<br>IS<br>AWESOME</h3>
+          <h2 class="css-is-awesome">CSS<br>IS<br>AWESOME</h2>
         </div>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
@@ -222,7 +222,7 @@ export default class Home extends Vue {
     border: solid 0.4rem $grey-50;
     padding: 1rem;
 
-    h3 {
+    h2 {
       font-size: 2rem;
       margin: 0;
 
