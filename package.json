@@ -25,7 +25,7 @@
     "stylelint": "^13.0.0",
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.13.0",
-    "typescript": "~3.5.3",
+    "typescript": "~3.7.4",
     "vue-template-compiler": "^2.6.11"
   }
 }
