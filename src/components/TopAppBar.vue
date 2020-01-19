@@ -33,7 +33,7 @@
     <section class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''" :aria-expanded="isMobileNavExpanded.toString()">
       <nav class="mobile__nav">
         <ul class="mobile__list">
-          <li v-for="(navLink, index) in navLinks" :key="index" class="mobile__item">
+          <li v-for="(navLink, index) in navLinks" :key="index" class="mobile__item" @click="isMobileNavExpanded = false">
             <router-link :to="navLink.link" class="mobile__link">
               <svg class="mobile__icon">
                 <use :xlink:href="'assets/svg-sprite.svg#icon-' + navLink.icon"></use>
