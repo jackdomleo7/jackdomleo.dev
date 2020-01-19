@@ -39,7 +39,7 @@
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "font-family-name-quotes": "always-where-recommended",
-    "font-weight-notation": "named-where-possible",
+    "font-weight-notation": "numeric",
     "function-comma-newline-after": "never-multi-line",
     "function-comma-newline-before": "never-multi-line",
     "function-comma-space-after": "always",
