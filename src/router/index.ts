@@ -24,14 +24,10 @@ const routes = [
     component: Projects,
   },
   {
-    path: '/404',
+    path: '*',
     name: 'page-not-found',
     component: PageNotFound,
-  },
-  {
-    path: '*',
-    redirect: '/404',
-  },
+  }
 ];
 
 const router = new VueRouter({
