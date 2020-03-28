@@ -27,7 +27,7 @@ const routes = [
     path: '*',
     name: 'page-not-found',
     component: PageNotFound,
-  }
+  },
 ];
 
 const router = new VueRouter({
