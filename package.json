@@ -2,6 +2,13 @@
   "name": "jackdomleo.dev",
   "version": "0.1.0",
   "private": true,
+  "author": "Jack Domleo",
+  "description": "Portfolio website for Jack Domleo",
+  "homepage": "https://jackdomleo.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDomleo/jackdomleo.dev"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
