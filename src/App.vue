@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import "normalize.css";
+import 'normalize.css';
 
 import { Component, Vue } from 'vue-property-decorator';
 import TopAppBar from '@/components/TopAppBar.vue';
