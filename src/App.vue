@@ -7,6 +7,8 @@
 </template>
 
 <script lang="ts">
+import "normalize.css";
+
 import { Component, Vue } from 'vue-property-decorator';
 import TopAppBar from '@/components/TopAppBar.vue';
 import MainActivity from '@/components/MainActivity.vue';
