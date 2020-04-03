@@ -2,12 +2,12 @@
 
 .link {
   &--paragraph {
-    color: $grey-500;
+    color: var(--color-grey-500);
     transition: font-weight 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &:hover,
     &:focus {
-      color: $grey-50;
+      color: var(--color-grey-50);
       font-weight: 700;
     }
   }
