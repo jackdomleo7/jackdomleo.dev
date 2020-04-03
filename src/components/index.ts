@@ -7,5 +7,5 @@ export {
   Icon,
   MainActivity,
   SiteLink,
-  TopAppBar
-}
+  TopAppBar,
+};
