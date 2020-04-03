@@ -62,10 +62,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { Routes } from '@/router';
+import VueRouter from 'vue-router';
 
 interface INavLink {
   text: string;
-  link: string;
+  link: object;
   icon: string;
 }
 
@@ -87,17 +88,17 @@ export default class TopAppBar extends Vue {
   private readonly navLinks: INavLink[] = [
     {
       text: 'Home',
-      link: Routes.Home,
+      link: { name: Routes.Home },
       icon: 'home',
     },
     {
       text: 'About',
-      link: Routes.About,
+      link: { name: Routes.About },
       icon: 'user',
     },
     {
       text: 'Projects',
-      link: Routes.Projects,
+      link: { name: Routes.Projects },
       icon: 'code',
     },
   ];
