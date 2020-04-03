@@ -1,7 +1,7 @@
 <template>
   <header class="top-app-bar">
     <section class="top-app-bar__navigation">
-      <router-link to="/" class="navigation__logo-link">
+      <router-link :to="{ name: Routes.Home }" class="navigation__logo-link">
         <img class="navigation__logo" src="img/nav-logo.png" alt="Jack" />
       </router-link>
       <nav class="navigation__nav">
@@ -61,6 +61,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Routes } from '@/router';
 
 interface INavLink {
   text: string;
@@ -80,22 +81,23 @@ interface ISocialLink {
   },
 })
 export default class TopAppBar extends Vue {
+  private Routes: Routes = Routes;
   private isMobileNavExpanded: boolean = false;
 
   private readonly navLinks: INavLink[] = [
     {
       text: 'Home',
-      link: '/',
+      link: Routes.Home,
       icon: 'home',
     },
     {
       text: 'About',
-      link: '/about',
+      link: Routes.About,
       icon: 'user',
     },
     {
       text: 'Projects',
-      link: '/projects',
+      link: Routes.Projects,
       icon: 'code',
     },
   ];
