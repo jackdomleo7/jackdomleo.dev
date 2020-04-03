@@ -1,13 +1,13 @@
 <template>
   <header class="top-app-bar">
     <section class="top-app-bar__navigation">
-      <router-link to="/" class="navigation__logo-link">
+      <router-link :to="{ name: Routes.Home }" class="navigation__logo-link">
         <img class="navigation__logo" src="img/nav-logo.png" alt="Jack" />
       </router-link>
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li v-for="(navLink, index) in navLinks" :key="index" class="navigation__item">
-            <router-link :to="navLink.link" class="navigation__link">
+            <router-link :to="navLink.link" class="navigation__link" :aria-current="isCurrent(navLink.link) ? 'page' : null">
               {{ navLink.text }}
             </router-link>
           </li>
@@ -18,26 +18,20 @@
       <ul class="social__list">
         <li v-for="(socialLink, index) in socialLinks" :key="index" class="social__item">
           <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down" target="_blank" rel="noreferrer">
-            <svg class="social__icon">
-              <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
-            </svg>
+            <icon class="social__icon" :icon="socialLink.icon" />
           </a>
         </li>
       </ul>
     </section>
     <button @click="isMobileNavExpanded = !isMobileNavExpanded" class="navigation__hamburger-button">
-      <svg class="navigation__hamburger">
-        <use xlink:href="assets/svg-sprite.svg#icon-hamburger"></use>
-      </svg>
+      <icon class="navigation__hamburger" icon="hamburger" />
     </button>
     <section class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''" :aria-expanded="isMobileNavExpanded.toString()">
       <nav class="mobile__nav">
         <ul class="mobile__list">
           <li v-for="(navLink, index) in navLinks" :key="index" class="mobile__item" @click="isMobileNavExpanded = false">
-            <router-link :to="navLink.link" class="mobile__link">
-              <svg class="mobile__icon">
-                <use :xlink:href="'assets/svg-sprite.svg#icon-' + navLink.icon"></use>
-              </svg>
+            <router-link :to="navLink.link" class="mobile__link" :aria-current="isCurrent(navLink.link) ? 'page' : null">
+              <icon class="mobile__icon" :icon="navLink.icon" />
               {{ navLink.text }}
             </router-link>
           </li>
@@ -47,9 +41,7 @@
         <ul class="mobile-social__list">
           <li class="mobile-social__item" v-for="(socialLink, index) in socialLinks" :key="index">
             <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="up" target="_blank" rel="noreferrer">
-              <svg class="mobile-social__icon">
-                <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
-              </svg>
+              <icon class="mobile-social__icon" :icon="socialLink.icon" />
             </a>
           </li>
         </ul>
@@ -61,34 +53,49 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Routes } from '@/router';
+import { Icon } from '@/components';
+
+interface INavLink {
+  text: string;
+  link: object;
+  icon: string;
+}
+
+interface ISocialLink {
+  label: string;
+  link: string;
+  icon: string;
+}
 
 @Component({
   components: {
-
+    Icon,
   },
 })
 export default class TopAppBar extends Vue {
+  private Routes: Routes = Routes;
   private isMobileNavExpanded: boolean = false;
 
-  private readonly navLinks: object[] = [
+  private readonly navLinks: INavLink[] = [
     {
       text: 'Home',
-      link: '/',
+      link: { name: Routes.Home },
       icon: 'home',
     },
     {
       text: 'About',
-      link: '/about',
+      link: { name: Routes.About },
       icon: 'user',
     },
     {
       text: 'Projects',
-      link: '/projects',
+      link: { name: Routes.Projects },
       icon: 'code',
     },
   ];
 
-  private readonly socialLinks: object[] = [
+  private readonly socialLinks: ISocialLink[] = [
     {
       label: 'LinkedIn',
       link: 'https://www.linkedin.com/in/jack-domleo/',
@@ -105,12 +112,14 @@ export default class TopAppBar extends Vue {
       icon: 'codepen',
     },
   ];
+
+  private isCurrent(to: string): boolean {
+    return this.$route.path === to;
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/colours";
-
 $dropdown-navigation-max-screen-width: 660px;
 $icon-dimensions: 1.5rem;
 
@@ -149,7 +158,7 @@ $icon-dimensions: 1.5rem;
   }
 
   @media (max-width: $dropdown-navigation-max-screen-width) {
-    background-color: $grey-800;
+    background-color: var(--color-grey-800);
     padding: 0.5rem 1rem 0;
     position: fixed;
     top: 0;
@@ -175,7 +184,7 @@ $icon-dimensions: 1.5rem;
   }
 
   &__mobile {
-    background-color: fade_out($grey-800, 0.02);
+    background-color: var(--color-grey-800);
     display: none;
     flex-direction: column;
     height: 0;
@@ -262,7 +271,7 @@ $icon-dimensions: 1.5rem;
   }
 
   &__list {
-    color: $grey-75;
+    color: var(--color-grey-75);
     font-size: 0.875rem;
     list-style-type: none;
     text-transform: uppercase;
@@ -291,16 +300,16 @@ $icon-dimensions: 1.5rem;
     transition: 0.2s color ease-in-out;
 
     &:hover {
-      color: $grey-600;
+      color: var(--color-grey-600);
     }
 
     &.router-link-exact-active {
-      color: $blue;
+      color: var(--color-blue);
     }
   }
 
   &__hamburger {
-    color: $grey-50;
+    color: var(--color-grey-50);
     height: 1.5rem;
     width: 1.5rem;
 
@@ -325,12 +334,12 @@ $icon-dimensions: 1.5rem;
     &:hover {
       .social__item {
         .social__icon {
-          color: fade_out($orange-500, 0.4);
+          opacity: 0.4;
         }
 
         &:hover {
           .social__icon {
-            color: $orange-500;
+            opacity: 1;
           }
         }
       }
@@ -351,9 +360,9 @@ $icon-dimensions: 1.5rem;
   }
 
   &__icon {
-    color: $orange-500;
+    color: var(--color-orange);
     height: $icon-dimensions;
-    transition: 0.2s color ease-in-out;
+    transition: 0.2s opacity ease-in-out;
     width: $icon-dimensions;
 
     @media (min-width: 2000px) {
@@ -370,7 +379,7 @@ $icon-dimensions: 1.5rem;
 
 .mobile {
   &__nav {
-    color: $grey-50;
+    color: var(--color-grey-50);
     font-size: 1.25rem;
     padding: 2rem 5rem;
 
@@ -411,7 +420,7 @@ $icon-dimensions: 1.5rem;
 
     &.router-link-exact-active {
       .mobile__icon {
-        color: $blue;
+        color: var(--color-blue);
       }
     }
   }
@@ -424,7 +433,7 @@ $icon-dimensions: 1.5rem;
 
   &-social {
     &__list {
-      color: $grey-50;
+      color: var(--color-grey-50);
       display: flex;
       justify-content: center;
       list-style-type: none;

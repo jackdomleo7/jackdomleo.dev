@@ -5,7 +5,7 @@
     </section>
     <section class="home__spotlight spotlight">
       <figure class="spotlight__tile" id="spotlight__portrait" :style="'height:' + spotlightTileWidth + 'px'">
-        <router-link to="/about">
+        <router-link :to="{ name: Routes.About }">
           <div class="spotlight__portrait">
             <img class="u-photo" src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
           </div>
@@ -32,9 +32,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Routes } from '@/router';
 
 @Component
 export default class Home extends Vue {
+  private Routes: Routes = Routes;
   private spotlightTileWidth: number = 0;
   private cssIsAwesomeHeight: number = 0;
 
@@ -53,11 +55,11 @@ export default class Home extends Vue {
     });
   }
 
-  private setSpotlightTileHeight() {
+  private setSpotlightTileHeight(): void {
     this.spotlightTileWidth = document.getElementById('spotlight__portrait')!.clientWidth;
   }
 
-  private setCssIsAwesomeWidth() {
+  private setCssIsAwesomeWidth(): void {
     this.cssIsAwesomeHeight = document.getElementById('css-is-swesome')!.clientHeight;
   }
 }
@@ -73,6 +75,7 @@ export default class Home extends Vue {
 
   @media (max-width: 1490px) {
     grid-template: auto / 1fr 1fr;
+    grid-template-areas: "intro spotlight";
   }
 
   @media (max-width: 1300px) {
@@ -117,7 +120,7 @@ export default class Home extends Vue {
   display: flex;
 
   &__welcome {
-    color: $grey-75;
+    color: var(--color-grey-75);
     font-size: 1.6rem;
     line-height: 1.5;
 
@@ -167,7 +170,7 @@ export default class Home extends Vue {
 
   &__tile {
     align-items: center;
-    background-color: fade_out($grey-900, 0.5);
+    background-color: rgba(44, 44, 44, 0.5);
     display: flex;
     justify-content: center;
     margin: 0;
@@ -191,7 +194,7 @@ export default class Home extends Vue {
     position: relative;
 
     &::before {
-      background: linear-gradient(to right, fade_out($grey-50, 1) 0%, fade_out($grey-50, 0.7) 100%);
+      background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
       content: "";
       display: block;
       height: 100%;
@@ -219,7 +222,7 @@ export default class Home extends Vue {
   }
 
   &__css-is-awesome {
-    border: solid 0.4rem $grey-50;
+    border: solid 0.4rem var(--color-grey-50);
     padding: 1rem;
 
     h2 {
@@ -237,7 +240,7 @@ export default class Home extends Vue {
   }
 
   &__logo {
-    color: $grey-50;
+    color: var(--color-grey-50);
     transition: color ease-in-out 0.2s;
     width: 100%;
 
