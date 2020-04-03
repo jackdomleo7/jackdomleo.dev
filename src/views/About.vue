@@ -34,7 +34,11 @@ export default class About extends Vue {}
 .article {
   &__content {
     color: var(--color-grey-75);
-    font-size: 1.25rem;
+    font-size: 1rem;
+
+    @media (min-width: 48em) {
+      font-size: 1.25rem;
+    }
   }
 }
 </style>
