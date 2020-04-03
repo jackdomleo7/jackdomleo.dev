@@ -18,26 +18,20 @@
       <ul class="social__list">
         <li v-for="(socialLink, index) in socialLinks" :key="index" class="social__item">
           <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down" target="_blank" rel="noreferrer">
-            <svg class="social__icon">
-              <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
-            </svg>
+            <icon class="social__icon" :icon="socialLink.icon" />
           </a>
         </li>
       </ul>
     </section>
     <button @click="isMobileNavExpanded = !isMobileNavExpanded" class="navigation__hamburger-button">
-      <svg class="navigation__hamburger">
-        <use xlink:href="assets/svg-sprite.svg#icon-hamburger"></use>
-      </svg>
+      <icon class="navigation__hamburger" icon="hamburger" />
     </button>
     <section class="top-app-bar__mobile" :class="isMobileNavExpanded ? 'top-app-bar__mobile--expanded' : ''" :aria-expanded="isMobileNavExpanded.toString()">
       <nav class="mobile__nav">
         <ul class="mobile__list">
           <li v-for="(navLink, index) in navLinks" :key="index" class="mobile__item" @click="isMobileNavExpanded = false">
             <router-link :to="navLink.link" class="mobile__link" :aria-current="isCurrent(navLink.link) ? 'page' : null">
-              <svg class="mobile__icon">
-                <use :xlink:href="'assets/svg-sprite.svg#icon-' + navLink.icon"></use>
-              </svg>
+              <icon class="mobile__icon" :icon="navLink.icon" />
               {{ navLink.text }}
             </router-link>
           </li>
@@ -47,9 +41,7 @@
         <ul class="mobile-social__list">
           <li class="mobile-social__item" v-for="(socialLink, index) in socialLinks" :key="index">
             <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="up" target="_blank" rel="noreferrer">
-              <svg class="mobile-social__icon">
-                <use :xlink:href="'assets/svg-sprite.svg#icon-' + socialLink.icon"></use>
-              </svg>
+              <icon class="mobile-social__icon" :icon="socialLink.icon" />
             </a>
           </li>
         </ul>
@@ -62,7 +54,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { Routes } from '@/router';
-import VueRouter from 'vue-router';
+import Icon from '@/components/Icon.vue';
 
 interface INavLink {
   text: string;
@@ -78,7 +70,7 @@ interface ISocialLink {
 
 @Component({
   components: {
-
+    Icon,
   },
 })
 export default class TopAppBar extends Vue {
