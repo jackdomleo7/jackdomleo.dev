@@ -62,6 +62,18 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+interface INavLink {
+  text: string;
+  link: string;
+  icon: string;
+}
+
+interface ISocialLink {
+  label: string;
+  link: string;
+  icon: string;
+}
+
 @Component({
   components: {
 
@@ -70,7 +82,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class TopAppBar extends Vue {
   private isMobileNavExpanded: boolean = false;
 
-  private readonly navLinks: object[] = [
+  private readonly navLinks: INavLink[] = [
     {
       text: 'Home',
       link: '/',
@@ -88,7 +100,7 @@ export default class TopAppBar extends Vue {
     },
   ];
 
-  private readonly socialLinks: object[] = [
+  private readonly socialLinks: ISocialLink[] = [
     {
       label: 'LinkedIn',
       link: 'https://www.linkedin.com/in/jack-domleo/',
