@@ -54,7 +54,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { Routes } from '@/router';
-import Icon from '@/components/Icon.vue';
+import { Icon } from '@/components';
 
 interface INavLink {
   text: string;

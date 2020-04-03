@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import SiteLink from '@/components/SiteLink.vue';
+import { SiteLink } from '@/components';
 
 @Component({
   components: { SiteLink }
