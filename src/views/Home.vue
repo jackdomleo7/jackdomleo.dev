@@ -75,6 +75,7 @@ export default class Home extends Vue {
 
   @media (max-width: 1490px) {
     grid-template: auto / 1fr 1fr;
+    grid-template-areas: "intro spotlight";
   }
 
   @media (max-width: 1300px) {
