@@ -113,8 +113,6 @@ export default class TopAppBar extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/colours";
-
 $dropdown-navigation-max-screen-width: 660px;
 $icon-dimensions: 1.5rem;
 
@@ -153,7 +151,7 @@ $icon-dimensions: 1.5rem;
   }
 
   @media (max-width: $dropdown-navigation-max-screen-width) {
-    background-color: $grey-800;
+    background-color: var(--color-grey-800);
     padding: 0.5rem 1rem 0;
     position: fixed;
     top: 0;
@@ -179,7 +177,7 @@ $icon-dimensions: 1.5rem;
   }
 
   &__mobile {
-    background-color: fade_out($grey-800, 0.02);
+    background-color: var(--color-grey-800);
     display: none;
     flex-direction: column;
     height: 0;
@@ -266,7 +264,7 @@ $icon-dimensions: 1.5rem;
   }
 
   &__list {
-    color: $grey-75;
+    color: var(--color-grey-75);
     font-size: 0.875rem;
     list-style-type: none;
     text-transform: uppercase;
@@ -295,16 +293,16 @@ $icon-dimensions: 1.5rem;
     transition: 0.2s color ease-in-out;
 
     &:hover {
-      color: $grey-600;
+      color: var(--color-grey-600);
     }
 
     &.router-link-exact-active {
-      color: $blue;
+      color: var(--color-blue);
     }
   }
 
   &__hamburger {
-    color: $grey-50;
+    color: var(--color-grey-50);
     height: 1.5rem;
     width: 1.5rem;
 
@@ -329,12 +327,12 @@ $icon-dimensions: 1.5rem;
     &:hover {
       .social__item {
         .social__icon {
-          color: fade_out($orange-500, 0.4);
+          opacity: 0.4;
         }
 
         &:hover {
           .social__icon {
-            color: $orange-500;
+            opacity: 1;
           }
         }
       }
@@ -343,7 +341,7 @@ $icon-dimensions: 1.5rem;
 
   &__item {
     display: inline-block;
-    padding: 0 0.5rem;
+    padding: 0 0.5rem;;
 
     @media (min-width: 2000px) {
       padding: 0 1rem;
@@ -355,9 +353,9 @@ $icon-dimensions: 1.5rem;
   }
 
   &__icon {
-    color: $orange-500;
+    color: var(--color-orange);
     height: $icon-dimensions;
-    transition: 0.2s color ease-in-out;
+    transition: 0.2s opacity ease-in-out;
     width: $icon-dimensions;
 
     @media (min-width: 2000px) {
@@ -374,7 +372,7 @@ $icon-dimensions: 1.5rem;
 
 .mobile {
   &__nav {
-    color: $grey-50;
+    color: var(--color-grey-50);
     font-size: 1.25rem;
     padding: 2rem 5rem;
 
@@ -415,7 +413,7 @@ $icon-dimensions: 1.5rem;
 
     &.router-link-exact-active {
       .mobile__icon {
-        color: $blue;
+        color: var(--color-blue);
       }
     }
   }
@@ -428,7 +426,7 @@ $icon-dimensions: 1.5rem;
 
   &-social {
     &__list {
-      color: $grey-50;
+      color: var(--color-grey-50);
       display: flex;
       justify-content: center;
       list-style-type: none;

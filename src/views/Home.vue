@@ -117,7 +117,7 @@ export default class Home extends Vue {
   display: flex;
 
   &__welcome {
-    color: $grey-75;
+    color: var(--color-grey-75);
     font-size: 1.6rem;
     line-height: 1.5;
 
@@ -167,7 +167,7 @@ export default class Home extends Vue {
 
   &__tile {
     align-items: center;
-    background-color: fade_out($grey-900, 0.5);
+    background-color: rgba(44,44,44, 0.5);
     display: flex;
     justify-content: center;
     margin: 0;
@@ -191,7 +191,7 @@ export default class Home extends Vue {
     position: relative;
 
     &::before {
-      background: linear-gradient(to right, fade_out($grey-50, 1) 0%, fade_out($grey-50, 0.7) 100%);
+      background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
       content: "";
       display: block;
       height: 100%;
@@ -219,7 +219,7 @@ export default class Home extends Vue {
   }
 
   &__css-is-awesome {
-    border: solid 0.4rem $grey-50;
+    border: solid 0.4rem var(--color-grey-50);
     padding: 1rem;
 
     h2 {
@@ -237,7 +237,7 @@ export default class Home extends Vue {
   }
 
   &__logo {
-    color: $grey-50;
+    color: var(--color-grey-50);
     transition: color ease-in-out 0.2s;
     width: 100%;
 

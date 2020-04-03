@@ -33,7 +33,7 @@ export default class About extends Vue {}
 
 .article {
   &__content {
-    color: $grey-75;
+    color: var(--color-grey-75);
     font-size: 1.25rem;
   }
 }
