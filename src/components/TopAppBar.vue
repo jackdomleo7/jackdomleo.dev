@@ -7,7 +7,7 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li v-for="(navLink, index) in navLinks" :key="index" class="navigation__item">
-            <router-link :to="navLink.link" class="navigation__link">
+            <router-link :to="navLink.link" class="navigation__link" :aria-current="isCurrent(navLink.link) ? 'page' : null">
               {{ navLink.text }}
             </router-link>
           </li>
@@ -34,7 +34,7 @@
       <nav class="mobile__nav">
         <ul class="mobile__list">
           <li v-for="(navLink, index) in navLinks" :key="index" class="mobile__item" @click="isMobileNavExpanded = false">
-            <router-link :to="navLink.link" class="mobile__link">
+            <router-link :to="navLink.link" class="mobile__link" :aria-current="isCurrent(navLink.link) ? 'page' : null">
               <svg class="mobile__icon">
                 <use :xlink:href="'assets/svg-sprite.svg#icon-' + navLink.icon"></use>
               </svg>
@@ -105,6 +105,10 @@ export default class TopAppBar extends Vue {
       icon: 'codepen',
     },
   ];
+
+  private isCurrent(to: string): boolean {
+    return this.$route.path === to;
+  }
 }
 </script>
 
