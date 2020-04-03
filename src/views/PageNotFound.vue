@@ -5,8 +5,8 @@
         <div>
           <h1 class="page-not-found__title page-not-found__title--one-line">404 | Page Not Found</h1>
           <h1 class="page-not-found__title page-not-found__title--split">404<br>Page Not Found</h1>
-          <p>I have no idea where you thought you were going, but it doesn't exist</p>
-          <p>Go to the <router-link class="link--paragraph" to="/">Homepage</router-link> and try again</p>
+          <p>I have no idea where you thought you were going, but it doesn't exist.</p>
+          <p>Go to the <router-link class="link--paragraph" :to="{ name: Routes.Home }">Homepage</router-link> and try again.</p>
         </div>
       </div>
       <img class="page-not-found__img" src="/img/shrug-404.png" alt="Stickman shrugging his shoulders" />
@@ -16,9 +16,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Routes } from '@/router';
 
 @Component
-export default class MainActivity extends Vue {}
+export default class MainActivity extends Vue {
+  private Routes: Routes = Routes;
+}
 </script>
 
 <style lang="scss" scoped>

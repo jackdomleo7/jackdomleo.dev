@@ -5,7 +5,7 @@
     </section>
     <section class="home__spotlight spotlight">
       <figure class="spotlight__tile" id="spotlight__portrait" :style="'height:' + spotlightTileWidth + 'px'">
-        <router-link to="/about">
+        <router-link :to="{ name: Routes.About }">
           <div class="spotlight__portrait">
             <img class="u-photo" src="/img/jack-domleo-portrait.jpg" alt="Jack Domleo portrait" />
           </div>
@@ -32,9 +32,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Routes } from '@/router';
 
 @Component
 export default class Home extends Vue {
+  private Routes: Routes = Routes;
   private spotlightTileWidth: number = 0;
   private cssIsAwesomeHeight: number = 0;
 
@@ -53,11 +55,11 @@ export default class Home extends Vue {
     });
   }
 
-  private setSpotlightTileHeight() {
+  private setSpotlightTileHeight(): void {
     this.spotlightTileWidth = document.getElementById('spotlight__portrait')!.clientWidth;
   }
 
-  private setCssIsAwesomeWidth() {
+  private setCssIsAwesomeWidth(): void {
     this.cssIsAwesomeHeight = document.getElementById('css-is-swesome')!.clientHeight;
   }
 }
