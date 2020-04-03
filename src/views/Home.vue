@@ -170,7 +170,7 @@ export default class Home extends Vue {
 
   &__tile {
     align-items: center;
-    background-color: rgba(44,44,44, 0.5);
+    background-color: rgba(44, 44, 44, 0.5);
     display: flex;
     justify-content: center;
     margin: 0;

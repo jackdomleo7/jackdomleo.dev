@@ -348,7 +348,7 @@ $icon-dimensions: 1.5rem;
 
   &__item {
     display: inline-block;
-    padding: 0 0.5rem;;
+    padding: 0 0.5rem;
 
     @media (min-width: 2000px) {
       padding: 0 1rem;

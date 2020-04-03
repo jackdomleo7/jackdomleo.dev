@@ -20,14 +20,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class SiteLink extends Vue {
   @Prop({
     validator: (value: string) =>
-      ["email", "external", "internal", "social", "tel"].includes(value),
-    required: true
+      ['email', 'external', 'internal', 'social', 'tel'].includes(value),
+    required: true,
   })
   private readonly type!: string;
 
