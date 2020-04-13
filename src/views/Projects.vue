@@ -2,7 +2,15 @@
   <div class="projects">
     <h1 class="page--title">Projects</h1>
     <article class="projects__article">
-      <h2>ellaparsons.design</h2>
+      <h2><site-link type="external" link="https://www.tmdip.co.uk">www.tmdip.co.uk</site-link></h2>
+      <ul>
+        <li>
+          <strong>Description:</strong> Website for TMD Interior Projects &amp; Building Services Ltd
+        </li>
+      </ul>
+    </article>
+    <article class="projects__article">
+      <h2><site-link type="external" link="https://ellaparsons.design">ellaparsons.design</site-link></h2>
       <ul>
         <li>
           <strong>Description:</strong> Portfolio website for Ella Parsons
@@ -32,17 +40,6 @@
       </ul>
     </article>
     <article class="projects__article">
-      <h2>Kernel</h2>
-      <ul>
-        <li>
-          <strong>Company:</strong> Mitrefinch Ltd
-        </li>
-        <li>
-          <strong>Description:</strong> Central repository of styles and Vue components to be used across all Mitrefinch web products
-        </li>
-      </ul>
-    </article>
-    <article class="projects__article">
       <h2>bmi Connect</h2>
       <ul>
         <li>
@@ -65,7 +62,7 @@
       </ul>
     </article>
     <article class="projects__article">
-      <h2>jackdomleo.dev</h2>
+      <h2><site-link type="internal" link="/">jackdomleo.dev</site-link></h2>
       <ul>
         <li>
           <strong>Description:</strong> My own portfolio website
@@ -77,8 +74,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { SiteLink } from "@/components";
 
-@Component
+@Component({
+  components: { SiteLink }
+})
 export default class Projects extends Vue {}
 </script>
 
