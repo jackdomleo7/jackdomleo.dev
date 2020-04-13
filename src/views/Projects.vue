@@ -74,10 +74,10 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { SiteLink } from "@/components";
+import { SiteLink } from '@/components';
 
 @Component({
-  components: { SiteLink }
+  components: { SiteLink },
 })
 export default class Projects extends Vue {}
 </script>
