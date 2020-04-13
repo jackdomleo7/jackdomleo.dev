@@ -30,9 +30,9 @@
     "@vue/cli-service": "^4.1.2",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
-    "stylelint": "^13.0.0",
+    "stylelint": "^13.3.2",
     "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.13.0",
+    "stylelint-scss": "^3.16.1",
     "typescript": "~3.7.4",
     "vue-template-compiler": "^2.6.11"
   }
