@@ -33,7 +33,7 @@
     "sass-loader": "^8.0.2",
     "stylelint": "^13.3.2",
     "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.16.1",
+    "stylelint-scss": "^3.17.0",
     "typescript": "~3.7.4",
     "vue-template-compiler": "^2.6.11"
   }
