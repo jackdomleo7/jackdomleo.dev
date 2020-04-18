@@ -17,7 +17,7 @@
     <section class="top-app-bar__social">
       <ul class="social__list">
         <li v-for="(socialLink, index) in socialLinks" :key="index" class="social__item">
-          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="down" target="_blank" rel="noreferrer">
+          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-cooltipz-dir="bottom" target="_blank" rel="noreferrer">
             <icon class="social__icon" :icon="socialLink.icon" />
           </a>
         </li>
@@ -40,7 +40,7 @@
       <div>
         <ul class="mobile-social__list">
           <li class="mobile-social__item" v-for="(socialLink, index) in socialLinks" :key="index">
-            <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-balloon-pos="up" target="_blank" rel="noreferrer">
+            <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-cooltipz-dir="top" target="_blank" rel="noreferrer">
               <icon class="mobile-social__icon" :icon="socialLink.icon" />
             </a>
           </li>

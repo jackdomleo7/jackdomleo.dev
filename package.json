@@ -17,6 +17,7 @@
     "stylelint:fix": "stylelint \"**/*.(scss|vue)\" --fix"
   },
   "dependencies": {
+    "cooltipz-css": "^0.5.0",
     "core-js": "^3.6.4",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.11",
