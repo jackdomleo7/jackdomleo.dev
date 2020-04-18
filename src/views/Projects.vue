@@ -2,6 +2,14 @@
   <div class="projects">
     <h1 class="page--title">Projects</h1>
     <article class="projects__article">
+      <h2><site-link type="external" link="https://cooltipz.jackdomleo.dev">Cooltipz.css</site-link></h2>
+      <ul>
+        <li>
+          <strong>Description:</strong> <site-link type="external" link="https://www.npmjs.com/package/cooltipz-css">npm package</site-link> of cool tooltips made from pure CSS
+        </li>
+      </ul>
+    </article>
+    <article class="projects__article">
       <h2><site-link type="external" link="https://www.tmdip.co.uk">www.tmdip.co.uk</site-link></h2>
       <ul>
         <li>
