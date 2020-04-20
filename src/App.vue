@@ -8,7 +8,6 @@
 
 <script lang="ts">
 import 'normalize.css';
-import 'cooltipz-css';
 
 import { Component, Vue } from 'vue-property-decorator';
 import TopAppBar from '@/components/TopAppBar.vue';
@@ -32,6 +31,7 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
+@import "~cooltipz-css/src/cooltipz";
 @import "./scss/main";
 </style>
 
