@@ -111,6 +111,11 @@ export default class TopAppBar extends Vue {
       link: 'https://codepen.io/JackDomleo/',
       icon: 'codepen',
     },
+    {
+      label: 'Twitter',
+      link: 'https://twitter.com/jackdomleo7',
+      icon: 'twitter',
+    },
   ];
 
   private isCurrent(to: string): boolean {
