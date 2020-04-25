@@ -36,7 +36,7 @@ import { Routes } from '@/router';
 import { SiteLink } from '@/components';
 
 @Component({
-  components: { SiteLink }
+  components: { SiteLink },
 })
 export default class Home extends Vue {
   private Routes: Routes = Routes;

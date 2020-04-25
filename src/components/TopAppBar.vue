@@ -71,7 +71,7 @@ interface ISocialLink {
 @Component({
   components: {
     Icon,
-    SiteLink
+    SiteLink,
   },
 })
 export default class TopAppBar extends Vue {
