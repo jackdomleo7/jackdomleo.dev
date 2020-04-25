@@ -98,22 +98,22 @@ export default class TopAppBar extends Vue {
   private readonly socialLinks: ISocialLink[] = [
     {
       label: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/jack-domleo/',
+      link: 'https://www.linkedin.com/in/jack-domleo?ref=jackdomleo.dev',
       icon: 'linkedin',
     },
     {
       label: 'GitHub',
-      link: 'https://github.com/JDomleo',
+      link: 'https://github.com/JDomleo?ref=jackdomleo.dev',
       icon: 'github',
     },
     {
       label: 'CodePen',
-      link: 'https://codepen.io/JackDomleo/',
+      link: 'https://codepen.io/JackDomleo?ref=jackdomleo.dev',
       icon: 'codepen',
     },
     {
       label: 'Twitter',
-      link: 'https://twitter.com/jackdomleo7',
+      link: 'https://twitter.com/jackdomleo7?ref=jackdomleo.dev',
       icon: 'twitter',
     },
   ];

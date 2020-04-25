@@ -2,15 +2,15 @@
   <div class="projects">
     <h1 class="page--title">Projects</h1>
     <article class="projects__article">
-      <h2><site-link type="external" link="https://cooltipz.jackdomleo.dev">Cooltipz.css</site-link></h2>
+      <h2><site-link type="external" link="https://cooltipz.jackdomleo.dev?ref=jackdomleo.dev">Cooltipz.css</site-link></h2>
       <ul>
         <li>
-          <strong>Description:</strong> <site-link type="external" link="https://www.npmjs.com/package/cooltipz-css">npm package</site-link> of cool tooltips made from pure CSS
+          <strong>Description:</strong> <site-link type="external" link="https://www.npmjs.com/package/cooltipz-css?ref=jackdomleo.dev">npm package</site-link> of cool tooltips made from pure CSS
         </li>
       </ul>
     </article>
     <article class="projects__article">
-      <h2><site-link type="external" link="https://www.tmdip.co.uk">www.tmdip.co.uk</site-link></h2>
+      <h2><site-link type="external" link="https://www.tmdip.co.uk?ref=jackdomleo.dev">www.tmdip.co.uk</site-link></h2>
       <ul>
         <li>
           <strong>Description:</strong> Website for TMD Interior Projects &amp; Building Services Ltd
@@ -18,7 +18,7 @@
       </ul>
     </article>
     <article class="projects__article">
-      <h2><site-link type="external" link="https://ellaparsons.design">ellaparsons.design</site-link></h2>
+      <h2><site-link type="external" link="https://ellaparsons.design?ref=jackdomleo.dev">ellaparsons.design</site-link></h2>
       <ul>
         <li>
           <strong>Description:</strong> Portfolio website for Ella Parsons
@@ -26,7 +26,7 @@
       </ul>
     </article>
     <article class="projects__article">
-      <h2>Flexipay</h2>
+      <h2><site-link type="external" link="https://www.mitrefinch.co.uk/product/payroll-software?ref=jackdomleo.dev">Flexipay</site-link></h2>
       <ul>
         <li>
           <strong>Company:</strong> Mitrefinch Ltd

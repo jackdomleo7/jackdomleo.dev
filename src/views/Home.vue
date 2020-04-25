@@ -17,7 +17,7 @@
         </div>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
-        <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk/" target="_blank" rel="noreferrer" aria-label="Link to Mitrefinch's website">
+        <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk?ref=jackdomleo.dev" target="_blank" rel="noreferrer" aria-label="Link to Mitrefinch's website">
           <svg class="spotlight__logo" aria-label="Mitrefinch Ltd logo">
             <use xlink:href="assets/svg-sprite.svg#logo-mitrefinch"></use>
           </svg>
