@@ -17,11 +17,11 @@
         </div>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
-        <a class="spotlight__tile-link" href="https://www.mitrefinch.co.uk?ref=jackdomleo.dev" target="_blank" rel="noreferrer" aria-label="Link to Mitrefinch's website">
+        <site-link class="spotlight__tile-link" type="external" link="https://www.mitrefinch.co.uk" target="_blank" rel="noreferrer" aria-label="Link to Mitrefinch's website">
           <svg class="spotlight__logo" aria-label="Mitrefinch Ltd logo">
             <use xlink:href="assets/svg-sprite.svg#logo-mitrefinch"></use>
           </svg>
-        </a>
+        </site-link>
       </figure>
       <figure class="spotlight__tile" :style="'height:' + spotlightTileWidth + 'px'">
         <p class="spotlight__todo">&lt;!-- TODO: Put something here --&gt;</p>
@@ -33,8 +33,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { Routes } from '@/router';
+import { SiteLink } from '@/components';
 
-@Component
+@Component({
+  components: { SiteLink }
+})
 export default class Home extends Vue {
   private Routes: Routes = Routes;
   private spotlightTileWidth: number = 0;
@@ -66,8 +69,6 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/colours";
-
 .home {
   display: grid;
   grid-template: auto / 1.1fr 0.9fr;

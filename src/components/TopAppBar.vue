@@ -17,9 +17,9 @@
     <section class="top-app-bar__social">
       <ul class="social__list">
         <li v-for="(socialLink, index) in socialLinks" :key="index" class="social__item">
-          <a class="social__link" :href="socialLink.link" :aria-label="socialLink.label" data-cooltipz-dir="bottom" target="_blank" rel="noreferrer">
+          <site-link class="social__link" type="external" :link="socialLink.link" :aria-label="socialLink.label" data-cooltipz-dir="bottom" target="_blank" rel="noreferrer">
             <icon class="social__icon" :icon="socialLink.icon" />
-          </a>
+          </site-link>
         </li>
       </ul>
     </section>
@@ -40,9 +40,9 @@
       <div>
         <ul class="mobile-social__list">
           <li class="mobile-social__item" v-for="(socialLink, index) in socialLinks" :key="index">
-            <a class="mobile-social__link" :href="socialLink.link" :aria-label="socialLink.label" data-cooltipz-dir="top" target="_blank" rel="noreferrer">
+            <site-link class="mobile-social__link" type="external" :link="socialLink.link" :aria-label="socialLink.label" data-cooltipz-dir="top" target="_blank" rel="noreferrer">
               <icon class="mobile-social__icon" :icon="socialLink.icon" />
-            </a>
+            </site-link>
           </li>
         </ul>
       </div>
@@ -54,7 +54,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { Routes } from '@/router';
-import { Icon } from '@/components';
+import { Icon, SiteLink } from '@/components';
 
 interface INavLink {
   text: string;
@@ -71,6 +71,7 @@ interface ISocialLink {
 @Component({
   components: {
     Icon,
+    SiteLink
   },
 })
 export default class TopAppBar extends Vue {
@@ -98,22 +99,22 @@ export default class TopAppBar extends Vue {
   private readonly socialLinks: ISocialLink[] = [
     {
       label: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/jack-domleo?ref=jackdomleo.dev',
+      link: 'https://www.linkedin.com/in/jack-domleo',
       icon: 'linkedin',
     },
     {
       label: 'GitHub',
-      link: 'https://github.com/JDomleo?ref=jackdomleo.dev',
+      link: 'https://github.com/JDomleo',
       icon: 'github',
     },
     {
       label: 'CodePen',
-      link: 'https://codepen.io/JackDomleo?ref=jackdomleo.dev',
+      link: 'https://codepen.io/JackDomleo',
       icon: 'codepen',
     },
     {
       label: 'Twitter',
-      link: 'https://twitter.com/jackdomleo7?ref=jackdomleo.dev',
+      link: 'https://twitter.com/jackdomleo7',
       icon: 'twitter',
     },
   ];
