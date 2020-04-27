@@ -17,7 +17,7 @@
     "stylelint:fix": "stylelint \"**/*.(scss|vue)\" --fix"
   },
   "dependencies": {
-    "cooltipz-css": "^1.4.0",
+    "cooltipz-css": "^1.4.1",
     "core-js": "^3.6.4",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.11",
@@ -29,7 +29,7 @@
     "@vue/cli-plugin-babel": "^4.1.2",
     "@vue/cli-plugin-typescript": "^4.3.0",
     "@vue/cli-service": "^4.1.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.3.3",
     "stylelint-order": "^4.0.0",
