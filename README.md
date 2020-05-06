@@ -1,3 +1,5 @@
+[![Twitter followers](https://img.shields.io/twitter/follow/jackdomleo7?style=social&logo=twitter "Follow me on Twitter")](https://twitter.com/jackdomleo7)
+
 # jackdomleo.dev
 
 > Jack Domleo&#39;s personal website and blog
