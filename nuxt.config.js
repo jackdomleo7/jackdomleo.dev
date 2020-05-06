@@ -37,6 +37,8 @@ export default {
   ** Global CSS
   */
   css: [
+    "normalize.css",
+    "@/assets/styles/main.scss",
   ],
   /*
   ** Plugins to load before mounting the App
@@ -61,9 +63,12 @@ export default {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    postcss: {
+      plugins: {
+        autoprefixer: {},
+        cssnano: {}
+      }
+    },
     extend (config, ctx) {
     }
   },
