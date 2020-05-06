@@ -13,10 +13,10 @@ export default {
       { name: 'robots', content: 'index, follow' },
       { name: 'name', content: 'Jack Domleo' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { name: 'msapplication-TileColor', content: '#2d89ef' },
+      { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'msapplication-TileImage', content: '/favicons/mstile-144x144.png' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
-      { name: 'theme-color', content: '#ffffff' },
+      { name: 'theme-color', content: '#393939' },
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' },
@@ -25,7 +25,7 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicons/android-chrome-192x192.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicons/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', color: '#5bbad5' },
+      { rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', color: '#ff5a0a' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
