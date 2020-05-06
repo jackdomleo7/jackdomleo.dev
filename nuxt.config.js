@@ -38,6 +38,7 @@ export default {
   */
   css: [
     "normalize.css",
+    "node_modules/cooltipz-css/src/cooltipz",
     "@/assets/styles/main.scss",
   ],
   /*
