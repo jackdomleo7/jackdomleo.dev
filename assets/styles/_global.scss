@@ -1,12 +1,27 @@
+:root {
+  --body-background: var(--color-grey-dark);
+  --body-color: var(--color-white);
+
+  @media (prefers-color-scheme: light) {
+    --body-background: var(--color-white);
+    --body-color: var(--color-grey-dark);
+  }
+}
+
 ::selection {
   text-shadow: none;
-  color: #fff;
-  background-color: #00f;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+*:focus {
+  box-shadow: 0 0 0 4px var(--color-blue);
 }
 
 html {
   font-family: sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -20,6 +35,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body-background);
+  color: var(--body-color);
 }
 
 img {
