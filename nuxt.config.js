@@ -5,7 +5,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Jack Domleo - Developer',
     meta: [
       { charset: 'utf-8' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
@@ -66,5 +66,9 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  generate: {
+    dir: 'docs'
+  },
+  publicPath: '/'
 }
