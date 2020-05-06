@@ -8,7 +8,10 @@ export default {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'name', content: 'Jack Domleo' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { name: 'msapplication-TileColor', content: '#2d89ef' },
       { name: 'msapplication-TileImage', content: '/favicons/mstile-144x144.png' },
