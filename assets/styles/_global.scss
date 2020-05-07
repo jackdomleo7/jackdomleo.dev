@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Exo|Open+Sans&display=swap');
+
 :root {
   --body-background: var(--color-grey-dark);
   --body-color: var(--color-white);
+
+  --font-family: sans-serif;
+  --font-stack: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", var(--font-family);
 
   @media (prefers-color-scheme: light) {
     --body-background: var(--color-white);
@@ -15,11 +20,17 @@
 }
 
 *:focus {
+  outline-style: solid;
+  outline-color: transparent;
   box-shadow: 0 0 0 4px var(--color-blue);
+
+  @media screen and (-ms-high-contrast: active) {
+    outline: 4px solid currentColor;
+  }
 }
 
 html {
-  font-family: sans-serif;
+  font-family: var(--font-family);
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -28,15 +39,29 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', var(--font-stack);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--body-background);
   color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: exo, var(--font-stack);
 }
 
 img {
