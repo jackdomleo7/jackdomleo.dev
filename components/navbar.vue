@@ -3,6 +3,7 @@
     <nav class="nav">
       <nuxt-link to="/" class="nav__logo">
         <svg-icon name="logo" />
+        <span class="sr-only">Home</span>
       </nuxt-link>
       <ul class="nav__links">
         <li v-for="(link, index) in NavLinks" :key="index" :aria-setsize="NavLinks.length" :aria-posinset="index + 1">
