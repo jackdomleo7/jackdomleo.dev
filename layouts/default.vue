@@ -1,17 +1,20 @@
 <template>
-  <div>
+  <div class="app">
     <div class="gradient"></div>
     <navbar />
-    <nuxt />
+    <main class="app__main">
+      <nuxt />
+    </main>
+    <footerbar />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import Navbar from '@/components/navbar.vue';
+import { Navbar, Footerbar } from '@/components';
 
 @Component({
-  components: { Navbar }
+  components: { Navbar, Footerbar }
 })
 export default class Default extends Vue {
   
@@ -23,6 +26,16 @@ export default class Default extends Vue {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__main {
+    flex: 1;
+  }
 }
 
 .gradient {
