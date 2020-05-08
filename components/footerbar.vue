@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <ul class="footer__social">
-      <li v-for="(social, index) in Socials" :key="index" :aria-setsize="Socials.length" :aria-posinset="index + 1">
+      <li v-for="(social, index) in socialMedia" :key="index" :aria-setsize="socialMedia.length" :aria-posinset="index + 1">
         <a :href="social.url" rel="nofollow" :aria-label="social.platform" data-cooltipz-dir="top">
           <svg-icon :name="social.platform.toLowerCase()" />
         </a>
@@ -15,38 +15,15 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-
-interface ISocial {
-  platform: string;
-  url: string;
-}
+import SocialMedia, { ISocial } from '@/middleware/socialMedia';
 
 @Component
 export default class Footerbar extends Vue {
-  private readonly Socials: ISocial[] = [
-    {
-      platform: 'Twitter',
-      url: 'https://twitter.com/jackdomleo7'
-    },
-    {
-      platform: 'GitHub',
-      url: 'https://github.com/JDomleo'
-    },
-    {
-      platform: 'CodePen',
-      url: 'https://codepen.io/JackDomleo'
-    },
-    {
-      platform: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/jack-domleo'
-    }
-  ]
+  private get socialMedia(): ISocial[] {
+    return SocialMedia.socialMedia;
+  }
 }
-</script>
-
-<style lang="scss">
-
-</style>
+</script></style>
 
 <style lang="scss" scoped>
 .footer {

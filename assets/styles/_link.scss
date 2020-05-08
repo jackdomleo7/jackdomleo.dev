@@ -1,0 +1,14 @@
+.link {
+  color: var(--color-blue);
+  font-weight: 700;
+  transition: all 160ms ease;
+
+  @media screen and (prefers-color-scheme: light) {
+    color: var(--color-blue-dark);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-orange-deep);
+  }
+}

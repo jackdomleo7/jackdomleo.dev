@@ -16,9 +16,7 @@ import { Navbar, Footerbar } from '@/components';
 @Component({
   components: { Navbar, Footerbar }
 })
-export default class Default extends Vue {
-  
-}
+export default class Default extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -35,6 +33,14 @@ export default class Default extends Vue {
 
   &__main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+      max-width: 800px;
+      padding: 1.5rem;
+    }
   }
 }
 
