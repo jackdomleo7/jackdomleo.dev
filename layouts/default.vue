@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    <div class="gradient"></div>
     <navbar />
     <main class="app__main">
       <nuxt />
@@ -20,12 +19,6 @@ export default class Default extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@keyframes Gradient {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
 .app {
   display: flex;
   flex-direction: column;
@@ -42,14 +35,5 @@ export default class Default extends Vue {}
       padding: 1.5rem;
     }
   }
-}
-
-.gradient {
-  animation: Gradient 20s ease infinite;
-  background: linear-gradient(50deg, var(--color-orange-deep) 0%, var(--color-blue) 100%);
-  background-size: 250%;
-  width: 100vw;
-  height: 6px;
-  opacity: 0.8;
 }
 </style>
