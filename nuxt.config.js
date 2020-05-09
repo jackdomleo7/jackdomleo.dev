@@ -77,8 +77,13 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
-    '@nuxtjs/svg-sprite'
+    '@nuxtjs/svg-sprite',
+    '@nuxtjs/sitemap' // Ensure this is always last in array
   ],
+  sitemap: {
+    hostname: 'https://jackdomleo.dev',
+    exclude: ['/_icons']
+  },
   build: {
     postcss: {
       plugins: {

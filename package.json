@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/sitemap": "^2.2.1",
     "@nuxtjs/svg-sprite": "^0.4.10",
     "autoprefixer": "^9.7.6",
     "cooltipz-css": "^1.6.0",
