@@ -15,6 +15,9 @@
         </component>
       </li>
     </ul>
+    <hr/>
+    <h2>Open-source</h2>
+    <p>I always try to take part in open-source projects, whether it be providing feedback, starring a GitHub repository or creating a pull request. I'm a big supporter of open-source and think it's a great way for developers to collaborate together and will help deliver better software in the future.</p>
   </page-template>
 </template>
 
