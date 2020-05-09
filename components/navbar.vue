@@ -7,7 +7,7 @@
       </nuxt-link>
       <ul class="nav__links">
         <li v-for="(link, index) in NavLinks" :key="index" :aria-setsize="NavLinks.length" :aria-posinset="index + 1">
-          <nuxt-link :to="link.url">
+          <nuxt-link :to="link.url" :aria-current="isCurrent(link.url) ? 'page' : null">
             {{ link.text }}
           </nuxt-link>
         </li>
@@ -43,6 +43,10 @@ export default class Navbar extends Vue {
       url: '/blog'
     }
   ]
+
+  private isCurrent(path: string): boolean {
+    return this.$route.path === path;
+  }
 }
 </script>
 
