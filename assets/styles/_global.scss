@@ -54,6 +54,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--body-background);
   color: var(--body-color);
+  font-size: 0.9rem;
+
+  @media screen and (min-width: 30em) {
+    font-size: 1rem;
+  }
 }
 
 h1,
