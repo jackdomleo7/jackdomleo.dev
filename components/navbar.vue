@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <top-gradient-bar />
     <nav class="nav">
       <nuxt-link to="/" class="nav__logo" aria-label="Home">
         <svg-icon name="logo" />
@@ -13,6 +12,7 @@
         </li>
       </ul>
     </nav>
+    <top-gradient-bar />
   </header>
 </template>
 

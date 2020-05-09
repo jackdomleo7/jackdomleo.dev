@@ -21,7 +21,7 @@ export default class TopGradientBar extends Vue {}
   background: linear-gradient(50deg, var(--color-orange-deep) 0%, var(--color-blue) 100%);
   background-size: 250%;
   width: 100vw;
-  height: 6px;
+  height: 4px;
   opacity: 0.8;
 }
 </style>
