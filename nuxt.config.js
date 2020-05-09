@@ -63,7 +63,7 @@ export default {
       twitterCreator: '@jackdomleo7'
     }
   },
-  loading: { color: '#fff' },
+  loading: { color: 'var(--color-orange-deep)' },
   css: [
     "normalize.css",
     "node_modules/cooltipz-css/src/cooltipz",
