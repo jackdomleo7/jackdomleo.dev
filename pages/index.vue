@@ -8,7 +8,7 @@
       <h2>Work</h2>
       <p>A brief history of my employment. More details can be found on my <a href="https://www.linkedin.com/in/jack-domleo" class="link" rel="nofollow">LinkedIn profile</a>.</p>
       <ul>
-        <li v-for="(work, index) in WorkHistory" :key="index" :aria-setsize="WorkHistory.length" :aria-posinset="index + 1">
+        <li v-for="(work, index) in workHistory" :key="index" :aria-setsize="workHistory.length" :aria-posinset="index + 1">
           <div class="work__bullet"></div>
           <div class="work__time">
             <span class="sr-only">Employment dates:</span>
@@ -47,7 +47,7 @@ interface IStartEndDate {
   components: { DetailsCard, PageTemplate }
 })
 export default class Index extends Vue {
-  private readonly WorkHistory: IWork[] = [
+  private readonly workHistory: IWork[] = [
     {
       start: new Date('2019-05-15'),
       end: 'present',
