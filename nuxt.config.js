@@ -1,6 +1,31 @@
 export default {
   mode: 'universal',
   head: {
+    __dangerouslyDisableSanitizers: ['script'],
+    script: [
+      {
+        hid: 'gtm-script1',
+        src: 'https://www.googletagmanager.com/gtag/js?id=UA-165367468-1',
+        defer: true
+      },
+      {
+        hid: 'gtm-script2',
+        innerHTML: `
+        if(window.location.hostname != "jackdomleo.dev") {
+          window['ga-disable-UA-165367468-1'] = true;
+        }
+        else {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+  
+          gtag('config', 'UA-165367468-1');
+        }
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+    ],
     title: 'Jack Domleo - Developer',
     meta: [
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
