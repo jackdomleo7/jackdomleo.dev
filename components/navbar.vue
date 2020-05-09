@@ -121,7 +121,7 @@ export default class Navbar extends Vue {
 
         &:hover,
         &:focus,
-        &.nuxt-link-active {
+        &.nuxt-link-exact-active {
           background-color: var(--nav-hover);
         }
       }
