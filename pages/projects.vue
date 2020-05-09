@@ -18,6 +18,14 @@
     <hr/>
     <h2>Open-source</h2>
     <p>I always try to take part in open-source projects, whether it be providing feedback, starring a GitHub repository or creating a pull request. I'm a big supporter of open-source and think it's a great way for developers to collaborate together and will help deliver better software in the future.</p>
+    <hr/>
+    <h2>Future projects</h2>
+    <p>I'm always learning, a developer never stops learning, software is a fast moving industry. Below is a list of technologies I am interested in learning and including in future projects.</p>
+    <ul>
+      <li v-for="(futureTech, index) in futureTechs" :key="index" :aria-setsize="futureTechs.length" :aria-posinset="index + 1">
+        {{ futureTech.name }}
+      </li>
+    </ul>
   </page-template>
 </template>
 
@@ -32,6 +40,11 @@ interface IProject {
   backgroundImage?: string;
   tech: string[];
   description: string;
+}
+
+interface IFutureTech {
+  name: string;
+  url?: string;
 }
 
 @Component({
@@ -91,7 +104,7 @@ export default class Projects extends Vue {
       associationWith: 'flybmi',
       backgroundImage: 'bmiConnect.png',
       tech: [
-        'React.js', 'SCSS', 'HTML5', 'Google Cloud Platform'
+        'React.js', 'SCSS', 'JSX', 'Google Cloud Platform'
       ],
       description: 'Intranet for flybmi employees'
     },
@@ -100,9 +113,9 @@ export default class Projects extends Vue {
       associationWith: 'flybmi',
       backgroundImage: 'flybmi.png',
       tech: [
-        'Grav', 'CSS3', 'HTML5', 'Google Cloud Platform'
+        'Grav', 'Twig HTML', 'CSS3', 'Google Cloud Platform'
       ],
-      description: 'Website for flybmi'
+      description: 'Multilingual website for flybmi'
     },
     {
       name: 'jackdomleo.dev',
@@ -112,6 +125,27 @@ export default class Projects extends Vue {
         'Nuxt.js', 'SCSS', 'TypeScript', 'HTML5'
       ],
       description: 'My portfolio website'
+    }
+  ]
+
+  private readonly futureTechs: IFutureTech[] = [
+    {
+      name: 'Flutter'
+    },
+    {
+      name: 'LESS'
+    },
+    {
+      name: 'Three.js'
+    },
+    {
+      name: 'Internationalisation'
+    },
+    {
+      name: 'GSAP'
+    },
+    {
+      name: 'Pug'
     }
   ]
 }
