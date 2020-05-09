@@ -1,18 +1,10 @@
-
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'Jack Domleo - Developer',
     meta: [
-      { charset: 'utf-8' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'index, follow' },
-      { name: 'name', content: 'Jack Domleo' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'msapplication-TileImage', content: '/favicons/mstile-144x144.png' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
@@ -29,40 +21,39 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
+  pwa: {
+    meta: {
+      name: 'Jack Domleo',
+      description: 'A front-end developer based in Nottingham, UK primarily using Vue.js, TypeScript, CSS and HTML5 with a love for UI/UX and accessibility.',
+      ogType: 'profile',
+      ogHost: 'jackdomleo.dev',
+      ogImage: {
+        path: '/open-graphics/open-graph.png',
+        width: '1200',
+        height: '630',
+        type: 'image/png'
+      },
+      twitterCard: 'summary_large_image',
+      twitterSite: '@jackdomleo7',
+      twitterCreator: '@jackdomleo7'
+    }
+  },
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
   css: [
     "normalize.css",
     "node_modules/cooltipz-css/src/cooltipz",
     "@/assets/styles/main.scss",
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
     '@nuxt/typescript-build',
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/svg-sprite'
   ],
-  /*
-  ** Build configuration
-  */
   build: {
     postcss: {
       plugins: {
