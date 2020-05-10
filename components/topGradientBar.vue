@@ -1,5 +1,5 @@
 <template>
-    <div class="gradient"></div>
+  <div class="gradient" />
 </template>
 
 <script lang="ts">
@@ -11,14 +11,24 @@ export default class TopGradientBar extends Vue {}
 
 <style lang="scss" scoped>
 @keyframes Gradient {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .gradient {
   animation: Gradient 20s ease infinite;
-  background: linear-gradient(50deg, var(--color-orange-deep) 0%, var(--color-blue) 100%);
+  background: linear-gradient(
+    50deg,
+    var(--color-orange-deep) 0%,
+    var(--color-blue) 100%
+  );
   background-size: 250%;
   width: 100vw;
   height: 4px;

@@ -15,7 +15,8 @@ export default class PageTemplate extends Vue {
   @Prop({
     type: String,
     required: true
-  }) private readonly pageTitle!: string;
+  })
+  private readonly pageTitle!: string;
 }
 </script>
 

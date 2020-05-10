@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "extends": [
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended",
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "plugins": ["vue"],
+  "rules": {
+    "semi": [1, "always"],
+    "quotes": [1, "single"],
+    "prettier/prettier": [0, { "semi": false }]
+  }
+}

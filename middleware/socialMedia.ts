@@ -21,9 +21,9 @@ export default class SocialMedia {
       platform: 'LinkedIn',
       url: 'https://www.linkedin.com/in/jack-domleo'
     }
-  ]
+  ];
 
-  public static get socialMedia(): ISocial[] {
+  public static get socialMedia (): ISocial[] {
     return this._socials;
   }
 }

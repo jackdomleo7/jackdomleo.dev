@@ -31,25 +31,57 @@ export default {
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'robots', content: 'index, follow' },
       { name: 'msapplication-TileColor', content: '#da532c' },
-      { name: 'msapplication-TileImage', content: '/favicons/mstile-144x144.png' },
+      {
+        name: 'msapplication-TileImage',
+        content: '/favicons/mstile-144x144.png'
+      },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
-      { name: 'theme-color', content: '#393939' },
+      { name: 'theme-color', content: '#393939' }
     ],
     link: [
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicons/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '194x194', href: '/favicons/favicon-194x194.png' },
-      { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicons/android-chrome-192x192.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicons/favicon-16x16.png' },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/favicons/apple-touch-icon.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicons/favicon-32x32.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '194x194',
+        href: '/favicons/favicon-194x194.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        href: '/favicons/android-chrome-192x192.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicons/favicon-16x16.png'
+      },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', color: '#ff5a0a' },
+      {
+        rel: 'mask-icon',
+        href: '/favicons/safari-pinned-tab.svg',
+        color: '#ff5a0a'
+      },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   pwa: {
     meta: {
       name: 'Jack Domleo',
-      description: 'A front-end developer based in Nottingham, UK primarily using Vue.js, TypeScript, CSS and HTML5 with a love for UI/UX and accessibility.',
+      description:
+        'A front-end developer based in Nottingham, UK primarily using Vue.js, TypeScript, CSS and HTML5 with a love for UI/UX and accessibility.',
       ogType: 'profile',
       ogHost: 'jackdomleo.dev',
       ogImage: {
@@ -65,15 +97,12 @@ export default {
   },
   loading: { color: 'var(--color-orange-deep)' },
   css: [
-    "normalize.css",
-    "node_modules/cooltipz-css/src/cooltipz",
-    "@/assets/styles/main.scss",
+    'normalize.css',
+    'node_modules/cooltipz-css/src/cooltipz',
+    '@/assets/styles/main.scss'
   ],
-  plugins: [
-  ],
-  buildModules: [
-    '@nuxt/typescript-build',
-  ],
+  plugins: [],
+  buildModules: ['@nuxt/typescript-build'],
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
@@ -90,12 +119,10 @@ export default {
         autoprefixer: {},
         cssnano: {}
       }
-    },
-    extend (config, ctx) {
     }
   },
   generate: {
     dir: 'docs'
   },
   publicPath: '/'
-}
+};

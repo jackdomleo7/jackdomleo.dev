@@ -4,11 +4,22 @@
       <header>
         <div class="details__picture">
           <div>
-            <img src="@/assets/img/bio-image-jack-domleo.jpg" alt="Portait image of Jack Domleo" />
+            <img
+              src="@/assets/img/bio-image-jack-domleo.jpg"
+              alt="Portait image of Jack Domleo"
+            >
           </div>
         </div>
         <h2>Jack Domleo</h2>
-        <p><svg-icon name="code" /> Developer at <a href="https://www.mitrefinch.co.uk?ref=jackdomleo.dev" class="link" rel="nofollow" target="_blank">Mitrefinch</a></p>
+        <p>
+          <svg-icon name="code" /> Developer at
+          <a
+            href="https://www.mitrefinch.co.uk?ref=jackdomleo.dev"
+            class="link"
+            rel="nofollow"
+            target="_blank"
+          >Mitrefinch</a>
+        </p>
         <p><svg-icon name="pin" /> Nottingham, UK</p>
       </header>
       <main>
@@ -21,8 +32,18 @@
       </main>
       <footer>
         <ul>
-          <li v-for="(social, index) in socialMedia" :key="index" :aria-setsize="socialMedia.length" :aria-posinset="index + 1">
-            <a :href="social.url" rel="nofollow" :aria-label="social.platform" data-cooltipz-dir="top">
+          <li
+            v-for="(social, index) in socialMedia"
+            :key="index"
+            :aria-setsize="socialMedia.length"
+            :aria-posinset="index + 1"
+          >
+            <a
+              :href="social.url"
+              rel="nofollow"
+              :aria-label="social.platform"
+              data-cooltipz-dir="top"
+            >
               <svg-icon :name="social.platform.toLowerCase()" />
             </a>
           </li>
@@ -38,7 +59,7 @@ import SocialMedia, { ISocial } from '@/middleware/socialMedia';
 
 @Component
 export default class DetailsCard extends Vue {
-  private get socialMedia(): ISocial[] {
+  private get socialMedia (): ISocial[] {
     return SocialMedia.socialMedia;
   }
 }
@@ -57,7 +78,11 @@ export default class DetailsCard extends Vue {
   }
 
   &__wrapper {
-    background: linear-gradient(50deg,var(--color-orange-deep),var(--color-blue));
+    background: linear-gradient(
+      50deg,
+      var(--color-orange-deep),
+      var(--color-blue)
+    );
     margin: 3rem 1rem;
     padding: 4px;
     background-size: 100%;
@@ -69,7 +94,11 @@ export default class DetailsCard extends Vue {
     flex-direction: column;
 
     .details__picture {
-      background: linear-gradient(50deg,var(--color-orange-deep),var(--color-blue));
+      background: linear-gradient(
+        50deg,
+        var(--color-orange-deep),
+        var(--color-blue)
+      );
       padding: 4px;
       height: 6.2rem;
       width: 6.2rem;
@@ -84,7 +113,11 @@ export default class DetailsCard extends Vue {
       }
 
       &::before {
-        background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
+        background: linear-gradient(
+          to right,
+          fade_out(#fff, 1) 0%,
+          fade_out(#fff, 0.7) 100%
+        );
         content: "";
         display: block;
         height: 100%;

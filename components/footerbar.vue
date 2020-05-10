@@ -19,7 +19,7 @@ import SocialMedia, { ISocial } from '@/middleware/socialMedia';
 
 @Component
 export default class Footerbar extends Vue {
-  private get socialMedia(): ISocial[] {
+  private get socialMedia (): ISocial[] {
     return SocialMedia.socialMedia;
   }
 }
