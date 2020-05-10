@@ -59,17 +59,17 @@
     <h2>Future projects</h2>
     <p>
       I'm always learning, a developer never stops learning, software is a fast
-      moving industry.<br><br>Below is a list of technologies I am interested in
+      moving industry.<br><br>Below is a list of some technologies I am interested in
       learning and including in future projects. These could be projects through my employment, CodePen or my own repositories in GitHub.
     </p>
-    <ul>
+    <ul class="future">
       <li
         v-for="(futureTech, index) in futureTechs"
         :key="index"
         :aria-setsize="futureTechs.length"
         :aria-posinset="index + 1"
       >
-        {{ futureTech.name }}
+        {{ futureTech }}
       </li>
     </ul>
   </page-template>
@@ -90,11 +90,6 @@ interface IProject {
   associationWith?: string;
 }
 
-interface IFutureTech {
-  name: string;
-  url?: string;
-}
-
 @Component({
   components: { PageTemplate },
   head () {
@@ -113,21 +108,21 @@ export default class Index extends Vue {
       name: 'Cooltipz.css',
       url: 'https://cooltipz.jackdomleo.dev?ref=jackdomleo.dev',
       image: 'cooltipzcss.png',
-      tech: ['SCSS', 'CSS3', 'PostCSS', 'npm', 'GitHub Pages'],
+      tech: ['SCSS', 'CSS3', 'PostCSS', 'npm', 'GitHub Pages', 'Google Analytics'],
       description: 'Pure CSS tooltip library released on npm'
     },
     {
       name: 'www.tmdip.co.uk',
       url: 'https://www.tmdip.co.uk',
       image: 'wwwtmdipcouk.png',
-      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages'],
+      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Mailchimp', 'Leaflet.js'],
       description: 'Website for TMD Interior Projects & Building Services Ltd'
     },
     {
       name: 'ellaparsons.design',
       url: 'https://ellaparsons.deisgn',
       image: 'ellaparsonsdesign.png',
-      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages'],
+      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Google Analytics'],
       description: 'Portfolio website for Ella Parsons'
     },
     {
@@ -145,51 +140,34 @@ export default class Index extends Vue {
         'https://www.mitrefinch.co.uk/product/access-control?ref=jackdomleo.dev',
       associationWith: 'Mitrefinch',
       image: 'mitrefinch.png',
-      tech: ['Vue.js', 'TypeScript', 'Jest', 'HTML5', 'SCSS', 'DevOps'],
+      tech: ['Vue.js', 'TypeScript', 'Jest', 'HTML5', 'SCSS', 'DevOps', 'Leaflet.js'],
       description: 'To be confirmed'
     },
     {
       name: 'bmi Connect',
       associationWith: 'flybmi',
       image: 'bmiConnect.png',
-      tech: ['React.js', 'SCSS', 'JSX', 'Google Cloud Platform'],
+      tech: ['React.js', 'SCSS', 'JSX', 'Google Cloud Platform', 'Google Maps'],
       description: 'Intranet for flybmi employees'
     },
     {
       name: 'www.flybmi.com',
       associationWith: 'flybmi',
       image: 'flybmi.png',
-      tech: ['Grav', 'Twig HTML', 'jQuery', 'CSS3', 'Google Cloud Platform'],
+      tech: ['Grav', 'Twig HTML', 'jQuery', 'CSS3', 'Google Cloud Platform', 'Google Maps', 'Google Analytics', 'Mailchimp'],
       description: 'Multilingual website for flybmi'
     },
     {
       name: 'jackdomleo.dev',
       url: 'https://jackdomleo.dev',
       image: 'jackdomleodev.png',
-      tech: ['Nuxt.js', 'SCSS', 'TypeScript', 'HTML5', 'GitHub Pages'],
+      tech: ['Nuxt.js', 'SCSS', 'TypeScript', 'HTML5', 'GitHub Pages', 'Google Analytics'],
       description: 'My portfolio website'
     }
   ];
 
-  private readonly futureTechs: IFutureTech[] = [
-    {
-      name: 'Flutter'
-    },
-    {
-      name: 'LESS'
-    },
-    {
-      name: 'Three.js'
-    },
-    {
-      name: 'Internationalisation'
-    },
-    {
-      name: 'GSAP'
-    },
-    {
-      name: 'Pug'
-    }
+  private readonly futureTechs: string[] = [
+    'Flutter', 'LESS/Stylus', 'Three.js', 'Internationalisation', 'GSAP', 'Pug/HAML', 'Electron.js', 'Phaser.js', 'HTML <canvas>'
   ];
 }
 </script>
@@ -226,6 +204,7 @@ export default class Index extends Vue {
     text-decoration: none;
     box-shadow: 0 0 10px -3px rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
     transition: box-shadow 160ms ease;
+    border-radius: 0.375rem;
 
     &:hover {
       box-shadow: 0 0 10px -1px rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
@@ -273,6 +252,16 @@ export default class Index extends Vue {
       width: 1rem;
       margin-right: 1rem;
     }
+  }
+}
+
+.future {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+
+  li {
+    margin: 0 1.3rem;
   }
 }
 </style>
