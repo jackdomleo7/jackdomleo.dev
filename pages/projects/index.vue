@@ -104,7 +104,7 @@ interface IFutureTech {
 @Component({
   components: { PageTemplate }
 })
-export default class Projects extends Vue {
+export default class Index extends Vue {
   private readonly projects: IProject[] = [
     {
       name: 'Cooltipz.css',
@@ -207,6 +207,7 @@ export default class Projects extends Vue {
     height: 15rem;
     overflow: hidden;
     position: relative;
+    padding: 0.5rem;
 
     h3 {
       white-space: nowrap;
