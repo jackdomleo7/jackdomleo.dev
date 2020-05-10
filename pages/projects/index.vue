@@ -25,33 +25,25 @@
         :key="index"
         :aria-setsize="projects.length"
         :aria-posinset="index + 1"
+        class="project"
       >
         <component
           :is="project.url ? 'a' : 'div'"
           :href="project.url ? project.url : null"
           :rel="project.url ? 'nofollow' : null"
+          class="project__link"
         >
-          <div
-            class="projects__bg-image"
-            :style="{
-              backgroundImage: project.backgroundImage
-                ? 'url(/img/projects/' + project.backgroundImage + ')'
-                : 'linear-gradient(var(--color-grey-light), var(--color-orange-faint))'
-            }"
-          />
-          <h3><span class="sr-only">Project name:</span> {{ project.name }}</h3>
-          <p v-if="project.associationWith" class="projects__associationWith">
-            <small><span class="sr-only">Company:</span> with
-              {{ project.associationWith }}</small>
+          <header class="project__header">
+            <img :src="'/img/projects/' + project.image" :alt="project.name + ' logo'">
+            <h3><span class="sr-only">Project name:</span> {{ project.name }}</h3>
+            <p v-if="project.associationWith">
+              <small><span class="sr-only">Company:</span> with {{ project.associationWith }}</small>
+            </p>
+          </header>
+          <p class="project__tech">
+            <svg-icon name="code" /> <small><span class="sr-only">Some technologies included</span> {{ project.tech.join(', ') }}</small>
           </p>
-          <p>
-            <span class="sr-only">Some technologies included</span>
-            {{ project.tech.join(", ") }}
-          </p>
-          <p>
-            <span class="sr-only">Project description:</span>
-            {{ project.description }}
-          </p>
+          <p><span class="sr-only">Project description:</span> {{ project.description }}</p>
         </component>
       </li>
     </ul>
@@ -67,8 +59,8 @@
     <h2>Future projects</h2>
     <p>
       I'm always learning, a developer never stops learning, software is a fast
-      moving industry. Below is a list of technologies I am interested in
-      learning and including in future projects.
+      moving industry.<br><br>Below is a list of technologies I am interested in
+      learning and including in future projects. These could be projects through my employment, CodePen or my own repositories in GitHub.
     </p>
     <ul>
       <li
@@ -89,11 +81,13 @@ import { PageTemplate } from '@/components';
 
 interface IProject {
   name: string;
-  url?: string;
-  associationWith?: string;
-  backgroundImage?: string;
   tech: string[];
   description: string;
+  image: string;
+  startDate?: Date;
+  endDate?: Date;
+  url?: string;
+  associationWith?: string;
 }
 
 interface IFutureTech {
@@ -109,22 +103,22 @@ export default class Index extends Vue {
     {
       name: 'Cooltipz.css',
       url: 'https://cooltipz.jackdomleo.dev?ref=jackdomleo.dev',
-      backgroundImage: 'cooltipzcss.png',
-      tech: ['SCSS', 'CSS3', 'PostCSS', 'npm'],
+      image: 'cooltipzcss.png',
+      tech: ['SCSS', 'CSS3', 'PostCSS', 'npm', 'GitHub Pages'],
       description: 'Pure CSS tooltip library released on npm'
     },
     {
       name: 'www.tmdip.co.uk',
       url: 'https://www.tmdip.co.uk',
-      backgroundImage: 'wwwtmdipcouk.png',
-      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS'],
+      image: 'wwwtmdipcouk.png',
+      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages'],
       description: 'Website for TMD Interior Projects & Building Services Ltd'
     },
     {
       name: 'ellaparsons.design',
       url: 'https://ellaparsons.deisgn',
-      backgroundImage: 'ellaparsonsdesign.png',
-      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS'],
+      image: 'ellaparsonsdesign.png',
+      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages'],
       description: 'Portfolio website for Ella Parsons'
     },
     {
@@ -132,8 +126,8 @@ export default class Index extends Vue {
       url:
         'https://www.mitrefinch.co.uk/product/payroll-software?ref=jackdomleo.dev',
       associationWith: 'Mitrefinch',
-      backgroundImage: 'mitrefinch.png',
-      tech: ['Vue.js', 'TypeScript', 'Mocha & Chai', 'HTML5', 'SCSS', 'C#'],
+      image: 'mitrefinch.png',
+      tech: ['Vue.js', 'TypeScript', 'Mocha & Chai', 'HTML5', 'SCSS', 'C#', 'DevOps'],
       description: 'Payroll web solution for Flexipay'
     },
     {
@@ -141,29 +135,29 @@ export default class Index extends Vue {
       url:
         'https://www.mitrefinch.co.uk/product/access-control?ref=jackdomleo.dev',
       associationWith: 'Mitrefinch',
-      backgroundImage: 'mitrefinch.png',
-      tech: ['Vue.js', 'TypeScript', 'Jest', 'HTML5', 'SCSS'],
+      image: 'mitrefinch.png',
+      tech: ['Vue.js', 'TypeScript', 'Jest', 'HTML5', 'SCSS', 'DevOps'],
       description: 'To be confirmed'
     },
     {
       name: 'bmi Connect',
       associationWith: 'flybmi',
-      backgroundImage: 'bmiConnect.png',
+      image: 'bmiConnect.png',
       tech: ['React.js', 'SCSS', 'JSX', 'Google Cloud Platform'],
       description: 'Intranet for flybmi employees'
     },
     {
       name: 'www.flybmi.com',
       associationWith: 'flybmi',
-      backgroundImage: 'flybmi.png',
-      tech: ['Grav', 'Twig HTML', 'CSS3', 'Google Cloud Platform'],
+      image: 'flybmi.png',
+      tech: ['Grav', 'Twig HTML', 'jQuery', 'CSS3', 'Google Cloud Platform'],
       description: 'Multilingual website for flybmi'
     },
     {
       name: 'jackdomleo.dev',
       url: 'https://jackdomleo.dev',
-      backgroundImage: 'jackdomleodev.png',
-      tech: ['Nuxt.js', 'SCSS', 'TypeScript', 'HTML5'],
+      image: 'jackdomleodev.png',
+      tech: ['Nuxt.js', 'SCSS', 'TypeScript', 'HTML5', 'GitHub Pages'],
       description: 'My portfolio website'
     }
   ];
@@ -191,59 +185,85 @@ export default class Index extends Vue {
 }
 </script>
 
+<style lang="scss">
+:root {
+  --project-link-box-shadow-opacity: 0.8;
+
+  @media screen and (prefers-color-scheme: light) {
+    --project-link-box-shadow-opacity: 0.6;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .projects {
   padding-left: 0;
   list-style-type: none;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  text-align: center;
   margin: 2rem 0;
+}
 
-  li {
-    width: 15rem;
-    height: 15rem;
-    overflow: hidden;
-    position: relative;
-    padding: 0.5rem;
+.project {
+  width: 100%;
 
-    h3 {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      margin-bottom: 0;
-    }
-
-    p:not(.projects__associationWith) {
-      margin: 0.8rem 0;
-    }
-
-    a {
-      color: currentColor;
-      text-decoration: none;
-    }
-  }
-
-  &__bg-image {
-    background-position: center;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-size: 100%;
-    transition: all 160ms ease-in;
+  &__link {
+    color: currentColor;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
+    transition: box-shadow 160ms ease;
 
     &:hover {
-      background-size: 120%;
+      box-shadow: 0 0 10px -1px rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
+    }
+
+    > p {
+      margin: 1rem;
     }
   }
 
-  &__associationWith {
-    margin-top: 0;
+  &__header {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 3rem;
+      width: 3rem;
+      overflow: hidden;
+      margin: 0.2rem 0.8rem 0 0.2rem;
+      border-radius: 0.75rem;
+
+      @media screen and (min-width: 30em) {
+        margin-right: 2rem;
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+
+    h3 {
+      flex: 1;
+    }
+
+    p {
+      align-self: flex-start;
+      margin: 0 0.2rem 0 0;
+    }
+  }
+
+  &__tech {
+    display: flex;
+    align-items: flex-start;
+
+    svg {
+      height: 1rem;
+      width: 1rem;
+      margin-right: 1rem;
+    }
   }
 }
 </style>
