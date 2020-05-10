@@ -26,7 +26,7 @@ export default {
         charset: 'utf-8'
       }
     ],
-    title: 'Jack Domleo - Developer',
+    titleTemplate: '%s | Jack Domleo - Developer',
     meta: [
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'robots', content: 'index, follow' },

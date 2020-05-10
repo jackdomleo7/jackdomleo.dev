@@ -96,7 +96,16 @@ interface IFutureTech {
 }
 
 @Component({
-  components: { PageTemplate }
+  components: { PageTemplate },
+  head () {
+    return {
+      title: 'Projects',
+      meta: [
+        { hid: 'description', name: 'description', content: 'A list of some of Jack Domleo\'s featured projects, future projects and open-source contributions.' },
+        { hid: 'og:description', name: 'og:description', content: 'A list of some of Jack Domleo\'s featured projects, future projects and open-source contributions.' }
+      ]
+    };
+  }
 })
 export default class Index extends Vue {
   private readonly projects: IProject[] = [

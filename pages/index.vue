@@ -73,7 +73,12 @@ interface IStartEndDate {
 }
 
 @Component({
-  components: { DetailsCard, PageTemplate }
+  components: { DetailsCard, PageTemplate },
+  head () {
+    return {
+      title: 'Home'
+    };
+  }
 })
 export default class Index extends Vue {
   private readonly workHistory: IWork[] = [
