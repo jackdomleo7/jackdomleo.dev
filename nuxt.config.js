@@ -83,7 +83,7 @@ export default {
       description:
         'A front-end developer based in Nottingham, UK primarily using Vue.js, TypeScript, CSS and HTML5 with a love for UI/UX and accessibility.',
       ogType: 'profile',
-      ogHost: 'jackdomleo.dev',
+      ogHost: 'https://jackdomleo.dev',
       ogImage: {
         path: '/open-graphics/open-graph.png',
         width: '1200',
