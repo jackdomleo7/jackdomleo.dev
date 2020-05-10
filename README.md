@@ -1,56 +1,36 @@
-# jackdomleo.dev
+[![Twitter followers](https://img.shields.io/twitter/follow/jackdomleo7?style=social&logo=twitter "Follow me on Twitter")](https://twitter.com/jackdomleo7) [![Twitter followers](https://img.shields.io/github/followers/JDomleo?style=social&logo=github&label=Follow "Follow me on GitHub")](https://github.com/JDomleo)
+
+![Website status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fjackdomleo.dev "Website status")
+
+# [jackdomleo.dev](https://jackdomleo.dev)
+
+> Jack Domleo's personal website and blog
+
+My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
+
+[Twitter](https://twitter.com/jackdomleo7) &bull; [GitHub](https://github.com/JDomleo) &bull; [CodePen](https://codepen.io/JackDomleo) &bull; [LinkedIn](https://www.linkedin.com/in/jack-domleo)
+
+[sitemap](https://jackdomleo.dev/sitemap.xml)
 
 ---
 
-## Project setup
-```
-npm install
-```
+## Build Setup
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```bash
+# install dependencies
+$ npm install
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-### Lints and fixes files
-```
-npm run lint
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Tools
 
----
-
-## Code
-
-[Vue.js](https://vuejs.org/)
-
-[TypeScript](https://www.typescriptlang.org/)
-
-[HTML 5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-
-[SCSS/Sass](https://sass-lang.com/)
-
----
-
-## Tech
-
-Normalize.css - [v8.0.1](https://github.com/necolas/normalize.css/releases/tag/8.0.1)
-
-Cooltipz.css - [v1.0.0](https://github.com/JDomleo/Cooltipz.css/releases/tag/v1.0.0)
-
-Font - [Exo (Google Fonts)](https://fonts.google.com/specimen/Exo?selection.family=Exo)
-
----
-
-## Conventions
-
-[BEM](http://getbem.com)
-
-[Material design for the web](https://material.io/develop/web/)
+- [Nuxt.js](https://nuxtjs.org)

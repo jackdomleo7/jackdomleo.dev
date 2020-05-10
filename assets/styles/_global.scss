@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Exo|Open+Sans&display=swap');
+
+:root {
+  --body-background: var(--color-grey-dark);
+  --body-color: var(--color-white);
+
+  --font-family: sans-serif;
+  --font-stack: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", var(--font-family);
+
+  @media (prefers-color-scheme: light) {
+    --body-background: var(--color-white);
+    --body-color: var(--color-grey-dark);
+  }
+}
+
+::selection {
+  text-shadow: none;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+*:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px var(--color-blue) !important;
+
+  @media screen and (-ms-high-contrast: active) {
+    outline: 4px solid currentColor;
+  }
+}
+
+html {
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+body {
+  font-family: 'Open Sans', var(--font-stack);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body-background);
+  color: var(--body-color);
+  font-size: 0.9rem;
+
+  @media screen and (min-width: 30em) {
+    font-size: 1rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: exo, var(--font-stack);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+  fill: currentColor;
+  pointer-events: none;
+}
