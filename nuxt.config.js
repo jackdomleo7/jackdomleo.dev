@@ -74,7 +74,8 @@ export default {
         href: '/favicons/safari-pinned-tab.svg',
         color: '#ff5a0a'
       },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Exo|Open+Sans&display=swap' }
     ]
   },
   pwa: {
