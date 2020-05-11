@@ -12,7 +12,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/sitemap": "^2.2.1",
     "@nuxtjs/svg-sprite": "^0.4.10",
@@ -22,11 +22,11 @@
     "date-fns": "^2.13.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.12.2",
     "sass-loader": "^8.0.2"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxt/typescript-build": "^0.6.6",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
