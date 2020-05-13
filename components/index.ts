@@ -3,6 +3,6 @@ import Navbar from './navbar.vue';
 import Footerbar from './footerbar.vue';
 import DetailsCard from './detailsCard.vue';
 import PageTemplate from './pageTemplate.vue';
-import BlogPost from './blog/blogPost.vue';
+import BlogHeader from './blog/blogHeader.vue';
 
-export { TopGradientBar, Navbar, Footerbar, DetailsCard, PageTemplate, BlogPost };
+export { TopGradientBar, Navbar, Footerbar, DetailsCard, PageTemplate, BlogHeader };

@@ -53,10 +53,19 @@ body {
   background-color: var(--body-background);
   color: var(--body-color);
   font-size: 0.9rem;
+  font-weight: 400;
+
+  @media screen and (prefers-color-scheme: dark) {
+    font-weight: 300;
+  }
 
   @media screen and (min-width: 30em) {
     font-size: 1rem;
   }
+}
+
+strong {
+  font-weight: 800;
 }
 
 h1,
@@ -65,6 +74,7 @@ h3,
 h4,
 h5,
 h6 {
+  @extend strong;
   font-family: exo, var(--font-stack);
 }
 
@@ -79,4 +89,19 @@ svg {
   width: 100%;
   fill: currentColor;
   pointer-events: none;
+}
+
+a {
+  color: var(--color-blue);
+  font-weight: 400;
+  transition: all 160ms ease;
+
+  @media screen and (prefers-color-scheme: light) {
+    color: var(--color-blue-dark);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-orange-deep);
+  }
 }

@@ -1,21 +1,19 @@
 <template lang="md">
-  <nuxt-link class="blog__back link" to="/blog">
+  <nuxt-link class="blog__back" to="/blog">
     <svg-icon name="arrow-left" />
     Back to blogs
   </nuxt-link>
 
   # {{ pageTitle }}
 
-  [//]: <> (https://niram.org/read/)
+  [//]: <> (https://niram.org/read)
   <time :datetime="articleDate.datetime" :title="date.toDateString()">{{ articleDate.date }}</time> &#8729; {{ readMinutes }} minute read
 
-  <template v-for="hashtag in hashtags">#{{ hashtag }} </template>
+  <i><template v-for="hashtag in hashtags">#{{ hashtag }} </template></i>
 
   <social-share :page-title="pageTitle" :hashtags="hashtags" :route="$route.path" />
 
   **{{ lead }}**
-
-  <slot />
 </template>
 
 <script lang="ts">
@@ -31,7 +29,7 @@ interface IArticleDate {
 @Component({
   components: { SocialShare }
 })
-export default class BlogPost extends Vue {
+export default class BlogHeader extends Vue {
   @Prop({
     type: String,
     required: true

@@ -38,11 +38,11 @@ export default class BlogSocialShare extends Vue {
   private SocialShares: ISocialShare[] = [
     {
       platform: 'Twitter',
-      url: `https://twitter.com/intent/tweet?text=${this.pageTitle}&via=jackdomleo7&url=https://blog.jackdomleo.dev${this.route}${this.hashtags ? '&hashtags=' + this.hashtags.join(',') : ''}`
+      url: `https://twitter.com/intent/tweet?text=${this.pageTitle}&via=jackdomleo7&url=https://jackdomleo.dev${this.route}${this.hashtags ? '&hashtags=' + this.hashtags.join(',') : ''}`
     },
     {
       platform: 'LinkedIn',
-      url: `https://www.linkedin.com/shareArticle?mini=true&url=https://blog.jackdomleo.dev${this.route}&title=${this.pageTitle}&summary=${this.pageTitle}&source=blog.jackdomleo.dev${this.route}`
+      url: `https://www.linkedin.com/shareArticle?mini=true&url=https://jackdomleo.dev${this.route}&title=${this.pageTitle}&summary=${this.pageTitle}&source=blog.jackdomleo.dev${this.route}`
     }
   ]
 }
