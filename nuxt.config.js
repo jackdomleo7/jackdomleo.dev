@@ -102,7 +102,8 @@ export default {
   css: [
     'normalize.css',
     'node_modules/cooltipz-css/src/cooltipz',
-    '@/assets/styles/main.scss'
+    '@/assets/styles/main.scss',
+    '@/assets/styles/hljs.scss'
   ],
   plugins: [],
   buildModules: ['@nuxt/typescript-build'],
@@ -110,8 +111,12 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/svg-sprite',
+    '@nuxtjs/markdownit',
     '@nuxtjs/sitemap' // Ensure this is always last in array
   ],
+  markdownit: {
+    html: true
+  },
   sitemap: {
     hostname: 'https://jackdomleo.dev',
     exclude: ['/_icons']
