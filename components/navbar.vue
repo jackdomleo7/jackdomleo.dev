@@ -61,9 +61,11 @@ export default class Navbar extends Vue {
 <style lang="scss">
 :root {
   --nav-hover: var(--color-grey-dark);
+  --header-box-shadow-opacity: 0.8;
 
   @media (prefers-color-scheme: light) {
     --nav-hover: var(--color-grey-light);
+    --header-box-shadow-opacity: 0.6;
   }
 }
 </style>
@@ -122,6 +124,7 @@ export default class Navbar extends Vue {
     );
   background-attachment: fixed;
   background-repeat: no-repeat;
+  box-shadow: 0 0.1875rem 0.625rem -0.1875rem rgba(0,0,0,var(--header-box-shadow-opacity));
   z-index: 10;
 
   @media screen and (prefers-color-scheme: light) {

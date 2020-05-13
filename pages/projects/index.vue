@@ -202,12 +202,12 @@ export default class Index extends Vue {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    box-shadow: 0 0 10px -3px rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
+    box-shadow: 0 0 0.625rem -0.1875rem rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
     transition: box-shadow 160ms ease;
     border-radius: 0.375rem;
 
     &:hover {
-      box-shadow: 0 0 10px -1px rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
+      box-shadow: 0 0 0.625rem -0.0625rem rgba(0, 0, 0, var(--project-link-box-shadow-opacity));
     }
 
     > p {
