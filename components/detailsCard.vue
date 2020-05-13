@@ -15,7 +15,6 @@
           <svg-icon name="code" /> Developer at
           <a
             href="https://www.mitrefinch.co.uk?ref=jackdomleo.dev"
-            class="link"
             rel="nofollow"
             target="_blank"
           >Mitrefinch</a>

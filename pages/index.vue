@@ -11,7 +11,6 @@
         A brief history of my employment. More details can be found on my
         <a
           href="https://www.linkedin.com/in/jack-domleo"
-          class="link"
           rel="nofollow"
         >LinkedIn profile</a>.
       </p>

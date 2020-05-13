@@ -9,13 +9,11 @@
       <strong>more</strong> of my creations on my
       <a
         href="https://codepen.io/JackDomleo"
-        class="link"
         rel="nofollow"
       >CodePen profile</a>
       and on my
       <a
         href="https://github.com/JDomleo"
-        class="link"
         rel="nofollow"
       >GitHub profile</a>.
     </p>
@@ -167,7 +165,7 @@ export default class Index extends Vue {
   ];
 
   private readonly futureTechs: string[] = [
-    'Flutter', 'LESS/Stylus', 'Three.js', 'Internationalisation', 'GSAP', 'Pug/HAML', 'Electron.js', 'Phaser.js', 'HTML <canvas>'
+    'Neumorphism', 'Flutter', 'LESS/Stylus', 'Three.js', 'Internationalisation', 'GSAP', 'Pug/HAML', 'Electron.js', 'Phaser.js', 'HTML <canvas>'
   ];
 }
 </script>

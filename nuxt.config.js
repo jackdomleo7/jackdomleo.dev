@@ -77,7 +77,7 @@ export default {
         color: '#ff5a0a'
       },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Exo|Open+Sans&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Open+Sans:wght@300;400;800&display=swap' }
     ]
   },
   pwa: {
@@ -102,7 +102,8 @@ export default {
   css: [
     'normalize.css',
     'node_modules/cooltipz-css/src/cooltipz',
-    '@/assets/styles/main.scss'
+    '@/assets/styles/main.scss',
+    '@/assets/styles/hljs.scss'
   ],
   plugins: [],
   buildModules: ['@nuxt/typescript-build'],
@@ -110,8 +111,12 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/svg-sprite',
+    '@nuxtjs/markdownit',
     '@nuxtjs/sitemap' // Ensure this is always last in array
   ],
+  markdownit: {
+    html: true
+  },
   sitemap: {
     hostname: 'https://jackdomleo.dev',
     exclude: ['/_icons']
