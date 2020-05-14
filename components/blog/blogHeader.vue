@@ -66,7 +66,7 @@ export default class BlogHeader extends Vue {
 <style lang="scss" scoped>
 .blog {
   &__back {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-decoration: none;
 

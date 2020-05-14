@@ -43,8 +43,13 @@ interface IBlogSummary {
 export default class Index extends Vue {
   private readonly BlogSummaries: IBlogSummary[] = [
     {
+      title: 'All Day Hey! 2020',
+      description: 'All Day Hey 2020 was the first virtual conference I attended and I thought it was fantastic! Can\'t wait for 2021.',
+      url: 'all-day-hey-2020'
+    },
+    {
       title: 'To Blog or Not to Blog',
-      description: 'Writing a blog can be scary. This is how I was convinced to start my own blog to share my thoughts and ideas',
+      description: 'Writing a blog can be scary. This is how I was convinced to start my own blog to share my thoughts and ideas.',
       url: 'to-blog-or-not-to-blog'
     }
   ]
