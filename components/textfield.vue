@@ -1,6 +1,6 @@
 <template>
   <label class="textfield">
-    <span>Filter projects</span>
+    <span>{{ label }}</span>
     <input v-model="inputValue" :type="type" :placeholder="placeholder" @input="onInput">
   </label>
 </template>
@@ -10,6 +10,9 @@ import { Vue, Component, Prop, Emit } from 'vue-property-decorator';
 
 @Component
 export default class Textfield extends Vue {
+  @Prop({ type: String, required: true })
+  private readonly label!: string;
+
   @Prop({ type: String, default: '' })
   private readonly placeholder!: string;
 

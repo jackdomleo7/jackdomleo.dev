@@ -17,7 +17,7 @@
         rel="nofollow"
       >GitHub profile</a>.
     </p>
-    <textfield v-model="projectSearch" type="search" placeholder="Search..." @input="filterProjects" />
+    <textfield v-model="projectSearch" label="Filter projects" type="search" placeholder="Search..." @input="filterProjects" />
     <ul v-if="filteredProjects.length > 0" class="projects">
       <li
         v-for="(project, index) in filteredProjects"
@@ -91,6 +91,7 @@ interface IProject {
   endDate?: Date;
   url?: string;
   associationWith?: string;
+  searchAliases?: string[];
 }
 
 @Component({
@@ -115,21 +116,24 @@ export default class Index extends Vue {
       url: 'https://cooltipz.jackdomleo.dev?ref=jackdomleo.dev',
       image: 'cooltipzcss.png',
       tech: ['SCSS', 'CSS3', 'PostCSS', 'npm', 'GitHub Pages', 'Google Analytics'],
-      description: 'Pure CSS tooltip library released on npm'
+      description: 'Pure CSS tooltip library released on npm',
+      searchAliases: ['tooltips']
     },
     {
       name: 'www.tmdip.co.uk',
       url: 'https://www.tmdip.co.uk',
       image: 'wwwtmdipcouk.png',
       tech: ['Nuxt.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Mailchimp', 'Leaflet.js'],
-      description: 'Website for TMD Interior Projects & Building Services Ltd'
+      description: 'Website for TMD Interior Projects & Building Services Ltd',
+      searchAliases: ['Tony Domleo', 'Vue.js']
     },
     {
       name: 'ellaparsons.design',
       url: 'https://ellaparsons.deisgn?ref=jackdomleo.dev',
       image: 'ellaparsonsdesign.png',
       tech: ['Nuxt.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Google Analytics'],
-      description: 'Portfolio website for Ella Parsons'
+      description: 'Portfolio website for Ella Parsons',
+      searchAliases: ['Vue.js']
     },
     {
       name: 'Flexipay Web',
@@ -168,7 +172,8 @@ export default class Index extends Vue {
       url: 'https://jackdomleo.dev',
       image: 'jackdomleodev.png',
       tech: ['Nuxt.js', 'SCSS', 'TypeScript', 'HTML5', 'GitHub Pages', 'Google Analytics'],
-      description: 'My portfolio website'
+      description: 'My portfolio website',
+      searchAliases: ['Vue.js']
     }
   ];
 
@@ -195,7 +200,8 @@ export default class Index extends Vue {
       Search.fuzzySearch(project.associationWith, this.projectSearch) ||
       Search.fuzzySearch(project.description, this.projectSearch) ||
       Search.fuzzySearch(project.url, this.projectSearch) ||
-      Search.fuzzySearch(project.tech.join(' '), this.projectSearch)
+      Search.fuzzySearch(project.tech.join(' '), this.projectSearch) ||
+      Search.fuzzySearch(project.searchAliases ? project.searchAliases.join(' ') : '', this.projectSearch)
     );
   }
 }
