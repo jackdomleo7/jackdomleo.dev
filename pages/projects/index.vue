@@ -17,9 +17,10 @@
         rel="nofollow"
       >GitHub profile</a>.
     </p>
-    <ul class="projects">
+    <textfield v-model="projectSearch" type="search" placeholder="Search..." @input="filterProjects" />
+    <ul v-if="filteredProjects.length > 0" class="projects">
       <li
-        v-for="(project, index) in projects"
+        v-for="(project, index) in filteredProjects"
         :key="index"
         :aria-setsize="projects.length"
         :aria-posinset="index + 1"
@@ -45,6 +46,9 @@
         </component>
       </li>
     </ul>
+    <p v-else class="center">
+      No projects match this search
+    </p>
     <hr>
     <h2>Open-source</h2>
     <p>
@@ -75,7 +79,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { PageTemplate } from '@/components';
+import { PageTemplate, Textfield } from '@/components';
+import Search from '@/middleware/fuzzySearch';
 
 interface IProject {
   name: string;
@@ -89,7 +94,7 @@ interface IProject {
 }
 
 @Component({
-  components: { PageTemplate },
+  components: { PageTemplate, Textfield },
   head () {
     return {
       title: 'Projects',
@@ -101,6 +106,9 @@ interface IProject {
   }
 })
 export default class Index extends Vue {
+  private filteredProjects: IProject[] = [];
+  private projectSearch: string = '';
+
   private readonly projects: IProject[] = [
     {
       name: 'Cooltipz.css',
@@ -113,14 +121,14 @@ export default class Index extends Vue {
       name: 'www.tmdip.co.uk',
       url: 'https://www.tmdip.co.uk',
       image: 'wwwtmdipcouk.png',
-      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Mailchimp', 'Leaflet.js'],
+      tech: ['Nuxt.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Mailchimp', 'Leaflet.js'],
       description: 'Website for TMD Interior Projects & Building Services Ltd'
     },
     {
       name: 'ellaparsons.design',
-      url: 'https://ellaparsons.deisgn',
+      url: 'https://ellaparsons.deisgn?ref=jackdomleo.dev',
       image: 'ellaparsonsdesign.png',
-      tech: ['Vue.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Google Analytics'],
+      tech: ['Nuxt.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Google Analytics'],
       description: 'Portfolio website for Ella Parsons'
     },
     {
@@ -167,6 +175,29 @@ export default class Index extends Vue {
   private readonly futureTechs: string[] = [
     'Neumorphism', 'Flutter', 'LESS/Stylus', 'Three.js', 'Internationalisation', 'GSAP', 'Pug/HAML', 'Electron.js', 'Phaser.js', 'HTML <canvas>'
   ];
+
+  private mounted () {
+    this.filterProjects();
+  }
+
+  private filterProjects () {
+    if (this.projectSearch === '') {
+      this.filteredProjects = this.projects;
+      return;
+    }
+
+    this.filteredProjects = this.projects.filter(project => this.filterProject(project));
+  }
+
+  private filterProject (project: IProject): boolean {
+    return (
+      Search.fuzzySearch(project.name, this.projectSearch) ||
+      Search.fuzzySearch(project.associationWith, this.projectSearch) ||
+      Search.fuzzySearch(project.description, this.projectSearch) ||
+      Search.fuzzySearch(project.url, this.projectSearch) ||
+      Search.fuzzySearch(project.tech.join(' '), this.projectSearch)
+    );
+  }
 }
 </script>
 
