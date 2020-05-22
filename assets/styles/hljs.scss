@@ -8,18 +8,18 @@
   --hljs-purple: #dcc6e0;
   --hljs-bg: #333;
   --hljs-color: #f8f8f2;
+}
 
-  @media (prefers-color-scheme: light) {
-    --hljs-comment: #696969;
-    --hljs-red: #d91e18;
-    --hljs-orange: #aa5d00;
-    --hljs-yellow: #aa5d00;
-    --hljs-green: #008000;
-    --hljs-blue: #007faa;
-    --hljs-purple: #7928a1;
-    --hljs-bg: #eee;
-    --hljs-color: #545454;
-  }
+.theme--light {
+  --hljs-comment: #696969;
+  --hljs-red: #d91e18;
+  --hljs-orange: #aa5d00;
+  --hljs-yellow: #aa5d00;
+  --hljs-green: #008000;
+  --hljs-blue: #007faa;
+  --hljs-purple: #7928a1;
+  --hljs-bg: #eee;
+  --hljs-color: #545454;
 }
 
 /* Comment */

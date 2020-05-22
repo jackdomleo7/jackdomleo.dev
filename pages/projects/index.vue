@@ -210,10 +210,10 @@ export default class Index extends Vue {
 <style lang="scss">
 :root {
   --project-link-box-shadow-opacity: 0.8;
+}
 
-  @media screen and (prefers-color-scheme: light) {
-    --project-link-box-shadow-opacity: 0.6;
-  }
+.theme--light {
+  --project-link-box-shadow-opacity: 0.6;
 }
 </style>
 
