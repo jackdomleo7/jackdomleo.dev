@@ -10,7 +10,7 @@
 
 My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
 
-<a href="https://twitter.com/jackdomleo7"><img src="./assets/sprite/svg/twitter.svg" alt="Twitter icon" style="height: 0.8rem !important; width: 0.8rem !important;" /> Twitter</a> &bull; <a href="https://github.com/JDomleo"><img src="./assets/sprite/svg/github.svg" alt="GitHub icon" style="height: 0.8rem !important; width: 0.8rem !important;" /> GitHub</a> &bull; <a href="https://codepen.io/JackDomleo"><img src="./assets/sprite/svg/codepen.svg" alt="CodePen icon" style="height: 0.8rem !important; width: 0.8rem !important;" /> CodePen</a> &bull; <a href="https://www.linkedin.com/in/jack-domleo"><img src="./assets/sprite/svg/linkedin.svg" alt="LinkedIn icon" style="height: 0.8rem !important; width: 0.8rem !important;" /> LinkedIn</a>
+[Twitter](https://twitter.com/jackdomleo7 "Follow me on Twitter") &bull; [GitHub](https://github.com/JDomleo "Follow me om GitHub or check out my projects") &bull; [CodePen](https://codepen.io/JackDomleo "Follow me on CodePen or check out my pens") &bull; [LinkedIn](https://www.linkedin.com/in/jack-domleo "Connect with me on LinkedIn")
 
 [🗺 sitemap](https://jackdomleo.dev/sitemap.xml)
 
