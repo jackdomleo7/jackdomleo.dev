@@ -43,7 +43,7 @@
               :aria-label="social.platform"
               data-cooltipz-dir="top"
             >
-              <svg-icon :name="social.platform.toLowerCase()" />
+              <svg-icon :name="social.platform.toLowerCase().replace(/\s/g, '')" />
             </a>
           </li>
         </ul>

@@ -20,6 +20,14 @@ export default class SocialMedia {
     {
       platform: 'LinkedIn',
       url: 'https://www.linkedin.com/in/jack-domleo'
+    },
+    {
+      platform: 'CodeCademy',
+      url: 'https://www.codecademy.com/profiles/JackDomleo'
+    },
+    {
+      platform: 'Buy Me a Coffee',
+      url: 'https://www.buymeacoffee.com/jackdomleo'
     }
   ];
 
