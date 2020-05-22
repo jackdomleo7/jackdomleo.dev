@@ -10,9 +10,9 @@
 
 My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
 
-[Twitter](https://twitter.com/jackdomleo7) &bull; [GitHub](https://github.com/JDomleo) &bull; [CodePen](https://codepen.io/JackDomleo) &bull; [LinkedIn](https://www.linkedin.com/in/jack-domleo) &bull; [CodeCademy](https://www.codecademy.com/profiles/JackDomleo) &bull; [Buy Me a Coffee](https://www.buymeacoffee.com/jackdomleo)
+[<img src="./assets/sprite/svg/twitter.svg" alt="Twitter icon" style="height: 0.8rem; width: 0.8rem;" /> Twitter](https://twitter.com/jackdomleo7) &bull; [<img src="./assets/sprite/svg/github.svg" alt="GitHub icon" style="height: 0.8rem; width: 0.8rem;" /> GitHub](https://github.com/JDomleo) &bull; [<img src="./assets/sprite/svg/codepen.svg" alt="CodePen icon" style="height: 0.8rem; width: 0.8rem;" /> CodePen](https://codepen.io/JackDomleo) &bull; [<img src="./assets/sprite/svg/linkedin.svg" alt="LinkedIn icon" style="height: 0.8rem; width: 0.8rem;" /> LinkedIn](https://www.linkedin.com/in/jack-domleo)
 
-[sitemap](https://jackdomleo.dev/sitemap.xml)
+[🗺 sitemap](https://jackdomleo.dev/sitemap.xml)
 
 ---
 
@@ -35,4 +35,7 @@ $ npm run generate
 
 ## Tools
 
-- [Nuxt.js](https://nuxtjs.org)
+- [See `package.json`](./package.json)
+- Domain: [Namecheap](https://www.namecheap.com)
+- DNS: [CloudFlare](https://www.cloudflare.com)
+- Hosting: GitHub Pages
