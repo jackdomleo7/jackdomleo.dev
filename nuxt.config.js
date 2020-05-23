@@ -103,7 +103,8 @@ export default {
     'normalize.css',
     'node_modules/cooltipz-css/src/cooltipz',
     '@/assets/styles/main.scss',
-    '@/assets/styles/hljs.scss'
+    '@/assets/styles/hljs.scss',
+    '@/assets/styles/markdown.scss'
   ],
   plugins: [],
   buildModules: ['@nuxt/typescript-build'],

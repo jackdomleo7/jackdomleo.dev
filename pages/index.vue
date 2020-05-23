@@ -284,6 +284,8 @@ export default class Index extends Vue {
 }
 
 .work {
+  margin-top: 3rem;
+
   ul {
     padding: 1rem 0 0 0;
     margin: 0;
