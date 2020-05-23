@@ -1,10 +1,26 @@
 <template>
   <page-template page-title="Hey, I'm Jack Domleo">
-    <p>
-      I'm a front-end developer from Nottingham, UK. You happen to have stumbled
-      across my corner of the internet, welcome!
-    </p>
-    <details-card />
+    <div class="intro">
+      <figure class="polaroid intro__img" tabindex="0">
+        <div class="polaroid__img shine">
+          <img src="@/assets/img/bio-image-jack-domleo.jpg" alt="Portrait image of Jack Domleo">
+        </div>
+        <figcaption>
+          This is me
+        </figcaption>
+      </figure>
+      <p class="intro__welcome">
+        I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.<br><br>I like front-end develpment, UI/UX, tea, Disney, hockey, holidays (preferably sunny) and stuff that looks cool.
+      </p>
+      <p class="intro__occupation">
+        <svg-icon name="briefcase" /> <span class="sr-only">Current occupation</span> Developer at
+        <a
+          href="https://www.mitrefinch.co.uk?ref=jackdomleo.dev"
+          rel="nofollow"
+          target="_blank"
+        >Mitrefinch</a>
+      </p>
+    </div>
     <section class="work">
       <h2>Work</h2>
       <p>
@@ -56,7 +72,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { format } from 'date-fns';
-import { DetailsCard, PageTemplate } from '@/components';
+import { PageTemplate } from '@/components';
 
 interface IWork {
   start: Date;
@@ -72,7 +88,7 @@ interface IStartEndDate {
 }
 
 @Component({
-  components: { DetailsCard, PageTemplate },
+  components: { PageTemplate },
   head () {
     return {
       title: 'Home'
@@ -133,7 +149,143 @@ export default class Index extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.polaroid {
+  width: 180px;
+  height: 220px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(120deg, #fff, #ddd 60%);
+  box-shadow: 2px -2px 20px 0px rgba(0, 0, 0, 0.6),
+    inset 4px 5px 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 1rem 0.5rem 0 0.5rem;;
+  transform: rotate(5deg);
+  transform-origin: top;
+  transition: all 0.5s ease;
+  color: var(--color-grey-dark);
+
+  &:hover,
+  &:focus {
+    transform: rotate(-5deg);
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      transform: rotate(5deg);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    transform: translateY(-50%);
+    height: 0.5rem;
+    width: 0.5rem;
+    background: radial-gradient(var(--color-blue), var(--color-blue-dark));
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  &__img {
+    width: 100%;
+    height: 80%;
+    background-color: #000;
+    overflow: hidden;
+    user-select: none;
+
+    img {
+      animation: polaroid 3.5s ease;
+      width: 100%;
+
+      @media screen and (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+
+    &.shine {
+      position: sticky;
+    }
+  }
+
+  figcaption {
+    font-family: "Rock Salt", sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  @keyframes polaroid {
+  0% {
+    filter: opacity(0);
+  }
+  100% {
+    filter: opacity(100%);
+  }
+}
+}
+
+.intro {
+  display: grid;
+  grid-template-areas: "img" "welcome" "occupation";
+  place-items: center;
+  text-align: center;
+  gap: 0.5rem;
+
+  &__img {
+    grid-area: img;
+
+    @media screen and (min-width: 40em) {
+      grid-row: 1/3;
+    }
+  }
+
+  &__welcome {
+    grid-area: welcome;
+    font-size: 1rem;
+    line-height: 1.2rem;
+
+    @media screen and (min-width: 30em) {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__occupation {
+    grid-area: occupation;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+
+    @media screen and (min-width: 30em) {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+
+      svg {
+        height: 1.8rem;
+        width: 1.8rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    grid-template-areas: "welcome img" "occupation .";
+    place-items: initial;
+    text-align: left;
+  }
+}
+
 .work {
+  margin-top: 3rem;
+
   ul {
     padding: 1rem 0 0 0;
     margin: 0;

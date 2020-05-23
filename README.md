@@ -10,9 +10,9 @@
 
 My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
 
-[Twitter](https://twitter.com/jackdomleo7) &bull; [GitHub](https://github.com/JDomleo) &bull; [CodePen](https://codepen.io/JackDomleo) &bull; [LinkedIn](https://www.linkedin.com/in/jack-domleo) &bull; [CodeCademy](https://www.codecademy.com/profiles/JackDomleo) &bull; [Buy Me a Coffee](https://www.buymeacoffee.com/jackdomleo)
+[Twitter](https://twitter.com/jackdomleo7 "Follow me on Twitter") &bull; [GitHub](https://github.com/JDomleo "Follow me om GitHub or check out my projects") &bull; [CodePen](https://codepen.io/JackDomleo "Follow me on CodePen or check out my pens") &bull; [LinkedIn](https://www.linkedin.com/in/jack-domleo "Connect with me on LinkedIn")
 
-[sitemap](https://jackdomleo.dev/sitemap.xml)
+[🗺 sitemap](https://jackdomleo.dev/sitemap.xml)
 
 ---
 
@@ -35,4 +35,7 @@ $ npm run generate
 
 ## Tools
 
-- [Nuxt.js](https://nuxtjs.org)
+- [See `package.json`](./package.json)
+- Domain: [Namecheap](https://www.namecheap.com)
+- DNS: [CloudFlare](https://www.cloudflare.com)
+- Hosting: GitHub Pages

@@ -69,11 +69,11 @@ export default class Textfield extends Vue {
 :root {
   --textfield-placeholder: #eee;
   --textfield-bg: rgba(255, 255, 255, 0.05);
+}
 
-  @media screen and (prefers-color-scheme: light) {
-    --textfield-placeholder: #555;
-    --textfield-bg: rgba(255, 255, 255, 0.1);
-  }
+.theme--light {
+  --textfield-placeholder: #555;
+  --textfield-bg: rgba(255, 255, 255, 0.1);
 }
 </style>
 

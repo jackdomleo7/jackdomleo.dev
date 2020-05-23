@@ -8,7 +8,7 @@
       </li>
     </ul>
     <div class="footer__copy">
-      &copy; {{ new Date().getFullYear() }} Jack Domleo
+      &copy;{{ new Date().getFullYear() }} Jack Domleo
     </div>
   </footer>
 </template>

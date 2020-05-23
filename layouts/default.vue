@@ -11,11 +11,29 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { Navbar, Footerbar } from '@/components';
+import Theme from '@/middleware/theme';
 
 @Component({
   components: { Navbar, Footerbar }
 })
-export default class Default extends Vue {}
+export default class Default extends Vue {
+  private mounted () {
+    this.setTheme();
+  }
+
+  private setTheme (): void {
+    const savedTheme: string | null = localStorage.getItem(Theme.localStorageThemeVar);
+    if (savedTheme === 'light') {
+      document.querySelector('html')!.classList.add('theme--light');
+    } else if (savedTheme == null) {
+      const preferredTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (preferredTheme === 'light') {
+        document.querySelector('html')!.classList.add('theme--light');
+      }
+      localStorage.setItem(Theme.localStorageThemeVar, preferredTheme);
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +49,7 @@ export default class Default extends Vue {}
     align-items: center;
 
     > * {
-      max-width: 800px;
+      max-width: 62.5em;
       padding: 1.5rem;
     }
   }

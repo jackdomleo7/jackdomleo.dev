@@ -4,21 +4,26 @@
       <nuxt-link to="/" class="nav__logo" aria-label="Home">
         <svg-icon name="logo" />
       </nuxt-link>
-      <ul class="nav__links">
-        <li
-          v-for="(link, index) in NavLinks"
-          :key="index"
-          :aria-setsize="NavLinks.length"
-          :aria-posinset="index + 1"
-        >
-          <nuxt-link
-            :to="link.url"
-            :aria-current="isCurrent(link.url) ? 'page' : null"
+      <div class="nav__actions">
+        <ul class="nav__links">
+          <li
+            v-for="(link, index) in NavLinks"
+            :key="index"
+            :aria-setsize="NavLinks.length"
+            :aria-posinset="index + 1"
           >
-            {{ link.text }}
-          </nuxt-link>
-        </li>
-      </ul>
+            <nuxt-link
+              :to="link.url"
+              :aria-current="isCurrent(link.url) ? 'page' : null"
+            >
+              {{ link.text }}
+            </nuxt-link>
+          </li>
+        </ul>
+        <button class="nav__theme" :aria-label="(theme === 'dark' ? 'Light' : 'Dark') + ' theme'" data-cooltipz-dir="bottom-right" @click="themeSwitcher">
+          <svg-icon :name="theme === 'dark' ? 'sun' : 'moon'" />
+        </button>
+      </div>
     </nav>
     <top-gradient-bar />
   </header>
@@ -27,6 +32,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { TopGradientBar } from '@/components';
+import Theme from '@/middleware/theme';
 
 interface INavLink {
   text: string;
@@ -37,6 +43,7 @@ interface INavLink {
   components: { TopGradientBar }
 })
 export default class Navbar extends Vue {
+  private theme: string | null = '';
   private readonly NavLinks: INavLink[] = [
     {
       text: 'Home',
@@ -52,8 +59,31 @@ export default class Navbar extends Vue {
     }
   ];
 
+  private mounted () {
+    this.theme = this.getTheme();
+  }
+
   private isCurrent (path: string): boolean {
     return this.$route.path === path;
+  }
+
+  private themeSwitcher (): void {
+    const html = document.querySelector('html')!;
+    if (this.getTheme() === 'dark') {
+      const newTheme: string = 'light';
+      html.classList.add(`theme--${newTheme}`);
+      this.theme = newTheme;
+      localStorage.setItem(Theme.localStorageThemeVar, newTheme);
+    } else {
+      const newTheme: string = 'dark';
+      html.classList.remove('theme--light');
+      this.theme = newTheme;
+      localStorage.setItem(Theme.localStorageThemeVar, newTheme);
+    }
+  }
+
+  private getTheme (): string | null {
+    return localStorage.getItem(Theme.localStorageThemeVar);
   }
 }
 </script>
@@ -62,29 +92,7 @@ export default class Navbar extends Vue {
 :root {
   --nav-hover: var(--color-grey-dark);
   --header-box-shadow-opacity: 0.8;
-
-  @media (prefers-color-scheme: light) {
-    --nav-hover: var(--color-grey-light);
-    --header-box-shadow-opacity: 0.6;
-  }
-}
-</style>
-
-<style lang="scss" scoped>
-@keyframes Logo {
-  0% {
-    filter: blur(5px);
-  }
-  100% {
-    filter: blur(0);
-  }
-}
-
-.header {
-  width: 100vw;
-  position: sticky;
-  top: 0;
-  background: linear-gradient(
+  --header-background: linear-gradient(
       135deg,
       rgba(66, 66, 66, 0.46) 0%,
       rgba(66, 66, 66, 0.46) 12.5%,
@@ -122,13 +130,12 @@ export default class Navbar extends Vue {
       rgb(57, 57, 57) 87.5%,
       rgb(57, 57, 57) 100%
     );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  box-shadow: 0 0.1875rem 0.625rem -0.1875rem rgba(0,0,0,var(--header-box-shadow-opacity));
-  z-index: 10;
+}
 
-  @media screen and (prefers-color-scheme: light) {
-    background: linear-gradient(
+.theme--light {
+  --nav-hover: var(--color-grey-light);
+  --header-box-shadow-opacity: 0.6;
+  --header-background: linear-gradient(
         135deg,
         rgba(223, 223, 223, 0.47) 0%,
         rgba(223, 223, 223, 0.47) 14.286%,
@@ -162,7 +169,28 @@ export default class Navbar extends Vue {
         rgb(203, 203, 203) 85.716%,
         rgb(203, 203, 203) 100%
       );
+}
+</style>
+
+<style lang="scss" scoped>
+@keyframes Logo {
+  0% {
+    filter: blur(5px);
   }
+  100% {
+    filter: blur(0);
+  }
+}
+
+.header {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  background: var(--header-background);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.1875rem 0.625rem -0.1875rem rgba(0,0,0,var(--header-box-shadow-opacity));
+  z-index: 10;
 
   .nav {
     height: 100%;
@@ -187,8 +215,13 @@ export default class Navbar extends Vue {
       }
     }
 
-    &__links {
+    &__actions {
       display: flex;
+      align-items: center;
+    }
+
+    &__links {
+      display: inline-flex;
       align-items: stretch;
       padding-left: 0;
       list-style-type: none;
@@ -212,6 +245,29 @@ export default class Navbar extends Vue {
       }
     }
 
+    &__theme {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--header-background);
+      color: currentColor;
+      border: none;
+      margin-left: 0.8rem;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      padding: 0.5rem;
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--nav-hover);
+      }
+    }
+
     @media screen and (min-width: 30em) {
       padding: 0 2rem;
 
@@ -226,6 +282,15 @@ export default class Navbar extends Vue {
 
           a {
             padding: 1.2rem 1.4rem;
+          }
+        }
+
+        &__theme {
+          padding: 0.9rem;
+
+          svg {
+            height: 1.8rem;
+            width: 1.8rem;
           }
         }
       }
