@@ -22,6 +22,9 @@ export default class PageTemplate extends Vue {
 
 <style lang="scss" scoped>
 .page {
+  display: flex;
+  flex-direction: column;
+
   h1 {
     font-size: 1.8rem;
   }

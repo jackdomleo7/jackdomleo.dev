@@ -49,7 +49,7 @@ export default class Default extends Vue {
     align-items: center;
 
     > * {
-      max-width: 800px;
+      max-width: 62.5em;
       padding: 1.5rem;
     }
   }
