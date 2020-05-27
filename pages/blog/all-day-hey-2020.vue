@@ -27,7 +27,6 @@
       nth-child Art</a> by Charlotte Dann (<a href="https://codepen.io/pouretrebelle">@pouretrebelle</a>)
       on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
     Charlotte then went on to explain how she evolved a university project, involving hexagons, into a brilliant business idea, [Hexatope](https://hexatope.io?ref=jackdomleo.dev/blog/all-day-hey-2020). I'm a big fan of this! I love how a customer can actually use the online application Charlotte built, purchase it and recieve a 3D model of their creation - jewellery. I do recommend this as a gift for anyone who likes to live an interesting life.
 
@@ -54,7 +53,6 @@
       Accessible button 06</a> by Kim Johannesen (<a href="https://codepen.io/kimblim">@kimblim</a>)
       on <a href="https://codepen.io">CodePen</a>.</span>
     </p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
     ### Grace Zarczynska - Ways to Speed Up Your Coding
 
@@ -94,6 +92,7 @@
 
     ![All Day Hey logo](/blog/all-day-hey-2020/alldayhey-logo.jpg "All Day Hey logo")
   </article>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 </template>
 
 <script>
