@@ -43,6 +43,11 @@ interface IBlogSummary {
 export default class Index extends Vue {
   private readonly BlogSummaries: IBlogSummary[] = [
     {
+      title: 'Learning Neumorphic Design',
+      description: 'The awesome design trend that never took off! I\'ve become fascinated with neumorphic design and wanted to share my opinion.',
+      url: 'learning-neumorphic-design'
+    },
+    {
       title: 'All Day Hey! 2020',
       description: 'All Day Hey 2020 was the first virtual conference I attended and I thought it was fantastic! Can\'t wait for 2021.',
       url: 'all-day-hey-2020'
