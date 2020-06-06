@@ -43,6 +43,11 @@ interface IBlogSummary {
 export default class Index extends Vue {
   private readonly BlogSummaries: IBlogSummary[] = [
     {
+      title: 'Why to not support Internet Explorer',
+      description: 'So you\'re thinking of supporting Internet Explorer? Don\'t.',
+      url: 'why-to-not-support-internet-explorer'
+    },
+    {
       title: 'Learning Neumorphic Design',
       description: 'The awesome design trend that never took off! I\'ve become fascinated with neumorphic design and wanted to share my opinion.',
       url: 'learning-neumorphic-design'
