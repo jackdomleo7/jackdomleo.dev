@@ -22,7 +22,8 @@ export default class Index extends Vue {
   }
 
   private articleDate (date: Date): string {
-    return format(date, 'do MMMM yyyy');
+    const newDate = Date.parse(String(date));
+    return format(newDate, 'do MMMM yyyy');
   }
 }
 </script>

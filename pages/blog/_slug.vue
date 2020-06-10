@@ -2,6 +2,7 @@
   <article class="markdown">
     <h1>{{ page.title }}</h1>
     <p>{{ page.description }}</p>
+    <p>{{ page.date }}</p>
     <nuxt-content :document="page" />
     <script v-if="page.containsCodePen" async src="https://static.codepen.io/assets/embed/ei.js" />
   </article>
