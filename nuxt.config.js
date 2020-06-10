@@ -112,11 +112,17 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/svg-sprite',
-    '@nuxtjs/markdownit',
+    '@nuxt/content',
     '@nuxtjs/sitemap' // Ensure this is always last in array
   ],
-  markdownit: {
-    html: true
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { minutes } = require('reading-time')(document.text);
+
+        document.readingTime = Math.ceil(minutes);
+      }
+    }
   },
   sitemap: {
     hostname: 'https://jackdomleo.dev',
@@ -132,7 +138,13 @@ export default {
   },
   generate: {
     dir: 'docs',
-    fallback: '404.html'
+    fallback: '404.html',
+    async routes () {
+      const { $content } = require('@nuxt/content');
+      const files = await $content().only(['path']).fetch();
+
+      return files.map(file => '/blog' + (file.path === '/index' ? '/' : file.path));
+    }
   },
   publicPath: '/'
 };
