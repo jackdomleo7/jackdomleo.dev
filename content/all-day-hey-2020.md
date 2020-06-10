@@ -1,6 +1,6 @@
 ---
 title: All Day Hey! 2020
-description: All Day Hey 2020 was the first virtual conference I attended and I thought it was fantastic! Can\'t wait for 2021.
+description: All Day Hey 2020 was the first virtual conference I attended and I thought it was fantastic! Can't wait for 2021.
 date: 2020-05-14
 containsCodePen: true
 ---
