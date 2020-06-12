@@ -34,7 +34,12 @@ interface IArticleDate {
 }
 
 @Component({
-  components: { PageTemplate }
+  components: { PageTemplate },
+  head () {
+    return {
+      title: 'Blog'
+    };
+  }
 })
 export default class Index extends Vue {
   private articles: object[] = [];

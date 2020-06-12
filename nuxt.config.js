@@ -88,9 +88,9 @@ export default {
       ogType: 'profile',
       ogHost: 'https://jackdomleo.dev',
       ogImage: {
-        path: '/open-graphics/open-graph.png',
-        width: '1200',
-        height: '630',
+        path: '/img/open-graph.png',
+        width: '1280',
+        height: '640',
         type: 'image/png'
       },
       twitterCard: 'summary_large_image',
