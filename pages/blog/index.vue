@@ -5,7 +5,7 @@
         <article class="article">
           <header>
             <h2 class="article__title">
-              <nuxt-link :to="'/blog' + blog.path">
+              <nuxt-link :to="'/blog/' + blog.slug">
                 {{ blog.title }}
               </nuxt-link>
             </h2>
@@ -45,7 +45,7 @@ export default class Index extends Vue {
   private articles: object[] = [];
 
   async fetch () {
-    this.articles = await this.$content().sortBy('date', 'desc').fetch();
+    this.articles = await this.$content('blog', { deep: true }).only(['title', 'date', 'slug', 'description', 'readingTime']).sortBy('date', 'desc').fetch();
   }
 
   private articleDate (date: Date): IArticleDate {

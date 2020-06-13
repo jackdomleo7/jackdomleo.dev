@@ -1,8 +1,8 @@
 <template>
   <article class="markdown">
     <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
     <p>{{ page.date }}</p>
+    <p>{{ page.description }}</p>
     <nuxt-content :document="page" />
     <script v-if="page.containsCodePen" async src="https://static.codepen.io/assets/embed/ei.js" />
   </article>
@@ -12,11 +12,11 @@
 export default {
   async asyncData ({ $content, params }) {
     const slug = params.slug || 'index';
-    const page = await $content(slug)
-      .fetch()
-      .catch((err) => {
-        console.error({ statusCode: 404, message: err });
-      });
+    let page = await $content('blog', { deep: true })
+      .where({ slug: slug })
+      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body'])
+      .fetch();
+    page = page[0];
 
     return {
       page
@@ -30,7 +30,7 @@ export default {
           hid: 'og:image',
           name: 'og:image',
           property: 'og:image',
-          content: `${process.env.BASE_URL}/blog/${this.page.slug}/og.png`
+          content: `${process.env.BASE_URL}${this.$route.path}${this.$route.path.endsWith('/') ? '' : '/'}og.png`
         },
         {
           hid: 'og:title',

@@ -141,9 +141,9 @@ export default {
     fallback: '404.html',
     async routes () {
       const { $content } = require('@nuxt/content');
-      const files = await $content().only(['path']).fetch();
+      const files = await $content('', { deep: true }).only(['slug', 'dir']).fetch();
 
-      return files.map(file => '/blog' + (file.path === '/index' ? '/' : file.path));
+      return files.map(file => '/' + (file.dir.includes('blog') ? 'blog' : file.dir.includes('projects') ? 'projects' : '') + '/' + (file.slug === '/index' ? '/' : file.slug));
     }
   },
   publicPath: '/'
