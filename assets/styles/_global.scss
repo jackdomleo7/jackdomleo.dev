@@ -1,7 +1,7 @@
 :root {
   --body-background: var(--color-grey-dark);
   --body-color: var(--color-white);
-  --body-font-weight: 400;
+  --body-font-weight: 300;
   --link-color: var(--color-blue);
 
   --font-family: sans-serif;
@@ -11,7 +11,7 @@
 .theme--light {
   --body-background: var(--color-white);
   --body-color: var(--color-grey-dark);
-  --body-font-weight: 300;
+  --body-font-weight: 400;
   --link-color: var(--color-blue-dark);
 }
 
@@ -79,6 +79,14 @@ h6 {
   font-family: exo, var(--font-stack);
 }
 
+h1 {
+  font-size: 2rem;
+
+  @media screen and (min-width: 30em) {
+    font-size: 2.2rem;
+  }
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -94,7 +102,6 @@ svg {
 
 a {
   color: var(--link-color);
-  font-weight: 400;
   transition: all 160ms ease;
 
   &:hover,

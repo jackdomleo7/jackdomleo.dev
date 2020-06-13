@@ -1,7 +1,26 @@
 <template>
   <article class="markdown">
+    <nuxt-link class="blog__back" to="/blog">
+      <svg-icon name="arrow-left" />
+      Back to blogs
+    </nuxt-link>
     <h1>{{ page.title }}</h1>
-    <p>{{ page.date }}</p>
+    <ul class="blog__meta">
+      <li>
+        <time :datetime="articleDate(page.date).datetime">{{ articleDate(page.date).date }}</time>
+      </li>
+      <li><span>{{ page.readingTime }} {{ page.readingTime === 1 ? 'minute' : 'minutes' }} read</span></li>
+    </ul>
+    <ul class="social-share">
+      <li role="presentation">
+        Share:
+      </li>
+      <li v-for="(socialShare, index) in socialShares()" :key="index" :aria-setsize="socialShares().length" :aria-posinset="index + 1">
+        <a :href="socialShare.url" rel="nofollow noopener" target="_blank" data-cooltipz-dir="bottom" :aria-label="'Share on ' + socialShare.platform">
+          <svg-icon :name="socialShare.platform.toLowerCase()" />
+        </a>
+      </li>
+    </ul>
     <p>{{ page.description }}</p>
     <nuxt-content :document="page" />
     <script v-if="page.containsCodePen" async src="https://static.codepen.io/assets/embed/ei.js" />
@@ -9,18 +28,41 @@
 </template>
 
 <script>
+import { format } from 'date-fns';
+
 export default {
   async asyncData ({ $content, params }) {
     const slug = params.slug || 'index';
     let page = await $content('blog', { deep: true })
       .where({ slug })
-      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body'])
+      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen'])
       .fetch();
     page = page[0];
 
     return {
       page
     };
+  },
+  methods: {
+    articleDate (date) {
+      const newDate = Date.parse(String(date));
+      return {
+        date: format(newDate, 'do MMMM yyyy'),
+        datetime: format(newDate, 'yyyy-MM-dd')
+      };
+    },
+    socialShares () {
+      return [
+        {
+          platform: 'Twitter',
+          url: `https://twitter.com/intent/tweet?text=${this.page.title}&via=jackdomleo7&url=https://jackdomleo.dev${this.$route.path}`
+        },
+        {
+          platform: 'LinkedIn',
+          url: `https://www.linkedin.com/shareArticle?mini=true&url=https://jackdomleo.dev${this.$route.path}&title=${this.page.title}&summary=${this.page.title}&source=blog.jackdomleo.dev${this.$route.path}`
+        }
+      ];
+    }
   },
   head () {
     return {
@@ -73,3 +115,56 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.blog {
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    svg {
+      height: 1.8rem;
+      width: 1.8rem;
+    }
+  }
+
+  &__meta {
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+
+      li {
+        &:nth-child(1) {
+          list-style-type: none;
+          margin-right: 2rem;
+          font-weight: 700;
+        }
+      }
+    }
+}
+
+.social-share {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin: 1rem 0 3rem;
+  padding-left: 0;
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    color: inherit;
+    transition: color 160ms ease;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+  svg {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+</style>
