@@ -13,7 +13,7 @@ export default {
   async asyncData ({ $content, params }) {
     const slug = params.slug || 'index';
     let page = await $content('blog', { deep: true })
-      .where({ slug: slug })
+      .where({ slug })
       .only(['title', 'date', 'slug', 'description', 'readingTime', 'body'])
       .fetch();
     page = page[0];
