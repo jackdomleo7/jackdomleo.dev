@@ -3,6 +3,7 @@ title: Learning Neumorphic Design
 description: The awesome design trend that never took off! I've become fascinated with neumorphic design and wanted to share my opinion.
 date: 2020-05-27
 containsCodePen: true
+hashtags: ['Neumorphic', 'WebDesign', 'CSS']
 ---
 
 Neumorphic design is a combination of skeuomorphic design and flat design. It gives a soft UI vibe with a 3D, nearly-realistic style by cleverly and carefully combining background colours, gradients, shapes, rounded edges and shadows. The design trend is made to feel like the elements are being pushed through and/or out of the page.

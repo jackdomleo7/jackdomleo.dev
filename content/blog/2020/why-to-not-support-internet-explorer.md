@@ -2,6 +2,8 @@
 title: Why to not support Internet Explorer
 description: So you're thinking of supporting Internet Explorer? Don't.
 date: 2020-06-06
+containsCodePen: false
+hashtags: ['InternetExplorer', 'IE', 'Browser']
 ---
 
 - Microsoft dropped support for versions IE10 and below as of <time datetime="2016-01-12">12<sup>th</sup> January 2016</time>

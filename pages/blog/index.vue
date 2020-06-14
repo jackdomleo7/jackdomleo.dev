@@ -63,9 +63,19 @@ export default class Index extends Vue {
   padding-left: 0;
   list-style-type: none;
 
-  .article {
+  > li {
     margin: 4rem 0;
 
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .article {
     &__title {
       a {
         text-decoration: none;

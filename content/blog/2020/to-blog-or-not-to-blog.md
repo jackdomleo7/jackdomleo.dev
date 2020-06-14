@@ -2,6 +2,8 @@
 title: To Blog or Not to Blog
 description: Writing a blog can be daunting and scary for anyone. The thought of criticism and humiliation crosses your mind. What convinced me to write a blog and why do I recommend it to others?
 date: 2020-05-13
+containsCodePen: false
+hashtags: ['Blog', 'Developer', 'WebDeveloper']
 ---
 
 A blog has been on my to do list for a while but never had the guts to go through with it. Why? From the time of this article, I've only been a developer for 618 days (that's approximately 1 year and 8 months) and I've always felt I've never seen enough of the developer community to start writing about it. I always felt too young and too inexperienced.

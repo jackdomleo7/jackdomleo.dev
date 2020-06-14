@@ -11,6 +11,11 @@
       </li>
       <li><span>{{ page.readingTime }} {{ page.readingTime === 1 ? 'minute' : 'minutes' }} read</span></li>
     </ul>
+    <ul class="blog__hashtags">
+      <li v-for="(tag, index) in page.hashtags" :key="tag" :aria-setsize="page.hashtags.length" :aria-posinset="index + 1">
+        <i>#{{ tag }}</i>
+      </li>
+    </ul>
     <ul class="social-share">
       <li role="presentation">
         Share:
@@ -35,7 +40,7 @@ export default {
     const slug = params.slug || 'index';
     let page = await $content('blog', { deep: true })
       .where({ slug })
-      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen'])
+      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen', 'hashtags'])
       .fetch();
     page = page[0];
 
@@ -129,18 +134,33 @@ export default {
   }
 
   &__meta {
-      padding-left: 0;
-      display: flex;
-      align-items: center;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
 
-      li {
-        &:nth-child(1) {
-          list-style-type: none;
-          margin-right: 2rem;
-          font-weight: 700;
-        }
+    li {
+      &:nth-child(1) {
+        list-style-type: none;
+        margin-right: 2rem;
+        font-weight: 700;
       }
     }
+  }
+
+  &__hashtags {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin: 1rem 0;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
 }
 
 .social-share {
@@ -151,6 +171,7 @@ export default {
   margin-bottom: 0;
   margin: 1rem 0 3rem;
   padding-left: 0;
+
   li {
     display: inline-block;
   }
