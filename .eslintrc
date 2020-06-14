@@ -16,6 +16,7 @@
   "rules": {
     "semi": [1, "always"],
     "quotes": [1, "single"],
-    "prettier/prettier": [0, { "semi": false }]
+    "prettier/prettier": [0, { "semi": false }],
+    "no-console": "off"
   }
 }

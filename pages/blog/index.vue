@@ -1,96 +1,103 @@
 <template>
   <page-template page-title="Blog">
-    <ul class="blog__list">
-      <li
-        v-for="(blog, index) in BlogSummaries"
-        :id="'blog-' + blog.url"
-        :key="index"
-        class="blog__summary"
-        :aria-setsize="BlogSummaries.length"
-        :aria-posinset="index"
-      >
-        <nuxt-link :to="'/blog/' + blog.url">
-          <h2>{{ blog.title }}</h2>
-          <p>{{ blog.description }}</p>
-        </nuxt-link>
+    <ul class="articles">
+      <li v-for="(blog, index) in articles" :key="index" :aria-setsize="articles.length" :aria-posinset="index + 1">
+        <article class="article">
+          <header>
+            <h2 class="article__title">
+              <nuxt-link :to="'/blog/' + blog.slug">
+                {{ blog.title }}
+              </nuxt-link>
+            </h2>
+            <ul class="article__meta">
+              <li><time :datetime="articleDate(blog.date).datetime">{{ articleDate(blog.date).date }}</time></li>
+              <li><span>{{ blog.readingTime }} {{ blog.readingTime === 1 ? 'minute' : 'minutes' }} read</span></li>
+            </ul>
+          </header>
+          <section class="article__body">
+            <p>{{ blog.description }}</p>
+          </section>
+        </article>
       </li>
     </ul>
   </page-template>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+import { Vue, Component } from 'nuxt-property-decorator';
+import { format } from 'date-fns';
 import { PageTemplate } from '@/components';
 
-interface IBlogSummary {
-  title: string;
-  description: string;
-  url: string;
+interface IArticleDate {
+  datetime: string;
+  date: string;
 }
 
 @Component({
   components: { PageTemplate },
   head () {
     return {
-      title: 'Blog',
-      meta: [
-        { hid: 'description', name: 'description', content: 'A list of blog posts written by Jack Domleo.' },
-        { hid: 'og:description', name: 'og:description', content: 'A list of blog posts written by Jack Domleo.' }
-      ]
+      title: 'Blog'
     };
   }
 })
 export default class Index extends Vue {
-  private readonly BlogSummaries: IBlogSummary[] = [
-    {
-      title: 'Why to not support Internet Explorer',
-      description: 'So you\'re thinking of supporting Internet Explorer? Don\'t.',
-      url: 'why-to-not-support-internet-explorer'
-    },
-    {
-      title: 'Learning Neumorphic Design',
-      description: 'The awesome design trend that never took off! I\'ve become fascinated with neumorphic design and wanted to share my opinion.',
-      url: 'learning-neumorphic-design'
-    },
-    {
-      title: 'All Day Hey! 2020',
-      description: 'All Day Hey 2020 was the first virtual conference I attended and I thought it was fantastic! Can\'t wait for 2021.',
-      url: 'all-day-hey-2020'
-    },
-    {
-      title: 'To Blog or Not to Blog',
-      description: 'Writing a blog can be scary. This is how I was convinced to start my own blog to share my thoughts and ideas.',
-      url: 'to-blog-or-not-to-blog'
-    }
-  ]
+  private articles: object[] = [];
+
+  async fetch () {
+    this.articles = await this.$content('blog', { deep: true }).only(['title', 'date', 'slug', 'description', 'readingTime']).sortBy('date', 'desc').fetch();
+  }
+
+  private articleDate (date: Date): IArticleDate {
+    const newDate = Date.parse(String(date));
+    return {
+      date: format(newDate, 'do MMMM yyyy'),
+      datetime: format(newDate, 'yyyy-MM-dd')
+    };
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.blog {
-  &__list {
-    padding-left: 0;
-    list-style-type: none;
+.articles {
+  padding-left: 0;
+  list-style-type: none;
+
+  > li {
+    margin: 4rem 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
-  &__summary {
-    a {
-      color: inherit;
-      text-decoration: none;
+  .article {
+    &__title {
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &__meta {
+      padding-left: 0;
       display: flex;
-      flex-direction: column;
-      padding: 1rem;
-      border-radius: 0.375rem;
-      transition: background-color 160ms ease;
+      align-items: center;
 
-      &:hover,
-      &:focus {
-        background-color: rgba(0, 0, 0, 0.1);
+      li {
+        &:nth-child(1) {
+          list-style-type: none;
+          margin-right: 1.5rem;
+          font-weight: 700;
+        }
       }
+    }
 
-      p {
-        margin-top: 0;
-      }
+    &__body {
+      margin-top: 1.5rem;
     }
   }
 }

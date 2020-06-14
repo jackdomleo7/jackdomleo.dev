@@ -88,9 +88,9 @@ export default {
       ogType: 'profile',
       ogHost: 'https://jackdomleo.dev',
       ogImage: {
-        path: '/open-graphics/open-graph.png',
-        width: '1200',
-        height: '630',
+        path: '/img/open-graph.png',
+        width: '1280',
+        height: '640',
         type: 'image/png'
       },
       twitterCard: 'summary_large_image',
@@ -112,11 +112,17 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/svg-sprite',
-    '@nuxtjs/markdownit',
+    '@nuxt/content',
     '@nuxtjs/sitemap' // Ensure this is always last in array
   ],
-  markdownit: {
-    html: true
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { minutes } = require('reading-time')(document.text);
+
+        document.readingTime = Math.ceil(minutes);
+      }
+    }
   },
   sitemap: {
     hostname: 'https://jackdomleo.dev',
@@ -132,7 +138,13 @@ export default {
   },
   generate: {
     dir: 'docs',
-    fallback: '404.html'
+    fallback: '404.html',
+    async routes () {
+      const { $content } = require('@nuxt/content');
+      const files = await $content('', { deep: true }).only(['slug', 'dir']).fetch();
+
+      return files.map(file => '/' + (file.dir.includes('blog') ? 'blog' : file.dir.includes('projects') ? 'projects' : '') + '/' + (file.slug === '/index' ? '/' : file.slug));
+    }
   },
   publicPath: '/'
 };

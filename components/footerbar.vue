@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+import { Vue, Component } from 'nuxt-property-decorator';
 import SocialMedia, { ISocial } from '@/middleware/socialMedia';
 
 @Component
@@ -23,7 +23,7 @@ export default class Footerbar extends Vue {
     return SocialMedia.socialMedia;
   }
 }
-</script></style>
+</script>
 
 <style lang="scss" scoped>
 .footer {
