@@ -26,7 +26,7 @@ I really learned a lot from Vitaly. I'm really happy with the way he explained w
 
 [Charlotte Dann](https://charlottedann.com) blew the audience away with her CSS art! The founder of [Hexatope](https://hexatope.io) showed off stunning examples of her work and how a simple CSS algorithm can have unexpected, weird and wonderful outcomes. The power of `nth-child()` astounded us all. Definitely inspired me to look into doing some CSS art that's more interesting than my [pixel art R2-D2](https://codepen.io/JackDomleo/pen/ZEEqdxy).
 
-<p class="codepen" data-height="400" data-theme-id="default" data-default-tab="js,result" data-user="pouretrebelle" data-slug-hash="bPWvNp" data-preview="true" data-pen-title="nth-child Art">
+<p class="codepen" data-theme-id="39164" data-default-tab="result" data-user="pouretrebelle" data-slug-hash="bPWvNp" data-pen-title="nth-child Art">
   <span>See the Pen <a href="https://codepen.io/pouretrebelle/pen/bPWvNp">
   nth-child Art</a> by Charlotte Dann (<a href="https://codepen.io/pouretrebelle">@pouretrebelle</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -52,7 +52,7 @@ Eli suggested some excellent resources to use when thinking about internationali
 
 [Kim Johannesen](https://twitter.com/therealkimblim) gave a really informative demonstration on a topic I am particularly interested in, accessibility, specifically creating an accessible button. Some really useful and vital key points were mentioned, for example, the use of the `.sr-only` class for icon-only buttons, the use of the `-ms-high-contrast` media query and using the `:hover` and `:focus` pseudo-classes.
 
-<p class="codepen" data-height="400" data-theme-id="default" data-default-tab="result" data-user="kimblim" data-slug-hash="rNVgLor" data-preview="true" data-pen-title="Accessible button 06">
+<p class="codepen" data-theme-id="39164" data-default-tab="result" data-user="kimblim" data-slug-hash="rNVgLor" data-pen-title="Accessible button 06">
   <span>See the Pen <a href="https://codepen.io/kimblim/pen/rNVgLor">
   Accessible button 06</a> by Kim Johannesen (<a href="https://codepen.io/kimblim">@kimblim</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>

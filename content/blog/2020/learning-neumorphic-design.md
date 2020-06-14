@@ -28,7 +28,7 @@ Learning neumorphism was quite difficult for me to begin with because I don't se
 
 A theme of neumorphic design is <em>roundness</em>, so you should probably consider choosing a font with rounded letters. To further explain this, I created a simple CodePen below:
 
-<p class="codepen" data-height="450" data-theme-id="default" data-default-tab="result" data-user="JackDomleo" data-slug-hash="dyYEdPg" data-pen-title="Choosing a neumorphic font-family">
+<p class="codepen" data-height="450" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="dyYEdPg" data-pen-title="Choosing a neumorphic font-family">
   <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/dyYEdPg">
   Choosing a neumorphic font-family</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -56,7 +56,7 @@ Save the best until last. Shadows. This needs to be right, I spent ages learning
 
 Wait! Two shadows, three shadows? Yes. You can apply multiple shadows to a **single** CSS `box-shadow` property. Although the R2-D2 below doesn't have anything to do with neumorphic design, it does demonstrate multiple box-shadows quite well. Below is a CodePen I created a while back of a pixel art R2-D2. It consists of a single `<div>`, then a very long, but easy-to-understand `box-shadow` CSS property.
 
-<p class="codepen" data-height="450" data-theme-id="default" data-default-tab="result" data-user="JackDomleo" data-slug-hash="ZEEqdxy" data-pen-title="Pixel Art: R2-D2 - pure CSS">
+<p class="codepen" data-height="450" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="ZEEqdxy" data-pen-title="Pixel Art: R2-D2 - pure CSS">
   <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/ZEEqdxy">
   Pixel Art: R2-D2 - pure CSS</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -64,7 +64,7 @@ Wait! Two shadows, three shadows? Yes. You can apply multiple shadows to a **sin
 
 The trick to neumorphic design shadows is, there are two shadows on your `box-shadow` CSS property, one lighter and one darker. Now imagine you have a light source in the top-left hand corner of your page shining from the top-left to the bottom-right. Since a theme of neumorphism is 3D, you need to think, "Where will the shadow be?" Here is a little CodePen I created to help explain it.
 
-<p class="codepen" data-height="700" data-theme-id="default" data-default-tab="result" data-user="JackDomleo" data-slug-hash="yLYWqoQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Understanding neumorphic design shadows">
+<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="css,result" data-user="JackDomleo" data-slug-hash="yLYWqoQ" data-editable="true" data-pen-title="Understanding neumorphic design shadows">
   <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/yLYWqoQ">
   Understanding neumorphic design shadows</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -74,7 +74,7 @@ The trick to neumorphic design shadows is, there are two shadows on your `box-sh
 
 When you combine all these themes, ideas, tips and tricks, you can end up with a nice set of components for your design system.
 
-<p class="codepen" data-height="600" data-theme-id="default" data-default-tab="result" data-user="JackDomleo" data-slug-hash="mdeowoz" data-pen-title="Neumorphic Design Elements">
+<p class="codepen" data-height="358" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="mdeowoz" data-editable="true" data-pen-title="Neumorphic Design Elements">
   <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/mdeowoz">
   Neumorphic Design Elements</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
