@@ -1,6 +1,6 @@
 ---
 title: All Day Hey! 2020
-description: All Day Hey 2020 was the first virtual conference I attended and I thought it was fantastic! Can't wait for 2021.
+description: All Day Hey 2020 was an online conference for front-end developers and designers and I thought it was fantastic and educational!
 date: 2020-05-14
 containsCodePen: true
 hashtags: ['AllDayHey', 'FrontEnd']
@@ -8,7 +8,10 @@ hashtags: ['AllDayHey', 'FrontEnd']
 
 Today marks one week since the [All Day Hey](https://alldayhey.com) <time datetime="2020">2020</time> virtual conference. This year was my first time attending All Day Hey and my first virtual conference. Due to the global Coronavirus pandemic, All Day Hey was not able to be hosted in Leeds, UK, so [Josh Nesbitt](https://twitter.com/joshnesbitt), [Harry Roberts](https://twitter.com/csswizardry), [Phil Hawksworth](https://twitter.com/philhawksworth) and the rest of the All Day Hey team had to come up with a quick turn-around to make All Day Hey virtual... And they went above and beyond!
 
-![Josh Nesbitt, Phil Hawksworth, Harry Roberts](/blog/all-day-hey-2020/alldayhey.png "Josh Nesbitt, Phil Hawksworth, Harry Roberts")
+<figure>
+  <img src="/blog/all-day-hey-2020/alldayhey.png" alt="Josh Nesbitt, Phil Hawksworth, Harry Roberts" />
+  <figcaption>Josh Nesbitt, Phil Hawksworth, Harry Roberts at All Day Hey! 2020</figcaption>
+</figure>
 
 **An affordable live-streamed, full-day conference for designers &amp; front-end developers.**
 
@@ -26,7 +29,7 @@ I really learned a lot from Vitaly. I'm really happy with the way he explained w
 
 [Charlotte Dann](https://charlottedann.com) blew the audience away with her CSS art! The founder of [Hexatope](https://hexatope.io) showed off stunning examples of her work and how a simple CSS algorithm can have unexpected, weird and wonderful outcomes. The power of `nth-child()` astounded us all. Definitely inspired me to look into doing some CSS art that's more interesting than my [pixel art R2-D2](https://codepen.io/JackDomleo/pen/ZEEqdxy).
 
-<p class="codepen" data-theme-id="39164" data-default-tab="result" data-user="pouretrebelle" data-slug-hash="bPWvNp" data-pen-title="nth-child Art">
+<p class="codepen" data-theme-id="39164" data-default-tab="result" data-user="pouretrebelle" data-slug-hash="bPWvNp" data-editable="true" data-pen-title="nth-child Art">
   <span>See the Pen <a href="https://codepen.io/pouretrebelle/pen/bPWvNp">
   nth-child Art</a> by Charlotte Dann (<a href="https://codepen.io/pouretrebelle">@pouretrebelle</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -52,11 +55,12 @@ Eli suggested some excellent resources to use when thinking about internationali
 
 [Kim Johannesen](https://twitter.com/therealkimblim) gave a really informative demonstration on a topic I am particularly interested in, accessibility, specifically creating an accessible button. Some really useful and vital key points were mentioned, for example, the use of the `.sr-only` class for icon-only buttons, the use of the `-ms-high-contrast` media query and using the `:hover` and `:focus` pseudo-classes.
 
-<p class="codepen" data-theme-id="39164" data-default-tab="result" data-user="kimblim" data-slug-hash="rNVgLor" data-pen-title="Accessible button 06">
+<p class="codepen" data-theme-id="39164" data-default-tab="css,result" data-user="kimblim" data-slug-hash="rNVgLor" data-editable="true" data-pen-title="Accessible button 06">
   <span>See the Pen <a href="https://codepen.io/kimblim/pen/rNVgLor">
   Accessible button 06</a> by Kim Johannesen (<a href="https://codepen.io/kimblim">@kimblim</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Grace Zarczynska - Ways to Speed Up Your Coding
 
@@ -94,4 +98,7 @@ I will definitely be attending All Day Hey every year, whether it's in Leeds or 
 
 You can still buy a pass for the day and watch the recorded talks through the [All Day Hey portal](https://alldayhey.com/live), where all the content will be available for up to 90 days after the event took place - All Day Hey 2020 took place on <time datetime="2020-05-07">7<sup>th</sup> May 2020</time>, so the content should be available until <time datetime="2020-08-05">5<sup>th</sup> August 2020</time>. I highly recommend this to anyone interested in front-end and design.
 
-![All Day Hey logo](/blog/all-day-hey-2020/alldayhey-logo.jpg "All Day Hey logo")
+<figure>
+  <img src="/blog/all-day-hey-2020/alldayhey-logo.jpg" alt="All Day Hey logo" />
+  <figcaption>All Day Hey logo</figcaption>
+</figure>

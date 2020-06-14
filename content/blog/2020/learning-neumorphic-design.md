@@ -1,40 +1,45 @@
 ---
 title: Learning Neumorphic Design
-description: The awesome design trend that never took off! I've become fascinated with neumorphic design and wanted to share my opinion.
+description: The awesome design trend that never took off! What are the fundamentals to neumorphic design?
 date: 2020-05-27
 containsCodePen: true
 hashtags: ['Neumorphic', 'WebDesign', 'CSS']
 ---
 
-Neumorphic design is a combination of skeuomorphic design and flat design. It gives a soft UI vibe with a 3D, nearly-realistic style by cleverly and carefully combining background colours, gradients, shapes, rounded edges and shadows. The design trend is made to feel like the elements are being pushed through and/or out of the page.
+## What is neumorphic design?
+
+Neumorphic design is a combination of skeuomorphic design and flat design. It gives a soft UI vibe with a 3D, nearly-realistic style by cleverly and carefully combining background colours, gradients, shapes, rounded edges and shadows. The design trend is made to feel like the elements are being pushed through and/or out of the page while being one with the background.
 
 <figure>
   <img src="/blog/learning-neumorphic-design/music-player.png" alt="Neumorphic music player" />
-  <figcaption>Neumorphic music player by Jack Domleo on CodePen</figcaption>
+  <figcaption>Neumorphic music player by Jack Domleo on CodePen https://codepen.io/JackDomleo/pen/GRpaNGp</figcaption>
 </figure>
 
-If I could sum up neumorphic design in a few words:
+Summarise neumorphic design in a few words:
 - Soft
 - Rounded
 - Smooth
 - Futuristic
-- Anti-WCAG
+- Modern
+- Anti-accessible
 
-Learning neumorphism was quite difficult for me to begin with because I don't see myself as very design-minded (yet). I really struggled to get the CSS `box-shadow` looking right. When I first came across neumorphic design, I was instantly hooked; I was searching [neumorphic on CodePen](https://codepen.io/search/pens?q=neumorphic), I was searching [neumorphic on Google](https://www.google.com/search?q=neumorphic) and was reading many articles on the topic. Here's what you need to know to get started:
+## Learning neumorphism
+
+Learning neumorphism was quite difficult for me to begin with because I don't see myself as very design-minded (yet). I really struggled to get the CSS `box-shadow` looking right. When I first came across neumorphic design, I was instantly hooked; I was searching [neumorphic on CodePen](https://codepen.io/search/pens?q=neumorphic), I was searching [neumorphic on Google](https://www.google.com/search?q=neumorphic) and was reading many articles on the topic. I find the UI for neumorphic so inviting to learn and is definitely a skill and front-end developer or designer should learn at some point in their career. Here is what you need to know to get started:
 
 ## Themes
 
+Neumorphic design has many themes to consider, I have listed some of the primary theme to kick start your design.
+
 ### Font
 
-A theme of neumorphic design is <em>roundness</em>, so you should probably consider choosing a font with rounded letters. To further explain this, I created a simple CodePen below:
+A theme of neumorphic design is <em>roundness</em>, so you should probably consider choosing a font with rounded letters. A rounded font will give your UI the **soft** vibe that comes with neumorphic design, rather than a sharp vibe. To further explain this, I created a simple CodePen below:
 
 <p class="codepen" data-height="450" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="dyYEdPg" data-pen-title="Choosing a neumorphic font-family">
   <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/dyYEdPg">
   Choosing a neumorphic font-family</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-
-A rounded font will give your UI the **soft** vibe that comes with neumorphic design, rather than a sharp vibe.
 
 ### Sizing
 
@@ -64,7 +69,7 @@ Wait! Two shadows, three shadows? Yes. You can apply multiple shadows to a **sin
 
 The trick to neumorphic design shadows is, there are two shadows on your `box-shadow` CSS property, one lighter and one darker. Now imagine you have a light source in the top-left hand corner of your page shining from the top-left to the bottom-right. Since a theme of neumorphism is 3D, you need to think, "Where will the shadow be?" Here is a little CodePen I created to help explain it.
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="css,result" data-user="JackDomleo" data-slug-hash="yLYWqoQ" data-editable="true" data-pen-title="Understanding neumorphic design shadows">
+<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="yLYWqoQ" data-editable="true" data-pen-title="Understanding neumorphic design shadows">
   <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/yLYWqoQ">
   Understanding neumorphic design shadows</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
