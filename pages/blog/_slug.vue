@@ -92,6 +92,12 @@ export default {
           content: `${this.page.description}`
         },
         {
+          hid: 'description',
+          name: 'description',
+          property: 'description',
+          content: `${this.page.description}`
+        },
+        {
           hid: 'og:type',
           name: 'og:type',
           property: 'og:type',
@@ -108,13 +114,13 @@ export default {
           name: 'article:author',
           property: 'article:author',
           content: 'Jack Domleo'
+        },
+        {
+          hid: 'article:tag',
+          name: 'article:tag',
+          property: 'article:tag',
+          content: `${this.page.hashtags}`
         }
-        // {
-        //   hid: 'article:tag',
-        //   name: 'article:tag',
-        //   property: 'article:tag',
-        //   content: `${this.page.tags}`
-        // }
       ]
     };
   }
@@ -127,6 +133,8 @@ export default {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
+    margin-top: 1rem;
+
     svg {
       height: 1.8rem;
       width: 1.8rem;
