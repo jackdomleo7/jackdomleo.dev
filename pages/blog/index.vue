@@ -2,7 +2,7 @@
   <page-template page-title="Blog">
     <textfield v-model="articleSearch" label="Filter articles" type="search" placeholder="Search..." @input="filterArticles" />
     <ul class="articles">
-      <li v-for="(blog, index) in filteredArticles" :key="index" :aria-setsize="articles.length" :aria-posinset="index + 1">
+      <li v-for="(blog, index) in filteredArticles" :key="index" :aria-setsize="filteredArticles.length" :aria-posinset="index + 1">
         <article class="article">
           <header>
             <h2 class="article__title">
