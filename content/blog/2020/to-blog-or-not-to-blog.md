@@ -44,7 +44,7 @@ I also hope my articles reach junior developers. One of my goals is to inspire a
 
 ## What do I recommend for those who don't write yet?
 
-Definitely conider it.
+Definitely consider it.
 
 - Writing will improve your literature, your knowledge on the article topic and your self-confidence
 - Read [this article](https://www.freecodecamp.org/news/overcoming-your-fear-of-writing-and-how-you-can-find-motivation) by [Colby Fayock](https://twitter.com/colbyfayock)
