@@ -50,6 +50,7 @@ export default class Index extends Vue {
 
   async fetch () {
     this.articles = await this.$content('blog', { deep: true }).only(['title', 'date', 'slug', 'description', 'readingTime', 'hashtags']).sortBy('date', 'desc').fetch();
+    this.filterArticles();
   }
 
   private articleDate (date: Date): IArticleDate {
@@ -58,10 +59,6 @@ export default class Index extends Vue {
       date: format(newDate, 'do MMMM yyyy'),
       datetime: format(newDate, 'yyyy-MM-dd')
     };
-  }
-
-  private mounted () {
-    this.filterArticles();
   }
 
   private filterArticles () {
