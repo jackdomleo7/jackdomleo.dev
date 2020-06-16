@@ -1,7 +1,8 @@
 <template>
   <page-template page-title="Blog">
+    <textfield v-model="articleSearch" label="Filter articles" type="search" placeholder="Search..." @input="filterArticles" />
     <ul class="articles">
-      <li v-for="(blog, index) in articles" :key="index" :aria-setsize="articles.length" :aria-posinset="index + 1">
+      <li v-for="(blog, index) in filteredArticles" :key="index" :aria-setsize="articles.length" :aria-posinset="index + 1">
         <article class="article">
           <header>
             <h2 class="article__title">
@@ -26,7 +27,8 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { format } from 'date-fns';
-import { PageTemplate } from '@/components';
+import { PageTemplate, Textfield } from '@/components';
+import Search from '@/middleware/fuzzySearch';
 
 interface IArticleDate {
   datetime: string;
@@ -34,7 +36,7 @@ interface IArticleDate {
 }
 
 @Component({
-  components: { PageTemplate },
+  components: { PageTemplate, Textfield },
   head () {
     return {
       title: 'Blog'
@@ -43,9 +45,11 @@ interface IArticleDate {
 })
 export default class Index extends Vue {
   private articles: object[] = [];
+  private filteredArticles: object[] = [];
+  private articleSearch: string = '';
 
   async fetch () {
-    this.articles = await this.$content('blog', { deep: true }).only(['title', 'date', 'slug', 'description', 'readingTime']).sortBy('date', 'desc').fetch();
+    this.articles = await this.$content('blog', { deep: true }).only(['title', 'date', 'slug', 'description', 'readingTime', 'hashtags']).sortBy('date', 'desc').fetch();
   }
 
   private articleDate (date: Date): IArticleDate {
@@ -54,6 +58,31 @@ export default class Index extends Vue {
       date: format(newDate, 'do MMMM yyyy'),
       datetime: format(newDate, 'yyyy-MM-dd')
     };
+  }
+
+  private mounted () {
+    this.filterArticles();
+  }
+
+  private filterArticles () {
+    if (this.articleSearch === '') {
+      this.filteredArticles = this.articles;
+      return;
+    }
+
+    this.filteredArticles = this.articles.filter(article => this.filterArticle(article));
+  }
+
+  private filterArticle (article: any): boolean {
+    return (
+      Search.fuzzySearch(article.title, this.articleSearch) ||
+      Search.fuzzySearch(article.description, this.articleSearch) ||
+      Search.fuzzySearch(this.articleDate(article.date).date, this.articleSearch) ||
+      Search.fuzzySearch(this.articleDate(article.date).datetime, this.articleSearch) ||
+      Search.fuzzySearch(article.readingTime, this.articleSearch) ||
+      Search.fuzzySearch(`${article.readingTime} minutes`, this.articleSearch) ||
+      Search.fuzzySearch(article.hashtags.join(' '), this.articleSearch)
+    );
   }
 }
 </script>

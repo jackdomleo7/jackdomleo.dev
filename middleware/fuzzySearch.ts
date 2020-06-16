@@ -6,6 +6,8 @@ export default class Search {
     }
 
     let startMinusOne = -1;
+    searchTerm = searchTerm.toString();
+    searchString = searchString.toString();
     searchTerm = searchTerm.toLowerCase().trim();
     searchString = searchString.toLowerCase();
 
