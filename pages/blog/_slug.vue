@@ -29,6 +29,7 @@
     <p>{{ page.description }}</p>
     <nuxt-content :document="page" />
     <script v-if="page.containsCodePen" async src="https://static.codepen.io/assets/embed/ei.js" />
+    <script v-if="page.twitterEmbed" async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
   </article>
 </template>
 
@@ -40,7 +41,7 @@ export default {
     const slug = params.slug || 'index';
     let page = await $content('blog', { deep: true })
       .where({ slug })
-      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen', 'hashtags'])
+      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen', 'hashtags', 'twitterEmbed'])
       .fetch();
     page = page[0];
 
