@@ -16,9 +16,12 @@
         <i>#{{ tag }}</i>
       </li>
     </ul>
+    <p class="blog__devto">
+      You can also read this article <a class="link" :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a>
+    </p>
     <ul class="social-share">
       <li role="presentation">
-        Share:
+        <strong>Share</strong>:
       </li>
       <li v-for="(socialShare, index) in socialShares()" :key="index" :aria-setsize="socialShares().length" :aria-posinset="index + 1">
         <a :href="socialShare.url" rel="nofollow noopener" target="_blank" data-cooltipz-dir="bottom" :aria-label="'Share on ' + socialShare.platform">
@@ -41,7 +44,7 @@ export default {
     const slug = params.slug || 'index';
     let page = await $content('blog', { deep: true })
       .where({ slug })
-      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen', 'hashtags', 'twitterEmbed'])
+      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen', 'hashtags', 'twitterEmbed', 'devtoLink'])
       .fetch();
     page = page[0];
 
@@ -154,6 +157,11 @@ export default {
         font-weight: 700;
       }
     }
+  }
+
+  &__devto {
+    font-weight: var(--body-font-weight);
+    font-size: 90%;
   }
 
   &__hashtags {
