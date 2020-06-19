@@ -10,7 +10,7 @@
         </figcaption>
       </figure>
       <p class="intro__welcome">
-        I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.<br><br>I like front-end develpment, UI/UX, tea, Disney, hockey, holidays (preferably sunny) and stuff that looks cool.
+        I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.<br><br>I like front-end development, UI/UX, tea, Disney, hockey, holidays (preferably sunny) and stuff that looks cool.
       </p>
       <p class="intro__occupation">
         <svg-icon name="briefcase" /> <span class="sr-only">Current occupation</span> Developer at

@@ -37,16 +37,15 @@
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 
     @media screen and (min-width: 30em) {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
 
   figure {
     margin: 2.5rem 0;
-
     figcaption {
       text-align: center;
       font-style: italic;
@@ -62,7 +61,7 @@
     width: 100%;
   }
   
-  blockquote{
+  blockquote {
     font-style: italic;
     padding: 1.2em 1.875rem 1.2em 2.6875rem;
     border-left: 8px solid var(--blockquote-accent);
@@ -101,5 +100,11 @@
 
   li {
     line-height: 1.5;
+  }
+
+  .twitter-tweet {
+    width: unset !important;
+    margin: 1.5rem auto !important;
+    display: table !important;
   }
 }

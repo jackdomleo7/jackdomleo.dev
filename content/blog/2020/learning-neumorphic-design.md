@@ -4,6 +4,7 @@ description: The awesome design trend that never took off! What are the fundamen
 date: 2020-05-27
 containsCodePen: true
 hashtags: ['Neumorphic', 'WebDesign', 'CSS']
+devtoLink: https://dev.to/jackdomleo7/learning-neumorphic-design-3dj8
 ---
 
 ## What is neumorphic design?

@@ -2,8 +2,8 @@
 title: Why to not support Internet Explorer
 description: So you're thinking of supporting Internet Explorer? Don't.
 date: 2020-06-06
-containsCodePen: false
 hashtags: ['InternetExplorer', 'IE', 'Browser']
+devtoLink: https://dev.to/jackdomleo7/why-to-not-support-internet-explorer-3f8h
 ---
 
 ## Why you should consider no longer supporting Internet Explorer
