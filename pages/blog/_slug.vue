@@ -16,7 +16,7 @@
         <i>#{{ tag }}</i>
       </li>
     </ul>
-    <p class="blog__devto">
+    <p v-if="page.devtoLink" class="blog__devto">
       You can also read this article <a class="link" :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a>
     </p>
     <ul class="social-share">
