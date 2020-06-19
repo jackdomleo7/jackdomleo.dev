@@ -4,7 +4,7 @@ description: My journey to a developer is an alternative path to the norm. I'm g
 date: 2020-06-19
 twitterEmbed: true
 hashtags: ['Career', 'Developer', 'WebDeveloper', 'Journey']
-devtoLink: 
+devtoLink: https://dev.to/jackdomleo7/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19-2p34
 ---
 
 <blockquote class="twitter-tweet" data-conversation="none" data-theme="light"><p lang="en" dir="ltr">I am currently in the middle of writing an article of my journey that I hope will inspire others.<br><br>Would anyone be interested in reading?</p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1273016612900274176?ref_src=twsrc%5Etfw">June 16, 2020</a></blockquote>
