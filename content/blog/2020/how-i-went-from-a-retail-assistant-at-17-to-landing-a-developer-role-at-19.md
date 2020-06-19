@@ -4,6 +4,7 @@ description: My journey to a developer is an alternative path to the norm. I'm g
 date: 2020-06-19
 twitterEmbed: true
 hashtags: ['Career', 'Developer', 'WebDeveloper', 'Journey']
+devtoLink: 
 ---
 
 <blockquote class="twitter-tweet" data-conversation="none" data-theme="light"><p lang="en" dir="ltr">I am currently in the middle of writing an article of my journey that I hope will inspire others.<br><br>Would anyone be interested in reading?</p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1273016612900274176?ref_src=twsrc%5Etfw">June 16, 2020</a></blockquote>
@@ -23,7 +24,7 @@ Lately, you have all been asking what my path was and how I got to where I am to
 - Be the best developer I can be for a company OR start freelancing
 - Inspire others to become a developer
 - Encourage students to thoroughly weigh out the options between an apprenticeship and university
-- Help others: there is a fantastic community where I see this everday
+- Help others: there is a fantastic community where I see this everyday
 
 I really love front-end development - HTML, CSS, JavaScript, design, calling APIs, accessibility, UI & UX - all of it interests me and I want to learn more.
 
@@ -35,7 +36,7 @@ You will strive and excel in an area if your heart is in it! Don't force yoursel
 
 My journey is simple: I began as a student who found part-time jobs while studying, decided not to go to university, landed an apprenticeship straight after sixth form, became unemployed for 5 weeks, then landed a Junior Developer role and within 3 months earned a promotion to a Developer role. Nevertheless, I have written my journey in detail, in case you are interested.
 
-![A timeline of Jack Domleo's journey](timeline.png "A timeline of my journey")
+![A timeline of Jack Domleo's journey](/blog/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19/timeline.png "A timeline of my journey")
 
 For a good reference, please check out my [LinkedIn profile](https://www.linkedin.com/in/jack-domleo).
 
@@ -49,13 +50,13 @@ Before we dive into my education and part-time jobs, let's establish some defini
 - **A-Level**: GCE (General Certification of Education) Advanced Level (level 3 qualification)
 - **Sixth Form**: 2 years of post-GCSE academic education where students usually study their A-Levels
 
-In England, it's the law to be in the education system until the age of 18. Usually students will take one of three paths after their secondary education: Sixth form, college, or a lower apprenticeship. Each of these will offer some sort of level 3 qualification, or multiple level 3 qualifications. Each of these paths are usualy post secondary school and pre university. However, not all of us choose the university path...
+In England, it's the law to be in the education system until the age of 18. Usually, students will take one of three paths after their secondary education: Sixth form, college, or a lower apprenticeship. Each of these will offer some sort of level 3 qualification, or multiple level 3 qualifications. Each of these paths are usualy post-secondary school and pre-university. However, not all of us choose the university path...
 
 #### School
 
 As a child, I never knew what I wanted to be when I grew up. I had some ideas and suggestions such as a Pilot, Ground Crew, Scientist or IT Technician, but I had no definitive career goal until half way through my final year of sixth form. Notice I didn't even consider Software Developer as an option. Strange, right?
 
-I studied Python as my first programming language, and found it difficult. It was challenging and frustrating. I told myself, "You'll never be a developer. You can't even write a simple script" - I didn't even know what a script was. Early on, I had already felt that I was a failure. I kept pushing through Python and Computer Science theory with resiliance and ambition, but was not picking it up easily. In my final year of sixth form, the concept of programming finally clicked for me and I understood why we need programming and why programming is the future!
+I studied Python as my first programming language, and found it difficult. It was challenging and frustrating. I told myself, "You'll never be a developer. You can't even write a simple script" - I didn't even know what a script was. Early on, I had already felt that I was a failure. I kept pushing through Python and Computer Science theory with resilience and ambition, but was not picking it up easily. In my final year of sixth form, the concept of programming finally clicked for me and I understood why we need programming and why programming is the future!
 
 I would like to give my kudos and special thanks to my Computer Science teachers who supported me throughout school and sixth form, provided me with the education needed, and guided me to where I am today - [Mr Chris West](https://www.linkedin.com/in/chris-west-5b22a762) and [Mr Paul Stevens](https://www.linkedin.com/in/paul-stevens-b6154745).
 
@@ -93,17 +94,17 @@ I was at Primark for exactly one year before I began looking for an apprenticesh
 
 ### IT/Developer Apprentice
 
-This was a difficult role to apply for. There weren't many software apprenticeships out there. I hadn't recieved any replies. I had no previous experience in software whatsoever. I tried a new tactic: I signed up with an apprenticeship training provider. It was their job to find me interviews. An apprenticeship training provider will provide you the training you need to complete your apprenticeship. However it is not free, and therefore they need to find a full-time employer so they can pay for your training, through what's called an [Apprenticeship Levy](https://www.gov.uk/guidance/manage-apprenticeship-funds). The idea is: You spend 20% of your time doing apprenticeship work, and 80% of your time doing work for your employer.
+This was a difficult role to apply for. There weren't many software apprenticeships out there. I hadn't received any replies. I had no previous experience in software whatsoever. I tried a new tactic: I signed up with an apprenticeship training provider. It was their job to find me interviews. An apprenticeship training provider will provide you with the training you need to complete your apprenticeship. However it is not free, and therefore they need to find a full-time employer so they can pay for your training, through what's called an [Apprenticeship Levy](https://www.gov.uk/guidance/manage-apprenticeship-funds). The idea is: You spend 20% of your time doing apprenticeship work, and 80% of your time doing work for your employer.
 
 Every apprenticeship is different: There are different levels of apprenticeships, different completion periods, and different training providers. I received my first interview for an IT/Developer Apprentice role at an airline at East Midlands Airport called [flybmi](https://en.wikipedia.org/wiki/Flybmi). I turned up 45 minutes early on a really hot day in a suit and tie, dripping in sweat and nervously shaking - my interviewers were wearing shorts and a t-shirt... I felt stupid and uncomfortable.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">When I go for <a href="https://twitter.com/hashtag/developer?src=hash&amp;ref_src=twsrc%5Etfw">#developer</a> interviews, I dress for the job I have applied for.<br><br>These can be non-customer-facing roles. I wear what I usually wear, smart casual:<br><br>- Polo shirt<br>- Casual jacket<br>- Jeans/Chinos<br>- Clean trainers<br><br>I don&#39;t wear a suit &amp; tie. It&#39;s not me.<a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a></p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1272464988515569665?ref_src=twsrc%5Etfw">June 15, 2020</a></blockquote>
 
-Before I drove home from the interview, I recieved a phone call congratulating me on getting the job! They loved my enthusiasm towards software and IT. I was enrolled into a 13 month apprenticeship program at a level 3 (I should have ideally been on a level 4). I learned so much in my apprenticeship, and was drawn into front-end and web development. Special thanks to [Tim Moore](https://www.linkedin.com/in/tijamo) and [George Smith](https://www.linkedin.com/in/george-smith-8210428b) for putting up with me and taking the time to train me!
+Before I drove home from the interview, I received a phone call congratulating me on getting the job! They loved my enthusiasm for software and IT. I was enrolled into a 13-month apprenticeship program at a level 3 (I should have ideally been on a level 4). I learned so much in my apprenticeship, and was drawn into front-end and web development. Special thanks to [Tim Moore](https://www.linkedin.com/in/tijamo) and [George Smith](https://www.linkedin.com/in/george-smith-8210428b) for putting up with me and taking the time to train me!
 
 I **never completed** my apprenticeship.
 
-The airline collapsed after six months of my employment (I promise I had nothing directly to do with it) making myself and my colleauges **redundant and unemployed**. I was worried I would have to restart my apprenticeship at a new company, redo the last six months, and delay the completion. My training provider worked hard to find companies who were willing to take on an apprentice that was half-way through their appenticeship, but it was difficult for them. There weren't many options out there. My former flybmi colleagues suggested I leave the apprenticeship and go for a junior role instead, because they believed I had the skills and passion necessary for a junior role.
+The airline collapsed after six months of my employment (I promise I had nothing directly to do with it) making myself and my colleagues **redundant and unemployed**. I was worried I would have to restart my apprenticeship at a new company, redo the last six months, and delay the completion. My training provider worked hard to find companies who were willing to take on an apprentice that was half-way through their apprenticeship, but it was difficult for them. There weren't many options out there. My former flybmi colleagues suggested I leave the apprenticeship and go for a junior role instead, because they believed I had the skills and passion necessary for a junior role.
 
 ### Junior Developer
 
@@ -117,13 +118,13 @@ I was proud to be a Junior Developer.
 
 ### Developer
 
-Three months after landing my Junior Developer role, I had a meeting about my title. They felt like I shouldn't have 'Junior' in my title, so we discussed it, and I recieved what you could call, a 'mini payriseless promotion'. I accepted it, and I am now a Developer.
+Three months after landing my Junior Developer role, I had a meeting about my title. They felt like I shouldn't have 'Junior' in my title, so we discussed it, and I received what you could call, a 'mini payriseless promotion'. I accepted it, and I am now a Developer.
 
 Don't get me wrong, I still don't know a lot about development, but that's ok, because **not knowing something as a developer does not make you any less of a developer!**
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;It&#39;s ok to not know something, it doesn&#39;t make you any less of a developer.&quot;<br><br>I was eventually told this, but it was too late.</p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1272960956918833154?ref_src=twsrc%5Etfw">June 16, 2020</a></blockquote>
 
-I am always learning to this day, as are all of my colleauges, and every developer across the world. This is a forever-changing industry, and as long as you keep up with the basics, you are doing alright! Keep it up! Remember, this is your journey, not anyone else's.
+I am always learning to this day, as are all of my colleagues, and every developer across the world. This is a forever-changing industry, and as long as you keep up with the basics, you are doing alright! Keep it up! Remember, this is your journey, not anyone else's.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A good <a href="https://twitter.com/hashtag/developer?src=hash&amp;ref_src=twsrc%5Etfw">#developer</a> always goes back to relearn the basics!<a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/coding?src=hash&amp;ref_src=twsrc%5Etfw">#coding</a> <a href="https://twitter.com/hashtag/CodeNewbie?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbie</a></p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1273234734391443457?ref_src=twsrc%5Etfw">June 17, 2020</a></blockquote>
 
@@ -135,7 +136,7 @@ To carry on.
 
 I'm going to keep learning, keep pushing. I'm going to make sure I take breaks, and plan trips/holidays/vacations that I can look forward to. I want to move out of my family home, and get a house with my girlfriend. Developing software is not the only thing on my mind.
 
-I am going to keep being enthusastic and passionate about front-end development and hopefully land myself a well-paying job, but I won't stop there. _Why?_ **Don't cap your success!**
+I am going to keep being enthusiastic and passionate about front-end development and hopefully land myself a well-paying job, but I won't stop there. _Why?_ **Don't cap your success!**
 
 I really enjoy [Twitter](https://twitter.com/jackdomleo7), [CodePen](https://codepen.io/JackDomleo), [LinkedIn](https://www.linkedin.com/in/jack-domleo), [DEV](https://dev.to/jackdomleo7) and [GitHub](https://github.com/JDomleo). I am determined to keep up my activity on those platforms, posting useful, inspiring tweets and creating some cool pens on CodePen. I am determined to become a better writer and write a lot more articles.
 
@@ -145,10 +146,10 @@ You can see my life had its perks and its downfalls, but I didn't let that stop 
 
 ## My Advice to Developers of Any Ability
 
-It's always beneficial to anyone to hear advice from someone else, so I've bullet pointed a few tips of mine, as well as some resources:
+It's always beneficial to anyone to hear advice from someone else, so I've bullet-pointed a few tips of mine, as well as some resources:
 
 - Find your passion. Mine is front-end development (What's yours?).
-- Sign up for LinkedIn & Twitter and start following developer related _stuff_
+- Sign up for LinkedIn & Twitter and start following developer-related _stuff_
   - There is an amazing Twitter community out there who will support you in your development.
 - Don't cap your success. Keep reaching.
 - Absolutely plan other life events. Your development career is not the only thing in your life.
@@ -156,3 +157,17 @@ It's always beneficial to anyone to hear advice from someone else, so I've bulle
 - Take the time to like and comment other developer's work, they'll do the same for you - "The best developers give more than they take".
 
 **Thank you for reading!!**
+
+---
+
+This article would not be possible without the extraordinary help from these amazing people and their help and involvement in writing this article!
+
+- [@DThompsonDev](https://twitter.com/DThompsonDev)
+- [@anniebombanie_](https://twitter.com/anniebombanie_)
+- [@NehemiahKiv](https://twitter.com/NehemiahKiv)
+- [@sharifElkassed](https://twitter.com/sharifElkassed)
+- [@hashtagcoder](https://twitter.com/hashtagcoder)
+- [@godwin_kachi](https://twitter.com/godwin_kachi)
+- [@notrohan_](https://twitter.com/notrohan_)
+- [@js_nerd](https://twitter.com/js_nerd)
+- [@met1culousj](https://twitter.com/met1culousj)
