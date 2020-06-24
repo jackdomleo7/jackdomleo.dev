@@ -46,12 +46,14 @@
 
   figure {
     margin: 2.5rem 0;
+
     figcaption {
       text-align: center;
       font-style: italic;
       opacity: 0.8;
-      font-size: 125%;
+      font-size: 90%;
       margin-top: 0.7rem;
+      overflow-wrap: anywhere;
     }
   }
 
