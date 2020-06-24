@@ -36,7 +36,12 @@ You will strive and excel in an area if your heart is in it! Don't force yoursel
 
 My journey is simple: I began as a student who found part-time jobs while studying, decided not to go to university, landed an apprenticeship straight after sixth form, became unemployed for 5 weeks, then landed a Junior Developer role and within 3 months earned a promotion to a Developer role. Nevertheless, I have written my journey in detail, in case you are interested.
 
-![A timeline of Jack Domleo's journey](/blog/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19/timeline.png "A timeline of my journey")
+<figure>
+  <img src="/blog/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19/timeline.png" alt="A timeline of my journey">
+  <figcaption>
+    A timeline of my journey before I wrote this article
+  </figcaption>
+</figure>
 
 For a good reference, please check out my [LinkedIn profile](https://www.linkedin.com/in/jack-domleo).
 
