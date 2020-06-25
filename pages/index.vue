@@ -72,6 +72,14 @@
         </li>
       </ul>
     </section>
+    <section>
+      <h2>Portfolio</h2>
+      <p>
+        You can find my official portfolio <nuxt-link to="/portfolio">
+          here
+        </nuxt-link>
+      </p>
+    </section>
   </page-template>
 </template>
 
