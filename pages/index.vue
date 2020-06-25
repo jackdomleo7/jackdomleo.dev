@@ -10,7 +10,13 @@
         </figcaption>
       </figure>
       <p class="intro__welcome">
-        I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.<br><br>I like front-end development, UI/UX, tea, Disney, hockey, holidays (preferably sunny) and stuff that looks cool.
+        I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.
+      </p>
+      <p class="intro__i-like">
+        I like
+        <span class="intro__likes">
+          <span class="intro__like">front-end</span><span class="intro__like">UI/UX</span><span class="intro__like">tea ☕</span><span class="intro__like">Disney</span><span class="intro__like">to think 🤔</span><span class="intro__like">sunny holidays 🌞</span><span class="intro__like">ice hockey 🏒</span>
+        </span>
       </p>
       <p class="intro__occupation">
         <svg-icon name="briefcase" /> <span class="sr-only">Current occupation</span> Developer at
@@ -228,7 +234,7 @@ export default class Index extends Vue {
 
 .intro {
   display: grid;
-  grid-template-areas: "img" "welcome" "occupation";
+  grid-template-areas: "img" "welcome" "likes" "occupation";
   place-items: center;
   text-align: center;
   gap: 0.5rem;
@@ -249,6 +255,28 @@ export default class Index extends Vue {
     @media screen and (min-width: 30em) {
       font-size: 1.2rem;
       line-height: 1.5rem;
+    }
+  }
+
+  &__i-like {
+    font-size: 140%;
+    margin-right: 4rem;
+  }
+
+  &__likes {
+    grid-area: likes;
+    margin-left: 0.5rem;
+  }
+
+  &__like {
+    animation: like 28s infinite ease forwards;
+    opacity: 0;
+    position: absolute;
+
+    @for $i from 2 through 8 {
+      &:nth-child(#{$i}) {
+        animation-delay: calc((#{$i} - 1) * 4s);
+      }
     }
   }
 
@@ -277,9 +305,18 @@ export default class Index extends Vue {
   }
 
   @media screen and (min-width: 40em) {
-    grid-template-areas: "welcome img" "occupation .";
+    grid-template-areas: "welcome img" "likes ." "occupation .";
     place-items: initial;
     text-align: left;
+  }
+}
+
+@keyframes like {
+  0%, 15% {
+    opacity: 0;
+  }
+  2.5%, 12.5% {
+    opacity: 1;
   }
 }
 
