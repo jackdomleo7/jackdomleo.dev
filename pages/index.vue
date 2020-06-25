@@ -1,6 +1,6 @@
 <template>
   <page-template page-title="Hey, I'm Jack Domleo">
-    <div class="intro">
+    <section class="intro">
       <figure class="polaroid intro__img" tabindex="0">
         <div class="polaroid__img shine">
           <img src="@/assets/img/bio-image-jack-domleo.jpg" alt="Portrait image of Jack Domleo">
@@ -26,8 +26,20 @@
           target="_blank"
         >Mitrefinch</a>
       </p>
-    </div>
-    <section class="work">
+    </section>
+    <section class="toolbox">
+      <h2 id="toolbox">
+        My toolbox of skills
+      </h2>
+      <p>A set of tools and technologies I am comfortable with and compotent in:</p>
+      <ul class="toolbox__list">
+        <li v-for="(tool, index) in toolbox" :key="tool.name" :aria-setsize="toolbox.lenght" :aria-posinset="index + 1">
+          <svg-icon :name="tool.icon" />
+          <p>{{ tool.name }}</p>
+        </li>
+      </ul>
+    </section>
+    <section id="work" class="work">
       <h2>Work</h2>
       <p>
         A brief history of my employment. More details can be found on my
@@ -39,7 +51,7 @@
       <ul>
         <li
           v-for="(work, index) in workHistory"
-          :key="index"
+          :key="work.company + '-' + work.title"
           :aria-setsize="workHistory.length"
           :aria-posinset="index + 1"
         >
@@ -94,6 +106,12 @@ interface IWork {
   company: string;
   title: string;
   description: string;
+}
+
+interface ITool {
+  name: string;
+  icon: string;
+
 }
 
 interface IStartEndDate {
@@ -153,6 +171,49 @@ export default class Index extends Vue {
     }
   ];
 
+  private readonly toolbox: ITool[] = [
+    {
+      name: 'HTML5',
+      icon: 'html'
+    },
+    {
+      name: 'CSS',
+      icon: 'css'
+    },
+    {
+      name: 'JavaScript',
+      icon: 'js'
+    },
+    {
+      name: 'jQuery',
+      icon: 'jquery'
+    },
+    {
+      name: 'Vue.js',
+      icon: 'vuejs'
+    },
+    {
+      name: 'Nuxt.js',
+      icon: 'nuxt'
+    },
+    {
+      name: 'Sass/SCSS',
+      icon: 'sass'
+    },
+    {
+      name: 'Responsive Design',
+      icon: 'rwd'
+    },
+    {
+      name: 'TypeScript',
+      icon: 'typescript'
+    },
+    {
+      name: 'Git',
+      icon: 'git'
+    }
+  ]
+
   private getDate (date: Date): IStartEndDate {
     return {
       datetime: format(date, 'yyyy-MM-dd'),
@@ -163,6 +224,18 @@ export default class Index extends Vue {
 </script>
 
 <style lang="scss" scoped>
+section {
+  margin: 2rem 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
 .polaroid {
   width: 180px;
   height: 220px;
@@ -327,6 +400,42 @@ export default class Index extends Vue {
   }
   2.5%, 12.5% {
     opacity: 1;
+  }
+}
+
+.toolbox {
+  &__list {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: 420px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 540px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 700px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 1rem 0;
+      text-align: center;
+
+      svg {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
   }
 }
 
