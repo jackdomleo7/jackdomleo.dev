@@ -174,6 +174,8 @@ export default class Index extends Vue {
   &:hover,
   &:focus {
     transform: rotate(-5deg);
+    box-shadow: 2px -2px 20px 0px rgba(0, 0, 0, 0.6),
+      inset 4px 5px 10px 0 rgba(0, 0, 0, 0.1) !important;
 
     @media screen and (prefers-reduced-motion: reduce) {
       transform: rotate(5deg);
