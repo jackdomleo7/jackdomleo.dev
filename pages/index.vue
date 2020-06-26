@@ -27,10 +27,37 @@
         >Mitrefinch</a>
       </p>
     </section>
-    <section class="toolbox">
-      <h2 id="toolbox">
-        My toolbox of skills
-      </h2>
+    <hr>
+    <section id="what-im-currently-doing">
+      <h2>What am I currently doing</h2>
+      <ul class="currently">
+        <li><div>Furloughed 😷</div></li>
+        <li>
+          <div>
+            🎓 Creating a Udemy course with <a href="https://twitter.com/NehemiahKiv" rel="nofollow noopener" target="_blank">Nehemiah</a> and <a href="https://twitter.com/anniebombanie_" rel="nofollow noopener" target="_blank">Annie</a>!
+          </div>
+        </li>
+        <li><div>📚 Reading <a href="https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563" rel="nofollow noopener" target="_blank">Responsive Web Design with HTML5 and CSS</a> by <a href="https://benfrain.com" rel="nofollow noopener" target="_blank">Ben Frain</a></div></li>
+        <li>
+          <div>
+            Participating in the <a href="https://github.com/JDomleo/100-days-of-code" rel="nofollow noopener" target="_blank">100 Days of Code</a> challenge 💪
+          </div>
+        </li>
+        <li>
+          <div>
+            Learning <a href="https://greensock.com/gsap" rel="nofollow noopener" target="_blank">GSAP</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            Improving my web presence
+          </div>
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="toolbox" class="toolbox">
+      <h2>My toolbox of skills</h2>
       <p>A set of tools and technologies I am comfortable with and compotent in:</p>
       <ul class="toolbox__list">
         <li v-for="(tool, index) in toolbox" :key="tool.name" :aria-setsize="toolbox.lenght" :aria-posinset="index + 1">
@@ -39,6 +66,7 @@
         </li>
       </ul>
     </section>
+    <hr>
     <section id="work" class="work">
       <h2>Work</h2>
       <p>
@@ -84,7 +112,8 @@
         </li>
       </ul>
     </section>
-    <section>
+    <hr>
+    <section id="portfolio">
       <h2>Portfolio</h2>
       <p>
         You can find my official portfolio <nuxt-link to="/portfolio">
@@ -403,6 +432,29 @@ section {
   }
 }
 
+.currently {
+  padding-left: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 28.125em) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--color-grey-light);
+  }
+}
+
 .toolbox {
   &__list {
     padding-left: 0;
@@ -412,15 +464,15 @@ section {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
 
-    @media (min-width: 420px) {
+    @media (min-width: 26.25em) {
       grid-template-columns: 1fr 1fr 1fr;
     }
 
-    @media (min-width: 540px) {
+    @media (min-width: 33.75em) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: 43.75em) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
