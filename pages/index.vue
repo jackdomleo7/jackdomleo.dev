@@ -1,6 +1,6 @@
 <template>
   <page-template page-title="Hey, I'm Jack Domleo">
-    <div class="intro">
+    <section class="intro">
       <figure class="polaroid intro__img" tabindex="0">
         <div class="polaroid__img shine">
           <img src="@/assets/img/bio-image-jack-domleo.jpg" alt="Portrait image of Jack Domleo">
@@ -26,8 +26,48 @@
           target="_blank"
         >Mitrefinch</a>
       </p>
-    </div>
-    <section class="work">
+    </section>
+    <hr>
+    <section id="what-im-currently-doing">
+      <h2>What am I currently doing</h2>
+      <ul class="currently">
+        <li><div>Furloughed 😷</div></li>
+        <li>
+          <div>
+            🎓 Creating a Udemy course with <a href="https://twitter.com/NehemiahKiv" rel="nofollow noopener" target="_blank">Nehemiah</a> and <a href="https://twitter.com/anniebombanie_" rel="nofollow noopener" target="_blank">Annie</a>!
+          </div>
+        </li>
+        <li><div>📚 Reading <a href="https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563" rel="nofollow noopener" target="_blank">Responsive Web Design with HTML5 and CSS</a> by <a href="https://benfrain.com" rel="nofollow noopener" target="_blank">Ben Frain</a></div></li>
+        <li>
+          <div>
+            Participating in the <a href="https://github.com/JDomleo/100-days-of-code" rel="nofollow noopener" target="_blank">100 Days of Code</a> challenge 💪
+          </div>
+        </li>
+        <li>
+          <div>
+            Learning <a href="https://greensock.com/gsap" rel="nofollow noopener" target="_blank">GSAP</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            Improving my web presence
+          </div>
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="toolbox" class="toolbox">
+      <h2>My toolbox of skills</h2>
+      <p>A set of tools and technologies I am comfortable with and compotent in:</p>
+      <ul class="toolbox__list">
+        <li v-for="(tool, index) in toolbox" :key="tool.name" :aria-setsize="toolbox.lenght" :aria-posinset="index + 1">
+          <svg-icon :name="tool.icon" />
+          <p>{{ tool.name }}</p>
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="work" class="work">
       <h2>Work</h2>
       <p>
         A brief history of my employment. More details can be found on my
@@ -39,7 +79,7 @@
       <ul>
         <li
           v-for="(work, index) in workHistory"
-          :key="index"
+          :key="work.company + '-' + work.title"
           :aria-setsize="workHistory.length"
           :aria-posinset="index + 1"
         >
@@ -72,7 +112,8 @@
         </li>
       </ul>
     </section>
-    <section>
+    <hr>
+    <section id="portfolio">
       <h2>Portfolio</h2>
       <p>
         You can find my official portfolio <nuxt-link to="/portfolio">
@@ -94,6 +135,12 @@ interface IWork {
   company: string;
   title: string;
   description: string;
+}
+
+interface ITool {
+  name: string;
+  icon: string;
+
 }
 
 interface IStartEndDate {
@@ -153,6 +200,49 @@ export default class Index extends Vue {
     }
   ];
 
+  private readonly toolbox: ITool[] = [
+    {
+      name: 'HTML5',
+      icon: 'html'
+    },
+    {
+      name: 'CSS',
+      icon: 'css'
+    },
+    {
+      name: 'JavaScript',
+      icon: 'js'
+    },
+    {
+      name: 'jQuery',
+      icon: 'jquery'
+    },
+    {
+      name: 'Vue.js',
+      icon: 'vuejs'
+    },
+    {
+      name: 'Nuxt.js',
+      icon: 'nuxt'
+    },
+    {
+      name: 'Sass/SCSS',
+      icon: 'sass'
+    },
+    {
+      name: 'Responsive Design',
+      icon: 'rwd'
+    },
+    {
+      name: 'TypeScript',
+      icon: 'typescript'
+    },
+    {
+      name: 'Git',
+      icon: 'git'
+    }
+  ]
+
   private getDate (date: Date): IStartEndDate {
     return {
       datetime: format(date, 'yyyy-MM-dd'),
@@ -163,6 +253,18 @@ export default class Index extends Vue {
 </script>
 
 <style lang="scss" scoped>
+section {
+  margin: 2rem 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
 .polaroid {
   width: 180px;
   height: 220px;
@@ -327,6 +429,65 @@ export default class Index extends Vue {
   }
   2.5%, 12.5% {
     opacity: 1;
+  }
+}
+
+.currently {
+  padding-left: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 28.125em) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--color-grey-light);
+  }
+}
+
+.toolbox {
+  &__list {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: 26.25em) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 33.75em) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 43.75em) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 1rem 0;
+      text-align: center;
+
+      svg {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
   }
 }
 
