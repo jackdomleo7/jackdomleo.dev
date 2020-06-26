@@ -63,7 +63,7 @@ export default class Textfield extends Vue {
     return (event.target as HTMLInputElement).value;
   }
 }
-</script></style>
+</script>
 
 <style lang="scss">
 :root {

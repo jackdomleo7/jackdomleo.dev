@@ -76,7 +76,7 @@
           rel="nofollow"
         >LinkedIn profile</a>.
       </p>
-      <ul>
+      <ul class="work__list" :class="!showAllWork ? 'work__list--collapsed' : ''">
         <li
           v-for="(work, index) in workHistory"
           :key="work.company + '-' + work.title"
@@ -111,6 +111,9 @@
           </div>
         </li>
       </ul>
+      <btn @click="showAllWork = !showAllWork">
+        Show {{ showAllWork ? 'less' : 'all' }} <span class="sr-only">work history</span>
+      </btn>
     </section>
     <hr>
     <section id="portfolio">
@@ -127,7 +130,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { format } from 'date-fns';
-import { PageTemplate } from '@/components';
+import { PageTemplate, Btn } from '@/components';
 
 interface IWork {
   start: Date;
@@ -149,7 +152,7 @@ interface IStartEndDate {
 }
 
 @Component({
-  components: { PageTemplate },
+  components: { PageTemplate, Btn },
   head () {
     return {
       title: 'Home'
@@ -157,6 +160,8 @@ interface IStartEndDate {
   }
 })
 export default class Index extends Vue {
+  private showAllWork: boolean = false;
+
   private readonly workHistory: IWork[] = [
     {
       start: new Date('2019-05-15'),
@@ -493,8 +498,10 @@ section {
 
 .work {
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
 
-  ul {
+  &__list {
     padding: 1rem 0 0 0;
     margin: 0;
     list-style: none;
@@ -518,6 +525,16 @@ section {
     li {
       display: flex;
       align-items: baseline;
+    }
+
+    &--collapsed {
+      max-height: 30rem;
+      overflow-y: hidden;
+    }
+
+    ~ .btn {
+      align-self: center;
+      margin-top: 1.5rem;
     }
   }
 
