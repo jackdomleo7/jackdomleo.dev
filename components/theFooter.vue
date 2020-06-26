@@ -22,7 +22,7 @@ import { Vue, Component } from 'nuxt-property-decorator';
 import SocialMedia, { ISocial } from '@/middleware/socialMedia';
 
 @Component
-export default class Footerbar extends Vue {
+export default class TheFooter extends Vue {
   private get socialMedia (): ISocial[] {
     return SocialMedia.socialMedia;
   }
