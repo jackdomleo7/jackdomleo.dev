@@ -14,6 +14,16 @@ export default class Btn extends Vue {
 }
 </script>
 
+<style lang="scss">
+:root {
+  --btn-shadow-color: var(--color-orange-deep);
+}
+
+.theme--light {
+  --btn-shadow-color: var(--color-orange-faint);
+}
+</style>
+
 <style lang="scss" scoped>
 .btn {
   border: none;
@@ -27,7 +37,7 @@ export default class Btn extends Vue {
   text-align: center;
   cursor: pointer;
   transition: all 160ms ease;
-  box-shadow: 0 6px 15px -2px var(--color-orange-faint);
+  box-shadow: 0 6px 15px -2px var(--btn-shadow-color);
 
   &:hover {
     background: linear-gradient(-45deg, var(--color-orange-deep), var(--color-orange-light));
