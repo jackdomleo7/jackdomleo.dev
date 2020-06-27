@@ -35,9 +35,9 @@
           </li>
           <li class="content__container__list__item">
             sunny holidays 🌞
-          </li><li class="content__container__list__item">
-            Disney
           </li>
+          <li class="content__container__list__item">
+            Disney
           </li>
         </ul>
       </div>
@@ -205,10 +205,10 @@ export default class Intro extends Vue {}
     font-size: 1.6rem;
   }
 
-	&__container {
-		font-weight: 600;
-		overflow: hidden;
-		height: 1.5rem;
+  &__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 1.5rem;
     display: flex;
     align-items: baseline;
 
@@ -216,67 +216,67 @@ export default class Intro extends Vue {}
       height: 2.2rem;
     }
 
-		&:before {
+    &:before {
       content: "[";
       padding-right: 1rem;
-		}
+    }
 
-		&:after {
+    &:after {
       content: "]";
       padding-left: 1rem;
-		}
+    }
 
-		&:after,
-		&:before {
+    &:after,
+    &:before {
       color: var(--color-red);
-		}
+    }
 
-		&__text {
-			margin: 0;
-		}
+    &__text {
+      margin: 0;
+    }
 
-		&__list {
-			margin-top: 0;
-			padding-left: 1rem;
-			text-align: left;
-			list-style: none;
+    &__list {
+      margin-top: 0;
+      padding-left: 1rem;
+      text-align: left;
+      list-style: none;
 
-			animation-name: change;
-			animation-duration: 20s;
-			animation-iteration-count: infinite;
+      animation-name: change;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
 
-			&__item {
-				margin: 0;
-			}
-		}
-	}
+      &__item {
+        margin: 0;
+      }
+    }
+  }
 }
 
 @keyframes change {
-	0%,
-	3.99%,
-	100% {
-		transform: translate3d(0, 0, 0);
-	}
-	7.98%,
-	11.97% {
-		transform: translate3d(0, -14.29%, 0);
-	}
-	15.96%,
-	19.95% {
-		transform: translate3d(0, -28.57%, 0);
-	}
-	23.94%,
-	27.93% {
-		transform: translate3d(0, -42.86%, 0);
-	}
-	31.92%,
-	35.91% {
-		transform: translate3d(0, -57.14%, 0);
-	}
-	39.9%,
-	43.89% {
-		transform: translate3d(0, -71.43%, 0);
+  0%,
+  3.99%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  7.98%,
+  11.97% {
+    transform: translate3d(0, -14.29%, 0);
+  }
+  15.96%,
+  19.95% {
+    transform: translate3d(0, -28.57%, 0);
+  }
+  23.94%,
+  27.93% {
+    transform: translate3d(0, -42.86%, 0);
+  }
+  31.92%,
+  35.91% {
+    transform: translate3d(0, -57.14%, 0);
+  }
+  39.9%,
+  43.89% {
+    transform: translate3d(0, -71.43%, 0);
   }
   47.88%,
   51.87% {
@@ -290,17 +290,17 @@ export default class Intro extends Vue {}
   67.83% {
     transform: translate3d(0, -57.14%, 0);
   }
-	71.82%,
-	75.81% {
-		transform: translate3d(0, -42.86%, 0);
-	}
-	79.8%,
-	83.79% {
-		transform: translate3d(0, -28.57%, 0);
-	}
-	87.78%,
-	91.77% {
-		transform: translate3d(0, -14.29%, 0);
-	}
+  71.82%,
+  75.81% {
+    transform: translate3d(0, -42.86%, 0);
+  }
+  79.8%,
+  83.79% {
+    transform: translate3d(0, -28.57%, 0);
+  }
+  87.78%,
+  91.77% {
+    transform: translate3d(0, -14.29%, 0);
+  }
 }
 </style>

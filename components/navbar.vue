@@ -295,7 +295,7 @@ export default class Navbar extends Vue {
   }
 }
 
-@keyframes Gradient {
+@keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -308,7 +308,7 @@ export default class Navbar extends Vue {
 }
 
 .gradient {
-  animation: Gradient 20s ease infinite;
+  animation: gradient 20s ease infinite;
   background: linear-gradient(
     50deg,
     var(--color-orange-deep) 0%,

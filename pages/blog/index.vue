@@ -1,7 +1,15 @@
 <template>
   <page-template page-title="Blog">
     <textfield v-model="articleSearch" label="Filter articles" type="search" placeholder="Search..." @input="filterArticles" />
-    <ul class="articles">
+    <ul v-if="articlesLoading" class="articles--skeleton" role="presentation">
+      <li v-for="i in 3" :key="i" class="article--skeleton" role="presentation">
+        <div class="skeleton__header" />
+        <div class="skeleton__meta" />
+        <div class="skeleton__description" />
+        <div class="skeleton__description" />
+      </li>
+    </ul>
+    <ul v-if="!articlesLoading" class="articles">
       <li v-for="(blog, index) in filteredArticles" :key="index" :aria-setsize="filteredArticles.length" :aria-posinset="index + 1">
         <article class="article">
           <header>
@@ -47,10 +55,13 @@ export default class Index extends Vue {
   private articles: object[] = [];
   private filteredArticles: object[] = [];
   private articleSearch: string = '';
+  private articlesLoading: boolean = false;
 
   async fetch () {
+    this.articlesLoading = true;
     this.articles = await this.$content('blog', { deep: true }).only(['title', 'date', 'slug', 'description', 'readingTime', 'hashtags']).sortBy('date', 'desc').fetch();
     this.filterArticles();
+    this.articlesLoading = false;
   }
 
   private articleDate (date: Date): IArticleDate {
@@ -84,6 +95,17 @@ export default class Index extends Vue {
 }
 </script>
 
+<style lang="scss">
+:root {
+  --skeleton-light: #444;
+  --skeleton-dark: #3a3a3a;
+}
+.theme--light {
+  --skeleton-light: #eee;
+  --skeleton-dark: #ddd;
+}
+</style>
+
 <style lang="scss" scoped>
 .articles {
   padding-left: 0;
@@ -100,6 +122,65 @@ export default class Index extends Vue {
       margin-bottom: 0;
     }
   }
+
+  &--skeleton {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      margin: 4rem 0;
+
+      &:first-of-type {
+        margin-top: 1.25rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      > div {
+        animation: skeleton 5s ease infinite;
+        background: linear-gradient(90deg, var(--skeleton-light) 0%, var(--skeleton-light) 46%, var(--skeleton-dark) 50%, var(--skeleton-light) 54%, var(--skeleton-light) 100%);
+        background-size: 250%;
+
+        &.skeleton {
+          &__header {
+            height: 2rem;
+            width: 45%;
+            margin-bottom: 1.25rem;
+          }
+
+          &__meta {
+            height: 1.2rem;
+            width: 30%;
+            margin-bottom: 1.5rem;
+          }
+
+          &__description {
+            height: 1.1rem;
+
+            &:first-of-type {
+              width: 100%;
+            }
+
+            &:last-of-type {
+              width: 35%;
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes skeleton {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
   .article {
     &__title {
