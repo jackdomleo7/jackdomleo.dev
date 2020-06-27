@@ -5,8 +5,8 @@
       <li v-for="i in 3" :key="i" class="article--skeleton" role="presentation">
         <div class="skeleton__header" />
         <div class="skeleton__meta" />
-        <div class="skeleton__description" />
-        <div class="skeleton__description" />
+        <div class="skeleton__description first" />
+        <div class="skeleton__description last" />
       </li>
     </ul>
     <ul v-if="!articlesLoading" class="articles">
@@ -126,6 +126,7 @@ export default class Index extends Vue {
   &--skeleton {
     list-style-type: none;
     padding-left: 0;
+    overflow-x: hidden;
 
     li {
       margin: 4rem 0;
@@ -159,11 +160,11 @@ export default class Index extends Vue {
           &__description {
             height: 1.1rem;
 
-            &:first-of-type {
-              width: 100%;
+            &.first {
+              width: 100vw;
             }
 
-            &:last-of-type {
+            &.last {
               width: 35%;
               margin-top: 0.5rem;
             }
