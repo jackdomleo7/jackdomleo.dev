@@ -11,12 +11,37 @@
     <p class="intro__welcome">
       I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.
     </p>
-    <p class="intro__i-like">
-      I like
-      <span class="intro__likes">
-        <span class="intro__like">front-end</span><span class="intro__like">UI/UX</span><span class="intro__like">tea ☕</span><span class="intro__like">Disney</span><span class="intro__like">to think 🤔</span><span class="intro__like">sunny holidays 🌞</span><span class="intro__like">ice hockey 🏒</span>
-      </span>
-    </p>
+    <div class="content">
+      <div class="content__container">
+        <p class="content__container__text">
+          I like
+        </p>
+
+        <ul class="content__container__list">
+          <li class="content__container__list__item">
+            front-end
+          </li>
+          <li class="content__container__list__item">
+            UI/UX
+          </li>
+          <li class="content__container__list__item">
+            tea ☕
+          </li>
+          <li class="content__container__list__item">
+            ice hockey 🏒
+          </li>
+          <li class="content__container__list__item">
+            to think 🤔
+          </li>
+          <li class="content__container__list__item">
+            sunny holidays 🌞
+          </li><li class="content__container__list__item">
+            Disney
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
     <p class="intro__occupation">
       <svg-icon name="briefcase" /> <span class="sr-only">Current occupation</span> Developer at
       <a
@@ -141,28 +166,6 @@ export default class Intro extends Vue {}
     }
   }
 
-  &__i-like {
-    font-size: 140%;
-    margin-right: 4rem;
-  }
-
-  &__likes {
-    grid-area: likes;
-    margin-left: 0.5rem;
-  }
-
-  &__like {
-    animation: like 28s infinite ease forwards;
-    opacity: 0;
-    position: absolute;
-
-    @for $i from 2 through 8 {
-      &:nth-child(#{$i}) {
-        animation-delay: calc((#{$i} - 1) * 4s);
-      }
-    }
-  }
-
   &__occupation {
     grid-area: occupation;
     font-size: 1.2rem;
@@ -194,12 +197,110 @@ export default class Intro extends Vue {}
   }
 }
 
-@keyframes like {
-  0%, 15% {
-    opacity: 0;
+.content {
+  overflow: hidden;
+  grid-area: likes;
+
+  @media (min-width: 42em) {
+    font-size: 1.6rem;
   }
-  2.5%, 12.5% {
-    opacity: 1;
+
+	&__container {
+		font-weight: 600;
+		overflow: hidden;
+		height: 1.5rem;
+    display: flex;
+    align-items: baseline;
+
+    @media (min-width: 42em) {
+      height: 2.2rem;
+    }
+
+		&:before {
+      content: "[";
+      padding-right: 1rem;
+		}
+
+		&:after {
+      content: "]";
+      padding-left: 1rem;
+		}
+
+		&:after,
+		&:before {
+      color: var(--color-red);
+		}
+
+		&__text {
+			margin: 0;
+		}
+
+		&__list {
+			margin-top: 0;
+			padding-left: 1rem;
+			text-align: left;
+			list-style: none;
+
+			animation-name: change;
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+
+			&__item {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@keyframes change {
+	0%,
+	3.99%,
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+	7.98%,
+	11.97% {
+		transform: translate3d(0, -14.29%, 0);
+	}
+	15.96%,
+	19.95% {
+		transform: translate3d(0, -28.57%, 0);
+	}
+	23.94%,
+	27.93% {
+		transform: translate3d(0, -42.86%, 0);
+	}
+	31.92%,
+	35.91% {
+		transform: translate3d(0, -57.14%, 0);
+	}
+	39.9%,
+	43.89% {
+		transform: translate3d(0, -71.43%, 0);
   }
+  47.88%,
+  51.87% {
+    transform: translate3d(0, -85.71%, 0);
+  }
+  55.86%,
+  59.85% {
+    transform: translate3d(0, -71.43%, 0);
+  }
+  63.84%,
+  67.83% {
+    transform: translate3d(0, -57.14%, 0);
+  }
+	71.82%,
+	75.81% {
+		transform: translate3d(0, -42.86%, 0);
+	}
+	79.8%,
+	83.79% {
+		transform: translate3d(0, -28.57%, 0);
+	}
+	87.78%,
+	91.77% {
+		transform: translate3d(0, -14.29%, 0);
+	}
 }
 </style>
