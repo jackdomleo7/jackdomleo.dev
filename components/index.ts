@@ -1,7 +1,8 @@
-import TopGradientBar from './topGradientBar.vue';
 import Navbar from './navbar.vue';
-import Footerbar from './footerbar.vue';
+import TheFooter from './theFooter.vue';
+
+import Btn from './Btn.vue';
 import PageTemplate from './pageTemplate.vue';
 import Textfield from './textfield.vue';
 
-export { TopGradientBar, Navbar, Footerbar, PageTemplate, Textfield };
+export { Navbar, TheFooter, Btn, PageTemplate, Textfield };

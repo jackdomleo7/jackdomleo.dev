@@ -4,17 +4,17 @@
     <main class="app__main">
       <nuxt />
     </main>
-    <footerbar />
+    <the-footer />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import { Navbar, Footerbar } from '@/components';
+import { Navbar, TheFooter } from '@/components';
 import Theme from '@/middleware/theme';
 
 @Component({
-  components: { Navbar, Footerbar }
+  components: { Navbar, TheFooter }
 })
 export default class Default extends Vue {
   private mounted () {

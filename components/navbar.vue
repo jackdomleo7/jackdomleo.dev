@@ -25,13 +25,12 @@
         </button>
       </div>
     </nav>
-    <top-gradient-bar />
+    <div class="gradient" />
   </header>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import { TopGradientBar } from '@/components';
 import Theme from '@/middleware/theme';
 
 interface INavLink {
@@ -39,9 +38,7 @@ interface INavLink {
   url: string;
 }
 
-@Component({
-  components: { TopGradientBar }
-})
+@Component
 export default class Navbar extends Vue {
   private theme: string | null = '';
   private readonly NavLinks: INavLink[] = [
@@ -296,5 +293,30 @@ export default class Navbar extends Vue {
       }
     }
   }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient {
+  animation: Gradient 20s ease infinite;
+  background: linear-gradient(
+    50deg,
+    var(--color-orange-deep) 0%,
+    var(--color-blue) 100%
+  );
+  background-size: 250%;
+  width: 100vw;
+  height: 4px;
+  opacity: 0.8;
 }
 </style>
