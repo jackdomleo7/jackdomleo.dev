@@ -143,7 +143,7 @@ export default class Work extends Vue {
       width: 1px;
       background: linear-gradient(
         50deg,
-        var(--color-orange-deep) 0%,
+        var(--color-orange) 0%,
         var(--color-blue) 100%
       );
       position: absolute;

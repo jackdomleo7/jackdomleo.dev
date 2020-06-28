@@ -2,7 +2,6 @@
   --body-background: var(--color-grey-dark);
   --body-color: var(--color-white);
   --body-font-weight: 300;
-  --link-color: var(--color-blue);
 
   --font-family: sans-serif;
   --font-stack: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", var(--font-family);
@@ -12,7 +11,6 @@
   --body-background: var(--color-white);
   --body-color: var(--color-grey-dark);
   --body-font-weight: 400;
-  --link-color: var(--color-blue-dark);
 }
 
 
@@ -93,6 +91,10 @@ img {
   user-select: none;
 }
 
+button {
+  color: inherit;
+}
+
 svg {
   height: 100%;
   width: 100%;
@@ -101,12 +103,12 @@ svg {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-blue);
   transition: all 160ms ease;
 
   &:hover,
   &:focus {
-    color: var(--color-orange-deep);
+    color: var(--color-orange);
   }
 }
 
@@ -121,7 +123,7 @@ hr {
 code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 90%;
-  color: var(--color-orange-deep);
+  color: var(--color-orange);
 }
 
 pre {

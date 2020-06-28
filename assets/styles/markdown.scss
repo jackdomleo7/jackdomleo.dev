@@ -1,11 +1,11 @@
 /* Styles specific to lang="md" */
 
 :root {
-  --blockquote-accent: var(--color-green);
+  --blockquote-accent: var(--color-orange);
 }
 
 .theme--light {
-  --blockquote-accent: var(--color-green-dark);
+  --blockquote-accent: var(--color-orange);
 }
 
 .markdown {

@@ -68,8 +68,7 @@ export default class Intro extends Vue {}
   flex-direction: column;
   align-items: center;
   background: linear-gradient(120deg, #fff, #ddd 60%);
-  box-shadow: 2px -2px 20px 0px rgba(0, 0, 0, 0.6),
-    inset 4px 5px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 22px -4px rgba(0,0,0,.6),inset 4px 5px 10px 0 rgba(0,0,0,.1) !important;
   margin: 0;
   padding: 1rem 0.5rem 0 0.5rem;;
   transform: rotate(3deg);
@@ -80,8 +79,6 @@ export default class Intro extends Vue {}
   &:hover,
   &:focus {
     transform: rotate(-3deg);
-    box-shadow: 2px -2px 20px 0px rgba(0, 0, 0, 0.6),
-      inset 4px 5px 10px 0 rgba(0, 0, 0, 0.1) !important;
 
     @media screen and (prefers-reduced-motion: reduce) {
       transform: rotate(3deg);
@@ -95,7 +92,7 @@ export default class Intro extends Vue {}
     transform: translateY(-50%);
     height: 0.5rem;
     width: 0.5rem;
-    background: radial-gradient(var(--color-blue), var(--color-blue-dark));
+    background: var(--color-black);
     border-radius: 50%;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   }
@@ -131,13 +128,13 @@ export default class Intro extends Vue {}
   }
 
   @keyframes polaroid {
-  0% {
-    filter: opacity(0);
+    0% {
+      filter: opacity(0);
+    }
+    100% {
+      filter: opacity(100%);
+    }
   }
-  100% {
-    filter: opacity(100%);
-  }
-}
 }
 
 .intro {
@@ -228,7 +225,7 @@ export default class Intro extends Vue {}
 
     &:after,
     &:before {
-      color: var(--color-red);
+      color: var(--color-orange);
     }
 
     &__text {

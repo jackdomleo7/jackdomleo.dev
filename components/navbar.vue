@@ -311,12 +311,14 @@ export default class Navbar extends Vue {
   animation: gradient 20s ease infinite;
   background: linear-gradient(
     50deg,
-    var(--color-orange-deep) 0%,
-    var(--color-blue) 100%
+    var(--color-orange),
+    var(--color-orange),
+    var(--color-blue),
+    var(--color-blue)
   );
   background-size: 250%;
   width: 100vw;
   height: 4px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 </style>
