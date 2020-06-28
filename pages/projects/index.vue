@@ -113,7 +113,7 @@ export default class Index extends Vue {
   private readonly projects: IProject[] = [
     {
       name: 'Cooltipz.css',
-      url: 'https://cooltipz.jackdomleo.dev?ref=jackdomleo.dev',
+      url: 'https://cooltipz.jackdomleo.dev',
       image: 'cooltipzcss.png',
       tech: ['SCSS', 'CSS3', 'PostCSS', 'npm', 'GitHub Pages', 'Google Analytics'],
       description: 'Pure CSS tooltip library released on npm',
@@ -129,7 +129,7 @@ export default class Index extends Vue {
     },
     {
       name: 'ellaparsons.design',
-      url: 'https://ellaparsons.deisgn?ref=jackdomleo.dev',
+      url: 'https://ellaparsons.design',
       image: 'ellaparsonsdesign.png',
       tech: ['Nuxt.js', 'TypeScript', 'HTML5', 'SCSS', 'GitHub Pages', 'Google Analytics'],
       description: 'Portfolio website for Ella Parsons',
@@ -138,7 +138,7 @@ export default class Index extends Vue {
     {
       name: 'Flexipay Web',
       url:
-        'https://www.mitrefinch.co.uk/product/payroll-software?ref=jackdomleo.dev',
+        'https://www.mitrefinch.co.uk/product/payroll-software',
       associationWith: 'Mitrefinch',
       image: 'mitrefinch.png',
       tech: ['Vue.js', 'TypeScript', 'Mocha & Chai', 'HTML5', 'SCSS', 'C#', 'DevOps'],
@@ -147,7 +147,7 @@ export default class Index extends Vue {
     {
       name: 'Access control',
       url:
-        'https://www.mitrefinch.co.uk/product/access-control?ref=jackdomleo.dev',
+        'https://www.mitrefinch.co.uk/product/access-control',
       associationWith: 'Mitrefinch',
       image: 'mitrefinch.png',
       tech: ['Vue.js', 'TypeScript', 'Jest', 'HTML5', 'SCSS', 'DevOps', 'Leaflet.js'],
