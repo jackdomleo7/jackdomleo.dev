@@ -1,14 +1,26 @@
 <template>
-  <button class="btn" @click="click">
+  <nuxt-link v-if="to" class="btn" :to="to">
+    <slot />
+  </nuxt-link>
+  <a v-else-if="href" class="btn" :href="href" rel="nofollow noopener" target="_blank">
+    <slot />
+  </a>
+  <button v-else class="btn" @click="click">
     <slot />
   </button>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Emit } from 'nuxt-property-decorator';
+import { Vue, Component, Emit, Prop } from 'nuxt-property-decorator';
 
 @Component
 export default class Btn extends Vue {
+  @Prop({ type: String })
+  private readonly to!: string;
+
+  @Prop({ type: String })
+  private readonly href!: string;
+
   @Emit()
   public click () {}
 }
@@ -26,6 +38,8 @@ export default class Btn extends Vue {
   text-align: center;
   cursor: pointer;
   transition: all 280ms ease;
+  text-decoration: none;
+  color: var(--body-color);
 
   &:hover {
     background: var(--color-orange);

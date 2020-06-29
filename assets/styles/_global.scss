@@ -92,7 +92,7 @@ svg {
   pointer-events: none;
 }
 
-a {
+a:not(.btn) {
   color: var(--color-blue);
   transition: all 160ms ease;
 
@@ -136,4 +136,11 @@ li {
     max-width: 40rem !important;
     margin: 0 auto !important;
   }
+}
+
+.cp_embed_iframe  {
+  height: 40rem;
+  max-height: 80vh;
+  min-height: 20rem;
+  width: 100%;
 }
