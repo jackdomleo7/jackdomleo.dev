@@ -12,40 +12,40 @@
         <div class="project__content">
           <h3>#NoPreviewHtmlCss</h3>
           <p>A new developer challenge I created where participants have to create something in HTML and CSS but they can't see the preview until they are finished.</p>
-          <btn href="https://twitter.com/jackdomleo7/status/1270039382528065538">
-            View website
-          </btn>
         </div>
+        <btn href="https://twitter.com/jackdomleo7/status/1270039382528065538">
+          View website
+        </btn>
       </figure>
       <figure class="project">
         <img src="/img/projects/top/cooltipz.png" alt="Cooltipz.css logo">
         <div class="project__content">
           <h3>Cooltipz.css</h3>
           <p>A pure CSS library to help add customisable, accessible tooltips to HTML</p>
-          <btn href="https://cooltipz.jackdomleo.dev">
-            View website
-          </btn>
         </div>
+        <btn href="https://cooltipz.jackdomleo.dev">
+          View website
+        </btn>
       </figure>
       <figure class="project">
         <img src="/img/projects/top/tmdip.png" alt="Screengrab of www.tmdip.co.uk home page">
         <div class="project__content">
           <h3>www.tmdip.co.uk</h3>
           <p>A fully responsive website for TMD Interior Projects &amp; Building Services Ltd</p>
-          <btn href="https://www.tmdip.co.uk">
-            View website
-          </btn>
         </div>
+        <btn href="https://www.tmdip.co.uk">
+          View website
+        </btn>
       </figure>
       <figure class="project">
         <img src="/img/projects/top/ellaparsons.png" alt="A screengrab of ellaparsons.design homepage">
         <div class="project__content">
           <h3>ellaparsons.design</h3>
           <p>A fully responsive portfolio website for Ella Parsons</p>
-          <btn href="https://ellaparsons.design">
-            View website
-          </btn>
         </div>
+        <btn href="https://ellaparsons.design">
+          View website
+        </btn>
       </figure>
     </div>
     <div class="top-codepens">
@@ -109,14 +109,18 @@ export default class TopProjects extends Vue {}
   align-self: flex-start;
   margin: 0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__content {
     margin: 1rem;
-
-    .btn {
-      margin-top: 1.5rem;
-    }
+    flex: 1;
   }
+}
+
+.btn {
+  margin: 1.5rem 1rem 1rem 1rem;
+  align-self: flex-start;
 }
 
 .top-codepens {
