@@ -1,7 +1,7 @@
 <template>
   <section id="toolbox" class="toolbox">
     <h2>My toolbox of skills</h2>
-    <p>A set of tools and technologies I am comfortable with and compotent in:</p>
+    <p>A set of tools and technologies I am comfortable with and competent in:</p>
     <ul class="toolbox__list">
       <li v-for="(tool, index) in toolbox" :key="tool.name" :aria-setsize="toolbox.length" :aria-posinset="index + 1">
         <svg-icon :name="tool.icon" />
