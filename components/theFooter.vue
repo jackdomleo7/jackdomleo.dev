@@ -12,7 +12,7 @@
       </li>
     </ul>
     <div class="footer__copy">
-      &copy;{{ new Date().getFullYear() }} Jack Domleo. All rights reserved.
+      &copy;{{ new Date().getFullYear() }} Jack Domleo.<wbr>All rights reserved.
     </div>
   </footer>
 </template>

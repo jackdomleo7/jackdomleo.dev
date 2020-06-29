@@ -20,16 +20,6 @@
   background-color: var(--color-blue);
 }
 
-*:focus {
-  outline-style: solid;
-  outline-color: transparent;
-  box-shadow: 0 0 0 4px var(--color-blue) !important;
-
-  @media screen and (-ms-high-contrast: active) {
-    outline: 4px solid currentColor;
-  }
-}
-
 html {
   font-family: var(--font-family);
   box-sizing: border-box;

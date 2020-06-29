@@ -161,7 +161,7 @@ export default class Index extends Vue {
             height: 1.1rem;
 
             &.first {
-              width: 100vw;
+              width: 80vw;
             }
 
             &.last {

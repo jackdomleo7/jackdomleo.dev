@@ -1,7 +1,15 @@
 <template>
   <label class="textfield">
     <span>{{ label }}</span>
-    <input v-model="inputValue" :type="type" :placeholder="placeholder" @input="onInput">
+    <textarea v-if="multiline" v-model="inputValue" :placeholder="placeholder" :name="name" @input="onInput" />
+    <input
+      v-else
+      v-model="inputValue"
+      :type="type"
+      :placeholder="placeholder"
+      :name="name"
+      @input="onInput"
+    >
   </label>
 </template>
 
@@ -10,6 +18,9 @@ import { Vue, Component, Prop, Emit } from 'nuxt-property-decorator';
 
 @Component
 export default class Textfield extends Vue {
+  @Prop({ type: Boolean, default: false })
+  private readonly multiline!: boolean;
+
   @Prop({ type: String, required: true })
   private readonly label!: string;
 
@@ -38,6 +49,9 @@ export default class Textfield extends Vue {
       ].includes(value)
   })
   private readonly type!: string;
+
+  @Prop({ type: String, default: '' })
+  private readonly name!: string;
 
   private _inputValue: string = '';
 
@@ -73,7 +87,7 @@ export default class Textfield extends Vue {
 
 .theme--light {
   --textfield-placeholder: #555;
-  --textfield-bg: rgba(255, 255, 255, 0.1);
+  --textfield-bg: #eee;
 }
 </style>
 
@@ -87,12 +101,25 @@ export default class Textfield extends Vue {
     margin-bottom: 0.25rem;
   }
 
-  input {
+  input,
+  textarea {
     border-radius: 0.25rem;
-    border: 1px solid var(--color-grey);
+    border: 2px solid transparent;
+    border-bottom-color: var(--color-grey);
     padding: 0.5rem;
     background-color: var(--textfield-bg);
     color: var(--textfield-placeholder);
+    transition: border 160ms ease;
+
+    &:focus {
+      border-color: transparent;
+      border-bottom-color: var(--color-orange);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 6rem;
   }
 }
 </style>
