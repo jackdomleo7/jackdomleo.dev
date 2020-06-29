@@ -16,16 +16,18 @@
         </nuxt-link>
       </p>
     </section>
+    <hr>
+    <contact />
   </page-template>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { PageTemplate } from '@/components';
-import { CurrentlyDoing, Intro, Toolbox, Work } from '@/components/home';
+import { Contact, CurrentlyDoing, Intro, Toolbox, Work } from '@/components/home';
 
 @Component({
-  components: { CurrentlyDoing, Intro, PageTemplate, Toolbox, Work },
+  components: { Contact, CurrentlyDoing, Intro, PageTemplate, Toolbox, Work },
   head () {
     return {
       title: 'Home'
