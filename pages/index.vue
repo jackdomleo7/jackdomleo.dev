@@ -4,6 +4,8 @@
     <hr>
     <currently-doing />
     <hr>
+    <top-projects />
+    <hr>
     <toolbox />
     <hr>
     <work />
@@ -24,10 +26,10 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { PageTemplate } from '@/components';
-import { Contact, CurrentlyDoing, Intro, Toolbox, Work } from '@/components/home';
+import { Contact, CurrentlyDoing, Intro, Toolbox, TopProjects, Work } from '@/components/home';
 
 @Component({
-  components: { Contact, CurrentlyDoing, Intro, PageTemplate, Toolbox, Work },
+  components: { Contact, CurrentlyDoing, Intro, PageTemplate, Toolbox, TopProjects, Work },
   head () {
     return {
       title: 'Home'

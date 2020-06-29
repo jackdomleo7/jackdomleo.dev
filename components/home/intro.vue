@@ -8,9 +8,14 @@
         This is me
       </figcaption>
     </figure>
-    <p class="intro__welcome">
-      I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.
-    </p>
+    <div class="intro__welcome">
+      <p>
+        I'm a <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.
+      </p>
+      <p>
+        I am the founder of the <a href="https://twitter.com/jackdomleo7/status/1270039382528065538" rel="nofollow noopener" target="_blank">#NoPreviewHtmlCss</a> challenge. I love to write articles, create CodePen projects and be involved in the Twitter developer community!
+      </p>
+    </div>
     <div class="content">
       <div class="content__container">
         <p class="content__container__text">
@@ -142,7 +147,7 @@ export default class Intro extends Vue {}
   grid-template-areas: "img" "welcome" "likes" "occupation";
   place-items: center;
   text-align: center;
-  gap: 0.5rem;
+  gap: 2rem;
 
   &__img {
     grid-area: img;

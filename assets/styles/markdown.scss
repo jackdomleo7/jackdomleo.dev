@@ -56,12 +56,6 @@
       overflow-wrap: anywhere;
     }
   }
-
-  iframe {
-    margin: 3rem 0;
-    height: 40rem;
-    width: 100%;
-  }
   
   blockquote {
     font-style: italic;
@@ -98,5 +92,9 @@
       font-style: normal;
       font-weight: 700;
     }
+  }
+
+  .cp_embed_iframe  {
+    margin: 3rem 0;
   }
 }
