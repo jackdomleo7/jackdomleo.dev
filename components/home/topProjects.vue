@@ -8,6 +8,16 @@
     </p>
     <div class="top-projects">
       <figure class="project">
+        <img src="/img/projects/top/nopreviewhtmlcss.png" alt="A screengrab of jackdomleo.dev homepage">
+        <div class="project__content">
+          <h3>#NoPreviewHtmlCss</h3>
+          <p>A new developer challenge I created where participants have to create something in HTML and CSS but they can't see the preview until they are finished.</p>
+          <btn href="https://twitter.com/jackdomleo7/status/1270039382528065538">
+            View website
+          </btn>
+        </div>
+      </figure>
+      <figure class="project">
         <img src="/img/projects/top/cooltipz.png" alt="Cooltipz.css logo">
         <div class="project__content">
           <h3>Cooltipz.css</h3>
@@ -32,16 +42,6 @@
         <div class="project__content">
           <h3>ellaparsons.design</h3>
           <p>A fully responsive portfolio website for Ella Parsons</p>
-          <btn href="https://ellaparsons.design">
-            View website
-          </btn>
-        </div>
-      </figure>
-      <figure class="project">
-        <img src="/img/projects/top/jackdomleo.png" alt="A screengrab of jackdomleo.dev homepage">
-        <div class="project__content">
-          <h3>jackdomleo.dev</h3>
-          <p>A fully responsive portfolio website and blog for me</p>
           <btn href="https://ellaparsons.design">
             View website
           </btn>
