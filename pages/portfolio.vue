@@ -50,7 +50,7 @@ export default class Index extends Vue {
       url: 'https://codepen.io/JackDomleo'
     },
     {
-      name: 'My Twitter presense, tweets and contributions',
+      name: 'My Twitter presence, tweets and contributions',
       url: 'https://twitter.com/jackdomleo7'
     },
     {
