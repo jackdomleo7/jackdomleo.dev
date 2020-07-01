@@ -6,47 +6,11 @@
         here
       </nuxt-link>.
     </p>
-    <div class="top-projects">
-      <figure class="project">
-        <img src="/img/projects/top/nopreviewhtmlcss.png" alt="A screengrab of jackdomleo.dev homepage">
-        <div class="project__content">
-          <h3>#NoPreviewHtmlCss</h3>
-          <p>A new developer challenge I created where participants have to create something in HTML and CSS but they can't see the preview until they are finished.</p>
-        </div>
-        <btn href="https://twitter.com/jackdomleo7/status/1270039382528065538">
-          View website
-        </btn>
-      </figure>
-      <figure class="project">
-        <img src="/img/projects/top/cooltipz.png" alt="Cooltipz.css logo">
-        <div class="project__content">
-          <h3>Cooltipz.css</h3>
-          <p>A pure CSS library to help add customisable, accessible tooltips to HTML</p>
-        </div>
-        <btn href="https://cooltipz.jackdomleo.dev">
-          View website
-        </btn>
-      </figure>
-      <figure class="project">
-        <img src="/img/projects/top/tmdip.png" alt="Screengrab of www.tmdip.co.uk home page">
-        <div class="project__content">
-          <h3>www.tmdip.co.uk</h3>
-          <p>A fully responsive website for TMD Interior Projects &amp; Building Services Ltd</p>
-        </div>
-        <btn href="https://www.tmdip.co.uk">
-          View website
-        </btn>
-      </figure>
-      <figure class="project">
-        <img src="/img/projects/top/ellaparsons.png" alt="A screengrab of ellaparsons.design homepage">
-        <div class="project__content">
-          <h3>ellaparsons.design</h3>
-          <p>A fully responsive portfolio website for Ella Parsons</p>
-        </div>
-        <btn href="https://ellaparsons.design">
-          View website
-        </btn>
-      </figure>
+    <div class="projects">
+      <project-card header="#NoPreviewHtmlCss" description="A new developer challenge I created where participants have to create something in HTML and CSS but they can't see the preview until they are finished." url="https://twitter.com/jackdomleo7/status/1270039382528065538" image="/img/projects/nopreviewhtmlcss.png" image-alt="#NoPreviewHtmlCss logo" />
+      <project-card header="Cooltipz.css" description="A pure CSS library to help add customisable, accessible tooltips to HTML, available on npm, yarn and CDN." url="https://cooltipz.jackdomleo.dev" image="/img/projects/cooltipz.png" image-alt="Cooltipz.css logo" />
+      <project-card header="www.tmdip.co.uk" description="A fully responsive website for TMD Interior Projects &amp; Building Services Ltd." url="https://www.tmdip.co.uk" image="/img/projects/tmdip.png" image-alt="A screengrab on www.tmdip.co.uk home page" />
+      <project-card header="ellaparsons.design" description="A fully responsive portfolio website for Ella Parsons." url="https://ellaparsons.design" image="/img/projects/ellaparsons.png" image-alt="A screengrab on ellaparsons.design home page" />
     </div>
     <div class="top-codepens">
       <p
@@ -82,46 +46,16 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import { Btn } from '@/components';
+import { Btn, ProjectCard } from '@/components';
 
 @Component({
-  components: { Btn }
+  components: { Btn, ProjectCard }
 })
 export default class TopProjects extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.top-projects {
-  margin-bottom: 2rem;
-  display: grid;
-  gap: 2rem;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr;
-
-  @media (min-width: 40em) {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.project {
-  background: var(--body-background);
-  border: 1px solid var(--color-grey);
-  align-self: flex-start;
-  margin: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  &__content {
-    margin: 1rem;
-    flex: 1;
-  }
-}
-
-.btn {
-  margin: 1.5rem 1rem 1rem 1rem;
-  align-self: flex-start;
-}
+@import "@/assets/styles/shared/projects.scss";
 
 .top-codepens {
   display: grid;
