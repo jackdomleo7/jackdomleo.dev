@@ -40,6 +40,7 @@ export default class Btn extends Vue {
   transition: all 280ms ease;
   text-decoration: none;
   color: var(--body-color);
+  min-width: 7rem;
 
   &:hover {
     background: var(--color-orange);
