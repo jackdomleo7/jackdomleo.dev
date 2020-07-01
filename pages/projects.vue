@@ -1,6 +1,6 @@
 <template>
   <page-template page-title="Projects">
-    <p>This page only lists some of my projects. You can:</p>
+    <p>This page only lists <em>some</em> of my projects. You can:</p>
     <ul class="more-projects">
       <li aria-setsize="2" aria-posinset="1">
         <a href="https://github.com/JDomleo" rel="nofollow noopener" target="_blank">
@@ -70,6 +70,7 @@ export default class Index extends Vue {}
   li {
     border: 1px solid var(--color-grey);
     border-radius: 0.75rem;
+    overflow: hidden;
 
     &:last-of-type {
       a {
@@ -79,6 +80,14 @@ export default class Index extends Vue {}
           margin-right: 0;
           margin-left: 1rem;
         }
+      }
+    }
+
+    &:hover, &:focus {
+      box-shadow: 0 0 10px -2px var(--more-projects-shadow-color);
+
+      svg {
+        filter: drop-shadow(2px 2px 1px var(--more-projects-icon-shadow-color));
       }
     }
 
@@ -98,14 +107,6 @@ export default class Index extends Vue {}
         width: 3rem;
         margin-right: 1rem;
         transition: all 160ms ease;
-      }
-
-      &:hover, &:focus {
-        box-shadow: 0 0 10px -4px var(--more-projects-shadow-color);
-
-        svg {
-          filter: drop-shadow(2px 2px 1px var(--more-projects-icon-shadow-color));
-        }
       }
     }
   }

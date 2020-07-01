@@ -57,6 +57,7 @@ export default class ProjectCard extends Vue {
 
 <style lang="scss" scoped>
 .project {
+  --cooltipz-cursor: help;
   background: var(--body-background);
   border: 1px solid var(--color-grey);
   align-self: flex-start;
