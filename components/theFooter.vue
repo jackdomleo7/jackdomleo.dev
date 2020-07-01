@@ -11,7 +11,7 @@
         </a>
       </li>
       <li :aria-setsize="socialMedia.length + 1" :aria-posinset="socialMedia.length + 1">
-        <a href="/feed.xml" rel="nofollow noopener" aria-label="RSS" data-cooltipz-dir="top">
+        <a href="/feed.xml" rel="alternate" type="application/rss+xml" aria-label="RSS" data-cooltipz-dir="top">
           <svg-icon name="rss" />
         </a>
       </li>

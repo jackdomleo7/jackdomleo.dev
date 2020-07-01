@@ -77,7 +77,8 @@ export default {
         color: '#ff5a0a'
       },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rock+Salt&family=Exo:wght@800&family=Open+Sans:wght@300;400;800&family=Cookie&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rock+Salt&family=Exo:wght@800&family=Open+Sans:wght@300;400;800&family=Cookie&display=swap' },
+      { rel: 'alternate', type: 'application/rss+xml', href: 'https://jackdomleo.dev/feed.xml' }
     ]
   },
   pwa: {
