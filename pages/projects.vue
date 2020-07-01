@@ -2,13 +2,13 @@
   <page-template page-title="Projects">
     <p>This page only lists <em>some</em> of my projects. You can:</p>
     <ul class="more-projects">
-      <li aria-setsize="2" aria-posinset="1">
+      <li aria-setsize="2" aria-posinset="1" class="box">
         <a href="https://github.com/JDomleo" rel="nofollow noopener" target="_blank">
           <svg-icon name="github" />
           <span>View more projects on GitHub</span>
         </a>
       </li>
-      <li aria-setsize="2" aria-posinset="2">
+      <li aria-setsize="2" aria-posinset="2" class="box">
         <a href="https://codepen.io/JackDomleo" rel="nofollow noopener" target="_blank">
           <svg-icon name="codepen" />
           <span>View more projects on CodePen</span>
@@ -55,6 +55,8 @@ export default class Index extends Vue {}
 </style>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/shared/box';
+
 .more-projects {
   display: grid;
   gap: 1rem;
@@ -65,50 +67,6 @@ export default class Index extends Vue {}
 
   @media (min-width: 30em) {
     grid-template-columns: 1fr 1fr;
-  }
-
-  li {
-    border: 1px solid var(--color-grey);
-    border-radius: 0.75rem;
-    overflow: hidden;
-
-    &:last-of-type {
-      a {
-        flex-direction: row-reverse;
-
-        svg {
-          margin-right: 0;
-          margin-left: 1rem;
-        }
-      }
-    }
-
-    &:hover, &:focus {
-      box-shadow: 0 0 10px -2px var(--more-projects-shadow-color);
-
-      svg {
-        filter: drop-shadow(2px 2px 1px var(--more-projects-icon-shadow-color));
-      }
-    }
-
-    a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      color: inherit;
-      text-decoration: none;
-      transition: all 160ms ease;
-      width: 100%;
-
-      svg {
-        height: 3rem;
-        width: 3rem;
-        margin-right: 1rem;
-        transition: all 160ms ease;
-      }
-    }
   }
 }
 </style>

@@ -113,6 +113,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/svg-sprite',
     '@nuxt/content',
+    '@nuxtjs/feed',
     '@nuxtjs/sitemap' // Ensure this is always last in array
   ],
   hooks: {
@@ -124,6 +125,39 @@ export default {
       }
     }
   },
+  feed: [
+    {
+      path: '/feed.xml', // The route to your feed.
+      async create (feed) {
+        feed.options = {
+          title: 'Jack Domleo - blog',
+          link: 'https://jackdomleo.dev/feed.xml',
+          description: 'Feed for Jack Domleo\'s blog.'
+        };
+
+        const { $content } = require('@nuxt/content');
+        const posts = await $content('blog', { deep: true }).sortBy('date', 'desc').fetch();
+        console.log(posts.length);
+        posts.forEach((post) => {
+          feed.addItem({
+            title: post.title,
+            id: `https://jackdomleo.dev/blog/${post.slug}`,
+            link: `https://jackdomleo.dev/blog/${post.slug}`,
+            description: post.description,
+            published: Date.parse(post.date)
+          });
+        });
+
+        feed.addContributor({
+          name: 'Jack Domleo',
+          link: 'https://jackdomleo.dev'
+        });
+      },
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: 'rss2', // Can be: rss2, atom1, json1
+      data: [''] // Will be passed as 2nd argument to `create` function
+    }
+  ],
   sitemap: {
     hostname: 'https://jackdomleo.dev',
     exclude: ['/_icons']

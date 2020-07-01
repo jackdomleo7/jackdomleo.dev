@@ -1,5 +1,20 @@
 <template>
   <page-template page-title="Blog">
+    <p>You can read my articles here or you can:</p>
+    <ul class="alternative">
+      <li aria-setsize="2" aria-posinset="1" class="box">
+        <a href="/feed.xml" download>
+          <svg-icon name="rss" />
+          Subscribe to my RSS feed
+        </a>
+      </li>
+      <li aria-setsize="2" aria-posinset="2" class="box">
+        <a href="https://dev.to/jackdomleo7" rel="nofollow noopener">
+          <svg-icon name="dev" />
+          Read on DEV.to
+        </a>
+      </li>
+    </ul>
     <textfield v-model="articleSearch" label="Filter articles" type="search" placeholder="Search..." @input="filterArticles" />
     <ul v-if="articlesLoading" class="articles--skeleton" role="presentation">
       <li v-for="i in 3" :key="i" class="article--skeleton" role="presentation">
@@ -107,6 +122,22 @@ export default class Index extends Vue {
 </style>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/shared/box';
+
+.alternative {
+  padding-left: 0;
+  list-style-type: none;
+  display: grid;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 30em) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .articles {
   padding-left: 0;
   list-style-type: none;
