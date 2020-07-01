@@ -3,7 +3,7 @@
     <p>You can read my articles here or you can:</p>
     <ul class="alternative">
       <li aria-setsize="2" aria-posinset="1" class="box">
-        <a href="/feed.xml" download>
+        <a href="/feed.xml">
           <svg-icon name="rss" />
           Subscribe to my RSS feed
         </a>
