@@ -137,7 +137,6 @@ export default {
 
         const { $content } = require('@nuxt/content');
         const posts = await $content('blog', { deep: true }).sortBy('date', 'desc').fetch();
-        console.log(posts.length);
         posts.forEach((post) => {
           feed.addItem({
             title: post.title,
