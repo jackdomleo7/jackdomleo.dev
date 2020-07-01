@@ -31,7 +31,11 @@ interface portfolio {
   components: { PageTemplate },
   head () {
     return {
-      title: 'Portfolio'
+      title: 'Portfolio',
+      meta: [
+        { hid: 'description', name: 'description', content: 'My portfolio and what I feel should be included.' },
+        { hid: 'og:description', name: 'og:description', content: 'My portfolio and what I feel should be included.' }
+      ]
     };
   }
 })

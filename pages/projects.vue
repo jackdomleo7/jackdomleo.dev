@@ -33,8 +33,8 @@ import { EnterpriseProjects, FeaturedProjects } from '@/components/portfolio';
     return {
       title: 'Projects',
       meta: [
-        { hid: 'description', name: 'description', content: 'A list of some of Jack Domleo\'s featured projects, future projects and open-source contributions.' },
-        { hid: 'og:description', name: 'og:description', content: 'A list of some of Jack Domleo\'s featured projects, future projects and open-source contributions.' }
+        { hid: 'description', name: 'description', content: 'A list of some of my featured projects and projects I have been involved in at an organisation.' },
+        { hid: 'og:description', name: 'og:description', content: 'A list of some of my featured projects and projects I have been involved in at an organisation.' }
       ]
     };
   }
