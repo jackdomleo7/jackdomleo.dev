@@ -30,11 +30,7 @@ I really learned a lot from Vitaly. I'm really happy with the way he explained w
 
 [Charlotte Dann](https://charlottedann.com) blew the audience away with her CSS art! The founder of [Hexatope](https://hexatope.io) showed off stunning examples of her work and how a simple CSS algorithm can have unexpected, weird and wonderful outcomes. The power of `nth-child()` astounded us all. Definitely inspired me to look into doing some CSS art that's more interesting than my [pixel art R2-D2](https://codepen.io/JackDomleo/pen/ZEEqdxy).
 
-<p class="codepen" data-theme-id="39164" data-default-tab="result" data-user="pouretrebelle" data-slug-hash="bPWvNp" data-editable="true" data-pen-title="nth-child Art">
-  <span>See the Pen <a href="https://codepen.io/pouretrebelle/pen/bPWvNp">
-  nth-child Art</a> by Charlotte Dann (<a href="https://codepen.io/pouretrebelle">@pouretrebelle</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen user="pouretrebelle" slug-hash="bPWvNp" pen-title="nth-child Art"></codepen>
 
 Charlotte then went on to explain how she evolved a university project, involving hexagons, into a brilliant business idea, [Hexatope](https://hexatope.io). I'm a big fan of this! I love how a customer can actually use the online application Charlotte built, purchase it and recieve a 3D model of their creation - jewellery. I do recommend this as a gift for anyone who likes to live an interesting life.
 
@@ -56,12 +52,7 @@ Eli suggested some excellent resources to use when thinking about internationali
 
 [Kim Johannesen](https://twitter.com/therealkimblim) gave a really informative demonstration on a topic I am particularly interested in, accessibility, specifically creating an accessible button. Some really useful and vital key points were mentioned, for example, the use of the `.sr-only` class for icon-only buttons, the use of the `-ms-high-contrast` media query and using the `:hover` and `:focus` pseudo-classes.
 
-<p class="codepen" data-theme-id="39164" data-default-tab="css,result" data-user="kimblim" data-slug-hash="rNVgLor" data-editable="true" data-pen-title="Accessible button 06">
-  <span>See the Pen <a href="https://codepen.io/kimblim/pen/rNVgLor">
-  Accessible button 06</a> by Kim Johannesen (<a href="https://codepen.io/kimblim">@kimblim</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<codepen user="kimblim" slug-hash="rNVgLor" pen-title="Accessible button 06"></codepen>
 
 ### Grace Zarczynska - Ways to Speed Up Your Coding
 
