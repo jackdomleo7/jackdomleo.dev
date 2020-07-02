@@ -110,6 +110,10 @@ I've currently been learning [GSAP](https://greensock.com/gsap) and have honestl
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">First up!<a href="https://twitter.com/jackdomleo7?ref_src=twsrc%5Etfw">@jackdomleo7</a>&#39;s &quot;Airplane sequencing&quot; pen 👏<br><br>I thought this was great and always appreciate something that&#39;s responsive.<a href="https://t.co/HXfU0OFCRi">https://t.co/HXfU0OFCRi</a> via <a href="https://twitter.com/CodePen?ref_src=twsrc%5Etfw">@CodePen</a></p>&mdash; Jhey 🛠 (@jh3yy) <a href="https://twitter.com/jh3yy/status/1277592408386080775?ref_src=twsrc%5Etfw">June 29, 2020</a></blockquote>
 
+### Reached 1000 followers on Twitter
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m going to take <a href="https://twitter.com/rafrasenberg?ref_src=twsrc%5Etfw">@rafrasenberg</a>&#39;s advice on this:<br><br>Whoop! 1000 followers! Thank you! 🙏<br><br>My goal is not to get loads of followers but to tweet (hopefully) good content. 😊<br><br>For those wondering what the advice was... <a href="https://t.co/MmrZTV5A8S">https://t.co/MmrZTV5A8S</a><a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/milestone?src=hash&amp;ref_src=twsrc%5Etfw">#milestone</a> <a href="https://twitter.com/hashtag/developer?src=hash&amp;ref_src=twsrc%5Etfw">#developer</a> <a href="https://t.co/D1mEGwGVcA">pic.twitter.com/D1mEGwGVcA</a></p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1274370318652620800?ref_src=twsrc%5Etfw">June 20, 2020</a></blockquote>
+
 ### I reached 100+ followers on [CodePen](https://codepen.io/JackDomleo)
 
 <codepen slug-hash="bGEWPLy" pen-title="100 followers - Thank you 🎉" click-to-load></codepen>
