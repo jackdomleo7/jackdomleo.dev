@@ -46,6 +46,9 @@
 
   figure {
     margin: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     figcaption {
       text-align: center;

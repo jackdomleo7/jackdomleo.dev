@@ -1,6 +1,6 @@
 <template>
   <section id="latest">
-    <h2>Latest</h2>
+    <h2>Latest article</h2>
     <articles-list :articles="articles" :loading="{ loading: articlesLoading, skeletonCount: articlesNumberOf }" />
   </section>
 </template>

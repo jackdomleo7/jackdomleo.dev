@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Wed, 01 Jul 2020 22:05:59 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 02 Jul 2020 13:35:52 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Monthly reflection - June 2020]]></title>
+            <link>https://jackdomleo.dev/blog/monthly-reflection-june-2020</link>
+            <guid>https://jackdomleo.dev/blog/monthly-reflection-june-2020</guid>
+            <description><![CDATA[A reflection on my June 2020 of what I have done and achieved.]]></description>
+        </item>
         <item>
             <title><![CDATA[How I went from a Retail Assistant at 17 to Landing a Developer Role at 19]]></title>
             <link>https://jackdomleo.dev/blog/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19</link>
