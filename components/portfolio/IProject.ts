@@ -6,6 +6,7 @@ export default interface IProject {
   tech?: ITech[];
   url?: string;
   searchAliases?: string[];
+  // eslint-disable-next-line
 };
 
 export interface ITech {

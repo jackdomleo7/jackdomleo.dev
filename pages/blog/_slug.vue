@@ -39,8 +39,13 @@
 
 <script>
 import { format } from 'date-fns';
+import { Codepen } from '@/components';
 
 export default {
+  components: {
+    // eslint-disable-next-line
+    Codepen
+  },
   async asyncData ({ $content, params }) {
     const slug = params.slug || 'index';
     let page = await $content('blog', { deep: true })

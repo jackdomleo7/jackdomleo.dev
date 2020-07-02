@@ -66,71 +66,39 @@ I was given a FREE copy of [Responsive Web Design with HTML5 and CSS](https://ww
 
 First time using GSAP - a nice simple, cute smiley face spinning.
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="wvKLjVb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-preview="true" data-pen-title="Spinning Smiley Face - GSAP">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/wvKLjVb">
-  Spinning Smiley Face - GSAP</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="wvKLjVb" pen-title="Spinning Smiley Face - GSAP" click-to-load></codepen>
 
 ### Day/Night GSAP on CodePen
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="NWGQjvW" data-preview="true" data-pen-title="Day/Night - GSAP">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/NWGQjvW">
-  Day/Night - GSAP</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="NWGQjvW" pen-title="Day/Night - GSAP" click-to-load></codepen>
 
 ### Airplane Sequencing GSAP animation
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="ZEQzgLm" data-preview="true" data-pen-title="Airplane sequencing GSAP animation">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/ZEQzgLm">
-  Airplane sequencing GSAP animation</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="ZEQzgLm" pen-title="Airplane sequencing GSAP animation" click-to-load></codepen>
 
 ### Simple shapes with GSAP's SVG Morph plugin
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="abdbMwE" data-preview="true" data-preview="true" data-pen-title="Simple shapes morph SVG GSAP">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/abdbMwE">
-  Simple shapes morph SVG GSAP</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="abdbMwE" pen-title="Simple shapes morph SVG GSAP" click-to-load></codepen>
 
 ### My first attempt at my own #NoPreviewHtmlCss challenge on CodePen
 
 This was... interesting! You only realise once taking part in the challenge how difficult it actually is to not look at the preview while coding. But I'd like to say my first attempt was somewhat successful and will be trying again at some point.
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="yLeeJNZ" data-preview="true" data-pen-title="Neutral Emoji: #NoPreviewHtmlCss Challenge">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/yLeeJNZ">
-  Neutral Emoji: #NoPreviewHtmlCss Challenge</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="yLeeJNZ" pen-title="Neutral Emoji: #NoPreviewHtmlCss Challenge" click-to-load></codepen>
 
 ### Setting an undefined CSS variable using JS on CodePen
 
 This was requested by someone on Twitter (but I lost the tweet 🤦‍♂️).
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="xxZdajQ" data-preview="true" data-pen-title="Setting an undefined CSS Variable using JS">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/xxZdajQ">
-  Setting an undefined CSS Variable using JS</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="xxZdajQ" pen-title="Setting an undefined CSS Variable using JS" click-to-load></codepen>
 
 ### UK vs US traffic lights animation on CodePen
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="dyYxXMB" data-preview="true" data-pen-title="UK vs US Traffic Light Sequences - pure CSS">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/dyYxXMB">
-  UK vs US Traffic Light Sequences - pure CSS</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="dyYxXMB" pen-title="UK vs US Traffic Light Sequences - pure CSS" click-to-load></codepen>
 
 ### Pastel Hover Draw Pixel Art on CodePen
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="css,result" data-user="JackDomleo" data-slug-hash="zYvgrzG" data-preview="true" data-pen-title="Quick Draw! - Hover Pastel Pixel Art">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/zYvgrzG">
-  Quick Draw! - Hover Pastel Pixel Art</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="zYvgrzG" pen-title="Quick Draw! - Hover Pastel Pixel Art" click-to-load></codepen>
 
 ---
 
@@ -144,11 +112,7 @@ I've currently been learning [GSAP](https://greensock.com/gsap) and have honestl
 
 ### I reached 100+ followers on [CodePen](https://codepen.io/JackDomleo)
 
-<p class="codepen" data-height="300" data-theme-id="39164" data-default-tab="result" data-user="JackDomleo" data-slug-hash="bGEWPLy" data-preview="true" data-pen-title="100 followers - Thank you 🎉">
-  <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/bGEWPLy">
-  100 followers - Thank you 🎉</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+<codepen slug-hash="bGEWPLy" pen-title="100 followers - Thank you 🎉" click-to-load></codepen>
 
 ### DEV featured my article on Twitter
 

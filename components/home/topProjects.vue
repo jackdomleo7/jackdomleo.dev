@@ -13,32 +13,8 @@
       <project-card header="ellaparsons.design" description="A fully responsive portfolio website for Ella Parsons." url="https://ellaparsons.design" image="/img/projects/ellaparsons.png" image-alt="A screengrab on ellaparsons.design home page" />
     </div>
     <div class="top-codepens">
-      <p
-        class="codepen"
-        data-theme-id="39164"
-        data-default-tab="result"
-        data-user="JackDomleo"
-        data-slug-hash="mdeowoz"
-        data-preview="true"
-        data-pen-title="Neumorphic Design Elements"
-      >
-        <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/mdeowoz">
-          Neumorphic Design Elements</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-      <p
-        class="codepen"
-        data-theme-id="39164"
-        data-default-tab="result"
-        data-user="JackDomleo"
-        data-slug-hash="wvKLjVb"
-        data-preview="true"
-        data-pen-title="Spinning Smiley Face - GSAP"
-      >
-        <span>See the Pen <a href="https://codepen.io/JackDomleo/pen/wvKLjVb">
-          Spinning Smiley Face - GSAP</a> by Jack Domleo (<a href="https://codepen.io/JackDomleo">@JackDomleo</a>)
-          on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
+      <codepen slug-hash="mdeowoz" pen-title="Neumorphic Design Elements" click-to-load />
+      <codepen slug-hash="wvKLjVb" pen-title="Spinning Smiley Face - GSAP" click-to-load />
       <script async src="https://static.codepen.io/assets/embed/ei.js" />
     </div>
   </section>
@@ -46,10 +22,10 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import { Btn, ProjectCard } from '@/components';
+import { Btn, Codepen, ProjectCard } from '@/components';
 
 @Component({
-  components: { Btn, ProjectCard }
+  components: { Btn, Codepen, ProjectCard }
 })
 export default class TopProjects extends Vue {}
 </script>
