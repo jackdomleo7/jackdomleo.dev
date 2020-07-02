@@ -2,6 +2,7 @@
 title: How I went from a Retail Assistant at 17 to Landing a Developer Role at 19
 description: My journey to a developer is an alternative path to the norm. I'm going to share my journey so far with you in detail and offer my advice to new developers.
 date: 2020-06-19
+published: true
 twitterEmbed: true
 hashtags: ['Career', 'Developer', 'WebDeveloper', 'Journey']
 devtoLink: https://dev.to/jackdomleo7/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19-2p34

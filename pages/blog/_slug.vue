@@ -30,6 +30,7 @@
       </li>
     </ul>
     <p>{{ page.description }}</p>
+    <hr>
     <nuxt-content :document="page" />
     <script v-if="page.containsCodePen" async src="https://static.codepen.io/assets/embed/ei.js" />
     <script v-if="page.twitterEmbed" async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
