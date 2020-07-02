@@ -2,10 +2,10 @@
 title: Monthly reflection - June 2020
 description: A reflection on my June 2020 of what I have done and achieved.
 date: 2020-07-02
-published: false
-hashtags: ['reflection', 'career', 'progression']
+hashtags: ['reflection', 'career', 'progression', 'productivity']
 containsCodePen: true
 twitterEmbed: true
+devtoLink: https://dev.to/jackdomleo7/monthly-reflection-june-2020-1e4e
 ---
 
 ## What did I do? 💻

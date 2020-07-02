@@ -2,7 +2,6 @@
 title: Learning Neumorphic Design
 description: The awesome design trend that never took off! What are the fundamentals to neumorphic design?
 date: 2020-05-27
-published: true
 containsCodePen: true
 hashtags: ['Neumorphic', 'WebDesign', 'CSS']
 devtoLink: https://dev.to/jackdomleo7/learning-neumorphic-design-3dj8
