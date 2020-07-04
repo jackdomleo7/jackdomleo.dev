@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Thu, 02 Jul 2020 23:33:59 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 04 Jul 2020 20:52:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[A St-St-Stuttering Developer]]></title>
+            <link>https://jackdomleo.dev/blog/a-st-st-stuttering-developer</link>
+            <guid>https://jackdomleo.dev/blog/a-st-st-stuttering-developer</guid>
+            <description><![CDATA[Do you know someone who stutters? I stutter. My stutter doesn't hold me back from being a developer.]]></description>
+        </item>
         <item>
             <title><![CDATA[Monthly reflection - June 2020]]></title>
             <link>https://jackdomleo.dev/blog/monthly-reflection-june-2020</link>
