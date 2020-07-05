@@ -151,9 +151,9 @@ Porky Pig stutters because his voice actor stutters, [Joe Dougherty](https://en.
   <figcaption>Porkky Pig from Giphy https://media.giphy.com/media/xa5MHnjO4pxNC/giphy.gif</figcaption>
 </figure>
 
-### Fermat Hackenburger from Thunderbirds
+### Fermat Hackenbacker from Thunderbirds
 
-[Fermat Hackenbacke](https://thunderbirds.fandom.com/wiki/Fermat_Hackenbacker) is a fictional character from the TV show and movie, The Thunderbirds. I really like [this scene](https://www.youtube.com/watch?v=85PC8-fM49Y) between Fermat and his father, Brains.
+[Fermat Hackenbacker](https://thunderbirds.fandom.com/wiki/Fermat_Hackenbacker) is a fictional character from the TV show and movie, The Thunderbirds. I really like [this scene](https://www.youtube.com/watch?v=85PC8-fM49Y) between Fermat and his father, Brains.
 
 ### Samuel L. Jackson
 
