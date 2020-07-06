@@ -4,6 +4,7 @@ description: The hover CSS media feature can be used to test whether the user's 
 date: 2020-07-06
 containsCodePen: true
 hashtags: ['CSS', 'Media', FrontEnd]
+devtoLink: https://dev.to/jackdomleo7/media-hover-hover-css-media-query-5bge
 ---
 
 "The `hover` CSS media feature can be used to test whether the user's primary input mechanism can hover over elements." - [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover)
