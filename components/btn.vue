@@ -6,7 +6,7 @@
     <slot />
   </a>
   <input v-else-if="input" class="btn">
-  <button v-else class="btn" @click="click">
+  <button v-else class="btn" :class="showIconOnHover ? 'btn--show-icon-on-hover' : ''" @click="click">
     <slot />
   </button>
 </template>
@@ -24,6 +24,9 @@ export default class Btn extends Vue {
 
   @Prop({ type: Boolean, default: false })
   private readonly input!: boolean;
+
+  @Prop({ type: Boolean, default: false })
+  private readonly showIconOnHover!: boolean;
 
   @Emit()
   public click () {}
@@ -49,6 +52,37 @@ export default class Btn extends Vue {
   &:hover {
     background: var(--color-orange);
     color: var(--color-white);
+  }
+
+  &--show-icon-on-hover {
+    position: relative;
+    padding-right: 2.5rem;
+
+    svg {
+      height: 1.1rem;
+      width: 1.1rem;
+      position: absolute;
+      top: 50%;
+      right: 0.6rem;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (hover: hover) {
+      padding-right: 1.4rem;
+
+      svg {
+        opacity: 0;
+      }
+
+      &:hover {
+        padding-right: 2.5rem;
+
+        svg {
+          opacity: 1;
+          color: var(--color-white);
+        }
+      }
+    }
   }
 }
 </style>

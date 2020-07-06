@@ -10,7 +10,7 @@
       <textfield class="contact__email" label="Email" placeholder="dev.eloper@hey.com" name="Email" />
       <textfield class="contact__message" multiline label="Message" placeholder="Hi Jack! I'm contacting you today to say..." name="Message" />
 
-      <btn class="contact__btn" type="submit">
+      <btn class="contact__btn" type="submit" show-icon-on-hover>
         Send <svg-icon name="send" />
       </btn>
     </form>
@@ -54,26 +54,6 @@ export default class Contact extends Vue {}
   &__btn {
     grid-area: btn;
     justify-self: right;
-    position: relative;
-
-    svg {
-      height: 1.1rem;
-      width: 1.1rem;
-      position: absolute;
-      top: 50%;
-      right: 0.3rem;
-      opacity: 0;
-      transform: translate(-50%, -50%);
-      color: var(--color-white);
-    }
-
-    &:hover {
-      padding-right: 2.5rem;
-
-      svg {
-        opacity: 1;
-      }
-    }
   }
 }
 </style>
