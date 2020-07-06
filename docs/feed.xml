@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Mon, 06 Jul 2020 10:44:22 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Jul 2020 21:33:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[@media (hover: hover) - CSS Media Query]]></title>
+            <link>https://jackdomleo.dev/blog/hover-css-media-query</link>
+            <guid>https://jackdomleo.dev/blog/hover-css-media-query</guid>
+            <description><![CDATA[The hover CSS media feature can be used to test whether the user's primary input mechanism can hover over elements.]]></description>
+        </item>
         <item>
             <title><![CDATA[A St-St-Stuttering Developer]]></title>
             <link>https://jackdomleo.dev/blog/a-st-st-stuttering-developer</link>
