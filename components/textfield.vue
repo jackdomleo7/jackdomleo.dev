@@ -4,6 +4,7 @@
     <textarea v-if="multiline" v-model="inputValue" :placeholder="placeholder" :name="name" @input="onInput" />
     <input
       v-else
+      :id="inputId"
       v-model="inputValue"
       :type="type"
       :placeholder="placeholder"
@@ -53,6 +54,9 @@ export default class Textfield extends Vue {
   @Prop({ type: String, default: '' })
   private readonly name!: string;
 
+  @Prop({ type: String, default: '' })
+  private readonly inputId!: string;
+
   private _inputValue: string = '';
 
   get inputValue (): string {
@@ -96,6 +100,7 @@ export default class Textfield extends Vue {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
 
   span {
     margin-bottom: 0.25rem;

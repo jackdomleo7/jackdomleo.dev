@@ -5,6 +5,7 @@
   <a v-else-if="href" class="btn" :href="href" rel="nofollow noopener" target="_blank">
     <slot />
   </a>
+  <input v-else-if="input" class="btn">
   <button v-else class="btn" @click="click">
     <slot />
   </button>
@@ -20,6 +21,9 @@ export default class Btn extends Vue {
 
   @Prop({ type: String })
   private readonly href!: string;
+
+  @Prop({ type: Boolean, default: false })
+  private readonly input!: boolean;
 
   @Emit()
   public click () {}

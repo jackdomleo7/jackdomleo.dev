@@ -1,5 +1,6 @@
 <template>
   <footer class="footer">
+    <subscribe />
     <a class="footer__bmc" target="_blank" rel="nofollow" href="https://www.buymeacoffee.com/jackdomleo">
       <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
       <span>Buy me a coffee</span>
@@ -24,9 +25,12 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
+import Subscribe from '@/components/subscribe.vue';
 import SocialMedia, { ISocial } from '@/middleware/socialMedia';
 
-@Component
+@Component({
+  components: { Subscribe }
+})
 export default class TheFooter extends Vue {
   private get socialMedia (): ISocial[] {
     return SocialMedia.socialMedia;
