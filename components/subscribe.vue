@@ -1,5 +1,5 @@
 <template>
-  <section id="signup mc_embed_signup" class="signup">
+  <section id="signup" class="signup">
     <h2>Signup to my monthly newsletter</h2>
     <form
       id="mc-embedded-subscribe-form"
