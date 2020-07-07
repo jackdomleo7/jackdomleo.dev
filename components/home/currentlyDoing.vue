@@ -2,7 +2,7 @@
   <section id="what-im-currently-doing">
     <h2>What am I currently doing</h2>
     <ul class="currently">
-      <li><div>Furloughed 😷</div></li>
+      <li><div>Part-time furloughed 😷</div></li>
       <li>
         <div>
           🎓 Creating a Udemy course with <a href="https://twitter.com/NehemiahKiv" rel="nofollow noopener" target="_blank">Nehemiah</a> and <a href="https://twitter.com/anniebombanie_" rel="nofollow noopener" target="_blank">Annie</a>!
@@ -21,7 +21,7 @@
       </li>
       <li>
         <div>
-          Creating <a href="https://codepen.io/JackDomleo" rel="nofollow noopener" target="_blank">CodePens</a>
+          Doing <a href="https://javascript30.com" rel="nofollow noopener" target="_blank">JavaScript30</a>
         </div>
       </li>
     </ul>
