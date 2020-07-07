@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <subscribe />
-    <a class="footer__bmc" target="_blank" rel="nofollow" href="https://www.buymeacoffee.com/jackdomleo">
+    <a class="footer__bmc" target="_blank" rel="nofollow" href="https://www.buymeacoffee.com/jackdomleo7">
       <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
       <span>Buy me a coffee</span>
     </a>
