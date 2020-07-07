@@ -102,7 +102,7 @@ So, how do we cater for touch screen devices that can't hover? A common solution
   }
 
   .button:hover svg {
-    opacity: 0;
+    opacity: 1;
   }
 }
 ```
