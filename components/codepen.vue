@@ -22,7 +22,7 @@ export default class Codepen extends Vue {
   @Prop({ type: Boolean, default: false })
   private readonly clickToLoad!: boolean;
 
-  @Prop({ type: String, default: 'JackDomleo' })
+  @Prop({ type: String, default: 'jackdomleo7' })
   private readonly user!: string;
 
   @Prop({ type: String, required: true })

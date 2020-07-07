@@ -15,7 +15,7 @@ export default class SocialMedia {
     },
     {
       platform: 'CodePen',
-      url: 'https://codepen.io/JackDomleo'
+      url: 'https://codepen.io/jackdomleo7'
     },
     {
       platform: 'LinkedIn',
