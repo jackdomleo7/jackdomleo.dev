@@ -149,7 +149,7 @@ This is where our `hover` media query comes in. Let's take a look at how we can 
   }
 
   .button:hover svg {
-    opacity: 0;
+    opacity: 1;
   }
 }
 ```
