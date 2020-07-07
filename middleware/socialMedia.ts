@@ -19,7 +19,7 @@ export default class SocialMedia {
     },
     {
       platform: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/jack-domleo'
+      url: 'https://www.linkedin.com/in/jackdomleo7'
     },
     {
       platform: 'DEV',
