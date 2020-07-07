@@ -11,7 +11,7 @@
       <li><div>📚 Reading <a href="https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563" rel="nofollow noopener" target="_blank">Responsive Web Design with HTML5 and CSS</a> by <a href="https://benfrain.com" rel="nofollow noopener" target="_blank">Ben Frain</a></div></li>
       <li>
         <div>
-          Participating in the <a href="https://github.com/JDomleo/100-days-of-code" rel="nofollow noopener" target="_blank">100 Days of Code</a> challenge 💪
+          Participating in the <a href="https://github.com/jackdomleo7/100-days-of-code" rel="nofollow noopener" target="_blank">100 Days of Code</a> challenge 💪
         </div>
       </li>
       <li>

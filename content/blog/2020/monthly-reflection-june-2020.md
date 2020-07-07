@@ -58,7 +58,7 @@ I was given a FREE copy of [Responsive Web Design with HTML5 and CSS](https://ww
 - Created a [portfolio](https://ellaparsons.design/portfolio) page
 - Modified BIO and added an Apple MacBook memoji on the [bio](https://ellaparsons.design/bio) page
 
-### Released [v.1.6.2](https://github.com/JDomleo/Cooltipz.css/releases/tag/v1.6.2) of [Cooltipz.css](https://cooltipz.jackdomleo.dev)
+### Released [v.1.6.2](https://github.com/jackdomleo7/Cooltipz.css/releases/tag/v1.6.2) of [Cooltipz.css](https://cooltipz.jackdomleo.dev)
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;ve just released v1.6.2 of Cooltipz.css (a pure <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> tooltip library created by me).<br><br>A bug fix and dependency updates.<br><br>Changelog: <a href="https://t.co/xyI9xgvFdz">https://t.co/xyI9xgvFdz</a><br><br>Use it in your next project: <a href="https://t.co/el78B6z9ze">https://t.co/el78B6z9ze</a><a href="https://twitter.com/hashtag/cooltipzcss?src=hash&amp;ref_src=twsrc%5Etfw">#cooltipzcss</a></p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1275912967830351873?ref_src=twsrc%5Etfw">June 24, 2020</a></blockquote>
 

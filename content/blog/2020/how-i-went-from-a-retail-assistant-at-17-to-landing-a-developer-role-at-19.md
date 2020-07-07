@@ -87,7 +87,7 @@ My path after sixth form was not that of the norm. I ignored being told that I h
 
 If we did not choose the university path, we skewed the sixth form's statistics - when they sell the sixth form to new potential students, they often state, "_x_% of students go on to university and achieve great things" - _x_ was often a number greater than 85 - but they never ever told the success stories of those who did not choose the university path. I can conclude that their top priority was not students, but rather, statistics. However, I do thank those teachers who saw our side and arranged 'non-university' events, such as apprenticeship conventions, practise interviews and CV/resume workshops. 🙏
 
-It wasn't until my final year of A-Level that I realised that I wanted to pursue a career in software development. We were assigned a Python coursework project to create anything. We were told to find a client and create a specification for a program they might need. You can see my A-Level coursework project on GitHub [here](https://github.com/JDomleo/A-Level_Cashier_System) - please note, this project has been left 'as is' from the time I submitted it.
+It wasn't until my final year of A-Level that I realised that I wanted to pursue a career in software development. We were assigned a Python coursework project to create anything. We were told to find a client and create a specification for a program they might need. You can see my A-Level coursework project on GitHub [here](https://github.com/jackdomleo7/A-Level_Cashier_System) - please note, this project has been left 'as is' from the time I submitted it.
 
 #### Retail Assistant
 
@@ -143,7 +143,7 @@ I'm going to keep learning, keep pushing. I'm going to make sure I take breaks, 
 
 I am going to keep being enthusiastic and passionate about front-end development and hopefully land myself a well-paying job, but I won't stop there. _Why?_ **Don't cap your success!**
 
-I really enjoy [Twitter](https://twitter.com/jackdomleo7), [CodePen](https://codepen.io/JackDomleo), [LinkedIn](https://www.linkedin.com/in/jack-domleo), [DEV](https://dev.to/jackdomleo7) and [GitHub](https://github.com/JDomleo). I am determined to keep up my activity on those platforms, posting useful, inspiring tweets and creating some cool pens on CodePen. I am determined to become a better writer and write a lot more articles.
+I really enjoy [Twitter](https://twitter.com/jackdomleo7), [CodePen](https://codepen.io/JackDomleo), [LinkedIn](https://www.linkedin.com/in/jack-domleo), [DEV](https://dev.to/jackdomleo7) and [GitHub](https://github.com/jackdomleo7). I am determined to keep up my activity on those platforms, posting useful, inspiring tweets and creating some cool pens on CodePen. I am determined to become a better writer and write a lot more articles.
 
 However, my biggest goal in the online developer community is to help others become inspired. I want to prove that university is not the only way. There are multiple paths to becoming a developer, and we would all love you to **share your story!**
 

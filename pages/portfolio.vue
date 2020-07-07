@@ -47,7 +47,7 @@ export default class Index extends Vue {
     },
     {
       name: 'My GitHub',
-      url: 'https://github.com/JDomleo'
+      url: 'https://github.com/jackdomleo7'
     },
     {
       name: 'My CodePen',

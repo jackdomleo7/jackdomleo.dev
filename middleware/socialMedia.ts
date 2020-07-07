@@ -11,7 +11,7 @@ export default class SocialMedia {
     },
     {
       platform: 'GitHub',
-      url: 'https://github.com/JDomleo'
+      url: 'https://github.com/jackdomleo7'
     },
     {
       platform: 'CodePen',

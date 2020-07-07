@@ -3,7 +3,7 @@
     <p>This page only lists <em>some</em> of my projects. You can:</p>
     <ul class="more-projects">
       <li aria-setsize="2" aria-posinset="1" class="box">
-        <a href="https://github.com/JDomleo" rel="nofollow noopener" target="_blank">
+        <a href="https://github.com/jackdomleo7" rel="nofollow noopener" target="_blank">
           <svg-icon name="github" />
           <span>View more projects on GitHub</span>
         </a>
