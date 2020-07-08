@@ -143,7 +143,7 @@ I'm going to keep learning, keep pushing. I'm going to make sure I take breaks, 
 
 I am going to keep being enthusiastic and passionate about front-end development and hopefully land myself a well-paying job, but I won't stop there. _Why?_ **Don't cap your success!**
 
-I really enjoy [Twitter](https://twitter.com/jackdomleo7), [CodePen](https://codepen.io/JackDomleo), [LinkedIn](https://www.linkedin.com/in/jack-domleo), [DEV](https://dev.to/jackdomleo7) and [GitHub](https://github.com/jackdomleo7). I am determined to keep up my activity on those platforms, posting useful, inspiring tweets and creating some cool pens on CodePen. I am determined to become a better writer and write a lot more articles.
+I really enjoy [Twitter](https://twitter.com/jackdomleo7), [CodePen](https://codepen.io/jackdomleo7), [LinkedIn](https://www.linkedin.com/in/jackdomleo7), [DEV](https://dev.to/jackdomleo7) and [GitHub](https://github.com/jackdomleo7). I am determined to keep up my activity on those platforms, posting useful, inspiring tweets and creating some cool pens on CodePen. I am determined to become a better writer and write a lot more articles.
 
 However, my biggest goal in the online developer community is to help others become inspired. I want to prove that university is not the only way. There are multiple paths to becoming a developer, and we would all love you to **share your story!**
 
