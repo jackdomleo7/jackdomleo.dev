@@ -66,7 +66,6 @@ export default class ProjectCard extends Vue {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
-  overflow: hidden;
 
   &__content {
     margin: 1rem;

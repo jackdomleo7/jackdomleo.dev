@@ -7,7 +7,7 @@
       </nuxt-link>.
     </p>
     <div class="projects">
-      <project-card header="#NoPreviewHtmlCss" description="A new developer challenge I created where participants have to create something in HTML and CSS but they can't see the preview until they are finished." url="https://twitter.com/jackdomleo7/status/1270039382528065538" image="/img/projects/nopreviewhtmlcss.png" image-alt="#NoPreviewHtmlCss logo" />
+      <project-card header="Twitter bot for #NoPreviewHtmlCss: The Challenge" description="A Twitter bot to like and retweet tweets containing the #NoPreviewHtmlCss hashtag." url="https://twitter.com/NoPreviewHtmlCs" image="/img/projects/twitter-bot-nopreviewhtmlcss.png" image-alt="#NoPreviewHtmlCss Twitter bot logo" />
       <project-card header="Cooltipz.css" description="A pure CSS library to help add customisable, accessible tooltips to HTML, available on npm, yarn and CDN." url="https://cooltipz.jackdomleo.dev" image="/img/projects/cooltipz.png" image-alt="Cooltipz.css logo" />
       <project-card header="www.tmdip.co.uk" description="A fully responsive website for TMD Interior Projects &amp; Building Services Ltd." url="https://www.tmdip.co.uk" image="/img/projects/tmdip.png" image-alt="A screengrab on www.tmdip.co.uk home page" />
       <project-card header="ellaparsons.design" description="A fully responsive portfolio website for Ella Parsons." url="https://ellaparsons.design" image="/img/projects/ellaparsons.png" image-alt="A screengrab on ellaparsons.design home page" />

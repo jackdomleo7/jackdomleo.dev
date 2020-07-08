@@ -43,7 +43,20 @@ export default class FeaturedProjects extends Vue {
 
   private readonly projects: IProject[] = [
     {
-      name: '#NoPreviewHtmlCss',
+      name: 'Twitter bot for #NoPreviewHtmlCss: The Challenge',
+      url: 'https://twitter.com/NoPreviewHtmlCs',
+      image: 'twitter-bot-nopreviewhtmlcss',
+      imageAlt: '#NoPreviewHtmlCss Twitter bot logo',
+      tech: [
+        { name: 'TypeScript', icon: 'typescript' },
+        { name: 'Heroku', icon: 'heroku' },
+        { name: 'Git', icon: 'git' }
+      ],
+      description: 'A Twitter bot to like and retweet tweets containing the #NoPreviewHtmlCss hashtag.',
+      searchAliases: ['challenge']
+    },
+    {
+      name: '#NoPreviewHtmlCss: The Challenge',
       url: 'https://twitter.com/jackdomleo7/status/1270039382528065538',
       image: 'nopreviewhtmlcss',
       imageAlt: '#NoPreviewHtmlCss logo',
