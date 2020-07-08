@@ -27,7 +27,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg-sprite": "^0.4.11",
     "autoprefixer": "^9.8.4",
-    "cooltipz-css": "^1.6.2",
+    "cooltipz-css": "^1.6.4",
     "cssnano": "^4.1.10",
     "date-fns": "^2.14.0",
     "node-sass": "^4.14.1",

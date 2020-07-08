@@ -9,7 +9,7 @@
         </a>
       </li>
       <li aria-setsize="2" aria-posinset="2" class="box">
-        <a href="https://codepen.io/JackDomleo" rel="nofollow noopener" target="_blank">
+        <a href="https://codepen.io/jackdomleo7" rel="nofollow noopener" target="_blank">
           <svg-icon name="codepen" />
           <span>View more projects on CodePen</span>
         </a>
