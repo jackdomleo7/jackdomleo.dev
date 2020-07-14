@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Sat, 11 Jul 2020 22:35:41 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Jul 2020 23:22:35 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Focused Creativity - Don't Lose Focus]]></title>
+            <link>https://jackdomleo.dev/blog/focused-creativity-dont-lose-focus</link>
+            <guid>https://jackdomleo.dev/blog/focused-creativity-dont-lose-focus</guid>
+            <description><![CDATA[There is no official definition of 'focused creativity', but this is what I define 'focused creativity' as...]]></description>
+        </item>
         <item>
             <title><![CDATA[@media (hover: hover) - CSS Media Query]]></title>
             <link>https://jackdomleo.dev/blog/hover-css-media-query</link>
