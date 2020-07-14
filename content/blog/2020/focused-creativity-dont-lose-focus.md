@@ -3,6 +3,7 @@ title: Focused Creativity - Don't Lose Focus
 description: There is no official definition of 'focused creativity', but this is what I define 'focused creativity' as...
 date: 2020-07-15
 hashtags: ['Creativity', 'Productivity', 'Career']
+devtoLink: https://dev.to/jackdomleo7/focused-creativity-don-t-lose-focus-2ij9
 ---
 
 > Focused creativity is the act of limiting some bounds to focus on one or a few aspects of a particular area.
