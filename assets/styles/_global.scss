@@ -123,6 +123,14 @@ pre {
   }
 }
 
+ul {
+  padding-left: 1.5rem;
+
+  @media (min-width: 30em) {
+    padding-left: 2.5rem;
+  }
+}
+
 li {
   line-height: 1.5;
 }
