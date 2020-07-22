@@ -13,8 +13,8 @@
       <project-card header="ellaparsons.design" description="A fully responsive portfolio website for Ella Parsons." url="https://ellaparsons.design" image="/img/projects/ellaparsons.png" image-alt="A screengrab on ellaparsons.design home page" />
     </div>
     <div class="top-codepens">
-      <codepen slug-hash="mdeowoz" pen-title="Neumorphic Design Elements" click-to-load />
-      <codepen slug-hash="wvKLjVb" pen-title="Spinning Smiley Face - GSAP" click-to-load />
+      <codepen slug-hash="mdeowoz" pen-title="Neumorphic Design Elements" />
+      <codepen slug-hash="wvKLjVb" pen-title="Spinning Smiley Face - GSAP" />
       <script async src="https://static.codepen.io/assets/embed/ei.js" />
     </div>
   </section>
