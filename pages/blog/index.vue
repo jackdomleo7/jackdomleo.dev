@@ -24,7 +24,14 @@
         placeholder="Search..."
         @input="filterArticles"
       />
-      <selectfield v-model="selected" class="filter__filter" label="Quick filter" :options="filterOptions" @change="getArticles()" />
+      <selectfield
+        id="filter"
+        v-model="selected"
+        class="filter__filter"
+        label="Quick filter"
+        :options="filterOptions"
+        @change="getArticles()"
+      />
     </div>
     <articles-list :articles="filteredArticles" :loading="{ loading: articlesLoading, skeletonCount: 3 }" />
   </page-template>
@@ -62,29 +69,22 @@ export default class Index extends Vue {
       text: 'All'
     },
     {
-      value: 'AboutMe',
+      value: 'aboutme',
       text: 'About me'
     },
     {
-      value: 'MonthlyReflection',
+      value: 'monthlyreflection',
       text: 'Monthly Reflection'
     },
     {
-      value: 'Event',
+      value: 'event',
       text: 'Event'
     },
     {
-      value: 'Career',
+      value: 'career',
       text: 'Career'
     }
   ];
-
-  fetch () {
-    this.articlesLoading = true;
-    this.getArticles();
-    this.filterArticles();
-    this.articlesLoading = false;
-  }
 
   private filterArticles () {
     if (this.articleSearch === '') {
@@ -103,7 +103,7 @@ export default class Index extends Vue {
       Search.fuzzySearch(format(Date.parse(String(article.date)), 'yyyy-MM-dd'), this.articleSearch) ||
       Search.fuzzySearch(article.readingTime, this.articleSearch) ||
       Search.fuzzySearch(`${article.readingTime} minutes`, this.articleSearch) ||
-      Search.fuzzySearch(article.hashtags.join(' '), this.articleSearch)
+      Search.fuzzySearch(article.hashtags ? article.hashtags.join(' ') : '', this.articleSearch)
     );
   }
 
@@ -111,10 +111,25 @@ export default class Index extends Vue {
     this.articlesLoading = true;
     const articleProperties: string[] = ['title', 'date', 'slug', 'description', 'readingTime', 'hashtags'];
     if (this.selected) {
-      this.articles = await this.$content('blog', { deep: true }).only(articleProperties).sortBy('date', 'desc').where({ hashtags: { $contains: [this.selected] } }).fetch();
+      this.articles = await this.$content('blog', { deep: true }).only(articleProperties).sortBy('date', 'desc').where({ hashtags: { $contains: [this.selected.toLowerCase()] } }).fetch();
     } else {
       this.articles = await this.$content('blog', { deep: true }).only(articleProperties).sortBy('date', 'desc').fetch();
     }
+    this.filterArticles();
+    this.articlesLoading = false;
+  }
+
+  private mounted () {
+    if (typeof (this.$route.query.filter) === 'string') {
+      this.selected = this.$route.query.filter;
+    }
+
+    if (typeof (this.$route.query.search) === 'string') {
+      this.articleSearch = this.$route.query.search;
+    }
+
+    this.articlesLoading = true;
+    this.getArticles();
     this.filterArticles();
     this.articlesLoading = false;
   }

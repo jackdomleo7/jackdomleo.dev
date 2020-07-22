@@ -12,15 +12,6 @@
     <hr>
     <work />
     <hr>
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <p>
-        You can find my official portfolio <nuxt-link to="/portfolio">
-          here
-        </nuxt-link>
-      </p>
-    </section>
-    <hr>
     <contact />
   </page-template>
 </template>

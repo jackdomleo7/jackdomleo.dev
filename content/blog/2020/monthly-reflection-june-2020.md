@@ -2,7 +2,7 @@
 title: Monthly reflection - June 2020
 description: A reflection on my June 2020 of what I have done and achieved. Made a lot of change and additions to my website and was able to write some articles...
 date: 2020-07-02
-hashtags: ['MonthlyReflection']
+hashtags: ['monthlyreflection']
 containsCodePen: true
 twitterEmbed: true
 devtoLink: https://dev.to/jackdomleo7/monthly-reflection-june-2020-1e4e
