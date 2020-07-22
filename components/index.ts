@@ -9,5 +9,6 @@ import Btn from './btn.vue';
 import Codepen from './codepen.vue';
 import ProjectCard from './projectCard.vue';
 import Textfield from './textfield.vue';
+import Selectfield from './formfields/selectfield.vue';
 
-export { Navbar, PageTemplate, TheFooter, Subscribe, Btn, Codepen, ProjectCard, Textfield };
+export { Navbar, PageTemplate, TheFooter, Subscribe, Btn, Codepen, ProjectCard, Textfield, Selectfield };
