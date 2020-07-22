@@ -52,19 +52,7 @@ export default class FeaturedProjects extends Vue {
         { name: 'Heroku', icon: 'heroku' },
         { name: 'Git', icon: 'git' }
       ],
-      description: 'A Twitter bot to like and retweet tweets containing the #NoPreviewHtmlCss hashtag.',
-      searchAliases: ['challenge']
-    },
-    {
-      name: '#NoPreviewHtmlCss: The Challenge',
-      url: 'https://twitter.com/jackdomleo7/status/1270039382528065538',
-      image: 'nopreviewhtmlcss',
-      imageAlt: '#NoPreviewHtmlCss logo',
-      tech: [
-        { name: 'HTML5', icon: 'html' },
-        { name: 'CSS', icon: 'css' }
-      ],
-      description: 'A new developer challenge I created where participants have to create something in HTML and CSS but they can\'t see the preview until they are finished.',
+      description: 'A Twitter bot to autonomously like and retweet tweets containing the #NoPreviewHtmlCss hashtag.',
       searchAliases: ['challenge']
     },
     {

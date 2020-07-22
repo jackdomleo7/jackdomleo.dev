@@ -3,7 +3,7 @@ title: All Day Hey! 2020
 description: All Day Hey 2020 was an online conference for front-end developers and designers and I thought it was fantastic and educational!
 date: 2020-05-14
 containsCodePen: true
-hashtags: ['AllDayHey', 'FrontEnd']
+hashtags: ['alldayhey', 'event']
 devtoLink: https://dev.to/jackdomleo7/all-day-hey-2020-3ek
 ---
 

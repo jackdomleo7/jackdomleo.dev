@@ -5,23 +5,13 @@
       <li><div>Part-time furloughed 😷</div></li>
       <li>
         <div>
-          🎓 Creating a Udemy course with <a href="https://twitter.com/NehemiahKiv" rel="nofollow noopener" target="_blank">Nehemiah</a> and <a href="https://twitter.com/anniebombanie_" rel="nofollow noopener" target="_blank">Annie</a>!
+          🎓 Creating a course with <a href="https://twitter.com/NehemiahKiv" rel="nofollow noopener" target="_blank">Nehemiah</a> and <a href="https://twitter.com/anniebombanie_" rel="nofollow noopener" target="_blank">Annie</a>!
         </div>
       </li>
-      <li><div>📚 Reading <a href="https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563" rel="nofollow noopener" target="_blank">Responsive Web Design with HTML5 and CSS</a> by <a href="https://benfrain.com" rel="nofollow noopener" target="_blank">Ben Frain</a></div></li>
+      <li><div>📚 Reading <a href="https://amzn.to/2X1xz9t" rel="nofollow noopener" target="_blank">Responsive Web Design with HTML5 and CSS</a> by <a href="https://benfrain.com" rel="nofollow noopener" target="_blank">Ben Frain</a></div></li>
       <li>
         <div>
           Participating in the <a href="https://github.com/jackdomleo7/100-days-of-code" rel="nofollow noopener" target="_blank">100 Days of Code</a> challenge 💪
-        </div>
-      </li>
-      <li>
-        <div>
-          Learning <a href="https://greensock.com/gsap" rel="nofollow noopener" target="_blank">GSAP</a>
-        </div>
-      </li>
-      <li>
-        <div>
-          Doing <a href="https://javascript30.com" rel="nofollow noopener" target="_blank">JavaScript30</a>
         </div>
       </li>
     </ul>

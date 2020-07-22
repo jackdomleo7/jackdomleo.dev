@@ -1,17 +1,17 @@
 <template>
   <page-template page-title="Projects">
-    <p>This page only lists <em>some</em> of my projects. You can:</p>
+    <p>This page only lists <em>some</em> of my best projects. You can:</p>
     <ul class="more-projects">
       <li aria-setsize="2" aria-posinset="1" class="box">
         <a href="https://github.com/jackdomleo7" rel="nofollow noopener" target="_blank">
           <svg-icon name="github" />
-          <span>View more projects on GitHub</span>
+          <span>View larger projects on GitHub</span>
         </a>
       </li>
       <li aria-setsize="2" aria-posinset="2" class="box">
         <a href="https://codepen.io/jackdomleo7" rel="nofollow noopener" target="_blank">
           <svg-icon name="codepen" />
-          <span>View more projects on CodePen</span>
+          <span>View smaller projects on CodePen</span>
         </a>
       </li>
     </ul>

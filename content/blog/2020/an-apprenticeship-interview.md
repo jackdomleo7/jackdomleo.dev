@@ -3,7 +3,7 @@ title: An Apprenticeship Interview
 description: Applying for a developer interview can be tough! I have listed some example questions and some tips & tricks to help you land your apprenticeship role!
 date: 2020-07-18
 twitterEmbed: true
-hashtags: ['Interview', 'Career']
+hashtags: ['career']
 devtoLink: https://dev.to/jackdomleo7/an-apprenticeship-interview-3437
 ---
 
