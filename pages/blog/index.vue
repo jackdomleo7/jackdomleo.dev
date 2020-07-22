@@ -24,7 +24,7 @@
         placeholder="Search..."
         @input="filterArticles"
       />
-      <selectfield v-model="selected" class="filter__filter" label="Filter articles" :options="filterOptions" @change="getArticles()" />
+      <selectfield v-model="selected" class="filter__filter" label="Quick filter" :options="filterOptions" @change="getArticles()" />
     </div>
     <articles-list :articles="filteredArticles" :loading="{ loading: articlesLoading, skeletonCount: 3 }" />
   </page-template>
@@ -56,7 +56,28 @@ export default class Index extends Vue {
   private articlesLoading: boolean = false;
   private selected: string = '';
 
-  private readonly filterOptions: any[] = [{ value: '', text: 'All' }, { value: 'AboutMe', text: 'About me' }];
+  private readonly filterOptions: any[] = [
+    {
+      value: '',
+      text: 'All'
+    },
+    {
+      value: 'AboutMe',
+      text: 'About me'
+    },
+    {
+      value: 'MonthlyReflection',
+      text: 'Monthly Reflection'
+    },
+    {
+      value: 'Event',
+      text: 'Event'
+    },
+    {
+      value: 'Career',
+      text: 'Career'
+    }
+  ];
 
   fetch () {
     this.articlesLoading = true;

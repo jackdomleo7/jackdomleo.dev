@@ -11,7 +11,7 @@
       </li>
       <li><span>{{ page.readingTime }} {{ page.readingTime === 1 ? 'minute' : 'minutes' }} read</span></li>
     </ul>
-    <ul class="blog__hashtags">
+    <ul v-if="blog.hashtags" class="blog__hashtags">
       <li v-for="(tag, index) in page.hashtags" :key="tag" :aria-setsize="page.hashtags.length" :aria-posinset="index + 1">
         <i>#{{ tag }}</i>
       </li>

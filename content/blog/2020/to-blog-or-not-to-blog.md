@@ -2,7 +2,7 @@
 title: To Blog or Not to Blog
 description: Writing a blog can be daunting and scary for anyone. The thought of criticism and humiliation crosses your mind. What convinced me to write a blog and why do I recommend it to others?
 date: 2020-05-13
-hashtags: ['Blog', 'Developer', 'WebDeveloper', 'Career']
+hashtags: ['Career', 'AboutMe']
 devtoLink: https://dev.to/jackdomleo7/to-blog-or-not-to-blog-3npp
 ---
 

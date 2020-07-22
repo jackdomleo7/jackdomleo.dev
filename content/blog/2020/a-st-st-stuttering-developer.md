@@ -2,7 +2,7 @@
 title: A St-St-Stuttering Developer
 description: Do you know someone who stutters? I stutter. My stutter doesn't hold me back from being a developer.
 date: 2020-07-04
-hashtags: ['Stutter', 'Career']
+hashtags: ['AboutMe']
 devtoLink: https://dev.to/jackdomleo7/a-st-st-stuttering-developer-lg7
 ---
 

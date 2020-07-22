@@ -29,7 +29,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import Btn from '@/components/btn.vue';
-import Textfield from '@/components/textfield.vue';
+import Textfield from '@/components/formfields/textfield.vue';
 
 @Component({
   components: { Btn, Textfield }
