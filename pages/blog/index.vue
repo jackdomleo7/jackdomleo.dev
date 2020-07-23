@@ -59,7 +59,7 @@ export default class Index extends Vue {
   private articles: object[] = [];
   private filteredArticles: object[] = [];
   private articleSearch: string = '';
-  private articlesLoading: boolean = false;
+  private articlesLoading: boolean = true;
   private selected: string = '';
 
   private readonly filterOptions: any[] = [
@@ -127,10 +127,8 @@ export default class Index extends Vue {
       this.articleSearch = this.$route.query.search;
     }
 
-    this.articlesLoading = true;
     this.getArticles();
     this.filterArticles();
-    this.articlesLoading = false;
   }
 }
 </script>
