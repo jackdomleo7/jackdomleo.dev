@@ -2,7 +2,7 @@
   <page-template page-title="Portfolio">
     <p>You found one of my easter egg pages! 👏</p>
     <p>I often question what is considered to be a developer's portfolio, here is my answer.</p>
-    <p>I consider my portfolio to be everything I have done tech related, however, to be a marketable employee, a hiring manager or recruiter only has time for maybe 2 of the followig:</p>
+    <p>I consider my portfolio to be everything I have done tech-related, however, to be a marketable employee, a hiring manager or recruiter only has time for maybe 2 of the following:</p>
     <ul>
       <li>Your CV/resume</li>
       <li>Your <a href="https://linkedin.com" target="_blank" rel="nofollow noopener">LinkedIn</a> profile</li>

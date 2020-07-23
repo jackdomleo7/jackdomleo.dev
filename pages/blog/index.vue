@@ -25,7 +25,6 @@
         @input="filterArticles"
       />
       <selectfield
-        id="filter"
         v-model="selected"
         class="filter__filter"
         label="Quick filter"
@@ -163,10 +162,10 @@ export default class Index extends Vue {
   }
 
   &__filter {
-    width: 50%;
+    width: 50% !important;
 
     @media (min-width: 40em) {
-      width: 25%;
+      width: 25% !important;
     }
   }
 }
