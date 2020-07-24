@@ -50,7 +50,7 @@ export default {
     const slug = params.slug || 'index';
     let page = await $content('blog', { deep: true })
       .where({ slug })
-      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen', 'hashtags', 'twitterEmbed', 'devtoLink'])
+      .only(['title', 'date', 'slug', 'description', 'readingTime', 'body', 'containsCodePen', 'hashtags', 'twitterEmbed', 'twitterVia', 'devtoLink'])
       .fetch();
     page = page[0];
 
@@ -70,7 +70,7 @@ export default {
       return [
         {
           platform: 'Twitter',
-          url: `https://twitter.com/intent/tweet?text=${this.page.title}&via=jackdomleo7&url=https://jackdomleo.dev${this.$route.path}`
+          url: `https://twitter.com/intent/tweet?text=${this.page.title}&via=jackdomleo7${this.page.twitterVia ? ', @' + this.page.twitterVia.join(', @') : ''}&url=https://jackdomleo.dev${this.$route.path}`
         },
         {
           platform: 'LinkedIn',

@@ -76,12 +76,16 @@ export default class Index extends Vue {
       text: 'Monthly Reflection'
     },
     {
-      value: 'event',
-      text: 'Event'
-    },
-    {
       value: 'career',
       text: 'Career'
+    },
+    {
+      value: 'books',
+      text: 'Books'
+    },
+    {
+      value: 'event',
+      text: 'Event'
     }
   ];
 
