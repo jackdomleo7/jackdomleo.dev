@@ -27,7 +27,7 @@ Catalin's book was incredibly useful in helping me maintain my presence and I ha
 
 It's jam-packed with useful tips that _could_ help anyone on Twitter and LinkedIn!
 
-What does it for, is Catalin's tone throughout the book: It's written in a way where he is describing what worked for him and it's got that warm feeling to keep you motivated!
+What does it for me, is Catalin's tone throughout the book: It's written in a way where he is describing what worked for him and it's got that warm feeling to keep you motivated!
 
 I hope [this book](https://gumroad.com/a/875132019) helps you find new friends and lots of opportunities!! 🔥
 
