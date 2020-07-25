@@ -4,6 +4,7 @@ description: I was looking forward to this book because I love HTML and CSS. Res
 date: 2020-07-25
 hashtags: ['books']
 twitterEmbed: true
+devtoLink: https://dev.to/jackdomleo7/book-review-responsive-web-design-with-html5-and-css-by-ben-frain-oo7
 ---
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today I start reading a new book by <a href="https://twitter.com/benfrain?ref_src=twsrc%5Etfw">@benfrain</a> &quot;Responsive Web Design with HTML5 and CSS&quot;. (<a href="https://twitter.com/RavitJain?ref_src=twsrc%5Etfw">@RavitJain</a>, <a href="https://twitter.com/PacktPub?ref_src=twsrc%5Etfw">@PacktPub</a>)<a href="https://amzn.to/2X1xz9t">https://amzn.to/2X1xz9t</a><br><br>This book seems really up my street focusing on <a href="https://twitter.com/hashtag/FrontEnd?src=hash&amp;ref_src=twsrc%5Etfw">#FrontEnd</a>, <a href="https://twitter.com/hashtag/HTML?src=hash&amp;ref_src=twsrc%5Etfw">#HTML</a> &amp; <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a>. 🌟<br><br>What are you reading? 🤔<a href="https://twitter.com/hashtag/rwd?src=hash&amp;ref_src=twsrc%5Etfw">#rwd</a> <a href="https://twitter.com/hashtag/svg?src=hash&amp;ref_src=twsrc%5Etfw">#svg</a> <a href="https://t.co/lHZNlr80TJ">pic.twitter.com/lHZNlr80TJ</a></p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1273179565708500995?ref_src=twsrc%5Etfw">June 17, 2020</a></blockquote>
