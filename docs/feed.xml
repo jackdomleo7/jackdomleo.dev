@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Sat, 25 Jul 2020 19:12:23 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 25 Jul 2020 19:44:14 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Book Review: "Responsive Web Design with HTML5 and CSS" by Ben Frain]]></title>
+            <link>https://jackdomleo.dev/blog/book-review-responsive-web-design-with-html5-and-css-by-ben-frain</link>
+            <guid>https://jackdomleo.dev/blog/book-review-responsive-web-design-with-html5-and-css-by-ben-frain</guid>
+            <description><![CDATA[I was looking forward to this book because I love HTML and CSS. Responsive web design is something I've been really passionate about...]]></description>
+        </item>
         <item>
             <title><![CDATA[Book Review: "Building an Online Presence" by Catalin Pit]]></title>
             <link>https://jackdomleo.dev/blog/book-review-building-an-online-presence-by-catalin-pit</link>

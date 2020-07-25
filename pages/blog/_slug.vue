@@ -90,6 +90,12 @@ export default {
           content: `${process.env.BASE_URL}${this.$route.path}${this.$route.path.endsWith('/') ? '' : '/'}og.png`
         },
         {
+          hid: 'og:image:alt',
+          name: 'og:image:alt',
+          property: 'og:image:alt',
+          content: `Article cover: ${this.$route.title}`
+        },
+        {
           hid: 'og:title',
           name: 'og:title',
           property: 'og:title',
