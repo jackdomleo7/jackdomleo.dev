@@ -4,7 +4,7 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Sat, 25 Jul 2020 19:54:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jul 2020 01:13:17 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
@@ -14,7 +14,7 @@
             <description><![CDATA[I was looking forward to this book because I love HTML and CSS. Responsive web design is something I've been really passionate about...]]></description>
         </item>
         <item>
-            <title><![CDATA[Book Review: "Building an Online Presence" by Catalin Pit]]></title>
+            <title><![CDATA[Book Review: "Improve Your Online Presence" by Catalin Pit]]></title>
             <link>https://jackdomleo.dev/blog/book-review-building-an-online-presence-by-catalin-pit</link>
             <guid>https://jackdomleo.dev/blog/book-review-building-an-online-presence-by-catalin-pit</guid>
             <description><![CDATA[I was excited to read this book because I've been looking at how I could improve my online presence.]]></description>

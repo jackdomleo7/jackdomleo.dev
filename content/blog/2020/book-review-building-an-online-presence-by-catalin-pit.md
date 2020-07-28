@@ -1,10 +1,10 @@
 ---
-title: 'Book Review: "Building an Online Presence" by Catalin Pit'
+title: 'Book Review: "Improve Your Online Presence" by Catalin Pit'
 description: I was excited to read this book because I've been looking at how I could improve my online presence.
 date: 2020-07-24
 hashtags: ['books']
 twitterEmbed: true
-twitterVia: ['catalinpit']
+twitterVia: ['catalinmpit']
 devtoLink: https://dev.to/jackdomleo7/book-review-improve-your-online-presence-by-catalin-pit-5fli
 ---
 
@@ -36,3 +36,7 @@ I hope [this book](https://gumroad.com/a/875132019) helps you find new friends a
 [Buy this book on Gumroad](https://gumroad.com/a/875132019)
 
 [![Building an Online Presence image](/blog/book-review-building-an-online-presence-by-catalin-pit/catalin-pit-book-cover.jpg)](https://gumroad.com/a/875132019)
+
+---
+
+If you are also looking for a course on this topic that will help your techniques to grow your Twitter following, go take a look at [How to get followers on Twitter](https://gumroad.com/a/581530739) by [Danny Thompson](https://twitter.com/DThompsonDev). 💪
