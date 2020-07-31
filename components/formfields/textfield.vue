@@ -86,7 +86,7 @@ export default class Textfield extends Vue {
 <style lang="scss">
 :root {
   --textfield-placeholder: #eee;
-  --textfield-bg: rgba(255, 255, 255, 0.05);
+  --textfield-bg: #444;
 }
 
 .theme--light {

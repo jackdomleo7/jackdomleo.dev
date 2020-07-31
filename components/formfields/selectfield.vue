@@ -31,7 +31,7 @@ export default class Selectfield extends Vue {
 <style lang="scss">
 :root {
   --selectfield-placeholder: #eee;
-  --selectfield-bg: rgba(255, 255, 255, 0.05);
+  --selectfield-bg: #444;
 }
 
 .theme--light {
