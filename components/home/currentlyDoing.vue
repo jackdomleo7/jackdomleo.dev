@@ -3,15 +3,25 @@
     <h2>What am I currently doing</h2>
     <ul class="currently">
       <li><div>Part-time furloughed 😷</div></li>
+      <li><div>📚 Reading <a href="https://randallkanna.com/the-standout-developer" rel="nofollow noopener" target="_blank">The Standout Developer</a> by <a href="https://twitter.com/RandallKanna" rel="nofollow noopener" target="_blank">Randall Kanna</a></div></li>
       <li>
         <div>
           🎓 Creating a course with <a href="https://twitter.com/NehemiahKiv" rel="nofollow noopener" target="_blank">Nehemiah</a> and <a href="https://twitter.com/anniebombanie_" rel="nofollow noopener" target="_blank">Annie</a>!
         </div>
       </li>
-      <li><div>📚 Reading <a href="https://amzn.to/2X1xz9t" rel="nofollow noopener" target="_blank">Responsive Web Design with HTML5 and CSS</a> by <a href="https://benfrain.com" rel="nofollow noopener" target="_blank">Ben Frain</a></div></li>
+      <li>
+        <div>
+          Writing an eBook 📱
+        </div>
+      </li>
       <li>
         <div>
           Participating in the <a href="https://github.com/jackdomleo7/100-days-of-code" rel="nofollow noopener" target="_blank">100 Days of Code</a> challenge 💪
+        </div>
+      </li>
+      <li>
+        <div>
+          Loving life 🏖
         </div>
       </li>
     </ul>
