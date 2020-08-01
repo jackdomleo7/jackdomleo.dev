@@ -5,6 +5,7 @@ date: 2020-08-01
 hashtags: ['course']
 twitterEmbed: true
 twitterVia: ['DThompsonDev']
+devtoLink: https://dev.to/jackdomleo7/course-review-create-your-following-by-danny-thompson-58i7
 ---
 
 [Create Your Following](https://gumroad.com/a/581530739) by [Danny Thompson](https://twitter.com/DThompsonDev).
