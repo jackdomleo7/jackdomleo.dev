@@ -5,7 +5,7 @@ date: 2020-08-01
 hashtags: ['monthlyreflection']
 containsCodePen: true
 twitterEmbed: true
-devtoLink: https://dev.to/jackdomleo7/monthly-reflection-july-2020-10og
+devtoLink: https://dev.to/jackdomleo7/monthly-reflection-july-2020-47kg
 ---
 
 ## What did I do? 💻
