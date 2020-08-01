@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Sat, 01 Aug 2020 00:49:16 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Aug 2020 17:40:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Course Review: "Create Your Following" by Danny Thompson]]></title>
+            <link>https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson</link>
+            <guid>https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson</guid>
+            <description><![CDATA[I was excited to watch this course because I'm really looking forward to gaining more opportunities...]]></description>
+        </item>
         <item>
             <title><![CDATA[Monthly reflection - July 2020]]></title>
             <link>https://jackdomleo.dev/blog/monthly-reflection-july-2020</link>

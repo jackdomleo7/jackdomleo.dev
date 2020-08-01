@@ -1,7 +1,7 @@
 ---
 title: Monthly reflection - July 2020
 description: A reflection on my July 2020 of what I have done and achieved. Wrote a lot of articles and I was able to read some fantastic books...
-date: 2020-08-01
+date: 2020-07-31
 hashtags: ['monthlyreflection']
 containsCodePen: true
 twitterEmbed: true
