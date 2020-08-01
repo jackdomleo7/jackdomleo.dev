@@ -39,4 +39,4 @@ I hope [this book](https://gumroad.com/a/875132019) helps you find new friends a
 
 ---
 
-If you are also looking for a course on this topic that will help your techniques to grow your Twitter following, go take a look at [How to get followers on Twitter](https://gumroad.com/a/581530739) by [Danny Thompson](https://twitter.com/DThompsonDev). 💪
+If you are also looking for a course on this topic that will help your techniques to grow your Twitter following, go take a look at [How to get followers on Twitter](https://gumroad.com/a/581530739) by [Danny Thompson](https://twitter.com/DThompsonDev). 💪 Or read my review [here](https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson) first.

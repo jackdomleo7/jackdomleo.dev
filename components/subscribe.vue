@@ -1,6 +1,10 @@
 <template>
   <section id="signup" class="signup">
-    <h2>Signup to my monthly newsletter</h2>
+    <h2>
+      Signup to my monthly <nuxt-link to="/newsletter">
+        newsletter
+      </nuxt-link>
+    </h2>
     <form
       id="mc-embedded-subscribe-form"
       action="https://dev.us10.list-manage.com/subscribe/post?u=5db0c80170083cdaab0b17f84&amp;id=2f05546818"
