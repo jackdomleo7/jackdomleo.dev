@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Fri, 31 Jul 2020 23:57:29 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Aug 2020 00:39:14 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Monthly reflection - July 2020]]></title>
+            <link>https://jackdomleo.dev/blog/monthly-reflection-july-2020</link>
+            <guid>https://jackdomleo.dev/blog/monthly-reflection-july-2020</guid>
+            <description><![CDATA[A reflection on my July 2020 of what I have done and achieved. Wrote a lot of articles and I was able to read some fantastic books...]]></description>
+        </item>
         <item>
             <title><![CDATA[Book Review: "Responsive Web Design with HTML5 and CSS" by Ben Frain]]></title>
             <link>https://jackdomleo.dev/blog/book-review-responsive-web-design-with-html5-and-css-by-ben-frain</link>
