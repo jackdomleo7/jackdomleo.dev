@@ -151,21 +151,37 @@ Porky Pig stutters because his voice actor stutters, [Joe Dougherty](https://en.
   <figcaption>Porkky Pig from Giphy https://media.giphy.com/media/xa5MHnjO4pxNC/giphy.gif</figcaption>
 </figure>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WYem4JwUzcA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Fermat Hackenbacker from Thunderbirds
 
 [Fermat Hackenbacker](https://thunderbirds.fandom.com/wiki/Fermat_Hackenbacker) is a fictional character from the TV show and movie, The Thunderbirds. I really like [this scene](https://www.youtube.com/watch?v=85PC8-fM49Y) between Fermat and his father, Brains.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/85PC8-fM49Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Samuel L. Jackson
 
 This icon needs no introduction, but, did you know he used to stutter? You can watch an interview [here](https://www.youtube.com/watch?v=wnhvX63MCSo#t=1m09s). They say some stutters have a trigger, a word or phrase they say when they get annoyed at stuttering. Mine used to be "sugar!" Samuel L. Jackson's trigger is a little more... explicit. "M*th\*rf\*ck\*r" is his trigger word, which is part of the reason you hear him saying it a lot in movies; it's like his catchphrase.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wnhvX63MCSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Vice President Joe Biden
 
 All politics aside, Joe Biden is a very inspirational man when on the topic of stuttering. I really love [this speech](https://www.youtube.com/watch?v=iWn1CkIU_rc) he did.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iWn1CkIU_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Drew Lynch
 
 Drew Lynch is a late stutterer due to a softball injury, but he turned his stutter into a positive. He entered [America's Got Talent](https://www.youtube.com/watch?v=5tN8zQgDtSQ) and did extremely well!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5tN8zQgDtSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Woman in the audience on Steve Harvey show
+
+A brave young woman receives advice for past stutterer Steve Harvey and is truly great! - Watch [here](https://www.youtube.com/watch?v=zZ4XNEDSKWY).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zZ4XNEDSKWY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 

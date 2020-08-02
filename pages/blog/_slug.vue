@@ -17,7 +17,9 @@
       </li>
     </ul>
     <p v-if="page.devtoLink" class="blog__devto">
-      You can also read this article <a class="link" :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a>
+      <a class="link" :href="page.devtoLink" rel="nofollow noopener"><svg-icon name="dev" /><span class="sr-only">Open article in DEV.to</span></a>
+      <span>
+        You can also read this article <a class="link" :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a></span>
     </p>
     <ul class="social-share">
       <li role="presentation">
@@ -174,6 +176,19 @@ export default {
   &__devto {
     font-weight: var(--body-font-weight);
     font-size: 90%;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 0.8rem;
+      height: 2rem;
+      width: 2rem;
+      color: var(--body-color);
+    }
+
+    a:nth-child(2) {
+      margin-left: 0.2rem;
+    }
   }
 
   &__hashtags {

@@ -94,11 +94,7 @@ I made the below CodePen and wrote <nuxt-link to="/blog/hover-css-media-query">t
 
 (Skip to [26m 06s](https://www.youtube.com/watch?v=AYIUoW8LFA0#t=26m06s) for my LinkedIn review but the entire video is incredibly useful! 🔥)
 
-{% youtube AYIUoW8LFA0 %}
-
- <iframe
-src="https://www.youtube.com/watch?v=AYIUoW8LFA0#t=26m06s">
-</iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AYIUoW8LFA0?start=1566" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I found this review really detailed and thorough and have taken their advice into careful consideration to improve my LinkedIn profile.
 
@@ -107,7 +103,3 @@ I found this review really detailed and thorough and have taken their advice int
 This was exciting because I really look up to Chris, he's done so much for developers: Co-founded [CodePen](https://codepen.io) and created [CSS-Tricks](https://css-tricks.com).
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Eeek 😁😁😁<br><br>I always look up to <a href="https://twitter.com/chriscoyier?ref_src=twsrc%5Etfw">@chriscoyier</a> and the amazing things he&#39;s done for developers across the World!! <a href="https://t.co/PLRlBjHCy4">pic.twitter.com/PLRlBjHCy4</a></p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1286044002345779201?ref_src=twsrc%5Etfw">July 22, 2020</a></blockquote>
-
----
-
-Cover image by [Hide Obara](https://unsplash.com/@hideobara) on [Unsplash](https://unsplash.com/s/photos/reflection)
