@@ -4,20 +4,26 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Sun, 02 Aug 2020 23:42:13 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 03 Aug 2020 22:36:39 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
-            <title><![CDATA[Course Review: "Create Your Following" by Danny Thompson]]></title>
-            <link>https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson</link>
-            <guid>https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson</guid>
-            <description><![CDATA[I was excited to watch this course because I'm really looking forward to gaining more opportunities...]]></description>
+            <title><![CDATA[How I optimised my online presence to get opportunities.]]></title>
+            <link>https://jackdomleo.dev/blog/how-i-optimised-my-online-presence-to-get-opportunities</link>
+            <guid>https://jackdomleo.dev/blog/how-i-optimised-my-online-presence-to-get-opportunities</guid>
+            <description><![CDATA[I'm a firm believer that a good online presence can lead to a really successful career path that may open you up to better job opportunities...]]></description>
         </item>
         <item>
             <title><![CDATA[Monthly reflection - July 2020]]></title>
             <link>https://jackdomleo.dev/blog/monthly-reflection-july-2020</link>
             <guid>https://jackdomleo.dev/blog/monthly-reflection-july-2020</guid>
             <description><![CDATA[A reflection on my July 2020 of what I have done and achieved. Wrote a lot of articles and I was able to read some fantastic books...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Course Review: "Create Your Following" by Danny Thompson]]></title>
+            <link>https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson</link>
+            <guid>https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson</guid>
+            <description><![CDATA[I was excited to watch this course because I'm really looking forward to gaining more opportunities...]]></description>
         </item>
         <item>
             <title><![CDATA[Book Review: "Responsive Web Design with HTML5 and CSS" by Ben Frain]]></title>
