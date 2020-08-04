@@ -26,10 +26,10 @@
 
         <ul class="content__container__list">
           <li class="content__container__list__item">
-            front-end
+            front-end &amp; UI/UX
           </li>
           <li class="content__container__list__item">
-            UI/UX
+            Self-development
           </li>
           <li class="content__container__list__item">
             tea ☕

@@ -17,9 +17,9 @@
       </li>
     </ul>
     <p v-if="page.devtoLink" class="blog__devto">
-      <a class="link" :href="page.devtoLink" rel="nofollow noopener"><svg-icon name="dev" /><span class="sr-only">Open article in DEV.to</span></a>
+      <a :href="page.devtoLink" rel="nofollow noopener"><svg-icon name="dev" /><span class="sr-only">Open article in DEV.to</span></a>
       <span>
-        You can also read this article <a class="link" :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a></span>
+        You can also read this article <a :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a></span>
     </p>
     <ul class="social-share">
       <li role="presentation">
@@ -31,7 +31,12 @@
         </a>
       </li>
     </ul>
-    <p>{{ page.description }}</p>
+    <p><strong>{{ page.description }}</strong></p>
+    <p>
+      <em>
+        All my articles are first published and hosted on my <nuxt-link to="/blog">blog</nuxt-link><template v-if="page.devtoLink"> - but you can also find this article on <a :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a></template>. You may also be interested in my tweets on my <a href="https://twitter.com/jackdomleo7" rel="nofollow noopener">Twitter profile</a> and my monthly <nuxt-link to="/newsletter">newsletter</nuxt-link>. 🔥
+      </em>
+    </p>
     <hr>
     <nuxt-content :document="page" />
     <script v-if="page.containsCodePen" async src="https://static.codepen.io/assets/embed/ei.js" />
@@ -223,6 +228,7 @@ export default {
     display: block;
     color: inherit;
     transition: color 160ms ease;
+
     @media (prefers-reduced-motion: reduce) {
       transition: none;
     }

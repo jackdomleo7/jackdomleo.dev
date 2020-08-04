@@ -3,6 +3,7 @@ title: How I optimised my online presence to get opportunities.
 description: I'm a firm believer that a good online presence can lead to a really successful career path that may open you up to better job opportunities...
 date: 2020-08-03
 hashtags: ['career']
+devtoLink: https://dev.to/jackdomleo7/how-i-optimised-my-online-presence-to-get-opportunities-2a77
 ---
 
 ## Why did I join Twitter?
@@ -16,6 +17,23 @@ So, that's exactly what I did, I joined [Twitter](https://twitter.com/jackdomleo
 I began creating my own [CodePen](https://codepen.io/jackdomleo7)s (I already had an account with some pens I was trialling) and seeing what little projects I could create. CodePen picked a few of my projects to be featured on the homepage and I started to be noticed.
 
 Likewise, I was consistently tweeting about topics that mean a lot to me - front-end development, UI/UX, accessibility, self-development, motivation and inspiration - and starting creating my niche. Although I was only receiving approximately 2-3 likes per tweet, I was being noticed and anyone visiting my profile could see exactly what I was about and had some examples of what they would expect from my tweets.
+
+## What do I mean by opportunities?
+
+When I say 'opportunities', I'm not specifically talking about job opportunities, although they are a valid candidate. Here is a list of some of the opportunities a great online presence can bring you (I have been offered most of them):
+- New/better job
+- New friends & connections
+- Exposure to new tech
+- Offers to do a talk either at an event or on a podcast
+- Offers to affiliate promote (Gumroad, Amazon, etc)
+- Paid tweets (yes, people will pay you to tweet)
+- Free stuff (books, t-shirts, mugs, etc)
+- Recognition
+- Large following
+  - Which can be beneficial if you are ever selling anything like a book or a course
+- Freelance jobs
+- Paid articles (some companies may pay you to write for them)
+- And many more!
 
 ## What did I do and what am I doing?
 
@@ -40,7 +58,7 @@ I'm going to show with you a list of resources and techniques that really helped
 - I limit my retweets
   - Let it be said here that everything does not need retweeting. All your comments don't need retweeting either 😅. Keeping your profile clean of constant retweets will ensure new visitors are seeing **your** best content.
 - BIO
-  - I always maintain a true image of myself rather than an avatar image and always use my actual name in my name with no emojis or other characters and emojis. My Twitter BIO is quite strong and to the point and ensures new visitors now exactly what I'm about.
+  - I always maintain a true image of myself rather than an avatar image and always use my actual name in my name with no emojis or other characters and emojis. My Twitter BIO is quite strong and to the point and ensures new visitors know exactly what I'm about.
 - My tweets are meaningful
   - It is incredibly rare I will tweet something that I don't think will have value to anyone. I will always try and tweet something that I feel will have credible value to my audience.
 
