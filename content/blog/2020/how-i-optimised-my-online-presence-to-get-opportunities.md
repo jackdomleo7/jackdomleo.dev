@@ -66,10 +66,41 @@ These are some of the primary techniques I use and in just a few months I have b
 
 I also read a lot of books, so here are some that really helped me as a developer with an online presence:
 
-- [Improve Your Online Presence](https://gumroad.com/a/875132019) by [Catalin Pit](https://twitter.com/catalinmpit) - see my <nuxt-link to="/blog/book-review-building-an-online-presence-by-catalin-pit">review</nuxt-link>
-- [Create Your Following](https://gumroad.com/a/581530739) (a really good course to accompany the previous book) by [Danny Thompson](https://twitter.com/DThompsonDev) - see my <nuxt-link to="/blog/course-review-create-your-following-by-danny-thompson">review</nuxt-link>
-- [The Standout Developer](https://randallkanna.com/the-standout-developer) by [Randall Kanna](https://twitter.com/RandallKanna)
-- [Decoding the Technical Interview Process](https://gumroad.com/l/aUVXY) by [Emma Bostian](https://twitter.com/EmmaBostian)
+<figure>
+  <a href="https://gumroad.com/a/875132019" rel="nofollow noopener" target="_blank">
+    <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/improve-your-online-presence-catalin-pit.png" alt="Improve Your Online Presence by Catalin Pit" />
+  </a>
+  <figcaption>
+    <a href="https://gumroad.com/a/875132019" rel="nofollow noopener" target="_blank">Improve Your Online Presence</a> by <a href="https://twitter.com/catalinmpit" rel="nofollow noopener" target="_blank">Catalin Pit</a> - see my <nuxt-link to="/blog/book-review-building-an-online-presence-by-catalin-pit">review</nuxt-link>
+  </figcaption>
+</figure>
+
+<figure>
+  <a href="https://gumroad.com/a/581530739" rel="nofollow noopener" target="_blank">
+    <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/create-your-following-danny-thompson.png" alt="Create Your Following by Danny Thompson" />
+  </a>
+  <figcaption>
+    <a href="https://gumroad.com/a/581530739" rel="nofollow noopener" target="_blank">Create Your Follwowing</a> (a really good course to accompany the Catalin Pit's book) by <a href="https://twitter.com/DThompsonDev" rel="nofollow noopener" target="_blank">Danny Thompson</a> - see my <nuxt-link to="/blog/book-review-building-an-online-presence-by-catalin-pit">review</nuxt-link>
+  </figcaption>
+</figure>
+
+<figure>
+  <a href="https://randallkanna.com/the-standout-developer" rel="nofollow noopener" target="_blank">
+    <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/the-standout-developer-randall-kanna.png" alt="The Standout Developer by Randall Kanna" />
+  </a>
+  <figcaption>
+    <a href="https://randallkanna.com/the-standout-developer" rel="nofollow noopener" target="_blank">The Standout Developer</a> by <a href="https://twitter.com/RandallKanna" rel="nofollow noopener" target="_blank">Randall Kanna</a>
+  </figcaption>
+</figure>
+
+<figure>
+  <a href="https://gumroad.com/l/aUVXY" rel="nofollow noopener" target="_blank">
+    <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/decoding-the-technical-interview-process-emma-bostian.png" alt="Decoding The Technical Interview Process by Emma Bostian" />
+  </a>
+  <figcaption>
+    <a href="https://gumroad.com/l/aUVXY" rel="nofollow noopener" target="_blank">Decoding The Technical Interview Process</a> by <a href="https://twitter.com/EmmaBostian" rel="nofollow noopener" target="_blank">Emma Bostian</a>
+  </figcaption>
+</figure>
 
 ## What's next?
 
