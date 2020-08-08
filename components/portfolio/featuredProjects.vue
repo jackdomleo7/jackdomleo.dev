@@ -43,6 +43,19 @@ export default class FeaturedProjects extends Vue {
 
   private readonly projects: IProject[] = [
     {
+      name: 'Twitter bot for #darkmemelord',
+      url: 'https://twitter.com/DarkMemeLordBot',
+      image: 'twitter-bot-darkmemelordbot',
+      imageAlt: '#darkmemelord Twitter bot logo',
+      tech: [
+        { name: 'TypeScript', icon: 'typescript' },
+        { name: 'Heroku', icon: 'heroku' },
+        { name: 'Git', icon: 'git' }
+      ],
+      description: 'A Twitter bot to autonomously retweet tweets containing the #darkmemelord hashtag. Tech Twitter has a culture for creating and sharing memes and I thought this would be a good way to ensure no one misses a meme.',
+      searchAliases: ['meme', 'Francesco']
+    },
+    {
       name: 'Twitter bot for #NoPreviewHtmlCss: The Challenge',
       url: 'https://twitter.com/NoPreviewHtmlCs',
       image: 'twitter-bot-nopreviewhtmlcss',
