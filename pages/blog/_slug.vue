@@ -34,7 +34,7 @@
     <p><strong>{{ page.description }}</strong></p>
     <p>
       <em>
-        All my articles are first published and hosted on my <nuxt-link to="/blog">blog</nuxt-link><template v-if="page.devtoLink"> - but you can also find this article on <a :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a></template>. You may also be interested in my tweets on my <a href="https://twitter.com/jackdomleo7" rel="nofollow noopener">Twitter profile</a> and my monthly <nuxt-link to="/newsletter">newsletter</nuxt-link>. 🔥
+        All my articles are first published and hosted on my <nuxt-link to="/blog">blog</nuxt-link><template v-if="page.devtoLink"> - but you can also find this article <a :href="page.devtoLink" rel="nofollow noopener">here on DEV.to</a></template>. You may also be interested in my tweets on my <a href="https://twitter.com/jackdomleo7" rel="nofollow noopener">Twitter profile</a> and my monthly <nuxt-link to="/newsletter">newsletter</nuxt-link>. 🔥
       </em>
     </p>
     <hr>

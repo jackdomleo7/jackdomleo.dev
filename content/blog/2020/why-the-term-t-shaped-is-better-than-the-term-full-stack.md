@@ -49,8 +49,14 @@ The shorter horizontal line acting as a hat is areas you know, but not as well -
 
 Again, this is not a fully accurate representation since every developer is different and unique, but I definitely feel 'T-shaped' is a more realistic term than 'full-stack'.
 
+You can consider the horizontal line to be your wide breadth of knowledge and the vertical line to be your depth in knowledge.
+
 Below is a representation of what I feel my own T-shaped knowledge may look like. My main area is front-end and front-end technologies but I have also touched on areas such as C#, Selenium and automation.
 
 <figure>
   <img src="/blog/why-the-term-t-shaped-is-better-than-the-term-full-stack/t-shaped.png" alt="A diagram representing how I think my own T-shaped diagram looks like.">
 </figure>
+
+I also really like this tweet by [@TheAnkurTyagi](https://twitter.com/TheAnkurTyagi):
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/CodeNewbies?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbies</a> Have you heard about 👇 <br><br>T-shaped people:<br><br>As your career progresses, you&#39;ll start to become a &quot;T-shaped person.&quot;<br><br>A T-shaped person is someone who, like the letter &quot;T&quot; is visualized, has a wide but shallow knowledge and experience about a lot of things.<br><br>🧵 <a href="https://t.co/RgV5WnCBsz">pic.twitter.com/RgV5WnCBsz</a></p>&mdash; Ankur💚JavaScript (@TheAnkurTyagi) <a href="https://twitter.com/TheAnkurTyagi/status/1289824356193824770?ref_src=twsrc%5Etfw">August 2, 2020</a></blockquote>
