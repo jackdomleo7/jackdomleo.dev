@@ -3,6 +3,7 @@ title: Why the term 'T-shaped' is better than the term 'full-stack'.
 description: I am of the opinion that the term 'full-stack' is too often misunderstood and is in need of a replacement.
 date: 2020-08-11
 hashtags: ['career']
+twitterEmbed: true
 devtoLink: https://dev.to/jackdomleo7/why-the-term-t-shaped-is-better-than-the-term-full-stack-489f
 ---
 
