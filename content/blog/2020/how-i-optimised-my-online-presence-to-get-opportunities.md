@@ -61,6 +61,18 @@ I'm going to show with you a list of resources and techniques that really helped
   - I always maintain a true image of myself rather than an avatar image and always use my actual name in my name with no emojis or other characters and emojis. My Twitter BIO is quite strong and to the point and ensures new visitors know exactly what I'm about.
 - My tweets are meaningful
   - It is incredibly rare I will tweet something that I don't think will have value to anyone. I will always try and tweet something that I feel will have credible value to my audience.
+- Standard username across all platforms
+  - Whether it's Twitter, LinkedIn, CodePen, GitHub or DEV, my username is always the same - `jackdomleo7`. I have a very unique name anyway so is easy for me to know my username will always be available. My username is also very recognisable so people can distinguish me easily.
+- Standard profile picture and banner
+  - My profile picture currently is so recognisable that instantly people recognise who I am (I've also been used as memes because I have the perfect "meme" face 😅). My banner on Twitter and LinkedIn are the same, to keep it simpler for me but also so viewers can recognise my brand. (You can see my profile picture and banner at the time of writing below).
+
+<figure>
+  <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/me.png" alt="Jack Domleo face">
+</figure>
+
+<figure>
+  <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/banner.png" alt="Jack Domleo banner">
+</figure>
 
 These are some of the primary techniques I use and in just a few months I have been opened up to so many opportunities and it can only get better, right? 💪
 
