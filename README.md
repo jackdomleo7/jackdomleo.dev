@@ -1,4 +1,4 @@
-[![Twitter followers](https://img.shields.io/twitter/follow/jackdomleo7?style=social&logo=twitter "Follow me on Twitter")](https://twitter.com/jackdomleo7) [![Twitter followers](https://img.shields.io/github/followers/jackdomleo7?style=social&logo=github&label=Follow "Follow me on GitHub")](https://github.com/jackdomleo7)
+[![Follow me on Twitter](https://img.shields.io/twitter/follow/jackdomleo7?style=social&logo=twitter "Follow me on Twitter")](https://twitter.com/jackdomleo7) [![Follow me on GitHub](https://img.shields.io/github/followers/jackdomleo7?style=social&logo=github&label=Follow "Follow me on GitHub")](https://github.com/jackdomleo7) [![Jack Domleo's DEV Profile](https://img.shields.io/badge/Blog%20on%20DEV.to-Follow-lightgrey?style=social&logo=dev.to)](https://dev.to/jackdomleo7) [![Jack Domleo CodePen](https://img.shields.io/badge/CodePen-Follow-lightgrey?style=social&logo=CodePen)](https://codepen.io/jackdomleo7) [![Jack Domleo LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=social&logo=LinkedIn)](https://linkedin.com/in/jackdomleo7) [![Jack Domleo LinkedIn](https://img.shields.io/badge/Gumroad-Follow-red?style=social&logo=gumroad)](https://gumroad.com/in/jackdomleo7)
 
 <a href="https://www.buymeacoffee.com/jackdomleo" target="_blank" title="Buy Me A Coffee"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 2.5625rem !important;width: 10.875rem !important;box-shadow: 0 0.1875rem 0.125rem 0 rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0 0.1875rem 0.125rem 0 rgba(190, 190, 190, 0.5) !important;"></a>
 
@@ -10,9 +10,9 @@
 
 My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
 
-[Twitter](https://twitter.com/jackdomleo7 "Follow me on Twitter") &bull; [GitHub](https://github.com/jackdomleo7 "Follow me om GitHub or check out my projects") &bull; [CodePen](https://codepen.io/JackDomleo "Follow me on CodePen or check out my pens") &bull; [LinkedIn](https://www.linkedin.com/in/jack-domleo "Connect with me on LinkedIn")
+[Twitter](https://twitter.com/jackdomleo7 "Follow me on Twitter") &bull; [GitHub](https://github.com/jackdomleo7 "Follow me om GitHub or check out my projects") &bull; [CodePen](https://codepen.io/jackdomleo7 "Follow me on CodePen or check out my pens") &bull; [LinkedIn](https://www.linkedin.com/in/jackdomleo7 "Connect with me on LinkedIn") &bull; [DEV](https://dev.to/jackdomleo7) &bull; [Gumroad](https://gumroad.com/jackdomleo7)
 
-[🗺 sitemap](https://jackdomleo.dev/sitemap.xml)
+[🕸 sitemap](https://jackdomleo.dev/sitemap.xml)
 
 ---
 
@@ -36,6 +36,7 @@ $ npm run generate
 ## Tools
 
 - [See `package.json`](./package.json)
+- Framework: Nuxt.js
 - Domain: [Namecheap](https://www.namecheap.com)
 - DNS: [CloudFlare](https://www.cloudflare.com)
 - Hosting: GitHub Pages

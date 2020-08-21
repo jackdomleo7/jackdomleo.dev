@@ -24,6 +24,10 @@ export default class SocialMedia {
     {
       platform: 'DEV',
       url: 'https://dev.to/jackdomleo7'
+    },
+    {
+      platform: 'Gumroad',
+      url: 'https://gumroad.com/jackdomleo7'
     }
   ];
 

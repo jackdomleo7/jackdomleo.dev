@@ -6,14 +6,9 @@
       <span>Buy me a coffee</span>
     </a>
     <ul class="footer__social">
-      <li v-for="(social, index) in socialMedia" :key="index" :aria-setsize="socialMedia.length + 1" :aria-posinset="index + 1">
+      <li v-for="(social, index) in socialMedia" :key="index" :aria-setsize="socialMedia.length" :aria-posinset="index + 1">
         <a :href="social.url" rel="nofollow noopener" target="_blank" :aria-label="social.platform" data-cooltipz-dir="top">
           <svg-icon :name="social.platform.toLowerCase().replace(/\s/g, '')" />
-        </a>
-      </li>
-      <li :aria-setsize="socialMedia.length + 1" :aria-posinset="socialMedia.length + 1">
-        <a href="/feed.xml" rel="alternate" type="application/rss+xml" aria-label="RSS" data-cooltipz-dir="top">
-          <svg-icon name="rss" />
         </a>
       </li>
     </ul>
