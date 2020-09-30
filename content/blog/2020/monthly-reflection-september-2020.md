@@ -4,6 +4,7 @@ description: A reflection on my September 2020 of what I have done and achieved.
 date: 2020-09-30
 hashtags: ['monthlyreflection']
 twitterEmbed: true
+devtoLink: https://dev.to/jackdomleo7/monthly-reflection-september-2020-5a0m
 ---
 
 ## What did I do? 💻
