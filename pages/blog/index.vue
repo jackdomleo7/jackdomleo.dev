@@ -56,8 +56,8 @@ import Search from '@/middleware/fuzzySearch';
   }
 })
 export default class Index extends Vue {
-  private articles: object[] = [];
-  private filteredArticles: object[] = [];
+  private articles: any = [];
+  private filteredArticles: any = [];
   private articleSearch: string = '';
   private articlesLoading: boolean = true;
   private selected: string = '';
@@ -95,7 +95,7 @@ export default class Index extends Vue {
       return;
     }
 
-    this.filteredArticles = this.articles.filter(article => this.filterArticle(article));
+    this.filteredArticles = this.articles.filter((article: any) => this.filterArticle(article));
   }
 
   private filterArticle (article: any): boolean {

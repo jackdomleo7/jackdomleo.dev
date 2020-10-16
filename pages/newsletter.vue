@@ -28,8 +28,8 @@ interface PastNewsletter {
     return {
       title: 'Newsletter',
       meta: [
-        { hid: 'description', name: 'description', content: `Sign up to my monthly newsletter where I'll be sharing tips, projects, books and resources!` },
-        { hid: 'og:description', name: 'og:description', content: `Sign up to my monthly newsletter where I'll be sharing tips, projects, books and resources!` }
+        { hid: 'description', name: 'description', content: 'Sign up to my monthly newsletter where I\'ll be sharing tips, projects, books and resources!' },
+        { hid: 'og:description', name: 'og:description', content: 'Sign up to my monthly newsletter where I\'ll be sharing tips, projects, books and resources!' }
       ]
     };
   }

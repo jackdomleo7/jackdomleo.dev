@@ -9,7 +9,7 @@
     <div v-if="tech" class="project__tech">
       <h4>Main tech{{ organisation ? ' I used' : '' }}:</h4>
       <ul>
-        <li v-for="techItem in tech" :key="techItem" :aria-label="techItem.name" data-cooltipz-dir="top" tabindex="0">
+        <li v-for="techItem in tech" :key="techItem.name" :aria-label="techItem.name" data-cooltipz-dir="top" tabindex="0">
           <svg-icon :name="techItem.icon" />
         </li>
       </ul>

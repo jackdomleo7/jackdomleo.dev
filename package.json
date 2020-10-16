@@ -20,34 +20,35 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content": "^1.4.1",
+    "@nuxt/content": "^1.10.0",
+    "@nuxt/types": "^2.14.7",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/feed": "^2.0.0",
-    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/pwa": "^3.2.2",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/svg-sprite": "^0.4.11",
-    "autoprefixer": "^9.8.5",
-    "cooltipz-css": "^1.6.4",
+    "@nuxtjs/svg-sprite": "^0.4.12",
+    "autoprefixer": "^9.8.6",
+    "cooltipz-css": "^1.6.6",
     "cssnano": "^4.1.10",
-    "date-fns": "^2.15.0",
+    "date-fns": "^2.16.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.13.3",
-    "nuxt-property-decorator": "^2.7.2",
+    "nuxt": "^2.14.7",
+    "nuxt-property-decorator": "^2.8.8",
     "reading-time": "^1.2.0",
-    "sass-loader": "^9.0.2"
+    "sass-loader": "^9.0.3"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^1.0.3",
     "@nuxtjs/eslint-config-typescript": "^2.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.5.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^2.0.5",
-    "vue-class-component": "^7.2.5",
-    "vue-property-decorator": "^9.0.0"
+    "prettier": "^2.1.2",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.0.2"
   }
 }

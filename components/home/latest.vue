@@ -17,7 +17,7 @@ import { Btn } from '@/components';
   components: { ArticlesList, Btn }
 })
 export default class Latest extends Vue {
-  private articles: object[] = [];
+  private articles: any = [];
   private readonly articlesNumberOf: number = 1;
   private articlesLoading: boolean = false;
 
