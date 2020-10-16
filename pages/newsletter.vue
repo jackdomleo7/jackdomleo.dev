@@ -7,7 +7,7 @@
     <h2>See past newsletters</h2>
     <ul>
       <li v-for="(pastNewsletter, index) in pastNewsletters" :key="pastNewsletter.name" :aria-setsize="pastNewsletters.length" :aria-posinset="index + 1">
-        <a :href="pastNewsletter.url" target="_blank" rel="nofollow noopener">{{ pastNewsletter.name }}</a>
+        <a :href="pastNewsletter.url" rel="nofollow noopener">{{ pastNewsletter.name }}</a>
       </li>
     </ul>
   </page-template>
@@ -28,8 +28,8 @@ interface PastNewsletter {
     return {
       title: 'Newsletter',
       meta: [
-        { hid: 'description', name: 'description', content: 'Sign up to my monthly newsletter where I\'ll be sharing tips, projects, books and resources!' },
-        { hid: 'og:description', name: 'og:description', content: 'Sign up to my monthly newsletter where I\'ll be sharing tips, projects, books and resources!' }
+        { hid: 'description', name: 'description', content: `Sign up to my monthly newsletter where I'll be sharing tips, projects, books and resources!` },
+        { hid: 'og:description', name: 'og:description', content: `Sign up to my monthly newsletter where I'll be sharing tips, projects, books and resources!` }
       ]
     };
   }
