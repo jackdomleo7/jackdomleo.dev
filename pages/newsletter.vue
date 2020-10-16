@@ -37,6 +37,10 @@ interface PastNewsletter {
 export default class Newsletter extends Vue {
   private readonly pastNewsletters: PastNewsletter[] = [
     {
+      name: 'September 2020',
+      url: 'https://mailchi.mp/dc73afe7c02f/september-2020'
+    },
+    {
       name: 'August 2020',
       url: 'https://mailchi.mp/1f575eb71bc1/august-2020'
     },
