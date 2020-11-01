@@ -35,15 +35,15 @@ It was amazing to see so many developers want to contribute to Checka11y, especi
 
 I recently discovered this website and really liked the idea behind it so I created some posts for some of my existing products and plan to use it more in the future:
 
-### Level-Up Your Career Today: Developer Edition
+#### Level-Up Your Career Today: Developer Edition
 
 <a href="https://www.producthunt.com/posts/level-up-your-career-today-dev-edition?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-level-up-your-career-today-dev-edition" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=271450&theme=light" alt="Level-Up Your Career Today: Dev Edition - An eBook by Jack Domleo focusing on your career! | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-### Cooltipz.css
+#### Cooltipz.css
 
 <a href="https://www.producthunt.com/posts/cooltipz-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cooltipz-css" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=269594&theme=light" alt="Cooltipz.css - A modern, customisable, accessible pure CSS tooltip library. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-### Checka11y.css
+#### Checka11y.css
 
 <a href="https://www.producthunt.com/posts/checka11y-css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-checka11y-css" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=269866&theme=light" alt="Checka11y.css - A CSS stylesheet to quickly highlight a11y concerns. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
