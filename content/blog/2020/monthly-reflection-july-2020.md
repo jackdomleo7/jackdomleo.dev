@@ -103,3 +103,7 @@ I found this review really detailed and thorough and have taken their advice int
 This was exciting because I really look up to Chris, he's done so much for developers: Co-founded [CodePen](https://codepen.io) and created [CSS-Tricks](https://css-tricks.com).
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Eeek 😁😁😁<br><br>I always look up to <a href="https://twitter.com/chriscoyier?ref_src=twsrc%5Etfw">@chriscoyier</a> and the amazing things he&#39;s done for developers across the World!! <a href="https://t.co/PLRlBjHCy4">pic.twitter.com/PLRlBjHCy4</a></p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1286044002345779201?ref_src=twsrc%5Etfw">July 22, 2020</a></blockquote>
+
+### Got memed 😎
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">If any of you don&#39;t know <a href="https://twitter.com/jackdomleo7?ref_src=twsrc%5Etfw">@jackdomleo7</a>, I&#39;m here to fix that! <br><br>Jack is an awesome dude, and is a frontend wizard. <br><br>He recently passed 3000 subscribers! 🥳🥳🥳<a href="https://twitter.com/hashtag/jack?src=hash&amp;ref_src=twsrc%5Etfw">#jack</a> {<br> display: flex;<br>} <a href="https://t.co/njpfghazu3">pic.twitter.com/njpfghazu3</a></p>&mdash; Nehemiah (@NehemiahKiv) <a href="https://twitter.com/NehemiahKiv/status/1283434367931604992?ref_src=twsrc%5Etfw">July 15, 2020</a></blockquote>
