@@ -31,7 +31,7 @@ It was amazing to see so many developers want to contribute to Checka11y, especi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dOwWn5GvQF0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Discovered [www.producthunt.com](https://www.producthunt.com)
+### Discovered [www.producthunt.com](https://www.producthunt.com/@jackdomleo7)
 
 I recently discovered this website and really liked the idea behind it so I created some posts for some of my existing products and plan to use it more in the future:
 
