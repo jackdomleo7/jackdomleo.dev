@@ -51,7 +51,11 @@ I recently discovered this website and really liked the idea behind it so I crea
 
 I'm not a pen and paper note-taking kinda guy, I like my notes to be cloud-based and easily accessed on any of my devices. I also love the fact I can type out notes because my handwriting is terrible.
 
-Evernote wasn't not great, it's a good application. But I decided to give Notion a shot because of the big hype around it and it is my new favourite thing! Easily navigable, so perfomant fast, easy to use, looks neat! 🔥
+Evernote wasn't not great, it's a good application. But I decided to give Notion a shot because of the big hype around it and it is my new favourite thing! Easily navigable, so performant fast, easy to use, looks neat! 🔥
+
+### Released [v1.6.6 of Cooltipz.css](https://github.com/jackdomleo7/Cooltipz.css/releases/tag/v1.6.6)
+
+Just some general but possibly maintenance of the package.
 
 ---
 
