@@ -38,7 +38,8 @@ export default {
         content: '/favicons/mstile-144x144.png'
       },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
-      { name: 'theme-color', content: '#393939' }
+      { name: 'theme-color', content: '#393939' },
+      { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' }
     ],
     link: [
       {
