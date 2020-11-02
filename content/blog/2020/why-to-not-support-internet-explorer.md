@@ -15,13 +15,13 @@ devtoLink: https://dev.to/jackdomleo7/why-to-not-support-internet-explorer-3f8h
 
 ## Where does Microsoft stand on Internet Explorer?
 
-Microsoft have advised all users to **not** use Internet Explorer and to move over onto their more modern browser, Microsoft Edge. Microsoft have stated that they can no longer guarentee the security of Internet Explorer.
+Microsoft have advised all users to **not** use Internet Explorer and to move over onto their more modern browser, Microsoft Edge. Microsoft have stated that they can no longer guarantee the security of Internet Explorer.
 
 They currently have plans to shut down the browser on approximately <time datetime="2025-10-15">Wednesday, 15 October 2025</time>.
 
 ## Where do I stand on Internet Explorer?
 
-As a front-end web developer, I feel supporting Internert Explorer is not the smartest move.
+As a front-end web developer, I feel supporting Internet Explorer is not the smartest move.
 
 I feel IE has held back the development of the web, if IE was shut down many years ago, the web would have progressed much further by now.
 

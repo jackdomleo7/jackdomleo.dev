@@ -32,7 +32,7 @@ I really learned a lot from Vitaly. I'm really happy with the way he explained w
 
 <codepen user="pouretrebelle" slug-hash="bPWvNp" pen-title="nth-child Art"></codepen>
 
-Charlotte then went on to explain how she evolved a university project, involving hexagons, into a brilliant business idea, [Hexatope](https://hexatope.io). I'm a big fan of this! I love how a customer can actually use the online application Charlotte built, purchase it and recieve a 3D model of their creation - jewellery. I do recommend this as a gift for anyone who likes to live an interesting life.
+Charlotte then went on to explain how she evolved a university project, involving hexagons, into a brilliant business idea, [Hexatope](https://hexatope.io). I'm a big fan of this! I love how a customer can actually use the online application Charlotte built, purchase it and receive a 3D model of their creation - jewellery. I do recommend this as a gift for anyone who likes to live an interesting life.
 
 ---
 
@@ -42,7 +42,7 @@ It was evident [Eli](https://twitter.com/elibelly) is passionate about internati
 
 With the stats Eli provided about the number of English websites compared to the number of English users, we were surprised. Approximately 51% of the world's websites are English, but only approximately 25% of users on the web actually speak English - shocking 🤯.
 
-Eli suggested some excellent resources to use when thinking about internationalisation. The biggest tip I will take away from Eli's talk is, _"If you are going to test one other language than English, test German. I guarantee you German will break your website, because they hve the longest words."_ It's true, German does have some pretty long words.
+Eli suggested some excellent resources to use when thinking about internationalisation. The biggest tip I will take away from Eli's talk is, _"If you are going to test one other language than English, test German. I guarantee you German will break your website, because they have the longest words."_ It's true, German does have some pretty long words.
 
 ---
 
