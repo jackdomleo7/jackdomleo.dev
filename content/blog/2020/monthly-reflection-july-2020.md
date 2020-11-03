@@ -15,9 +15,7 @@ devtoLink: https://dev.to/jackdomleo7/monthly-reflection-july-2020-47kg
 - <nuxt-link to="/blog/a-st-st-stuttering-developer">A St-St-Stuttering Developer</nuxt-link>
 - <nuxt-link to="/blog/hover-css-media-query">@media (hover: hover) - CSS Media Query</nuxt-link>
 - <nuxt-link to="/blog/focused-creativity-dont-lose-focus">Focused Creativity - Don't Lose Focus</nuxt-link>
-- <nuxt-link to="/blog/an-apprenticeship-interview">An Apprenticeship Interview</nuxt-link>
-- <nuxt-link to="/blog/book-review-building-an-online-presence-by-catalin-pit">Book review: Building an Online Presence by Catalin Pit</nuxt-link>
-- <nuxt-link to="/blog/book-review-responsive-web-design-with-html5-and-css-by-ben-frain">Book review: Responsive Web Design with HTML5 and CSS by Ben Frain</nuxt-link>
+- <nuxt-link to="/blog/an-apprenticeship-interview">An Apprenticeship Interview</nuxt-link>nuxt-link>
 
 ### Additions and modifications to <nuxt-link to="/">my website</nuxt-link>
 
@@ -60,8 +58,8 @@ I made the below CodePen and wrote <nuxt-link to="/blog/hover-css-media-query">t
 
 ### Read 2 books
 
-- <nuxt-link to="/blog/book-review-building-an-online-presence-by-catalin-pit">Book review: Building an Online Presence by Catalin Pit</nuxt-link>
-- <nuxt-link to="/blog/book-review-responsive-web-design-with-html5-and-css-by-ben-frain">Book review: Responsive Web Design with HTML5 and CSS by Ben Frain</nuxt-link>
+- Building an Online Presence by Catalin Pit
+- Responsive Web Design with HTML5 and CSS by Ben Frain
 
 ### Extra
 

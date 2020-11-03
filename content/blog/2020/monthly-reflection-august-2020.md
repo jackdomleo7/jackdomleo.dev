@@ -11,9 +11,8 @@ devtoLink: https://dev.to/jackdomleo7/monthly-reflection-august-2020-2043
 
 ### New articles 📰
 
-- [Course review: 'Create Your Following' by Danny Thompson](https://jackdomleo.dev/blog/course-review-create-your-following-by-danny-thompson)
-- [How I optimised my online presence to get opportunities](https://jackdomleo.dev/blog/how-i-optimised-my-online-presence-to-get-opportunities)
-- [Why the term 'T-shaped' is better than the term 'full-stack'](https://jackdomleo.dev/blog/why-the-term-t-shaped-is-better-than-the-term-full-stack)
+- <nuxt-link to="https://jackdomleo.dev/blog/how-i-optimised-my-online-presence-to-get-opportunities">How I optimised my online presence to get opportunities</nuxt-link>
+- <nuxt-link to="https://jackdomleo.dev/blog/why-the-term-t-shaped-is-better-than-the-term-full-stack">Why the term 'T-shaped' is better than the term 'full-stack'</nuxt-link>
 
 ### Began writing my first eBook
 

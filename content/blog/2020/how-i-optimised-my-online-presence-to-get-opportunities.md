@@ -83,7 +83,7 @@ I also read a lot of books, so here are some that really helped me as a develope
     <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/improve-your-online-presence-catalin-pit.png" alt="Improve Your Online Presence by Catalin Pit" />
   </a>
   <figcaption>
-    <a href="https://gumroad.com/a/875132019" rel="nofollow noopener" target="_blank">Improve Your Online Presence</a> by <a href="https://twitter.com/catalinmpit" rel="nofollow noopener" target="_blank">Catalin Pit</a> - see my <nuxt-link to="/blog/book-review-building-an-online-presence-by-catalin-pit">review</nuxt-link>
+    <a href="https://gumroad.com/a/875132019" rel="nofollow noopener" target="_blank">Improve Your Online Presence</a> by <a href="https://twitter.com/catalinmpit" rel="nofollow noopener" target="_blank">Catalin Pit</a>
   </figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ I also read a lot of books, so here are some that really helped me as a develope
     <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/create-your-following-danny-thompson.png" alt="Create Your Following by Danny Thompson" />
   </a>
   <figcaption>
-    <a href="https://gumroad.com/a/581530739" rel="nofollow noopener" target="_blank">Create Your Follwowing</a> (a really good course to accompany the Catalin Pit's book) by <a href="https://twitter.com/DThompsonDev" rel="nofollow noopener" target="_blank">Danny Thompson</a> - see my <nuxt-link to="/blog/book-review-building-an-online-presence-by-catalin-pit">review</nuxt-link>
+    <a href="https://gumroad.com/a/581530739" rel="nofollow noopener" target="_blank">Create Your Follwowing</a> (a really good course to accompany the Catalin Pit's book) by <a href="https://twitter.com/DThompsonDev" rel="nofollow noopener" target="_blank">Danny Thompson</a>
   </figcaption>
 </figure>
 
