@@ -13,7 +13,7 @@
         I'm a mid-level <strong>front-end developer</strong> from <strong>Nottingham, UK</strong>.
       </p>
       <p>
-        I work with Vue.js and TypeScript primarily, but you can find more in my toolbox <a href="#toolbox">here</a>. I am the founder of the <a href="https://twitter.com/jackdomleo7/status/1270039382528065538" rel="nofollow noopener" target="_blank">#NoPreviewHtmlCss</a> challenge. I <nuxt-link to="/blog">
+        I work with Vue.js and TypeScript primarily, but you can find more in my toolbox <a href="#toolbox">here</a>. I am the author of <a href="https://levelupyourcareer.today" rel="nofollow noopener" target="_blank">Level-Up Your Career Today: Developer Edition</a>. I <nuxt-link to="/blog">
           blog
         </nuxt-link> about tech and engage with the <a href="https://twitter.com/jackdomleo7" target="_blank" rel="nofollow noopener">Tech Twitter</a> community.
       </p>
@@ -29,7 +29,7 @@
             front-end &amp; UI/UX
           </li>
           <li class="content__container__list__item">
-            Self-development
+            self-development
           </li>
           <li class="content__container__list__item">
             tea ☕
