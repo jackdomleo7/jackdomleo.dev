@@ -2,7 +2,7 @@
   <footer class="footer">
     <subscribe />
     <a class="footer__bmc" target="_blank" rel="nofollow" href="https://www.buymeacoffee.com/jackdomleo7">
-      <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+      <svg-icon name="buymeacoffee" />
       <span>Buy me a coffee</span>
     </a>
     <ul class="footer__social">
@@ -93,7 +93,7 @@ export default class TheFooter extends Vue {
     font-family: 'Cookie', cursive;
     margin: 2rem 0;
 
-    img {
+    svg {
       height: 2.125rem;
       width: 2.1875rem;
       transform-origin: bottom;
@@ -108,7 +108,7 @@ export default class TheFooter extends Vue {
       background-color: mix($bmc-orange, #fff, 90%);
       color:var(--color-white);
 
-      img {
+      svg {
         transform: rotate(-6deg);
       }
     }
