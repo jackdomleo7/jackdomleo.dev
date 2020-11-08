@@ -43,6 +43,20 @@ export default class FeaturedProjects extends Vue {
 
   private readonly projects: IProject[] = [
     {
+      name: 'Checka11y.css',
+      url: 'https://github.com/jackdomleo7/Checka11y.css',
+      image: 'checka11y',
+      imageAlt: 'Checka11y.css logo',
+      tech: [
+        { name: 'Cypress', icon: 'cypress' },
+        { name: 'SCSS', icon: 'sass' },
+        { name: 'CSS', icon: 'css' },
+        { name: 'Git', icon: 'git' }
+      ],
+      description: 'A CSS stylesheet to quickly highlight a11y concerns.',
+      searchAliases: ['accessibility']
+    },
+    {
       name: 'Twitter bot for #darkmemelord',
       url: 'https://twitter.com/DarkMemeLordBot',
       image: 'twitter-bot-darkmemelordbot',
@@ -54,19 +68,6 @@ export default class FeaturedProjects extends Vue {
       ],
       description: 'A Twitter bot to autonomously retweet tweets containing the #darkmemelord hashtag. Tech Twitter has a culture for creating and sharing memes and I thought this would be a good way to ensure no one misses a meme.',
       searchAliases: ['meme', 'Francesco']
-    },
-    {
-      name: 'Twitter bot for #NoPreviewHtmlCss: The Challenge',
-      url: 'https://twitter.com/NoPreviewHtmlCs',
-      image: 'twitter-bot-nopreviewhtmlcss',
-      imageAlt: '#NoPreviewHtmlCss Twitter bot logo',
-      tech: [
-        { name: 'TypeScript', icon: 'typescript' },
-        { name: 'Heroku', icon: 'heroku' },
-        { name: 'Git', icon: 'git' }
-      ],
-      description: 'A Twitter bot to autonomously like and retweet tweets containing the #NoPreviewHtmlCss hashtag.',
-      searchAliases: ['challenge']
     },
     {
       name: 'Cooltipz.css',
