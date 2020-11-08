@@ -2,18 +2,10 @@
   <section id="what-im-currently-doing">
     <h2>What am I currently doing</h2>
     <ul class="currently">
-      <li>
-        <div>
-          📝 Writing "Level-Up Your Career Today" - an eBook available to preorder <a href="https://gum.co/NQpxh" rel="nofollow noopener" target="_blank">here</a>
-        </div>
-      </li>
       <li><div>📚 Reading <a href="https://randallkanna.com/the-standout-developer" rel="nofollow noopener" target="_blank">The Standout Developer</a> by <a href="https://twitter.com/RandallKanna" rel="nofollow noopener" target="_blank">Randall Kanna</a></div></li>
-      <li><div>Planning my next big project - I'm thinking my own design system 🚀</div></li>
-      <li>
-        <div>
-          Looking after my health ❤
-        </div>
-      </li>
+      <li><div>Redesigning my website 🎨</div></li>
+      <li><div>Always learning and practising front-end technologies</div></li>
+      <li><div>Planning my next projects 🚀</div></li>
     </ul>
   </section>
 </template>
