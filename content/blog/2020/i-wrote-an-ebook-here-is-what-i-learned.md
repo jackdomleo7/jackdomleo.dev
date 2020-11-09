@@ -27,7 +27,7 @@ I experienced writer's block many times while writing the ebook. I knew what I w
 
 You never really overcome writer's block, and it doesn't happen all the time, but I have found a few techniques that help me minimise how often I experience writer's block.
 
-I planned each section in [Notion](https://www.notion.so) and I didn't start writing that section until my Notion note had enough points in it, that made me feel I could write enough. I would makes notes on phrases, diagrams, anecdotes, quotes, websites etc. I also love a cloud-based application, like Notion, because if I ever have a really good idea while I'm out somewhere (or not near my computer), I can also update the Notion note on my mobile phone.
+I planned each section in [Notion](https://www.notion.so) and I didn't start writing that section until my Notion note had enough points in it, that made me feel I could write enough. I would make notes on phrases, diagrams, anecdotes, quotes, websites etc. I also love a cloud-based application, like Notion, because if I ever have a really good idea while I'm out somewhere (or not near my computer), I can also update the Notion note on my mobile phone.
 
 I would often draft out paragraphs beforehand in Notion, or highlight existing paragraphs in the book that I want to revisit.
 
