@@ -3,6 +3,7 @@ title: I wrote an ebook, here is what I learned
 description: I wrote an ebook. It was something different to coding all the time and I want to share my experience, successes and challenges.
 date: 2020-11-09
 hashtags: ['aboutme']
+devtoLink: https://dev.to/jackdomleo7/i-wrote-an-ebook-here-is-what-i-learned-22i8
 ---
 
 During summer <time datetime="2020">2020</time>, I began writing an ebook. It was an exciting experience, but I hit some challenges along the way, and I learned a lot during the research, writing, promoting and selling of the ebook that I'd like to share with you. If you're thinking of writing your own ebook someday, then I hope this article and my experience will help you during the process of writing your book.
