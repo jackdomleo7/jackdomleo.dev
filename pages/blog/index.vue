@@ -80,10 +80,6 @@ export default class Index extends Vue {
       text: 'Career'
     },
     {
-      value: 'books',
-      text: 'Books'
-    },
-    {
       value: 'event',
       text: 'Event'
     }
