@@ -44,7 +44,7 @@ export default class FeaturedProjects extends Vue {
   private readonly projects: IProject[] = [
     {
       name: 'Checka11y.css',
-      url: 'https://github.com/jackdomleo7/Checka11y.css',
+      url: 'https://checka11y.jackdomleo.dev',
       image: 'checka11y',
       imageAlt: 'Checka11y.css logo',
       tech: [
