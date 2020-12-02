@@ -5,6 +5,7 @@ date: 2020-12-02
 hashtags: ['monthlyreflection']
 containsCodePen: true
 twitterEmbed: true
+devtoLink: https://dev.to/jackdomleo7/monthly-reflection-november-2020-3886
 ---
 
 ## What did I do? 💻
