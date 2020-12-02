@@ -74,7 +74,3 @@ The team at [Stryve](https://www.westryve.com) were kind enough to gift me a FRE
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/jackdomleo7?ref_src=twsrc%5Etfw">@jackdomleo7</a> Your meme is out😂😂<br><br>And Jesus!! That is tough 🤣🤣<br><br>From now on the memes will be regular....<br>P. S- Just saying for the ones who complained for the memes😒😒 <a href="https://t.co/kz0ZaFnaSH">pic.twitter.com/kz0ZaFnaSH</a></p>&mdash; The Impatient Memer😎 (@ImpatientMemer) <a href="https://twitter.com/ImpatientMemer/status/1303210801923198976?ref_src=twsrc%5Etfw">September 8, 2020</a></blockquote>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Something for you <a href="https://twitter.com/jackdomleo7?ref_src=twsrc%5Etfw">@jackdomleo7</a> and star wars fans 🙂<a href="https://twitter.com/hashtag/darkmemelord?src=hash&amp;ref_src=twsrc%5Etfw">#darkmemelord</a> <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/meme?src=hash&amp;ref_src=twsrc%5Etfw">#meme</a> <a href="https://t.co/X2iCaWvSyL">pic.twitter.com/X2iCaWvSyL</a></p>&mdash; Martin Svejda (@Svejdam) <a href="https://twitter.com/Svejdam/status/1303620021558669313?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote>
-
----
-
-Cover image by [Hide Obara](https://unsplash.com/@hideobara) on [Unsplash](https://unsplash.com/s/photos/reflection)

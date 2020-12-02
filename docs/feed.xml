@@ -4,9 +4,15 @@
         <title>Jack Domleo - blog</title>
         <link>https://jackdomleo.dev/feed.xml</link>
         <description>Feed for Jack Domleo's blog.</description>
-        <lastBuildDate>Wed, 18 Nov 2020 00:02:58 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 02 Dec 2020 10:41:35 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Monthly reflection - November 2020]]></title>
+            <link>https://jackdomleo.dev/blog/monthly-reflection-november-2020</link>
+            <guid>https://jackdomleo.dev/blog/monthly-reflection-november-2020</guid>
+            <description><![CDATA[A reflection on my November 2020 of what I have done and achieved. The biggest thing was I moved house...]]></description>
+        </item>
         <item>
             <title><![CDATA[I wrote an ebook, here is what I learned]]></title>
             <link>https://jackdomleo.dev/blog/i-wrote-an-ebook-here-is-what-i-learned</link>

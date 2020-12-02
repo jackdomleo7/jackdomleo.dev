@@ -72,7 +72,3 @@ Just some general but possibly maintenance of the package.
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just recently saw this movie. It is awesome. Definitely recommend for <a href="https://twitter.com/hashtag/CodeNewbies?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbies</a> 😂😂😂<a href="https://twitter.com/jackdomleo7?ref_src=twsrc%5Etfw">@jackdomleo7</a> <a href="https://twitter.com/Svejdam?ref_src=twsrc%5Etfw">@Svejdam</a> <a href="https://twitter.com/Codeanddream?ref_src=twsrc%5Etfw">@Codeanddream</a> <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://t.co/DTvzF1LNd6">pic.twitter.com/DTvzF1LNd6</a></p>&mdash; Arvind (@Arvind_0602) <a href="https://twitter.com/Arvind_0602/status/1313132562425032706?ref_src=twsrc%5Etfw">October 5, 2020</a></blockquote>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Congratulations 👏🎉🎊 <a href="https://t.co/jVyEnd0hqc">pic.twitter.com/jVyEnd0hqc</a></p>&mdash; Rajbir Singh (@wohi_raj) <a href="https://twitter.com/wohi_raj/status/1319173014135599104?ref_src=twsrc%5Etfw">October 22, 2020</a></blockquote>
-
----
-
-Cover image by [Hide Obara](https://unsplash.com/@hideobara) on [Unsplash](https://unsplash.com/s/photos/reflection)
