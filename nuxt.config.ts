@@ -24,7 +24,6 @@ export default {
   plugins: [
     '@/plugins/reflect-metadata'
   ],
-  components: true,
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/eslint-module',
@@ -82,7 +81,7 @@ export default {
       const { $content } = require('@nuxt/content')
       const files = await $content({ deep: true }).only(['path']).fetch()
 
-      return files.map(file => `/blog/${file.path}`)
+      return files.map((file: Record<string, any>) => `/blog/${file.path}`)
     }
   }
 }
