@@ -50,6 +50,10 @@ button {
   color: inherit;
 }
 
+a, button {
+  touch-action: manipulation;
+}
+
 svg {
   height: 100%;
   width: 100%;
