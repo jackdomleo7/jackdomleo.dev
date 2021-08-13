@@ -1,4 +1,5 @@
 require('dotenv').config()
+const siteconfig = require('./siteconfig.json')
 
 export default {
   target: 'static',
@@ -58,10 +59,10 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: '/',
-    Sitemap: `${process.env.BASE_URL}/sitemap.xml`
+    Sitemap: `${siteconfig.base_url}/sitemap.xml`
   },
   sitemap: {
-    hostname: process.env.BASE_URL,
+    hostname: siteconfig.base_url,
     exclude: ['/_icons', '/preview']
   },
 
