@@ -1,6 +1,11 @@
 require('dotenv').config()
 const siteconfig = require('./siteconfig.json')
 
+interface IGenerateRoute {
+  route: string;
+  payload?: Record<string, any>;
+}
+
 export default {
   target: 'static',
 
@@ -21,6 +26,7 @@ export default {
     'node_modules/cooltipz-css/src/cooltipz',
     '@/assets/styles/main.scss'
   ],
+  components: true,
   plugins: [
     '@/plugins/reflect-metadata'
   ],
@@ -77,11 +83,22 @@ export default {
   build: {
   },
   generate: {
-    async routes () {
-      const { $content } = require('@nuxt/content')
-      const files = await $content({ deep: true }).only(['path']).fetch()
+    async routes (): Promise<IGenerateRoute[]> {
+      let generatedRoutes: IGenerateRoute[] = []
 
-      return files.map((file: Record<string, any>) => `/blog/${file.path}`)
+      // Blog pages
+      const { $content } = require('@nuxt/content')
+      const blogs = await $content({ deep: true }).fetch()
+      blogs.forEach((blog: Record<string, any>) => {
+        generatedRoutes.push(
+          {
+            route: `/blog/${blog.path}`,
+            payload: blog
+          }
+        )
+      })
+
+      return generatedRoutes
     }
   }
 }

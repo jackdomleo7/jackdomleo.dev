@@ -73,15 +73,14 @@ import { Component, Vue } from 'nuxt-property-decorator'
   // }
 })
 export default class BlogSlug extends Vue {
-  async asyncData ({ $content, $prismic, route, error }: any) {
+  async asyncData ({ $content, $prismic, route, error, payload }: any) {
     const footer = await $prismic.api.getSingle('footer')
 
     const path = route.path.replace('/blog', '')
-    let page = await $content({ deep: true })
-      .where({ path })
-      .only(['title', 'body'])
-      .fetch()
-    page = page[0]
+    let page = payload || await $content({ deep: true }).where({ path }).only(['title', 'body']).fetch()
+    if (page.length) {
+      page = page[0]
+    }
 
     if (page && footer) {
       return { page, footer }
