@@ -62,7 +62,7 @@ export default {
   },
   sitemap: {
     hostname: process.env.BASE_URL,
-    exclude: ['/_icons']
+    exclude: ['/_icons', '/preview']
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
