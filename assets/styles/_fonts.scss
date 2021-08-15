@@ -1,26 +1,58 @@
-@font-face {
-  font-family: "Rock Salt";
-  src: local("Rock Salt"), url(~assets/fonts/RockSalt-Regular.ttf) format("truetype");
-  font-display: swap;
-}
+$font-family-lato: 'Lato';
+$lato-weights: (
+  "Bold": 700
+);
 
-@font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans"), url(~assets/fonts/OpenSans-Regular.ttf) format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans"), url(~assets/fonts/OpenSans-Bold.ttf) format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-
-$font-cursive: 'Rock Salt', cursive !default;
-$font-sans-serif: 'Open Sans', cursive !default;
+$font-family-opensans: 'OpenSans';
+$opensans-weights: (
+  "Regular": 400,
+  "SemiBold": 600,
+  "Bold": 700
+);
+$opensans-italic-weights: (
+  "Regular": 400
+);
 
 :root {
-  --font-cursive: #{$font-cursive};
-  --font-sans-serif: #{$font-sans-serif};
+  --font-family-lato: '#{$font-family-lato}', Arial, Helvetica, sans-serif;
+  --font-family-opensans: '#{$font-family-opensans}', Arial, Helvetica, sans-serif;
+}
+
+@each $name, $weight in $lato-weights {
+  @font-face {
+    font-family: '#{$font-family-lato}';
+    src:
+      local('#{$font-family-lato}'),
+      url(~assets/fonts/Lato/Lato-#{$name}.woff2) format('woff2'),
+      url(~assets/fonts/Lato/Lato-#{$name}.woff) format('woff');
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@each $name, $weight in $opensans-weights {
+  @font-face {
+    font-family: '#{$font-family-opensans}';
+    src:
+      local('#{$font-family-opensans}'),
+      url(~assets/fonts/OpenSans/OpenSans-#{$name}.woff2) format('woff2'),
+      url(~assets/fonts/OpenSans/OpenSans-#{$name}.woff) format('woff');
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@each $name, $weight in $opensans-italic-weights {
+  @font-face {
+    font-family: '#{$font-family-opensans}';
+    src:
+      local('#{$font-family-opensans}'),
+      url(~assets/fonts/OpenSans/OpenSans-#{$name}-Italic.woff2) format('woff2'),
+      url(~assets/fonts/OpenSans/OpenSans-#{$name}-Italic.woff) format('woff');
+    font-weight: $weight;
+    font-style: italic;
+    font-display: swap;
+  }
 }
