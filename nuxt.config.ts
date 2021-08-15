@@ -49,6 +49,9 @@ export default {
     classPrefix: 'theme--',
     classSuffix: ''
   },
+  plugins: [
+    '~/plugins/VueRellax.ts'
+  ],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',

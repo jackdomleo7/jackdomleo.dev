@@ -11,7 +11,13 @@
         </p>
       </div>
       <div class="home-jumbo__img">
-        <div class="home-jumbo__square"></div>
+        <div class="home-jumbo__square">
+          <div class="home-jumbo__square-icons">
+            <svg-icon name="circle" v-rellax="{ speed: -3 }" />
+            <svg-icon name="square" v-rellax="{ speed: -5 }" />
+            <svg-icon name="triangle" v-rellax="{ speed: -2 }" />
+          </div>
+        </div>
         <img src="https://jackdomleo.dev/_nuxt/img/bio-image-jack-domleo.400e227.jpg" alt="" />
       </div>
     </div>
@@ -68,8 +74,9 @@ export default Vue.extend({
 
   &__square {
     background-color: var(--color-orange);
-    box-shadow: inset rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: inset rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     transform: rotate(-60deg);
+    overflow: hidden;
     position: absolute;
     z-index: -1;
     width: 60rem;
@@ -84,6 +91,38 @@ export default Vue.extend({
 
     @media (min-width: 1200px) {
       top: -25rem;
+    }
+
+    &-icons {
+      height: 100%;
+      width: 100%;
+      transform: rotate(60deg);
+
+      svg {
+        position: absolute;
+        color: var(--color-white);
+
+        &:nth-child(1) {
+          height: 2rem;
+          width: 2rem;
+          top: 45%;
+          left: 16rem;
+        }
+
+        &:nth-child(2) {
+          height: 2rem;
+          width: 2rem;
+          top: 60%;
+          left: 16rem;
+        }
+
+        &:nth-child(3) {
+          height: 2rem;
+          width: 2rem;
+          top: 75%;
+          left: 16rem;
+        }
+      }
     }
   }
 
