@@ -3,17 +3,9 @@
     <Debug v-if="env === 'development'" />
     <header>
       <Navigation />
-      <div class="jumbo">
-        <div>
-          <p>Hi</p>
-          <h1 class="jumbo__heading">
-            I'm Jack Domleo
-          </h1>
-          <p>
-            I'm a professional frontend & UX developer primarily working with Vue.js.
-          </p>
-        </div>
-      </div>
+      <slot name="jumbo">
+        <p>Hello</p>
+      </slot>
     </header>
     <main class="container--fluid">
       <slot />
