@@ -3,26 +3,26 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import Vue from 'vue'
 
-@Component({
+export default Vue.extend({
+  name: 'Career',
   head () {
     return {
       title: 'Career'
     }
-  }
-})
-export default class Career extends Vue {
+  },
   async asyncData ({ $prismic, error }: any) {
+    const career = await $prismic.api.getSingle('career')
     const footer = await $prismic.api.getSingle('footer')
 
-    if (footer) {
-      return { footer }
+    if (career && footer) {
+      return { career, footer }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

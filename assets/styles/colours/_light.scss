@@ -1,7 +1,4 @@
-$base-red: #a30000;
-
 :root {
-  --body-bg: var(--base-white);
-  --body-color: var(--base-grey-darker);
-  --base-red: #{$base-red};
+  --body-bg: var(--color-white);
+  --body-color: var(--color-black);
 }

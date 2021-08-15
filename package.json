@@ -62,7 +62,6 @@
     "jest": "^26.6.3",
     "jest-axe": "^4.1.0",
     "jest-stare": "^2.2.2",
-    "nuxt-property-decorator": "^2.9.1",
     "open-cli": "^6.0.1",
     "rimraf": "^3.0.2",
     "sass": "^1.32.12",

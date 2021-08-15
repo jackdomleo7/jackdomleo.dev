@@ -18,10 +18,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import Vue from 'vue'
 
-@Component
-export default class Debug extends Vue {}
+export default Vue.extend({
+  name: 'Debug'
+})
 </script>
 
 <style lang="scss" scoped>

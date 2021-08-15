@@ -64,7 +64,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import Vue from 'vue'
 
 import { email, required } from 'vuelidate/lib/validators'
 import { validationMixin } from 'vuelidate'
@@ -75,7 +75,8 @@ interface IContactForm {
   message: string;
 }
 
-@Component({
+export default Vue.extend({
+  name: 'ContactForm',
   mixins: [validationMixin],
   validations: {
     contactForm: {
@@ -90,37 +91,37 @@ interface IContactForm {
         required
       }
     }
-  }
-})
-export default class ContactForm extends Vue {
-  private readonly formName: string = 'contact';
-  private readonly honeypotField: string = 'bot-field';
-  private contactForm: IContactForm = {
-    name: '',
-    email: '',
-    message: ''
-  };
-
-  private mounted (): void {
+  },
+  data() {
+    return {
+      formName: 'contact',
+      honeypotField: 'bot-field',
+      contactForm: {
+        name: '',
+        email: '',
+        message: ''
+      } as IContactForm
+    }
+  },
+  mounted(): void {
     this.getAutosave()
-  }
+  },
+  methods: {
+    getAutosave (): void {
+      const data = sessionStorage.getItem('autosave')
 
-  private getAutosave (): void {
-    const data = sessionStorage.getItem('autosave')
-
-    if (data) {
-      this.contactForm = JSON.parse(data)
+      if (data) {
+        this.contactForm = JSON.parse(data)
+      }
+    },
+    autosave (): void {
+      sessionStorage.setItem('autosave', JSON.stringify(this.contactForm))
+    },
+    touch (formField: string): void {
+      return this.$v.contactForm[formField]!.$touch()
     }
   }
-
-  private autosave (): void {
-    sessionStorage.setItem('autosave', JSON.stringify(this.contactForm))
-  }
-
-  private touch (formField: string): void {
-    return this.$v.contactForm[formField]!.$touch()
-  }
-}
+})
 </script>
 
 <style lang="scss">

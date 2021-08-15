@@ -1,7 +1,9 @@
 // Colours shared across themes
 
-$base-white: #fff;
-$base-black: #000;
+$color-white: #fff;
+$color-black: #000;
+$color-orange: #f77126;
+
 $base-grey-darker: #111;
 $base-grey-dark: #393939;
 $base-grey-middle: #666;
@@ -9,19 +11,9 @@ $base-grey-light: #aaa;
 $base-grey-lighter: #ccc;
 $base-orange: #fe9867;
 $alt-orange: #ff7f21;
-
-$orange-gradient: linear-gradient(140deg, var(--alt-orange) 0%, var(--base-orange) 60%, var(--base-orange) 100%);
  
 :root {
-  --base-white: #{$base-white};
-  --base-black: #{$base-black};
-  --base-grey-darker: #{$base-grey-darker};
-  --base-grey-dark: #{$base-grey-dark};
-  --base-grey-middle: #{$base-grey-middle};
-  --base-grey-light: #{$base-grey-light};
-  --base-grey-lighter: #{$base-grey-lighter};
-  --base-orange: #{$base-orange};
-  --alt-orange: #{$alt-orange};
-
-  --orange-gradient: #{$orange-gradient};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-orange: #{$color-orange};
 }

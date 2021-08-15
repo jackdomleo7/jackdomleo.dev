@@ -14,8 +14,8 @@
       <svg-icon v-if="icon" :name="icon" />
       <textarea
         v-if="multiline"
+        :value="value"
         :id="forId"
-        v-model="inputValue"
         :name="name"
         :type="type"
         :inputmode="inputmode"
@@ -30,8 +30,8 @@
       />
       <input
         v-else
+        :value="value"
         :id="forId"
-        v-model="inputValue"
         :name="name"
         :type="type"
         :inputmode="inputmode"
@@ -40,9 +40,9 @@
         :required="required"
         :aria-invalid="errorMsg ? 'true' : 'false'"
         :aria-describedby="errorMsg && `${forId}--error`"
-        @change="onChange"
-        @input="onInput"
-        @blur="onBlur"
+        @change="$emit('change', $event.target.value)"
+        @input="$emit('input', $event.target.value)"
+        @blur="$emit('blur', $event.target.value)"
       >
     </span>
     <span v-if="errorMsg" :id="`${forId}--error`" class="text-input__error" role="alert">
@@ -52,120 +52,77 @@
 </template>
 
 <script lang="ts">
-import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator'
+import Vue from 'vue'
 import { stringHasNoWhitespace } from '@/helpers/propValidators'
 
-@Component
-export default class TextInput extends Vue {
-  @Prop({
-    type: String,
-    required: true
-  }) private readonly label!: string;
-
-  @Prop({
-    type: String,
-    required: true,
-    validator (value: string): boolean {
-      return stringHasNoWhitespace(value)
-    }
-  }) private readonly forId!: string;
-
-  @Prop({
-    type: String,
-    default: undefined
-  }) private readonly value!: string;
-
-  @Prop({
-    type: String,
-    default: 'text',
-    validator: (value: string): boolean => {
-      return ['text', 'email'].includes(value) && stringHasNoWhitespace(value)
-    }
-  }) private readonly type!: string;
-
-  @Prop({
-    type: String,
-    default: undefined,
-    validator: (value: string): boolean => {
-      return ['text', 'email'].includes(value) && stringHasNoWhitespace(value)
-    }
-  }) private readonly inputmode!: string;
-
-  @Prop({
-    type: Boolean,
-    default: false
-  }) private readonly required!: boolean;
-
-  @Prop({
-    type: Boolean,
-    default: false
-  }) private readonly multiline!: boolean;
-
-  @Prop({
-    type: String,
-    default: undefined,
-    validator (value: string): boolean {
-      return stringHasNoWhitespace(value)
-    }
-  }) private readonly icon!: string;
-
-  @Prop({
-    type: String,
-    default: undefined,
-    validator (value: string): boolean {
-      return stringHasNoWhitespace(value)
-    }
-  }) private readonly name!: string;
-
-  @Prop({
-    type: String,
-    default: undefined
-  }) private readonly placeholder!: string;
-
-  @Prop({
-    type: String,
-    default: undefined
-  }) private readonly autocomplete!: string;
-
-  @Prop({
-    type: String,
-    default: undefined
-  }) private readonly errorMsg!: string;
-
-  private _inputValue: string = '';
-
-  get inputValue (): string {
-    if (this.value && this.value.toString() !== this._inputValue) {
-      this._inputValue = this.value.toString()
-    }
-    return this._inputValue
-  }
-
-  set inputValue (value: string) {
-    this._inputValue = value
-  }
-
-  private created () {
-    if (this.value) {
-      this._inputValue = this.value.toString()
+export default Vue.extend({
+  name: 'TextInput',
+  props: {
+    label: {
+      type: String,
+      required: true
+    },
+    forId: {
+      type: String,
+      required: true,
+      validator (value: string): boolean {
+        return stringHasNoWhitespace(value)
+      }
+    },
+    value: {
+      type: String,
+      default: undefined
+    },
+    type: {
+      type: String,
+      default: 'text',
+      validator: (value: string): boolean => {
+        return ['text', 'email'].includes(value) && stringHasNoWhitespace(value)
+      }
+    },
+    inputmode: {
+      type: String,
+      default: undefined,
+      validator: (value: string): boolean => {
+        return ['text', 'email'].includes(value) && stringHasNoWhitespace(value)
+      }
+    },
+    required: {
+      type: Boolean,
+      default: false
+    },
+    multiline: {
+      type: Boolean,
+      default: false
+    },
+    icon: {
+      type: String,
+      default: undefined,
+      validator (value: string): boolean {
+        return stringHasNoWhitespace(value)
+      }
+    },
+    name: {
+      type: String,
+      default: undefined,
+      validator (value: string): boolean {
+        return stringHasNoWhitespace(value)
+      }
+    },
+    placeholder: {
+      type: String,
+      default: undefined
+    },
+    autocomplete: {
+      type: String,
+      default: undefined
+    },
+    errorMsg: {
+      type: String,
+      default: undefined
     }
   }
-
-  @Emit('change')
-  private onChange (event: Event): string {
-    return (event.target as HTMLInputElement).value
-  }
-
-  @Emit('input')
-  private onInput (event: Event): string {
-    return (event.target as HTMLInputElement).value
-  }
-
-  @Emit('blur')
-  private onBlur (event: Event): string {
-    return (event.target as HTMLInputElement).value
-  }
-}
+})
 </script>
 
 <style lang="scss">

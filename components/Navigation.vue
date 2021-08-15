@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import Vue from 'vue'
 
 interface INav {
   text: string;
@@ -22,35 +22,40 @@ interface INav {
   icon: string;
 }
 
-@Component
-export default class Navigation extends Vue {
-  private readonly navList: INav[] = [
-    {
-      text: 'Home',
-      url: '/',
-      icon: 'home'
-    },
-    {
-      text: 'Career',
-      url: '/career',
-      icon: 'briefcase'
-    },
-    {
-      text: 'Projects',
-      url: '/projects',
-      icon: 'code'
-    },
-    {
-      text: 'Blog',
-      url: '/blog',
-      icon: 'file'
+export default Vue.extend({
+  name: 'Navigation',
+  data() {
+    return {
+      navList: [
+        {
+          text: 'Home',
+          url: '/',
+          icon: 'home'
+        },
+        {
+          text: 'Career',
+          url: '/career',
+          icon: 'briefcase'
+        },
+        {
+          text: 'Projects',
+          url: '/projects',
+          icon: 'code'
+        },
+        {
+          text: 'Blog',
+          url: '/blog',
+          icon: 'file'
+        }
+      ] as INav[]
     }
-  ];
-
-  private isCurrent (path: string): 'page' | undefined {
-    return this.$route.path === path ? 'page' : undefined
+  },
+  methods: {
+    isCurrent (path: string): 'page' | undefined {
+      return this.$route.path === path ? 'page' : undefined
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

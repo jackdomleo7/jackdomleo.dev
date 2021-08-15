@@ -1,7 +1,4 @@
-$base-red: #f04141;
-
 .theme--dark {
-  --body-bg: var(--base-grey-dark);
-  --body-color: var(--base-white);
-  --base-red: #{$base-red};
+  --body-bg: var(--color-black);
+  --body-color: var(--color-white);
 }
