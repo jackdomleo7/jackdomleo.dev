@@ -29,8 +29,7 @@
       "@nuxt/types",
       "@nuxtjs/color-mode",
       "@types/jest",
-      "@nuxt/content",
-      "reflect-metadata"
+      "@nuxt/content"
     ]
   },
   "exclude": [

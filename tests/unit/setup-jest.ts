@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import 'reflect-metadata'
 
 // Necessary for Nuxt auto scan components feature
 [

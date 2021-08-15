@@ -34,7 +34,6 @@
     "core-js": "^3.11.2",
     "modern-normalize": "^1.1.0",
     "nuxt": "^2.15.4",
-    "reflect-metadata": "^0.1.13",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {

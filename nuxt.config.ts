@@ -27,9 +27,6 @@ export default {
     '@/assets/styles/main.scss'
   ],
   components: true,
-  plugins: [
-    '@/plugins/reflect-metadata'
-  ],
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/eslint-module',
