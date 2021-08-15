@@ -34,9 +34,7 @@
     "core-js": "^3.11.2",
     "modern-normalize": "^1.1.0",
     "nuxt": "^2.15.4",
-    "particles.vue": "^2.9.2",
     "reflect-metadata": "^0.1.13",
-    "tsparticles": "^1.26.2",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {
