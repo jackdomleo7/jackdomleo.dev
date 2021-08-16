@@ -3,3 +3,5 @@ static/sw.js
 prismic.d.ts
 report
 .nuxt
+node_modules
+dist

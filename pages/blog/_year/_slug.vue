@@ -11,11 +11,6 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'BlogSlug',
-  head () {
-    return {
-      title: 'Blog article'
-    }
-  },
   async asyncData ({ $content, $prismic, route, error, payload }: any) {
     const footer = await $prismic.api.getSingle('footer')
 
@@ -29,6 +24,11 @@ export default Vue.extend({
       return { page, footer }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
+  head () {
+    return {
+      title: 'Blog article'
     }
   }
 })

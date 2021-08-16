@@ -20,7 +20,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    year(): number {
+    year (): number {
       return new Date().getFullYear()
     }
   }

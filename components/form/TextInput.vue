@@ -14,8 +14,8 @@
       <svg-icon v-if="icon" :name="icon" />
       <textarea
         v-if="multiline"
-        :value="value"
         :id="forId"
+        :value="value"
         :name="name"
         :type="type"
         :inputmode="inputmode"
@@ -30,8 +30,8 @@
       />
       <input
         v-else
-        :value="value"
         :id="forId"
+        :value="value"
         :name="name"
         :type="type"
         :inputmode="inputmode"

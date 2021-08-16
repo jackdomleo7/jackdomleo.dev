@@ -92,7 +92,7 @@ export default Vue.extend({
       }
     }
   },
-  data() {
+  data () {
     return {
       formName: 'contact',
       honeypotField: 'bot-field',
@@ -103,7 +103,7 @@ export default Vue.extend({
       } as IContactForm
     }
   },
-  mounted(): void {
+  mounted (): void {
     this.getAutosave()
   },
   methods: {

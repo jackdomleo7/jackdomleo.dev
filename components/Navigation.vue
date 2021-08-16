@@ -24,7 +24,7 @@ interface INav {
 
 export default Vue.extend({
   name: 'Navigation',
-  data() {
+  data () {
     return {
       navList: [
         {
