@@ -1,4 +1,8 @@
+$color-orange: #fe9867;
+
 .theme--dark {
+  --color-orange: #{$color-orange};
+
   --body-bg: var(--color-black);
   --body-color: var(--color-white);
 }

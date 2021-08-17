@@ -1,4 +1,8 @@
+$color-orange: #ed7540;
+
 :root {
+  --color-orange: #{$color-orange};
+  
   --body-bg: var(--color-white);
   --body-color: var(--color-black);
 }

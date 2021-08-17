@@ -1,19 +1,11 @@
 // Colours shared across themes
 
-$color-white: #fff;
 $color-black: #000;
-$color-orange: #ed7540;
-
-$base-grey-darker: #111;
-$base-grey-dark: #393939;
-$base-grey-middle: #666;
-$base-grey-light: #aaa;
-$base-grey-lighter: #ccc;
-$base-orange: #fe9867;
-$alt-orange: #ff7f21;
+$color-grey-darkest: #101010;
+$color-white: #fff;
  
 :root {
   --color-white: #{$color-white};
+  --color-grey-darkest: #{$color-grey-darkest};
   --color-black: #{$color-black};
-  --color-orange: #{$color-orange};
 }

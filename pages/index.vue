@@ -11,14 +11,15 @@
         </p>
       </div>
       <div class="home-jumbo__img">
-        <div class="home-jumbo__square">
+        <div aria-hidden="true" class="home-jumbo__square">
           <div class="home-jumbo__square-icons">
-            <svg-icon name="circle" v-rellax="{ speed: -3 }" />
-            <svg-icon name="square" v-rellax="{ speed: -5 }" />
-            <svg-icon name="triangle" v-rellax="{ speed: -2 }" />
+            <svg-icon v-rellax="{ speed: -1 }" name="triangle" />
+            <svg-icon v-rellax="{ speed: -1 }" name="square" />
+            <svg-icon v-rellax="{ speed: -1 }" name="circle" />
+            <svg-icon v-rellax="{ speed: -1 }" name="circle" />
           </div>
         </div>
-        <img src="https://jackdomleo.dev/_nuxt/img/bio-image-jack-domleo.400e227.jpg" alt="" />
+        <img src="https://jackdomleo.dev/_nuxt/img/bio-image-jack-domleo.400e227.jpg" alt="">
       </div>
     </div>
   </PageTemplate>
@@ -29,11 +30,6 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'Home',
-  head () {
-    return {
-      title: 'Home'
-    }
-  },
   async asyncData ({ $prismic, error }: any) {
     const home = await $prismic.api.getSingle('home')
     const footer = await $prismic.api.getSingle('footer')
@@ -43,6 +39,11 @@ export default Vue.extend({
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
+  },
+  head () {
+    return {
+      title: 'Home'
+    }
   }
 })
 </script>
@@ -50,14 +51,20 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .home-jumbo {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 64px);
   position: relative;
   display: grid;
+  grid-template-columns: 1fr;
   place-items: center;
-  padding: 1rem 0 1rem 3rem;
+  padding: 1rem 2rem;
+
+  @media (min-width: 32em) {
+    height: 100vh;
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 0 1rem 3rem;
   }
 
   @media (min-width: 1200px) {
@@ -66,6 +73,24 @@ export default Vue.extend({
 
   &__greeting {
     font-family: var(--font-family-lato);
+    width: 80%;
+    margin-right: auto;
+
+    @media (min-width: 375px) {
+      width: 74%;
+    }
+
+    @media (min-width: 400px) {
+      width: 70%;
+    }
+
+    @media (min-width: 610px) {
+      width: 65%;
+    }
+
+    @media (min-width: 768px) {
+      width: 140%;
+    }
 
     p {
       opacity: 0.5;
@@ -101,26 +126,68 @@ export default Vue.extend({
       svg {
         position: absolute;
         color: var(--color-white);
+        height: 3rem;
+        width: 3rem;
 
         &:nth-child(1) {
-          height: 2rem;
-          width: 2rem;
-          top: 45%;
-          left: 16rem;
+          top: 44%;
+          left: -1rem;
+
+          @media (min-width: 340px) {
+            left: 1rem;
+          }
+
+          @media (min-width: 540px) {
+            top: 40%;
+            left: 3rem;
+          }
+
+          @media (min-width: 1000px) {
+            left: 6rem;
+          }
         }
 
         &:nth-child(2) {
-          height: 2rem;
-          width: 2rem;
-          top: 60%;
-          left: 16rem;
+          display: none;
+
+          @media (min-width: 540px) {
+            display: block;
+            top: 60%;
+            left: 10rem;
+          }
         }
 
         &:nth-child(3) {
-          height: 2rem;
-          width: 2rem;
-          top: 75%;
-          left: 16rem;
+          top: 70%;
+          left: -2rem;
+
+          @media (min-width: 340px) {
+            left: 0;
+          }
+
+          @media (min-width: 540px) {
+            left: 2rem;
+          }
+
+          @media (min-width: 1000px) {
+            top: 75%;
+            left: 5rem;
+          }
+
+          @media (min-width: 1300px) {
+            top: 80%;
+            left: 16rem;
+          }
+        }
+
+        &:nth-child(4) {
+          display: none;
+
+          @media (min-width: 540px) {
+            display: block;
+            top: 50%;
+            left: 25rem;
+          }
         }
       }
     }
