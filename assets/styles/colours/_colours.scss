@@ -5,6 +5,8 @@ $color-grey-darkest: #101010;
 $color-white: #fff;
  
 :root {
+  color-scheme: light dark;
+
   --color-white: #{$color-white};
   --color-grey-darkest: #{$color-grey-darkest};
   --color-black: #{$color-black};
