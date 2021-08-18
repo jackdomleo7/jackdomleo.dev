@@ -7,6 +7,10 @@
 html {
   font-family: sans-serif;
   box-sizing: border-box;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 *,
