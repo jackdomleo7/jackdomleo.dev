@@ -1,8 +1,21 @@
-$color-orange: #ed7540;
+$colour-grey-50: #fff;
+$colour-grey-75: #fafafa;
+$colour-grey-100: #f5f5f5;
+$colour-grey-200: #eaeaea;
+$colour-grey-300: #e1e1e1;
+$colour-grey-400: #cacaca;
+$colour-grey-500: #b3b3b3;
+$colour-grey-600: #8e8e8e;
+$colour-grey-700: #6e6e6e;
+$colour-grey-800: #4b4b4b;
+$colour-grey-900: #2c2c2c;
+$colour-grey-1000: #1a1a1a;
+
+$colour-orange: #ff590d;
 
 :root {
-  --color-orange: #{$color-orange};
+  --colour-orange: #{$colour-orange};
   
-  --body-bg: var(--color-white);
-  --body-color: var(--color-black);
+  --body-bg: #{$colour-grey-50};
+  --body-color: #{$colour-grey-1000};
 }

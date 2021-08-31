@@ -1,13 +1,9 @@
-// Colours shared across themes
+$colour-static-white: #fff;
+$colour-static-black: #000;
 
-$color-black: #000;
-$color-grey-darkest: #101010;
-$color-white: #fff;
- 
 :root {
   color-scheme: light dark;
 
-  --color-white: #{$color-white};
-  --color-grey-darkest: #{$color-grey-darkest};
-  --color-black: #{$color-black};
+  --colour-static-white: #{$colour-static-white};
+  --colour-static-black: #{$colour-static-black};
 }

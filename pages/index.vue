@@ -6,6 +6,7 @@
         <h1 class="home-jumbo__heading">
           I'm Jack Domleo
         </h1>
+        <p class="home-jumbo__heading-secondary">Frontend Developer</p>
         <p>
           I'm a professional frontend & UX developer primarily working with Vue.js.
         </p>
@@ -60,6 +61,7 @@ export default Vue.extend({
 
   @media (min-width: 32em) {
     height: 100vh;
+    min-height: 34rem;
   }
 
   @media (min-width: 768px) {
@@ -75,6 +77,8 @@ export default Vue.extend({
     font-family: var(--font-family-lato);
     width: 80%;
     margin-right: auto;
+    color: var(--body-color-secondary);
+    font-size: 1.4rem;
 
     @media (min-width: 375px) {
       width: 74%;
@@ -91,15 +95,22 @@ export default Vue.extend({
     @media (min-width: 768px) {
       width: 140%;
     }
+  }
 
-    p {
-      opacity: 0.5;
+  &__heading {
+    font-size: 5rem;
+    margin: 0;
+
+    &-secondary {
+      font-size: 3rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
   }
 
   &__square {
-    background-color: var(--color-orange);
-    box-shadow: inset rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    background-color: var(--colour-orange);
+    box-shadow: inset rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     transform: rotate(-60deg);
     overflow: hidden;
     position: absolute;
@@ -125,7 +136,7 @@ export default Vue.extend({
 
       svg {
         position: absolute;
-        color: var(--color-white);
+        color: var(--colour-static-white);
         height: 3rem;
         width: 3rem;
 
@@ -199,7 +210,7 @@ export default Vue.extend({
     width: 14rem;
     height: 14rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    background-color: var(--color-white);
+    background-color: var(--colour-static-white);
     position: relative;
     display: grid;
     place-items: center;

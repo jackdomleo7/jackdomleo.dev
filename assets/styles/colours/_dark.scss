@@ -1,8 +1,31 @@
-$color-orange: #fe9867;
+$colour-grey-50: #080808;
+$colour-grey-75: #1a1a1a;
+$colour-grey-100: #1e1e1e;
+$colour-grey-200: #2c2c2c;
+$colour-grey-300: #393939;
+$colour-grey-400: #494949;
+$colour-grey-500: #5c5c5c;
+$colour-grey-600: #7c7c7c;
+$colour-grey-700: #a2a2a2;
+$colour-grey-800: #c8c8c8;
+$colour-grey-900: #efefef;
+$colour-grey-1000: #fafafa;
+
+$colour-orange: #ff7333;
 
 .theme--dark {
-  --color-orange: #{$color-orange};
+  --colour-grey-50: #{$colour-grey-50};
+  --colour-grey-75: #{$colour-grey-75};
+  --colour-grey-100: #{$colour-grey-100};
+  --colour-grey-200: #{$colour-grey-200};
+  --colour-grey-300: #{$colour-grey-300};
+  --colour-grey-400: #{$colour-grey-400};
+  --colour-grey-500: #{$colour-grey-500};
+  --colour-grey-600: #{$colour-grey-600};
+  --colour-grey-50: #{$colour-grey-50};
 
-  --body-bg: var(--color-black);
-  --body-color: var(--color-white);
+  --colour-orange: #{$colour-orange};
+
+  --body-bg: #{$colour-grey-100};
+  --body-color: #{$colour-grey-1000};
 }

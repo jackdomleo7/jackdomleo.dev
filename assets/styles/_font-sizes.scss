@@ -1,0 +1,19 @@
+:root {
+  --font-size-title: 1.8rem;
+  --font-size-subtitle: 1.6rem;
+  --font-size-heading: 1.3rem;
+  --font-size-subheading: 1.2rem;
+  --font-size-large: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.8125rem;
+
+  @media (min-width: 58em) {
+    --font-size-title: 2.4rem;
+    --font-size-subtitle: 1.8rem;
+    --font-size-heading: 1.5rem;
+    --font-size-subheading: 1.35rem;
+    --font-size-large: 1.25rem;
+    --font-size-body: 1.125rem;
+    --font-size-small: 0.875rem;
+  }
+}
