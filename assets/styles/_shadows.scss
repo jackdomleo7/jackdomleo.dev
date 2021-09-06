@@ -1,0 +1,9 @@
+:root {
+  --shadow: rgba(50, 50, 93, 0.3) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px 0;
+  --shadow-inset: inset rgba(0, 0, 0, 0.3) 0px 14px 28px, rgba(0, 0, 0, 0.25) 0px 10px 10px;
+}
+
+.theme--dark {
+  --shadow: rgba(50, 50, 93, 0.4) 0px 50px 100px -20px, rgba(0, 0, 0, 0.32) 0px 30px 60px 0;
+  --shadow-inset: inset rgba(0, 0, 0, 0.7) 0px 14px 28px, rgba(0, 0, 0, 0.4) 0px 10px 10px;
+}

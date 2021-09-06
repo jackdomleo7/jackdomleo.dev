@@ -52,7 +52,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .home-jumbo {
   width: 100vw;
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -64,45 +64,56 @@ export default Vue.extend({
     min-height: 34rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem 0 1rem 3rem;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 75em) {
     padding-left: 5rem;
   }
 
   &__greeting {
     font-family: var(--font-family-lato);
-    width: 80%;
     margin-right: auto;
     color: var(--body-color-secondary);
     font-size: 1.4rem;
 
-    @media (min-width: 375px) {
-      width: 74%;
+    @media (min-width: 32em) {
+      margin-top: 2rem;
     }
 
-    @media (min-width: 400px) {
-      width: 70%;
-    }
-
-    @media (min-width: 610px) {
-      width: 65%;
-    }
-
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
       width: 140%;
+    }
+
+    p {
+      font-size: var(--font-size-body);
+
+      &:first-of-type {
+        margin: 0;
+      }
+
+      &:last-of-type {
+        width: 70%;
+
+        @media (min-width: 29.375em) {
+          width: 60%;
+        }
+      }
     }
   }
 
   &__heading {
-    font-size: 5rem;
+    font-size: 2.5rem;
     margin: 0;
 
+    @media (min-width: 48em) {
+      font-size: 5rem;
+    }
+
     &-secondary {
-      font-size: 3rem;
+      font-size: var(--font-size-subtitle) !important;
       margin-top: 0;
       margin-bottom: 1rem;
     }
@@ -110,7 +121,7 @@ export default Vue.extend({
 
   &__square {
     background-color: var(--colour-orange);
-    box-shadow: inset rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: var(--shadow-inset);
     transform: rotate(-60deg);
     overflow: hidden;
     position: absolute;
@@ -120,12 +131,12 @@ export default Vue.extend({
     top: -30rem;
     left: 100%;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 62.5em) {
       top: -27rem;
       left: 85%;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
       top: -25rem;
     }
 
@@ -144,16 +155,16 @@ export default Vue.extend({
           top: 44%;
           left: -1rem;
 
-          @media (min-width: 340px) {
+          @media (min-width: 21.25em) {
             left: 1rem;
           }
 
-          @media (min-width: 540px) {
+          @media (min-width: 33.75em) {
             top: 40%;
             left: 3rem;
           }
 
-          @media (min-width: 1000px) {
+          @media (min-width: 62.5em) {
             left: 6rem;
           }
         }
@@ -161,7 +172,7 @@ export default Vue.extend({
         &:nth-child(2) {
           display: none;
 
-          @media (min-width: 540px) {
+          @media (min-width: 33.75em) {
             display: block;
             top: 60%;
             left: 10rem;
@@ -172,20 +183,20 @@ export default Vue.extend({
           top: 70%;
           left: -2rem;
 
-          @media (min-width: 340px) {
+          @media (min-width: 21.25em) {
             left: 0;
           }
 
-          @media (min-width: 540px) {
+          @media (min-width: 33.75em) {
             left: 2rem;
           }
 
-          @media (min-width: 1000px) {
+          @media (min-width: 62.5em) {
             top: 75%;
             left: 5rem;
           }
 
-          @media (min-width: 1300px) {
+          @media (min-width: 81.25em) {
             top: 80%;
             left: 16rem;
           }
@@ -194,7 +205,7 @@ export default Vue.extend({
         &:nth-child(4) {
           display: none;
 
-          @media (min-width: 540px) {
+          @media (min-width: 33.75em) {
             display: block;
             top: 50%;
             left: 25rem;
@@ -209,23 +220,23 @@ export default Vue.extend({
     border-radius: 50%;
     width: 14rem;
     height: 14rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: var(--shadow);
     background-color: var(--colour-static-white);
     position: relative;
     display: grid;
     place-items: center;
 
-    @media (min-width: 800px) {
+    @media (min-width: 50em) {
       width: 16rem;
       height: 16rem;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: 62.5em) {
       width: 20rem;
       height: 20rem;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 75em) {
       width: 24rem;
       height: 24rem;
     }
