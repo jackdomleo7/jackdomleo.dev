@@ -2,14 +2,10 @@
   <PageTemplate :page-heading="$prismic.asText(home.data.page_title)" :footer="footer">
     <div slot="jumbo" class="home-jumbo">
       <div class="home-jumbo__greeting">
-        <p>Hi</p>
-        <h1 class="home-jumbo__heading">
-          I'm Jack Domleo
-        </h1>
-        <p class="home-jumbo__heading-secondary">Frontend Developer</p>
-        <p>
-          I'm a professional frontend & UX developer primarily working with Vue.js.
-        </p>
+        <p>{{ home.data.page_greeting }}</p>
+        <h1 class="home-jumbo__heading">{{ $prismic.asText(home.data.page_title) }}</h1>
+        <p class="home-jumbo__heading-secondary">{{ home.data.page_subtitle }}</p>
+        <p>{{ $prismic.asText(home.data.page_intro) }}</p>
       </div>
       <div class="home-jumbo__img">
         <div aria-hidden="true" class="home-jumbo__square">
@@ -20,7 +16,7 @@
             <svg-icon v-rellax="{ speed: -1 }" name="circle" />
           </div>
         </div>
-        <img src="https://jackdomleo.dev/_nuxt/img/bio-image-jack-domleo.400e227.jpg" alt="">
+        <img :src="home.data.avatar.url" :alt="home.data.avatar.alt" height="384" width="384">
       </div>
     </div>
   </PageTemplate>
