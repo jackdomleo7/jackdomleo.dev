@@ -52,10 +52,10 @@
     <p class="intro__occupation">
       <svg-icon name="briefcase" /> <span class="sr-only">Current occupation</span> Developer at
       <a
-        href="https://www.mitrefinch.co.uk?ref=jackdomleo.dev"
+        href="https://www.oceanfinance.co.uk/"
         rel="nofollow"
         target="_blank"
-      >Mitrefinch</a>
+      >Ocean Finance</a>
     </p>
   </section>
 </template>
