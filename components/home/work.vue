@@ -39,13 +39,12 @@
         <div class="work__details">
           <h3><span class="sr-only">Company name</span>{{ work.company }}</h3>
           <p><span class="sr-only">Job title</span>{{ work.title }}</p>
-          <p>{{ work.description }}</p>
         </div>
       </li>
     </ul>
-    <btn @click="showAllWork = !showAllWork">
+    <!-- <btn @click="showAllWork = !showAllWork">
       Show {{ showAllWork ? 'less' : 'all' }} <span class="sr-only">work history</span>
-    </btn>
+    </btn> -->
   </section>
 </template>
 
@@ -59,7 +58,6 @@ interface IWork {
   end: Date | 'present';
   company: string;
   title: string;
-  description: string;
 }
 
 interface IStartEndDate {
@@ -71,48 +69,44 @@ interface IStartEndDate {
   components: { Btn }
 })
 export default class Work extends Vue {
-  private showAllWork: boolean = false;
+  private showAllWork: boolean = true;
 
   private readonly workHistory: IWork[] = [
     {
-      start: new Date('2019-05-15'),
+      start: new Date('2021-02-15'),
       end: 'present',
+      company: 'Ocean Finance',
+      title: 'Frontend Developer'
+    },
+    {
+      start: new Date('2019-05-15'),
+      end: new Date('2021-02-08'),
       company: 'Mitrefinch',
-      title: 'Developer',
-      description:
-        'Creating multitennant SaaS applications such as payroll and access control using Vue.js and TypeScript'
+      title: 'Developer'
     },
     {
       start: new Date('2019-03-25'),
       end: new Date('2019-05-15'),
       company: 'Mitrefinch',
-      title: 'Junior Developer',
-      description:
-        'Created a centralised repository of consistent styles using SCSS, BEM and PostCSS to consume in new products'
+      title: 'Junior Developer'
     },
     {
       start: new Date('2018-09-03'),
       end: new Date('2019-02-18'),
       company: 'flybmi',
-      title: 'IT/Developer Apprentice',
-      description:
-        'Used the Grav CMS to maintain the airline\'s website and React.js to maintain the airline\'s intranet'
+      title: 'IT/Developer Apprentice'
     },
     {
       start: new Date('2017-06-17'),
       end: new Date('2018-08-31'),
       company: 'Primark',
-      title: 'Retail Assistant',
-      description:
-        'Worked part-time for this fast-paced Nottingham high street store during my time in Sixth Form trying to balance my work hours, study hours and personal life'
+      title: 'Retail Assistant'
     },
     {
       start: new Date('2016-07-13'),
       end: new Date('2016-08-31'),
       company: 'JND Accounting',
-      title: 'Office Assistant',
-      description:
-        'Worked part-time for this accounting company after finishing secondary school, making tea and coffee, filing, shredding and tidying up'
+      title: 'Office Assistant'
     }
   ];
 
