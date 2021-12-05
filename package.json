@@ -9,7 +9,8 @@
     "generate": "rimraf ./dist && nuxt generate -m",
     "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 .",
     "lint:fix": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix --cache --max-warnings=0 .",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
@@ -33,6 +34,7 @@
     "eslint-plugin-vue": "^8.1.1",
     "jest": "^27.4.3",
     "prettier": "^2.5.1",
+    "push-dir": "^0.4.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.0",
     "vue-jest": "^3.0.7"
