@@ -24,6 +24,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxt/content',
+    '@nuxtjs/sitemap' // Always declare last
   ],
   axios: {},
   pwa: {
@@ -32,6 +33,10 @@ export default {
     }
   },
   content: {},
+  sitemap: {
+    hostname: 'https://jackdomleo.dev',
+    exclude: ['/_icons']
+  },
   build: {
   }
 }
