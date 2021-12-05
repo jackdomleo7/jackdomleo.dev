@@ -14,7 +14,7 @@
   "homepage": "https://jackdomleo.dev",
   "scripts": {
     "deps": "rimraf ./node_modules && npm ci",
-    "dev": "nuxt",
+    "dev": "nuxt --open",
     "start": "nuxt start",
     "generate": "rimraf ./dist && nuxt generate -m",
     "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 .",
