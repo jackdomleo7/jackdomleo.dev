@@ -14,6 +14,7 @@ export default {
     ]
   },
   css: [
+    'modern-normalize/modern-normalize.css'
   ],
   plugins: [
   ],
