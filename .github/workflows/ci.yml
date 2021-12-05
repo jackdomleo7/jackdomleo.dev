@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - master
+      - new
+  pull_request:
+    branches:
+      - master
+      - new
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node env
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+
+      - name: Clean install dependencies
+        run: npm ci --prefer-offline --no-audit
+
+      - name: Run linter
+        run: npm run lint:check
+
+      - name: Run tests
+        run: npm run test
