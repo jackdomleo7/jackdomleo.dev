@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "deps": "rimraf ./node_modules && npm ci",
     "dev": "nuxt",
     "start": "nuxt start",
-    "generate": "nuxt generate -m",
+    "generate": "rimraf ./dist && nuxt generate -m",
     "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 .",
     "lint:fix": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix --cache --max-warnings=0 .",
     "test": "jest"
@@ -32,6 +33,7 @@
     "eslint-plugin-vue": "^8.1.1",
     "jest": "^27.4.3",
     "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
     "ts-jest": "^27.1.0",
     "vue-jest": "^3.0.7"
   }

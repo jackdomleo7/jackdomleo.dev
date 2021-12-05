@@ -3,18 +3,17 @@
 ## Build Setup
 
 ```bash
-# install dependencies
-$ npm install
+# Clean install dependencies (also useful if you ever want to delete node_modiles rapidly)
+$ npm run deps
 
-# serve with hot reload at localhost:3000
+# Serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
+# Generate static project
 $ npm run generate
+
+# Launch staging server
+$ npm run start
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
