@@ -21,8 +21,10 @@ export default {
     '@nuxt/typescript-build',
   ],
   modules: [
+    '@nuxtjs/dotenv',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics',
     '@nuxt/content',
     '@nuxtjs/svg-sprite',
     '@nuxtjs/robots',
@@ -34,13 +36,16 @@ export default {
       lang: 'en'
     }
   },
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
   content: {},
   robots: {
     UserAgent: '*',
     Allow: '/'
   },
   sitemap: {
-    hostname: 'https://jackdomleo.dev',
+    hostname: process.env.BASE_URL,
     exclude: ['/_icons']
   },
   build: {
