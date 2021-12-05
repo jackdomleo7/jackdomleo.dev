@@ -24,6 +24,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxt/content',
+    '@nuxtjs/svg-sprite',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap' // Always declare last
   ],
