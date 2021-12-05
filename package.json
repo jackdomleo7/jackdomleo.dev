@@ -2,6 +2,16 @@
   "name": "jackdomleo.dev",
   "version": "1.0.0",
   "private": true,
+  "description": "Jack Domleo's personal website and blog",
+  "author": {
+    "name": "Jack Domleo",
+    "url": "https://jackdomleo.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackdomleo7/jackdomleo.dev.git"
+  },
+  "homepage": "https://jackdomleo.dev",
   "scripts": {
     "deps": "rimraf ./node_modules && npm ci",
     "dev": "nuxt",
