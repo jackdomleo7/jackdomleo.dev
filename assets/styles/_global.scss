@@ -1,0 +1,58 @@
+::selection {
+  text-shadow: none;
+  color: var(--colour-text-primary);
+  background-color: var(--colour-highlight);
+}
+
+html {
+  background-color: var(--colour-background);
+  color: var(--colour-text-primary);
+  font-family: sans-serif;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  color: inherit;
+}
+
+a, button {
+  touch-action: manipulation;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+iframe {
+  height: 100%;
+  width: 100%
+}
