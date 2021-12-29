@@ -22,7 +22,15 @@ export default {
   ],
   buildModules: [
     '@nuxt/typescript-build',
+    '@nuxtjs/prismic'
   ],
+  prismic: {
+    endpoint: process.env.PRISMIC_ENDPOINT,
+    modern: true,
+    apiOptions: {
+      accessToken: process.env.PRISMIC_ACCESS_TOKEN
+    }
+  },
   modules: [
     '@nuxtjs/dotenv',
     '@nuxtjs/axios',
@@ -40,7 +48,8 @@ export default {
     }
   },
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    dev: process.env.NODE_ENV === 'development'
   },
   content: {},
   robots: {
@@ -49,7 +58,7 @@ export default {
   },
   sitemap: {
     hostname: process.env.BASE_URL,
-    exclude: ['/_icons']
+    exclude: ['/_icons', '/preview']
   },
   build: {
   }
