@@ -1,0 +1,24 @@
+$font-family-montserrat: 'Montserrat';
+$montserrat-weights: (
+  "Light": 300,
+  "Regular": 400,
+  "Bold": 700
+);
+
+:root {
+  --font-family-montserrat: '#{$font-family-montserrat}', Arial, Helvetica, sans-serif;
+}
+
+@each $name, $weight in $montserrat-weights {
+  @font-face {
+    font-family: '#{$font-family-montserrat}';
+    src:
+      local('#{$font-family-montserrat}'),
+      url(~assets/fonts/Montserrat/Montserrat-#{$name}.woff2) format('woff2'),
+      url(~assets/fonts/Montserrat/Montserrat-#{$name}.woff) format('woff'),
+      url(~assets/fonts/Montserrat/Montserrat-#{$name}.ttf) format('truetype');
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}

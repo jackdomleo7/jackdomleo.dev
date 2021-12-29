@@ -5,8 +5,6 @@
 }
 
 html {
-  background-color: var(--colour-background);
-  color: var(--colour-text-primary);
   font-family: sans-serif;
   font-size: 100%;
   box-sizing: border-box;
@@ -25,7 +23,9 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  background-color: var(--colour-background);
+  color: var(--colour-text-primary);
+  font-family: var(--font-family-montserrat);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
