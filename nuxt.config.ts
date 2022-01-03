@@ -22,8 +22,15 @@ export default {
   ],
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/prismic'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/prismic',
+    '@nuxtjs/style-resources',
+    '@nuxt/image'
   ],
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    dev: process.env.NODE_ENV === 'development'
+  },
   prismic: {
     endpoint: process.env.PRISMIC_ENDPOINT,
     modern: true,
@@ -31,11 +38,15 @@ export default {
       accessToken: process.env.PRISMIC_ACCESS_TOKEN
     }
   },
+  styleResources: {
+    scss: [
+      '~/assets/styles/_responsive-vars.scss'
+    ]
+  },
   modules: [
     '@nuxtjs/dotenv',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics',
     '@nuxt/content',
     '@nuxtjs/svg-sprite',
     '@nuxtjs/robots',
@@ -46,10 +57,6 @@ export default {
     manifest: {
       lang: 'en'
     }
-  },
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
-    dev: process.env.NODE_ENV === 'development'
   },
   content: {},
   robots: {

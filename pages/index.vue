@@ -1,12 +1,9 @@
 <template>
-  <Tutorial/>
+  <h1>Hello</h1>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Tutorial from '~/components/Tutorial.vue'
 
-export default Vue.extend({
-  components: { Tutorial }
-})
+export default Vue.extend({})
 </script>

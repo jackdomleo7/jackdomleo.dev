@@ -37,12 +37,9 @@ img {
   user-select: none;
 }
 
-button {
-  color: inherit;
-}
-
 a, button {
   touch-action: manipulation;
+  color: inherit;
 }
 
 svg {
@@ -55,4 +52,8 @@ svg {
 iframe {
   height: 100%;
   width: 100%
+}
+
+[hidden] {
+  display: none !important;
 }

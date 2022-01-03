@@ -1,5 +1,6 @@
 $light-colour-primary: #f54c0f;
 $light-colour-accent: #1b78a8;
+$light-text-primary: #27242b;
 
 $light-theme-colours: (
   primary: #{$light-colour-primary},
@@ -8,8 +9,10 @@ $light-theme-colours: (
   highlight: fade_out($light-colour-accent, 0.7),
   error: #de1d02,
   success: #168333,
-  text-primary: #27242b,
+  text-primary: #{$light-text-primary},
   text-secondary: #8a898e,
+  text-button: #fff,
+  text-button-inverse: #{$light-text-primary},
   background: #fBfAf9,
   foreground-1: #fff
 );

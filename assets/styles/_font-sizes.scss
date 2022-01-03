@@ -1,0 +1,13 @@
+@use './responsive-vars' as *;
+
+:root {
+  --text-large: 1.125rem; // 18px
+  --text-body: 1rem; // 16px
+  --text-small: 0.75rem; // 12px
+
+  @media (min-width: $responsive-standard-tablet) {
+    --text-large: 1.25rem; // 20px
+    --text-body: 1.125rem; // 18px
+    --text-small: 0.875rem; // 14px
+  }
+}

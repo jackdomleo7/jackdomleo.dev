@@ -1,5 +1,6 @@
 $dark-colour-primary: #e69e6c;
 $dark-colour-accent: #558de6;
+$dark-text-primary: #fff;
 
 $dark-theme-colours: (
   primary: #{$dark-colour-primary},
@@ -8,8 +9,10 @@ $dark-theme-colours: (
   highlight: fade_out($dark-colour-accent, 0.3),
   error: #e67160,
   success: #83e6b7,
-  text-primary: #fff,
+  text-primary: #{$dark-text-primary},
   text-secondary: #f4f3f9,
+  text-button: #000,
+  text-button-inverse: #{$dark-text-primary},
   background: #18181a,
   foreground-1: #27242b
 );

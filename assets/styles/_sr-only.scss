@@ -1,0 +1,29 @@
+// This is a class to visually hide text from the UI, but will still be read by a screenreader
+// Use .sr-only.sr-only--focusable for elements such as a nav skip link
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+
+  &--focusable {
+    &:focus,
+    &:active {
+      clip: auto !important;
+      clip-path: none !important;
+      height: auto !important;
+      margin: auto !important;
+      overflow: visible !important;
+      position: static !important;
+      width: auto !important;
+      white-space: normal !important;
+    }
+  }
+}

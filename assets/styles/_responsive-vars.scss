@@ -1,0 +1,16 @@
+/* We use `em` when using media queries because em has the best browser support and most reliable functionality (Looking at you Safari!) */
+
+/* The values below represent the maximum possible value for that screen type - i.e. 768px is the biggest we refer to a tablet as, 375px is the largest we refer to a small mobile as, etc */
+
+/* DO NOT use these to determine the device or if the device is touchscreen - these should only be used to determine the device width size only */
+
+$responsive-small-mobile: 21.25em; // 340px
+$responsive-standard-mobile: 24.375em; // 390px
+$responsive-large-mobile: 28.125rem; // 450px
+$responsive-small-tablet: 40em; // 640px
+$responsive-standard-tablet: 48em; // 768px
+$responsive-large-tablet: 62.5em; // 1000px
+$responsive-small-desktop: 85.375em; // 1366px
+$responsive-standard-desktop: 120em; // 1920px
+$responsive-large-desktop: 180em; // 2880px
+$responsive-4k-desktop: 240em; // 3840px
