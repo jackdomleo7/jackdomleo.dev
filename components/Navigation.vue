@@ -490,21 +490,6 @@ $nav-height: 4rem;
     &__more {
       display: none;
     }
-
-    &__submenu {
-      position: absolute;
-      top: 100%;
-      opacity: 0;
-      visibility: hidden;
-      transition: 160ms ease;
-      transition-property: opacity, visibility;
-      will-change: opacity, visibility;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      background-color: #fff;
-      padding-left: 0;
-      list-style-type: none;
-      width: 12.5rem;
-    }
   }
 
   a.nuxt-link-exact-active {
