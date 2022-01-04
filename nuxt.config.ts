@@ -25,7 +25,8 @@ export default {
     '@nuxtjs/google-analytics',
     '@nuxtjs/prismic',
     '@nuxtjs/style-resources',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/color-mode'
   ],
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID,
@@ -42,6 +43,10 @@ export default {
     scss: [
       '~/assets/styles/_responsive-vars.scss'
     ]
+  },
+  colorMode: {
+    classPrefix: 'theme--',
+    classSuffix: ''
   },
   modules: [
     '@nuxtjs/dotenv',

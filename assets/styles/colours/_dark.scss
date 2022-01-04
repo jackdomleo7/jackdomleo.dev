@@ -4,7 +4,7 @@ $dark-text-primary: #fff;
 
 $dark-theme-colours: (
   primary: #{$dark-colour-primary},
-  primary-faint: mix($dark-colour-primary, #000, 40%),
+  primary-faint: mix($dark-colour-primary, #000, 25%),
   accent: #{$dark-colour-accent},
   highlight: fade_out($dark-colour-accent, 0.3),
   error: #e67160,

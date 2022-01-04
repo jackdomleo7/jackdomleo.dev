@@ -23,6 +23,9 @@
                   {{ subItem.text }}
                 </nuxt-link>
               </li>
+              <li v-if="navItem.text === 'More'" role="presentation">
+                <theme-switcher id="desktop" />
+              </li>
             </ul>
           </li>
         </ul>
@@ -48,6 +51,9 @@
             {{ navItem.text }}
           </nuxt-link>
         </li>
+        <li role="presentation">
+          <theme-switcher id="mobile" />
+        </li>
       </ul>
     </div>
   </nav>
@@ -55,6 +61,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import ThemeSwitcher from './ThemeSwitcher.vue'
 
 interface ISubNav {
   text: String;
@@ -68,6 +75,7 @@ interface INav extends ISubNav {
 
 export default Vue.extend({
   name: 'Navigation',
+  components: { ThemeSwitcher },
   data () {
     return {
       isMobile: false,
@@ -308,11 +316,14 @@ $nav-height: 4rem;
     }
 
     &__more {
+      display: flex;
+      flex-direction: column;
       position: fixed;
       z-index: 1;
       top: 100%;
       transition: top 0.4s ease;
       will-change: top;
+      color: var(--colour-text-primary);
       background-color: var(--colour-foreground-1);
       box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
       height: calc(100vh - #{$nav-height});
@@ -339,6 +350,15 @@ $nav-height: 4rem;
         max-height: 3rem;
         transition: max-height 160ms ease;
         will-change: max-height;
+
+        &:nth-last-child(2) {
+          margin-bottom: 2rem;
+        }
+
+        &[role="presentation"] {
+          max-height: unset;
+          margin-top: auto;
+        }
       }
 
       > li:first-of-type { // Logo
@@ -475,6 +495,10 @@ $nav-height: 4rem;
         
         li {
           width: 100%;
+
+          &:nth-last-child(2) {
+            margin-bottom: 2rem;
+          }
         }
 
         a {
