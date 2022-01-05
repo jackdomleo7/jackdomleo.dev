@@ -1,0 +1,56 @@
+<template>
+  <button v-if="!href" class="btn" :class="{ 'btn--square': square }" @click="$emit('click')">
+    <slot />
+  </button>
+  <a v-else-if="href.startsWith('https://')" class="btn" :class="{ 'btn--square': square }" :href="href">
+    <slot />
+  </a>
+  <nuxt-link v-else class="btn" :class="{ 'btn--square': square }" :to="href">
+    <slot />
+  </nuxt-link>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  name: 'Btn',
+  props: {
+    href: {
+      type: String,
+      default: undefined
+    },
+    square: {
+      type: Boolean,
+      default: false
+    }
+  }
+})
+</script>
+
+<style lang="scss" scoped>
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colour-primary);
+  color: var(--colour-text-button);
+  border-radius: 1.5rem;
+  border: 1px solid var(--colour-primary);
+  box-shadow: var(--shadow-standard);
+  text-decoration: none;
+  font-size: var(--text-large);
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  cursor: pointer;
+  transition: var(--standard-animation-timing);
+
+  &--square {
+    border-radius: 0.1875rem;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+</style>
