@@ -1,11 +1,11 @@
 <template>
-  <button v-if="!href" class="btn" :class="{ 'btn--square': square }" @click="$emit('click')">
+  <button v-if="!href" class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" @click="$emit('click')">
     <slot />
   </button>
-  <a v-else-if="href.startsWith('https://')" class="btn" :class="{ 'btn--square': square }" :href="href">
+  <a v-else-if="href.startsWith('https://')" class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" :href="href" target="_blank">
     <slot />
   </a>
-  <nuxt-link v-else class="btn" :class="{ 'btn--square': square }" :to="href">
+  <nuxt-link v-else class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" :to="href">
     <slot />
   </nuxt-link>
 </template>
@@ -21,6 +21,10 @@ export default Vue.extend({
       default: undefined
     },
     square: {
+      type: Boolean,
+      default: false
+    },
+    fullWidth: {
       type: Boolean,
       default: false
     }
@@ -47,6 +51,10 @@ export default Vue.extend({
 
   &--square {
     border-radius: 0.1875rem;
+  }
+
+  &--w100 {
+    width: 100%;
   }
 
   &:active {
