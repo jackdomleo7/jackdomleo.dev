@@ -1,5 +1,4 @@
 export default {
-  ssr: false,
   target: 'static',
   head: {
     titleTemplate: '%s | Jack Domleo | Frontend & UX Developer',
