@@ -26,7 +26,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Btn from '~/components/Btn.vue'
-import { differenceInQuarters } from 'date-fns'
+import { NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience } from '@/helpers/yearsExperience'
 
 export default Vue.extend({
   name: 'Home',
@@ -34,25 +34,8 @@ export default Vue.extend({
   async asyncData ({ $prismic, error }: any) {
     const home = await $prismic.api.getSingle('home')
     if (home) {
-      const firstDayAsDeveloper = new Date('2018-09-03')
-      const quarterDifference = Math.abs(differenceInQuarters(firstDayAsDeveloper, new Date()))
-      const yearsDifference = Math.round(quarterDifference / 4)
-      const yearsDifferenceRemainder = quarterDifference % 4
-      let yearsExperience = ''
-      if (yearsDifferenceRemainder === 1) {
-        yearsExperience = `just over ${yearsDifference}`
-      }
-      else if (yearsDifference === 2) {
-        yearsExperience = `${yearsDifference} and a half`
-      }
-      else if (yearsDifferenceRemainder === 3) {
-        yearsExperience = `nearly ${yearsDifference + 1}`
-      }
-      else {
-        yearsExperience = `${yearsDifference}`
-      }
       home.data.about_text = home.data.about_text.map(x => {
-        x.text = x.text.replace('#{NO_OF_YEARS_EXPERIENCE}', yearsExperience)
+        x.text = x.text.replace(NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience())
         return x
       })
 
