@@ -1,5 +1,11 @@
+@use './responsive-vars' as *;
+
 .container {
-  max-width: 87.5rem;
+  max-width: 91.25rem;
   padding: 1rem;
   margin-inline: auto;
+
+  @media (min-width: $responsive-large-tablet) {
+    padding-inline: 2rem;
+  }
 }

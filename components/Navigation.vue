@@ -164,7 +164,6 @@ $nav-height: 4rem;
   background-color: var(--colour-foreground-1);
 
   @media (max-width: $responsive-small-desktop - math.div(1em, 16)) {
-    color: var(--colour-text-secondary);
     bottom: 0;
 
     &__name,
@@ -203,6 +202,7 @@ $nav-height: 4rem;
         font-size: var(--text-small);
         text-decoration: none;
         text-align: center;
+        color: var(--colour-text-secondary);
         will-change: color, background-color;
         transition-property: color, background-color;
         transition: var(--standard-animation-timing) ease;
@@ -323,7 +323,6 @@ $nav-height: 4rem;
       top: 100%;
       transition: top 0.4s ease;
       will-change: top;
-      color: var(--colour-text-primary);
       background-color: var(--colour-foreground-1);
       box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
       height: calc(100vh - #{$nav-height});
@@ -376,6 +375,7 @@ $nav-height: 4rem;
         padding: 0.8rem 1rem;
         position: relative;
         z-index: 12;
+        color: var(--colour-text-primary);
       }
     }
   }
@@ -458,6 +458,7 @@ $nav-height: 4rem;
         text-decoration: none;
         cursor: pointer;
         border-radius: 0.625rem;
+        color: var(--colour-text-primary);
         will-change: color, background-color;
         transition-property: color, background-color;
         transition: var(--standard-animation-timing) ease;

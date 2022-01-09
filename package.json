@@ -15,7 +15,7 @@
   "scripts": {
     "deps": "rimraf ./node_modules && npm ci",
     "dev": "nuxt --open",
-    "start": "nuxt start",
+    "start": "nuxt start --open",
     "generate": "rimraf ./dist && nuxt generate -m",
     "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 .",
     "lint:fix": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix --cache --max-warnings=0 .",
@@ -27,6 +27,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.20.2",
+    "date-fns": "^2.28.0",
     "modern-normalize": "^1.1.0",
     "nuxt": "^2.15.8"
   },

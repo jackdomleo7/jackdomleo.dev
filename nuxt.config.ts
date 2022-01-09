@@ -44,6 +44,9 @@ export default {
       '~/assets/styles/_responsive-vars.scss'
     ]
   },
+  image: {
+    prismic: {}
+  },
   colorMode: {
     classPrefix: 'theme--',
     classSuffix: ''

@@ -46,8 +46,13 @@ export default Vue.extend({
   font-size: var(--text-large);
   font-weight: 700;
   padding: 0.75rem 2.5rem;
+  max-width: 100%;
   cursor: pointer;
   transition: var(--standard-animation-timing);
+
+  @media (min-width: $responsive-standard-tablet) {
+    min-width: 15.625rem;
+  }
 
   &--square {
     border-radius: 0.1875rem;
