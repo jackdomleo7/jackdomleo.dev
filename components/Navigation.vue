@@ -3,7 +3,7 @@
     <div class="nav__wrapper">
       <nuxt-link to="/" class="nav__name">
         Jack Domleo
-        <span class="sr-only">- Home</span>
+        <span class="sr-only"> - Home</span>
       </nuxt-link>
       <nuxt-img src="~assets/images/j-icon.svg" alt="" class="nav__logo" />
       <div class="nav__primary">
@@ -384,7 +384,7 @@ $nav-height: 4rem;
     color: var(--colour-text-primary);
     z-index: 99;
     box-shadow: var(--shadow-standard);
-    position: relative;
+    position: fixed;
     height: 4rem;
 
     &__wrapper {
