@@ -8,10 +8,8 @@ html {
   font-family: sans-serif;
   font-size: 100%;
   box-sizing: border-box;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
+  @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
 }
@@ -61,4 +59,10 @@ iframe {
 
 a {
   color: var(--colour-accent);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }

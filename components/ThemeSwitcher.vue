@@ -5,7 +5,7 @@
     <div class="theme-options">
       <div class="theme-option">
         <div>
-          <input :id="`${id}-theme-system`" type="radio" :name="`${id}-theme`" value="system" @change="onChange" />
+          <input v-model="$colorMode.preference" :id="`${id}-theme-system`" type="radio" :name="`${id}-theme`" value="system" />
           <svg-icon name="monitor" />
         </div>
         <label :for="`${id}-theme-system`">System</label>
@@ -13,7 +13,7 @@
 
       <div class="theme-option">
         <div>
-          <input :id="`${id}-theme-light`" type="radio" :name="`${id}-theme`" value="light" @change="onChange" />
+          <input v-model="$colorMode.preference" :id="`${id}-theme-light`" type="radio" :name="`${id}-theme`" value="light" />
           <svg-icon name="sun" />
         </div>
         <label :for="`${id}-theme-light`">Light</label>
@@ -21,7 +21,7 @@
 
       <div class="theme-option">
         <div>
-          <input :id="`${id}-theme-dark`" type="radio" :name="`${id}-theme`" value="dark" @change="onChange" />
+          <input v-model="$colorMode.preference" :id="`${id}-theme-dark`" type="radio" :name="`${id}-theme`" value="dark" />
           <svg-icon name="moon" />
         </div>
         <label :for="`${id}-theme-dark`">Dark</label>
@@ -39,21 +39,6 @@ export default Vue.extend({
     id: {
       type: String,
       required: true
-    }
-  },
-  mounted (): void {
-    this.setCurrentThemeOption()
-    window.addEventListener('resize', this.setCurrentThemeOption)
-  },
-  destroyed (): void {
-    window.removeEventListener('resize', this.setCurrentThemeOption)
-  },
-  methods: {
-    setCurrentThemeOption (): void {
-      (document.getElementById(`${this.id}-theme-${this.$colorMode.preference}`) as HTMLInputElement).checked = true
-    },
-    onChange ($event: InputEvent): void {
-      this.$colorMode.preference = ($event.target as HTMLInputElement).value
     }
   }
 })
@@ -79,6 +64,7 @@ legend {
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  font-size: var(--text-small);
 
   > div {
     display: inline-flex;

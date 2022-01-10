@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!href" class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" @click="$emit('click')">
+  <button v-if="!href" class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" :type="type" @click="$emit('click')">
     <slot />
   </button>
   <a v-else-if="href.startsWith('https://')" class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" :href="href" target="_blank">
@@ -27,6 +27,13 @@ export default Vue.extend({
     fullWidth: {
       type: Boolean,
       default: false
+    },
+    type: {
+      type: String,
+      default: 'button',
+      validator: (value: string): boolean => {
+        return ['button', 'submit', 'reset'].includes(value)
+      }
     }
   }
 })
@@ -46,6 +53,7 @@ export default Vue.extend({
   font-size: var(--text-large);
   font-weight: 700;
   padding: 0.75rem 2.5rem;
+  height: 3rem;
   max-width: 100%;
   cursor: pointer;
   transition: var(--standard-animation-timing);
@@ -56,6 +64,7 @@ export default Vue.extend({
 
   &--square {
     border-radius: 0.1875rem;
+    padding-inline: 1.5rem;
   }
 
   &--w100 {
@@ -64,6 +73,10 @@ export default Vue.extend({
 
   &:active {
     box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.7;
   }
 }
 </style>

@@ -4,16 +4,18 @@
     <main>
       <Nuxt/>
     </main>
+    <SiteFooter />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Navigation from '@/components/Navigation.vue'
+import SiteFooter from '@/components/SiteFooter.vue'
 
 export default Vue.extend({
   name: 'Default',
-  components: { Navigation },
+  components: { Navigation, SiteFooter },
   data () {
     return {
       isMobile: false
