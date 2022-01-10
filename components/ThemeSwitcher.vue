@@ -5,7 +5,7 @@
     <div class="theme-options">
       <div class="theme-option">
         <div>
-          <input v-model="$colorMode.preference" :id="`${id}-theme-system`" type="radio" :name="`${id}-theme`" value="system" />
+          <input :id="`${id}-theme-system`" v-model="$colorMode.preference" type="radio" :name="`${id}-theme`" value="system" />
           <svg-icon name="monitor" />
         </div>
         <label :for="`${id}-theme-system`">System</label>
@@ -13,7 +13,7 @@
 
       <div class="theme-option">
         <div>
-          <input v-model="$colorMode.preference" :id="`${id}-theme-light`" type="radio" :name="`${id}-theme`" value="light" />
+          <input :id="`${id}-theme-light`" v-model="$colorMode.preference" type="radio" :name="`${id}-theme`" value="light" />
           <svg-icon name="sun" />
         </div>
         <label :for="`${id}-theme-light`">Light</label>
@@ -21,7 +21,7 @@
 
       <div class="theme-option">
         <div>
-          <input v-model="$colorMode.preference" :id="`${id}-theme-dark`" type="radio" :name="`${id}-theme`" value="dark" />
+          <input :id="`${id}-theme-dark`" v-model="$colorMode.preference" type="radio" :name="`${id}-theme`" value="dark" />
           <svg-icon name="moon" />
         </div>
         <label :for="`${id}-theme-dark`">Dark</label>

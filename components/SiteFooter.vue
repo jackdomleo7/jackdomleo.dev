@@ -1,8 +1,8 @@
 <template>
   <footer class="footer">
     <form
-      class="footer__subscribe"
       id="mc-embedded-subscribe-form"
+      class="footer__subscribe"
       action="https://dev.us10.list-manage.com/subscribe/post?u=5db0c80170083cdaab0b17f84&amp;id=2f05546818"
       method="post"
       name="mc-embedded-subscribe-form"
@@ -10,9 +10,9 @@
       novalidate
     >
       <TextInput
+        id="mce-EMAIL"
         v-model="newsletter.email"
         class="footer__subscribe-input"
-        id="mce-EMAIL"
         type="email"
         name="EMAIL"
         label="Newsletter"
@@ -83,6 +83,13 @@ export default Vue.extend({
       }
     }
   },
+  data () {
+    return {
+      newsletter: {
+        email: ''
+      }
+    }
+  },
   computed: {
     quickLinks (): IQuickLink[] {
       return [
@@ -131,13 +138,6 @@ export default Vue.extend({
           icon: 'codepen'
         }
       ]
-    }
-  },
-  data () {
-    return {
-      newsletter: {
-        email: ''
-      }
     }
   },
   methods: {
