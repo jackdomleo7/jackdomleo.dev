@@ -23,10 +23,13 @@
       ]
     },
     "types": [
+      "node",
+      "@types/node",
       "@nuxt/types",
       "@nuxtjs/axios",
       "@nuxt/content",
-      "@types/node",
+      "jest",
+      "@types/jest",
       "@nuxt/image",
       "@nuxtjs/color-mode"
     ]
