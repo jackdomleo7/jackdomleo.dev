@@ -10,8 +10,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Navigation from '@/components/Navigation.vue'
-import SiteFooter from '@/components/SiteFooter.vue'
+import Navigation from '@/components/global/Navigation.vue'
+import SiteFooter from '@/components/global/SiteFooter.vue'
 
 export default Vue.extend({
   name: 'Default',

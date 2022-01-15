@@ -61,7 +61,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ThemeSwitcher from './ThemeSwitcher.vue'
+import ThemeSwitcher from '../ThemeSwitcher.vue'
 
 interface ISubNav {
   text: String;

@@ -57,8 +57,8 @@
 import Vue from 'vue'
 import { email, required } from 'vuelidate/lib/validators'
 import { validationMixin } from 'vuelidate'
-import TextInput from './TextInput.vue'
-import Btn from './Btn.vue'
+import TextInput from '../TextInput.vue'
+import Btn from '../Btn.vue'
 
 interface IQuickLink {
   text: string;
