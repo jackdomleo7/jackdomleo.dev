@@ -67,7 +67,7 @@ describe('Btn', () => {
    * Emitters
    */
 
-  it('emits the "click" when the <button> is clicked', () => {
+  it('emits the "click" when the <button> is clicked', async () => {
     const wrapper = shallowMount(Btn, {
       slots: {
         default: 'Click me'
@@ -76,12 +76,12 @@ describe('Btn', () => {
 
     expect(wrapper.find('button.btn').exists()).toBe(true)
 
-    wrapper.find('button.btn').trigger('click')
+    await wrapper.find('button.btn').trigger('click')
 
     expect(wrapper.emitted('click')).toBeTruthy()
   })
 
-  it('emits the "click" when the <a> is clicked', () => {
+  it('emits the "click" when the <a> is clicked', async () => {
     const wrapper = shallowMount(Btn, {
       slots: {
         default: 'Click me'
@@ -93,12 +93,12 @@ describe('Btn', () => {
 
     expect(wrapper.find('a.btn').exists()).toBe(true)
 
-    wrapper.find('a.btn').trigger('click')
+    await wrapper.find('a.btn').trigger('click')
 
     expect(wrapper.emitted('click')).toBeTruthy()
   })
 
-  it('emits the "click" when the <nuxt-link> is clicked', () => {
+  it('emits the "click" when the <nuxt-link> is clicked', async () => {
     const wrapper = mount(Btn, {
       slots: {
         default: 'Click me'
@@ -111,7 +111,7 @@ describe('Btn', () => {
 
     expect(wrapper.find('nuxt-link-stub.btn').exists()).toBe(true)
 
-    wrapper.find('.btn').trigger('click')
+    await wrapper.find('.btn').trigger('click')
 
     // TODO: For some reason, nuxt-link doesn't emit 'click' is tests but does in the live site
     // expect(wrapper.emitted('click')).toBeTruthy()
