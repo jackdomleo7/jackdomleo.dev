@@ -1,11 +1,11 @@
 <template>
-  <button v-if="!href" class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" :type="type" @click="$emit('click')">
+  <button v-if="!href" class="btn" :class="{ 'btn--square': square }" :type="type" @click="$emit('click')">
     <slot />
   </button>
-  <a v-else-if="href.startsWith('https://')" class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" :href="href" target="_blank">
+  <a v-else-if="href.startsWith('https://') || href.startsWith('#')" class="btn" :class="{ 'btn--square': square }" :href="href" target="_blank" @click="$emit('click')">
     <slot />
   </a>
-  <nuxt-link v-else class="btn" :class="{ 'btn--square': square, 'btn--w100': fullWidth }" :to="href">
+  <nuxt-link v-else class="btn" :class="{ 'btn--square': square }" :to="href" @click="$emit('click')">
     <slot />
   </nuxt-link>
 </template>
@@ -21,10 +21,6 @@ export default Vue.extend({
       default: undefined
     },
     square: {
-      type: Boolean,
-      default: false
-    },
-    fullWidth: {
       type: Boolean,
       default: false
     },
@@ -67,16 +63,13 @@ export default Vue.extend({
     padding-inline: 1.5rem;
   }
 
-  &--w100 {
-    width: 100%;
-  }
-
   &:active {
     box-shadow: none;
   }
 
   &:disabled {
     opacity: 0.7;
+    cursor: default;
   }
 }
 </style>
