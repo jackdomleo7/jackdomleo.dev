@@ -29,7 +29,7 @@
             </ul>
           </li>
         </ul>
-        <button class="nav__hamburger" :class="{'nav__hamburger--open': showMobileNav}" @click="showMobileNav = !showMobileNav">
+        <button v-show="isMobile" class="nav__hamburger" :class="{'nav__hamburger--open': showMobileNav}" @click="showMobileNav = !showMobileNav">
           <span></span>
           <div class="nav__hamburger-icon">
             <span></span>
@@ -40,14 +40,14 @@
           <span class="sr-only">Show {{ showMobileNav ? 'more' : 'less' }}</span>
         </button>
       </div>
-      <ul class="nav__more" :class="{'nav__more--mobile-open': isMobile && showMobileNav}" :style="{'--nav-desktop-columns': navItems.length}">
+      <ul class="nav__more" :class="{'nav__more--mobile-open': isMobile && showMobileNav}">
         <li>
           <nuxt-link to="/">
             <nuxt-img src="~assets/images/j-icon.svg" alt="" />
           </nuxt-link>
         </li>
-        <li v-for="(navItem, index) in navItems.find(x => x.text === 'More').submenu" :key="navItem.text" :class="{ 'nav__item--open': displayedMobileNavItemIndex === index }">
-          <nuxt-link v-if="navItem.url" :to="navItem.url" @click="navItemClick($event, index)">
+        <li v-for="(navItem, index) in navItems.find(x => x.text === 'More').submenu" :key="navItem.text">
+          <nuxt-link v-if="navItem.url" :to="navItem.url">
             {{ navItem.text }}
           </nuxt-link>
         </li>
@@ -81,7 +81,6 @@ export default Vue.extend({
       isMobile: false,
       isTouchscreen: false,
       showMobileNav: false,
-      displayedMobileNavItemIndex: null as null | number,
       navItems: [
         {
           text: 'Home',
@@ -124,7 +123,6 @@ export default Vue.extend({
     // Close navigation menu on page change
     '$route' () {
       this.showMobileNav = false
-      this.displayedMobileNavItemIndex = null
     }
   },
   mounted (): void {
@@ -137,15 +135,9 @@ export default Vue.extend({
   methods: {
     setResponsiveness (): void {
       const navBreak = window.getComputedStyle(document.querySelector('nav.nav')!).getPropertyValue('--nav-break')
-      this.isMobile = window.matchMedia(`(max-width: ${navBreak})`).matches
-      this.isTouchscreen = !window.matchMedia('hover: hover').matches
+      this.isMobile = !window.matchMedia(`(min-width: ${navBreak})`).matches
+      this.isTouchscreen = !window.matchMedia('(hover: hover)').matches
 
-    },
-    navItemClick (event: Event, index: number): void {
-      if (this.navItems[index].submenu && (this.isMobile || this.isTouchscreen)) {
-        event.preventDefault()
-        this.displayedMobileNavItemIndex = this.displayedMobileNavItemIndex === index ? null : index
-      }
     }
   }
 })
@@ -316,8 +308,6 @@ $nav-height: 4rem;
     }
 
     &__more {
-      display: flex;
-      flex-direction: column;
       position: fixed;
       z-index: 1;
       top: 100%;
@@ -356,7 +346,7 @@ $nav-height: 4rem;
 
         &[role="presentation"] {
           max-height: unset;
-          margin-top: auto;
+          margin-top: 5rem;
         }
       }
 
@@ -388,13 +378,13 @@ $nav-height: 4rem;
     height: 4rem;
 
     &__wrapper {
-      max-width: 87.5rem; // 1400px
+      max-width: 104rem;
       margin-inline: auto;
       display: flex;
       align-items: stretch;
       gap: 1rem;
       justify-content: space-between;
-      padding: 0.25rem 1rem;
+      padding: 0.25rem 10rem;
     }
 
     &__name {

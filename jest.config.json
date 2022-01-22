@@ -12,6 +12,9 @@
     "vue",
     "json"
   ],
+  "setupFiles": [
+    "./tests/jest.setup.ts"
+  ],
   "transform": {
     "^.+\\.ts$": "ts-jest",
     "^.+\\.js$": "babel-jest",
