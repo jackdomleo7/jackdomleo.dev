@@ -31,7 +31,7 @@ export default Vue.extend({
   methods: {
     setResponsiveness (): void {
       const navBreak = window.getComputedStyle(document.querySelector('nav.nav')!).getPropertyValue('--nav-break')
-      this.isMobile = window.matchMedia(`(max-width: ${navBreak})`).matches
+      this.isMobile = !window.matchMedia(`(min-width: ${navBreak})`).matches
 
     }
   }
