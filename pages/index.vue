@@ -14,10 +14,20 @@
     <section id="about" class="container about">
       <div class="about__inner">
         <div class="about__img">
-          <nuxt-img provider="prismic" :src="home.data.about_avatar.url" :alt="home.data.about_avatar.alt" />
+          <nuxt-img provider="prismic" :src="home.data.about_avatar.url" :alt="home.data.about_avatar.alt" height="440" width="440" loading="lazy" />
         </div>
         <h2 class="about__header">{{ $prismic.asText(home.data.about_heading) }}</h2>
         <prismic-rich-text class="about__text" :field="home.data.about_text" />
+      </div>
+    </section>
+    <section id="skills" class="skills">
+      <h2 class="skills__header container">{{ home.data.skills_heading }}</h2>
+      <div class="skills__grid">
+        <ul class="skills__list">
+          <li v-for="skill in home.data.skills" :key="skill.name">
+            <nuxt-img provider="prismic" :src="skill.logo.url" :alt="skill.logo.alt" height="100" width="100" loading="lazy" />
+          </li>
+        </ul>
       </div>
     </section>
   </div>
@@ -233,6 +243,74 @@ export default Vue.extend({
   &__text {
     grid-area: about-text;
     font-size: var(--text-body);
+  }
+}
+
+.skills {
+  &__header {
+    font-size: var(--text-title);
+    margin-block: 0;
+  }
+
+  &__grid {
+    background-color: #27242b;
+    padding-block: 2rem;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $responsive-small-desktop) {
+      padding-block: 5rem;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    max-width: 95rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 2.5rem 4.25rem;
+
+    @media (min-width: $responsive-standard-mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: $responsive-small-tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: $responsive-standard-tablet) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (min-width: $responsive-large-tablet) {
+      gap: 4rem 8rem;
+    }
+
+    @media (min-width: $responsive-small-desktop) {
+      gap: 6rem 10rem;
+    }
+
+    @media (min-width: $responsive-standard-desktop) {
+      gap: 7rem 12rem;
+    }
+  }
+
+  img {
+    height: 3.75rem;
+    width: 3.75rem;
+
+    @media (min-width: $responsive-standard-tablet) {
+      height: 5rem;
+      width: 5rem;
+    }
+
+    @media (min-width: $responsive-small-desktop) {
+      height: 6.25rem;
+      width: 6.25rem;
+    }
   }
 }
 </style>
