@@ -3,11 +3,12 @@
     <header class="container header">
       <div>
         <nuxt-img src="~assets/images/j-icon.svg" alt="" class="header__logo" />
-        <h1 class="header__title">{{ $prismic.asText(home.data.page_title) }}</h1>
+        <h1 class="header__title">{{ home.data.page_title }}</h1>
         <prismic-rich-text class="header__intro" :field="home.data.page_intro" />
         <btn v-if="home.data.show_header_cta" :href="home.data.header_cta_link">{{ home.data.header_cta_text }}</btn>
         <a href="#about" class="header__chevron">
           <svg-icon name="chevron-down" />
+          <span class="sr-only">About me</span>
         </a>
       </div>
     </header>
@@ -16,7 +17,7 @@
         <div class="about__img">
           <nuxt-img provider="prismic" :src="home.data.about_avatar.url" :alt="home.data.about_avatar.alt" height="440" width="440" loading="lazy" />
         </div>
-        <h2 class="about__header">{{ $prismic.asText(home.data.about_heading) }}</h2>
+        <h2 class="about__header">{{ home.data.about_heading }}</h2>
         <prismic-rich-text class="about__text" :field="home.data.about_text" />
       </div>
     </section>
@@ -37,12 +38,13 @@
 import Vue from 'vue'
 import Btn from '~/components/Btn.vue'
 import { NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience } from '@/helpers/yearsExperience'
+import { IPage, IPageHome } from '@/types/cms'
 
 export default Vue.extend({
   name: 'Home',
   components: { Btn },
   async asyncData ({ $prismic, error }: any) {
-    const home = await $prismic.api.getSingle('home')
+    const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
     if (home) {
       home.data.about_text = home.data.about_text.map(x => {
         x.text = x.text.replace(NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience())
