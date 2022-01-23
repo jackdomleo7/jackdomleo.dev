@@ -46,7 +46,7 @@
             <nuxt-img src="~assets/images/j-icon.svg" alt="" />
           </nuxt-link>
         </li>
-        <li v-for="(navItem, index) in navItems.find(x => x.text === 'More').submenu" :key="navItem.text">
+        <li v-for="navItem in navItems.find(x => x.text === 'More').submenu" :key="navItem.text">
           <nuxt-link v-if="navItem.url" :to="navItem.url">
             {{ navItem.text }}
           </nuxt-link>
