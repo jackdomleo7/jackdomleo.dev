@@ -15,4 +15,5 @@ export interface IPageHome {
     name: string;
     logo: IImage;
   }[];
+  more_work_link_text: string;
 }

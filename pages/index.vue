@@ -21,14 +21,28 @@
         <prismic-rich-text class="about__text" :field="home.data.about_text" />
       </div>
     </section>
+    <section v-if="projects && projects.data.projects" id="projects" class="container projects">
+      <h2 class="projects__heading">Recent work</h2>
+      <ul class="projects__list">
+        <li v-for="project in projects.data.projects" :key="project.name">
+          <project-card :project="project" />
+        </li>
+      </ul>
+      <nuxt-link to="/projects" class="projects__more">
+        {{ home.data.more_work_link_text }}
+        <svg-icon name="arrow-right" />
+      </nuxt-link>
+    </section>
     <section id="skills" class="skills">
-      <h2 class="skills__header container">{{ home.data.skills_heading }}</h2>
-      <div class="skills__grid">
-        <ul class="skills__list">
-          <li v-for="skill in home.data.skills" :key="skill.name">
-            <nuxt-img provider="prismic" :src="skill.logo.url" :alt="skill.logo.alt" height="100" width="100" loading="lazy" />
-          </li>
-        </ul>
+      <div class="skills__inner">
+        <h2 class="skills__header container">{{ home.data.skills_heading }}</h2>
+        <div class="skills__grid">
+          <ul class="skills__list">
+            <li v-for="skill in home.data.skills" :key="skill.name">
+              <nuxt-img provider="prismic" :src="skill.logo.url" :alt="skill.logo.alt" height="100" width="100" loading="lazy" />
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </div>
@@ -36,22 +50,31 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Btn from '~/components/Btn.vue'
+import Btn from '@/components/Btn.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
 import { NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience } from '@/helpers/yearsExperience'
-import { IPage, IPageHome } from '@/types/cms'
+import { IPage, IPageHome, IPageProjects } from '@/types/cms'
 
 export default Vue.extend({
   name: 'Home',
-  components: { Btn },
+  components: { Btn, ProjectCard },
   async asyncData ({ $prismic, error }: any) {
     const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
+    const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
     if (home) {
       home.data.about_text = home.data.about_text.map(x => {
         x.text = x.text.replace(NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience())
         return x
       })
 
-      return { home }
+      projects.data.projects = projects.data.projects.reverse() // In the CMS, newer projects are added to the end of the list, so we want to show the newer projects first
+      projects.data.projects = projects.data.projects.filter(project => {
+        return project.project_type !== 'mini' // Don't show mini projects in the homepage
+      })
+      projects.data.projects = projects.data.projects.splice(0, 6) // Only show the first 6 newest projects
+
+
+      return { home, projects }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -248,7 +271,57 @@ export default Vue.extend({
   }
 }
 
+.projects {
+  min-height: 100vh;
+
+  &__heading {
+    font-size: var(--text-title);
+    margin-block: 0;
+  }
+
+  &__list {
+    margin-block: 1.25rem;
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+
+    @media (min-width: $responsive-standard-tablet) {
+      gap: 3rem 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $responsive-small-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__more {
+    color: var(--colour-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-end;
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
 .skills {
+  padding-block: 2rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    width: 100%;
+  }
+
   &__header {
     font-size: var(--text-title);
     margin-block: 0;
