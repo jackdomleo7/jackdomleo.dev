@@ -113,6 +113,10 @@ export default Vue.extend({
             {
               text: 'Newsletter',
               url: '/newsletter'
+            },
+            {
+              text: 'Speaking',
+              url: '/speaking'
             }
           ] as ISubNav[]
         }
