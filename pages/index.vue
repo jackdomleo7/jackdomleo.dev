@@ -25,7 +25,7 @@
       <h2 class="projects__heading">Recent work</h2>
       <ul class="projects__list">
         <li v-for="project in projects.data.projects" :key="project.name">
-          <project-card :project="project" />
+          <project-card :project="project" heading-level="h3" />
         </li>
       </ul>
       <nuxt-link to="/projects" class="projects__more">
@@ -58,6 +58,11 @@ import { IPage, IPageHome, IPageProjects } from '@/types/cms'
 export default Vue.extend({
   name: 'Home',
   components: { Btn, ProjectCard },
+  head () {
+    return {
+      title: 'Home'
+    }
+  },
   async asyncData ({ $prismic, error }: any) {
     const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
     const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
@@ -290,12 +295,12 @@ export default Vue.extend({
     gap: 1rem;
     justify-items: center;
 
-    @media (min-width: $responsive-standard-tablet) {
+    @media (min-width: $responsive-small-tablet) {
       gap: 3rem 2rem;
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (min-width: $responsive-small-desktop) {
+    @media (min-width: $responsive-large-tablet) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

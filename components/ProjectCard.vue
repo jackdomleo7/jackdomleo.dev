@@ -2,10 +2,10 @@
   <component :is="project.url.url ? 'a' : 'div'" :href="project.url.url" :target="project.url.url && '_blank'" class="project-card">
     <nuxt-img provider="prismic" :src="project.thumbnail.url" :alt="project.thumbnail.alt" :width="project.thumbnail.dimensions.width" :height="project.thumbnail.dimensions.height" loading="lazy" class="project-card__img" />
     <div class="project-card__info">
-      <h3 class="project-card__heading">
+      <component :is="headingLevel" class="project-card__heading">
         {{ project.name }}
         <small v-if="project.project_type === 'website' && project.url.url">({{ project.url.url.replace('https://', '') }})</small>
-      </h3>
+      </component>
       <ul v-if="project.tech_1 || project.tech_2 || project.tech_3 || project.tech_4" class="project-card__tags">
         <li v-if="project.tech_1" class="tag">{{ project.tech_1 }}</li>
         <li v-if="project.tech_2" class="tag">{{ project.tech_2 }}</li>
@@ -27,6 +27,13 @@ export default Vue.extend({
     project: {
       type: Object as PropType<IProject>,
       required: true
+    },
+    headingLevel: {
+      type: String as PropType<'h2'|'h3'|'h4'|'h5'|'h6'>,
+      required: true,
+      validator: (value: string): boolean => {
+        return ['h2', 'h3', 'h4', 'h5', 'h6'].includes(value)
+      }
     }
   }
 })

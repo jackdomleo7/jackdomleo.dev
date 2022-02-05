@@ -18,6 +18,7 @@ export interface IProject {
 
 export interface IPageProjects {
   projects_intro: TRichText;
+  mini_intro: TRichText;
   websites_intro: TRichText;
   projects: IProject[];
 }
