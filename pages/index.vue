@@ -61,18 +61,20 @@ export default Vue.extend({
   async asyncData ({ $prismic, error }: any) {
     const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
     const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
+
     if (home) {
       home.data.about_text = home.data.about_text.map(x => {
         x.text = x.text.replace(NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience())
         return x
       })
 
-      projects.data.projects = projects.data.projects.reverse() // In the CMS, newer projects are added to the end of the list, so we want to show the newer projects first
-      projects.data.projects = projects.data.projects.filter(project => {
-        return project.project_type !== 'mini' // Don't show mini projects in the homepage
-      })
-      projects.data.projects = projects.data.projects.splice(0, 6) // Only show the first 6 newest projects
-
+      if (projects && projects.data) {
+        projects.data.projects = projects.data.projects.reverse() // In the CMS, newer projects are added to the end of the list, so we want to show the newer projects first
+        projects.data.projects = projects.data.projects.filter(project => {
+          return project.project_type !== 'mini' // Don't show mini projects in the homepage
+        })
+        projects.data.projects = projects.data.projects.splice(0, 6) // Only show the first 6 newest projects
+      }
 
       return { home, projects }
     } else {
