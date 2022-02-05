@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectCard matches snapshot when mounted 1`] = `
+<a
+  class="project-card"
+  href="https://jackdomleo.dev"
+  target="_blank"
+>
+  <nuxt-img-stub
+    alt="jackdomleo.dev thumbnail"
+    class="project-card__img"
+    height="242"
+    loading="lazy"
+    provider="prismic"
+    src="https://example.com/thumbnail.png"
+    width="484"
+  />
+   
+  <div
+    class="project-card__info"
+  >
+    <h3
+      class="project-card__heading"
+    >
+      
+      My Website
+      
+      <small>
+        (jackdomleo.dev)
+      </small>
+    </h3>
+     
+    <ul
+      class="project-card__tags"
+    >
+      <li
+        class="tag"
+      >
+        Nuxt
+      </li>
+       
+      <li
+        class="tag"
+      >
+        TypeScript
+      </li>
+       
+      <li
+        class="tag"
+      >
+        SCSS
+      </li>
+       
+      <!---->
+    </ul>
+     
+    <prismic-rich-text-stub
+      class="project-card__description"
+      field="[object Object]"
+    />
+  </div>
+</a>
+`;
+
+exports[`ProjectCard matches snapshot when shallow mounted 1`] = `
+<a
+  class="project-card"
+  href="https://jackdomleo.dev"
+  target="_blank"
+>
+  <nuxt-img-stub
+    alt="jackdomleo.dev thumbnail"
+    class="project-card__img"
+    height="242"
+    loading="lazy"
+    provider="prismic"
+    src="https://example.com/thumbnail.png"
+    width="484"
+  />
+   
+  <div
+    class="project-card__info"
+  >
+    <h3
+      class="project-card__heading"
+    >
+      
+      My Website
+      
+      <small>
+        (jackdomleo.dev)
+      </small>
+    </h3>
+     
+    <ul
+      class="project-card__tags"
+    >
+      <li
+        class="tag"
+      >
+        Nuxt
+      </li>
+       
+      <li
+        class="tag"
+      >
+        TypeScript
+      </li>
+       
+      <li
+        class="tag"
+      >
+        SCSS
+      </li>
+       
+      <!---->
+    </ul>
+     
+    <prismic-rich-text-stub
+      class="project-card__description"
+      field="[object Object]"
+    />
+  </div>
+</a>
+`;

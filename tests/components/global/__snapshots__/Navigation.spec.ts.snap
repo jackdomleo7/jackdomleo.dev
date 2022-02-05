@@ -137,6 +137,15 @@ exports[`Navigation matches snapshot when mounted 1`] = `
               
               </nuxt-link-stub>
             </li>
+            <li>
+              <nuxt-link-stub
+                to="/speaking"
+              >
+                
+                Speaking
+              
+              </nuxt-link-stub>
+            </li>
              
             <li
               role="presentation"
@@ -279,6 +288,15 @@ exports[`Navigation matches snapshot when mounted 1`] = `
         >
           
           Newsletter
+        
+        </nuxt-link-stub>
+      </li>
+      <li>
+        <nuxt-link-stub
+          to="/speaking"
+        >
+          
+          Speaking
         
         </nuxt-link-stub>
       </li>
@@ -507,6 +525,15 @@ exports[`Navigation matches snapshot when shallow mounted 1`] = `
               
               </nuxt-link-stub>
             </li>
+            <li>
+              <nuxt-link-stub
+                to="/speaking"
+              >
+                
+                Speaking
+              
+              </nuxt-link-stub>
+            </li>
              
             <li
               role="presentation"
@@ -574,6 +601,15 @@ exports[`Navigation matches snapshot when shallow mounted 1`] = `
         >
           
           Newsletter
+        
+        </nuxt-link-stub>
+      </li>
+      <li>
+        <nuxt-link-stub
+          to="/speaking"
+        >
+          
+          Speaking
         
         </nuxt-link-stub>
       </li>
