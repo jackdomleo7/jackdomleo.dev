@@ -27,6 +27,7 @@
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
+    "@prismicio/client": "^5.1.1",
     "@vue/cli-plugin-unit-jest": "^4.5.15",
     "core-js": "^3.21.0",
     "date-fns": "^2.28.0",
