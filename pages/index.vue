@@ -63,7 +63,7 @@ export default Vue.extend({
       title: 'Home'
     }
   },
-  async asyncData ({ $prismic, error }: any) {
+  async asyncData ({ $prismic, error }) {
     const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
     const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
 
