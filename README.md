@@ -4,7 +4,10 @@
 
 Create a `.env` file with the following properties:
 - `BASE_URL`
+- `CONTACT_EMAIL`
 - `GOOGLE_ANALYTICS_ID`
+- `PRISMIC_ENDPOINT`
+- `PRISMIC_ACCESS_TOKEN`
 
 ```bash
 # Clean install dependencies (also useful if you ever want to delete node_modiles rapidly)

@@ -64,6 +64,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxt/content',
+    '@nuxtjs/feed',
     '@nuxtjs/svg-sprite',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap' // Always declare last
@@ -79,6 +80,38 @@ export default {
     dir: 'blog',
     liveEdit: false
   },
+  feed: [{
+    path: '/feed.xml',
+    async create (feed) {
+      feed.options = {
+        title: 'Jack Domleo - blog',
+        link: `${process.env.BASE_URL}/feed.xml`,
+        description: 'Feed for Jack Domleo\'s blog.'
+      };
+
+      const posts = await $content({ deep: true, text: true }).sortBy('date', 'desc').fetch() as (IArticle & { text: string })[];
+      posts.forEach(post => {
+        feed.addItem({
+          title: post.title,
+          id: `${process.env.BASE_URL}/blog${post.path}`,
+          link: `${process.env.BASE_URL}/blog${post.path}`,
+          description: post.description,
+          content: post.text,
+          published: new Date(post.date),
+          copyright: `All rights reserved ${new Date(post.date).getFullYear()}, Jack Domleo`,
+          language: "en",
+          author: [{
+            name: "Jack Domleo",
+            email: process.env.CONTACT_EMAIL,
+            link: process.env.BASE_URL
+          }]
+        });
+      });
+    },
+    cacheTime: 1000 * 60 * 15,
+    type: 'rss2',
+    data: ['']
+  }],
   robots: {
     UserAgent: '*',
     Allow: '/'

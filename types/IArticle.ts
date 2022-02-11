@@ -20,7 +20,7 @@ export interface IArticle extends TNuxtContentGenericRuntime {
   slug: string;
   description: string;
   title: string;
-  date: Date | string;
+  date: string; // In format of yyyy-mm-dd
   tags: string[];
   img: {
     url: string;

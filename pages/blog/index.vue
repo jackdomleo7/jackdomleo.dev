@@ -3,6 +3,10 @@
     <header class="container container--header header">
       <h1 class="header__title">Blog</h1>
       <prismic-rich-text class="header__intro" :field="blogPage.data.blog_intro" />
+      <a class="header__rss" href="/feed.xml" rel="alternate" type="application/rss+xml">
+        <svg-icon name="rss" />
+        RSS
+      </a>
     </header>
     <ul class="container blog__list">
       <li v-for="article in articles" :key="article.title">
@@ -37,6 +41,9 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .header {
+  display: flex;
+  flex-direction: column;
+
   &__title {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -49,6 +56,20 @@ export default Vue.extend({
 
   &__intro {
     font-size: var(--text-body);
+  }
+
+  &__rss {
+    color: var(--colour-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    margin-left: auto;
+    margin-right: 1rem;
+
+    svg {
+      height: 1.625rem;
+      width: 1.625rem;
+    }
   }
 }
 
