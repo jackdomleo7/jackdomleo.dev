@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="`/blog${article.path}`" class="article-card">
-    <nuxt-img src="/here.png" alt="article.img.alt" width="500" height="210" loading="lazy" class="article-card__img" />
+    <nuxt-img :src="article.img.url" :alt="article.img.alt" width="500" height="210" loading="lazy" class="article-card__img" />
     <div class="article-card__info">
       <ul v-if="article.tags" class="article-card__tags">
         <li v-for="tag in article.tags" :key="tag" class="tag--inverted">

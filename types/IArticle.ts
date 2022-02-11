@@ -6,7 +6,7 @@ export interface INuxtContentGeneric {
   }[];
   dir: string;
   path: string;
-  extension: string;
+  extension: '.md';
   createdAt: string; // Not sure why Nuxt Content doesn't set this to a date
   updatedAt: string; // Not sure why Nuxt Content doesn't set this to a date
   body: any;
@@ -20,7 +20,7 @@ export interface IArticle extends TNuxtContentGenericRuntime {
   slug: string;
   description: string;
   title: string;
-  date: Date;
+  date: Date | string;
   tags: string[];
   img: {
     url: string;

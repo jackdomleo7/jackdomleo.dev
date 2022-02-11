@@ -254,4 +254,16 @@ describe('ProjectCard', () => {
 
     expect(wrapper.find('h3.project-card__heading small').exists()).toBe(false)
   })
+
+  it('renders a <h2> when "h2" is set as the heading level', () => {
+    const wrapper = shallowMount(ProjectCard, {
+      propsData: {
+        project: projects.checka11y,
+        headingLevel: 'h2'
+      },
+      stubs: ['prismic-rich-text', 'nuxt-img']
+    })
+
+    expect(wrapper.find('h2.project-card__heading').exists()).toBe(true)
+  })
 })
