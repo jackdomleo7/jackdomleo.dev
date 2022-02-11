@@ -45,27 +45,42 @@
         </div>
       </div>
     </section>
+    <section id="blog" class="container blog">
+      <h2 class="blog__heading">{{ home.data.blog_heading }}</h2>
+      <ul class="blog__list">
+        <li v-for="article in articles" :key="article.title">
+          <article-card :article="article" heading-level="h3" />
+        </li>
+      </ul>
+      <nuxt-link to="/blog" class="blog__more">
+        {{ home.data.blog_read_more_link_text }}
+        <svg-icon name="arrow-right" />
+      </nuxt-link>
+    </section>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Btn from '@/components/Btn.vue'
+import ArticleCard from '@/components/ArticleCard.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import { NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience } from '@/helpers/yearsExperience'
-import { IPage, IPageHome, IPageProjects } from '@/types/cms'
+import { IPage, IPageBlog, IPageHome, IPageProjects } from '@/types/cms'
+import { IArticle } from '@/types'
 
 export default Vue.extend({
   name: 'Home',
-  components: { Btn, ProjectCard },
+  components: { ArticleCard, Btn, ProjectCard },
   head () {
     return {
       title: 'Home'
     }
   },
-  async asyncData ({ $prismic, error }) {
+  async asyncData ({ $content, $prismic, error }) {
     const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
     const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
+    const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
 
     if (home) {
       home.data.about_text = home.data.about_text.map(x => {
@@ -81,7 +96,10 @@ export default Vue.extend({
         projects.data.projects = projects.data.projects.splice(0, 6) // Only show the first 6 newest projects
       }
 
-      return { home, projects }
+      let articles = await $content({ deep: true }).sortBy('date', 'desc').only(['title', 'description', 'tags', 'date', 'body', 'readingTime']).fetch() as IArticle[]
+      articles = articles.splice(0, 6) // Only show the first 6 newest articles
+
+      return { home, projects, articles }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -280,6 +298,8 @@ export default Vue.extend({
 
 .projects {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   &__heading {
     font-size: var(--text-title);
@@ -307,10 +327,10 @@ export default Vue.extend({
 
   &__more {
     color: var(--colour-primary);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content: flex-end;
+    margin-left: auto;
 
     svg {
       width: 1.25rem;
@@ -392,6 +412,48 @@ export default Vue.extend({
     @media (min-width: $responsive-small-desktop) {
       height: 6.25rem;
       width: 6.25rem;
+    }
+  }
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    font-size: var(--text-title);
+    margin-block: 0;
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style-type: none;
+    margin-block: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+
+    @media (min-width: $responsive-standard-tablet) {
+      gap: 3rem 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $responsive-small-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__more {
+    color: var(--colour-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
     }
   }
 }

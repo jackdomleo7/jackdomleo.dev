@@ -2,6 +2,7 @@
 title: Why to not support Internet Explorer
 description: So you're thinking of supporting Internet Explorer? Don't.
 date: 2020-06-06
+tags: ['frontend']
 ---
 
 ## Why you should consider no longer supporting Internet Explorer

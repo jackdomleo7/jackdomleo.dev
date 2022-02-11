@@ -54,6 +54,7 @@ export default Vue.extend({
   &__img {
     border-radius: 0.75rem;
     width: 100%;
+    background-color: #ccc;
   }
 
   &__info {

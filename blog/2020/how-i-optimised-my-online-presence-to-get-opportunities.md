@@ -2,7 +2,7 @@
 title: How I optimised my online presence to get opportunities.
 description: I'm a firm believer that a good online presence can lead to a really successful career path that may open you up to better job opportunities...
 date: 2020-08-03
-tags: ['career']
+tags: ['career', 'about me']
 ---
 
 ## Why did I join Twitter?

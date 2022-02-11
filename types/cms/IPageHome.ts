@@ -16,4 +16,6 @@ export interface IPageHome {
     logo: IImage;
   }[];
   more_work_link_text: string;
+  blog_heading: string;
+  blog_read_more_link_text: string;
 }

@@ -1,3 +1,12 @@
+import readingTime from 'reading-time'
+import { $content } from '@nuxt/content'
+import { IArticle, INuxtContentGeneric } from '@/types'
+
+interface IGenerateRoute {
+  route: string;
+  payload?: IArticle;
+}
+
 export default {
   target: 'static',
   head: {
@@ -65,7 +74,11 @@ export default {
       lang: 'en'
     }
   },
-  content: {},
+  content: {
+    apiPrefix: '_blog',
+    dir: 'blog',
+    liveEdit: false
+  },
   robots: {
     UserAgent: '*',
     Allow: '/'
@@ -75,5 +88,32 @@ export default {
     exclude: ['/_icons', '/preview']
   },
   build: {
-  }
+  },
+  generate: {
+    async routes (): Promise<IGenerateRoute[]> {
+      let generatedRoutes: IGenerateRoute[] = []
+
+      // Blog pages
+      const blogs: IArticle[] = await $content({ deep: true }).fetch() as IArticle[]
+      blogs.forEach((blog) => {
+        generatedRoutes.push(
+          {
+            route: `/blog/${blog.path}`,
+            payload: blog
+          }
+        )
+      })
+
+      return generatedRoutes
+    }
+  },
+  hooks: {
+    'content:file:beforeInsert': (document: INuxtContentGeneric & IArticle) => {
+      if (document.extension === '.md') {
+        const { minutes } = readingTime(document.text)
+
+        document.readingTime = Math.ceil(minutes)
+      }
+    }
+  },
 }
