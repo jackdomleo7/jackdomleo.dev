@@ -148,7 +148,8 @@ describe('ProjectCard', () => {
   it('is a Vue instance', () => {
     const wrapper = mount(ProjectCard, {
       propsData: {
-        project: projects.mywebsite
+        project: projects.mywebsite,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
@@ -163,7 +164,8 @@ describe('ProjectCard', () => {
   it('matches snapshot when mounted', () => {
     const wrapper = mount(ProjectCard, {
       propsData: {
-        project: projects.mywebsite
+        project: projects.mywebsite,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
@@ -174,7 +176,8 @@ describe('ProjectCard', () => {
   it('matches snapshot when shallow mounted', () => {
     const wrapper = shallowMount(ProjectCard, {
       propsData: {
-        project: projects.mywebsite
+        project: projects.mywebsite,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
@@ -189,7 +192,8 @@ describe('ProjectCard', () => {
   it('to have no obvious accessibility violations', async () => {
     const wrapper = mount(ProjectCard, {
       propsData: {
-        project: projects.mywebsite
+        project: projects.mywebsite,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
@@ -204,7 +208,8 @@ describe('ProjectCard', () => {
   it('renders an <a> with a href if a url exists', () => {
     const wrapper = shallowMount(ProjectCard, {
       propsData: {
-        project: projects.mywebsite
+        project: projects.mywebsite,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
@@ -216,7 +221,8 @@ describe('ProjectCard', () => {
   it('renders a <div> if a url is not present', () => {
     const wrapper = shallowMount(ProjectCard, {
       propsData: {
-        project: projects.nourl
+        project: projects.nourl,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
@@ -227,7 +233,8 @@ describe('ProjectCard', () => {
   it('shows url if the project is a website', () => {
     const wrapper = shallowMount(ProjectCard, {
       propsData: {
-        project: projects.mywebsite
+        project: projects.mywebsite,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
@@ -239,7 +246,8 @@ describe('ProjectCard', () => {
   it('does not show url if the project is not a website', () => {
     const wrapper = shallowMount(ProjectCard, {
       propsData: {
-        project: projects.checka11y
+        project: projects.checka11y,
+        headingLevel: 'h3'
       },
       stubs: ['prismic-rich-text', 'nuxt-img']
     })
