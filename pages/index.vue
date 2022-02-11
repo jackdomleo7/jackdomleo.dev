@@ -66,21 +66,15 @@ import Btn from '@/components/Btn.vue'
 import ArticleCard from '@/components/ArticleCard.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import { NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience } from '@/helpers/yearsExperience'
-import { IPage, IPageBlog, IPageHome, IPageProjects } from '@/types/cms'
+import { IPage, IPageHome, IPageProjects } from '@/types/cms'
 import { IArticle } from '@/types'
 
 export default Vue.extend({
   name: 'Home',
   components: { ArticleCard, Btn, ProjectCard },
-  head () {
-    return {
-      title: 'Home'
-    }
-  },
   async asyncData ({ $content, $prismic, error }) {
     const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
     const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
-    const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
 
     if (home) {
       home.data.about_text = home.data.about_text.map(x => {
@@ -102,6 +96,11 @@ export default Vue.extend({
       return { home, projects, articles }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
+  head () {
+    return {
+      title: 'Home'
     }
   }
 })

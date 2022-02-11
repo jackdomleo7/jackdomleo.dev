@@ -91,7 +91,7 @@ export default {
   },
   generate: {
     async routes (): Promise<IGenerateRoute[]> {
-      let generatedRoutes: IGenerateRoute[] = []
+      const generatedRoutes: IGenerateRoute[] = []
 
       // Blog pages
       const blogs: IArticle[] = await $content({ deep: true }).fetch() as IArticle[]

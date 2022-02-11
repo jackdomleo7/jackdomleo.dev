@@ -1,8 +1,6 @@
 import { getApi } from '@prismicio/client/esm/@prismicio/client.min.mjs'
 import { DefaultClient } from '@prismicio/client/types/client'
 
-import Vue from 'vue'
-
 type ThenArg<T> = T extends Promise<infer U> ? U : T
 type PrismicAPIPromise = ReturnType<typeof getApi>
 type PrismicAPI = ThenArg<PrismicAPIPromise>

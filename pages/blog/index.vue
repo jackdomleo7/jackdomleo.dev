@@ -19,18 +19,18 @@ import { IArticle } from '@/types'
 import { IPage, IPageBlog } from '@/types/cms'
 
 export default Vue.extend({
-  name: 'blog',
+  name: 'Blog',
   components: { ArticleCard },
+  async asyncData ({ $content, $prismic }) {
+    const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
+    const articles = await $content({ deep: true }).sortBy('date', 'desc').only(['title', 'description', 'tags', 'date', 'body', 'readingTime']).fetch() as IArticle[]
+
+    return { blogPage, articles }
+  },
   head () {
     return {
       title: 'Blog'
     }
-  },
-  async asyncData ({ $content, $prismic }) {
-    const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
-    let articles = await $content({ deep: true }).sortBy('date', 'desc').only(['title', 'description', 'tags', 'date', 'body', 'readingTime']).fetch() as IArticle[]
-
-    return { blogPage, articles }
   }
 })
 </script>

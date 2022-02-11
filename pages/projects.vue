@@ -45,18 +45,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Btn from '@/components/Btn.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import { IPage, IPageProjects } from '@/types/cms'
 
 export default Vue.extend({
   name: 'Projects',
-  components: { Btn, ProjectCard },
-  head () {
-    return {
-      title: 'Projects'
-    }
-  },
+  components: { ProjectCard },
   async asyncData ({ $prismic, error }) {
     const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
 
@@ -75,6 +69,11 @@ export default Vue.extend({
       return { projects, standardProjects, miniProjects, websiteProjects }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
+  head () {
+    return {
+      title: 'Projects'
     }
   }
 })
