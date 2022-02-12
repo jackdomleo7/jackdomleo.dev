@@ -9,7 +9,7 @@
       <div class="nav__primary">
         <ul class="nav__primary-list">
           <li v-for="(navItem, index) in navItems" :key="navItem.text" class="nav__item" :hidden="(isMobile && index === navItems.length - 1) || (!isMobile && index === 0)">
-            <nuxt-link v-if="navItem.url" :to="navItem.url">
+            <nuxt-link v-if="navItem.url" :to="navItem.url" :class="{'is-home': navItem.text.toLowerCase() === 'home'}">
               <svg-icon v-if="navItem.icon" :name="navItem.icon" />
               <span>{{ navItem.text }}</span>
             </nuxt-link>
@@ -511,8 +511,12 @@ $nav-height: 4rem;
     }
   }
 
-  a.nuxt-link-exact-active {
+  a.nuxt-link-active {
     color: var(--colour-primary);
+  }
+
+  a.is-home:not(.nuxt-link-exact-active) {
+    color: var(--colour-text-secondary);
   }
 }
 </style>
