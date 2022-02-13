@@ -1,6 +1,9 @@
 import readingTime from 'reading-time'
 import { $content } from '@nuxt/content'
+import highlightjs from 'highlight.js'
 import { IArticle, INuxtContentGeneric } from '@/types'
+
+const highlightWrap = (code: string, lang: string): string => `<pre><code class="hljs ${lang}">${code}</code></pre>`
 
 interface IGenerateRoute {
   route: string;
@@ -24,6 +27,7 @@ export default {
   },
   css: [
     'modern-normalize/modern-normalize.css',
+    'highlight.js/styles/atom-one-dark-reasonable.css',
     'node_modules/cooltipz-css/src/cooltipz',
     '~/assets/styles/main.scss'
   ],
@@ -79,7 +83,15 @@ export default {
   content: {
     apiPrefix: '_blog',
     dir: 'blog',
-    liveEdit: false
+    liveEdit: false,
+    markdown: {
+      highlighter(rawCode: string, lang: string): string {
+        if (!lang) {
+          return highlightWrap(highlightjs.highlightAuto(rawCode).value, lang)
+        }
+        return highlightWrap(highlightjs.highlight(rawCode, { language: lang }).value, lang)
+      }
+    }
   },
   feed: [{
     path: '/feed.xml',
