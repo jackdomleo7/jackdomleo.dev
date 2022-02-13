@@ -24,6 +24,7 @@ export default {
   },
   css: [
     'modern-normalize/modern-normalize.css',
+    'node_modules/cooltipz-css/src/cooltipz',
     '~/assets/styles/main.scss'
   ],
   plugins: [

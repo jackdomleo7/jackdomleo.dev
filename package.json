@@ -30,6 +30,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@prismicio/client": "^5.1.1",
     "@vue/cli-plugin-unit-jest": "^4.5.15",
+    "cooltipz-css": "^2.1.0",
     "core-js": "^3.21.0",
     "date-fns": "^2.28.0",
     "modern-normalize": "^1.1.0",
