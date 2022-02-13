@@ -61,9 +61,12 @@ Eli suggested some excellent resources to use when thinking about internationali
 
 [Klara](https://twitter.com/KlaraMiffili) probably spoke about the most relatable thing to me to date in my career, finding what works for you. She focuses on entering the world of development and how overwhelming it can be to begin with. Something I struggled with was knowing what's what. What's back-end? What's front-end? What does 'native' mean? She gave a very inspiring talk about finding your own path, ensuring you are always doing something you enjoy and find interesting!
 
-> It's your journey, no-one will, or should decide for you
->
-> <span>- Klara Fleischmann</span>
+<figure class="blockquote">
+  <blockquote>
+    It's your journey, no-one will, or should decide for you
+  </blockquote>
+  <figcaption>- Klara Fleischmann</figcaption>
+</figure>
 
 ---
 

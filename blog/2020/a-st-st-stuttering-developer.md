@@ -74,36 +74,61 @@ I don't let my stutter hold me back from anything anymore -  and I mean nothing!
 
 I turned to my colleagues prior to writing this article because I wanted their opinions on what it's like to work with me (someone who stutters). Some of my colleagues have asked to remain anonymous but were happy for me to use their response and I have respected their decision.
 
-> Hi all, bit of a strange request but I appreciate anything, good or bad!! I want to write an article about stuttering in the workplace (title to be confirmed). On Twitter, I've had fellow stutterers approach me asking how I work, etc. So I thought I'd write an article to help raise awareness and raise their spirits. I'd like to write a section with quotes about how people who work with me feel. So, what's it like working with someone with a stutter? Did it take you time to get used to? Did you have to ask me what the right thing to do is? Thank you in advance! I can reference you in the article, but if you'd rather it be anonymous, that's ok too. 😊
->
-> <span>- Me</span>
+<figure class="blockquote">
+  <blockquote>
+    Hi all, bit of a strange request but I appreciate anything, good or bad!! I want to write an article about stuttering in the workplace (title to be confirmed). On Twitter, I've had fellow stutterers approach me asking how I work, etc. So I thought I'd write an article to help raise awareness and raise their spirits. I'd like to write a section with quotes about how people who work with me feel. So, what's it like working with someone with a stutter? Did it take you time to get used to? Did you have to ask me what the right thing to do is? Thank you in advance! I can reference you in the article, but if you'd rather it be anonymous, that's ok too. 😊
+  </blockquote>
+  <figcaption>
+    - Me
+  </figcaption>
+</figure>
 
+<figure class="blockquote">
+  <blockquote>
+    I would say that for me, it's fighting the urge to not complete words or sentences on your behalf. To do so would be rather presumptious, at least to my mind. My internal monologue gets to a point where I'm chivvying you on, "Come on Jack, you got this. Spit it out man!" 😃
+  </blockquote>
+  <figcaption>
+    - <a href="https://twitter.com/ajbkr" rel="nofollow" target="_blank">Andrew Baker</a>
+  </figcaption>
+</figure>
 
-> I would say that for me, it's fighting the urge to not complete words or sentences on your behalf. To do so would be rather presumptious, at least to my mind. My internal monologue gets to a point where I'm chivvying you on, "Come on Jack, you got this. Spit it out man!" 😃
->
-> <span>- [Andrew Baker](https://twitter.com/ajbkr)</span>
+<figure class="blockquote">
+  <blockquote>
+    I had a good friend when I was a teenager who had a stutter. We used to play Quake at LAN parties together. He had a specific trigger that made him stutter. In his case it was when he was about to say something hilarious. The more he stuttered the more we knew the punchline was going to be a killer, so we waited with baited breath for it. He never disappointed. I guess from that experience I know to simply wait patiently. Hope that is the right thing to do.
+  </blockquote>
+  <figcaption>
+    - Anonymous
+  </figcaption>
+</figure>
 
+<figure class="blockquote">
+  <blockquote>
+    Sometimes there's an urge to complete a word/sentence. 😅 I obviously ignore that urge. Also that's a solid idea for a blog article. 👌
+  </blockquote>
+  <figcaption>
+    - Anonymous
+  </figcaption>
+</figure>
 
-> I had a good friend when I was a teenager who had a stutter. We used to play Quake at LAN parties together. He had a specific trigger that made him stutter. In his case it was when he was about to say something hilarious. The more he stuttered the more we knew the punchline was going to be a killer, so we waited with baited breath for it. He never disappointed. I guess from that experience I know to simply wait patiently. Hope that is the right thing to do.
->
-> <span>- Anonymous</span>
+<figure class="blockquote">
+  <blockquote>
+    Sometimes I feel awkward for you, like I'm willing you to get through it, but that feels like my issue and not yours. I'm always impressed by how you don't let it stop you speaking out, I'm much shyer in meetings than you are.
+    <br/>
+    This discussion has prompted me to read up about stuttering and it's quite fascinating. I was a stutterer at nursery age, but it just seemed to go away after a few years. Apparently this is quite common, over half of childhood cases spontaneously resolve. I never really considered asking you how I should deal with your stutter, but that's the same way I wouldn't ask a non-native English speaker how to deal with the fact that their language isn't 100%. We just adapt and deal with it, and don't really give it much thought.
+  </blockquote>
+  <figcaption>
+    - <a href="https://www.linkedin.com/in/stephen-robson-a52005106" rel="nofollow" target="_blank">Ste Robson</a>
+  </figcaption>
+</figure>
 
-
-> Sometimes there's an urge to complete a word/sentence. 😅 I obviously ignore that urge. Also that's a solid idea for a blog article. 👌
->
-> <span>- Anonymous</span>
-
-
-> Sometimes I feel awkward for you, like I'm willing you to get through it, but that feels like my issue and not yours. I'm always impressed by how you don't let it stop you speaking out, I'm much shyer in meetings than you are.
->
-> This discussion has prompted me to read up about stuttering and it's quite fascinating. I was a stutterer at nursery age, but it just seemed to go away after a few years. Apparently this is quite common, over half of childhood cases spontaneously resolve. I never really considered asking you how I should deal with your stutter, but that's the same way I wouldn't ask a non-native English speaker how to deal with the fact that their language isn't 100%. We just adapt and deal with it, and don't really give it much thought.
->
-> <span>- [Ste Robson](https://www.linkedin.com/in/stephen-robson-a52005106)</span>
-
-
-> At first I thought it was nervousness but then I realised it was a stutter. It didn't take me long at all to get used to it but I am a quiet person and usually listen rather than talk. Though your last question made me realise I should have asked you about it rather than assumed, so apologies for that, I am always worried about asking and being rude.
->
-> <span>- [Spencer Hall](https://twitter.com/SpencerHallDev)</span>
+<figure class="blockquote">
+  <blockquote>
+    At first I thought it was nervousness but then I realised it was a stutter. It didn't take me long at all to get used to it but I am a quiet person and usually listen rather than talk. Though your last question made me realise I should have asked you about it rather than assumed, so apologies for that, I am always worried about asking and being rude.
+  </blockquote>
+  <figcaption>
+    - <a href="https://twitter.com/SpencerHallDev" rel="nofollow" target="_blank">Spencer Hall</a>
+  </figcaption>
+</figure>
 
 
 Some interesting and honest responses here. Some I predicted, some I did not. I understand a stutter can put fellow colleagues (or anyone for that matter) in an awkward position because they don't really know how to approach it. I want to say thank you to my current colleagues for their responses above and that you've done nothing in the wrong at all, you all approached it in your own way. 💪
@@ -163,12 +188,6 @@ Porky Pig stutters because his voice actor stutters, [Joe Dougherty](https://en.
 This icon needs no introduction, but, did you know he used to stutter? You can watch an interview [here](https://www.youtube.com/watch?v=wnhvX63MCSo#t=1m09s). They say some stutters have a trigger, a word or phrase they say when they get annoyed at stuttering. Mine used to be "sugar!" Samuel L. Jackson's trigger is a little more... explicit. "M*th\*rf\*ck\*r" is his trigger word, which is part of the reason you hear him saying it a lot in movies; it's like his catchphrase.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wnhvX63MCSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### Vice President Joe Biden
-
-All politics aside, Joe Biden is a very inspirational man when on the topic of stuttering. I really love [this speech](https://www.youtube.com/watch?v=iWn1CkIU_rc) he did.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iWn1CkIU_rc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Drew Lynch
 

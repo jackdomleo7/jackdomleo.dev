@@ -25,7 +25,9 @@ Let's assume we're using this HTML for the below demonstration.
 
 ## Showing an icon on hover
 
-> I want a button, that when hovered will show an icon. The icon should be hidden when not hovered.
+<blockquote class="blockquote">
+  I want a button, that when hovered will show an icon. The icon should be hidden when not hovered.
+</blockquote>
 
 This is a typical feature request. It's not very detailed, but as front-end developers, it's enough for us to work with and create a prototype button at the least.
 

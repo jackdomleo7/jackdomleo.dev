@@ -47,7 +47,9 @@ Naturally, larger components will ultimately prevent you from creating small, cl
 
 This is where your neumorphic design starts looking neumorphic. You should remember:
 
-> The component and the background colour should be the same or very very similar
+<blockquote class="blockquote">
+  The component and the background colour should be the same or very very similar
+</blockquote>
 
 It's OK to have components that contrast with the background, as long as the majority of your components blend in. It's also OK to have components that contrast with the background if you apply the shadows correctly...
 

@@ -5,11 +5,15 @@ date: 2020-07-15
 tags: ['productivity']
 ---
 
-> Focused creativity is the act of limiting some bounds to focus on one or a few aspects of a particular area.
+<blockquote class="blockquote">
+  Focused creativity is the act of limiting some bounds to focus on one or a few aspects of a particular area.
+</blockquote>
 
 **OR**
 
-> Focused creativity is the abstraction of particular aspects on a small project on your learning journey to improve the desired skills.
+<blockquote class="blockquote">
+  Focused creativity is the abstraction of particular aspects on a small project on your learning journey to improve the desired skills.
+</blockquote>
 
 ## How do I apply focused creativity?
 
