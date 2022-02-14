@@ -53,6 +53,7 @@ export default Vue.extend({
   max-width: 100%;
   cursor: pointer;
   transition: var(--standard-animation-timing);
+  user-select: none;
 
   @media (min-width: $responsive-standard-tablet) {
     min-width: 15.625rem;
