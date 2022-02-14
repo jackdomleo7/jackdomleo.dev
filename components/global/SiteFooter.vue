@@ -124,7 +124,7 @@ export default Vue.extend({
         },
         {
           text: 'LinkedIn',
-          url: 'https://linkedin.com/in/jackdomleo7',
+          url: 'https://linkedin.com/in/jackdomleo7/',
           icon: 'linkedin'
         },
         {
