@@ -61,7 +61,21 @@ export default Vue.extend({
   },
   head () {
     return {
-      title: `${this.article.title} | Blog`
+      title: `${this.article.title} | Blog`,
+      link: [
+        {
+          rel: 'preload',
+          as: 'script',
+          href: 'https://platform.twitter.com/widgets.js',
+          crossorigin: true
+        }
+      ],
+      script: [
+        {
+          src: 'https://platform.twitter.com/widgets.js',
+          async: true
+        }
+      ]
     }
   },
   methods: {
