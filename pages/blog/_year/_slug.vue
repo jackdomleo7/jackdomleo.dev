@@ -46,6 +46,7 @@ import Youtube from '@/components/Youtube.vue'
 
 export default Vue.extend({
   name: 'BlogSlug',
+  // eslint-disable-next-line vue/no-unused-components
   components: { Codepen, Youtube },
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
