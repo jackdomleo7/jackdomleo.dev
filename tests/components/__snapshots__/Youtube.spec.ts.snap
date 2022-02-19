@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Youtube matches snapshot when mounted 1`] = `
+<iframe
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen="allowfullscreen"
+  class="youtube"
+  frameborder="0"
+  height="315"
+  src="https://www.youtube.com/embed/wKbU8B-QVZk"
+  title="I Can't Believe You've Done This on YouTube"
+  width="560"
+/>
+`;
+
+exports[`Youtube matches snapshot when shallow mounted 1`] = `
+<iframe
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen="allowfullscreen"
+  class="youtube"
+  frameborder="0"
+  height="315"
+  src="https://www.youtube.com/embed/wKbU8B-QVZk"
+  title="I Can't Believe You've Done This on YouTube"
+  width="560"
+/>
+`;
