@@ -31,6 +31,8 @@
         </button>
       </li>
     </ul>
+    <script async src="https://static.codepen.io/assets/embed/ei.js" />
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
   </article>
 </template>
 
@@ -39,9 +41,11 @@ import Vue from 'vue'
 import { format } from 'date-fns'
 import { IArticle } from '@/types'
 import { IPage, IPageBlog } from '@/types/cms'
+import Codepen from '@/components/Codepen.vue'
 
 export default Vue.extend({
   name: 'BlogSlug',
+  components: { Codepen },
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
     const path = route.path.replace('/blog', '')
@@ -61,21 +65,7 @@ export default Vue.extend({
   },
   head () {
     return {
-      title: `${this.article.title} | Blog`,
-      link: [
-        {
-          rel: 'preload',
-          as: 'script',
-          href: 'https://platform.twitter.com/widgets.js',
-          crossorigin: true
-        }
-      ],
-      script: [
-        {
-          src: 'https://platform.twitter.com/widgets.js',
-          async: true
-        }
-      ]
+      title: `${this.article.title} | Blog`
     }
   },
   methods: {
