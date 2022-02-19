@@ -42,10 +42,11 @@ import { format } from 'date-fns'
 import { IArticle } from '@/types'
 import { IPage, IPageBlog } from '@/types/cms'
 import Codepen from '@/components/Codepen.vue'
+import Youtube from '@/components/Youtube.vue'
 
 export default Vue.extend({
   name: 'BlogSlug',
-  components: { Codepen },
+  components: { Codepen, Youtube },
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
     const path = route.path.replace('/blog', '')
