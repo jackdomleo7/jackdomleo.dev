@@ -2,8 +2,8 @@
 title: Learning Neumorphic Design
 description: The awesome design trend that never took off! What are the fundamentals to neumorphic design?
 date: 2020-05-27
-containsCodePen: true
 tags: ['design', 'css']
+embeds: ['codepen']
 ---
 
 ## What is neumorphic design?

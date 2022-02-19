@@ -2,8 +2,8 @@
 title: All Day Hey! 2020
 description: All Day Hey 2020 was an online conference for front-end developers and designers and I thought it was fantastic and educational!
 date: 2020-05-14
-containsCodePen: true
 tags: ['event']
+embeds: ['codepen']
 ---
 
 Today marks one week since the [All Day Hey](https://alldayhey.com) <time datetime="2020">2020</time> virtual conference. This year was my first time attending All Day Hey and my first virtual conference. Due to the global Coronavirus pandemic, All Day Hey was not able to be hosted in Leeds, UK, so [Josh Nesbitt](https://twitter.com/joshnesbitt), [Harry Roberts](https://twitter.com/csswizardry), [Phil Hawksworth](https://twitter.com/philhawksworth) and the rest of the All Day Hey team had to come up with a quick turn-around to make All Day Hey virtual... And they went above and beyond!

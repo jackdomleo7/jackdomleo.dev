@@ -2,8 +2,8 @@
 title: '@media (hover: hover) - CSS Media Query'
 description: The hover CSS media feature can be used to test whether the user's primary input mechanism can hover over elements.
 date: 2020-07-06
-containsCodePen: true
 tags: ['css']
+embeds: ['codepen']
 ---
 
 "The `hover` CSS media feature can be used to test whether the user's primary input mechanism can hover over elements." - [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover)

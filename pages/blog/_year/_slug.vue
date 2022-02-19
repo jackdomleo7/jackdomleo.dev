@@ -31,8 +31,8 @@
         </button>
       </li>
     </ul>
-    <script async src="https://static.codepen.io/assets/embed/ei.js" />
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+    <script v-if="article.embeds && article.embeds.includes('codepen')" async src="https://static.codepen.io/assets/embed/ei.js" />
+    <script v-if="article.embeds && article.embeds.includes('twitter')" async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
   </article>
 </template>
 
@@ -49,7 +49,7 @@ export default Vue.extend({
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
     const path = route.path.replace('/blog', '')
-    const articleSearch: IArticle[] = payload || await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime']).fetch()
+    const articleSearch: IArticle[] = payload || await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime', 'embeds']).fetch()
     const article = articleSearch[0]
     if (article) {
       return { blogPage, article }

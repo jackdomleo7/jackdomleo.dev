@@ -3,6 +3,7 @@ title: An Apprenticeship Interview
 description: Applying for a developer interview can be tough! I have listed some example questions and some tips & tricks to help you land your apprenticeship role!
 date: 2020-07-18
 tags: ['career']
+embeds: ['twitter']
 ---
 
 As many of you would be aware by now, I do not have a Computer Science degree, or any degree for that matter. I became a developer through an apprenticeship that began in September 2018 - this article doesn't focus on my entire journey, however if you would like to know my journey, please consider reading my article on [How I went from a Retail Assistant at 17 to Landing a Developer Role at 19](https://jackdomleo.dev/blog/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19).

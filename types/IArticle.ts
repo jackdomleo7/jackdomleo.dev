@@ -27,5 +27,5 @@ export interface IArticle extends TNuxtContentGenericRuntime {
     alt: string;
   };
   readingTime: number; // Automatically calculated during build time
-  embeds?: 'twitter'[]
+  embeds?: 'twitter'|'codepen'[]
 }

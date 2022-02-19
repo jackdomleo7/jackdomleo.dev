@@ -3,6 +3,7 @@ title: How I went from a Retail Assistant at 17 to Landing a Developer Role at 1
 description: My journey to a developer is an alternative path to the norm. I'm going to share my journey so far with you in detail and offer my advice to new developers.
 date: 2020-06-19
 tags: ['career', 'about me']
+embeds: ['twitter']
 ---
 
 <blockquote class="twitter-tweet" data-conversation="none" data-theme="light"><p lang="en" dir="ltr">I am currently in the middle of writing an article of my journey that I hope will inspire others.<br><br>Would anyone be interested in reading?</p>&mdash; Jack Domleo (@jackdomleo7) <a href="https://twitter.com/jackdomleo7/status/1273016612900274176?ref_src=twsrc%5Etfw">June 16, 2020</a></blockquote>
