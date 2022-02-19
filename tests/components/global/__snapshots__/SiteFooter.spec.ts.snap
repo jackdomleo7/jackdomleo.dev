@@ -157,7 +157,7 @@ exports[`SiteFooter matches snapshot when mounted 1`] = `
     </li>
     <li>
       <a
-        href="https://linkedin.com/in/jackdomleo7"
+        href="https://linkedin.com/in/jackdomleo7/"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -344,7 +344,7 @@ exports[`SiteFooter matches snapshot when shallow mounted 1`] = `
     </li>
     <li>
       <a
-        href="https://linkedin.com/in/jackdomleo7"
+        href="https://linkedin.com/in/jackdomleo7/"
         rel="noopener noreferrer"
         target="_blank"
       >
