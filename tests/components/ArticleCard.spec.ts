@@ -7,10 +7,6 @@ const article: IArticle = {
   title: 'Some article about something cool',
   tags: ['frontend', 'a11y'],
   description: 'This is some really interesting article about something seriously friggin cool!',
-  img: {
-    url: '/something-cool.png',
-    alt: 'A really cool thing'
-  },
   readingTime: 6,
   date: '2020-01-01',
   createdAt: String(new Date('2020-01-01')),

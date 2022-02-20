@@ -22,10 +22,6 @@ export interface IArticle extends TNuxtContentGenericRuntime {
   title: string;
   date: string; // In format of yyyy-mm-dd
   tags: string[];
-  img: {
-    url: string;
-    alt: string;
-  };
   readingTime: number; // Automatically calculated during build time
   embeds?: 'twitter'|'codepen'[]
 }

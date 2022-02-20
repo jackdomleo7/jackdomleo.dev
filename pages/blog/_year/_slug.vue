@@ -51,7 +51,7 @@ export default Vue.extend({
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
     const path = route.path.replace('/blog', '')
-    const articleSearch: IArticle[] = payload || await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime', 'embeds']).fetch()
+    const articleSearch: IArticle[] = payload || await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime', 'embeds', 'description', 'tags']).fetch()
     const article = articleSearch[0]
     if (article) {
       return { blogPage, article }
@@ -67,7 +67,57 @@ export default Vue.extend({
   },
   head () {
     return {
-      title: `${this.article.title} | Blog`
+      title: `${(this.article as IArticle).title} | Blog`,
+      meta: [
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          property: 'og:image',
+          content: `${process.env.BASE_URL}/blog${(this.article as IArticle).path}/cover_image.png`
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          property: 'og:title',
+          content: `${(this.article as IArticle).title} | Blog | Jack Domleo`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          property: 'og:description',
+          content: `${(this.article as IArticle).description}`
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          property: 'description',
+          content: `${(this.article as IArticle).description}`
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'article:published_time',
+          name: 'article:published_time',
+          property: 'article:published_time',
+          content: `${(this.article as IArticle).date}`
+        },
+        {
+          hid: 'article:author',
+          name: 'article:author',
+          property: 'article:author',
+          content: 'Jack Domleo'
+        },
+        ...((this.article as IArticle).tags ? [{
+          hid: 'article:tag',
+          name: 'article:tag',
+          property: 'article:tag',
+          content: `${(this.article as IArticle).tags}`
+        }] : [])
+      ]
     }
   },
   methods: {
