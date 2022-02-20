@@ -13,10 +13,10 @@
   },
   "homepage": "https://jackdomleo.dev",
   "scripts": {
-    "deps": "rimraf ./node_modules && npm ci",
+    "deps": "rimraf ./node_modules",
     "dev": "nuxt --open",
     "start": "nuxt start --open",
-    "generate": "rimraf ./dist && nuxt generate -m",
+    "generate": "rimraf ./dist && nuxt generate -m --fail-on-error",
     "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 .",
     "lint:fix": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix --cache --max-warnings=0 .",
     "test": "rimraf ./coverage && jest",
