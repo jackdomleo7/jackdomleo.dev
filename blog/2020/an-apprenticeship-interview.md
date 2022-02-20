@@ -6,7 +6,7 @@ tags: ['career']
 embeds: ['twitter']
 ---
 
-As many of you would be aware by now, I do not have a Computer Science degree, or any degree for that matter. I became a developer through an apprenticeship that began in September 2018 - this article doesn't focus on my entire journey, however if you would like to know my journey, please consider reading my article on [How I went from a Retail Assistant at 17 to Landing a Developer Role at 19](https://jackdomleo.dev/blog/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19).
+As many of you would be aware by now, I do not have a Computer Science degree, or any degree for that matter. I became a developer through an apprenticeship that began in September 2018 - this article doesn't focus on my entire journey, however if you would like to know my journey, please consider reading my article on <nuxt-link to="/blog/2020/how-i-went-from-a-retail-assistant-at-17-to-landing-a-developer-role-at-19">How I went from a Retail Assistant at 17 to Landing a Developer Role at 19</nuxt-link>.
 
 Here, I will focus on some questions that may occur in your apprenticeship interview and offer some guidance on how to prepare your answers and deliver them confidently.
 

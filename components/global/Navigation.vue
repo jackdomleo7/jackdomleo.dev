@@ -88,11 +88,6 @@ export default Vue.extend({
           icon: 'home'
         },
         {
-          text: 'About',
-          url: '/about',
-          icon: 'person'
-        },
-        {
           text: 'Projects',
           url: '/projects',
           icon: 'code'
@@ -105,20 +100,7 @@ export default Vue.extend({
         {
           text: 'More',
           url: null,
-          submenu: [
-            {
-              text: 'Contact',
-              url: '/contact'
-            },
-            {
-              text: 'Newsletter',
-              url: '/newsletter'
-            },
-            {
-              text: 'Speaking',
-              url: '/speaking'
-            }
-          ] as ISubNav[]
+          submenu: [] as ISubNav[]
         }
       ] as INav[]
     }

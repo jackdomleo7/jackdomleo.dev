@@ -90,7 +90,7 @@ export default Vue.extend({
         projects.data.projects = projects.data.projects.splice(0, 6) // Only show the first 6 newest projects
       }
 
-      const articles = await $content({ deep: true }).sortBy('date', 'desc').limit(6).only(['title', 'description', 'tags', 'date', 'body', 'readingTime']).fetch() as IArticle[]
+      const articles = await $content({ deep: true }).sortBy('date', 'desc').limit(6).only(['title', 'description', 'tags', 'date', 'body', 'readingTime', 'path']).fetch() as IArticle[]
 
       return { home, projects, articles }
     } else {

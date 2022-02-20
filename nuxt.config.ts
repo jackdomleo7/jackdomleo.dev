@@ -158,7 +158,7 @@ export default {
       blogs.forEach((blog) => {
         generatedRoutes.push(
           {
-            route: `/blog/${blog.path}`,
+            route: `/blog${blog.path}`,
             payload: blog
           }
         )
@@ -175,5 +175,5 @@ export default {
         document.readingTime = Math.ceil(minutes)
       }
     }
-  },
+  }
 }

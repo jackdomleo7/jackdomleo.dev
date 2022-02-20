@@ -98,10 +98,6 @@ export default Vue.extend({
           url: '/'
         },
         {
-          text: 'About',
-          url: '/about'
-        },
-        {
           text: 'Projects',
           url: '/projects'
         },
