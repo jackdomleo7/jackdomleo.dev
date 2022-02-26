@@ -49,5 +49,6 @@ export default Vue.extend({
   width: 100%;
   display: grid;
   place-items: center;
+  border: 1px solid var(--colour-text-secondary);
 }
 </style>
