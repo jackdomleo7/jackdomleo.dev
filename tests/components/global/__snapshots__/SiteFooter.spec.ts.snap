@@ -98,15 +98,6 @@ exports[`SiteFooter matches snapshot when mounted 1`] = `
     </li>
     <li>
       <nuxt-link-stub
-        to="/about"
-      >
-        
-        About
-      
-      </nuxt-link-stub>
-    </li>
-    <li>
-      <nuxt-link-stub
         to="/projects"
       >
         
@@ -280,15 +271,6 @@ exports[`SiteFooter matches snapshot when shallow mounted 1`] = `
       >
         
         Home
-      
-      </nuxt-link-stub>
-    </li>
-    <li>
-      <nuxt-link-stub
-        to="/about"
-      >
-        
-        About
       
       </nuxt-link-stub>
     </li>

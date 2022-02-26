@@ -6,11 +6,11 @@ exports[`ArticleCard matches snapshot when mounted 1`] = `
   to="/blog/blog/2020/some-cool-article"
 >
   <nuxt-img-stub
-    alt="A really cool thing"
+    alt=""
     class="article-card__img"
     height="210"
     loading="lazy"
-    src="/something-cool.png"
+    src="/blog/blog/2020/some-cool-article/cover_image.png"
     width="500"
   />
    
@@ -75,11 +75,11 @@ exports[`ArticleCard matches snapshot when shallow mounted 1`] = `
   to="/blog/blog/2020/some-cool-article"
 >
   <nuxt-img-stub
-    alt="A really cool thing"
+    alt=""
     class="article-card__img"
     height="210"
     loading="lazy"
-    src="/something-cool.png"
+    src="/blog/blog/2020/some-cool-article/cover_image.png"
     width="500"
   />
    
