@@ -66,11 +66,11 @@ I'm going to show with you a list of resources and techniques that really helped
   - My profile picture currently is so recognisable that instantly people recognise who I am (I've also been used as memes because I have the perfect "meme" face 😅). My banner on Twitter and LinkedIn are the same, to keep it simpler for me but also so viewers can recognise my brand. (You can see my profile picture and banner at the time of writing below).
 
 <figure>
-  <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/me.png" alt="Jack Domleo face">
+  <img src="/blog/2020/how-i-optimised-my-online-presence-to-get-opportunities/me.png" alt="Jack Domleo face">
 </figure>
 
 <figure>
-  <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/banner.png" alt="Jack Domleo banner">
+  <img src="/blog/2020/how-i-optimised-my-online-presence-to-get-opportunities/banner.png" alt="Jack Domleo banner">
 </figure>
 
 These are some of the primary techniques I use and in just a few months I have been opened up to so many opportunities and it can only get better, right? 💪
@@ -79,7 +79,7 @@ I also read a lot of books, so here are some that really helped me as a develope
 
 <figure>
   <a href="https://gumroad.com/a/875132019" rel="nofollow noopener" target="_blank">
-    <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/improve-your-online-presence-catalin-pit.png" alt="Improve Your Online Presence by Catalin Pit" />
+    <img src="/blog/2020/how-i-optimised-my-online-presence-to-get-opportunities/improve-your-online-presence-catalin-pit.png" alt="Improve Your Online Presence by Catalin Pit" />
   </a>
   <figcaption>
     <a href="https://gumroad.com/a/875132019" rel="nofollow noopener" target="_blank">Improve Your Online Presence</a> by <a href="https://twitter.com/catalinmpit" rel="nofollow noopener" target="_blank">Catalin Pit</a>
@@ -88,7 +88,7 @@ I also read a lot of books, so here are some that really helped me as a develope
 
 <figure>
   <a href="https://gumroad.com/a/581530739" rel="nofollow noopener" target="_blank">
-    <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/create-your-following-danny-thompson.png" alt="Create Your Following by Danny Thompson" />
+    <img src="/blog/2020/how-i-optimised-my-online-presence-to-get-opportunities/create-your-following-danny-thompson.png" alt="Create Your Following by Danny Thompson" />
   </a>
   <figcaption>
     <a href="https://gumroad.com/a/581530739" rel="nofollow noopener" target="_blank">Create Your Follwowing</a> (a really good course to accompany the Catalin Pit's book) by <a href="https://twitter.com/DThompsonDev" rel="nofollow noopener" target="_blank">Danny Thompson</a>
@@ -97,7 +97,7 @@ I also read a lot of books, so here are some that really helped me as a develope
 
 <figure>
   <a href="https://randallkanna.com/the-standout-developer" rel="nofollow noopener" target="_blank">
-    <img src="/blog/how-i-optimised-my-online-presence-to-get-opportunities/the-standout-developer-randall-kanna.png" alt="The Standout Developer by Randall Kanna" />
+    <img src="/blog/2020/how-i-optimised-my-online-presence-to-get-opportunities/the-standout-developer-randall-kanna.png" alt="The Standout Developer by Randall Kanna" />
   </a>
   <figcaption>
     <a href="https://randallkanna.com/the-standout-developer" rel="nofollow noopener" target="_blank">The Standout Developer</a> by <a href="https://twitter.com/RandallKanna" rel="nofollow noopener" target="_blank">Randall Kanna</a>

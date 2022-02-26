@@ -9,7 +9,7 @@ embeds: ['codepen']
 Today marks one week since the [All Day Hey](https://alldayhey.com) <time datetime="2020">2020</time> virtual conference. This year was my first time attending All Day Hey and my first virtual conference. Due to the global Coronavirus pandemic, All Day Hey was not able to be hosted in Leeds, UK, so [Josh Nesbitt](https://twitter.com/joshnesbitt), [Harry Roberts](https://twitter.com/csswizardry), [Phil Hawksworth](https://twitter.com/philhawksworth) and the rest of the All Day Hey team had to come up with a quick turn-around to make All Day Hey virtual... And they went above and beyond!
 
 <figure>
-  <img src="/blog/all-day-hey-2020/alldayhey.png" alt="Josh Nesbitt, Phil Hawksworth, Harry Roberts" />
+  <img src="/blog/2020/all-day-hey-2020/alldayhey.png" alt="Josh Nesbitt, Phil Hawksworth, Harry Roberts" />
   <figcaption>Josh Nesbitt, Phil Hawksworth, Harry Roberts at All Day Hey! 2020</figcaption>
 </figure>
 
@@ -93,6 +93,6 @@ I will definitely be attending All Day Hey every year, whether it's in Leeds or 
 You can still buy a pass for the day and watch the recorded talks through the [All Day Hey portal](https://alldayhey.com/live), where all the content will be available for up to 90 days after the event took place - All Day Hey 2020 took place on <time datetime="2020-05-07">7<sup>th</sup> May 2020</time>, so the content should be available until <time datetime="2020-08-05">5<sup>th</sup> August 2020</time>. I highly recommend this to anyone interested in front-end and design.
 
 <figure>
-  <img src="/blog/all-day-hey-2020/alldayhey-logo.jpg" alt="All Day Hey logo" />
+  <img src="/blog/2020/all-day-hey-2020/alldayhey-logo.jpg" alt="All Day Hey logo" />
   <figcaption>All Day Hey logo</figcaption>
 </figure>

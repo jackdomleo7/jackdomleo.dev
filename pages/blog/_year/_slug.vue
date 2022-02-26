@@ -31,8 +31,8 @@
         </button>
       </li>
     </ul>
-    <!-- <script v-if="article.embeds && article.embeds.includes('codepen')" async src="https://static.codepen.io/assets/embed/ei.js" />
-    <script v-if="article.embeds && article.embeds.includes('twitter')" async src="https://platform.twitter.com/widgets.js" charset="utf-8" /> -->
+    <script v-if="article.embeds && article.embeds.includes('codepen')" async src="https://static.codepen.io/assets/embed/ei.js" />
+    <script v-if="article.embeds && article.embeds.includes('twitter')" async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
   </article>
 </template>
 

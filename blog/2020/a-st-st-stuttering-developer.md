@@ -150,7 +150,7 @@ This is the single most asked question I get about my stutter 😅. So, here are
 Keeping these key points in mind can ensure a healthy conversation 😊.
 
 <figure>
-  <img src="/blog/a-st-st-stuttering-developer/please-wait.png" alt="Two people talking with one guessing words while the other stutters.">
+  <img src="/blog/2020/a-st-st-stuttering-developer/please-wait.png" alt="Two people talking with one guessing words while the other stutters.">
   <figcaption>https://www.frontiersin.org/files/Articles/494542/frym-07-00153-HTML-r1/image_m/figure-3.jpg</figcaption>
 </figure>
 
@@ -171,7 +171,7 @@ His majesty, King George VI, reigned during World War 2. He became king when his
 Porky Pig stutters because his voice actor stutters, [Joe Dougherty](https://en.wikipedia.org/wiki/Joe_Dougherty). I could relate to Porky Pig as a child because of my love for Looney Tunes and because I also spoke very fast and didn't think about what I wanted to say. Watch Porky Pig's debut [here](https://www.youtube.com/watch?v=WYem4JwUzcA).
 
 <figure>
-  <img src="/blog/a-st-st-stuttering-developer/porky-pig.gif" alt="Porky Pig">
+  <img src="/blog/2020/a-st-st-stuttering-developer/porky-pig.gif" alt="Porky Pig">
   <figcaption>Porkky Pig from Giphy https://media.giphy.com/media/xa5MHnjO4pxNC/giphy.gif</figcaption>
 </figure>
 

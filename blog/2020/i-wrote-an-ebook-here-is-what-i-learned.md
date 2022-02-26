@@ -77,4 +77,4 @@ I had so much fun writing the ebook and I was able to learn so much myself while
 
 Hopefully, this article has been helpful to you if you ever decide to write an ebook. If you do decide, then I wish you the best of luck.
 
-[![Level-Up Your Career Today: Developer Edition ebook front cover](/blog/i-wrote-an-ebook-here-is-what-i-learned/levelupyourcareertoday.png)](https://levelupyourcareer.today)
+[![Level-Up Your Career Today: Developer Edition ebook front cover](/blog/2020/i-wrote-an-ebook-here-is-what-i-learned/levelupyourcareertoday.png)](https://levelupyourcareer.today)

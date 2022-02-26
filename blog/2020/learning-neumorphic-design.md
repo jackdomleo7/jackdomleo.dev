@@ -11,7 +11,7 @@ embeds: ['codepen']
 Neumorphic design is a combination of skeuomorphic design and flat design. It gives a soft UI vibe with a 3D, nearly-realistic style by cleverly and carefully combining background colours, gradients, shapes, rounded edges and shadows. The design trend is made to feel like the elements are being pushed through and/or out of the page while being one with the background.
 
 <figure>
-  <img src="/blog/learning-neumorphic-design/music-player.png" alt="Neumorphic music player" />
+  <img src="/blog/2020/learning-neumorphic-design/music-player.png" alt="Neumorphic music player" />
   <figcaption>Neumorphic music player by Jack Domleo on CodePen https://codepen.io/JackDomleo/pen/GRpaNGp</figcaption>
 </figure>
 

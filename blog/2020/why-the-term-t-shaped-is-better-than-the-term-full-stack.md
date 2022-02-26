@@ -32,7 +32,7 @@ If you have an application that needs UI, UX and accessibility to be of the best
 This is not to say full-stack developers can't do those tasks... Full-stack developers are not _necessarily_ experts in that field, they just have decent knowledge and understanding to be able to call themselves backend.
 
 <figure>
-  <img src="/blog/why-the-term-t-shaped-is-better-than-the-term-full-stack/full-stack.png" alt="A diagram representing how a full-stack developer role overlaps other developer roles but are not experts in those areas.">
+  <img src="/blog/2020/why-the-term-t-shaped-is-better-than-the-term-full-stack/full-stack.png" alt="A diagram representing how a full-stack developer role overlaps other developer roles but are not experts in those areas.">
 </figure>
 
 The above diagram is not an accurate representation of my view on a full-stack developer, because ultimately every developer is unique, therefore the central circle could be shifted towards either end and/or it could be morphed/squished, etc. But the diagram shows a clear representation of the difference between a full-stack developer and developers who are specialists in their specific fields.
@@ -54,7 +54,7 @@ You can consider the horizontal line to be your wide breadth of knowledge and th
 Below is a representation of what I feel my own T-shaped knowledge may look like. My main area is front-end and front-end technologies but I have also touched on areas such as C#, Selenium and automation.
 
 <figure>
-  <img src="/blog/why-the-term-t-shaped-is-better-than-the-term-full-stack/t-shaped.png" alt="A diagram representing how I think my own T-shaped diagram looks like.">
+  <img src="/blog/2020/why-the-term-t-shaped-is-better-than-the-term-full-stack/t-shaped.png" alt="A diagram representing how I think my own T-shaped diagram looks like.">
 </figure>
 
 I also really like this tweet by [@TheAnkurTyagi](https://twitter.com/TheAnkurTyagi):
