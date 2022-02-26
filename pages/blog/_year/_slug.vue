@@ -10,7 +10,7 @@
       <p>{{ article.readingTime }} min read</p>
     </div>
     <prismic-rich-text class="article__intro" :field="blogPage.data.article_intro" />
-    <nuxt-content :document="article" />
+    <nuxt-content class="article__content" :document="article" />
     <ul class="article__share">
       <li>
         <a :href="`https://twitter.com/intent/tweet?text=${article.title} by @jackdomleo7&url=${baseUrl}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on Twitter">
@@ -31,8 +31,8 @@
         </button>
       </li>
     </ul>
-    <script v-if="article.embeds && article.embeds.includes('codepen')" async src="https://static.codepen.io/assets/embed/ei.js" />
-    <script v-if="article.embeds && article.embeds.includes('twitter')" async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+    <script v-if="article.embeds && article.embeds.includes('codepen')" async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <script v-if="article.embeds && article.embeds.includes('twitter')" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </article>
 </template>
 
@@ -197,6 +197,38 @@ export default Vue.extend({
       cursor: pointer;
       display: grid;
       place-items: center;
+    }
+  }
+
+  &__content {
+    line-height: 1.5;
+
+    h2, h3, h4, h5, h6 {
+      margin-top: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      margin-block: 1rem;
+    }
+
+    figure {
+      margin-block: 2rem;
+      margin-inline: 0;
+
+      @media (min-width: $responsive-standard-tablet) {
+        padding-inline: 2rem;
+      }
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: var(--text-small);
+    }
+
+    ::v-deep .cp_embed_wrapper {
+      margin-block: 2rem;
     }
   }
 }
