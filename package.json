@@ -20,8 +20,7 @@
     "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 .",
     "lint:fix": "npm run lint:check -- --fix",
     "test": "rimraf ./coverage && jest",
-    "test:update-snapshots": "rimraf ./coverage && jest --updateSnapshot",
-    "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup"
+    "test:update-snapshots": "rimraf ./coverage && jest --updateSnapshot"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
@@ -69,7 +68,6 @@
     "jest-axe": "^5.0.1",
     "mockdate": "^3.0.5",
     "prettier": "^2.5.1",
-    "push-dir": "^0.4.1",
     "reading-time": "^1.5.0",
     "rimraf": "^3.0.2",
     "sass": "^1.49.9",
