@@ -20,23 +20,6 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'preload',
-        as: 'font',
-        type: 'font/woff2',
-        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Regular.woff2',
-        crossorigin: true
-      },
-      {
-        rel: 'preload',
-        as: 'font',
-        type: 'font/woff2',
-        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Bold.woff2',
-        crossorigin: true
-      }
     ]
   },
   css: [
