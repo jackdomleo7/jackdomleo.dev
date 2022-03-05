@@ -5,7 +5,7 @@
       <prismic-rich-text class="header__intro" :field="about.data.about_intro" />
     </header>
     <div class="container about">
-      <div v-for="section in about.data.about_sections" :key="section.text" class="about__section" :class="{ 'about__section--reverse': section.image_position === 'right' }">
+      <div v-for="(section, index) in about.data.about_sections" :key="`about_section_${index}`" class="about__section" :class="{ 'about__section--reverse': section.image_position === 'right' }">
         <div class="about__images" :class="{ 'about__images--2': section.image_1.url && section.image_2.url }">
           <nuxt-img v-if="section.image_1.url" provider="prismic" :src="section.image_1.url" :alt="section.image_1.alt" :height="imageDimensions(section)" :width="imageDimensions(section)" loading="lazy" />
           <nuxt-img v-if="section.image_2.url" provider="prismic" :src="section.image_2.url" :alt="section.image_2.alt" :height="imageDimensions(section)" :width="imageDimensions(section)" loading="lazy" />
