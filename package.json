@@ -18,7 +18,7 @@
     "start": "nuxt start --open",
     "generate": "rimraf ./dist && nuxt generate -m --fail-on-error",
     "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 .",
-    "lint:fix": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix --cache --max-warnings=0 .",
+    "lint:fix": "npm run lint:check -- --fix",
     "test": "rimraf ./coverage && jest",
     "test:update-snapshots": "rimraf ./coverage && jest --updateSnapshot",
     "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup"
