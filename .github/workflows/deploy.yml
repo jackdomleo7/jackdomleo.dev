@@ -1,17 +1,11 @@
-name: ci
+name: deploy
 
 on:
-  push:
-    branches:
-      - master
-      - new
-  pull_request:
-    branches:
-      - master
-      - new
+  schedule:
+    - cron: '0 0 * * *'  # Every day at 00:00
 
 jobs:
-  ci:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -37,8 +31,14 @@ jobs:
       - name: Clean install dependencies
         run: npm ci --no-audit
 
-      - name: Run linter
-        run: npm run lint:check
+      - name: Generate files
+        run: npm run generate
 
-      - name: Run tests
-        run: npm run test
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: dist
+
+      - name: Keep workflow alive
+        uses: gautamkrishnar/keepalive-workflow@master
