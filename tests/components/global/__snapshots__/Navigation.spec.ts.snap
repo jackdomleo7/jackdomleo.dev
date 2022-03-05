@@ -57,6 +57,24 @@ exports[`Navigation matches snapshot when mounted 1`] = `
         >
           <nuxt-link-stub
             class=""
+            to="/about"
+          >
+            <svg-icon-stub
+              name="person"
+            />
+             
+            <span>
+              About
+            </span>
+          </nuxt-link-stub>
+           
+          <!---->
+        </li>
+        <li
+          class="nav__item"
+        >
+          <nuxt-link-stub
+            class=""
             to="/projects"
           >
             <svg-icon-stub
@@ -366,6 +384,24 @@ exports[`Navigation matches snapshot when shallow mounted 1`] = `
              
             <span>
               Home
+            </span>
+          </nuxt-link-stub>
+           
+          <!---->
+        </li>
+        <li
+          class="nav__item"
+        >
+          <nuxt-link-stub
+            class=""
+            to="/about"
+          >
+            <svg-icon-stub
+              name="person"
+            />
+             
+            <span>
+              About
             </span>
           </nuxt-link-stub>
            
