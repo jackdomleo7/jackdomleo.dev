@@ -381,20 +381,12 @@ export default Vue.extend({
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @media (min-width: $responsive-standard-tablet) {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
     @media (min-width: $responsive-large-tablet) {
-      gap: 4rem 8rem;
+      grid-template-columns: repeat(6, 1fr);
     }
 
     @media (min-width: $responsive-small-desktop) {
-      gap: 6rem 10rem;
-    }
-
-    @media (min-width: $responsive-standard-desktop) {
-      gap: 7rem 12rem;
+      gap: 4rem 7.5rem;
     }
   }
 
@@ -402,7 +394,7 @@ export default Vue.extend({
     height: 3.75rem;
     width: 3.75rem;
 
-    @media (min-width: $responsive-standard-tablet) {
+    @media (min-width: $responsive-large-tablet) {
       height: 5rem;
       width: 5rem;
     }
