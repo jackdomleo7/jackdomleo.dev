@@ -88,6 +88,11 @@ export default Vue.extend({
           icon: 'home'
         },
         {
+          text: 'About',
+          url: '/about',
+          icon: 'person'
+        },
+        {
           text: 'Projects',
           url: '/projects',
           icon: 'code'
