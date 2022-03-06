@@ -1,79 +1,33 @@
-:root {
-  --body-background: var(--color-grey-dark);
-  --body-color: var(--color-white);
-  --body-font-weight: 300;
-
-  --font-family: sans-serif;
-  --font-stack: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", var(--font-family);
-}
-
-.theme--light {
-  --body-background: var(--color-white);
-  --body-color: var(--color-grey-dark);
-  --body-font-weight: 400;
-}
-
-
 ::selection {
   text-shadow: none;
-  color: var(--color-white);
-  background-color: var(--color-orange);
+  color: var(--colour-text-primary);
+  background-color: var(--colour-highlight);
 }
 
 html {
-  font-family: var(--font-family);
+  font-family: sans-serif;
+  font-size: 100%;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-padding-top: 15vmin;
-  overflow-x: hidden;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-
-  @media screen and (prefers-reduced-motion: reduce) {
-    transition: none !important;
-    animation: none !important;
-  }
 }
 
 body {
-  font-family: 'Open Sans', var(--font-stack);
+  background-color: var(--colour-background);
+  color: var(--colour-text-primary);
+  font-family: var(--font-family-montserrat);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--body-background);
-  color: var(--body-color);
-  font-size: 0.9rem;
-  font-weight: var(--body-font-weight);
-
-  @media screen and (min-width: 30em) {
-    font-size: 1rem;
-  }
-}
-
-strong, b {
-  font-weight: 800;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend strong;
-  font-family: exo, var(--font-stack);
-}
-
-h1 {
-  font-size: 2rem;
-
-  @media screen and (min-width: 30em) {
-    font-size: 2.2rem;
-  }
+  overflow-x: hidden;
 }
 
 img {
@@ -82,7 +36,8 @@ img {
   user-select: none;
 }
 
-button {
+a, button {
+  touch-action: manipulation;
   color: inherit;
 }
 
@@ -93,62 +48,21 @@ svg {
   pointer-events: none;
 }
 
-a:not(.btn) {
-  color: var(--color-blue);
-  transition: all 160ms ease;
+iframe {
+  height: 100%;
+  width: 100%
+}
+
+[hidden] {
+  display: none !important;
+}
+
+a {
+  color: var(--colour-accent);
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    color: var(--color-orange);
+    text-decoration: underline;
   }
-}
-
-hr {
-  border: 1px solid transparent;
-  border-radius: 50%;
-  border-top-color: currentColor;
-  margin: 1.8rem 0;
-  width: 100%;
-}
-
-code {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 90%;
-  color: var(--color-orange);
-}
-
-pre {
-  code {
-    color: currentColor;
-  }
-}
-
-ul {
-  padding-left: 1.5rem;
-
-  @media (min-width: 30em) {
-    padding-left: 2.5rem;
-  }
-}
-
-li {
-  line-height: 1.5;
-}
-
-.twitter-tweet {
-  width: 100% !important;
-  margin: 1.5rem auto !important;
-  display: table !important;
-
-  > iframe {
-    width: 100% !important;
-    max-width: 40rem !important;
-    margin: 0 auto !important;
-  }
-}
-
-iframe {
-  width: 100%;
-  height: auto;
-  min-height: 25rem;
 }

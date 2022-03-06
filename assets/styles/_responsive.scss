@@ -1,0 +1,18 @@
+/* Use the SCSS variables in responsive-vars.scss for media queries since CSS variables don't work for media queries, these are here in case you need them for anything else, e.g. accessing them in JS via getComputedStyle(document.documentElement).getPropertyValue('--my-variable') - see https://codepen.io/jackdomleo7/pen/xxZdajQ */
+
+/* These are in a different file to the SCSS variables so that the CSS variables aren't polluting the DOM */
+
+@use './responsive-vars' as *;
+
+:root {
+  --responsive-small-mobile: #{$responsive-small-mobile};
+  --responsive-standard-mobile: #{$responsive-standard-mobile};
+  --responsive-large-mobile: #{$responsive-large-mobile};
+  --responsive-small-tablet: #{$responsive-small-tablet};
+  --responsive-standard-tablet: #{$responsive-standard-tablet};
+  --responsive-large-tablet: #{$responsive-large-tablet};
+  --responsive-small-desktop: #{$responsive-small-desktop};
+  --responsive-standard-desktop: #{$responsive-standard-desktop};
+  --responsive-large-desktop: #{$responsive-large-desktop};
+  --responsive-4k-desktop: #{$responsive-4k-desktop};
+}

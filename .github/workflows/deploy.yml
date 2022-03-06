@@ -1,0 +1,47 @@
+name: deploy
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Every day at 00:00
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node env
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Clean install dependencies
+        run: npm ci --no-audit
+
+      - name: Generate files
+        run: npm run generate
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: dist
+
+      - name: Keep workflow alive
+        uses: gautamkrishnar/keepalive-workflow@master

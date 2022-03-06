@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeSwitcher matches snapshot when mounted 1`] = `
+<fieldset>
+  <legend>
+    Switch theme
+  </legend>
+   
+  <div
+    class="theme-options"
+  >
+    <div
+      class="theme-option"
+    >
+      <div>
+        <input
+          id="mobile-theme-switcher-theme-system"
+          name="mobile-theme-switcher-theme"
+          type="radio"
+          value="system"
+        />
+         
+        <svg-icon-stub
+          name="monitor"
+        />
+      </div>
+       
+      <label
+        for="mobile-theme-switcher-theme-system"
+      >
+        System
+      </label>
+    </div>
+     
+    <div
+      class="theme-option"
+    >
+      <div>
+        <input
+          id="mobile-theme-switcher-theme-light"
+          name="mobile-theme-switcher-theme"
+          type="radio"
+          value="light"
+        />
+         
+        <svg-icon-stub
+          name="sun"
+        />
+      </div>
+       
+      <label
+        for="mobile-theme-switcher-theme-light"
+      >
+        Light
+      </label>
+    </div>
+     
+    <div
+      class="theme-option"
+    >
+      <div>
+        <input
+          id="mobile-theme-switcher-theme-dark"
+          name="mobile-theme-switcher-theme"
+          type="radio"
+          value="dark"
+        />
+         
+        <svg-icon-stub
+          name="moon"
+        />
+      </div>
+       
+      <label
+        for="mobile-theme-switcher-theme-dark"
+      >
+        Dark
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`ThemeSwitcher matches snapshot when shallow mounted 1`] = `
+<fieldset>
+  <legend>
+    Switch theme
+  </legend>
+   
+  <div
+    class="theme-options"
+  >
+    <div
+      class="theme-option"
+    >
+      <div>
+        <input
+          id="mobile-theme-switcher-theme-system"
+          name="mobile-theme-switcher-theme"
+          type="radio"
+          value="system"
+        />
+         
+        <svg-icon-stub
+          name="monitor"
+        />
+      </div>
+       
+      <label
+        for="mobile-theme-switcher-theme-system"
+      >
+        System
+      </label>
+    </div>
+     
+    <div
+      class="theme-option"
+    >
+      <div>
+        <input
+          id="mobile-theme-switcher-theme-light"
+          name="mobile-theme-switcher-theme"
+          type="radio"
+          value="light"
+        />
+         
+        <svg-icon-stub
+          name="sun"
+        />
+      </div>
+       
+      <label
+        for="mobile-theme-switcher-theme-light"
+      >
+        Light
+      </label>
+    </div>
+     
+    <div
+      class="theme-option"
+    >
+      <div>
+        <input
+          id="mobile-theme-switcher-theme-dark"
+          name="mobile-theme-switcher-theme"
+          type="radio"
+          value="dark"
+        />
+         
+        <svg-icon-stub
+          name="moon"
+        />
+      </div>
+       
+      <label
+        for="mobile-theme-switcher-theme-dark"
+      >
+        Dark
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
