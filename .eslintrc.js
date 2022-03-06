@@ -15,6 +15,7 @@ module.exports = {
     'eslint-plugin-jest'
   ],
   rules: {
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'jest/no-disabled-tests': 'off'
   }
 }
