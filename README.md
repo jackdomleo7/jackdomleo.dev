@@ -1,4 +1,18 @@
-# jackdomleo.dev
+# [jackdomleo.dev](https://jackdomleo.dev)
+
+![Website status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fjackdomleo.dev "Website status")
+
+Jack Domleo's personal website & blog.
+
+My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
+
+Key links:
+- [🕸 sitemap](https://jackdomleo.dev/sitemap.xml)
+- [Blog](https://jackdomleo.dev/blog)
+- [Level-Up Your Career Today: Developer Edition ebook](https://levelupyourcareer.today)
+- [Figma](https://www.figma.com/file/2yHwcL7eCVKiWFCBOugiTm/jackdomleo.dev?node-id=645%3A349)
+
+---
 
 ## Local Setup
 
