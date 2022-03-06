@@ -1,2 +1,6 @@
 @forward  './light';
 @forward './dark';
+
+:root {
+  color-scheme: light dark;
+}

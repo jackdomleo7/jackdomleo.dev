@@ -19,7 +19,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' }
+      { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
+      { hid: 'color-scheme', name: 'color-scheme', content: 'light' }
     ]
   },
   css: [
@@ -75,6 +76,22 @@ export default {
   pwa: {
     manifest: {
       lang: 'en'
+    },
+    meta: {
+      name: 'Jack Domleo',
+      description:
+        'A frontend & UX developer based in Nottinghamshire, UK primarily using Vue.js, Nuxt.js, TypeScript & SCSS.',
+      ogType: 'profile',
+      ogHost: process.env.BASE_URL,
+      ogImage: {
+        path: '/og.png',
+        width: '1200',
+        height: '630',
+        type: 'image/png'
+      },
+      twitterCard: 'summary_large_image',
+      twitterSite: '@jackdomleo7',
+      twitterCreator: '@jackdomleo7'
     }
   },
   content: {
