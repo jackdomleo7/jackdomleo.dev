@@ -44,11 +44,11 @@ jobs:
       - name: Get dotenv secrets
         run: |
           touch .env
-          echo WHITELIST_GIST_ID = ${{ secrets.BASE_URL }} >> .env 
-          echo TWITTER_API_KEY = ${{ secrets.CONTACT_EMAIL }} >> .env
-          echo TWITTER_API_KEY_SECRET = ${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env
-          echo TWITTER_ACCESS_TOKEN = ${{ secrets.PRISMIC_ENDPOINT }} >> .env
-          echo TWITTER_ACCESS_TOKEN_SECRET = ${{ secrets.PRISMIC_ACCESS_TOKEN }} >> .env
+          echo BASE_URL = ${{ secrets.BASE_URL }} >> .env 
+          echo CONTACT_EMAIL = ${{ secrets.CONTACT_EMAIL }} >> .env
+          echo GOOGLE_ANALYTICS_ID = ${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env
+          echo PRISMIC_ENDPOINT = ${{ secrets.PRISMIC_ENDPOINT }} >> .env
+          echo PRISMIC_ACCESS_TOKEN = ${{ secrets.PRISMIC_ACCESS_TOKEN }} >> .env
 
       - name: Generate files
         run: npm run generate
