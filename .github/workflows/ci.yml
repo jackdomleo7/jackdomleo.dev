@@ -40,3 +40,15 @@ jobs:
 
       - name: Run tests
         run: npm run test
+
+      - name: Get dotenv secrets
+        run: |
+          touch .env
+          echo WHITELIST_GIST_ID = ${{ secrets.BASE_URL }} >> .env 
+          echo TWITTER_API_KEY = ${{ secrets.CONTACT_EMAIL }} >> .env
+          echo TWITTER_API_KEY_SECRET = ${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env
+          echo TWITTER_ACCESS_TOKEN = ${{ secrets.PRISMIC_ENDPOINT }} >> .env
+          echo TWITTER_ACCESS_TOKEN_SECRET = ${{ secrets.PRISMIC_ACCESS_TOKEN }} >> .env
+
+      - name: Generate files
+        run: npm run generate
