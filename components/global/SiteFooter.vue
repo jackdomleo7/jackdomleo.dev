@@ -1,6 +1,7 @@
 <template>
   <footer class="footer">
     <form
+      v-if="showNewsletterSubscribe"
       id="mc-embedded-subscribe-form"
       class="footer__subscribe"
       action="https://dev.us10.list-manage.com/subscribe/post?u=5db0c80170083cdaab0b17f84&amp;id=2f05546818"
@@ -85,6 +86,7 @@ export default Vue.extend({
   },
   data () {
     return {
+      showNewsletterSubscribe: false,
       newsletter: {
         email: ''
       }
@@ -163,9 +165,11 @@ export default Vue.extend({
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 4rem;
 
     @media (min-width: $responsive-small-tablet) {
       flex-direction: row;
+      margin-bottom: 7.5rem;
     }
 
     &-input {
@@ -184,12 +188,7 @@ export default Vue.extend({
 
   &__logo {
     width: 3.625rem;
-    margin-top: 4rem;
     margin-inline: auto;
-
-    @media (min-width: $responsive-small-tablet) {
-      margin-top: 7.5rem;
-    }
   }
 
   &__quick-links {
