@@ -60,7 +60,8 @@ describe('SiteFooter', () => {
    * Interactivity
    */
 
-  it('enables the "Subscibe" button when a valid email is entered into the Newsletter input', async () => {
+  // Skipped while newsletter signup is hidden
+  it.skip('enables the "Subscibe" button when a valid email is entered into the Newsletter input', async () => {
     const wrapper = mount(SiteFooter, {
       stubs: ['nuxt-link', 'svg-icon', 'nuxt-img']
     })

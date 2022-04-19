@@ -4,79 +4,7 @@ exports[`SiteFooter matches snapshot when mounted 1`] = `
 <footer
   class="footer"
 >
-  <form
-    action="https://dev.us10.list-manage.com/subscribe/post?u=5db0c80170083cdaab0b17f84&id=2f05546818"
-    class="footer__subscribe"
-    id="mc-embedded-subscribe-form"
-    method="post"
-    name="mc-embedded-subscribe-form"
-    novalidate="novalidate"
-    target="_blank"
-  >
-    <div
-      class="text-input footer__subscribe-input"
-    >
-      <label
-        class="text-input__label"
-        for="mce-EMAIL"
-      >
-        
-    Newsletter
-    
-        <!---->
-         
-        <span
-          class="sr-only"
-        >
-          
-        (required)
-      
-        </span>
-      </label>
-       
-      <p
-        class="text-input__help"
-      >
-        
-    No spam. Unsubscribe anytime.
-  
-      </p>
-       
-      <span
-        class="text-input__entry"
-      >
-        <input
-          aria-invalid="false"
-          id="mce-EMAIL"
-          name="EMAIL"
-          placeholder="Enter your email"
-          required="required"
-          type="email"
-        />
-      </span>
-       
-      <p
-        aria-hidden="true"
-        class="text-input__error"
-        id="mce-EMAIL--error"
-      >
-        
-    
-  
-      </p>
-    </div>
-     
-    <button
-      aria-label="Please provide a valid email before subscribing"
-      class="btn footer__subscribe-btn btn--square"
-      disabled="disabled"
-      type="submit"
-    >
-      
-      Subscribe
-    
-    </button>
-  </form>
+  <!---->
    
   <nuxt-img-stub
     alt=""
@@ -221,40 +149,7 @@ exports[`SiteFooter matches snapshot when shallow mounted 1`] = `
 <footer
   class="footer"
 >
-  <form
-    action="https://dev.us10.list-manage.com/subscribe/post?u=5db0c80170083cdaab0b17f84&id=2f05546818"
-    class="footer__subscribe"
-    id="mc-embedded-subscribe-form"
-    method="post"
-    name="mc-embedded-subscribe-form"
-    novalidate="novalidate"
-    target="_blank"
-  >
-    <textinput-stub
-      class="footer__subscribe-input"
-      helptext="No spam. Unsubscribe anytime."
-      hiderequiredasterisk="true"
-      id="mce-EMAIL"
-      label="Newsletter"
-      name="EMAIL"
-      placeholder="Enter your email"
-      required="true"
-      type="email"
-      value=""
-    />
-     
-    <btn-stub
-      aria-label="Please provide a valid email before subscribing"
-      class="footer__subscribe-btn"
-      disabled="true"
-      square="true"
-      type="submit"
-    >
-      
-      Subscribe
-    
-    </btn-stub>
-  </form>
+  <!---->
    
   <nuxt-img-stub
     alt=""
