@@ -5,10 +5,12 @@ import { IArticle, INuxtContentGeneric } from '@/types'
 
 const highlightWrap = (code: string, lang: string): string => `<pre><code class="hljs ${lang}">${code}</code></pre>`
 
-interface IGenerateRoute {
-  route: string;
-  payload?: IArticle;
-}
+type NuxtRoute<T = unknown> =
+  | string
+  | {
+      route: string
+      payload?: T
+    }
 
 export default {
   target: 'static',
@@ -178,8 +180,8 @@ export default {
     }
   },
   generate: {
-    async routes (): Promise<IGenerateRoute[]> {
-      const generatedRoutes: IGenerateRoute[] = []
+    async routes (): Promise<NuxtRoute[]> {
+      const generatedRoutes: NuxtRoute[] = []
 
       // Blog pages
       const blogs: IArticle[] = await $content({ deep: true }).fetch() as IArticle[]
