@@ -21,6 +21,29 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
       { hid: 'color-scheme', name: 'color-scheme', content: 'light' }
+    ],
+    link: [
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Regular.woff2',
+        crossorigin: true,
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Bold.woff2',
+        crossorigin: true,
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Light.woff2',
+        crossorigin: true,
+      }
     ]
   },
   css: [
@@ -148,6 +171,9 @@ export default {
     exclude: ['/_icons', '/preview']
   },
   build: {
+    filenames: {
+      font: () => '[path][name].[ext]'
+    }
   },
   generate: {
     async routes (): Promise<IGenerateRoute[]> {
