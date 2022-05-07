@@ -4,23 +4,64 @@ import highlightjs from 'highlight.js'
 import { IArticle, INuxtContentGeneric } from '@/types'
 
 const highlightWrap = (code: string, lang: string): string => `<pre><code class="hljs ${lang}">${code}</code></pre>`
+const metaDescription = 'A frontend & UX developer based in Nottinghamshire, UK primarily using Vue.js, Nuxt.js, TypeScript & SCSS.'
 
-interface IGenerateRoute {
-  route: string;
-  payload?: IArticle;
-}
+type NuxtRoute<T = unknown> =
+  | string
+  | {
+      route: string
+      payload?: T
+    }
 
 export default {
   target: 'static',
   head: {
     titleTemplate: '%s | Jack Domleo | Frontend & UX Developer',
+    htmlAttrs: {
+      lang: 'en-GB',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: metaDescription },
+      { hid: 'name', name: 'name', content: 'Jack Domleo' },
+      { hid: 'og:description', name: 'og:description', content: metaDescription },
+      { hid: 'og:type', name: 'og:type', content: 'profile' },
+      { hid: 'og:host', name: 'og:host', content: process.env.BASE_URL },
+      { hid: 'og:image', name: 'og:image', content: `${process.env.BASE_URL}/og.png` },
+      { hid: 'og:image:width', name: 'og:image:width', content: '1200' },
+      { hid: 'og:image:height', name: 'og:image:height', content: '630' },
+      { hid: 'og:type', name: 'og:type', content: 'image/png' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@jackdomleo7' },
+      { hid: 'twitter:creator', name: 'twitter:creator', content: '@jackdomleo7' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
       { hid: 'color-scheme', name: 'color-scheme', content: 'light' }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Regular.woff2',
+        crossorigin: true,
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Bold.woff2',
+        crossorigin: true,
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        type: 'font/woff2',
+        href: '/_nuxt/assets/fonts/Montserrat/Montserrat-Light.woff2',
+        crossorigin: true,
+      }
     ]
   },
   css: [
@@ -65,7 +106,6 @@ export default {
   modules: [
     '@nuxtjs/dotenv',
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
     '@nuxt/content',
     '@nuxtjs/feed',
     '@nuxtjs/svg-sprite',
@@ -73,27 +113,6 @@ export default {
     '@nuxtjs/sitemap' // Always declare last
   ],
   axios: {},
-  pwa: {
-    manifest: {
-      lang: 'en'
-    },
-    meta: {
-      name: 'Jack Domleo',
-      description:
-        'A frontend & UX developer based in Nottinghamshire, UK primarily using Vue.js, Nuxt.js, TypeScript & SCSS.',
-      ogType: 'profile',
-      ogHost: process.env.BASE_URL,
-      ogImage: {
-        path: '/og.png',
-        width: '1200',
-        height: '630',
-        type: 'image/png'
-      },
-      twitterCard: 'summary_large_image',
-      twitterSite: '@jackdomleo7',
-      twitterCreator: '@jackdomleo7'
-    }
-  },
   content: {
     apiPrefix: '_blog',
     dir: 'blog',
@@ -148,10 +167,13 @@ export default {
     exclude: ['/_icons', '/preview']
   },
   build: {
+    filenames: {
+      font: () => '[path][name].[ext]'
+    }
   },
   generate: {
-    async routes (): Promise<IGenerateRoute[]> {
-      const generatedRoutes: IGenerateRoute[] = []
+    async routes (): Promise<NuxtRoute[]> {
+      const generatedRoutes: NuxtRoute[] = []
 
       // Blog pages
       const blogs: IArticle[] = await $content({ deep: true }).fetch() as IArticle[]
