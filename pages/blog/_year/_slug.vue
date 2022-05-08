@@ -149,6 +149,7 @@ export default Vue.extend({
 
   &__return {
     display: inline-flex;
+    align-self: flex-start;
 
     svg {
       width: 2rem;
