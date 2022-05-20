@@ -22,11 +22,12 @@
     "types": [
       "node",
       "@types/node",
+      "jest",
+      "@types/jest",
+      "@jest/types",
       "@nuxt/types",
       "@nuxtjs/axios",
       "@nuxt/content",
-      "jest",
-      "@types/jest",
       "@nuxt/image",
       "@nuxtjs/color-mode"
     ]
