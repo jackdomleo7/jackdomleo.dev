@@ -36,6 +36,8 @@ The day-to-day activities are often the same, the benefits are very similar, the
 
 How many times have you come across a job advert that describes the company and the role, but doesn't actually describe the company or the role? They use buzz words to hide the true culture of the company and the true nature of the role. Below is a list of buzz words/phrases that I found on the internet and what they actually mean:
 
+<div class="table-wrapper">
+
 | Words/Phrases in the job advert       | What they actually mean                                        |
 |---------------------------------------|----------------------------------------------------------------|
 | work on cutting edge technology       | _Do what everyone else is doing_                               |
@@ -49,6 +51,8 @@ How many times have you come across a job advert that describes the company and 
 | dynamic environment                   | _Our leadership keeps changing priorities_                     |
 | self-starter                          | _We have no process_                                           |
 | passionate                            | _Perseveres through regular death marches_                     |
+
+</div>
 
 That original table was only intended as a joke, but it's scary how true it is. Another phrase I feel we should add to this list is "disrupting the industry".
 
