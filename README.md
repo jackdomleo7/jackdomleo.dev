@@ -9,7 +9,6 @@ My online portfolio has transformed over the years from a static HTML, CSS and J
 Key links:
 - [🕸 sitemap](https://jackdomleo.dev/sitemap.xml)
 - [Blog](https://jackdomleo.dev/blog)
-- [Level-Up Your Career Today: Developer Edition ebook](https://levelupyourcareer.today)
 - [Figma](https://www.figma.com/file/2yHwcL7eCVKiWFCBOugiTm/jackdomleo.dev?node-id=645%3A349)
 
 ---
