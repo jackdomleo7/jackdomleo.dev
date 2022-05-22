@@ -1,6 +1,8 @@
 import readingTime from 'reading-time'
 import { $content } from '@nuxt/content'
 import highlightjs from 'highlight.js'
+import Prismic from '@prismicio/client'
+import { IPageProduct } from '@/types/cms'
 import { IArticle, INuxtContentGeneric } from '@/types'
 
 const highlightWrap = (code: string, lang: string): string => `<pre><code class="hljs ${lang}">${code}</code></pre>`
@@ -182,6 +184,20 @@ export default {
           {
             route: `/blog${blog.path}`,
             payload: blog
+          }
+        )
+      })
+
+      // Product pages
+      const prismicClient = Prismic.client(process.env.PRISMIC_ENDPOINT, {
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN
+      })
+      const products = await prismicClient.query<IPageProduct>(Prismic.Predicates.at('document.type', 'product'))
+      products.results.forEach((productPage) => {
+        generatedRoutes.push(
+          {
+            route: `/products/${productPage.uid}`,
+            payload: productPage
           }
         )
       })
