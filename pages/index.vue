@@ -73,8 +73,8 @@ export default Vue.extend({
   name: 'Home',
   components: { ArticleCard, Btn, ProjectCard },
   async asyncData ({ $content, $prismic, error }) {
-    const home: IPage<IPageHome> = await $prismic.api.getSingle('home')
-    const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
+    const home: IPage<IPageHome, 'home'> = await $prismic.api.getSingle('home')
+    const projects: IPage<IPageProjects, 'projects'> = await $prismic.api.getSingle('projects')
 
     if (home) {
       home.data.about_text = home.data.about_text.map(x => {

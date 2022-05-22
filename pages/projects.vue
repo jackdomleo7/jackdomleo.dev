@@ -52,7 +52,7 @@ export default Vue.extend({
   name: 'Projects',
   components: { ProjectCard },
   async asyncData ({ $prismic, error }) {
-    const projects: IPage<IPageProjects> = await $prismic.api.getSingle('projects')
+    const projects: IPage<IPageProjects, 'projects'> = await $prismic.api.getSingle('projects')
 
     if (projects) {
       projects.data.projects = projects.data.projects.reverse() // In the CMS, newer projects are added to the end of the list, so we want to show the newer projects first
