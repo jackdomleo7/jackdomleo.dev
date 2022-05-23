@@ -39,7 +39,7 @@ export default {
       { hid: 'twitter:creator', name: 'twitter:creator', content: '@jackdomleo7' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
-      { hid: 'color-scheme', name: 'color-scheme', content: 'light' }
+      { hid: 'color-scheme', name: 'color-scheme', content: 'light dark' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
