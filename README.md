@@ -7,9 +7,10 @@ Jack Domleo's personal website & blog.
 My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
 
 Key links:
+- [Linktree](https://linktr.ee/jackdomleo7)
 - [🕸 sitemap](https://jackdomleo.dev/sitemap.xml)
 - [Blog](https://jackdomleo.dev/blog)
-- [Figma](https://www.figma.com/file/2yHwcL7eCVKiWFCBOugiTm/jackdomleo.dev?node-id=645%3A349)
+- [Figma for this site](https://www.figma.com/file/2yHwcL7eCVKiWFCBOugiTm/jackdomleo.dev)
 
 ---
 
@@ -24,7 +25,7 @@ Create a `.env` file with the following properties:
 
 ```bash
 # Clean install dependencies (also useful if you ever want to delete node_modiles rapidly)
-$ npm run deps
+$ npm run nukeNodeModules
 
 # Serve with hot reload at localhost:3000
 $ npm run dev
@@ -34,4 +35,19 @@ $ npm run generate
 
 # Launch staging server
 $ npm run start
+
+# Check project linting
+$ npm run lint:check
+
+# Lint & fix
+$ npm run lint:fix
+
+# Run tests
+$ npm run test
+
+# Run tests & update snapshots
+$ npm run test:updateSnapshots
+
+# Open test report
+$ npm run test:openReport
 ```
