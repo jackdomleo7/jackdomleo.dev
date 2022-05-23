@@ -33,7 +33,7 @@ export default {
       { hid: 'og:image', name: 'og:image', content: `${process.env.BASE_URL}/og.png` },
       { hid: 'og:image:width', name: 'og:image:width', content: '1200' },
       { hid: 'og:image:height', name: 'og:image:height', content: '630' },
-      { hid: 'og:image:type', name: 'og:type', content: 'image/png' },
+      { hid: 'og:image:type', name: 'og:image:type', content: 'image/png' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', name: 'twitter:site', content: '@jackdomleo7' },
       { hid: 'twitter:creator', name: 'twitter:creator', content: '@jackdomleo7' },
