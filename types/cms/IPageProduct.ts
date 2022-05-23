@@ -4,19 +4,22 @@ import { TRichText } from "./TRichText";
 
 export interface IPageProduct {
   uid: string;
-  meta_description: string;
+  meta_description?: TRichText;
+  og_image: IImage;
   title: string;
   product_type: 'Ebook' | 'Course' | 'Saas';
+  isbn?: string;
+  release_date?: `${number}-${number}-${number}`;
   short_description: TRichText;
   images: {
     image: IImage
   }[];
-  cta_text: string;
-  cta_url: ILink;
-  amazon_url: ILink;
-  goodreads_url: ILink;
-  product_hunt_url: ILink;
-  product_hunt_id: string;
+  cta_text?: string;
+  cta_url?: ILink;
+  amazon_url?: ILink;
+  goodreads_url?: ILink;
+  product_hunt_url?: ILink;
+  product_hunt_id?: string;
   long_description: TRichText;
   testimonies: {
     avatar: IImage;
