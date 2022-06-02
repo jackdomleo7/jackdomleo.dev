@@ -31,6 +31,7 @@ export default {
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:host', name: 'og:host', content: process.env.BASE_URL },
       { hid: 'og:image', name: 'og:image', content: `${process.env.BASE_URL}/og.png` },
+      { hid: 'og:image:alt', name: 'og:image:alt', content: 'Jack Domleo. Frontend & UX developer.' },
       { hid: 'og:image:width', name: 'og:image:width', content: '1200' },
       { hid: 'og:image:height', name: 'og:image:height', content: '630' },
       { hid: 'og:image:type', name: 'og:image:type', content: 'image/png' },
