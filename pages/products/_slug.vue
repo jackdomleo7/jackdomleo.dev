@@ -22,6 +22,13 @@
           </div>
         </div>
       </header>
+      <prismic-rich-text :field="productPage.data.long_description" class="description" />
+      <div v-if="productPage.data.product_hunt_url.url && productPage.data.product_hunt_id" class="product-hunt">
+        <a :href="productPage.data.product_hunt_url.url" target="_blank" title="Find us on Product Hunt">
+          <img :src="`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${productPage.data.product_hunt_id}&theme=light`" alt=""  width="250" height="54" />
+          <span class="sr-only">Come join us on Product Hunt</span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -214,6 +221,22 @@ export default Vue.extend({
         }
       }
     }
+  }
+}
+
+.description {
+  margin: 3.5rem auto 3rem auto;
+  max-width: 62.5rem;
+  padding-inline: 1rem;
+  font-size: var(--text-body);
+}
+
+.product-hunt {
+  display: flex;
+  justify-content: center;
+  
+  a {
+    display: inline-flex;
   }
 }
 </style>
