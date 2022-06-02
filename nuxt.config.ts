@@ -162,7 +162,8 @@ export default {
   }],
   robots: {
     UserAgent: '*',
-    Allow: '/'
+    Allow: '/',
+    Sitemap: `${process.env.BASE_URL}/sitemap.xml`
   },
   sitemap: {
     hostname: process.env.BASE_URL,
