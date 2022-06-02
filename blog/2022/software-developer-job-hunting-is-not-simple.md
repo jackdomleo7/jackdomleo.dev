@@ -10,7 +10,7 @@ embeds: ['twitter']
 
 Recently, I accepted a new role and wanted to talk you through my experience over the past 4 years (ish) of looking for new jobs (I haven't been looking for 4 years, but I've have looked for roles on 4 separate occasions during). This will be my fourth software developer role.
 
-When it's time to start looking for a new role, there's a couple of inconveniances that make the process of job hunting a draining, confusing and not-so-simple task.
+When it's time to start looking for a new role, there's a couple of inconveniences that make the process of job hunting a draining, confusing and not-so-simple task.
 
 1. Recruiters
 2. Job adverts are too similar
@@ -66,11 +66,16 @@ Salary can definitely make the job hunting process painful.
 
 We all have come across a job advert with no salary range whatsoever. These are mostly hated by candidates because they want to know upfront what salary range they're applying for and if a job advert is missing a salary range, it can certainly put many applicants off. In the past, I have applied for a fair few roles with a missing salary because I wanted to see how they went and I got very mixed results... One asked for my current salary, one didn't ask my current salary but asked for my salary expectations, and were surprised when I asked for a figure so low (it's fair to say I wasn't up to date on the market or my worth) but offered me my asking salary anyway, and one didn't ask for my current salary, didn't ask for my expectations, and just straight up offered a salary, which was reasonably fair. My opinion, if a job advert has no salary range, and the role sounds like it could be for you, still consider applying for it and see how the process goes, it could be good practise. They may even think you are worth more than you think you are and offer you a higher salary than you initially thought you'd get.
 
-Recently I was looking for frontend developer roles and was comparing salaries. The most confusing thing was frontend developer salaries ranged from £22k to £90k. For those unfamiliar with the Great British Pound (£GBP) and its worth, these salaries range from not a lot, to mega money. So looking for market comparison to try and work out my worth was difficult. I read a few of these job adverts and job adverts for £22k sounded extrememly similar to roles for £90k - I assumed a lot of the £90k roles were missing key responsibilities that make the role worth so much money.
+Recently I was looking for frontend developer roles and was comparing salaries. The most confusing thing was frontend developer salaries ranged from £22k to £90k. For those unfamiliar with the Great British Pound (£GBP) and its worth, these salaries range from not a lot, to mega money. So looking for market comparison to try and work out my worth was difficult. I read a few of these job adverts and job adverts for £22k sounded extremely similar to roles for £90k - I assumed a lot of the £90k roles were missing key responsibilities that make the role worth so much money.
 
-With the help of speaking to a few recruiters and reading [Talent Club's 2022 European Tech Salary Report](https://bit.ly/3loK5LI), I was able to find a salary range that I felt fit my worth and very shortly I was applying for roles in that range and was very quickly offered 3 frontend developer roles within that range. I wasn't aware I was worth 50% more than my current salary. It's always important to know your worth!
+With the help of speaking to a few recruiters and reading [talent.io's 2022 European Tech Salary Report](https://bit.ly/3loK5LI), I was able to find a salary range that I felt fit my worth and very shortly I was applying for roles in that range and was very quickly offered 3 frontend developer roles within that range. I wasn't aware I was worth 50% more than my current salary. It's always important to know your worth!
 
 During the <time datetime="2020">2020</time> COVID pandemic, software developer salaries took a huge hit, but they bounced back in <time datetime="2021">2021</time> and even further in <time datetime="2022">2022</time> with some roles having the potential to earn up to 50% more than before COVID.
+
+For those who don’t know about talent.io, they’re actually a selective tech recruitment platform with a community of +100,000 qualified tech professionals and 7,000 companies in Europe. They support both permanent and freelance jobs, on-site and remote, and have already helped more than 6,000 candidates find the job they deserve. Here’s out it works: 
+- **Set your standards**: define your next ideal position by setting your desired role, tech stack, salary, and industry. 
+- **Have companies apply to you**: hiring managers pitch you their position, mission, and team as well as a proposed salary range. You decide who you want to start discussing with. 
+- **Choose the position you love best**: it takes 20 days on average to get hired on talent.io.
 
 <figure>
   <a href="https://bit.ly/3loK5LI" target="_blank">
@@ -78,7 +83,7 @@ During the <time datetime="2020">2020</time> COVID pandemic, software developer 
   </a>
   <figcaption>
     <btn href="https://bit.ly/3loK5LI">
-      <span>Download <span class="sr-only">Talent Club's 2022 European Tech Salary Report</span> now</span></btn>
+      <span>Download <span class="sr-only">talent.io's <time datetime="2022">2022</time> European Tech Salary Report</span> now</span></btn>
   </figcaption>
 </figure>
 
@@ -97,7 +102,7 @@ What about job offers rather than job applications? What if you're offered 3 rol
 We developers are lucky in the sense that it can be a lot easier than other industries to find roles and move roles, but it does come with its difficulties. Below is a short list of rules I try my best to stick to when looking for new roles:
 
 - Get initial insight about the current market
-  - By researching salary reports such as [Talent Club's 2022 European Tech Salary Report](https://bit.ly/3loK5LI)
+  - By researching salary reports such as [talent.io's 2022 European Tech Salary Report](https://bit.ly/3loK5LI)
   - By speaking with recruiters who specialise in your area
 - Do some initial research about what exactly it is you want in your next role (remember, you want to progress your career, not necessarily just move roles)
 - If you do go through a recruitment agency, be sure to work with recruiters who give you a friendly vibe, you feel you can trust and who listen to your needs
