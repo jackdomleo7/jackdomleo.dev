@@ -14,6 +14,7 @@ export interface IPageProduct {
   images: {
     image: IImage
   }[];
+  price?: string;
   cta_text?: string;
   cta_url?: ILink;
   amazon_url?: ILink;

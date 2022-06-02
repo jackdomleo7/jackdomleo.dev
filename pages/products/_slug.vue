@@ -12,6 +12,7 @@
         <div class="header__details">
           <h1 class="header__title">{{ productPage.data.title }}</h1>
           <prismic-rich-text :field="productPage.data.short_description" class="header__description" />
+          <p v-if="productPage.data.price" class="header__price">{{ productPage.data.price }}</p>
           <div class="header__ctas">
             <btn :href="productPage.data.cta_url.url">{{ productPage.data.cta_text }}</btn>
             <a v-if="productPage.data.amazon_url.url" :href="productPage.data.amazon_url.url" target="_blank" title="Buy on Amazon" class="header__amazon">
@@ -112,7 +113,7 @@ export default Vue.extend({
   margin-top: 1rem;
   padding-inline: 1rem;
 
-  @media (min-width: $responsive-large-tablet) {
+  @media (min-width: $responsive-small-desktop) {
     margin-top: 6rem;
   }
 
@@ -167,10 +168,22 @@ export default Vue.extend({
     &__description {
       font-size: var(--text-large);
       margin-top: 0;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
 
       @media (min-width: $responsive-large-tablet) {
-        margin-bottom: 4rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__price {
+      font-size: var(--text-subtitle);
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @media (min-width: $responsive-large-tablet) {
+        text-align: left;
       }
     }
 
