@@ -35,6 +35,7 @@
     "highlight.js": "^11.5.1",
     "modern-normalize": "^1.1.0",
     "nuxt": "^2.15.8",
+    "swiper": "^6.8.4",
     "vuelidate": "^0.7.7"
   },
   "devDependencies": {

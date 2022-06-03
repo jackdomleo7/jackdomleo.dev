@@ -29,14 +29,33 @@
           <span class="sr-only">Come join us on Product Hunt</span>
         </a>
       </div>
+      <section class="testimonies">
+        <h2 class="testimonies__title">What are people saying?</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div v-for="testimony in productPage.data.testimonies" :key="testimony.name" class="swiper-slide testimony">
+              <prismic-rich-text class="testimony__quote" :field="testimony.quote" />
+              <div class="testimony__user">
+                <nuxt-img v-if="testimony.avatar.url" :src="testimony.avatar.url" :alt="testimony.avatar.alt" height="64" width="64" provider="prismic" class="testimony__avatar" />
+                <component :is="testimony.profile_url.url ? 'a' : 'p'" :href="testimony.profile_url.url" class="testimony__name">
+                  {{ testimony.name }}
+                </component>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Swiper from 'swiper'
 import { IPage, IPageProduct } from '@/types/cms'
 import Btn from '@/components/Btn.vue'
+
+import 'swiper/swiper-bundle.css'
 
 export default Vue.extend({
   name: 'ProductSlug',
@@ -111,6 +130,15 @@ export default Vue.extend({
         ] : [])
       ]
     }
+  },
+  mounted () {
+    // eslint-disable-next-line no-new
+    new Swiper('.swiper-container', {
+      centerInsufficientSlides: true,
+      freeMode: true,
+      slidesPerView: 'auto',
+      slideToClickedSlide: true
+    });
   }
 })
 </script>
@@ -237,6 +265,52 @@ export default Vue.extend({
   
   a {
     display: inline-flex;
+  }
+}
+
+.testimonies {
+  margin-top: 9.5rem;
+
+  &__title {
+    font-size: var(--text-subtitle);
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.testimony {
+  width: auto;
+  max-width: 85%;
+  position: relative;
+  margin-inline: 2rem;
+
+  &::before {
+    content: "❝";
+    position: absolute;
+    top: 0;
+    left: -1.9375rem;
+    color: var(--colour-primary);
+    font-size: var(--text-title);
+  }
+
+  &__quote {
+    max-width: 100%;
+    text-align: center;
+
+    @media (min-width: $responsive-standard-tablet) {
+      max-width: 34.375rem;
+    }
+  }
+
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__avatar {
+    border-radius: 50%;
   }
 }
 </style>
