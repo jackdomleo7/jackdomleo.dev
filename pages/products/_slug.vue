@@ -25,7 +25,7 @@
       <prismic-rich-text :field="productPage.data.long_description" class="description" />
       <div v-if="productPage.data.product_hunt_url.url && productPage.data.product_hunt_id" class="product-hunt">
         <a :href="productPage.data.product_hunt_url.url" target="_blank" title="Find us on Product Hunt">
-          <img :src="`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${productPage.data.product_hunt_id}&theme=light`" alt=""  width="250" height="54" />
+          <img :src="`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${productPage.data.product_hunt_id}&theme=light`" alt="" width="250" height="54" loading="lazy" />
           <span class="sr-only">Come join us on Product Hunt</span>
         </a>
       </div>
@@ -36,7 +36,7 @@
             <div v-for="testimony in productPage.data.testimonies" :key="testimony.name" class="swiper-slide testimony">
               <prismic-rich-text class="testimony__quote" :field="testimony.quote" />
               <div class="testimony__user">
-                <nuxt-img v-if="testimony.avatar.url" :src="testimony.avatar.url" :alt="testimony.avatar.alt" height="64" width="64" provider="prismic" class="testimony__avatar" />
+                <nuxt-img v-if="testimony.avatar.url" :src="testimony.avatar.url" :alt="testimony.avatar.alt" height="64" width="64" provider="prismic" loading="lazy" class="testimony__avatar" />
                 <tag :is="testimony.profile_url.url ? 'a' : 'p'" :href="testimony.profile_url.url" class="testimony__name">
                   {{ testimony.name }}
                 </tag>
