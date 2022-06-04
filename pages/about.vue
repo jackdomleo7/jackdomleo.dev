@@ -25,7 +25,7 @@ import { NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience } from '@/
 export default Vue.extend({
   name: 'About',
   async asyncData ({ $prismic, error }) {
-    const about: IPage<IPageAbout> = await $prismic.api.getSingle('about')
+    const about: IPage<IPageAbout, 'about'> = await $prismic.api.getSingle('about')
 
     if (about) {
       about.data.about_sections[0].text = about.data.about_sections[0].text.map(x => {

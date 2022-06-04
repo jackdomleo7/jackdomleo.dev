@@ -43,14 +43,13 @@ exports[`SiteFooter matches snapshot when mounted 1`] = `
       </nuxt-link-stub>
     </li>
     <li>
-      <a
-        href="https://levelupyourcareer.today"
-        rel="noopener"
+      <nuxt-link-stub
+        to="/products/level-up-your-career-today-developer-edition"
       >
         
         Book
       
-      </a>
+      </nuxt-link-stub>
     </li>
   </ul>
    
@@ -188,14 +187,13 @@ exports[`SiteFooter matches snapshot when shallow mounted 1`] = `
       </nuxt-link-stub>
     </li>
     <li>
-      <a
-        href="https://levelupyourcareer.today"
-        rel="noopener"
+      <nuxt-link-stub
+        to="/products/level-up-your-career-today-developer-edition"
       >
         
         Book
       
-      </a>
+      </nuxt-link-stub>
     </li>
   </ul>
    

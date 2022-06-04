@@ -1,6 +1,8 @@
 import readingTime from 'reading-time'
 import { $content } from '@nuxt/content'
 import highlightjs from 'highlight.js'
+import Prismic from '@prismicio/client'
+import { IPageProduct } from '@/types/cms'
 import { IArticle, INuxtContentGeneric } from '@/types'
 
 const highlightWrap = (code: string, lang: string): string => `<pre><code class="hljs ${lang}">${code}</code></pre>`
@@ -26,18 +28,19 @@ export default {
       { hid: 'description', name: 'description', content: metaDescription },
       { hid: 'name', name: 'name', content: 'Jack Domleo' },
       { hid: 'og:description', name: 'og:description', content: metaDescription },
-      { hid: 'og:type', name: 'og:type', content: 'profile' },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:host', name: 'og:host', content: process.env.BASE_URL },
       { hid: 'og:image', name: 'og:image', content: `${process.env.BASE_URL}/og.png` },
+      { hid: 'og:image:alt', name: 'og:image:alt', content: 'Jack Domleo. Frontend & UX developer.' },
       { hid: 'og:image:width', name: 'og:image:width', content: '1200' },
       { hid: 'og:image:height', name: 'og:image:height', content: '630' },
-      { hid: 'og:type', name: 'og:type', content: 'image/png' },
+      { hid: 'og:image:type', name: 'og:image:type', content: 'image/png' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', name: 'twitter:site', content: '@jackdomleo7' },
       { hid: 'twitter:creator', name: 'twitter:creator', content: '@jackdomleo7' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
-      { hid: 'color-scheme', name: 'color-scheme', content: 'light' }
+      { hid: 'color-scheme', name: 'color-scheme', content: 'light dark' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -160,7 +163,8 @@ export default {
   }],
   robots: {
     UserAgent: '*',
-    Allow: '/'
+    Allow: '/',
+    Sitemap: `${process.env.BASE_URL}/sitemap.xml`
   },
   sitemap: {
     hostname: process.env.BASE_URL,
@@ -182,6 +186,20 @@ export default {
           {
             route: `/blog${blog.path}`,
             payload: blog
+          }
+        )
+      })
+
+      // Product pages
+      const prismicClient = Prismic.client(process.env.PRISMIC_ENDPOINT, {
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN
+      })
+      const products = await prismicClient.query<IPageProduct>(Prismic.Predicates.at('document.type', 'product'))
+      products.results.forEach((productPage) => {
+        generatedRoutes.push(
+          {
+            route: `/products/${productPage.uid}`,
+            payload: productPage
           }
         )
       })
