@@ -47,9 +47,13 @@
       </section>
       <section v-if="productPage.data.faqs.length" id="faqs" class="faqs">
         <h2 class="faqs__title">Freqently asked questions</h2>
-        <CollapsibleSection v-for="(faq, index) in productPage.data.faqs" :id="`faq-${index}`" :key="faq.question" :heading="faq.question" heading-tag="h3">
-          <prismic-rich-text :field="faq.answer" />
-        </CollapsibleSection>
+        <ul class="faqs__list">
+          <li v-for="(faq, index) in productPage.data.faqs" :key="faq.question">
+            <CollapsibleSection :id="`faq-${index}`" :heading="faq.question" heading-tag="h3">
+              <prismic-rich-text :field="faq.answer" />
+            </CollapsibleSection>
+          </li>
+        </ul>
       </section>
     </div>
   </div>
@@ -330,6 +334,15 @@ export default Vue.extend({
     font-size: var(--text-subtitle);
     margin-top: 0;
     margin-bottom: 2rem;
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 </style>
