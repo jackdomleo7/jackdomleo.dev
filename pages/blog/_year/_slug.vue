@@ -50,7 +50,7 @@ export default Vue.extend({
   // eslint-disable-next-line vue/no-unused-components
   components: { Btn, Codepen, Youtube },
   async asyncData ({ $content, $prismic, route, error, payload }) {
-    const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
+    const blogPage: IPage<IPageBlog, 'blog'> = await $prismic.api.getSingle('blog')
     const path = route.path.replace('/blog', '')
     let article: IArticle | undefined;
     if (payload) {

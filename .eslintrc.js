@@ -16,6 +16,7 @@ module.exports = {
   ],
   rules: {
     'vue/multi-word-component-names': 'off',
-    'jest/no-disabled-tests': 'off'
+    'jest/no-disabled-tests': 'off',
+    'import/no-named-as-default': 'off'
   }
 }

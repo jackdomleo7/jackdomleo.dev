@@ -26,7 +26,7 @@ export default Vue.extend({
   name: 'Blog',
   components: { ArticleCard },
   async asyncData ({ $content, $prismic }) {
-    const blogPage: IPage<IPageBlog> = await $prismic.api.getSingle('blog')
+    const blogPage: IPage<IPageBlog, 'blog'> = await $prismic.api.getSingle('blog')
     const articles = await $content({ deep: true }).sortBy('date', 'desc').only(['title', 'description', 'tags', 'date', 'body', 'readingTime', 'path']).fetch() as IArticle[]
 
     return { blogPage, articles }

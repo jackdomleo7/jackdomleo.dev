@@ -109,7 +109,7 @@ export default Vue.extend({
         },
         {
           text: 'Book',
-          url: 'https://levelupyourcareer.today'
+          url: '/products/level-up-your-career-today-developer-edition'
         }
       ]
     },

@@ -1,4 +1,6 @@
-export interface IPage<T> {
+export type TDocumentType = 'home' | 'projects' | 'blog' | 'about' | 'product'
+
+export interface IPage<DataType extends Record<string, any>, DocumentType extends TDocumentType> {
   alternate_languages: any[];
   first_publication_date: Date;
   last_publication_date: Date;
@@ -7,9 +9,9 @@ export interface IPage<T> {
   uid: string | null;
   url: string | null;
   lang: 'en-gb';
-  type: string;
+  type: DocumentType;
   linked_documents: any[];
   slugs: string[];
   tags: string[];
-  data: T;
+  data: DataType;
 }

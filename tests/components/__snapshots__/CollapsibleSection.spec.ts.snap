@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollapsibleSection matches snapshot when mounted 1`] = `
+<div
+  class="collapsible-section"
+  id="collapsible-section-faq-1"
+>
+  <h2
+    class="collapsible-section__header"
+  >
+    <button
+      aria-controls="collapsible-section-faq-1__panel"
+      aria-expanded="false"
+      id="collapsible-section-faq-1__header"
+    >
+      <span>
+        What is the meaning of life?
+      </span>
+       
+      <svg-icon-stub
+        name="chevron-down"
+      />
+    </button>
+  </h2>
+   
+  <section
+    aria-labelledby="collapsible-section-faq-1__header"
+    class="collapsible-section__body collapsible-section__body--hidden"
+    id="collapsible-section-faq-1__panel"
+  >
+    <div
+      class="collapsible-section__body-inner"
+    >
+      <p>
+        The meaning of life is 42.
+      </p>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`CollapsibleSection matches snapshot when shallow mounted 1`] = `
+<div
+  class="collapsible-section"
+  id="collapsible-section-faq-1"
+>
+  <h2
+    class="collapsible-section__header"
+  >
+    <button
+      aria-controls="collapsible-section-faq-1__panel"
+      aria-expanded="false"
+      id="collapsible-section-faq-1__header"
+    >
+      <span>
+        What is the meaning of life?
+      </span>
+       
+      <svg-icon-stub
+        name="chevron-down"
+      />
+    </button>
+  </h2>
+   
+  <section
+    aria-labelledby="collapsible-section-faq-1__header"
+    class="collapsible-section__body collapsible-section__body--hidden"
+    id="collapsible-section-faq-1__panel"
+  >
+    <div
+      class="collapsible-section__body-inner"
+    >
+      <p>
+        The meaning of life is 42.
+      </p>
+    </div>
+  </section>
+</div>
+`;
