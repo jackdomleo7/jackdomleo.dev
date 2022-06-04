@@ -29,7 +29,7 @@
           <span class="sr-only">Come join us on Product Hunt</span>
         </a>
       </div>
-      <section class="testimonies">
+      <section v-if="productPage.data.testimonies.length" id="testimonies" class="testimonies">
         <h2 class="testimonies__title">What are people saying?</h2>
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -37,13 +37,19 @@
               <prismic-rich-text class="testimony__quote" :field="testimony.quote" />
               <div class="testimony__user">
                 <nuxt-img v-if="testimony.avatar.url" :src="testimony.avatar.url" :alt="testimony.avatar.alt" height="64" width="64" provider="prismic" class="testimony__avatar" />
-                <component :is="testimony.profile_url.url ? 'a' : 'p'" :href="testimony.profile_url.url" class="testimony__name">
+                <tag :is="testimony.profile_url.url ? 'a' : 'p'" :href="testimony.profile_url.url" class="testimony__name">
                   {{ testimony.name }}
-                </component>
+                </tag>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <section v-if="productPage.data.faqs.length" id="faqs" class="faqs">
+        <h2 class="faqs__title">Freqently asked questions</h2>
+        <CollapsibleSection v-for="(faq, index) in productPage.data.faqs" :id="`faq-${index}`" :key="faq.question" :heading="faq.question" heading-tag="h3">
+          <prismic-rich-text :field="faq.answer" />
+        </CollapsibleSection>
       </section>
     </div>
   </div>
@@ -54,12 +60,13 @@ import Vue from 'vue'
 import Swiper from 'swiper'
 import { IPage, IPageProduct } from '@/types/cms'
 import Btn from '@/components/Btn.vue'
+import CollapsibleSection from '@/components/CollapsibleSection.vue'
 
 import 'swiper/swiper-bundle.css'
 
 export default Vue.extend({
   name: 'ProductSlug',
-  components: { Btn },
+  components: { Btn, CollapsibleSection },
   async asyncData ({ $prismic, error, payload, params }) {
     const productPage: IPage<IPageProduct, 'product'> = payload || await $prismic.api.getByUID('product', params.slug)
     if (productPage) {
@@ -132,13 +139,15 @@ export default Vue.extend({
     }
   },
   mounted () {
-    // eslint-disable-next-line no-new
-    new Swiper('.swiper-container', {
-      centerInsufficientSlides: true,
-      freeMode: true,
-      slidesPerView: 'auto',
-      slideToClickedSlide: true
-    });
+    if ((this.productPage as IPage<IPageProduct, 'product'>).data.testimonies.length) {
+      // eslint-disable-next-line no-new
+      new Swiper('.swiper-container', {
+        centerInsufficientSlides: true,
+        freeMode: true,
+        slidesPerView: 'auto',
+        slideToClickedSlide: true
+      });
+    }
   }
 })
 </script>
@@ -311,6 +320,16 @@ export default Vue.extend({
 
   &__avatar {
     border-radius: 50%;
+  }
+}
+
+.faqs {
+  margin-top: 6rem;
+
+  &__title {
+    font-size: var(--text-subtitle);
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
 }
 </style>
