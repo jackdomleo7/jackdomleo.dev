@@ -1,6 +1,7 @@
 # [jackdomleo.dev](https://jackdomleo.dev)
 
 ![Website status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fjackdomleo.dev "Website status")
+[![deploy](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/deploy.yml/badge.svg)](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/deploy.yml)
 
 Jack Domleo's personal website & blog.
 
