@@ -41,13 +41,14 @@ import Vue from 'vue'
 import { format } from 'date-fns'
 import { IArticle } from '@/types'
 import { IPage, IPageBlog } from '@/types/cms'
+import Btn from '@/components/Btn.vue'
 import Codepen from '@/components/Codepen.vue'
 import Youtube from '@/components/Youtube.vue'
 
 export default Vue.extend({
   name: 'BlogSlug',
   // eslint-disable-next-line vue/no-unused-components
-  components: { Codepen, Youtube },
+  components: { Btn, Codepen, Youtube },
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog, 'blog'> = await $prismic.api.getSingle('blog')
     const path = route.path.replace('/blog', '')
@@ -149,6 +150,7 @@ export default Vue.extend({
 
   &__return {
     display: inline-flex;
+    align-self: flex-start;
 
     svg {
       width: 2rem;

@@ -27,6 +27,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: metaDescription },
       { hid: 'name', name: 'name', content: 'Jack Domleo' },
+      { hid: 'og:locale', name: 'og:locale', content: 'en_GB' },
       { hid: 'og:description', name: 'og:description', content: metaDescription },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:host', name: 'og:host', content: process.env.BASE_URL },
