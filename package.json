@@ -30,7 +30,7 @@
     "@prismicio/client": "^5.1.1",
     "@vue/cli-plugin-unit-jest": "^4.5.19",
     "cooltipz-css": "^2.1.0",
-    "core-js": "^3.23.3",
+    "core-js": "^3.23.4",
     "date-fns": "^2.28.0",
     "highlight.js": "^11.5.1",
     "modern-normalize": "^1.1.0",
