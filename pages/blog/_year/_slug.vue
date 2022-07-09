@@ -10,7 +10,7 @@
       <p>{{ article.readingTime }} min read</p>
     </div>
     <prismic-rich-text class="article__intro" :field="blogPage.data.article_intro" />
-    <prismic-rich-text v-if="amazonLegal" class="article__legal" :field="amazonLegal.data.legal_text" />
+    <prismic-rich-text v-if="article.legal && article.legal.includes('amazonAffiliate')" class="article__legal" :field="amazonLegal.data.legal_text" />
     <hr class="article__hr" />
     <nuxt-content class="article__content" :document="article" />
     <ul class="article__share">
