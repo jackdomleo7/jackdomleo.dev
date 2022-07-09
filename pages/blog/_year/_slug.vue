@@ -10,6 +10,8 @@
       <p>{{ article.readingTime }} min read</p>
     </div>
     <prismic-rich-text class="article__intro" :field="blogPage.data.article_intro" />
+    <prismic-rich-text v-if="amazonLegal" class="article__legal" :field="amazonLegal.data.legal_text" />
+    <hr class="article__hr" />
     <nuxt-content class="article__content" :document="article" />
     <ul class="article__share">
       <li>
@@ -40,7 +42,7 @@
 import Vue from 'vue'
 import { format } from 'date-fns'
 import { IArticle } from '@/types'
-import { IPage, IPageBlog } from '@/types/cms'
+import { IPage, IPageBlog, IAmazonLegal } from '@/types/cms'
 import Btn from '@/components/Btn.vue'
 import Codepen from '@/components/Codepen.vue'
 import Youtube from '@/components/Youtube.vue'
@@ -51,17 +53,18 @@ export default Vue.extend({
   components: { Btn, Codepen, Youtube },
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog, 'blog'> = await $prismic.api.getSingle('blog')
+    const amazonLegal: IPage<IAmazonLegal, 'amazon_affiliate_legal'> = await $prismic.api.getSingle('amazon_affiliate_legal')
     const path = route.path.replace('/blog', '')
     let article: IArticle | undefined;
     if (payload) {
       article = payload as IArticle
     }
     else {
-      const articleSearch = await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime', 'embeds', 'description', 'tags']).fetch() as IArticle[]
+      const articleSearch = await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime', 'embeds', 'description', 'tags', 'legal']).fetch() as IArticle[]
       article = articleSearch[0]
     }
     if (article) {
-      return { blogPage, article }
+      return { blogPage, article, amazonLegal }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -179,6 +182,15 @@ export default Vue.extend({
 
   &__intro {
     font-style: italic;
+  }
+
+  &__legal {
+    font-style: italic;
+    font-size: var(--text-small);
+  }
+
+  &__hr {
+    width: 80%;
   }
 
   &__share {

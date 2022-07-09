@@ -4,7 +4,7 @@ description: Having a neat setup can often really help with productivity, morale
 date: 2022-07-07
 tags: ['career']
 embeds: ['twitter']
-legalText: ['amazonAffiliate']
+legal: ['amazonAffiliate']
 ---
 
 Having a neat setup can often really help with productivity, morale and health problems.
