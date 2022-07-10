@@ -63,14 +63,14 @@
 import Vue from 'vue'
 import ThemeSwitcher from '../ThemeSwitcher.vue'
 
-interface ISubNav {
-  text: String;
-  url: String | null;
-  icon?: String;
-}
-
-interface INav extends ISubNav {
-  submenu: ISubNav[]
+interface INav {
+  text: string;
+  url: string;
+  icon?: string;
+  submenu?: {
+    text: string;
+    url: string;
+  }[]
 }
 
 export default Vue.extend({
@@ -105,7 +105,12 @@ export default Vue.extend({
         {
           text: 'More',
           url: null,
-          submenu: [] as ISubNav[]
+          submenu: [
+            {
+              text: 'Uses',
+              url: '/uses'
+            }
+          ]
         }
       ] as INav[]
     }

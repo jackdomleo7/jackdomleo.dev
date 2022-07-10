@@ -5,6 +5,7 @@ import { IPageAbout } from "./IPageAbout"
 import { IPageProjects } from "./IPageProjects"
 import { IPageBlog } from "./IPageBlog"
 import { IPageProduct } from "./IPageProduct"
+import { IPageUses } from "./IPageUses"
 
 export {
   IAmazonLegal,
@@ -13,5 +14,6 @@ export {
   IPageAbout,
   IPageProjects,
   IPageBlog,
-  IPageProduct
+  IPageProduct,
+  IPageUses
 }
