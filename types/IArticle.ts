@@ -1,3 +1,5 @@
+import { TAffiliateProviders } from "./TAffiliateProviders";
+
 export interface INuxtContentGeneric {
   toc: {
     id: string;
@@ -24,5 +26,5 @@ export interface IArticle extends TNuxtContentGenericRuntime {
   tags: string[];
   readingTime: number; // Automatically calculated during build time
   embeds?: 'twitter'|'codepen'[]
-  legal?: 'amazonAffiliate'[]
+  affiliateLegal?: TAffiliateProviders[]
 }

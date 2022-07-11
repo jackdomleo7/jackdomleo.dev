@@ -1,4 +1,4 @@
-import { IAmazonLegal } from "./IAmazonLegal"
+import { IAffiliateLegal } from "./IAffiliateLegal"
 import { IPage } from "./IPage"
 import { IPageHome } from "./IPageHome"
 import { IPageAbout } from "./IPageAbout"
@@ -8,7 +8,7 @@ import { IPageProduct } from "./IPageProduct"
 import { IPageUses } from "./IPageUses"
 
 export {
-  IAmazonLegal,
+  IAffiliateLegal,
   IPage,
   IPageHome,
   IPageAbout,

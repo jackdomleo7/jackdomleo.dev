@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="uses">
     <header class="container container--header header">
       <h1 class="header__title">Uses</h1>
       <prismic-rich-text class="header__intro" :field="uses.data.intro" />
-      <prismic-rich-text class="header__legal" :field="amazonLegal.data.legal_text" />
+      <prismic-rich-text class="header__legal" :field="affiliateLegal.data.legal_text" />
     </header>
-    <div class="container uses">
+    <div class="container uses__content">
       <div v-html="$md.render(uses.data.uses)" />
       <nuxt-img provider="prismic" :src="uses.data.office_setup.url" :alt="uses.data.office_setup.alt" width="756" height="397" loading="lazy" />
     </div>
@@ -14,18 +14,20 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { IPage, IPageUses, IAmazonLegal } from '@/types/cms'
+import { IPage, IPageUses, IAffiliateLegal } from '@/types/cms'
+import { populateAffiliateProviders } from '@/helpers/affiliateProviders'
 
 export default Vue.extend({
   name: 'About',
   async asyncData ({ $prismic, error }) {
     const uses: IPage<IPageUses, 'uses'> = await $prismic.api.getSingle('uses')
-    const amazonLegal: IPage<IAmazonLegal, 'amazon_affiliate_legal'> = await $prismic.api.getSingle('amazon_affiliate_legal')
+    const affiliateLegal: IPage<IAffiliateLegal, 'affiliate_legal'> = await $prismic.api.getSingle('affiliate_legal')
 
     if (uses) {
       uses.data.uses = $prismic.asText(uses.data.uses)
+      affiliateLegal.data.legal_text = populateAffiliateProviders(affiliateLegal.data.legal_text, ['Amazon'])
 
-      return { uses, amazonLegal }
+      return { uses, affiliateLegal }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }
@@ -78,22 +80,26 @@ export default Vue.extend({
 }
 
 .uses {
-  max-width: 70rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  font-size: var(--text-large);
+  max-width: 50rem;
+  margin-inline: auto;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: var(--text-large);
 
-  ::v-deep li {
-    margin-block: 0.5rem;
+    ::v-deep li {
+      margin-block: 0.5rem;
 
-    &:first-of-type {
-      margin-top: 0;
-    }
+      &:first-of-type {
+        margin-top: 0;
+      }
 
-    &:last-of-type {
-      margin-bottom: 0;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }

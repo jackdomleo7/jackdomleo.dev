@@ -10,7 +10,7 @@
       <p>{{ article.readingTime }} min read</p>
     </div>
     <prismic-rich-text class="article__intro" :field="blogPage.data.article_intro" />
-    <prismic-rich-text v-if="article.legal && article.legal.includes('amazonAffiliate')" class="article__legal" :field="amazonLegal.data.legal_text" />
+    <prismic-rich-text v-if="article.affiliateLegal && article.affiliateLegal.length" class="article__legal" :field="affiliateLegal.data.legal_text" />
     <hr class="article__hr" />
     <nuxt-content class="article__content" :document="article" />
     <ul class="article__share">
@@ -42,10 +42,11 @@
 import Vue from 'vue'
 import { format } from 'date-fns'
 import { IArticle } from '@/types'
-import { IPage, IPageBlog, IAmazonLegal } from '@/types/cms'
+import { IPage, IPageBlog, IAffiliateLegal } from '@/types/cms'
 import Btn from '@/components/Btn.vue'
 import Codepen from '@/components/Codepen.vue'
 import Youtube from '@/components/Youtube.vue'
+import { populateAffiliateProviders } from '@/helpers/affiliateProviders'
 
 export default Vue.extend({
   name: 'BlogSlug',
@@ -53,18 +54,23 @@ export default Vue.extend({
   components: { Btn, Codepen, Youtube },
   async asyncData ({ $content, $prismic, route, error, payload }) {
     const blogPage: IPage<IPageBlog, 'blog'> = await $prismic.api.getSingle('blog')
-    const amazonLegal: IPage<IAmazonLegal, 'amazon_affiliate_legal'> = await $prismic.api.getSingle('amazon_affiliate_legal')
+    const affiliateLegal: IPage<IAffiliateLegal, 'affiliate_legal'> = await $prismic.api.getSingle('affiliate_legal')
     const path = route.path.replace('/blog', '')
     let article: IArticle | undefined;
+
     if (payload) {
       article = payload as IArticle
     }
     else {
-      const articleSearch = await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime', 'embeds', 'description', 'tags', 'legal']).fetch() as IArticle[]
+      const articleSearch = await $content({ deep: true }).where({ path }).only(['title', 'body', 'date', 'readingTime', 'embeds', 'description', 'tags', 'affiliateLegal']).fetch() as IArticle[]
       article = articleSearch[0]
     }
     if (article) {
-      return { blogPage, article, amazonLegal }
+      if (article.affiliateLegal?.length) {
+        affiliateLegal.data.legal_text = populateAffiliateProviders(affiliateLegal.data.legal_text, article.affiliateLegal)
+      }
+
+      return { blogPage, article, affiliateLegal }
     } else {
       error({ statusCode: 404, message: 'Page not found' })
     }

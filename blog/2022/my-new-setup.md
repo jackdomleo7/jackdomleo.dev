@@ -1,10 +1,10 @@
 ---
 title: My New Setup for 2022
 description: Having a neat setup can often really help with productivity, morale and health problems.
-date: 2022-07-07
+date: 2022-07-12
 tags: ['career']
 embeds: ['twitter']
-legal: ['amazonAffiliate']
+affiliateLegal: ['Amazon']
 ---
 
 Having a neat setup can often really help with productivity, morale and health problems.
@@ -68,5 +68,7 @@ It's important to invest a little time and money into your desk setup. I sit at 
 I'm no expert at tidying cables behind the desk but I often try and keep these as tidy as I can, at least so my feet don't accidentally pull on the cables and pull the monitors with it.
 
 I see so many different setups online: gamers setups, setups on the beach, expensive setups, cheap setups, standing setups, etc. The most important thing is to make sure that you are happy with it and can work comfortably in it.
+
+You see a complete up-to-date list of everything I use by [visiting my uses page](/uses).
 
 Show me your setup!
