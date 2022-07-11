@@ -2,7 +2,7 @@
 title: My New Setup for 2022
 description: Having a neat setup can often really help with productivity, morale and health problems.
 date: 2022-07-12
-tags: ['career']
+tags: ['about me', 'productivity']
 embeds: ['twitter']
 affiliateLegal: ['Amazon']
 ---
