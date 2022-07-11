@@ -111,6 +111,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/axios',
     '@nuxt/content',
+    '@nuxtjs/markdownit',
     '@nuxtjs/feed',
     '@nuxtjs/svg-sprite',
     '@nuxtjs/robots',
@@ -129,6 +130,9 @@ export default {
         return highlightWrap(highlightjs.highlight(rawCode, { language: lang }).value, lang)
       }
     }
+  },
+  markdownit: {
+    runtime: true
   },
   feed: [{
     path: '/feed.xml',

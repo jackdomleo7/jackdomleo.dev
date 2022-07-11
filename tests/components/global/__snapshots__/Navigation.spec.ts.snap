@@ -123,6 +123,15 @@ exports[`Navigation matches snapshot when mounted 1`] = `
           </a>
            
           <ul>
+            <li>
+              <nuxt-link-stub
+                to="/uses"
+              >
+                
+                Uses
+              
+              </nuxt-link-stub>
+            </li>
              
             <li
               role="presentation"
@@ -249,7 +258,17 @@ exports[`Navigation matches snapshot when mounted 1`] = `
           />
         </nuxt-link-stub>
       </li>
+       
+      <li>
+        <nuxt-link-stub
+          to="/uses"
+        >
+          
+          Uses
         
+        </nuxt-link-stub>
+      </li>
+       
       <li
         role="presentation"
       >
@@ -460,6 +479,15 @@ exports[`Navigation matches snapshot when shallow mounted 1`] = `
           </a>
            
           <ul>
+            <li>
+              <nuxt-link-stub
+                to="/uses"
+              >
+                
+                Uses
+              
+              </nuxt-link-stub>
+            </li>
              
             <li
               role="presentation"
@@ -511,7 +539,17 @@ exports[`Navigation matches snapshot when shallow mounted 1`] = `
           />
         </nuxt-link-stub>
       </li>
+       
+      <li>
+        <nuxt-link-stub
+          to="/uses"
+        >
+          
+          Uses
         
+        </nuxt-link-stub>
+      </li>
+       
       <li
         role="presentation"
       >

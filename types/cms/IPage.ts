@@ -1,4 +1,4 @@
-export type TDocumentType = 'home' | 'projects' | 'blog' | 'about' | 'product'
+export type TDocumentType = 'home' | 'projects' | 'blog' | 'about' | 'product' | 'uses' | 'affiliate_legal'
 
 export interface IPage<DataType extends Record<string, any>, DocumentType extends TDocumentType> {
   alternate_languages: any[];
