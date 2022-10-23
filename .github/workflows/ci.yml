@@ -50,5 +50,5 @@ jobs:
           echo PRISMIC_ENDPOINT = ${{ secrets.PRISMIC_ENDPOINT }} >> .env
           echo PRISMIC_ACCESS_TOKEN = ${{ secrets.PRISMIC_ACCESS_TOKEN }} >> .env
 
-      - name: Generate files
+      - name: Check generate files
         run: npm run generate
