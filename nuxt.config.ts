@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  ssr: false,
+  target: 'static',
   typescript: {
     typeCheck: true,
     strict: true
