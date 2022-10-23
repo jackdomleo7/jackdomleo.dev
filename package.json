@@ -19,6 +19,9 @@
     "preview": "nuxi preview",
     "prepare": "nuxi prepare"
   },
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  },
   "devDependencies": {
     "@types/node": "^18.11.3",
     "nuxt": "3.0.0-rc.12",
