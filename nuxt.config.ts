@@ -4,6 +4,11 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: true
   },
+  runtimeConfig: {
+    public: {
+      GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID
+    }
+  },
   css: [
     'modern-normalize/modern-normalize.css',
     '~/assets/styles/main.scss'

@@ -14,13 +14,14 @@
   "type": "module",
   "scripts": {
     "build": "nuxi build",
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --open",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "prepare": "nuxi prepare"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "vue-gtag": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.3",
