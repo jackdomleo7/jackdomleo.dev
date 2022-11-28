@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     '~/assets/styles/main.scss'
   ],
   modules: [
-    '@nuxt/image-edge'
+    '@nuxt/image-edge',
+    'nuxt-icons'
   ],
   image: {
     screens: {
