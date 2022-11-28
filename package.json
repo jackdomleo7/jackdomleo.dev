@@ -22,6 +22,7 @@
     "vue-gtag": "^2.0.1"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27827328.bc9ddc0",
     "@types/node": "^18.11.9",
     "nuxt": "3.0.0",
     "sass": "^1.56.1",
