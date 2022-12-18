@@ -7,7 +7,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID
+      GOOGLE_ANALYTICS_ID: process.env.NUXT_GOOGLE_ANALYTICS_ID,
+      CTF_SPACE_ID: process.env.NUXT_CTF_SPACE_ID,
+      CTF_CDA_ACCESS_TOKEN: process.env.NUXT_CTF_CDA_ACCESS_TOKEN
     }
   },
   css: [
@@ -16,7 +18,7 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxt/image-edge',
-    'nuxt-icons'
+    // 'nuxt-icons'
   ],
   image: {
     screens: {
