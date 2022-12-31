@@ -1,0 +1,7 @@
+@forward  './light';
+@forward './dark';
+
+:root {
+  color-scheme: light dark;
+  --color-accent: #ff8311;
+}
