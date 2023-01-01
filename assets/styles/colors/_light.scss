@@ -1,3 +1,13 @@
+$light-bg: #fbfaf9;
+
+$light-theme-colours: (
+  bg: $light-bg,
+  fg1: darken($light-bg, 8%),
+  primary: #27242b
+);
+
 :root {
-  --color-bg: #fbfaf9;
+  @each $name, $hex in $light-theme-colours {
+    --color-#{$name}: #{$hex};
+  }
 }

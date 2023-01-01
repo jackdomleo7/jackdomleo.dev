@@ -15,6 +15,7 @@ html {
 
 body {
   background-color: var(--color-bg);
+  color: var(--color-primary);
   font-family: sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,9 +36,14 @@ a, button {
 svg {
   height: 100% !important;
   width: 100% !important;
-  fill: currentColor;
   pointer-events: none;
   margin: 0 !important;
+}
+
+.nuxt-icon {
+  path[fill="none"] {
+    fill: none !important;
+  }
 }
 
 iframe, video {

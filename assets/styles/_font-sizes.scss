@@ -1,0 +1,19 @@
+@use './scss/variables/responsive' as *;
+
+:root {
+  --text-title: 2rem; // 32px
+  --text-subtitle: 1.5rem; // 24px
+  --text-heading: 1.25rem; // 20px
+  --text-large: 1.125rem; // 18px
+  --text-body: 1rem; // 16px
+  --text-small: 0.875rem; // 14px
+
+  @media (min-width: $responsive-standard-tablet) {
+    --text-title: 3rem; // 48px
+    --text-subtitle: 2.5rem; // 40px
+    --text-heading: 1.5rem; // 24px
+    --text-large: 1.25rem; // 20px
+    --text-body: 1.125rem; // 18px
+    --text-small: 0.875rem; // 14px
+  }
+}
