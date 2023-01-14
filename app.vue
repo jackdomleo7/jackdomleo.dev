@@ -4,11 +4,13 @@
     <main>
       <NuxtLayout />
     </main>
+    <SiteFooter />
   </div>
 </template>
 
 <script lang="ts" setup>
 import Navigation from './components/Navigation.vue';
+import SiteFooter from './components/SiteFooter.vue';
 
 useHead({
   htmlAttrs: {
