@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   ssr: false,
   typescript: {
-    typeCheck: true,
+    typeCheck: process.env.NODE_ENV === 'dev',
     strict: true
   },
   runtimeConfig: {
