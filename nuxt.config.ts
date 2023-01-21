@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   typescript: {
     typeCheck: process.env.NODE_ENV === 'dev',
     strict: true

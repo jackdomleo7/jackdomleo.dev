@@ -18,7 +18,7 @@
     "postinstall": "nuxi prepare"
   },
   "dependencies": {
-    "contentful": "^9.2.15",
+    "contentful": "^10.0.0-beta-v10.9",
     "modern-normalize": "^1.1.0",
     "nuxt-icons": "^3.0.0",
     "vue-gtag": "^2.0.1"
