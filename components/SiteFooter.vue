@@ -4,17 +4,17 @@
       <nuxt-icon name="j-icon" filled />
     </nuxt-link>
     <ul class="footer__quick-links">
-      <li v-for="quickLink in data!.fields.quickLinks" :key="quickLink.fields.url">
-        <nuxt-link :to="quickLink.fields.url" :rel="quickLink.fields.url.startsWith('https://') ? 'noopener' : undefined">
-          {{ quickLink.fields.text }}
+      <li v-for="quickLink in data!.fields.quickLinks" :key="quickLink.id">
+        <nuxt-link :to="quickLink.value" :rel="quickLink.value.startsWith('https://') ? 'noopener' : undefined">
+          {{ quickLink.key }}
         </nuxt-link>
       </li>
     </ul>
     <ul class="footer__social">
-      <li v-for="socialLink in data!.fields.socialLinks" :key="socialLink.fields.url">
-        <nuxt-link :href="socialLink.fields.url" target="_blank" rel="noopener noreferrer">
-          <nuxt-icon class="footer__social-icon" :name="socialLink.fields.icon" />
-          <span class="sr-only">{{ socialLink.fields.text }}</span>
+      <li v-for="socialLink in data!.fields.socialLinks" :key="socialLink.id">
+        <nuxt-link :href="socialLink.value" target="_blank" rel="noopener noreferrer">
+          <nuxt-icon class="footer__social-icon" :name="socialLink.key.toLowerCase()" />
+          <span class="sr-only">{{ socialLink.key }}</span>
         </nuxt-link>
       </li>
     </ul>

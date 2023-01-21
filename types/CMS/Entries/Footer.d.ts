@@ -1,8 +1,8 @@
 import type { EntryFields, Entry } from 'contentful'
-import type { Link } from './Link'
+import type { IRepeaterItem } from '../RepeaterItem'
 
 export interface Footer {
-  quickLinks: Entry<Link>[]
-  socialLinks: Entry<Link>[]
+  quickLinks: IRepeaterItem[]
+  socialLinks: IRepeaterItem[]
   legalText: EntryFields.RichText
 }
