@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     'nuxt-icons'
   ],
   image: {
+    contentful: {},
     screens: {
       smallmobile: 340,
       standardmobile: 390,

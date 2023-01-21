@@ -50,7 +50,11 @@ useHead({
 
   main {
     flex: 1;
-    margin-top: 4rem;
+    margin-top: 9rem;
+
+    @media (min-width: $responsive-standard-tablet) {
+      margin-top: 8rem;
+    }
   }
 }
 </style>

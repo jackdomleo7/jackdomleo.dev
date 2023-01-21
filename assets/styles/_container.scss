@@ -1,0 +1,14 @@
+@use './scss/variables/responsive.scss' as *;
+
+.container {
+  max-width: 100%;
+  margin-inline: auto;
+
+  @media (min-width: $responsive-standard-tablet) {
+    max-width: 87.5rem;
+  }
+
+  &--thinner {
+    max-width: 50rem;
+  }
+}
