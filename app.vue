@@ -50,6 +50,7 @@ useHead({
 
   main {
     flex: 1;
+    margin-top: 4rem;
   }
 }
 </style>
