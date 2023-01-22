@@ -97,7 +97,7 @@ const navItems: INav[] = [
 ]
 
 function getMobileNavItems(): Omit<INav, 'submenu'>[] {
-  let items: Omit<INav, 'submenu'>[] = []
+  const items: Omit<INav, 'submenu'>[] = []
 
   navItems.forEach(item => {
     if (!item.submenu) {

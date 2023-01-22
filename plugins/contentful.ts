@@ -1,10 +1,9 @@
-import contentful from 'contentful'
-import { createClient } from 'contentful'
+import contentful, { createClient } from 'contentful' // eslint-disable-line import/default
 
 // https://github.com/contentful/contentful.js/issues/1233
 const createClientFunc = process.env.NODE_ENV === 'development' ? createClient : contentful.createClient
 
-export default defineNuxtPlugin(nuxtApp => {
+export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
 
   return {
