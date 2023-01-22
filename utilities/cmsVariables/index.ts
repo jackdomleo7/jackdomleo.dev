@@ -1,7 +1,9 @@
 import type { LiteralUnion } from 'type-fest'
+import { calculateYearsExperience } from './NO_OF_YEARS_EXPERIENCE'
 
 const variables = {
-  CURRENT_YEAR: new Date().getFullYear()
+  CURRENT_YEAR: new Date().getFullYear(),
+  NO_OF_YEARS_EXPERIENCE: calculateYearsExperience()
 }
 
 function getVariable(variable: LiteralUnion<keyof typeof variables, string>): string {

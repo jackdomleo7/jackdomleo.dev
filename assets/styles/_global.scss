@@ -63,10 +63,20 @@ h5,
 h6 {
   font-weight: 700;
   font-family: var(--font-family-roboto-mono);
+  line-height: 1.1;
+}
+
+pre {
+  line-height: 1.2;
 }
 
 code,
 pre {
   font-weight: 500;
   font-family: var(--font-family-roboto-mono);
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 0.1px;
 }
