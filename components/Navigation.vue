@@ -157,12 +157,14 @@ $navBreak: $responsive-large-tablet;
   z-index: 99;
   position: fixed;
   height: 4rem;
-  transition: box-shadow 360ms ease;
-  will-change: box-shadow;
+  transition: 360ms ease;
+  transition-property: box-shadow, background-color;
+  will-change: box-shadow, background-color;
   box-shadow: 0 0 0.5rem transparent;
 
   &--sticky {
     box-shadow: var(--shadow);
+    background-color: var(--color-fg1);
 
     .nav__logo {
       top: 50%;
