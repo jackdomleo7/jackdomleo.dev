@@ -1,3 +1,9 @@
+::selection {
+  color: var(--color-primary);
+  background-color: var(--color-accent-faint);
+  text-shadow: none;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
