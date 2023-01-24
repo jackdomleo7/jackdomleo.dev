@@ -1,4 +1,23 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import * as contentful from 'contentful'
+import type { ContentfulEntries } from './types/CMS/Entries'
+
+const contentfulClient = contentful.createClient({
+  space: process.env.NUXT_CTF_SPACE_ID,
+  accessToken: process.env.NUXT_CTF_CDA_ACCESS_TOKEN
+})
+
+async function getBlog(): Promise<string[]> {
+  const routes: string[] = []
+
+  // Blog
+  const blog = await contentfulClient.getEntries<Pick<ContentfulEntries.Article, 'slug'|'publishDate'>>({ content_type: 'article', limit: 1000, select: 'fields.slug,fields.publishDate' })
+  for (const article of blog.items) {
+    routes.push(`/blog/${new Date(article.fields.publishDate).getFullYear()}/${article.fields.slug}`)
+  }
+
+  return routes
+}
+
 export default defineNuxtConfig({
   ssr: true,
   typescript: {
@@ -7,6 +26,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      BASE_URL: process.env.BASE_URL,
       GOOGLE_ANALYTICS_ID: process.env.NUXT_GOOGLE_ANALYTICS_ID,
       CTF_SPACE_ID: process.env.NUXT_CTF_SPACE_ID,
       CTF_CDA_ACCESS_TOKEN: process.env.NUXT_CTF_CDA_ACCESS_TOKEN
@@ -14,6 +34,7 @@ export default defineNuxtConfig({
   },
   css: [
     'modern-normalize/modern-normalize.css',
+    'highlight.js/styles/felipec.css',
     '~/assets/styles/main.scss'
   ],
   modules: [
@@ -33,6 +54,12 @@ export default defineNuxtConfig({
       standarddesktop: 1920,
       largedesktop: 2880,
       '4kdesktop': 3840
+    }
+  },
+  hooks: {
+    async 'nitro:config' (nitroConfig) {
+      if (nitroConfig.dev) { return }
+      nitroConfig.prerender!.routes = [...(await getBlog())]
     }
   },
   vite: {

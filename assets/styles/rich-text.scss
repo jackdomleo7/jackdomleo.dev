@@ -1,0 +1,160 @@
+.rich-text {
+  :deep() {
+    h2 {
+      font-size: var(--text-subtitle);
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: var(--text-heading);
+      margin-top: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: var(--text-large);
+      margin-top: 2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p:empty {
+      display: none;
+    }
+
+    hr {
+      margin-block: 3rem;
+    }
+    
+    ul,
+    ol {
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      
+      p {
+        margin: 0;
+      }
+    }
+
+    pre {
+      margin-block: 2rem;
+
+      > code {
+        border-radius: 0.5rem;
+        position: relative;
+
+        &::before {
+          content: attr(data-lang);
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: var(--text-small);
+          color: #fff;
+          display: block;
+          padding: 0.25rem 0.5rem;
+        }
+      }
+    }
+
+    .table {
+      overflow-x: auto;
+      margin-block: 2rem;
+
+      table {
+        border: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+      }
+      
+      th {
+        border-bottom: 2px solid var(--color-primary);
+      }
+      
+      tbody {
+        tr:nth-child(even) {
+          background-color: var(--color-fg1);
+        }
+      }
+      
+      td,
+      th {
+        padding: 1rem 0.5rem;
+        vertical-align: top;
+        min-width: 14rem;
+      }
+      
+      th {
+        font-weight: 700;
+        text-align: left;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .youtube {
+      min-height: 25rem;
+    }
+
+    .cp_embed_iframe,
+    .codepen {
+      height: 40rem;
+      max-height: 80vh;
+      min-height: 20rem;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--colour-primary);
+    }
+
+    .quote {
+      margin-block: 3rem;
+      overflow: hidden;
+
+      blockquote {
+        background-color: var(--color-bg);
+        border: solid 2px #757575;
+        display: inline-block;
+        margin: 0;
+        padding: 1rem;
+        position: relative;
+
+        &::before {
+          background-color: var(--color-bg);
+          bottom: -10%;
+          content: "";
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: -10%;
+          transform: rotate(-15deg) skew(5deg);
+        }
+
+        &::after {
+          content: "“";
+          color: var(--color-accent-faint);
+          font-size: var(--text-large);
+          position: absolute;
+          z-index: 0;
+          font-size: 8rem;
+          bottom: 0;
+          line-height: 1;
+          height: 4rem;
+        }
+
+        cite {
+          display: block;
+          font-style: italic;
+          text-align: right;
+        }
+
+        > * {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

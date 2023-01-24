@@ -18,12 +18,21 @@
         <div class="about__text" v-html="parseRichText(data!.fields.aboutBody)" />
       </div>
     </section>
+    <section id="blog" class="container blog">
+      <h2 class="blog__heading">From the blog</h2>
+      <ArticleList class="blog__list" :limit="6" />
+      <nuxt-link to="/blog" class="blog__more link">
+        Read more
+        <!-- <svg-icon name="arrow-right" /> -->
+      </nuxt-link>
+    </section>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { Contentful } from '@/enums/Contentful'
 import { parseRichText } from '@/utilities/parseRichText'
+import ArticleList from '@/components/ArticleList.vue'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
 
@@ -214,6 +223,32 @@ data.value!.fields = formatCMSVariables(data.value!.fields)
   &__text {
     grid-area: about-text;
     font-size: var(--text-body);
+  }
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    font-size: var(--text-title);
+    margin-block: 0;
+  }
+
+  &__list {
+    margin-block: 1.25rem;
+  }
+
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
   }
 }
 </style>
