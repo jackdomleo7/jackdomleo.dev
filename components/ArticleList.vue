@@ -55,7 +55,7 @@ const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.get
   flex-wrap: wrap;
   gap: 3rem;
 
-  li {
+  > li {
     width: 26.5rem;
     max-width: 100%;
   }
@@ -70,12 +70,20 @@ const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.get
   text-decoration: none;
   color: inherit;
   width: 100%;
+  height: 100%;
 
   &:hover {
     background-color: var(--color-fg1);
   }
 
+  &__article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   &__details {
+    flex: 1;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -105,7 +113,7 @@ const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.get
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
   }
 }

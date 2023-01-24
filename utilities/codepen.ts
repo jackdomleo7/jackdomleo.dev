@@ -1,4 +1,4 @@
-import { encode, decode } from "html-entities";
+import { decode } from "html-entities";
 
 export namespace Codepen {
   export interface DestructuredUrl {

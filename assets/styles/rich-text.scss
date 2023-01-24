@@ -156,5 +156,57 @@
         }
       }
     }
+
+    .twitter-tweet {
+      margin: 4rem auto !important;
+      width: 100%;
+      max-width: 550px;
+
+      &:not(.twitter-tweet-rendered) {
+        background-color: #fff;
+        border: 1px #ccc solid;
+        border-radius: 0.5rem;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          display: block;
+          height: 1.5rem;
+          width: 1.5rem;
+          background-image: url(@/assets/icons/twitter.svg);
+          background-repeat: no-repeat;
+        }
+        
+        a {
+          color: #000;
+          text-decoration: none;
+          display: block;
+          padding: 3.25rem 1rem 1rem 1rem;
+        }
+  
+        p {
+          margin: 0;
+        }
+  
+        .twitter-tweet__username {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: #777;
+        }
+      }
+    }
+
+    .amazon-product-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 3rem auto;
+      gap: 0.5rem;
+    }
   }
 }

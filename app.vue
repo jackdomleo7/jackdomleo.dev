@@ -17,9 +17,9 @@ useHead({
     lang: 'en-GB'
   },
   titleTemplate: pageTitle => {
-    const TITLE = 'Jack Domleo | Frontend & UX Developer'
+    const TITLE = 'Jack Domleo - Frontend & UX Developer'
     return pageTitle
-      ? `${pageTitle} - ${TITLE}`
+      ? `${pageTitle} | ${TITLE}`
       : TITLE
   },
   meta: [

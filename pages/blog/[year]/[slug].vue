@@ -15,15 +15,15 @@
         {{ dayjs(new Date(article.fields.publishDate)).format('MMMM D, YYYY') }}
       </time>
     </p>
-    <div v-html="parseRichText(article.fields.body, { $img })" class="rich-text article__content" />
+    <div class="rich-text article__content" v-html="parseRichText(article.fields.body, { $img })" />
   </article>
 </template>
 
 <script lang="ts" setup>
 import dayjs from 'dayjs'
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { parseRichText } from '@/utilities/parseRichText'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 
 const $img = useImage()
 const $route = useRoute()
@@ -54,14 +54,14 @@ useHead({
     { rel: 'canonical', href: `${config.public.BASE_URL}/blog/${$route.params.year}/${$route.params.slug}` }
   ],
   script: [
-    // ...(bodyAsPlainText.includes('https://codepen.io') && bodyAsPlainText.includes('/embed/') ? [{
-    //   async: true,
-    //   src: 'https://static.codepen.io/assets/embed/ei.js'
-    // }] : [])
-    {
+    ...(bodyAsPlainText.includes('CodePen: ') ? [{
       async: true,
-      src: 'https://cpwebassets.codepen.io/assets/embed/ei.js'
-    }
+      src: 'https://static.codepen.io/assets/embed/ei.js'
+    }] : []),
+    ...(bodyAsPlainText.includes('Twitter: ') || bodyAsPlainText.includes('Tweet: ') ? [{
+      async: true,
+      src: 'https://platform.twitter.com/widgets.js'
+    }] : [])
   ]
 })
 </script>
