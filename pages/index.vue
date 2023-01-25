@@ -22,8 +22,8 @@
       <h2 class="blog__heading">From the blog</h2>
       <ArticleList class="blog__list" :limit="6" />
       <nuxt-link to="/blog" class="blog__more link">
-        Read more
-        <!-- <svg-icon name="arrow-right" /> -->
+        Discover more articles
+        <nuxt-icon class="blog__more-icon" name="arrow-right" />
       </nuxt-link>
     </section>
   </div>
@@ -244,8 +244,9 @@ data.value!.fields = formatCMSVariables(data.value!.fields)
     align-items: center;
     gap: 0.5rem;
     margin-left: auto;
+    font-size: var(--text-large);
 
-    svg {
+    &-icon {
       width: 1.25rem;
       height: 1.25rem;
     }
