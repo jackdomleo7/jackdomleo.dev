@@ -1,3 +1,9 @@
+:root {
+  --cooltipz-bg-color: #fff;
+  --cooltipz-text-color: #000;
+  --cooltipz-border-color: #fff;
+}
+
 ::selection {
   color: var(--color-primary);
   background-color: var(--color-accent-faint);
