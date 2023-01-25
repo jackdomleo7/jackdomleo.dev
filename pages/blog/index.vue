@@ -1,11 +1,20 @@
 <template>
   <div class="blog-hub">
-    <ArticleList :limit="1000" />
+    <header class="container">
+      <h1 class="blog-hub__title">Blog</h1>
+      <div v-if="blogHub.fields.hubDescription" class="blog-hub__description" v-html="parseRichText(blogHub.fields.hubDescription)" />
+    </header>
+    <ArticleList class="blog-hub__list" :limit="1000" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import ArticleList from '@/components/ArticleList.vue';
+import { parseRichText } from '@/utilities/parseRichText'
+import type { ContentfulEntries } from '@/types/CMS/Entries';
+
+const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Pick<ContentfulEntries.BlogDetails, 'hubDescription'>>({ content_type: 'blogDetails', limit: 1, select: 'fields.hubDescription' })})
+const blogHub = blogDetailsEntries.data.value!.items[0]
 
 useHead({
   title: 'Blog',
@@ -23,15 +32,22 @@ useHead({
     margin-top: 2rem;
   }
 
-  &__header {
-    text-align: center;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: var(--text-title);
+  
+    @media (min-width: $responsive-standard-tablet) {
+      margin-bottom: 2rem;
+    }
   }
 
-  &__title {
-    font-size: var(--text-subtitle);
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 2rem;
+  &__description {
+    font-size: var(--text-body);
+  }
+
+  &__list {
+    margin-top: 3rem;
   }
 }
 </style>

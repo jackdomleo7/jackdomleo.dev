@@ -16,6 +16,7 @@
       </time>
     </p>
     <div class="rich-text article__content" v-html="parseRichText(article.fields.body, { $img })" />
+    <div v-if="blogDetails.fields.articleDisclaimer" class="article__disclaimer" v-html="parseRichText(blogDetails.fields.articleDisclaimer)" />
   </article>
 </template>
 
@@ -31,6 +32,9 @@ const config = useRuntimeConfig()
 
 const articleEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Article>({ content_type: 'article', limit: 1, 'fields.slug': $route.params.slug })})
 const article = articleEntries.data.value!.items[0]
+
+const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Pick<ContentfulEntries.BlogDetails, 'articleDisclaimer'>>({ content_type: 'blogDetails', limit: 1, select: 'fields.articleDisclaimer' })})
+const blogDetails = blogDetailsEntries.data.value!.items[0]
 
 const bodyAsPlainText = documentToPlainTextString(article.fields.body)
 
