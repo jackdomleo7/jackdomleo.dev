@@ -41,7 +41,7 @@ const props = defineProps({
   }
 })
 
-const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Omit<ContentfulEntries.Article, 'body'>>({ content_type: 'article', limit: props.limit, order: '-fields.publishDate', select: 'fields.title,fields.description,fields.image,fields.tags,fields.publishDate,fields.slug' })})
+const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Omit<ContentfulEntries.Article, 'body'>>({ content_type: 'article', limit: props.limit, order: '-fields.publishDate', select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
 </script>
 
 <style lang="scss" scoped>

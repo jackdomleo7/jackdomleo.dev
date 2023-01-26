@@ -10,7 +10,7 @@ async function getBlog(): Promise<string[]> {
   const routes: string[] = []
 
   // Blog
-  const blog = await contentfulClient.getEntries<Pick<ContentfulEntries.Article, 'slug'|'publishDate'>>({ content_type: 'article', limit: 1000, select: 'fields.slug,fields.publishDate' })
+  const blog = await contentfulClient.getEntries<Pick<ContentfulEntries.Article, 'slug'|'publishDate'>>({ content_type: 'article', limit: 1000, select: ['fields.slug', 'fields.publishDate'] })
   for (const article of blog.items) {
     routes.push(`/blog/${new Date(article.fields.publishDate).getFullYear()}/${article.fields.slug}`)
   }
