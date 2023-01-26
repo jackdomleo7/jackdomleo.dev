@@ -1,4 +1,5 @@
 import type { Asset, EntryFields } from 'contentful'
+import type { IRepeaterItem } from '../RepeaterItem'
 
 export interface Home {
   title: string
@@ -7,4 +8,6 @@ export interface Home {
   aboutTitle: string
   aboutBody: EntryFields.RichText
   aboutImage: Asset
+  skillsTitle: string
+  skillsList: IRepeaterItem[]
 }

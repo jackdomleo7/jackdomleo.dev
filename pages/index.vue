@@ -3,19 +3,19 @@
     <header class="hero">
       <div class="container container--thinner">
         <div class="hero__row">
-          <nuxt-picture class="hero__img" :src="data!.fields.heroImage.fields.file.url" :alt="data!.fields.heroImage.fields.description" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" provider="contentful" preload />
-          <h1 class="hero__title" v-html="data!.fields.title" />
+          <nuxt-picture class="hero__img" :src="home!.fields.heroImage.fields.file.url" :alt="home!.fields.heroImage.fields.description" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" provider="contentful" preload />
+          <h1 class="hero__title" v-html="home!.fields.title" />
         </div>
-        <div class="hero__body" v-html="parseRichText(data!.fields.heroBody)" />
+        <div class="hero__body" v-html="parseRichText(home!.fields.heroBody)" />
       </div>
     </header>
     <section id="about" class="container about">
       <div class="about__inner">
         <div class="about__img">
-          <nuxt-picture :src="data!.fields.aboutImage.fields.file.url" :alt="data!.fields.aboutImage.fields.description" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" provider="contentful" />
+          <nuxt-picture :src="home!.fields.aboutImage.fields.file.url" :alt="home!.fields.aboutImage.fields.description" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" provider="contentful" />
         </div>
-        <h2 class="about__header">{{ data!.fields.aboutTitle }}</h2>
-        <div class="about__text" v-html="parseRichText(data!.fields.aboutBody)" />
+        <h2 class="about__header">{{ home!.fields.aboutTitle }}</h2>
+        <div class="about__text" v-html="parseRichText(home!.fields.aboutBody)" />
       </div>
     </section>
     <section id="blog" class="container blog">
@@ -25,6 +25,19 @@
         Discover more articles
         <nuxt-icon class="blog__more-icon" name="arrow-right" />
       </nuxt-link>
+    </section>
+    <section id="skills" class="skills">
+      <div class="skills__inner">
+        <h2 class="skills__header container">{{ home!.fields.skillsTitle }}</h2>
+        <div class="skills__grid">
+          <ul class="skills__list">
+            <li v-for="skill in home!.fields.skillsList" :key="skill.id">
+              <nuxt-icon class="skills__icon" :name="skill.key" />
+              <span class="skills__text">{{ skill.value }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -36,8 +49,8 @@ import ArticleList from '@/components/ArticleList.vue'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
 
-const { data } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntry<ContentfulEntries.Home>(Contentful.EntryIDs.HOME)})
-data.value!.fields = formatCMSVariables(data.value!.fields)
+const { data: home } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntry<ContentfulEntries.Home>(Contentful.EntryIDs.HOME)})
+home.value!.fields = formatCMSVariables(home.value!.fields)
 </script>
 
 <style lang="scss" scoped>
@@ -233,6 +246,7 @@ data.value!.fields = formatCMSVariables(data.value!.fields)
   &__heading {
     font-size: var(--text-title);
     margin-block: 0;
+    padding-inline: 1rem;
   }
 
   &__list {
@@ -250,6 +264,88 @@ data.value!.fields = formatCMSVariables(data.value!.fields)
       width: 1.25rem;
       height: 1.25rem;
     }
+  }
+}
+
+.skills {
+  padding-block: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__header {
+    font-size: var(--text-title);
+    margin-block: 0;
+    padding-inline: 1rem;
+  }
+
+  &__grid {
+    padding-block: 2rem;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $responsive-small-desktop) {
+      padding-block: 5rem;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    max-width: 95rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 2.5rem 4.25rem;
+
+    @media (min-width: $responsive-standard-mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: $responsive-small-tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: $responsive-large-tablet) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (min-width: $responsive-small-desktop) {
+      gap: 4rem 7.5rem;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
+  &__icon {
+    height: 3.75rem;
+    width: 3.75rem;
+    display: block;
+
+    @media (min-width: $responsive-large-tablet) {
+      height: 5rem;
+      width: 5rem;
+    }
+
+    @media (min-width: $responsive-small-desktop) {
+      height: 6.25rem;
+      width: 6.25rem;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: var(--text-large);
   }
 }
 </style>
