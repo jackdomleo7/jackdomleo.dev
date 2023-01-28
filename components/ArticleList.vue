@@ -1,9 +1,9 @@
 <template>
   <ul class="posts container">
-    <li v-for="(item, index) in blog!.items" :key="item.fields.slug">
+    <li v-for="(item, index) in blog!.items" :key="item.sys.id">
       <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
         <article class="post__article">
-          <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image.fields.file.url" :alt="item.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= 2" format="webp" />
+          <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image.fields.file.url" :alt="item.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
           <div class="post__details">
             <ul class="post__tags">
               <li v-for="tag in item.fields.tags" :key="tag" class="tag">
@@ -35,9 +35,13 @@ const props = defineProps({
   limit: {
     type: Number,
     required: true,
-    validator(value: number) {
+    validator(value: number): boolean {
       return value >= 0 && value <= 1000
     }
+  },
+  preloadArticleImages: {
+    type: Number,
+    default: 0
   }
 })
 
