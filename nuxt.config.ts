@@ -9,10 +9,20 @@ const contentfulClient = contentful.createClient({
 async function getBlog(): Promise<string[]> {
   const routes: string[] = []
 
-  // Blog
   const blog = await contentfulClient.getEntries<Pick<ContentfulEntries.Article, 'slug'|'publishDate'>>({ content_type: 'article', limit: 1000, select: ['fields.slug', 'fields.publishDate'] })
   for (const article of blog.items) {
     routes.push(`/blog/${new Date(article.fields.publishDate).getFullYear()}/${article.fields.slug}`)
+  }
+
+  return routes
+}
+
+async function getBasicPages(): Promise<string[]> {
+  const routes: string[] = []
+
+  const basicPages = await contentfulClient.getEntries<Pick<ContentfulEntries.BasicPage, 'slug'>>({ content_type: 'basicPage', limit: 1000, select: ['fields.slug'] })
+  for (const page of basicPages.items) {
+    routes.push(`/${page.fields.slug}`)
   }
 
   return routes
@@ -67,7 +77,7 @@ export default defineNuxtConfig({
   hooks: {
     async 'nitro:config' (nitroConfig) {
       if (nitroConfig.dev) { return }
-      nitroConfig.prerender!.routes = [...(await getBlog())]
+      nitroConfig.prerender!.routes = [...(await getBlog()), ...(await getBasicPages())]
     }
   },
   vite: {
