@@ -74,7 +74,7 @@ if (props.type) {
   overflow: hidden;
   background-color: var(--color-bg);
   border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   text-decoration: none;
   color: inherit;
   width: 100%;
