@@ -20,6 +20,7 @@
 <script lang="ts" setup>
 import { type PropType } from 'vue';
 import { parseRichText } from '@/utilities/parseRichText'
+import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries';
 import type { Project } from '@/types/CMS/Entries/Project';
 
@@ -45,6 +46,7 @@ const props = defineProps({
 })
 
 const { data: projects } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Project>({ content_type: 'project', limit: props.limit, order: '-sys.createdAt' })})
+projects.value!.items = formatCMSVariables(projects.value!.items)
 
 let list = projects.value!.items
 if (props.type) {

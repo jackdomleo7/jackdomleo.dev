@@ -30,6 +30,7 @@
 <script lang="ts" setup>
 import dayjs from 'dayjs'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
+import { formatCMSVariables } from '@/utilities/cmsVariables';
 
 const props = defineProps({
   limit: {
@@ -49,6 +50,7 @@ const props = defineProps({
 })
 
 const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Omit<ContentfulEntries.Article, 'body'>>({ content_type: 'article', limit: props.limit, order: '-fields.publishDate', select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
+blog.value!.items = formatCMSVariables(blog.value!.items)
 </script>
 
 <style lang="scss" scoped>

@@ -44,6 +44,7 @@
 import dayjs from 'dayjs'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { parseRichText } from '@/utilities/parseRichText'
+import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 
 const $img = useImage()
@@ -51,7 +52,7 @@ const $route = useRoute()
 const config = useRuntimeConfig()
 
 const articleEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Article>({ content_type: 'article', limit: 1, 'fields.slug': $route.params.slug })})
-const article = articleEntries.data.value!.items[0]
+const article = formatCMSVariables(articleEntries.data.value!.items[0])
 
 const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Pick<ContentfulEntries.BlogDetails, 'articleDisclaimer'>>({ content_type: 'blogDetails', limit: 1, select: ['fields.articleDisclaimer'] })})
 const blogDetails = blogDetailsEntries.data.value!.items[0]

@@ -11,10 +11,11 @@
 <script lang="ts" setup>
 import ArticleList from '@/components/ArticleList.vue';
 import { parseRichText } from '@/utilities/parseRichText'
+import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries';
 
 const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Pick<ContentfulEntries.BlogDetails, 'hubDescription'>>({ content_type: 'blogDetails', limit: 1, select: ['fields.hubDescription'] })})
-const blogHub = blogDetailsEntries.data.value!.items[0]
+const blogHub = formatCMSVariables(blogDetailsEntries.data.value!.items[0])
 
 useHead({
   title: 'Blog',

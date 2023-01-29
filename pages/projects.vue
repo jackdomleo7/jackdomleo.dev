@@ -21,10 +21,11 @@
 <script lang="ts" setup>
 import ProjectList from '@/components/ProjectList.vue';
 import { parseRichText } from '@/utilities/parseRichText'
+import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries';
 
 const projectsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Projects>({ content_type: 'projects', limit: 1 })})
-const projects = projectsEntries.data.value!.items[0]
+const projects = formatCMSVariables(projectsEntries.data.value!.items[0])
 
 useHead({
   title: 'Projects',
