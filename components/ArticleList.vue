@@ -41,7 +41,10 @@ const props = defineProps({
   },
   preloadArticleImages: {
     type: Number,
-    default: 0
+    default: 0,
+    validator(value: number): boolean {
+      return value >= 0
+    }
   }
 })
 

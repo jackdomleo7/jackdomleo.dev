@@ -1,8 +1,6 @@
-import type { EntryFields, Entry } from 'contentful'
-import type { Project } from './Project'
+import type { EntryFields } from 'contentful'
 
 export interface Projects {
   title: string
   description: EntryFields.RichText
-  projectsList: Entry<Project>[]
 }

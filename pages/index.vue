@@ -28,7 +28,7 @@
     </section>
     <section id="skills" class="skills">
       <div class="skills__inner">
-        <h2 class="skills__header container">{{ home!.fields.skillsTitle }}</h2>
+        <h2 class="skills__heading container">{{ home!.fields.skillsTitle }}</h2>
         <div class="skills__grid">
           <ul class="skills__list">
             <li v-for="skill in home!.fields.skillsList" :key="skill.id">
@@ -39,6 +39,14 @@
         </div>
       </div>
     </section>
+    <section id="projects" class="container projects">
+      <h2 class="projects__heading">Projects</h2>
+      <ProjectList class="projects__list" :limit="6" />
+      <nuxt-link to="/projects" class="projects__more link">
+        Check out more of my work
+        <nuxt-icon class="projects__more-icon" name="arrow-right" />
+      </nuxt-link>
+    </section>
   </div>
 </template>
 
@@ -46,6 +54,7 @@
 import { Contentful } from '@/enums/Contentful'
 import { parseRichText } from '@/utilities/parseRichText'
 import ArticleList from '@/components/ArticleList.vue'
+import ProjectList from '@/components/ProjectList.vue'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
 
@@ -239,7 +248,8 @@ home.value!.fields = formatCMSVariables(home.value!.fields)
   }
 }
 
-.blog {
+.blog,
+.projects {
   display: flex;
   flex-direction: column;
 
@@ -258,6 +268,7 @@ home.value!.fields = formatCMSVariables(home.value!.fields)
     align-items: center;
     gap: 0.5rem;
     margin-left: auto;
+    margin-right: 1rem;
     font-size: var(--text-large);
 
     &-icon {
@@ -277,7 +288,7 @@ home.value!.fields = formatCMSVariables(home.value!.fields)
     width: 100%;
   }
 
-  &__header {
+  &__heading {
     font-size: var(--text-title);
     margin-block: 0;
     padding-inline: 1rem;

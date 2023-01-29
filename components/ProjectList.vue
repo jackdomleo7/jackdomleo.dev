@@ -1,6 +1,6 @@
 <template>
-  <ul class="projects">
-    <li v-for="(project, index) in props.list" :key="project.sys.id">
+  <ul class="projects-list container">
+    <li v-for="(project, index) in list" :key="project.sys.id">
       <nuxt-link :to="project.fields.url" class="project" target="_blank">
         <nuxt-picture class="project__img" provider="contentful" :src="project.fields.image.fields.file.url" :alt="project.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadProjectImages" />
         <div class="project__details">
@@ -19,24 +19,41 @@
 
 <script lang="ts" setup>
 import { type PropType } from 'vue';
-import { type Entry } from 'contentful'
-import type { Project } from '@/types/CMS/Entries/Project'
 import { parseRichText } from '@/utilities/parseRichText'
+import type { ContentfulEntries } from '@/types/CMS/Entries';
+import type { Project } from '@/types/CMS/Entries/Project';
 
 const props = defineProps({
-  list: {
-    type: Array as PropType<Entry<Project>[]>,
-    required: true
+  limit: {
+    type: Number,
+    required: true,
+    validator(value: number): boolean {
+      return value >= 0 && value <= 1000
+    }
   },
   preloadProjectImages: {
     type: Number,
-    default: 0
+    default: 0,
+    validator(value: number): boolean {
+      return value >= 0
+    }
+  },
+  type: {
+    type: String as PropType<Project['type']>,
+    default: undefined
   }
 })
+
+const { data: projects } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Project>({ content_type: 'project', limit: props.limit, order: '-sys.createdAt' })})
+
+let list = projects.value!.items
+if (props.type) {
+  list = list.filter(project => project.fields.type === props.type)
+}
 </script>
 
 <style lang="scss" scoped>
-.projects {
+.projects-list {
   list-style-type: none;
   padding: 1rem;
   margin-block: 0;

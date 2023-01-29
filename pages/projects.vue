@@ -5,15 +5,15 @@
       <div v-if="projects.fields.description" class="projects__description" v-html="parseRichText(projects.fields.description)" />
     </header>
     <div class="container">
-      <ProjectList class="projects__list" :list="standardProjects" :preload-project-images="3" />
+      <ProjectList class="projects__list" :limit="1000" type="Project" :preload-project-images="3" />
     </div>
     <section id="mini" class="container">
       <h2 class="projects__subtitle">Mini Projects</h2>
-      <ProjectList class="projects__list" :list="miniProjects" />
+      <ProjectList class="projects__list" :limit="1000" type="Mini" />
     </section>
     <section id="mini" class="container">
       <h2 class="projects__subtitle">Client Projects</h2>
-      <ProjectList class="projects__list" :list="clientProjects" />
+      <ProjectList class="projects__list" :limit="1000" type="Client" />
     </section>
   </div>
 </template>
@@ -25,10 +25,6 @@ import type { ContentfulEntries } from '@/types/CMS/Entries';
 
 const projectsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Projects>({ content_type: 'projects', limit: 1 })})
 const projects = projectsEntries.data.value!.items[0]
-
-const standardProjects = projects.fields.projectsList.filter(project => project.fields.type === 'Project').reverse()
-const miniProjects = projects.fields.projectsList.filter(project => project.fields.type === 'Mini').reverse()
-const clientProjects = projects.fields.projectsList.filter(project => project.fields.type === 'Client').reverse()
 
 useHead({
   title: 'Projects',
@@ -58,6 +54,7 @@ useHead({
 
   &__subtitle {
     font-size: var(--text-subtitle);
+    margin-bottom: 0;
   }
 
   &__description {
@@ -65,11 +62,11 @@ useHead({
   }
 
   &__list {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   section {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 }
 </style>
