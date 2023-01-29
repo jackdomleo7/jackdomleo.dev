@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-plain-text-renderer": "^16.0.2",
-    "contentful": "^9.3.0",
+    "contentful": "^10.0.0-beta-v10.10",
     "cooltipz-css": "^2.2.0",
     "dayjs": "^1.11.7",
     "highlight.js": "^11.7.0",
