@@ -25,6 +25,9 @@
                   {{ subItem.text }}
                 </nuxt-link>
               </li>
+              <li v-if="navItem.text.toLowerCase() === 'more'" role="presentation">
+                <ThemePicker />
+              </li>
             </ul>
           </li>
         </ul>
@@ -50,11 +53,16 @@
           {{ navItem.text }}
         </nuxt-link>
       </li>
+      <li role="presentation">
+        <ThemePicker />
+      </li>
     </ul>
   </nav>
 </template>
 
 <script lang="ts" setup>
+import ThemePicker from './ThemePicker.vue';
+
 const route = useRoute()
 
 interface INav {
@@ -223,10 +231,6 @@ $navBreak: $responsive-large-tablet;
       padding-left: 0;
       margin: 0;
       padding-block: 0.25rem;
-    }
-
-    svg:not(.nav__item-chevron) {
-      display: none;
     }
   }
 
@@ -416,6 +420,7 @@ $navBreak: $responsive-large-tablet;
       text-decoration: none;
       display: flex;
       padding: 0.5rem;
+      color: var(--color-primary);
     }
   }
 

@@ -40,7 +40,8 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxt/image-edge',
-    'nuxt-icons'
+    'nuxt-icons',
+    '@nuxtjs/color-mode'
   ],
   image: {
     contentful: {},
@@ -56,6 +57,12 @@ export default defineNuxtConfig({
       largedesktop: 2880,
       '4kdesktop': 3840
     }
+  },
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+    classPrefix: 'theme--',
+    classSuffix: ''
   },
   hooks: {
     async 'nitro:config' (nitroConfig) {

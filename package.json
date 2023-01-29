@@ -37,6 +37,7 @@
     "@babel/eslint-parser": "^7.19.1",
     "@contentful/rich-text-html-renderer": "^16.0.2",
     "@nuxt/image-edge": "1.0.0-27913696.5d122a3",
+    "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "@types/jest": "^29.4.0",
