@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <nuxt-link to="/" class="footer__logo">
-      <nuxt-icon name="j-icon" filled />
+      <nuxt-icon name="j_icon" filled />
     </nuxt-link>
     <ul class="footer__quick-links">
       <li v-for="quickLink in data!.fields.quickLinks" :key="quickLink.id">

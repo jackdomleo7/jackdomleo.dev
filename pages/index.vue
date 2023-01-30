@@ -23,7 +23,7 @@
       <ArticleList class="blog__list" :limit="6" />
       <nuxt-link to="/blog" class="blog__more link">
         Discover more articles
-        <nuxt-icon class="blog__more-icon" name="arrow-right" />
+        <nuxt-icon class="blog__more-icon" name="arrow_right" />
       </nuxt-link>
     </section>
     <section id="skills" class="skills">
@@ -44,7 +44,7 @@
       <ProjectList class="projects__list" :limit="6" />
       <nuxt-link to="/projects" class="projects__more link">
         Check out more of my work
-        <nuxt-icon class="projects__more-icon" name="arrow-right" />
+        <nuxt-icon class="projects__more-icon" name="arrow_right" />
       </nuxt-link>
     </section>
   </div>
