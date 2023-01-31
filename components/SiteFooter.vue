@@ -18,7 +18,10 @@
         </nuxt-link>
       </li>
     </ul>
-    <div class="footer__legal" v-html="documentToHtmlString(data!.fields.legalText)"></div>
+    <p class="footer__legal">
+      <nuxt-link href="/privacy-policy" class="link">Privacy Policy</nuxt-link>
+    </p>
+    <div class="footer__legal" v-html="documentToHtmlString(data!.fields.legalText)" />
   </footer>
 </template>
 
