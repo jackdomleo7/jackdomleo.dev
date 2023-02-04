@@ -23,7 +23,6 @@
     "test:openReport": "open-cli coverage/lcov-report/index.html"
   },
   "dependencies": {
-    "@contentful/rich-text-plain-text-renderer": "^16.0.2",
     "contentful": "^10.0.0-beta-v10.10",
     "cookiejs": "^2.1.2",
     "cooltipz-css": "^2.2.0",
@@ -37,6 +36,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@contentful/rich-text-html-renderer": "^16.0.2",
+    "@contentful/rich-text-plain-text-renderer": "^16.0.2",
     "@nuxt/image-edge": "1.0.0-27919678.2f5b64b",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
