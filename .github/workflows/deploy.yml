@@ -1,15 +1,14 @@
-name: ci
+name: deploy
 
 on:
+  schedule:
+    - cron: '0 0 * * *'  # Every day at 00:00
   push:
-    branches:
-      - master
-  pull_request:
     branches:
       - master
 
 jobs:
-  ci:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,12 +25,6 @@ jobs:
       - name: Clean install Node dependencies
         run: npm ci --no-audit
 
-      - name: Run linter
-        run: npm run lint:check
-
-      - name: Run unit tests
-        run: npm run test
-
       - name: Get dotenv secrets
         run: |
           touch .env
@@ -41,5 +34,14 @@ jobs:
           echo NUXT_CTF_CDA_ACCESS_TOKEN = ${{ secrets.NUXT_CTF_CDA_ACCESS_TOKEN }} >> .env
           echo NUXT_GUMROAD_ACCESS_TOKEN = ${{ secrets.NUXT_GUMROAD_ACCESS_TOKEN }} >> .env
 
-      - name: Check generate files
+      - name: Generate files
         run: npm run generate
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+
+      - name: Keep workflow alive
+        uses: gautamkrishnar/keepalive-workflow@master
