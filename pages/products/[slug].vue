@@ -199,7 +199,7 @@ useHead({
 }
 
 .description {
-  margin: 3.5rem auto 3rem auto;
+  margin: 3.5rem auto 3rem;
   max-width: 62.5rem;
   padding-inline: 1rem;
   font-size: var(--text-body);
