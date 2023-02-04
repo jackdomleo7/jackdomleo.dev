@@ -22,17 +22,17 @@ jobs:
       - name: Install npm 9
         run: npm i -g npm@9
 
-      - name: Clean install Node dependencies
-        run: npm ci --no-audit
-
       - name: Get dotenv secrets
         run: |
           touch .env
-          echo NUXT_BASE_URL = ${{ secrets.NUXT_BASE_URL }} >> .env 
+          echo NUXT_BASE_URL = ${{ secrets.NUXT_BASE_URL }} >> .env
           echo NUXT_GOOGLE_ANALYTICS_ID = ${{ secrets.NUXT_GOOGLE_ANALYTICS_ID }} >> .env
           echo NUXT_CTF_SPACE_ID = ${{ secrets.NUXT_CTF_SPACE_ID }} >> .env
           echo NUXT_CTF_CDA_ACCESS_TOKEN = ${{ secrets.NUXT_CTF_CDA_ACCESS_TOKEN }} >> .env
           echo NUXT_GUMROAD_ACCESS_TOKEN = ${{ secrets.NUXT_GUMROAD_ACCESS_TOKEN }} >> .env
+
+      - name: Clean install Node dependencies
+        run: npm ci --no-audit
 
       - name: Generate files
         run: npm run generate
