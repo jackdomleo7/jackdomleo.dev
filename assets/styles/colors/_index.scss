@@ -1,0 +1,11 @@
+@forward  './light';
+@forward './dark';
+
+$colour-accent: #ff8311;
+$colour-accent-faint: fade-out($colour-accent, 0.8);
+
+:root {
+  color-scheme: light dark;
+  --color-accent: #{$colour-accent};
+  --color-accent-faint: #{$colour-accent-faint};
+}

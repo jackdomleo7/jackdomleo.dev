@@ -1,0 +1,13 @@
+$dark-bg: #1b2024;
+
+$dark-theme-colours: (
+  bg: $dark-bg,
+  fg1: lighten($dark-bg, 5%),
+  primary: #fff
+);
+
+.theme--dark {
+  @each $name, $hex in $dark-theme-colours {
+    --color-#{$name}: #{$hex};
+  }
+}

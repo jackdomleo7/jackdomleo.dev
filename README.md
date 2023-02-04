@@ -7,27 +7,34 @@ Jack Domleo's personal website & blog.
 
 My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
 
+Website timeline:
+- **September 2018** - Created first website using HTML, CSS, JavaScript & Bootstrap 4.
+- **September 2019** - Redesigned & rebuilt website using Vue.js, TypeScript & SCSS.
+- **May 2020** - Redesigned & rebuilt website using Nuxt 2, TypeScript & SCSS. Introduced light & dark themes. Introduced blog using Nuxt Content.
+- **January 2022** - Redesigned site using newly improved UI skills (still not good UI skills, but better). Introduced Jest & Prismic CMS.
+- **January 2023** - Redesigned site to be more minimalistic & rebuilt using Nuxt 3, TypeScript & SCSS. Replaced Prismic CMS & Nuxt Content with Contentful. Introduced use of Gumroad API.
+
 Key links:
-- [Linktree](https://linktr.ee/jackdomleo7)
-- [🕸 sitemap](https://jackdomleo.dev/sitemap.xml)
+- [Linktree](https://jackdomleo.dev/links)
+- [Sitemap](https://jackdomleo.dev/sitemap.xml)
 - [Blog](https://jackdomleo.dev/blog)
-- [Figma for this site](https://www.figma.com/file/2yHwcL7eCVKiWFCBOugiTm/jackdomleo.dev)
+- [Wayback Machine](https://web.archive.org/web/20230000000000*/https://jackdomleo.dev)
 
 ---
 
 ## Local Setup
 
+- Node: v18
+- npm: v9
+
 Create a `.env` file with the following properties:
-- `BASE_URL`
-- `CONTACT_EMAIL`
-- `GOOGLE_ANALYTICS_ID`
-- `PRISMIC_ENDPOINT`
-- `PRISMIC_ACCESS_TOKEN`
+- `NUXT_BASE_URL`
+- `NUXT_GOOGLE_ANALYTICS_ID`
+- `NUXT_CTF_SPACE_ID` // Contentful
+- `NUXT_CTF_CDA_ACCESS_TOKEN` // Contentful
+- `NUXT_GUMROAD_ACCESS_TOKEN`
 
 ```bash
-# Clean install dependencies (also useful if you ever want to delete node_modiles rapidly)
-$ npm run nukeNodeModules
-
 # Serve with hot reload at localhost:3000
 $ npm run dev
 
@@ -35,7 +42,7 @@ $ npm run dev
 $ npm run generate
 
 # Launch staging server
-$ npm run start
+$ npm run preview
 
 # Check project linting
 $ npm run lint:check

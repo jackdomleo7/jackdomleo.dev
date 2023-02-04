@@ -1,182 +1,143 @@
 <template>
   <div>
-    <header class="container header">
-      <div>
-        <nuxt-img src="~assets/images/j-icon.svg" alt="" class="header__logo" />
-        <h1 class="header__title">{{ home.data.page_title }}</h1>
-        <prismic-rich-text class="header__intro" :field="home.data.page_intro" />
-        <btn v-if="home.data.show_header_cta" :href="home.data.header_cta_link">{{ home.data.header_cta_text }}</btn>
-        <a href="#about" class="header__chevron">
-          <svg-icon name="chevron-down" />
-          <span class="sr-only">About me</span>
-        </a>
+    <header class="hero">
+      <div class="container container--thinner">
+        <div class="hero__row">
+          <nuxt-picture class="hero__img" :src="home!.fields.heroImage.fields.file.url" :alt="home!.fields.heroImage.fields.description" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" provider="contentful" preload />
+          <h1 class="hero__title" v-html="home!.fields.title" />
+        </div>
+        <div class="hero__body" v-html="parseRichText(home!.fields.heroBody)" />
       </div>
     </header>
     <section id="about" class="container about">
       <div class="about__inner">
         <div class="about__img">
-          <nuxt-img provider="prismic" :src="home.data.about_avatar.url" :alt="home.data.about_avatar.alt" height="440" width="440" loading="lazy" />
+          <nuxt-picture :src="home!.fields.aboutImage.fields.file.url" :alt="home!.fields.aboutImage.fields.description" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" provider="contentful" />
         </div>
-        <h2 class="about__header">{{ home.data.about_heading }}</h2>
-        <prismic-rich-text class="about__text" :field="home.data.about_text" />
+        <h2 class="about__header">{{ home!.fields.aboutTitle }}</h2>
+        <div class="about__text" v-html="parseRichText(home!.fields.aboutBody)" />
       </div>
     </section>
-    <section v-if="projects && projects.data.projects" id="projects" class="container projects">
-      <h2 class="projects__heading">Recent work</h2>
-      <ul class="projects__list">
-        <li v-for="project in projects.data.projects" :key="project.name">
-          <project-card :project="project" heading-level="h3" />
-        </li>
-      </ul>
-      <nuxt-link to="/projects" class="projects__more">
-        {{ home.data.more_work_link_text }}
-        <svg-icon name="arrow-right" />
+    <section id="blog" class="container blog">
+      <h2 class="blog__heading">From the blog</h2>
+      <ArticleList class="blog__list" :limit="6" />
+      <nuxt-link to="/blog" class="blog__more link">
+        Discover more articles
+        <nuxt-icon class="blog__more-icon" name="arrow_right" />
       </nuxt-link>
     </section>
     <section id="skills" class="skills">
       <div class="skills__inner">
-        <h2 class="skills__header container">{{ home.data.skills_heading }}</h2>
+        <h2 class="skills__heading container">{{ home!.fields.skillsTitle }}</h2>
         <div class="skills__grid">
           <ul class="skills__list">
-            <li v-for="skill in home.data.skills" :key="skill.name">
-              <nuxt-img provider="prismic" :src="skill.logo.url" :alt="skill.logo.alt" height="100" width="100" loading="lazy" />
+            <li v-for="skill in home!.fields.skillsList" :key="skill.id">
+              <nuxt-icon class="skills__icon" :name="skill.key" />
+              <span class="skills__text">{{ skill.value }}</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
-    <section id="blog" class="container blog">
-      <h2 class="blog__heading">{{ home.data.blog_heading }}</h2>
-      <ul class="blog__list">
-        <li v-for="article in articles" :key="article.title">
-          <article-card :article="article" heading-level="h3" />
-        </li>
-      </ul>
-      <nuxt-link to="/blog" class="blog__more">
-        {{ home.data.blog_read_more_link_text }}
-        <svg-icon name="arrow-right" />
+    <section id="projects" class="container projects">
+      <h2 class="projects__heading">Projects</h2>
+      <ProjectList class="projects__list" :limit="6" />
+      <nuxt-link to="/projects" class="projects__more link">
+        Check out more of my work
+        <nuxt-icon class="projects__more-icon" name="arrow_right" />
       </nuxt-link>
     </section>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import Btn from '@/components/Btn.vue'
-import ArticleCard from '@/components/ArticleCard.vue'
-import ProjectCard from '@/components/ProjectCard.vue'
-import { NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience } from '@/helpers/yearsExperience'
-import { IPage, IPageHome, IPageProjects } from '@/types/cms'
-import { IArticle } from '@/types'
+<script lang="ts" setup>
+import { Contentful } from '@/enums/Contentful'
+import { parseRichText } from '@/utilities/parseRichText'
+import ArticleList from '@/components/ArticleList.vue'
+import ProjectList from '@/components/ProjectList.vue'
+import type { ContentfulEntries } from '@/types/CMS/Entries'
+import { formatCMSVariables } from '@/utilities/cmsVariables'
 
-export default Vue.extend({
-  name: 'Home',
-  components: { ArticleCard, Btn, ProjectCard },
-  async asyncData ({ $content, $prismic, error }) {
-    const home: IPage<IPageHome, 'home'> = await $prismic.api.getSingle('home')
-    const projects: IPage<IPageProjects, 'projects'> = await $prismic.api.getSingle('projects')
+const { data: home } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntry<ContentfulEntries.Home>(Contentful.EntryIDs.HOME)})
+home.value!.fields = formatCMSVariables(home.value!.fields)
 
-    if (home) {
-      home.data.about_text = home.data.about_text.map(x => {
-        x.text = x.text.replace(NO_OF_YEARS_EXPERIENCE_PRISMIC_VAR, calculateYearsExperience())
-        return x
-      })
-
-      if (projects && projects.data) {
-        projects.data.projects = projects.data.projects.reverse() // In the CMS, newer projects are added to the end of the list, so we want to show the newer projects first
-        projects.data.projects = projects.data.projects.filter(project => {
-          return project.project_type !== 'mini' // Don't show mini projects in the homepage
-        })
-        projects.data.projects = projects.data.projects.splice(0, 6) // Only show the first 6 newest projects
-      }
-
-      const articles = await $content({ deep: true }).sortBy('date', 'desc').limit(6).only(['title', 'description', 'tags', 'date', 'body', 'readingTime', 'path']).fetch() as IArticle[]
-
-      return { home, projects, articles }
-    } else {
-      error({ statusCode: 404, message: 'Page not found' })
-    }
-  },
-  head () {
-    return {
-      title: 'Home'
-    }
-  }
+useHead({
+  meta: [
+    { name: 'description', content: home.value?.fields.metaDescription },
+    { property: 'og:description', content: home.value?.fields.metaDescription },
+    { property: 'twitter:description', content: home.value?.fields.metaDescription }
+  ]
 })
 </script>
 
 <style lang="scss" scoped>
-.header {
-  position: relative;
-  padding: 2rem;
-  height: calc(100vh - 4rem);
+.hero {
+  min-height: calc(100vh - 9rem);
   display: grid;
-  max-width: 87.5rem;
+  place-items: center;
+  padding: 1rem;
 
-  @media (min-width: $responsive-small-desktop) {
-    align-items: center;
+  @media (min-width: $responsive-standard-tablet) {
+    min-height: calc(100vh - 4rem);
   }
 
-  > div {
+  @media (min-height: 646px) {
+    padding-bottom: 8rem;
+  }
+
+  &__row {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 
-    @media (min-width: $responsive-small-desktop) {
-      display: block;
-      padding-bottom: 0;
+    @media (min-width: $responsive-standard-tablet) {
+      flex-direction: row;
     }
   }
 
-  &__logo {
-    width: 5.9375rem;
-    margin-inline: auto;
+  &__img {
+    @media (min-width: $responsive-standard-tablet) {
+      min-width: 300px;
+    }
 
-    @media (min-width: $responsive-small-desktop) {
-      display: none;
+    :deep(img) {
+      border-radius: 3rem;
+      height: 200px;
+      width: 200px;
+
+      @media (min-width: $responsive-standard-tablet) {
+        height: 300px;
+        width: 300px;
+      }
     }
   }
 
   &__title {
-    font-size: var(--text-title);
     margin: 0;
-  }
+    text-transform: uppercase;
+    font-size: var(--text-title);
+    text-align: center;
 
-  &__intro {
-    font-size: var(--text-body);
-    max-width: 50rem;
-
-    @media (min-width: $responsive-small-desktop) {
-      font-size: var(--text-heading);
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
+    @media (min-width: $responsive-standard-tablet) {
+      font-size: 5rem;
+      text-align: left;
     }
 
-    ::v-deep p {
-      &:first-of-type {
-        margin-top: 0;
-      }
+    :deep(br) {
+      display: none;
 
-      &:last-of-type {
-        margin-bottom: 0;
+      @media (min-width: $responsive-standard-tablet) {
+        display: block;
       }
     }
   }
 
-  &__chevron {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2rem;
-    width: 2rem;
-    color: var(--colour-text-primary);
-
-    @media (min-width: $responsive-small-desktop) {
-      height: 4rem;
-      width: 4rem;
-    }
+  &__body {
+    font-size: var(--text-large);
+    margin-top: 2rem;
+    text-align: center;
   }
 }
 
@@ -184,6 +145,7 @@ export default Vue.extend({
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 1rem;
 
   &__inner {
     display: grid;
@@ -198,12 +160,12 @@ export default Vue.extend({
 
   &__img {
     grid-area: about-img;
-    border-radius: 50%;
-    width: 9rem;
-    aspect-ratio: auto 1 / 1;
     position: relative;
     justify-self: center;
     margin-bottom: 3rem;
+    border-radius: 50%;
+    width: 9rem;
+    aspect-ratio: auto 1 / 1;
 
     @media (min-width: $responsive-large-mobile) {
       width: 12rem;
@@ -220,7 +182,7 @@ export default Vue.extend({
     &::before {
       content: '';
       display: block;
-      background-color: var(--colour-background);
+      background-color: var(--color-bg);
       border-radius: 50%;
       width: 10.25rem;
       aspect-ratio: auto 1 / 1;
@@ -247,7 +209,7 @@ export default Vue.extend({
     &::after {
       content: '';
       display: block;
-      background-color: var(--colour-primary-faint);
+      background-color: var(--color-accent-faint);
       border-radius: 50%;
       width: 9rem;
       aspect-ratio: auto 1 / 1;
@@ -276,7 +238,7 @@ export default Vue.extend({
       }
     }
 
-    img {
+    :deep(img) {
       border-radius: 50%;
       position: relative;
     }
@@ -294,43 +256,30 @@ export default Vue.extend({
   }
 }
 
+.blog,
 .projects {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   &__heading {
     font-size: var(--text-title);
     margin-block: 0;
+    padding-inline: 1rem;
   }
 
   &__list {
     margin-block: 1.25rem;
-    list-style-type: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    justify-items: center;
-
-    @media (min-width: $responsive-small-tablet) {
-      gap: 3rem 2rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: $responsive-large-tablet) {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 
   &__more {
-    color: var(--colour-primary);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     margin-left: auto;
+    margin-right: 1rem;
+    font-size: var(--text-large);
 
-    svg {
+    &-icon {
       width: 1.25rem;
       height: 1.25rem;
     }
@@ -339,7 +288,7 @@ export default Vue.extend({
 
 .skills {
   padding-block: 2rem;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 
@@ -347,13 +296,13 @@ export default Vue.extend({
     width: 100%;
   }
 
-  &__header {
+  &__heading {
     font-size: var(--text-title);
     margin-block: 0;
+    padding-inline: 1rem;
   }
 
   &__grid {
-    background-color: #27242b;
     padding-block: 2rem;
     display: flex;
     justify-content: center;
@@ -388,11 +337,19 @@ export default Vue.extend({
     @media (min-width: $responsive-small-desktop) {
       gap: 4rem 7.5rem;
     }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
   }
 
-  img {
+  &__icon {
     height: 3.75rem;
     width: 3.75rem;
+    display: block;
 
     @media (min-width: $responsive-large-tablet) {
       height: 5rem;
@@ -404,47 +361,10 @@ export default Vue.extend({
       width: 6.25rem;
     }
   }
-}
 
-.blog {
-  display: flex;
-  flex-direction: column;
-
-  &__heading {
-    font-size: var(--text-title);
-    margin-block: 0;
-  }
-
-  &__list {
-    padding-left: 0;
-    list-style-type: none;
-    margin-block: 1.25rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    justify-items: center;
-
-    @media (min-width: $responsive-standard-tablet) {
-      gap: 3rem 2rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: $responsive-small-desktop) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  &__more {
-    color: var(--colour-primary);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-left: auto;
-
-    svg {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
+  &__text {
+    text-align: center;
+    font-size: var(--text-large);
   }
 }
 </style>
