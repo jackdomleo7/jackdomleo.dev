@@ -135,7 +135,6 @@
         &::after {
           content: "“";
           color: var(--color-accent-faint);
-          font-size: var(--text-large);
           position: absolute;
           z-index: 0;
           font-size: 8rem;
@@ -184,7 +183,7 @@
           color: #000;
           text-decoration: none;
           display: block;
-          padding: 3.25rem 1rem 1rem 1rem;
+          padding: 3.25rem 1rem 1rem;
         }
   
         p {
