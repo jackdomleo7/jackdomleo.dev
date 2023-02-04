@@ -18,6 +18,8 @@ import CookieConsent from './components/CookieConsent.vue';
 import Navigation from './components/Navigation.vue';
 import SiteFooter from './components/SiteFooter.vue';
 
+const { data: ogImage } = await useAsyncData((ctx) => { return ctx!.$contentful.getAsset('2HwSTbJwsbPDLabrSltaa3')})
+
 /**
  * false = cookie not set
  * 'false' = user has not consented
@@ -51,16 +53,22 @@ useHead({
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { hid: 'name', name: 'name', content: 'Jack Domleo' },
-    { hid: 'og:locale', name: 'og:locale', content: 'en_GB' },
-    { hid: 'og:type', name: 'og:type', content: 'website' },
-    { hid: 'og:host', name: 'og:host', content: 'https://jackdomleo.dev' },
-    { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
-    { hid: 'twitter:site', name: 'twitter:site', content: '@jackdomleo7' },
-    { hid: 'twitter:creator', name: 'twitter:creator', content: '@jackdomleo7' },
+    { name: 'name', content: 'Jack Domleo' },
+    { property: 'og:locale', content: 'en_GB' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:host', content: 'https://jackdomleo.dev' },
+    { property: 'og:image', content: ogImage.value?.fields.file?.url },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:type', content: ogImage.value?.fields.file?.contentType },
+    { property: 'og:image:alt', content: ogImage.value?.fields.description },
+    { property: 'twitter:title', content: 'Jack Domleo - Frontend & UX Developer' },
+    { property: 'twitter:card', content: 'summary_large_image' },
+    { property: 'twitter:site', content: '@jackdomleo7' },
+    { property: 'twitter:creator', content: '@jackdomleo7' },
     { name: 'format-detection', content: 'telephone=no' },
     { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
-    { hid: 'color-scheme', name: 'color-scheme', content: 'light dark' }
+    { name: 'color-scheme', content: 'light dark' }
   ],
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

@@ -60,6 +60,14 @@ import { formatCMSVariables } from '@/utilities/cmsVariables'
 
 const { data: home } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntry<ContentfulEntries.Home>(Contentful.EntryIDs.HOME)})
 home.value!.fields = formatCMSVariables(home.value!.fields)
+
+useHead({
+  meta: [
+    { name: 'description', content: home.value?.fields.metaDescription },
+    { property: 'og:description', content: home.value?.fields.metaDescription },
+    { property: 'twitter:description', content: home.value?.fields.metaDescription }
+  ]
+})
 </script>
 
 <style lang="scss" scoped>

@@ -28,7 +28,7 @@ const links = formatCMSVariables(linksEntries.data.value!.items[0])
 useHead({
   title: 'Links',
   meta: [
-    { name: 'twitter:title', content: 'Links | Jack Domleo' },
+    { property: 'twitter:title', content: 'Links | Jack Domleo' },
   ]
 })
 </script>

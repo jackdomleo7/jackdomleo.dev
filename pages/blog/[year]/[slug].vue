@@ -76,9 +76,9 @@ useHead({
     { property: 'article:author', content: 'Jack Domleo' },
     { property: 'article:published_time', content: new Date(article.fields.publishDate).toString() },
     { property: 'article:tags', content: article.fields.tags.join(', ') },
-    { name: 'twitter:title', content: `${article.fields.title} | Blog | Jack Domleo` },
-    { name: 'twitter:description', content: article.fields.description },
-    { name: 'twitter:image', content: article.fields.image.fields.file.url }
+    { property: 'twitter:title', content: `${article.fields.title} | Blog | Jack Domleo` },
+    { property: 'twitter:description', content: article.fields.description },
+    { property: 'twitter:image', content: article.fields.image.fields.file.url }
   ],
   link: [
     { rel: 'canonical', href: `${config.public.BASE_URL}/blog/${$route.params.year}/${$route.params.slug}` }

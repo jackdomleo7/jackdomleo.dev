@@ -25,11 +25,11 @@ const page = formatCMSVariables(data.value!.items[0])
 useHead({
   title: `${page.fields.title}`,
   meta: [
-    { name: 'twitter:title', content: `${page.fields.title} | Jack Domleo` },
+    { property: 'twitter:title', content: `${page.fields.title} | Jack Domleo` },
     ...(page.fields.metaDescription ? [
       { name: 'description', content: page.fields.metaDescription },
       { property: 'og:description', content: page.fields.metaDescription },
-      { name: 'twitter:description', content: page.fields.metaDescription }
+      { property: 'twitter:description', content: page.fields.metaDescription }
     ] : [])
   ]
 })

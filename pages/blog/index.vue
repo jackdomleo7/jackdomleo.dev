@@ -20,7 +20,7 @@ const blogHub = formatCMSVariables(blogDetailsEntries.data.value!.items[0])
 useHead({
   title: 'Blog',
   meta: [
-    { name: 'twitter:title', content: 'Blog | Jack Domleo' },
+    { property: 'twitter:title', content: 'Blog | Jack Domleo' },
   ]
 })
 </script>
