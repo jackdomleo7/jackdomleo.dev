@@ -36,7 +36,7 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/rich-text';
+@use '@/assets/styles/rich-text' as *;
 
 .basic-page {
   font-size: var(--text-body);

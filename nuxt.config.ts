@@ -28,6 +28,17 @@ async function getBasicPages(): Promise<string[]> {
   return routes
 }
 
+async function getProducts(): Promise<string[]> {
+  const routes: string[] = []
+
+  const products = await contentfulClient.getEntries<Pick<ContentfulEntries.Product, 'slug'>>({ content_type: 'product', limit: 1000, select: ['fields.slug'] })
+  for (const product of products.items) {
+    routes.push(`/products/${product.fields.slug}`)
+  }
+
+  return routes
+}
+
 export default defineNuxtConfig({
   ssr: true,
   typescript: {
@@ -39,7 +50,8 @@ export default defineNuxtConfig({
       BASE_URL: process.env.NUXT_BASE_URL,
       GOOGLE_ANALYTICS_ID: process.env.NUXT_GOOGLE_ANALYTICS_ID,
       CTF_SPACE_ID: process.env.NUXT_CTF_SPACE_ID,
-      CTF_CDA_ACCESS_TOKEN: process.env.NUXT_CTF_CDA_ACCESS_TOKEN
+      CTF_CDA_ACCESS_TOKEN: process.env.NUXT_CTF_CDA_ACCESS_TOKEN,
+      GUMROAD_ACCESS_TOKEN: process.env.NUXT_GUMROAD_ACCESS_TOKEN
     }
   },
   css: [
@@ -77,7 +89,7 @@ export default defineNuxtConfig({
   hooks: {
     async 'nitro:config' (nitroConfig) {
       if (nitroConfig.dev) { return }
-      nitroConfig.prerender!.routes = [...(await getBlog()), ...(await getBasicPages())]
+      nitroConfig.prerender!.routes = [...(await getBlog()), ...(await getBasicPages()), ...(await getProducts())]
     }
   },
   vite: {
