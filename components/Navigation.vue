@@ -15,10 +15,10 @@
             <nuxt-link v-if="navItem.url" :to="navItem.url">
               <span>{{ navItem.text }}</span>
             </nuxt-link>
-            <a v-else href="javascript:void(0);">
+            <div v-else>
               <span>{{ navItem.text }}</span>
               <nuxt-icon class="nav__item-chevron" name="chevron_down" />
-            </a>
+            </div>
             <ul v-if="navItem.submenu">
               <li v-for="subItem in navItem.submenu" :key="subItem.text">
                 <nuxt-link v-if="subItem.url" :to="subItem.url">
@@ -255,7 +255,12 @@ $navBreak: $responsive-large-tablet;
       place-items: center;
     }
 
-    a {
+    > div {
+      cursor: default;
+    }
+
+    > a,
+    > div {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -266,7 +271,6 @@ $navBreak: $responsive-large-tablet;
       min-width: 4rem;
       text-align: center;
       text-decoration: none;
-      cursor: pointer;
       color: var(--color-primary);
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
@@ -297,7 +301,7 @@ $navBreak: $responsive-large-tablet;
       list-style-type: none;
       background-color: var(--color-bg);
       box-shadow: var(--shadow);
-      padding: 0.5rem 2.5rem;
+      padding: 0.5rem 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -313,6 +317,14 @@ $navBreak: $responsive-large-tablet;
         align-items: center;
         justify-content: flex-start;
         padding-block: 0.25rem;
+        color: var(--color-primary);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: var(--color-accent);
+          text-decoration-thickness: 2px;
+        }
       }
     }
   }
