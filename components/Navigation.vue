@@ -354,7 +354,7 @@ $navBreak: $responsive-large-tablet;
         height: 0.125rem;
         width: 100%;
         background-color: var(--color-primary);
-        border-radius: 0.5rem;
+        border-radius: var(--border-radius-standard);
         opacity: 1;
         left: 0;
         transform: rotate(0deg);

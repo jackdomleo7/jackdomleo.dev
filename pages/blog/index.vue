@@ -4,7 +4,7 @@
       <h1 class="blog-hub__title">Blog</h1>
       <div v-if="blogHub.fields.hubDescription" class="blog-hub__description" v-html="parseRichText(blogHub.fields.hubDescription)" />
     </header>
-    <ArticleList class="blog-hub__list" :limit="1000" :preload-article-images="3" />
+    <ArticleList class="blog-hub__list" :preload-article-images="3" />
   </div>
 </template>
 

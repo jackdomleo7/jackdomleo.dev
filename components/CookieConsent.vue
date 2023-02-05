@@ -40,7 +40,7 @@ function reject() {
   bottom: 0;
   width: 100%;
   background-color: var(--color-bg);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-standard);
   box-shadow: var(--shadow);
   padding: 1rem;
 

@@ -40,7 +40,7 @@
       margin-block: 2rem;
 
       > code {
-        border-radius: 0.5rem;
+        border-radius: var(--border-radius-standard);
         position: relative;
 
         &::before {
@@ -164,7 +164,7 @@
       &:not(.twitter-tweet-rendered) {
         background-color: #fff;
         border: 1px #ccc solid;
-        border-radius: 0.5rem;
+        border-radius: var(--border-radius-standard);
         position: relative;
 
         &::after {

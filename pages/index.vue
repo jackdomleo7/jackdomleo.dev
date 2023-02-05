@@ -314,7 +314,7 @@ useHead({
 
   &__list {
     margin: 0;
-    padding-left: 0;
+    padding-inline: 0.5rem;
     list-style-type: none;
     max-width: 95rem;
     display: grid;
@@ -332,6 +332,7 @@ useHead({
 
     @media (min-width: $responsive-large-tablet) {
       grid-template-columns: repeat(6, 1fr);
+      padding-inline: 0;
     }
 
     @media (min-width: $responsive-small-desktop) {
@@ -364,7 +365,7 @@ useHead({
 
   &__text {
     text-align: center;
-    font-size: var(--text-large);
+    font-size: var(--text-body);
   }
 }
 </style>

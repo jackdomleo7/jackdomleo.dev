@@ -76,6 +76,7 @@ data.value!.fields = formatCMSVariables(data.value!.fields)
       &:active {
         text-decoration: underline;
         text-decoration-color: var(--color-accent);
+        text-decoration-thickness: 2px;
       }
     }
   }

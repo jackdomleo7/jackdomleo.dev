@@ -19,7 +19,7 @@ import type { ContentfulEntries } from '@/types/CMS/Entries'
 const $img = useImage()
 const $route = useRoute()
 
-const { data } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.BasicPage>({ content_type: 'basicPage', limit: 1, 'fields.slug': $route.params.slug })})
+const { data } = await useAsyncData(`basicpage-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.BasicPage>({ content_type: 'basicPage', limit: 1, 'fields.slug': $route.params.slug })})
 const page = formatCMSVariables(data.value!.items[0])
 
 useHead({
