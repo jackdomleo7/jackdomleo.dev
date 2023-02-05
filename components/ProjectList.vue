@@ -27,7 +27,7 @@ import type { Project } from '@/types/CMS/Entries/Project';
 const props = defineProps({
   limit: {
     type: Number,
-    required: true,
+    default: undefined,
     validator(value: number): boolean {
       return value >= 0 && value <= 1000
     }
@@ -45,12 +45,15 @@ const props = defineProps({
   }
 })
 
-const { data: projects } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Project>({ content_type: 'project', limit: props.limit, order: '-sys.createdAt' })})
+const { data: projects } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Project>({ content_type: 'project', limit: 1000, order: '-sys.createdAt' })})
 projects.value!.items = formatCMSVariables(projects.value!.items)
 
 let list = projects.value!.items
 if (props.type) {
   list = list.filter(project => project.fields.type === props.type)
+}
+else if (props.limit) {
+  list = list.slice(0, props.limit)
 }
 </script>
 

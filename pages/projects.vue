@@ -5,15 +5,15 @@
       <div v-if="projects.fields.description" class="projects__description" v-html="parseRichText(projects.fields.description)" />
     </header>
     <div class="container">
-      <ProjectList class="projects__list" :limit="1000" type="Project" :preload-project-images="3" />
+      <ProjectList class="projects__list" type="Project" :preload-project-images="3" />
     </div>
     <section id="mini" class="container">
       <h2 class="projects__subtitle">Mini Projects</h2>
-      <ProjectList class="projects__list" :limit="1000" type="Mini" />
+      <ProjectList class="projects__list" type="Mini" />
     </section>
     <section id="mini" class="container">
       <h2 class="projects__subtitle">Client Projects</h2>
-      <ProjectList class="projects__list" :limit="1000" type="Client" />
+      <ProjectList class="projects__list" type="Client" />
     </section>
   </div>
 </template>
