@@ -63,7 +63,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image-edge',
     'nuxt-icons',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'nuxt-simple-sitemap'
   ],
   image: {
     contentful: {},
@@ -85,6 +86,9 @@ export default defineNuxtConfig({
     fallback: 'light',
     classPrefix: 'theme--',
     classSuffix: ''
+  },
+  sitemap: {
+    hostname: process.env.NUXT_BASE_URL
   },
   hooks: {
     async 'nitro:config' (nitroConfig) {
