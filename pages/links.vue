@@ -70,7 +70,7 @@ useHead({
 .link {
   background-color: var(--color-fg1);
   box-shadow: var(--shadow);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-standard);
   color: var(--color-primary);
   display: flex;
   align-items: center;

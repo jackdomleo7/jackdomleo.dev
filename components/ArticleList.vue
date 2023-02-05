@@ -78,7 +78,7 @@ if (props.limit) {
   display: block;
   overflow: hidden;
   background-color: var(--color-bg);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-standard);
   box-shadow: var(--shadow);
   text-decoration: none;
   color: inherit;

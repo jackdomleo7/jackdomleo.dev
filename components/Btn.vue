@@ -22,7 +22,7 @@ const props = defineProps({
 .btn {
   background-color: var(--color-accent);
   color: #000;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-standard);
   padding: 1rem 1.5rem;
   display: inline-flex;
   align-items: center;

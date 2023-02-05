@@ -46,13 +46,13 @@ fieldset {
 
   &:first-of-type {
     input {
-      border-radius: 0.5rem 0 0 0.5rem;
+      border-radius: var(--border-radius-standard) 0 0 var(--border-radius-standard);
     }
   }
 
   &:last-of-type {
     input {
-      border-radius: 0 0.5rem 0.5rem 0;
+      border-radius: 0 var(--border-radius-standard) var(--border-radius-standard) 0;
     }
   }
 
