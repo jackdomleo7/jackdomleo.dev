@@ -51,7 +51,7 @@ const $img = useImage()
 const $route = useRoute()
 const config = useRuntimeConfig()
 
-const articleEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Article>({ content_type: 'article', limit: 1, 'fields.slug': $route.params.slug })})
+const articleEntries = await useAsyncData(`article-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Article>({ content_type: 'article', limit: 1, 'fields.slug': $route.params.slug })})
 const article = formatCMSVariables(articleEntries.data.value!.items[0])
 
 const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Pick<ContentfulEntries.BlogDetails, 'articleDisclaimer'>>({ content_type: 'blogDetails', limit: 1, select: ['fields.articleDisclaimer'] })})
