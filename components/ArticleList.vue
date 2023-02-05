@@ -1,6 +1,6 @@
 <template>
   <ul class="posts container">
-    <li v-for="(item, index) in blog!.items" :key="item.sys.id">
+    <li v-for="(item, index) in list" :key="item.sys.id">
       <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
         <article class="post__article">
           <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image.fields.file.url" :alt="item.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
@@ -35,7 +35,7 @@ import { formatCMSVariables } from '@/utilities/cmsVariables';
 const props = defineProps({
   limit: {
     type: Number,
-    required: true,
+    default: undefined,
     validator(value: number): boolean {
       return value >= 0 && value <= 1000
     }
@@ -49,8 +49,12 @@ const props = defineProps({
   }
 })
 
-const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Omit<ContentfulEntries.Article, 'body'>>({ content_type: 'article', limit: props.limit, order: '-fields.publishDate', select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
-blog.value!.items = formatCMSVariables(blog.value!.items)
+const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<Omit<ContentfulEntries.Article, 'body'>>({ content_type: 'article', limit: 1000, order: '-fields.publishDate', select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
+let list = formatCMSVariables(blog.value!.items)
+
+if (props.limit) {
+  list = list.slice(0, props.limit)
+}
 </script>
 
 <style lang="scss" scoped>
