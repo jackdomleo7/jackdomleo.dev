@@ -10,7 +10,8 @@ export default defineNuxtPlugin(() => {
     provide: {
       contentful: createClientFunc({
         space: config.public.CTF_SPACE_ID,
-        accessToken: config.public.CTF_CDA_ACCESS_TOKEN
+        accessToken: process.env.NODE_ENV === 'development' ? config.public.CTF_CDA_ACCESS_TOKEN_PREVIEW : config.public.CTF_CDA_ACCESS_TOKEN,
+        host: process.env.NODE_ENV === 'development' ? 'preview.contentful.com' : undefined
       })
     }
   }
