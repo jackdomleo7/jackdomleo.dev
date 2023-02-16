@@ -3,7 +3,7 @@ import type { ContentfulEntries } from './types/CMS/Entries'
 
 const contentfulClient = contentful.createClient({
   space: process.env.NUXT_CTF_SPACE_ID,
-  accessToken: process.env.NUXT_CTF_CDA_ACCESS_TOKEN
+  accessToken: process.env.NODE_ENV === 'development' ? process.env.NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW : process.env.NUXT_CTF_CDA_ACCESS_TOKEN
 })
 
 async function getBlog(): Promise<string[]> {
@@ -51,6 +51,7 @@ export default defineNuxtConfig({
       GOOGLE_ANALYTICS_ID: process.env.NUXT_GOOGLE_ANALYTICS_ID,
       CTF_SPACE_ID: process.env.NUXT_CTF_SPACE_ID,
       CTF_CDA_ACCESS_TOKEN: process.env.NUXT_CTF_CDA_ACCESS_TOKEN,
+      CTF_CDA_ACCESS_TOKEN_PREVIEW: process.env.NODE_ENV === 'development' ? process.env.NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW : undefined,
       GUMROAD_ACCESS_TOKEN: process.env.NUXT_GUMROAD_ACCESS_TOKEN
     }
   },

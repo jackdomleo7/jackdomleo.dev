@@ -4,6 +4,7 @@ declare namespace NodeJS {
     NUXT_GOOGLE_ANALYTICS_ID: string;
     NUXT_CTF_SPACE_ID: string;
     NUXT_CTF_CDA_ACCESS_TOKEN: string;
+    NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW: string;
     NUXT_GUMROAD_ACCESS_TOKEN: string;
   }
 }

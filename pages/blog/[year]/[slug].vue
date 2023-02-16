@@ -128,10 +128,23 @@ useHead({
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 1rem;
     flex-wrap: wrap;
     margin-top: 0;
     margin-bottom: 1rem;
+
+    > li:not(:first-of-type) {
+      position: relative;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: -0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+      }
+    }
   }
 
   &__date {
