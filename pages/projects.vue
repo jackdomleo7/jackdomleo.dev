@@ -30,7 +30,7 @@ const projects = formatCMSVariables(projectsEntries.data.value!.items[0])
 useHead({
   title: 'Projects',
   meta: [
-    { property: 'twitter:title', content: 'Projects | Jack Domleo' },
+    { name: 'twitter:title', content: 'Projects | Jack Domleo' },
   ]
 })
 </script>

@@ -63,11 +63,11 @@ const pageData = {
 useHead({
   title: `${product.fields.title} | Products`,
   meta: [
-    { property: 'twitter:title', content: `${product.fields.title} | Products | Jack Domleo` },
+    { name: 'twitter:title', content: `${product.fields.title} | Products | Jack Domleo` },
     ...(product.fields.metaDescription ? [
       { name: 'description', content: product.fields.metaDescription },
       { property: 'og:description', content: product.fields.metaDescription },
-      { property: 'twitter:description', content: product.fields.metaDescription }
+      { name: 'twitter:description', content: product.fields.metaDescription }
     ] : []),
     ...(product.fields.type === 'Book' ? [
       { property: 'og:type', content: 'book' },
