@@ -93,12 +93,16 @@ const navItems: INav[] = [
     url: null,
     submenu: [
       {
-        text: 'Uses',
-        url: '/uses'
-      },
-      {
         text: 'Links',
         url: '/links'
+      },
+      {
+        text: 'Affiliates',
+        url: '/affiliates'
+      },
+      {
+        text: 'Uses',
+        url: '/uses'
       }
     ]
   }
