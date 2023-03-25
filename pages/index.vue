@@ -71,6 +71,15 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
+@keyframes jumpy-arrow {
+  30% {
+    transform: translateX(0.3rem);
+  }
+  0%, 100% {
+    transform: translateX(0);
+  }
+}
+
 .hero {
   min-height: calc(100vh - 9rem);
   display: grid;
@@ -278,6 +287,15 @@ useHead({
     margin-left: auto;
     margin-right: 1rem;
     font-size: var(--text-large);
+
+    @media (prefers-reduced-motion: no-preference) {
+      &:hover,
+      &:focus {
+        [class$="icon"] {
+          animation: jumpy-arrow 0.8s forwards infinite;
+        }
+      }
+    }
 
     &-icon {
       width: 1.25rem;
