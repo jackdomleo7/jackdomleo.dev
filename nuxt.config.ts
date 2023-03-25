@@ -89,7 +89,7 @@ export default defineNuxtConfig({
     classSuffix: ''
   },
   sitemap: {
-    hostname: process.env.NUXT_BASE_URL
+    siteUrl: process.env.NUXT_BASE_URL
   },
   hooks: {
     async 'nitro:config' (nitroConfig) {
