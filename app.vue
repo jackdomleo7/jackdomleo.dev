@@ -67,7 +67,6 @@ useHead({
     { name: 'twitter:site', content: '@jackdomleo7' },
     { name: 'twitter:creator', content: '@jackdomleo7' },
     { name: 'format-detection', content: 'telephone=no' },
-    { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
     { name: 'color-scheme', content: 'light dark' }
   ],
   link: [
