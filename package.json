@@ -40,7 +40,7 @@
     "@nuxt/image-edge": "1.0.0-27991759.1a5eea1",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/eslint-module": "^4.0.2",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.9",
     "babel-jest": "^29.5.0",
