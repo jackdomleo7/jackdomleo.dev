@@ -17,6 +17,7 @@ import { bootstrap } from 'vue-gtag';
 import CookieConsent from './components/CookieConsent.vue';
 import Navigation from './components/Navigation.vue';
 import SiteFooter from './components/SiteFooter.vue';
+import { formatOGImage } from './utilities/ogImage';
 
 const { data: ogImage } = await useAsyncData((ctx) => { return ctx!.$contentful.getAsset('2HwSTbJwsbPDLabrSltaa3')})
 
@@ -57,7 +58,7 @@ useHead({
     { property: 'og:locale', content: 'en_GB' },
     { property: 'og:type', content: 'website' },
     { property: 'og:host', content: 'https://jackdomleo.dev' },
-    { property: 'og:image', content: ogImage.value?.fields.file?.url },
+    { property: 'og:image', content: formatOGImage(ogImage.value?.fields.file?.url) },
     { property: 'og:image:height', content: '630' },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:type', content: ogImage.value?.fields.file?.contentType },

@@ -46,6 +46,7 @@ import { documentToPlainTextString } from '@contentful/rich-text-plain-text-rend
 import { parseRichText } from '@/utilities/parseRichText'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries'
+import { formatOGImage } from '@/utilities/ogImage';
 
 const $img = useImage()
 const $route = useRoute()
@@ -70,7 +71,7 @@ useHead({
     { name: 'author', content: 'Jack Domleo' },
     { name: 'description', content: article.fields.description },
     { property: 'og:description', content: article.fields.description },
-    { property: 'og:image', content: article.fields.image.fields.file.url },
+    { property: 'og:image', content: formatOGImage(article.fields.image.fields.file.url) },
     { property: 'og:image:type', content: article.fields.image.fields.file.contentType },
     { property: 'og:type', content: 'article' },
     { property: 'article:author', content: 'Jack Domleo' },
