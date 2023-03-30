@@ -9,6 +9,9 @@
             <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1mPOrNhlrFYTBTczYmv3ZW/6bc83cfc55892490e750e5d9f47d40d9/me.jpg?w=440&amp;amp;h=440&amp;amp;fm=jpg</image:url>
         </image:image>
         <image:image>
+            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
+        </image:image>
+        <image:image>
             <image:url>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
         </image:image>
         <image:image>
@@ -41,6 +44,9 @@
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog</loc>
+        <image:image>
+            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
+        </image:image>
         <image:image>
             <image:url>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
         </image:image>
@@ -139,6 +145,12 @@
         <loc>https://jackdomleo.dev/blog/2023/should-you-clean-out-your-blog</loc>
         <image:image>
             <image:url>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=768&amp;amp;h=403&amp;amp;fm=jpg</image:url>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://jackdomleo.dev/blog/2023/why-i-quit-being-a-tech-influencer</loc>
+        <image:image>
+            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=768&amp;amp;h=403&amp;amp;fm=jpg</image:url>
         </image:image>
     </url>
     <url>
