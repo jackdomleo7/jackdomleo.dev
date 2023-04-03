@@ -1,120 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/__sitemap__/style.xsl"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://jackdomleo.dev</loc>
+        <lastmod>2023-04-03T19:20:40+00:00</lastmod>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1mPOrNhlrFYTBTczYmv3ZW/6bc83cfc55892490e750e5d9f47d40d9/me.jpg?w=300&amp;amp;h=300&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1mPOrNhlrFYTBTczYmv3ZW/6bc83cfc55892490e750e5d9f47d40d9/me.jpg?w=300&amp;h=300&amp;fm=jpg</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1mPOrNhlrFYTBTczYmv3ZW/6bc83cfc55892490e750e5d9f47d40d9/me.jpg?w=440&amp;amp;h=440&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1mPOrNhlrFYTBTczYmv3ZW/6bc83cfc55892490e750e5d9f47d40d9/me.jpg?w=440&amp;h=440&amp;fm=jpg</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=424&amp;h=223&amp;fm=jpg</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=424&amp;h=223&amp;fm=jpg</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1BWwf3Fg2A0y1RhcY7oNqq/0dadb7c242364de5ac4f5b63dd57f1b6/css_hover-media-query-og.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1BWwf3Fg2A0y1RhcY7oNqq/0dadb7c242364de5ac4f5b63dd57f1b6/css_hover-media-query-og.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/T6RRM5TpnSzYm6UQolMMf/a51b32aea0faa8885d8e525c436b5073/neumorphic-design-og.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/T6RRM5TpnSzYm6UQolMMf/a51b32aea0faa8885d8e525c436b5073/neumorphic-design-og.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/01rxXuPpEQ6phTc1Bvt9W9/5d347eb3e2a3731922c0aa7046273780/grassverse-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/01rxXuPpEQ6phTc1Bvt9W9/5d347eb3e2a3731922c0aa7046273780/grassverse-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/2ilJcH34gnOn1SEfkJqlJj/69c7b64c07e828439e60e1287e47828c/npx-jackdomleo7-project-img.gif?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/2ilJcH34gnOn1SEfkJqlJj/69c7b64c07e828439e60e1287e47828c/npx-jackdomleo7-project-img.gif?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/4yYU2VsDfEvMnOIFnWe8s6/550e38a11ea5618096b160698925405c/mad-parrot-crew-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/4yYU2VsDfEvMnOIFnWe8s6/550e38a11ea5618096b160698925405c/mad-parrot-crew-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/5zb0pDWNBVdorGnCnM0gwb/d9cf343aeb2136f44ab17dc6b0410281/twitter-spring-clean-bot-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/5zb0pDWNBVdorGnCnM0gwb/d9cf343aeb2136f44ab17dc6b0410281/twitter-spring-clean-bot-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/5u50SbmPUZoqIhzqtV7UaL/b7abf17a991a5e6b491ed212cd8e1c49/colour-theme-picker-project-img.gif?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/5u50SbmPUZoqIhzqtV7UaL/b7abf17a991a5e6b491ed212cd8e1c49/colour-theme-picker-project-img.gif?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1ZmqPLpQtjTJPsWiUB8ihd/89be01caacd54b1d9e5975e584056260/car-colour-picker-project-img.gif?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1ZmqPLpQtjTJPsWiUB8ihd/89be01caacd54b1d9e5975e584056260/car-colour-picker-project-img.gif?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog</loc>
+        <lastmod>2023-04-03T19:20:40+00:00</lastmod>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=424&amp;h=223&amp;fm=jpg</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=424&amp;amp;h=223&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=424&amp;h=223&amp;fm=jpg</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1BWwf3Fg2A0y1RhcY7oNqq/0dadb7c242364de5ac4f5b63dd57f1b6/css_hover-media-query-og.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1BWwf3Fg2A0y1RhcY7oNqq/0dadb7c242364de5ac4f5b63dd57f1b6/css_hover-media-query-og.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/T6RRM5TpnSzYm6UQolMMf/a51b32aea0faa8885d8e525c436b5073/neumorphic-design-og.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/T6RRM5TpnSzYm6UQolMMf/a51b32aea0faa8885d8e525c436b5073/neumorphic-design-og.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/uses</loc>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=768</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=768</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/links</loc>
+        <lastmod>2023-04-03T19:20:40+00:00</lastmod>
     </url>
     <url>
         <loc>https://jackdomleo.dev/projects</loc>
+        <lastmod>2023-04-03T19:20:40+00:00</lastmod>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/5zb0pDWNBVdorGnCnM0gwb/d9cf343aeb2136f44ab17dc6b0410281/twitter-spring-clean-bot-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/5zb0pDWNBVdorGnCnM0gwb/d9cf343aeb2136f44ab17dc6b0410281/twitter-spring-clean-bot-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3nPJwMFNQ8OZ7OlHMED3YJ/9350ee10587c33b4e9dd71464aa1173d/checka11y-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3nPJwMFNQ8OZ7OlHMED3YJ/9350ee10587c33b4e9dd71464aa1173d/checka11y-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/26fP6efyZsX7tw8rGCVrDL/0bc668a492f6b7eb375a3ad568df6c83/cooltipz-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/26fP6efyZsX7tw8rGCVrDL/0bc668a492f6b7eb375a3ad568df6c83/cooltipz-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/7fXjHpN3LyWRS6iULHyR02/8b59f60fb2404576a0c93553694fb1b6/jackdomleo.dev-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/7fXjHpN3LyWRS6iULHyR02/8b59f60fb2404576a0c93553694fb1b6/jackdomleo.dev-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/2ilJcH34gnOn1SEfkJqlJj/69c7b64c07e828439e60e1287e47828c/npx-jackdomleo7-project-img.gif?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/2ilJcH34gnOn1SEfkJqlJj/69c7b64c07e828439e60e1287e47828c/npx-jackdomleo7-project-img.gif?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/5u50SbmPUZoqIhzqtV7UaL/b7abf17a991a5e6b491ed212cd8e1c49/colour-theme-picker-project-img.gif?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/5u50SbmPUZoqIhzqtV7UaL/b7abf17a991a5e6b491ed212cd8e1c49/colour-theme-picker-project-img.gif?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1ZmqPLpQtjTJPsWiUB8ihd/89be01caacd54b1d9e5975e584056260/car-colour-picker-project-img.gif?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1ZmqPLpQtjTJPsWiUB8ihd/89be01caacd54b1d9e5975e584056260/car-colour-picker-project-img.gif?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/6i901gWFLWWSjs2ZYc9rpL/e32d8b3cb14a794272c70360d1a39ac9/spinning-smiley-face-project-img.gif?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/6i901gWFLWWSjs2ZYc9rpL/e32d8b3cb14a794272c70360d1a39ac9/spinning-smiley-face-project-img.gif?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/2220otIqCHTmP1a6UkmHTO/1b888dd09c45cbb842cd476585c54eaf/union-jack-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/2220otIqCHTmP1a6UkmHTO/1b888dd09c45cbb842cd476585c54eaf/union-jack-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/5Qg1EnfhYLYpuJAT0qkaNc/43107f82a221c1809ab117bfd206170f/neumorphic-design-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/5Qg1EnfhYLYpuJAT0qkaNc/43107f82a221c1809ab117bfd206170f/neumorphic-design-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/zXmBtqvpORf1Zffobl22F/c4a75a537080960d72f5930149bf2817/lightspeed-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/zXmBtqvpORf1Zffobl22F/c4a75a537080960d72f5930149bf2817/lightspeed-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1lG3pACHA8YGmbbpQ2fpA7/6ed00265778f38c5bd7f1bc395eb484d/r2-d2-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1lG3pACHA8YGmbbpQ2fpA7/6ed00265778f38c5bd7f1bc395eb484d/r2-d2-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/01rxXuPpEQ6phTc1Bvt9W9/5d347eb3e2a3731922c0aa7046273780/grassverse-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/01rxXuPpEQ6phTc1Bvt9W9/5d347eb3e2a3731922c0aa7046273780/grassverse-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/4yYU2VsDfEvMnOIFnWe8s6/550e38a11ea5618096b160698925405c/mad-parrot-crew-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/4yYU2VsDfEvMnOIFnWe8s6/550e38a11ea5618096b160698925405c/mad-parrot-crew-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/v3W2zbHXA5PrqQNtVPUMm/1053b757abf68582bfa0f410077806c8/tmdip-project-img.png?w=424&amp;amp;h=223&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/v3W2zbHXA5PrqQNtVPUMm/1053b757abf68582bfa0f410077806c8/tmdip-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
     </url>
     <url>
@@ -126,46 +130,46 @@
     <url>
         <loc>https://jackdomleo.dev/blog/2022/my-new-setup-for-2022</loc>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=768&amp;amp;h=403&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3B3H5QkyndoBbfTLwetw45/2c87440694f14e8be30a2b8f7eed889e/new-setup-2022-og.png?w=768&amp;h=403&amp;fm=png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog/2020/hover-css-media-query</loc>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/1BWwf3Fg2A0y1RhcY7oNqq/0dadb7c242364de5ac4f5b63dd57f1b6/css_hover-media-query-og.png?w=768&amp;amp;h=403&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1BWwf3Fg2A0y1RhcY7oNqq/0dadb7c242364de5ac4f5b63dd57f1b6/css_hover-media-query-og.png?w=768&amp;h=403&amp;fm=png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog/2020/learning-neumorphic-design</loc>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/T6RRM5TpnSzYm6UQolMMf/a51b32aea0faa8885d8e525c436b5073/neumorphic-design-og.png?w=768&amp;amp;h=403&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/T6RRM5TpnSzYm6UQolMMf/a51b32aea0faa8885d8e525c436b5073/neumorphic-design-og.png?w=768&amp;h=403&amp;fm=png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog/2023/should-you-clean-out-your-blog</loc>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=768&amp;amp;h=403&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/6Fk3J1WEn0YRhIGUawl63P/a98a9a5ba72aef1afc04111bc7a9e5f9/clutter.jpg?w=768&amp;h=403&amp;fm=jpg</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog/2023/why-i-quit-being-a-tech-influencer</loc>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=768&amp;amp;h=403&amp;amp;fm=jpg</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=768&amp;h=403&amp;fm=jpg</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/products/level-up-your-career-today-developer-edition</loc>
         <image:image>
-            <image:url>https://images.ctfassets.net/l1wujzr3g1ab/7qXonKpdtkTfcei0xvFvpk/e0ca96ae7687edde49429a8b1def7649/level-up-your-career-today-cover.png?w=472&amp;amp;h=669&amp;amp;fm=png</image:url>
+            <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/7qXonKpdtkTfcei0xvFvpk/e0ca96ae7687edde49429a8b1def7649/level-up-your-career-today-cover.png?w=472&amp;h=669&amp;fm=png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://jackdomleo.dev/_ipx/s_130x41/images/goodreads-button.png</image:url>
+            <image:loc>https://jackdomleo.dev/_ipx/s_130x41/images/goodreads-button.png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://jackdomleo.dev/_ipx/s_160x47/images/amazon-button.png</image:url>
+            <image:loc>https://jackdomleo.dev/_ipx/s_160x47/images/amazon-button.png</image:loc>
         </image:image>
         <image:image>
-            <image:url>https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=271450&amp;amp;theme=light</image:url>
+            <image:loc>https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=271450&amp;theme=light</image:loc>
         </image:image>
     </url>
 </urlset>
