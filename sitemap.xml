@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://jackdomleo.dev</loc>
-        <lastmod>2023-04-20T00:54:50+00:00</lastmod>
+        <lastmod>2023-04-21T00:54:57+00:00</lastmod>
         <image:image>
             <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/1mPOrNhlrFYTBTczYmv3ZW/6bc83cfc55892490e750e5d9f47d40d9/me.jpg?w=300&amp;h=300&amp;fm=jpg</image:loc>
         </image:image>
@@ -45,7 +45,7 @@
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog</loc>
-        <lastmod>2023-04-20T00:54:50+00:00</lastmod>
+        <lastmod>2023-04-21T00:54:57+00:00</lastmod>
         <image:image>
             <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/3CFBclEUf64bCUnMqNwdIM/aeae23b5404de3ca595ad50e75b875e9/why-i-quit-being-an-influencer.jpg?w=424&amp;h=223&amp;fm=jpg</image:loc>
         </image:image>
@@ -70,11 +70,11 @@
     </url>
     <url>
         <loc>https://jackdomleo.dev/links</loc>
-        <lastmod>2023-04-20T00:54:50+00:00</lastmod>
+        <lastmod>2023-04-21T00:54:57+00:00</lastmod>
     </url>
     <url>
         <loc>https://jackdomleo.dev/projects</loc>
-        <lastmod>2023-04-20T00:54:50+00:00</lastmod>
+        <lastmod>2023-04-21T00:54:57+00:00</lastmod>
         <image:image>
             <image:loc>https://images.ctfassets.net/l1wujzr3g1ab/5zb0pDWNBVdorGnCnM0gwb/d9cf343aeb2136f44ab17dc6b0410281/twitter-spring-clean-bot-project-img.png?w=424&amp;h=223&amp;fm=png</image:loc>
         </image:image>
