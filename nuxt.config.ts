@@ -68,6 +68,7 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap'
   ],
   image: {
+    inject: true,
     contentful: {},
     screens: {
       smallmobile: 340,
