@@ -9,7 +9,7 @@ const contentfulClient = contentful.createClient({
 async function getBlog(): Promise<string[]> {
   const routes: string[] = []
 
-  const blog = await contentfulClient.getEntries<Pick<ContentfulEntries.Article, 'slug'|'publishDate'>>({ content_type: 'article', limit: 1000, select: ['fields.slug', 'fields.publishDate'] })
+  const blog = await contentfulClient.getEntries<{ fields: Pick<ContentfulEntries.Article, 'slug'|'publishDate'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, select: ['fields.slug', 'fields.publishDate'] })
   for (const article of blog.items) {
     routes.push(`/blog/${new Date(article.fields.publishDate).getFullYear()}/${article.fields.slug}`)
   }
@@ -20,20 +20,9 @@ async function getBlog(): Promise<string[]> {
 async function getBasicPages(): Promise<string[]> {
   const routes: string[] = []
 
-  const basicPages = await contentfulClient.getEntries<Pick<ContentfulEntries.BasicPage, 'slug'>>({ content_type: 'basicPage', limit: 1000, select: ['fields.slug'] })
+  const basicPages = await contentfulClient.getEntries<{ fields: Pick<ContentfulEntries.BasicPage, 'slug'>, contentTypeId: 'basicPage' }>({ content_type: 'basicPage', limit: 1000, select: ['fields.slug'] })
   for (const page of basicPages.items) {
     routes.push(`/${page.fields.slug}`)
-  }
-
-  return routes
-}
-
-async function getProducts(): Promise<string[]> {
-  const routes: string[] = []
-
-  const products = await contentfulClient.getEntries<Pick<ContentfulEntries.Product, 'slug'>>({ content_type: 'product', limit: 1000, select: ['fields.slug'] })
-  for (const product of products.items) {
-    routes.push(`/products/${product.fields.slug}`)
   }
 
   return routes
@@ -51,8 +40,7 @@ export default defineNuxtConfig({
       GOOGLE_ANALYTICS_ID: process.env.NUXT_GOOGLE_ANALYTICS_ID,
       CTF_SPACE_ID: process.env.NUXT_CTF_SPACE_ID,
       CTF_CDA_ACCESS_TOKEN: process.env.NUXT_CTF_CDA_ACCESS_TOKEN,
-      CTF_CDA_ACCESS_TOKEN_PREVIEW: process.env.NODE_ENV === 'development' ? process.env.NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW : undefined,
-      GUMROAD_ACCESS_TOKEN: process.env.NUXT_GUMROAD_ACCESS_TOKEN
+      CTF_CDA_ACCESS_TOKEN_PREVIEW: process.env.NODE_ENV === 'development' ? process.env.NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW : undefined
     }
   },
   css: [
@@ -95,7 +83,7 @@ export default defineNuxtConfig({
   hooks: {
     async 'nitro:config' (nitroConfig) {
       if (nitroConfig.dev) { return }
-      nitroConfig.prerender!.routes = [...(await getBlog()), ...(await getBasicPages()), ...(await getProducts())]
+      nitroConfig.prerender!.routes = [...(await getBlog()), ...(await getBasicPages())]
     }
   },
   vite: {
