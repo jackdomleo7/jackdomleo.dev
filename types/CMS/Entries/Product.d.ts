@@ -1,20 +1,20 @@
-import type { Asset, EntryFields } from 'contentful'
+import type { Asset, EntryFieldTypes } from 'contentful'
 
 export interface Product {
-  title: string;
-  slug: string;
-  metaDescription?: string;
+  title: EntryFieldTypes.Text;
+  slug: EntryFieldTypes.Text;
+  metaDescription?: EntryFieldTypes.Text;
   type: 'Book';
-  isbn?: string;
-  releaseDate?: string;
-  image: Asset;
-  price?: string;
-  ctaText?: string;
-  ctaUrl?: string;
-  gumroadId?: string;
-  amazonUrl?: string;
-  goodreadsUrl?: string;
-  productHuntUrl?: string;
-  productHuntId?: string;
-  description?: EntryFields.RichText;
+  isbn?: EntryFieldTypes.Text;
+  releaseDate?: EntryFieldTypes.Date;
+  image: EntryFieldTypes.AssetLink;
+  price?: EntryFieldTypes.Text;
+  ctaText?: EntryFieldTypes.Text;
+  ctaUrl?: EntryFieldTypes.Text;
+  gumroadId?: EntryFieldTypes.Text;
+  amazonUrl?: EntryFieldTypes.Text;
+  goodreadsUrl?: EntryFieldTypes.Text;
+  productHuntUrl?: EntryFieldTypes.Text;
+  productHuntId?: EntryFieldTypes.Text;
+  description?: EntryFieldTypes.RichText;
 }

@@ -51,21 +51,20 @@
 </template>
 
 <script lang="ts" setup>
-import { Contentful } from '@/enums/Contentful'
 import { parseRichText } from '@/utilities/parseRichText'
 import ArticleList from '@/components/ArticleList.vue'
 import ProjectList from '@/components/ProjectList.vue'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
 
-const { data: home } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntry<ContentfulEntries.Home>(Contentful.EntryIDs.HOME)})
-home.value!.fields = formatCMSVariables(home.value!.fields)
+const homeEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Home, contentTypeId: 'home' }>({ content_type: 'home', limit: 1 })})
+const home = formatCMSVariables(homeEntries.data.value!.items[0])
 
 useHead({
   meta: [
-    { name: 'description', content: home.value?.fields.metaDescription },
-    { property: 'og:description', content: home.value?.fields.metaDescription },
-    { name: 'twitter:description', content: home.value?.fields.metaDescription }
+    { name: 'description', content: home.fields.metaDescription },
+    { property: 'og:description', content: home.fields.metaDescription },
+    { name: 'twitter:description', content: home.fields.metaDescription }
   ]
 })
 </script>

@@ -6,10 +6,10 @@
     </header>
     <div class="container container--thinner">
       <ul class="links__list">
-        <li v-for="link in links.fields.links.items" :key="link.name">
-          <nuxt-link class="link" :to="link.url" :rel="link.url.startsWith('http') || link.url.startsWith('//') ? 'nofollow noopener' : undefined">
+        <li v-for="link in links.fields.links.items" :key="`${link.name}`">
+          <nuxt-link class="link" :to="`${link.url}`" :rel="`${link.url}`.startsWith('http') || `${link.url}`.startsWith('//') ? 'nofollow noopener' : undefined">
             {{ link.name }}
-            <nuxt-icon v-if="link.icon" :name="link.icon" filled />
+            <nuxt-icon v-if="link.icon" :name="`${link.icon}`" filled />
           </nuxt-link>
         </li>
       </ul>
@@ -22,7 +22,7 @@ import { parseRichText } from '@/utilities/parseRichText'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries';
 
-const linksEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Links>({ content_type: 'links', limit: 1 })})
+const linksEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Links, contentTypeId: 'links' }>({ content_type: 'links', limit: 1 })})
 const links = formatCMSVariables(linksEntries.data.value!.items[0])
 
 useHead({

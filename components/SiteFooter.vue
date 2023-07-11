@@ -4,14 +4,14 @@
       <nuxt-icon name="j_icon" filled />
     </nuxt-link>
     <ul class="footer__quick-links">
-      <li v-for="quickLink in data!.fields.quickLinks" :key="quickLink.id">
+      <li v-for="quickLink in footer.fields.quickLinks" :key="quickLink.id">
         <nuxt-link :to="quickLink.value" :rel="quickLink.value.startsWith('https://') ? 'noopener' : undefined">
           {{ quickLink.key }}
         </nuxt-link>
       </li>
     </ul>
     <ul class="footer__social">
-      <li v-for="socialLink in data!.fields.socialLinks" :key="socialLink.id">
+      <li v-for="socialLink in footer.fields.socialLinks" :key="socialLink.id">
         <nuxt-link :href="socialLink.value" target="_blank" rel="noopener noreferrer">
           <nuxt-icon class="footer__social-icon" :name="socialLink.key.toLowerCase()" />
           <span class="sr-only">{{ socialLink.key }}</span>
@@ -21,18 +21,17 @@
     <p class="footer__legal">
       <nuxt-link href="/privacy-policy" class="link">Privacy Policy</nuxt-link>
     </p>
-    <div class="footer__legal" v-html="documentToHtmlString(data!.fields.legalText)" />
+    <div class="footer__legal" v-html="documentToHtmlString(footer.fields.legalText)" />
   </footer>
 </template>
 
 <script lang="ts" setup>
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-import { Contentful } from '@/enums/Contentful'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
 
-const { data } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntry<ContentfulEntries.Footer>(Contentful.EntryIDs.FOOTER)})
-data.value!.fields = formatCMSVariables(data.value!.fields)
+const footerEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Footer, contentTypeId: 'footer' }>({ content_type: 'footer', limit: 1 })})
+const footer = formatCMSVariables(footerEntries.data.value!.items[0])
 </script>
 
 <style lang="scss" scoped>

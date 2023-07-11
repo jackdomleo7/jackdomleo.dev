@@ -1,7 +1,7 @@
-import type { EntryFields } from 'contentful'
+import type { EntryFieldTypes } from 'contentful'
 
 export interface BlogDetails {
-  hubTitle: string;
-  hubDescription?: EntryFields.RichText;
-  articleDisclaimer?: EntryFields.RichText;
+  hubTitle: EntryFieldTypes.Text;
+  hubDescription?: EntryFieldTypes.RichText;
+  articleDisclaimer?: EntryFieldTypes.RichText;
 }

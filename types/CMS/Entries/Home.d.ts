@@ -1,14 +1,17 @@
-import type { Asset, EntryFields } from 'contentful'
-import type { IRepeaterItem } from '../RepeaterItem'
+import type { EntryFieldTypes } from 'contentful'
 
 export interface Home {
-  metaDescription: string;
-  title: string
-  heroBody: EntryFields.RichText
-  heroImage: Asset
-  aboutTitle: string
-  aboutBody: EntryFields.RichText
-  aboutImage: Asset
-  skillsTitle: string
-  skillsList: IRepeaterItem[]
+  metaDescription: EntryFieldTypes.Text;
+  title: EntryFieldTypes.Text
+  heroBody: EntryFieldTypes.RichText
+  heroImage: EntryFieldTypes.AssetLink
+  aboutTitle: EntryFieldTypes.Text
+  aboutBody: EntryFieldTypes.RichText
+  aboutImage: EntryFieldTypes.AssetLink
+  skillsTitle: EntryFieldTypes.Text
+  skillsList: EntryFieldTypes.Object<{
+    id: string;
+    key: string;
+    value: string;
+  }[]>
 }

@@ -45,7 +45,7 @@ const props = defineProps({
   }
 })
 
-const { data: projects } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Project>({ content_type: 'project', limit: 1000, order: '-sys.createdAt' })})
+const { data: projects } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Project, contentTypeId: 'project' }>({ content_type: 'project', limit: 1000, order: '-sys.createdAt' })})
 projects.value!.items = formatCMSVariables(projects.value!.items)
 
 let list = projects.value!.items

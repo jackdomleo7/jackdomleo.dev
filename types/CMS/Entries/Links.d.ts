@@ -1,15 +1,13 @@
-import type { EntryFields } from 'contentful'
-
-export interface Link {
-  name: string;
-  url: string;
-  icon?: string;
-}
+import type { EntryFieldTypes } from 'contentful'
 
 export interface Links {
-  title: string;
-  description: EntryFields.RichText;
-  links: {
-    items: Link[]
-  };
+  title: EntryFieldTypes.Text;
+  description: EntryFieldTypes.RichText;
+  links: EntryFieldTypes.Object<{
+    items: {
+      name: EntryFieldTypes.Text;
+      url: EntryFieldTypes.Text;
+      icon?: EntryFieldTypes.Text;
+    }[]
+  }>;
 }

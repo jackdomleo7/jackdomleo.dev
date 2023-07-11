@@ -1,11 +1,11 @@
-import type { Asset, EntryFields } from 'contentful'
+import type { EntryFieldTypes } from 'contentful'
 
 export interface Article {
-  title: string;
-  slug: string;
-  image: Asset;
-  description: string;
-  publishDate: string;
-  tags: string[];
-  body: EntryFields.RichText;
+  title: EntryFieldTypes.Boolean;
+  slug: EntryFieldTypes.Text;
+  image: EntryFieldTypes.AssetLink;
+  description: EntryFieldTypes.Text;
+  publishDate: EntryFieldTypes.Date;
+  tags: EntryFieldTypes.Array<EntryFieldTypes.Symbol>;
+  body: EntryFieldTypes.RichText;
 }

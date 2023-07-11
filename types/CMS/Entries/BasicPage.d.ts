@@ -1,8 +1,8 @@
-import type { EntryFields } from 'contentful'
+import type { EntryFieldTypes } from 'contentful'
 
 export interface BasicPage {
-  metaDescription?: string;
-  title: string,
-  slug: string,
-  body: EntryFields.RichText,
+  metaDescription?: EntryFieldTypes.Text;
+  title: EntryFieldTypes.Text,
+  slug: EntryFieldTypes.Text,
+  body: EntryFieldTypes.RichText,
 }

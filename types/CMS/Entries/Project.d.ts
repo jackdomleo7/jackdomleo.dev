@@ -1,11 +1,11 @@
-import type { EntryFields } from 'contentful'
+import type { EntryFieldTypes } from 'contentful'
 
 export interface Project {
-  name: string
+  name: EntryFieldTypes.Text
   type: 'Project'|'Mini'|'Client'
-  url: string
-  description: EntryFields.RichText
-  tech: string[]
-  tags?: string[]
-  image: Asset
+  url: EntryFieldTypes.Text
+  description: EntryFieldTypes.RichText
+  tech: EntryFieldTypes.Object<string[]>
+  tags?: EntryFieldTypes.Object<string[]>
+  image: EntryFieldTypes.AssetLink
 }

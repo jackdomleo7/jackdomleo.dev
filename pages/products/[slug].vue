@@ -44,7 +44,7 @@ import type { GumroadProduct } from '@/types/GumroadProduct';
 const $route = useRoute()
 const config = useRuntimeConfig()
 
-const { data } = await useAsyncData(`product-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Product>({ content_type: 'product', limit: 1, 'fields.slug': $route.params.slug })})
+const { data } = await useAsyncData(`product-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Product, contentTypeId: 'product' }>({ content_type: 'product', limit: 1, 'fields.slug': $route.params.slug as string })})
 const product = formatCMSVariables(data.value!.items[0])
 
 let gumroad: GumroadProduct['product'] | undefined;

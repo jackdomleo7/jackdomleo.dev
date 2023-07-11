@@ -1,6 +1,6 @@
-import type { EntryFields } from 'contentful'
+import type { EntryFieldTypes } from 'contentful'
 
 export interface Projects {
-  title: string
-  description: EntryFields.RichText
+  title: EntryFieldTypes.Text
+  description: EntryFieldTypes.RichText
 }
