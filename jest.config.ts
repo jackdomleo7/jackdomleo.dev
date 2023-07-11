@@ -15,6 +15,7 @@ const config: Config = {
     "^.+\\.ts$": "ts-jest",
     "^.+\\.js$": "babel-jest"
   },
+  setupFilesAfterEnv: ['./jest.setup.ts'],
   collectCoverage: true
 }
 

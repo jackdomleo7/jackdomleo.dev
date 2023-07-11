@@ -3,10 +3,6 @@ import { calculateYearsExperience } from './NO_OF_YEARS_EXPERIENCE'
 jest.useFakeTimers()
 
 describe('calculateYearsExperience()', () => {
-  afterEach(() => {
-    jest.clearAllTimers()
-  })
-
   it('returns "1" when years experience is 1 year', () => {
     jest.setSystemTime(new Date('2019-09-03'))
 
