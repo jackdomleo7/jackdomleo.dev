@@ -1,36 +1,51 @@
 <template>
-  <ul class="posts container">
-    <li v-for="(item, index) in list" :key="item.sys.id">
-      <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
-        <article class="post__article">
-          <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image.fields.file.url" :alt="item.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
-          <div class="post__details">
-            <ul class="post__tags">
-              <li v-for="tag in item.fields.tags" :key="tag" class="tag">
-                {{ tag }}
-              </li>
-            </ul>
-            <h2 class="post__title">{{ item.fields.title }}</h2>
-            <p class="post__description">{{ item.fields.description }}</p>
-            <footer>
-              <p class="post__date">
-                <span class="sr-only">Publish date:</span>
-                <time :datetime="dayjs(new Date(item.fields.publishDate)).format('YYYY-MM-DD')">
-                  {{ dayjs(new Date(item.fields.publishDate)).format('MMMM D, YYYY') }}
-                </time>
-              </p>
-            </footer>
-          </div>
-        </article>
-      </nuxt-link>
-    </li>
-  </ul>
+  <div>
+    <div v-if="showFilter" class="container">
+      <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" style="max-width: 400px;" :options="filterOptions" @selected-options="updateFilters($event)" />
+    </div>
+    <ul class="posts container">
+      <li v-for="(item, index) in list" v-show="articleMatchesFilter(item)" :key="item.sys.id">
+        <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
+          <article class="post__article">
+            <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image.fields.file.url" :alt="item.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
+            <div class="post__details">
+              <ul class="post__tags">
+                <li v-for="tag in item.fields.tags" :key="tag" class="tag">
+                  {{ tag }}
+                </li>
+              </ul>
+              <h2 class="post__title">{{ item.fields.title }}</h2>
+              <p class="post__description">{{ item.fields.description }}</p>
+              <footer>
+                <p class="post__date">
+                  <span class="sr-only">Publish date:</span>
+                  <time :datetime="dayjs(new Date(item.fields.publishDate)).format('YYYY-MM-DD')">
+                    {{ dayjs(new Date(item.fields.publishDate)).format('MMMM D, YYYY') }}
+                  </time>
+                </p>
+              </footer>
+            </div>
+          </article>
+        </nuxt-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import dayjs from 'dayjs'
+import { type Entry } from 'contentful';
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
+import type { Article } from '@/types/CMS/Entries/Article';
+import type { ComboboxOption } from '@/types/components/ComboboxInput'
+
+const ComboboxInput = defineAsyncComponent(() => import('./ComboboxInput.vue'))
+
+const $route = useRoute()
+const $router = useRouter()
+
+const filters = ref<string[]>([])
 
 const props = defineProps({
   limit: {
@@ -46,14 +61,38 @@ const props = defineProps({
     validator(value: number): boolean {
       return value >= 0
     }
+  },
+  showFilter: {
+    type: Boolean,
+    defailt: false
   }
 })
 
 const { data: blog } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: Omit<ContentfulEntries.Article, 'body'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: '-fields.publishDate', select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
-let list = formatCMSVariables(blog.value!.items)
+const list = formatCMSVariables(blog.value!.items)
 
 if (props.limit) {
-  list = list.slice(0, props.limit)
+  list.length = props.limit
+}
+
+const tags = [...new Set(list.map(x => x.fields.tags.join(',')).join(',').split(','))].filter(Boolean).sort()
+const years = [...new Set(list.map(x => `${new Date(x.fields.publishDate).getFullYear()}`))].filter(Boolean)
+const filterOptions: ComboboxOption[] = [...tags.map(x => { return { value: x, text: x }}), ...years.map(x => { return { value: x, text: x } })]
+const routeFilters: ComboboxOption[] = ($route.query.filters ? ($route.query.filters as string).split(',').map(filter => { return filterOptions.find(x => x.value.toLowerCase() === filter.toLowerCase() || x.text.toLowerCase() === filter.toLowerCase())! }) : []).filter(Boolean)
+
+function articleMatchesFilter(article: Entry<{ fields: Omit<Article, "body">; contentTypeId: "article"; }, undefined, string>): boolean {
+  if (!filters.value.length) return true
+  else {
+    for (const filter of filters.value) {
+      if (article.fields.tags.includes(filter) || `${new Date(article.fields.publishDate).getFullYear()}` === filter) return true
+    }
+    return false
+  }
+}
+
+function updateFilters(event: string[]): void {
+  filters.value = event
+  $router.replace({ query: { filters: event.length ? event.join(',').toLowerCase() : undefined } })
 }
 </script>
 
@@ -64,9 +103,13 @@ if (props.limit) {
   margin-block: 0;
   display: flex;
   align-items: stretch;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 3rem;
+
+  @media (min-width: $responsive-standard-tablet) {
+    padding-inline: 0;
+  }
 
   > li {
     width: 26.5rem;
