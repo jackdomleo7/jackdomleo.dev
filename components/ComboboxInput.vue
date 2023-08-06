@@ -21,7 +21,7 @@
           @click="isMenuOpen = true; !!typedValue && (typedValue += ', ')"
           @blur="onBlur"
           @input="onInput($event)"
-          @keydown="onInputKeydown($event)"
+          @keydown="onKeydown($event)"
         />
         <nuxt-icon class="combobox__chevron" name="chevron_down" />
       </div>
@@ -175,7 +175,7 @@ function onInput(event: Event): void {
   }
 }
 
-function onInputKeydown(event: KeyboardEvent): void {
+function onKeydown(event: KeyboardEvent): void {
   const max = props.options.length - 1
   const scrollOptionIntoView = () => {
     const container = document.getElementById(`${props.id}-listbox`)!
