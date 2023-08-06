@@ -81,10 +81,10 @@ const filterOptions: ComboboxOption[] = [...tags.map(x => { return { value: x, t
 const routeFilters: ComboboxOption[] = ($route.query.filters ? ($route.query.filters as string).split(',').map(filter => { return filterOptions.find(x => x.value.toLowerCase() === filter.toLowerCase() || x.text.toLowerCase() === filter.toLowerCase())! }) : []).filter(Boolean)
 
 function articleMatchesFilter(article: Entry<{ fields: Omit<Article, "body">; contentTypeId: "article"; }, undefined, string>): boolean {
-  if (!filters.value.length) return true
+  if (!filters.value.length || !article.fields.tags.length) return true
   else {
     for (const filter of filters.value) {
-      if (article.fields.tags.includes(filter) || `${new Date(article.fields.publishDate).getFullYear()}` === filter) return true
+      if (article.fields.tags.map(x => x.toLowerCase()).includes(filter.toLowerCase()) || `${new Date(article.fields.publishDate).getFullYear()}` === filter) return true
     }
     return false
   }
