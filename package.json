@@ -23,6 +23,7 @@
     "test:openReport": "open-cli coverage/lcov-report/index.html"
   },
   "dependencies": {
+    "@vueuse/core": "^10.3.0",
     "contentful": "10.3.4",
     "cookiejs": "^2.1.2",
     "cooltipz-css": "^2.2.2",
