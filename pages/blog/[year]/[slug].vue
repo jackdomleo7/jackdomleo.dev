@@ -6,7 +6,7 @@
     <nuxt-picture class="article__img" provider="contentful" :src="article.fields.image.fields.file.url" :alt="article.fields.image.fields.description" width="768" height="403" sizes="4kdesktop:768px" preload />
     <ul class="article__tags">
       <li v-for="tag in article.fields.tags" :key="tag" class="tag">
-        {{ tag }}
+        <nuxt-link :to="{ path: '/blog', query: { filters: tag.toLowerCase() } }">{{ tag }}</nuxt-link>
       </li>
     </ul>
     <p class="article__date">
