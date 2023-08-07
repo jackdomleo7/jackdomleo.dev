@@ -245,7 +245,6 @@ $inputHeight: 2.5rem;
     background-color: var(--color-bg);
     border: 1px solid var(--colour-mid-grey);
     border-radius: var(--border-radius-standard);
-    box-shadow: var(--shadow);
     height: $inputHeight;
     width: 100%;
     padding: 0 2.5rem 0 1rem;
