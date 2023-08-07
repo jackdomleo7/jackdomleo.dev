@@ -18,12 +18,17 @@
           type="text"
           :placeholder="label"
           :aria-activedescendant="`${id}-option-${activeIndex}`"
-          @click="isMenuOpen = true; !!typedValue && (typedValue += ', ')"
+          @click="isMenuOpen = true; !!typedValue && !!typedValue.split(',').map(x => x.trim()).at(-1) && (typedValue += ', ')"
+          @focus="isMenuOpen = true"
           @blur="onBlur"
           @input="onInput($event)"
           @keydown="onKeydown($event)"
         />
-        <nuxt-icon class="combobox__chevron" name="chevron_down" />
+        <nuxt-icon v-if="!typedValue" class="combobox__header-icon combobox__chevron" name="chevron_down" />
+        <button v-else class="combobox__header-icon combobox__cross" @click="clearInput()">
+          <nuxt-icon name="cross" />
+          <span class="sr-only">Clear</span>
+        </button>
       </div>
       <div
         v-show="isMenuOpen"
@@ -124,6 +129,11 @@ function checkValue(): void {
   }
 
   emit('selectedOptions', typedValue.value.split(',').map(x => x.trim()).filter(Boolean))
+}
+
+function clearInput(): void {
+  typedValue.value = ''
+  emit('selectedOptions', [])
 }
 
 function onBlur(): void {
@@ -245,7 +255,6 @@ $inputHeight: 2.5rem;
     background-color: var(--color-bg);
     border: 1px solid var(--colour-mid-grey);
     border-radius: var(--border-radius-standard);
-    box-shadow: var(--shadow);
     height: $inputHeight;
     width: 100%;
     padding: 0 2.5rem 0 1rem;
@@ -273,21 +282,29 @@ $inputHeight: 2.5rem;
     }
   }
 
-  &__chevron {
+  &__header-icon {
     position: absolute;
     right: 0.5rem;
     top: 50%;
     display: block;
     height: 1.5rem;
     width: 1.5rem;
-    pointer-events: none;
     transform: translateY(-50%);
+  }
+
+  &__chevron {
+    pointer-events: none;
     transition: transform 0.3s ease;
     will-change: transform;
 
     .combobox__header--open & {
       transform: translateY(-50%) rotate(-90deg);
     }
+  }
+
+  &__cross {
+    background-color: transparent;
+    border: 0;
   }
 
   &__menu {

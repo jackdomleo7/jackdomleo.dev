@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="showFilter" class="container">
-      <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" style="max-width: 400px;" :options="filterOptions" @selected-options="updateFilters($event)" />
+      <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" :options="filterOptions" class="filter" @selected-options="updateFilters($event)" />
     </div>
     <ul class="posts container">
       <li v-for="(item, index) in list" v-show="articleMatchesFilter(item)" :key="item.sys.id">
@@ -97,22 +97,24 @@ function updateFilters(event: string[]): void {
 </script>
 
 <style lang="scss" scoped>
+$postWidth: 26.5rem;
+
+.filter {
+  max-width: $postWidth;
+}
+
 .posts {
   list-style-type: none;
-  padding: 1rem;
+  padding: 1rem 0;
   margin-block: 0;
   display: flex;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 3rem;
-
-  @media (min-width: $responsive-standard-tablet) {
-    padding-inline: 0;
-  }
+  gap: 3rem 0.5rem;
 
   > li {
-    width: 26.5rem;
+    width: $postWidth;
     max-width: 100%;
   }
 }
