@@ -18,7 +18,7 @@
           type="text"
           :placeholder="label"
           :aria-activedescendant="`${id}-option-${activeIndex}`"
-          @click="isMenuOpen = true; !!typedValue && (typedValue += ', ')"
+          @click="isMenuOpen = true; !!typedValue && !!typedValue.split(',').map(x => x.trim()).at(-1) && (typedValue += ', ')"
           @blur="onBlur"
           @input="onInput($event)"
           @keydown="onKeydown($event)"
