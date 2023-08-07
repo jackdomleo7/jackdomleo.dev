@@ -264,6 +264,14 @@ useHead({
   }
 }
 
+.blog {
+  :deep() {
+    .blog__list {
+      padding-inline: 1rem;
+    }
+  }
+}
+
 .blog,
 .projects {
   display: flex;

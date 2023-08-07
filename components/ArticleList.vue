@@ -105,17 +105,13 @@ $postWidth: 26.5rem;
 
 .posts {
   list-style-type: none;
-  padding: 1rem;
+  padding: 1rem 0;
   margin-block: 0;
   display: flex;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 3rem;
-
-  @media (min-width: $responsive-standard-tablet) {
-    padding-inline: 0;
-  }
+  gap: 3rem 0.5rem;
 
   > li {
     width: $postWidth;
