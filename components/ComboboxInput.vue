@@ -18,8 +18,8 @@
           type="text"
           :placeholder="label"
           :aria-activedescendant="`${id}-option-${activeIndex}`"
-          @click="isMenuOpen = true; !!typedValue && !!typedValue.split(',').map(x => x.trim()).at(-1) && (typedValue += ', ')"
-          @focus="isMenuOpen = true"
+          @click="!!typedValue && !!typedValue.split(',').map(x => x.trim()).at(-1) && (typedValue += ', ')"
+          @focus="isMenuOpen = true; emit('focus')"
           @blur="onBlur"
           @input="onInput($event)"
           @keydown="onKeydown($event)"
@@ -67,7 +67,8 @@ import { fuzzySearch } from '@/utilities/fuzzySearch';
 import type { ComboboxOption } from '@/types/components/ComboboxInput'
 
 const emit = defineEmits<{
-  selectedOptions: [options: string[]]
+  selectedOptions: [options: string[]],
+  focus: []
 }>()
 
 const props = defineProps({

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="showFilter" class="container">
-      <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" :options="filterOptions" class="filter" @selected-options="updateFilters($event)" />
+      <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" :options="filterOptions" class="filter" @selected-options="updateFilters($event)" @focus="scrollComboboxToTop()" />
     </div>
     <ul class="posts container">
       <li v-for="(item, index) in list" v-show="articleMatchesFilter(item)" :key="item.sys.id">
@@ -93,6 +93,17 @@ function articleMatchesFilter(article: Entry<{ fields: Omit<Article, "body">; co
 function updateFilters(event: string[]): void {
   filters.value = event
   $router.replace({ query: { filters: event.length ? event.join(',').toLowerCase() : undefined } })
+}
+
+function scrollComboboxToTop() {
+  const combobox = document.getElementById('filter')!
+  const headerOffset = 72;
+  const elementPosition = combobox.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.scrollY - headerOffset;
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
 }
 </script>
 
