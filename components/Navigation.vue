@@ -49,7 +49,7 @@
     </div>
     <ul v-if="isMobile" class="nav__more" :class="{'nav__more--open': isMobile && isMobileNavOpen}">
       <li v-for="navItem in getMobileNavItems()" :key="navItem.text">
-        <nuxt-link :to="navItem.url!">
+        <nuxt-link :to="navItem.url!" @click="isMobileNavOpen = false">
           {{ navItem.text }}
         </nuxt-link>
       </li>
