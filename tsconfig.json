@@ -4,6 +4,7 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "verbatimModuleSyntax": false,
     "types": [
       "node",
       "@types/node",
