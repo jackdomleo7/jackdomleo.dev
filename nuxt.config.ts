@@ -37,7 +37,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       BASE_URL: process.env.NUXT_BASE_URL,
-      GOOGLE_ANALYTICS_ID: process.env.NUXT_GOOGLE_ANALYTICS_ID,
       CTF_SPACE_ID: process.env.NUXT_CTF_SPACE_ID,
       CTF_CDA_ACCESS_TOKEN: process.env.NUXT_CTF_CDA_ACCESS_TOKEN,
       CTF_CDA_ACCESS_TOKEN_PREVIEW: process.env.NODE_ENV === 'development' ? process.env.NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW : undefined

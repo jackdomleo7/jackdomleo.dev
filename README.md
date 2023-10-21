@@ -29,7 +29,6 @@ Key links:
 
 Create a `.env` file with the following properties:
 - `NUXT_BASE_URL`
-- `NUXT_GOOGLE_ANALYTICS_ID`
 - `NUXT_CTF_SPACE_ID` // Contentful
 - `NUXT_CTF_CDA_ACCESS_TOKEN` // Contentful
 - `NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW` // Contentful

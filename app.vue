@@ -1,8 +1,5 @@
 <template>
   <div class="page">
-    <ClientOnly>
-      <CookieConsent v-if="trackingConsent === false" @close="onClose" />
-    </ClientOnly>
     <Navigation />
     <main>
       <NuxtLayout />
@@ -12,34 +9,11 @@
 </template>
 
 <script lang="ts" setup>
-import cookie from 'cookiejs';
-import { bootstrap } from 'vue-gtag';
-import CookieConsent from './components/CookieConsent.vue';
 import Navigation from './components/Navigation.vue';
 import SiteFooter from './components/SiteFooter.vue';
 import { formatOGImage } from './utilities/ogImage';
 
 const { data: ogImage } = await useAsyncData((ctx) => { return ctx!.$contentful.getAsset('2HwSTbJwsbPDLabrSltaa3')})
-
-/**
- * false = cookie not set
- * 'false' = user has not consented
- * 'true' = user has consented
- * 'unknown' = unknown
- */
- const trackingConsent = ref<false|'true'|'false'|'unknown'>('unknown')
-
-if (process.client) {
-  trackingConsent.value = cookie.get('analyticsConsented') as false|'true'|'false'
-}
-
-if (trackingConsent.value === 'true') {
-  bootstrap().then(() => {})
-}
-
-function onClose() {
-  trackingConsent.value = cookie.get('analyticsConsented') as false|'true'|'false'
-}
 
 useHead({
   htmlAttrs: {
