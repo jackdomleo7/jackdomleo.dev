@@ -24,8 +24,8 @@ Key links:
 
 ## Local Setup
 
-- Node: v18
-- npm: v9
+- Node: v20
+- npm: v10
 
 Create a `.env` file with the following properties:
 - `NUXT_BASE_URL`
