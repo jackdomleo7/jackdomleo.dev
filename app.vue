@@ -39,8 +39,6 @@ useHead({
     { property: 'og:image:alt', content: ogImage.value?.fields.description },
     { name: 'twitter:title', content: 'Jack Domleo - Frontend & UX Developer' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:site', content: '@jackdomleo7' },
-    { name: 'twitter:creator', content: '@jackdomleo7' },
     { name: 'format-detection', content: 'telephone=no' },
     { name: 'monetization', content: '$ilp.uphold.com/HQqg9QM4JyEj' },
     { name: 'color-scheme', content: 'light dark' }
