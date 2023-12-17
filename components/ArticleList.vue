@@ -4,7 +4,7 @@
       <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" :options="filterOptions" class="filter" @selected-options="updateFilters($event)" @focus="scrollComboboxToTop()" />
     </div>
     <ul class="posts container">
-      <li v-for="(item, index) in list" v-show="articleMatchesFilter(item)" :key="item.sys.id">
+      <li v-for="(item, index) in list" v-show="articleMatchesFilter(item) && index < props.limit" :key="item.sys.id">
         <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
           <article class="post__article">
             <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image.fields.file.url" :alt="item.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
@@ -50,7 +50,7 @@ const filters = ref<string[]>([])
 const props = defineProps({
   limit: {
     type: Number,
-    default: undefined,
+    default: 1000,
     validator(value: number): boolean {
       return value >= 0 && value <= 1000
     }
@@ -70,10 +70,6 @@ const props = defineProps({
 
 const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Omit<ContentfulEntries.Article, 'body'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: '-fields.publishDate', select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
 const list = formatCMSVariables(blog.value!.items)
-
-if (props.limit) {
-  list.length = props.limit
-}
 
 const tags = [...new Set(list.map(x => x.fields.tags.join(',')).join(',').split(','))].filter(Boolean).sort()
 const years = [...new Set(list.map(x => `${new Date(x.fields.publishDate).getFullYear()}`))].filter(Boolean)
