@@ -19,10 +19,13 @@
 
 <script lang="ts" setup>
 import { type PropType } from 'vue';
+import { useRoute } from '#vue-router';
 import { parseRichText } from '@/utilities/parseRichText'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries';
 import type { Project } from '@/types/CMS/Entries/Project';
+
+const $route = useRoute();
 
 const props = defineProps({
   limit: {
@@ -45,7 +48,7 @@ const props = defineProps({
   }
 })
 
-const { data: projects } = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Project, contentTypeId: 'project' }>({ content_type: 'project', limit: 1000, order: '-sys.createdAt' })})
+const { data: projects } = await useAsyncData(`project-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Project, contentTypeId: 'project' }>({ content_type: 'project', limit: 1000, order: '-sys.createdAt' })})
 projects.value!.items = formatCMSVariables(projects.value!.items)
 
 let list = projects.value!.items
