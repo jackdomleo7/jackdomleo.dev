@@ -10,7 +10,7 @@
       </li>
     </ul>
     <p class="article__date">
-      <strong>Posted: </strong>
+      <strong>Published: </strong>
       <time :datetime="dayjs(new Date(article.fields.publishDate)).format('YYYY-MM-DD')" :title="dayjs(new Date(article.fields.publishDate)).format('dddd D MMMM YYYY')">
         {{ dayjs(new Date(article.fields.publishDate)).format('MMMM D, YYYY') }}
       </time>
