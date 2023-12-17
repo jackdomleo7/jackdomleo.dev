@@ -64,7 +64,7 @@ const props = defineProps({
   },
   showFilter: {
     type: Boolean,
-    defailt: false
+    default: false
   }
 })
 
