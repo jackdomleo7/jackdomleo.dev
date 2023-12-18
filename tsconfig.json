@@ -5,6 +5,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": false,
+    "skipLibCheck": false,
     "types": [
       "node",
       "@types/node",

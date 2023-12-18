@@ -3,7 +3,7 @@
     <header class="hero">
       <div class="container container--thinner">
         <div class="hero__row">
-          <nuxt-picture class="hero__img" :src="home!.fields.heroImage.fields.file.url" :alt="home!.fields.heroImage.fields.description" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" provider="contentful" preload />
+          <nuxt-picture class="hero__img" :src="home!.fields.heroImage!.fields.file!.url" :alt="home!.fields.heroImage!.fields.description" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" provider="contentful" preload />
           <h1 class="hero__title" v-html="home!.fields.title" />
         </div>
         <div class="hero__body" v-html="parseRichText(home!.fields.heroBody)" />
@@ -12,7 +12,7 @@
     <section id="about" class="container about">
       <div class="about__inner">
         <div class="about__img">
-          <nuxt-picture :src="home!.fields.aboutImage.fields.file.url" :alt="home!.fields.aboutImage.fields.description" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" provider="contentful" />
+          <nuxt-picture :src="home!.fields.aboutImage!.fields.file!.url" :alt="home!.fields.aboutImage!.fields.description" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" provider="contentful" />
         </div>
         <h2 class="about__header">{{ home!.fields.aboutTitle }}</h2>
         <div class="about__text" v-html="parseRichText(home!.fields.aboutBody)" />

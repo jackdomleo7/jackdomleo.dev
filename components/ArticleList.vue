@@ -7,7 +7,7 @@
       <li v-for="(item, index) in list" v-show="articleMatchesFilter(item) && index < props.limit" :key="item.sys.id">
         <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
           <article class="post__article">
-            <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image.fields.file.url" :alt="item.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
+            <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image!.fields.file!.url" :alt="item.fields.image!.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
             <div class="post__details">
               <ul class="post__tags">
                 <li v-for="tag in item.fields.tags" :key="tag" class="tag">
@@ -34,10 +34,9 @@
 
 <script lang="ts" setup>
 import dayjs from 'dayjs'
-import { type Entry } from 'contentful';
+import type { LastArrayElement } from 'type-fest';
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
-import type { Article } from '@/types/CMS/Entries/Article';
 import type { ComboboxOption } from '@/types/components/ComboboxInput'
 
 const ComboboxInput = defineAsyncComponent(() => import('./ComboboxInput.vue'))
@@ -68,7 +67,7 @@ const props = defineProps({
   }
 })
 
-const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Omit<ContentfulEntries.Article, 'body'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: '-fields.publishDate', select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
+const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Omit<ContentfulEntries.Article, 'body'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: ['-fields.publishDate'], select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
 const list = formatCMSVariables(blog.value!.items)
 
 const tags = [...new Set(list.map(x => x.fields.tags.join(',')).join(',').split(','))].filter(Boolean).sort()
@@ -76,7 +75,7 @@ const years = [...new Set(list.map(x => `${new Date(x.fields.publishDate).getFul
 const filterOptions: ComboboxOption[] = [...tags.map(x => { return { value: x, text: x }}), ...years.map(x => { return { value: x, text: x } })]
 const routeFilters: ComboboxOption[] = ($route.query.filters ? ($route.query.filters as string).split(',').map(filter => { return filterOptions.find(x => x.value.toLowerCase() === filter.toLowerCase() || x.text.toLowerCase() === filter.toLowerCase())! }) : []).filter(Boolean)
 
-function articleMatchesFilter(article: Entry<{ fields: Omit<Article, "body">; contentTypeId: "article"; }, undefined, string>): boolean {
+function articleMatchesFilter(article: LastArrayElement<typeof list>): boolean {
   if (!filters.value.length || !article.fields.tags.length) return true
   else {
     for (const filter of filters.value) {

@@ -2,7 +2,7 @@
   <ul class="projects-list container">
     <li v-for="(project, index) in list" :key="project.sys.id">
       <nuxt-link :to="project.fields.url" class="project" target="_blank">
-        <nuxt-picture class="project__img" provider="contentful" :src="project.fields.image.fields.file.url" :alt="project.fields.image.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadProjectImages" />
+        <nuxt-picture class="project__img" provider="contentful" :src="project.fields.image!.fields.file!.url" :alt="project.fields.image!.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadProjectImages" />
         <div class="project__details">
           <ul class="project__tags">
             <li v-for="tech in project.fields.tech" :key="tech" class="tag">
@@ -23,7 +23,6 @@ import { useRoute } from '#vue-router';
 import { parseRichText } from '@/utilities/parseRichText'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries';
-import type { Project } from '@/types/CMS/Entries/Project';
 
 const $route = useRoute();
 
@@ -43,12 +42,12 @@ const props = defineProps({
     }
   },
   type: {
-    type: String as PropType<Project['type']>,
+    type: String as PropType<ContentfulEntries.Project['type']>,
     default: undefined
   }
 })
 
-const { data: projects } = await useAsyncData(`project-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Project, contentTypeId: 'project' }>({ content_type: 'project', limit: 1000, order: '-sys.createdAt' })})
+const { data: projects } = await useAsyncData(`project-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Project, contentTypeId: 'project' }>({ content_type: 'project', limit: 1000, order: ['-sys.createdAt'] })})
 projects.value!.items = formatCMSVariables(projects.value!.items)
 
 let list = projects.value!.items

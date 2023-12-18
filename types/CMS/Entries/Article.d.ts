@@ -1,7 +1,7 @@
 import type { EntryFieldTypes } from 'contentful'
 
 export interface Article {
-  title: EntryFieldTypes.Boolean;
+  title: EntryFieldTypes.Text;
   slug: EntryFieldTypes.Text;
   image: EntryFieldTypes.AssetLink;
   description: EntryFieldTypes.Text;
