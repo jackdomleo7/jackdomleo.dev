@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     '~/assets/styles/main.scss'
   ],
   modules: [
-    '@nuxt/image-edge',
+    '@nuxt/image',
     'nuxt-icons',
     '@nuxtjs/color-mode',
     'nuxt-simple-sitemap'
