@@ -52,9 +52,6 @@ $ npm run lint:fix
 # Run tests
 $ npm run test
 
-# Run tests & update snapshots
-$ npm run test:updateSnapshots
-
 # Open test report
-$ npm run test:openReport
+$ npm run test:report
 ```

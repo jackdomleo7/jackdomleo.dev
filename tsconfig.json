@@ -8,9 +8,8 @@
     "skipLibCheck": false,
     "types": [
       "node",
-      "@types/node",
-      "jest",
-      "@types/jest"
+      "vite/client",
+      "vitest/globals"
     ]
   }
 }
