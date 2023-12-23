@@ -87,7 +87,7 @@ const props = defineProps({
   }
 })
 
-const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Omit<ContentfulEntries.Article, 'body'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: ['-fields.publishDate'], select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
+const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.Article, 'title'|'description'|'image'|'tags'|'publishDate'|'slug'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: ['-fields.publishDate'], select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
 const list = formatCMSVariables(blog.value!.items)
 
 const displayedList = ref<typeof list>([]);
