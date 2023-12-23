@@ -12,7 +12,7 @@
     </ul>
     <ul class="footer__social">
       <li v-for="socialLink in footer.fields.socialLinks" :key="socialLink.id">
-        <nuxt-link :href="socialLink.value" target="_blank" rel="noopener noreferrer">
+        <nuxt-link :href="socialLink.value" target="_blank" rel="noopener noreferrer" data-cooltipz-dir="top" :aria-label="socialLink.key">
           <nuxt-icon class="footer__social-icon" :name="socialLink.key.toLowerCase()" />
           <span class="sr-only">{{ socialLink.key }}</span>
         </nuxt-link>
@@ -94,7 +94,6 @@ const footer = formatCMSVariables(footerEntries.data.value!.items[0])
       display: grid;
       place-items: center;
       border-radius: 50%;
-      overflow: hidden;
       background-color: var(--color-bg);
       border: 1px solid var(--color-primary);
       transition: all var(--standard-animation-timing) ease;
