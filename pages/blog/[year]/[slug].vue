@@ -1,43 +1,57 @@
 <template>
-  <article class="article container container--thinner">
-    <header>
-      <h1 class="article__title">{{ article.fields.title }}</h1>
-    </header>
-    <nuxt-picture class="article__img" provider="contentful" :src="article.fields.image!.fields.file!.url" :alt="article.fields.image!.fields.description" width="768" height="403" sizes="4kdesktop:768px" preload />
-    <ul class="article__tags">
-      <li v-for="tag in article.fields.tags" :key="tag" class="tag">
-        <nuxt-link :to="{ path: '/blog', query: { filters: tag.toLowerCase() } }">{{ tag }}</nuxt-link>
-      </li>
-    </ul>
-    <p class="article__date">
-      <strong>Published: </strong>
-      <time :datetime="dayjs(new Date(article.fields.publishDate)).format('YYYY-MM-DD')" :title="dayjs(new Date(article.fields.publishDate)).format('dddd D MMMM YYYY')">
-        {{ dayjs(new Date(article.fields.publishDate)).format('MMMM D, YYYY') }}
-      </time>
-    </p>
-    <div class="rich-text article__content" v-html="parseRichText(article.fields.body, { $img })" />
-    <div v-if="blogDetails.fields.articleDisclaimer" class="article__disclaimer" v-html="parseRichText(blogDetails.fields.articleDisclaimer)" />
-    <ul class="article__share">
-      <li>
-        <a :href="`https://twitter.com/intent/tweet?text=${article.fields.title} by Jack Domleo&url=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on Twitter">
-          <nuxt-icon name="twitter" />
-          <span class="sr-only">Share on Twitter</span>
-        </a>
-      </li>
-      <li>
-        <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${config.public.BASE_URL}${$route.path}&title=${article.fields.title}&summary=${article.fields.title} by Jack Domleo&source=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on LinkedIn">
-          <nuxt-icon name="linkedin" />
-          <span class="sr-only">Share on LinkedIn</span>
-        </a>
-      </li>
-      <li>
-        <button data-cooltipz-dir="top" aria-label="Copy link" @click="copyLink()">
-          <nuxt-icon name="link" />
-          <span class="sr-only">Copy link</span>
-        </button>
-      </li>
-    </ul>
-  </article>
+  <div class="article container container--thinner">
+    <article>
+      <header>
+        <h1 class="article__title">{{ article.fields.title }}</h1>
+      </header>
+      <nuxt-picture class="article__img" provider="contentful" :src="article.fields.image!.fields.file!.url" :alt="article.fields.image!.fields.description" width="768" height="403" sizes="4kdesktop:768px" preload />
+      <ul class="article__tags">
+        <li v-for="tag in article.fields.tags" :key="tag" class="tag">
+          <nuxt-link :to="{ path: '/blog', query: { filters: tag.toLowerCase() } }">{{ tag }}</nuxt-link>
+        </li>
+      </ul>
+      <p class="article__date">
+        <strong>Published: </strong>
+        <time :datetime="dayjs(new Date(article.fields.publishDate)).format('YYYY-MM-DD')" :title="dayjs(new Date(article.fields.publishDate)).format('dddd D MMMM YYYY')">
+          {{ dayjs(new Date(article.fields.publishDate)).format('MMMM D, YYYY') }}
+        </time>
+      </p>
+      <div class="rich-text article__content" v-html="parseRichText(article.fields.body, { $img })" />
+      <div v-if="blogDetails.fields.articleDisclaimer" class="article__disclaimer" v-html="parseRichText(blogDetails.fields.articleDisclaimer)" />
+      <ul class="article__share">
+        <li>
+          <a :href="`https://twitter.com/intent/tweet?text=${article.fields.title} by Jack Domleo&url=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on Twitter">
+            <nuxt-icon name="twitter" />
+            <span class="sr-only">Share on Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${config.public.BASE_URL}${$route.path}&title=${article.fields.title}&summary=${article.fields.title} by Jack Domleo&source=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on LinkedIn">
+            <nuxt-icon name="linkedin" />
+            <span class="sr-only">Share on LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <button data-cooltipz-dir="top" aria-label="Copy link" @click="copyLink()">
+            <nuxt-icon name="link" />
+            <span class="sr-only">Copy link</span>
+          </button>
+        </li>
+      </ul>
+    </article>
+
+    <div class="article__suggested">
+      <h2>What to read next</h2>
+      <ArticleList
+  :limit="2" container="thinner" :suggested="{
+        current: article.fields.title,
+        titles: article.fields.suggestedArticles?.map(x => x?.fields.title || '').filter(Boolean) || [],
+        tags: article.fields.tags || []
+      }
+        "
+      />
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -179,6 +193,14 @@ useHead({
       cursor: pointer;
       display: grid;
       place-items: center;
+    }
+  }
+
+  &__suggested {
+    margin-top: 4rem;
+
+    h2 {
+      font-size: var(--text-subtitle);
     }
   }
 }
