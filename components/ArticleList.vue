@@ -1,16 +1,17 @@
 <template>
-  <div>
-    <div v-if="showFilter" class="container">
+  <div class="container">
+    <div v-if="showFilter">
       <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" :options="filterOptions" class="filter" @selected-options="updateFilters($event)" @focus="scrollComboboxToTop()" />
     </div>
-    <ul class="posts container">
-      <li v-for="(item, index) in list" v-show="articleMatchesFilter(item) && index < props.limit" :key="item.sys.id">
+    <ul class="posts">
+      <li v-for="(item, index) in displayedList" v-show="articleMatchesFilter(item)" :key="item.sys.id">
         <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
           <article class="post__article">
+            <p v-if="props.suggested.titles.includes(item.fields.title)" class="post__banner">Suggested</p>
             <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image!.fields.file!.url" :alt="item.fields.image!.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
             <div class="post__details">
               <ul class="post__tags">
-                <li v-for="tag in item.fields.tags" :key="tag" class="tag">
+                <li v-for="tag in item.fields.tags" :key="tag" class="tag" :class="{ 'tag--bold': props.suggested.tags.includes(tag) }">
                   {{ tag }}
                 </li>
               </ul>
@@ -33,11 +34,18 @@
 </template>
 
 <script lang="ts" setup>
+import { type PropType } from 'vue';
 import dayjs from 'dayjs'
 import type { LastArrayElement } from 'type-fest';
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ComboboxOption } from '@/types/components/ComboboxInput'
+
+interface Suggested {
+  current: string;
+  titles: string[];
+  tags: string[];
+}
 
 const ComboboxInput = defineAsyncComponent(() => import('./ComboboxInput.vue'))
 
@@ -49,7 +57,7 @@ const filters = ref<string[]>([])
 const props = defineProps({
   limit: {
     type: Number,
-    default: 1000,
+    default: undefined,
     validator(value: number): boolean {
       return value >= 0 && value <= 1000
     }
@@ -64,11 +72,65 @@ const props = defineProps({
   showFilter: {
     type: Boolean,
     default: false
+  },
+  suggested: {
+    type: Object as PropType<Suggested>,
+    default: {
+      current: '',
+      titles: [],
+      tags: []
+    } satisfies Suggested
   }
 })
 
-const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Omit<ContentfulEntries.Article, 'body'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: ['-fields.publishDate'], select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
+const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.Article, 'title'|'description'|'image'|'tags'|'publishDate'|'slug'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, order: ['-fields.publishDate'], select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
 const list = formatCMSVariables(blog.value!.items)
+
+const displayedList = ref<typeof list>([]);
+
+if (props.suggested.current) {
+  // Remove current article from the suggested article list
+  list.splice(list.indexOf(list.filter(article => article.fields.title === props.suggested.current)[0]), 1)
+
+  if (props.suggested.titles.length > 0) {
+    const suggestedArticles = list.filter(x => props.suggested.titles.includes(x.fields.title))
+    for (const article of suggestedArticles) {
+      if (!displayedList.value.includes(article)) {
+        displayedList.value.push(article)
+      }
+    }
+  }
+
+  if (!props.limit || displayedList.value.length < props.limit) {
+    for (const tag of props.suggested.tags) {
+      const similarArticles = list.filter(x => x.fields.tags.includes(tag))
+      for (const article of similarArticles) {
+        if (!displayedList.value.includes(article)) {
+          displayedList.value.push(article)
+        }
+      }
+    }
+  }
+
+  if (!props.limit || displayedList.value.length < props.limit) {
+    for (const article of list) {
+      if (!displayedList.value.includes(article)) {
+        displayedList.value.push(article)
+      }
+    }
+  }
+}
+else {
+  displayedList.value = [...list] // Create a clone of the array
+}
+
+if (props.limit && props.limit <= displayedList.value.length) {
+  displayedList.value.length = props.limit;
+}
+
+/***************/
+/** Filtering **/
+/***************/
 
 const tags = [...new Set(list.map(x => x.fields.tags.join(',')).join(',').split(','))].filter(Boolean).sort()
 const years = [...new Set(list.map(x => `${new Date(x.fields.publishDate).getFullYear()}`))].filter(Boolean)
@@ -119,6 +181,10 @@ $postWidth: 26.5rem;
   flex-wrap: wrap;
   gap: 3rem 0.5rem;
 
+  .container--thinner & > li {
+    width: 23rem;
+  }
+
   > li {
     width: $postWidth;
     max-width: 100%;
@@ -126,6 +192,7 @@ $postWidth: 26.5rem;
 }
 
 .post {
+  position: relative;
   display: block;
   overflow: hidden;
   background-color: var(--color-bg);
@@ -138,6 +205,22 @@ $postWidth: 26.5rem;
 
   &:hover {
     background-color: var(--color-fg1);
+  }
+
+  &__banner {
+    position: absolute;
+    background-color: var(--color-accent);
+    color: #27242b;
+    transform-origin: center;
+    transform: rotate(-45deg);
+    margin: 0;
+    padding: 0.25rem 0;
+    top: 1.75rem;
+    left: -2.75rem;
+    font-weight: 700;
+    text-align: center;
+    min-width: 11.25rem;
+    max-width: 11.25rem;
   }
 
   &__article {
@@ -197,5 +280,9 @@ $postWidth: 26.5rem;
 
 .tag {
   color: var(--color-accent);
+
+  &--bold {
+    font-weight: 700;
+  }
 }
 </style>
