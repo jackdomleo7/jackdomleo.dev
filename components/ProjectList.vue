@@ -42,12 +42,12 @@ const props = defineProps({
     }
   },
   type: {
-    type: String as PropType<ContentfulEntries.Project['type']>,
+    type: String as PropType<ContentfulEntries.Project['fields']['type']>,
     default: undefined
   }
 })
 
-const { data: projects } = await useAsyncData(`project-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Project, contentTypeId: 'project' }>({ content_type: 'project', limit: 1000, order: ['-sys.createdAt'] })})
+const { data: projects } = await useAsyncData(`project-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Project>({ content_type: 'project', limit: 1000, order: ['-sys.createdAt'] })})
 projects.value!.items = formatCMSVariables(projects.value!.items)
 
 let list = projects.value!.items

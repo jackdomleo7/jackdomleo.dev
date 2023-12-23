@@ -67,14 +67,14 @@ const $img = useImage()
 const $route = useRoute()
 const config = useRuntimeConfig()
 
-const articleEntries = await useAsyncData(`article-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Article, contentTypeId: 'article' }>({ content_type: 'article', limit: 1, "fields.slug": $route.params.slug as string })})
+const articleEntries = await useAsyncData(`article-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Article>({ content_type: 'article', limit: 1, "fields.slug": $route.params.slug as string })})
 const article = articleEntries.data.value!.items[0]
 // No need for format the whole of `article`, this may have undesired outcomes such as infinite looping if 2 articles are suggestions of each other
 article.fields.body = formatCMSVariables(article.fields.body)
 article.fields.description = formatCMSVariables(article.fields.description)
 article.fields.image = formatCMSVariables(article.fields.image)
 
-const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.BlogDetails, 'articleDisclaimer'>, contentTypeId: 'blogDetails' }>({ content_type: 'blogDetails', limit: 1, select: ['fields.articleDisclaimer'] })})
+const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.BlogDetails['fields'], 'articleDisclaimer'>, contentTypeId: ContentfulEntries.BlogDetails['contentTypeId'] }>({ content_type: 'blogDetails', limit: 1, select: ['fields.articleDisclaimer'] })})
 const blogDetails = blogDetailsEntries.data.value!.items[0]
 
 const bodyAsPlainText = documentToPlainTextString(article.fields.body)

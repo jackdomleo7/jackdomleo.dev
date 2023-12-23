@@ -1,6 +1,9 @@
 import type { EntryFieldTypes } from 'contentful'
 
 export interface Projects {
-  title: EntryFieldTypes.Text
-  description: EntryFieldTypes.RichText
+  contentTypeId: 'projects';
+  fields: {
+    title: EntryFieldTypes.Text;
+    description: EntryFieldTypes.RichText;
+  };
 }

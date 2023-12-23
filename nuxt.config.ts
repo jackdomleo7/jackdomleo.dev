@@ -9,7 +9,7 @@ const contentfulClient = contentful.createClient({
 async function getBlog(): Promise<string[]> {
   const routes: string[] = []
 
-  const blog = await contentfulClient.getEntries<{ fields: Pick<ContentfulEntries.Article, 'slug'|'publishDate'>, contentTypeId: 'article' }>({ content_type: 'article', limit: 1000, select: ['fields.slug', 'fields.publishDate'] })
+  const blog = await contentfulClient.getEntries<{ fields: Pick<ContentfulEntries.Article['fields'], 'slug'|'publishDate'>, contentTypeId: ContentfulEntries.Article['contentTypeId'] }>({ content_type: 'article', limit: 1000, select: ['fields.slug', 'fields.publishDate'] })
   for (const article of blog.items) {
     routes.push(`/blog/${new Date(article.fields.publishDate).getFullYear()}/${article.fields.slug}`)
   }
@@ -20,7 +20,7 @@ async function getBlog(): Promise<string[]> {
 async function getBasicPages(): Promise<string[]> {
   const routes: string[] = []
 
-  const basicPages = await contentfulClient.getEntries<{ fields: Pick<ContentfulEntries.BasicPage, 'slug'>, contentTypeId: 'basicPage' }>({ content_type: 'basicPage', limit: 1000, select: ['fields.slug'] })
+  const basicPages = await contentfulClient.getEntries<{ fields: Pick<ContentfulEntries.BasicPage['fields'], 'slug'>, contentTypeId: ContentfulEntries.BasicPage['contentTypeId'] }>({ content_type: 'basicPage', limit: 1000, select: ['fields.slug'] })
   for (const page of basicPages.items) {
     routes.push(`/${page.fields.slug}`)
   }

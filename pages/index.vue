@@ -57,7 +57,7 @@ import ProjectList from '@/components/ProjectList.vue'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
 
-const homeEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Home, contentTypeId: 'home' }>({ content_type: 'home', limit: 1 })})
+const homeEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Home>({ content_type: 'home', limit: 1 })})
 const home = formatCMSVariables(homeEntries.data.value!.items[0])
 
 useHead({

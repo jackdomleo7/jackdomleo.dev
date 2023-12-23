@@ -14,7 +14,7 @@ import { parseRichText } from '@/utilities/parseRichText'
 import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ContentfulEntries } from '@/types/CMS/Entries';
 
-const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.BlogDetails, 'hubDescription'>, contentTypeId: 'blogDetails' }>({ content_type: 'blogDetails', limit: 1, select: ['fields.hubDescription'] })})
+const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.BlogDetails['fields'], 'hubDescription'>, contentTypeId: ContentfulEntries.BlogDetails['contentTypeId'] }>({ content_type: 'blogDetails', limit: 1, select: ['fields.hubDescription'] })})
 const blogHub = formatCMSVariables(blogDetailsEntries.data.value!.items[0])
 
 useHead({

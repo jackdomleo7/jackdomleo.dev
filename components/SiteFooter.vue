@@ -30,7 +30,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
 
-const footerEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: ContentfulEntries.Footer, contentTypeId: 'footer' }>({ content_type: 'footer', limit: 1 })})
+const footerEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Footer>({ content_type: 'footer', limit: 1 })})
 const footer = formatCMSVariables(footerEntries.data.value!.items[0])
 </script>
 
