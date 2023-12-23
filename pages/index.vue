@@ -80,13 +80,13 @@ useHead({
 }
 
 .hero {
-  min-height: calc(100dvh - 9rem);
+  min-height: calc(100vh - 9rem);
   display: grid;
   place-items: center;
   padding: 1rem;
 
   @media (min-width: $responsive-standard-tablet) {
-    min-height: calc(100dvh - 4rem);
+    min-height: calc(100vh - 4rem);
   }
 
   @media (min-height: 646px) {
@@ -150,7 +150,7 @@ useHead({
 }
 
 .about {
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -313,7 +313,7 @@ useHead({
 
 .skills {
   padding-block: 2rem;
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 
