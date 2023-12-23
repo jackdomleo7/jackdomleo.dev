@@ -49,6 +49,7 @@ export default defineNuxtConfig({
     '~/assets/styles/main.scss'
   ],
   modules: [
+    '@nuxt/test-utils/module',
     '@nuxt/image',
     'nuxt-icons',
     '@nuxtjs/color-mode',
