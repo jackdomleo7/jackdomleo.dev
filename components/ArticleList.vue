@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div v-if="showFilter" :class="props.container === 'thinner' ? 'container--thinner' : 'container'">
+  <div class="container">
+    <div v-if="showFilter">
       <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" :options="filterOptions" class="filter" @selected-options="updateFilters($event)" @focus="scrollComboboxToTop()" />
     </div>
-    <ul class="posts" :class="props.container === 'thinner' ? 'container--thinner' : 'container'">
+    <ul class="posts">
       <li v-for="(item, index) in displayedList" v-show="articleMatchesFilter(item)" :key="item.sys.id">
         <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
           <article class="post__article">
@@ -72,10 +72,6 @@ const props = defineProps({
   showFilter: {
     type: Boolean,
     default: false
-  },
-  container: {
-    type: String as PropType<'default'|'thinner'>,
-    default: 'default'
   },
   suggested: {
     type: Object as PropType<Suggested>,
@@ -185,7 +181,7 @@ $postWidth: 26.5rem;
   flex-wrap: wrap;
   gap: 3rem 0.5rem;
 
-  &.container--thinner > li {
+  .container--thinner & > li {
     width: 23rem;
   }
 

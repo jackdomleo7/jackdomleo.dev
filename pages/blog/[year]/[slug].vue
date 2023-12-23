@@ -43,12 +43,13 @@
     <div class="article__suggested">
       <h2>What to read next</h2>
       <ArticleList
-  :limit="2" container="thinner" :suggested="{
-        current: article.fields.title,
-        titles: article.fields.suggestedArticles?.map(x => x?.fields.title || '').filter(Boolean) || [],
-        tags: article.fields.tags || []
-      }
-        "
+        class="container--thinner"
+        :limit="2"
+        :suggested="{
+          current: article.fields.title,
+          titles: article.fields.suggestedArticles?.map(x => x?.fields.title || '').filter(Boolean) || [],
+          tags: article.fields.tags || []
+        }"
       />
     </div>
   </div>
