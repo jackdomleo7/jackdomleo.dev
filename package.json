@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jackdomleo7/jackdomleo.dev.git"
   },
+  "type": "module",
   "homepage": "https://jackdomleo.dev",
   "scripts": {
     "postinstall": "nuxi prepare",
