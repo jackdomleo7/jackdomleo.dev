@@ -39,6 +39,7 @@ useHead({
     { property: 'og:image:alt', content: ogImage.value?.fields.description },
     { name: 'twitter:title', content: 'Jack Domleo - Frontend & UX Developer' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:image', content: formatOGImage(ogImage.value?.fields.file?.url) },
     { name: 'format-detection', content: 'telephone=no' },
     { name: 'color-scheme', content: 'light dark' }
   ],

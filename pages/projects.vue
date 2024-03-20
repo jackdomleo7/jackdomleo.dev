@@ -28,10 +28,7 @@ const projectsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.ge
 const projects = formatCMSVariables(projectsEntries.data.value!.items[0])
 
 useHead({
-  title: 'Projects',
-  meta: [
-    { name: 'twitter:title', content: 'Projects | Jack Domleo' },
-  ]
+  title: 'Projects'
 })
 </script>
 

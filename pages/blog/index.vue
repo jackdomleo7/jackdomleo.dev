@@ -18,10 +18,7 @@ const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful
 const blogHub = formatCMSVariables(blogDetailsEntries.data.value!.items[0])
 
 useHead({
-  title: 'Blog',
-  meta: [
-    { name: 'twitter:title', content: 'Blog | Jack Domleo' },
-  ]
+  title: 'Blog'
 })
 </script>
 

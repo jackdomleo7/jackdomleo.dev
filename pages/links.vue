@@ -26,10 +26,7 @@ const linksEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEn
 const links = formatCMSVariables(linksEntries.data.value!.items[0])
 
 useHead({
-  title: 'Links',
-  meta: [
-    { name: 'twitter:title', content: 'Links | Jack Domleo' },
-  ]
+  title: 'Links'
 })
 </script>
 

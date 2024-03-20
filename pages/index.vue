@@ -62,9 +62,7 @@ const home = formatCMSVariables(homeEntries.data.value!.items[0])
 
 useHead({
   meta: [
-    { name: 'description', content: home.fields.metaDescription },
-    { property: 'og:description', content: home.fields.metaDescription },
-    { name: 'twitter:description', content: home.fields.metaDescription }
+    { name: 'description', content: home.fields.metaDescription }
   ]
 })
 </script>
