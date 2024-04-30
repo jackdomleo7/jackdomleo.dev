@@ -18,14 +18,6 @@
         <div class="about__text" v-html="parseRichText(home!.fields.aboutBody)" />
       </div>
     </section>
-    <section id="blog" class="container blog">
-      <h2 class="blog__heading">From the blog</h2>
-      <ArticleList class="blog__list" :limit="6" />
-      <nuxt-link to="/blog" class="blog__more link">
-        Discover more articles
-        <nuxt-icon class="blog__more-icon" name="arrow_right" />
-      </nuxt-link>
-    </section>
     <section id="skills" class="skills">
       <div class="skills__inner">
         <h2 class="skills__heading container">{{ home!.fields.skillsTitle }}</h2>
@@ -52,7 +44,6 @@
 
 <script lang="ts" setup>
 import { parseRichText } from '@/utilities/parseRichText'
-import ArticleList from '@/components/ArticleList.vue'
 import ProjectList from '@/components/ProjectList.vue'
 import type { ContentfulEntries } from '@/types/CMS/Entries'
 import { formatCMSVariables } from '@/utilities/cmsVariables'
@@ -262,15 +253,6 @@ useHead({
   }
 }
 
-.blog {
-  :deep() {
-    .blog__list {
-      padding-inline: 1rem;
-    }
-  }
-}
-
-.blog,
 .projects {
   display: flex;
   flex-direction: column;
