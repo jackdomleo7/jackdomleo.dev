@@ -97,10 +97,6 @@ const navItems: INav[] = [
         url: '/links'
       },
       {
-        text: 'Affiliates',
-        url: '/affiliates'
-      },
-      {
         text: 'Uses',
         url: '/uses'
       }
