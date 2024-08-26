@@ -28,7 +28,7 @@
     "dayjs": "^1.11.13",
     "highlight.js": "^11.10.0",
     "html-entities": "^2.5.2",
-    "modern-normalize": "^2.0.0",
+    "modern-normalize": "^3.0.0",
     "nuxt-icons": "^3.2.1"
   },
   "devDependencies": {
