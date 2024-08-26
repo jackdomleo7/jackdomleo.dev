@@ -17,8 +17,7 @@
     "dev": "nuxi dev --open",
     "generate": "nuxi generate -m",
     "preview": "nuxi preview",
-    "lint:check": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 --cache .",
-    "lint:fix": "npm run lint:check -- --fix",
+    "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --max-warnings=0 --cache --fix .",
     "test": "rimraf ./coverage && vitest run",
     "test:report": "open-cli coverage/index.html"
   },
