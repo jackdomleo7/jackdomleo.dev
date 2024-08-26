@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-icons',
     '@nuxtjs/color-mode',
-    'nuxt-simple-sitemap'
+    '@nuxtjs/sitemap'
   ],
   image: {
     inject: true,
@@ -77,8 +77,8 @@ export default defineNuxtConfig({
     classPrefix: 'theme--',
     classSuffix: ''
   },
-  sitemap: {
-    siteUrl: process.env.NUXT_BASE_URL
+  site: {
+    url: process.env.NUXT_BASE_URL
   },
   hooks: {
     async 'nitro:config' (nitroConfig) {
