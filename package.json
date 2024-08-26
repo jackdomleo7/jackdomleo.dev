@@ -22,7 +22,7 @@
     "test:report": "open-cli coverage/index.html"
   },
   "dependencies": {
-    "@vueuse/core": "^10.11.1",
+    "@vueuse/core": "^11.0.3",
     "contentful": "10.15.0",
     "cooltipz-css": "^2.3.0",
     "dayjs": "^1.11.13",
