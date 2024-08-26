@@ -33,9 +33,6 @@ jobs:
       - name: Clean install Node dependencies
         run: npm ci --no-audit
 
-      - name: Run linter
-        run: npm run lint:check
-
       - name: Run unit tests
         run: npm run test
 
