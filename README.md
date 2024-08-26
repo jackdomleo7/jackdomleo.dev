@@ -25,7 +25,7 @@ Key links:
 ## Local Setup
 
 - Node: v20
-- npm: v10
+- pnpm: v9
 
 Create a `.env` file with the following properties:
 - `NUXT_BASE_URL`
@@ -35,23 +35,23 @@ Create a `.env` file with the following properties:
 
 ```bash
 # Serve with hot reload at localhost:3000
-$ npm run dev
+$ pnpm run dev
 
 # Generate static project
-$ npm run generate
+$ pnpm run generate
 
 # Launch staging server
-$ npm run preview
+$ pnpm run preview
 
 # Check project linting
-$ npm run lint:check
+$ pnpm run lint:check
 
 # Lint & fix
-$ npm run lint:fix
+$ pnpm run lint:fix
 
 # Run tests
-$ npm run test
+$ pnpm run test
 
 # Open test report
-$ npm run test:report
+$ pnpm run test:report
 ```

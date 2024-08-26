@@ -19,10 +19,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - name: Install npm 10
-        run: npm i -g npm@10
+      - name: Setup pnpm 9
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Get dotenv secrets
         run: |
@@ -32,10 +34,10 @@ jobs:
           echo NUXT_CTF_CDA_ACCESS_TOKEN = ${{ secrets.NUXT_CTF_CDA_ACCESS_TOKEN }} >> .env
 
       - name: Clean install Node dependencies
-        run: npm ci --no-audit
+        run: pnpm i --frozen-lockfile
 
       - name: Generate files
-        run: npm run generate
+        run: pnpm run generate
 
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
