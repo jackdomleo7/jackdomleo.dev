@@ -35,7 +35,7 @@
     "@babel/eslint-parser": "^7.25.1",
     "@contentful/rich-text-html-renderer": "^16.6.9",
     "@contentful/rich-text-plain-text-renderer": "^16.2.9",
-    "@nuxt/image": "^1.7.0",
+    "@nuxt/image": "^1.7.1",
     "@nuxt/test-utils": "^3.14.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
