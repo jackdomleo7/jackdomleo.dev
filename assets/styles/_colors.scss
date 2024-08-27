@@ -1,0 +1,24 @@
+// Cross theme
+$colour-accent: #ff8311;
+$colour-accent-faint: fade-out($colour-accent, 0.8);
+$colour-mid-grey: #888;
+
+// Light theme
+$light-bg: #fbfaf9;
+$light-fg1: #fff;
+$light-primary: #27242b;
+
+// Dark theme
+$dark-bg: #1b2024;
+$dark-fg1: lighten($dark-bg, 5%);
+$dark-primary: #fff;
+
+:root {
+  color-scheme: light dark;
+  --color-accent: #{$colour-accent};
+  --color-accent-faint: #{$colour-accent-faint};
+  --colour-mid-grey: #{$colour-mid-grey};
+  --color-bg: light-dark(#{$light-bg}, #{$dark-bg});
+  --color-fg1: light-dark(#{$light-fg1}, #{$dark-fg1});
+  --color-primary: light-dark(#{$light-primary}, #{$dark-primary});
+}

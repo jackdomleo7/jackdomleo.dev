@@ -25,9 +25,6 @@
                   {{ subItem.text }}
                 </nuxt-link>
               </li>
-              <li v-if="navItem.text.toLowerCase() === 'more'" role="presentation">
-                <ThemePicker />
-              </li>
             </ul>
           </li>
         </ul>
@@ -53,16 +50,11 @@
           {{ navItem.text }}
         </nuxt-link>
       </li>
-      <li role="presentation">
-        <ThemePicker />
-      </li>
     </ul>
   </nav>
 </template>
 
 <script lang="ts" setup>
-import ThemePicker from './ThemePicker.vue';
-
 const route = useRoute()
 
 interface INav {

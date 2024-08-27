@@ -52,7 +52,6 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxt/image',
     'nuxt-icons',
-    '@nuxtjs/color-mode',
     '@nuxtjs/sitemap'
   ],
   image: {
@@ -70,12 +69,6 @@ export default defineNuxtConfig({
       largedesktop: 2880,
       '4kdesktop': 3840
     }
-  },
-  colorMode: {
-    preference: 'system',
-    fallback: 'light',
-    classPrefix: 'theme--',
-    classSuffix: ''
   },
   site: {
     url: process.env.NUXT_BASE_URL

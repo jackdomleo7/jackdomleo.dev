@@ -48,9 +48,6 @@ importers:
       '@nuxt/test-utils':
         specifier: ^3.14.1
         version: 3.14.1(@vue/test-utils@2.4.6)(h3@1.12.0)(happy-dom@15.0.0)(magicast@0.3.4)(nitropack@2.9.7(magicast@0.3.4))(rollup@4.21.1)(vite@5.4.2(@types/node@20.16.1)(sass@1.77.8)(terser@5.31.6))(vitest@2.0.5(@types/node@20.16.1)(happy-dom@15.0.0)(sass@1.77.8)(terser@5.31.6))(vue-router@4.4.3(vue@3.4.38(typescript@5.5.4)))(vue@3.4.38(typescript@5.5.4))
-      '@nuxtjs/color-mode':
-        specifier: ^3.4.4
-        version: 3.4.4(magicast@0.3.4)(rollup@4.21.1)
       '@nuxtjs/eslint-config-typescript':
         specifier: ^12.1.0
         version: 12.1.0(eslint@8.57.0)(typescript@5.5.4)
@@ -944,9 +941,6 @@ packages:
     engines: {node: ^14.18.0 || >=16.10.0}
     peerDependencies:
       vue: ^3.3.4
-
-  '@nuxtjs/color-mode@3.4.4':
-    resolution: {integrity: sha512-VSNJVGnRIjiGmfbMa0cN+rwNRowDRTL/wku/z5MpKSanVo3khIRitBNqNviso1l3T+LW0pLHeXBNp6L8g/l1EA==}
 
   '@nuxtjs/eslint-config-typescript@12.1.0':
     resolution: {integrity: sha512-l2fLouDYwdAvCZEEw7wGxOBj+i8TQcHFu3zMPTLqKuv1qu6WcZIr0uztkbaa8ND1uKZ9YPqKx6UlSOjM4Le69Q==}
@@ -6052,17 +6046,6 @@ snapshots:
       - vls
       - vti
       - vue-tsc
-
-  '@nuxtjs/color-mode@3.4.4(magicast@0.3.4)(rollup@4.21.1)':
-    dependencies:
-      '@nuxt/kit': 3.13.0(magicast@0.3.4)(rollup@4.21.1)
-      pathe: 1.1.2
-      pkg-types: 1.2.0
-      semver: 7.6.3
-    transitivePeerDependencies:
-      - magicast
-      - rollup
-      - supports-color
 
   '@nuxtjs/eslint-config-typescript@12.1.0(eslint@8.57.0)(typescript@5.5.4)':
     dependencies:
