@@ -9,8 +9,10 @@ a[class=""] {
   border: none;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
