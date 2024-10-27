@@ -81,19 +81,14 @@ const navItems: INav[] = [
     url: '/blog'
   },
   {
-    text: 'More',
-    url: null,
-    submenu: [
-      {
-        text: 'Links',
-        url: '/links'
-      },
-      {
-        text: 'Uses',
-        url: '/uses'
-      }
-    ]
+    text: 'Links',
+    url: '/links'
   }
+  // {
+  //   text: 'More',
+  //   url: null,
+  //   submenu: []
+  // }
 ]
 
 function getMobileNavItems(): Omit<INav, 'submenu'>[] {
