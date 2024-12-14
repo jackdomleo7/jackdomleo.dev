@@ -84,7 +84,8 @@ export default defineNuxtConfig({
       devSourcemap: true,
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/styles/scss/variables/responsive.scss" as *;@use "sass:math";'
+          additionalData: '@use "@/assets/styles/scss/variables/responsive.scss" as *;@use "sass:math";',
+          api: 'modern-compiler'
         }
       }
     }
