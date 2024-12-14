@@ -1,6 +1,8 @@
-// Cross theme
+@use 'sass:color';
+
+// All themes
 $colour-accent: #ff8311;
-$colour-accent-faint: fade-out($colour-accent, 0.8);
+$colour-accent-faint: color.adjust($colour-accent, $alpha: -0.8);
 $colour-mid-grey: #888;
 
 // Light theme
@@ -10,7 +12,7 @@ $light-primary: #27242b;
 
 // Dark theme
 $dark-bg: #1b2024;
-$dark-fg1: lighten($dark-bg, 5%);
+$dark-fg1: color.adjust($dark-bg, $lightness: 5%);
 $dark-primary: #fff;
 
 :root {
