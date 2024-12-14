@@ -20,9 +20,9 @@
       <div v-if="blogDetails.fields.articleDisclaimer" class="article__disclaimer" v-html="parseRichText(blogDetails.fields.articleDisclaimer)" />
       <ul class="article__share">
         <li>
-          <a :href="`https://twitter.com/intent/tweet?text=${article.fields.title} by Jack Domleo&url=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on Twitter">
+          <a :href="`https://twitter.com/intent/tweet?text=${article.fields.title} by Jack Domleo&url=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on X">
             <nuxt-icon name="twitter" />
-            <span class="sr-only">Share on Twitter</span>
+            <span class="sr-only">Share on X/Twitter</span>
           </a>
         </li>
         <li>
