@@ -190,11 +190,15 @@ useHead({
       color: #fff;
       border-radius: 50%;
       width: 2rem;
-      aspect-ratio: auto 1 / 1;
+      height: 2rem;
       padding: 0.375rem;
       cursor: pointer;
       display: grid;
       place-items: center;
+
+      @media (forced-colors: active) {
+        border: 1px solid transparent;
+      }
     }
   }
 

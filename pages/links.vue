@@ -78,6 +78,10 @@ useHead({
   padding-inline: 4rem;
   transition: transform 280ms ease;
 
+  @media (forced-colors: active) {
+    border: 1px solid transparent;
+  }
+
   &:hover {
     transform: scale(1.03);
   }

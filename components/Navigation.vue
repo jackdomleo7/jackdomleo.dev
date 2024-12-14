@@ -227,6 +227,10 @@ $navBreak: $responsive-large-tablet;
     height: 100%;
     padding-inline: 0.25rem;
 
+    @media (forced-colors: active) {
+      border: 1px solid transparent;
+    }
+
     &:hover,
     &:focus-within {
       ul {
@@ -327,6 +331,10 @@ $navBreak: $responsive-large-tablet;
     margin: 1rem 0;
     background-color: transparent;
 
+    @media (forced-colors: active) {
+      border: 1px solid ButtonText;
+    }
+
     &-icon {
       width: 1.3rem;
       height: 1.1rem;
@@ -346,6 +354,10 @@ $navBreak: $responsive-large-tablet;
         left: 0;
         transform: rotate(0deg);
         transition: 0.25s ease-in-out;
+
+        @media (forced-colors: active) {
+          background-color: ButtonText;
+        }
 
         &:nth-child(1) {
           top: 0;
@@ -400,6 +412,10 @@ $navBreak: $responsive-large-tablet;
     overflow: hidden;
     visibility: hidden;
 
+    @media (forced-colors: active) {
+      border: 1px solid transparent;
+    }
+
     &--open {
       height: max-content;
       padding-block: 1rem;
@@ -412,6 +428,10 @@ $navBreak: $responsive-large-tablet;
     li {
       &:not(:last-of-type) {
         border-bottom: 1px solid var(--color-fg1);
+      }
+
+      @media (forced-colors: active) {
+        border: 1px solid transparent;
       }
     }
 

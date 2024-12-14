@@ -87,6 +87,10 @@ else if (props.limit) {
   width: 100%;
   height: 100%;
 
+  @media (forced-colors: active) {
+    border: 1px solid transparent;
+  }
+
   &:hover {
     background-color: var(--color-fg1);
   }
