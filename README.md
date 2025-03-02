@@ -24,7 +24,7 @@ Key links:
 
 ## Local Setup
 
-- Node: v20
+- Node: v22
 - pnpm: v10
 
 Create a `.env` file with the following properties:
