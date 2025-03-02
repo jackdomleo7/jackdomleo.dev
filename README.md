@@ -25,7 +25,7 @@ Key links:
 ## Local Setup
 
 - Node: v20
-- pnpm: v9
+- pnpm: v10
 
 Create a `.env` file with the following properties:
 - `NUXT_BASE_URL`
