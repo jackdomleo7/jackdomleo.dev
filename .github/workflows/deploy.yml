@@ -1,8 +1,6 @@
 name: deploy
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Every day at 00:00
   push:
     branches:
       - master
@@ -44,6 +42,3 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-
-      - name: Keep workflow alive
-        uses: gautamkrishnar/keepalive-workflow@master
