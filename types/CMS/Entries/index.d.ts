@@ -6,6 +6,7 @@ import type { Links as EntryLinks } from './Links'
 import type { Footer as EntryFooter } from './Footer'
 import type { Project as EntryProject } from './Project'
 import type { Projects as EntryProjects } from './Projects'
+import type { Work as EntryWork } from './Work'
 
 export namespace ContentfulEntries {
   export interface Article extends EntryArticle {}
@@ -16,4 +17,5 @@ export namespace ContentfulEntries {
   export interface Footer extends EntryFooter {}
   export interface Project extends EntryProject {}
   export interface Projects extends EntryProjects {}
+  export interface Work extends EntryWork {}
 }

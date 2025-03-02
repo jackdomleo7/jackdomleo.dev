@@ -15,7 +15,7 @@
             <nuxt-link v-if="navItem.url" :to="navItem.url">
               <span>{{ navItem.text }}</span>
             </nuxt-link>
-            <div v-else>
+            <div v-else tabindex="0">
               <span>{{ navItem.text }}</span>
               <nuxt-icon class="nav__item-chevron" name="chevron_down" />
             </div>
@@ -55,6 +55,8 @@
 </template>
 
 <script lang="ts" setup>
+import type { FixedLengthArray } from 'type-fest';
+
 const route = useRoute()
 
 interface INav {
@@ -71,24 +73,29 @@ const isTouchscreen = ref(false)
 const isMobileNavOpen = ref(false)
 const navIsAtTop = ref(false)
 
-const navItems: INav[] = [
+const navItems: FixedLengthArray<INav, 3> = [ // No more than 3 top-level items
   {
     text: 'Projects',
     url: '/projects'
   },
   {
-    text: 'Blog',
-    url: '/blog'
+    text: 'Work',
+    url: '/work'
   },
   {
-    text: 'Links',
-    url: '/links'
+    text: 'More',
+    url: null,
+    submenu: [
+      {
+        text: 'Blog',
+        url: '/blog'
+      },
+      {
+        text: 'Links',
+        url: '/links'
+      }
+    ]
   }
-  // {
-  //   text: 'More',
-  //   url: null,
-  //   submenu: []
-  // }
 ]
 
 function getMobileNavItems(): Omit<INav, 'submenu'>[] {
