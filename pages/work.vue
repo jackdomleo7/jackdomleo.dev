@@ -120,7 +120,7 @@ useHead({
   }
 
   &__roles {
-    list-style-type: none;
+    list-style-type: disclosure-closed;
     padding-left: calc(var(--logo-size) + var(--logo-gap));
     margin-top: 1.75rem;
     display: flex;
