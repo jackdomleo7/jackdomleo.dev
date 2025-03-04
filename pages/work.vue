@@ -5,7 +5,7 @@
       <div v-if="work.fields.description" class="work__description" v-html="parseRichText(work.fields.description)" />
     </header>
     <div class="container">
-      <ul class="work__places">
+      <ol class="work__places">
         <li v-for="(place, index) in work.fields.workPlaces" :key="place?.fields.name" class="place">
           <div class="place__details">
             <nuxt-picture class="place__logo" provider="contentful" :src="place?.fields.logo?.fields.file?.url" :alt="place?.fields.logo?.fields.description" width="80" height="80" sizes="largemobile:40px standardtablet:80px" :preload="index === 0" :loading="index !== 0 ? 'lazy' : undefined" />
@@ -21,15 +21,15 @@
               return `${years > 0 ? `${years} ${yearsLabel}` : ''} ${months > 0 ? `${months} ${monthsLabel}` : ''} | ${startDate.format('MMMM YYYY')} - ${roles.at(0)!.fields.endDate ? endDate.format('MMMM YYYY') : 'present'}`
             })() }}</p>
           </div>
-          <ul class="place__roles">
+          <ol class="place__roles">
             <li v-for="role in place!.fields.workRoles" :key="role?.fields.title" class="role">
               <h3 class="role__name">{{ role?.fields.title }}</h3>
               <p class="role__dates">{{ dayjs(new Date(role?.fields.startDate!)).format('MMMM YYYY') }} - {{ role?.fields.endDate ? dayjs(new Date(role?.fields.endDate)).format('MMMM YYYY') : 'present' }}</p>
               <div class="rich-text role__description" v-html="parseRichText(role?.fields.description)" />
             </li>
-          </ul>
+          </ol>
         </li>
-      </ul>
+      </ol>
     </div>
   </div>
 </template>
