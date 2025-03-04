@@ -148,5 +148,9 @@ useHead({
   h4 {
     margin-top: 1.5rem;
   }
+
+  ul { // This is needed to make it seem like these are top-level lists because of the lists for each role
+    list-style-type: disc;
+  }
 }
 </style>
