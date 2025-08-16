@@ -34,8 +34,10 @@ jobs:
       - name: Clean install Node dependencies
         run: pnpm i --frozen-lockfile
 
-      - name: Rebuild native dependencies
-        run: pnpm rebuild better-sqlite3
+      - name: Configure sqlite3
+        run: |
+          rm -rf .data
+          pnpm rebuild better-sqlite3
 
       - name: Generate files
         run: pnpm run generate
