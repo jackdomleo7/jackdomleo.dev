@@ -13,6 +13,7 @@ Website timeline:
 - **May 2020** - Redesigned & rebuilt website using Nuxt 2, TypeScript & SCSS. Introduced light & dark themes. Introduced blog using Nuxt Content.
 - **January 2022** - Redesigned site using newly improved UI skills (still not good UI skills, but better). Introduced Jest & Prismic CMS.
 - **January 2023** - Redesigned site to be more minimalistic & rebuilt using Nuxt 3, TypeScript & SCSS. Replaced Prismic CMS & Nuxt Content with Contentful.
+- **August 2025** - Removed Contentful and reverted back to Nuxt Content
 
 Key links:
 - [Linktree](https://jackdomleo.dev/links)
@@ -29,9 +30,6 @@ Key links:
 
 Create a `.env` file with the following properties:
 - `NUXT_BASE_URL`
-- `NUXT_CTF_SPACE_ID` // Contentful
-- `NUXT_CTF_CDA_ACCESS_TOKEN` // Contentful
-- `NUXT_CTF_CDA_ACCESS_TOKEN_PREVIEW` // Contentful
 
 ```bash
 # Serve with hot reload at localhost:3000

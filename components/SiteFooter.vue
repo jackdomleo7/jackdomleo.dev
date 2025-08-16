@@ -4,14 +4,14 @@
       <nuxt-icon name="j_icon" filled />
     </nuxt-link>
     <ul class="footer__quick-links">
-      <li v-for="quickLink in footer.fields.quickLinks" :key="quickLink.id">
-        <nuxt-link :to="quickLink.value" :rel="quickLink.value.startsWith('https://') ? 'noopener' : undefined">
-          {{ quickLink.key }}
+      <li v-for="link in links" :key="link.key">
+        <nuxt-link :to="link.value" :rel="link.value.startsWith('https://') ? 'noopener' : undefined">
+          {{ link.key }}
         </nuxt-link>
       </li>
     </ul>
     <ul class="footer__social">
-      <li v-for="socialLink in footer.fields.socialLinks" :key="socialLink.id">
+      <li v-for="socialLink in socialLinks" :key="socialLink.key">
         <nuxt-link :href="socialLink.value" target="_blank" rel="noopener noreferrer" data-cooltipz-dir="top" :aria-label="socialLink.key">
           <nuxt-icon class="footer__social-icon" :name="socialLink.key.toLowerCase()" />
           <span class="sr-only">{{ socialLink.key }}</span>
@@ -21,17 +21,28 @@
     <p class="footer__legal">
       <nuxt-link href="/privacy-policy" class="link">Privacy Policy</nuxt-link>
     </p>
-    <div class="footer__legal" v-html="documentToHtmlString(footer.fields.legalText)" />
+    <div class="footer__legal">
+      <p>©2018-{{ variables.CURRENT_YEAR }}</p>
+      <p>All rights reserved.</p>
+      <p>Jack Domleo</p></div>
   </footer>
 </template>
 
 <script lang="ts" setup>
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-import type { ContentfulEntries } from '@/types/CMS/Entries'
-import { formatCMSVariables } from '@/utilities/cmsVariables'
+import variables from '@/utilities/variables';
 
-const footerEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Footer>({ content_type: 'footer', limit: 1 })})
-const footer = formatCMSVariables(footerEntries.data.value!.items[0])
+const links: { key: string; value: string }[] = [
+  { key: 'Projects', value: '/projects' },
+  { key: 'Work', value: '/work' },
+  { key: 'Blog', value: '/blog' },
+  { key: 'Links', value: '/links' }
+]
+
+const socialLinks: { key: string; value: string }[] = [
+  { key: 'GitHub', value: 'https://github.com/jackdomleo7' },
+  { key: 'CodePen', value: 'https://codepen.io/jackdomleo7' },
+  { key: 'LinkedIn', value: 'https://linkedin.com/in/jackdomleo7' }
+]
 </script>
 
 <style lang="scss" scoped>

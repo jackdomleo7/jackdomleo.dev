@@ -1,13 +1,12 @@
 <template>
   <div class="links">
     <header class="container">
-      <h1 class="links__title">{{ links.fields.title }}</h1>
-      <div v-if="links.fields.description" class="links__description" v-html="parseRichText(links.fields.description)" />
+      <h1 class="links__title">Links</h1>
     </header>
     <div class="container container--thinner">
       <ul class="links__list">
-        <li v-for="link in links.fields.links.items" :key="`${link.name}`">
-          <nuxt-link class="link" :to="`${link.url}`" :rel="`${link.url}`.startsWith('http') || `${link.url}`.startsWith('//') ? 'nofollow noopener' : undefined">
+        <li v-for="link in links" :key="link.name">
+          <nuxt-link class="link" :to="`${link.url}`" :rel="`${link.url}`.startsWith('http') ? 'nofollow noopener' : undefined">
             {{ link.name }}
             <nuxt-icon v-if="link.icon" :name="`${link.icon}`" filled />
           </nuxt-link>
@@ -18,16 +17,49 @@
 </template>
 
 <script lang="ts" setup>
-import { parseRichText } from '@/utilities/parseRichText'
-import { formatCMSVariables } from '@/utilities/cmsVariables';
-import type { ContentfulEntries } from '@/types/CMS/Entries';
-
-const linksEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Links>({ content_type: 'links', limit: 1 })})
-const links = formatCMSVariables(linksEntries.data.value!.items[0])
+import variables from '@/utilities/variables';
 
 useHead({
   title: 'Links'
 })
+
+const links: { name: string, url: string, icon: string }[] = [
+  {
+      name: "Website",
+      url: "/",
+      icon: "j_icon"
+  },
+  {
+      name: "Blog",
+      url: "/blog",
+      icon: "blog"
+  },
+  {
+      name: "GitHub",
+      url: variables.GITHUB_URL,
+      icon: "github"
+  },
+  {
+      name: "GitHub Gists",
+      url: "https://gist.github.com/jackdomleo7",
+      icon: "github"
+  },
+  {
+      name: "CodePen",
+      url: variables.CODEPEN_URL,
+      icon: "codepen"
+  },
+  {
+      name: "LinkedIn",
+      url: variables.LINKEDIN_URL,
+      icon: "linkedin"
+  },
+  {
+      name: "Goodreads",
+      url: "https://www.goodreads.com/user/show/126653182-jack-domleo",
+      icon: "goodreads"
+  }
+]
 </script>
 
 <style lang="scss" scoped>
@@ -47,10 +79,6 @@ useHead({
     @media (min-width: $responsive-standard-tablet) {
       margin-bottom: 2rem;
     }
-  }
-
-  &__description {
-    font-size: var(--text-body);
   }
 
   &__list {

@@ -22,24 +22,20 @@
     "test:report": "open-cli coverage/index.html"
   },
   "dependencies": {
+    "@nuxt/content": "^3.6.3",
     "@vueuse/core": "^12.7.0",
-    "contentful": "11.5.2",
+    "better-sqlite3": "^12.2.0",
     "cooltipz-css": "^2.3.1",
     "dayjs": "^1.11.13",
-    "highlight.js": "^11.11.1",
-    "html-entities": "^2.5.2",
     "modern-normalize": "^3.0.1",
     "nuxt-icons": "^3.2.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.26.8",
-    "@contentful/rich-text-html-renderer": "^17.0.0",
-    "@contentful/rich-text-plain-text-renderer": "^17.0.0",
     "@nuxt/image": "^1.9.0",
     "@nuxt/test-utils": "^3.17.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
-    "@nuxtjs/sitemap": "^7.2.6",
     "@types/node": "^22.13.8",
     "@typescript-eslint/eslint-plugin": "^8.25.0",
     "@typescript-eslint/parser": "^8.25.0",

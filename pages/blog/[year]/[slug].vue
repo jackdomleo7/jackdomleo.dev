@@ -1,32 +1,34 @@
 <template>
-  <div class="article container container--thinner">
+  <div v-if="article" class="article container container--thinner">
     <article>
       <header>
-        <h1 class="article__title">{{ article.fields.title }}</h1>
+        <h1 class="article__title">{{ article.title }}</h1>
       </header>
-      <nuxt-picture class="article__img" provider="contentful" :src="article.fields.image!.fields.file!.url" :alt="article.fields.image!.fields.description" width="768" height="403" sizes="4kdesktop:768px" preload />
+      <nuxt-picture class="article__img" :src="cover_image" alt="" width="768" height="403" sizes="4kdesktop:768px" preload />
       <ul class="article__tags">
-        <li v-for="tag in article.fields.tags" :key="tag" class="tag">
+        <li v-for="tag in article.tags" :key="tag" class="tag">
           <nuxt-link :to="{ path: '/blog', query: { filters: tag.toLowerCase() } }">{{ tag }}</nuxt-link>
         </li>
       </ul>
       <p class="article__date">
         <strong>Published: </strong>
-        <time :datetime="dayjs(new Date(article.fields.publishDate)).format('YYYY-MM-DD')" :title="dayjs(new Date(article.fields.publishDate)).format('dddd D MMMM YYYY')">
-          {{ dayjs(new Date(article.fields.publishDate)).format('MMMM D, YYYY') }}
+        <time :datetime="dayjs(new Date(article.published_time)).format('YYYY-MM-DD')" :title="dayjs(new Date(article.published_time)).format('dddd D MMMM YYYY')">
+          {{ dayjs(new Date(article.published_time)).format('MMMM D, YYYY') }}
         </time>
       </p>
-      <div class="rich-text article__content" v-html="parseRichText(article.fields.body, { $img })" />
-      <div v-if="blogDetails.fields.articleDisclaimer" class="article__disclaimer" v-html="parseRichText(blogDetails.fields.articleDisclaimer)" />
+      <ContentRenderer class="rich-text article__content" :value="article.body" :data="variables" />
+      <p class="article__disclaimer">
+        Disclaimer: All data and information are correct to the best of my knowledge at the time of writing. I use AI to assist with proofreading and fact-checking.
+      </p>
       <ul class="article__share">
         <li>
-          <a :href="`https://twitter.com/intent/tweet?text=${article.fields.title} by Jack Domleo&url=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on X">
+          <a :href="`https://twitter.com/intent/tweet?text=${article.title} by Jack Domleo&url=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on X">
             <nuxt-icon name="twitter" />
             <span class="sr-only">Share on X/Twitter</span>
           </a>
         </li>
         <li>
-          <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${config.public.BASE_URL}${$route.path}&title=${article.fields.title}&summary=${article.fields.title} by Jack Domleo&source=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on LinkedIn">
+          <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${config.public.BASE_URL}${$route.path}&title=${article.title}&summary=${article.description} by Jack Domleo&source=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on LinkedIn">
             <nuxt-icon name="linkedin" />
             <span class="sr-only">Share on LinkedIn</span>
           </a>
@@ -40,7 +42,7 @@
       </ul>
     </article>
 
-    <div class="article__suggested">
+    <!-- <div class="article__suggested">
       <h2>What to read next</h2>
       <ArticleList
         class="container--thinner"
@@ -51,65 +53,58 @@
           tags: article.fields.tags || []
         }"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script lang="ts" setup>
 import dayjs from 'dayjs'
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
-import { parseRichText } from '@/utilities/parseRichText'
-import { formatCMSVariables } from '@/utilities/cmsVariables';
-import type { ContentfulEntries } from '@/types/CMS/Entries'
-import { formatOGImage } from '@/utilities/ogImage';
+import variables from '@/utilities/variables';
 
-const $img = useImage()
 const $route = useRoute()
 const config = useRuntimeConfig()
 
-const articleEntries = await useAsyncData(`article-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Article>({ content_type: 'article', limit: 1, "fields.slug": $route.params.slug as string })})
-const article = articleEntries.data.value!.items[0]
-// No need for format the whole of `article`, this may have undesired outcomes such as infinite looping if 2 articles are suggestions of each other
-article.fields.body = formatCMSVariables(article.fields.body)
-article.fields.description = formatCMSVariables(article.fields.description)
-article.fields.image = formatCMSVariables(article.fields.image)
-
-const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.BlogDetails['fields'], 'articleDisclaimer'>, contentTypeId: ContentfulEntries.BlogDetails['contentTypeId'] }>({ content_type: 'blogDetails', limit: 1, select: ['fields.articleDisclaimer'] })})
-const blogDetails = blogDetailsEntries.data.value!.items[0]
-
-const bodyAsPlainText = documentToPlainTextString(article.fields.body)
+const { data: article } = await useAsyncData($route.path, () => {
+  return queryCollection('article').path($route.path).first()
+})
+if (!article.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found'
+  })
+}
+const cover_image = `${article.value.path}/cover_image.jpg`
 
 function copyLink() {
-  navigator.clipboard.writeText(`${config.public.BASE_URL}${$route.path}`)
+  navigator.clipboard.writeText(`${config.public.BASE_URL}${article.value!.path}`)
   window.alert("Link copied")
 }
 
 useHead({
-  title: `${article.fields.title} | Blog`,
+  title: `${article.value.title} | Blog`,
   meta: [
     { name: 'author', content: 'Jack Domleo' },
-    { name: 'description', content: article.fields.description },
-    { property: 'og:image', content: formatOGImage(article.fields.image!.fields.file!.url) },
-    { property: 'og:image:type', content: article.fields.image!.fields.file!.contentType },
+    { name: 'description', content: article.value.description },
+    { property: 'og:image', content: cover_image },
+    { property: 'og:image:type', content: 'jpg' },
     { property: 'og:type', content: 'article' },
     { property: 'article:author', content: 'Jack Domleo' },
-    { property: 'article:published_time', content: new Date(article.fields.publishDate).toString() },
-    { property: 'article:tags', content: article.fields.tags.join(', ') },
-    { name: 'twitter:image', content: formatOGImage(article.fields.image!.fields.file!.url) }
+    { property: 'article:published_time', content: new Date(article.value.published_time).toString() },
+    ...(article.value.modified_time ? [
+      { property: 'article:modified_time', content: new Date(article.value.modified_time).toString() }
+    ] : []),
+    { property: 'article:tags', content: article.value.tags.join(', ') },
+    { name: 'twitter:image', content: cover_image }
   ],
   link: [
     { rel: 'canonical', href: `${config.public.BASE_URL}/blog/${$route.params.year}/${$route.params.slug}` }
   ],
-  script: [
-    ...(bodyAsPlainText.includes('CodePen: ') ? [{
-      async: true,
-      src: 'https://static.codepen.io/assets/embed/ei.js'
-    }] : []),
-    ...(bodyAsPlainText.includes('Twitter: ') || bodyAsPlainText.includes('Tweet: ') ? [{
-      async: true,
-      src: 'https://platform.twitter.com/widgets.js'
-    }] : [])
-  ]
+  // script: [
+  //   ...(bodyAsPlainText.includes('CodePen: ') ? [{
+  //     async: true,
+  //     src: 'https://static.codepen.io/assets/embed/ei.js'
+  //   }] : [])
+  // ]
 })
 </script>
 

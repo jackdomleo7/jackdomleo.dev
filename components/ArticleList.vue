@@ -4,24 +4,24 @@
       <ComboboxInput id="filter" label="Filters" :multiselectable="true" :value="routeFilters" :options="filterOptions" class="filter" @selected-options="updateFilters($event)" @focus="scrollComboboxToTop()" />
     </div>
     <ul class="posts">
-      <li v-for="(item, index) in displayedList" v-show="articleMatchesFilter(item)" :key="item.sys.id">
-        <nuxt-link :to="`/blog/${new Date(item.fields.publishDate).getFullYear()}/${item.fields.slug}`" class="post">
+      <li v-for="(item, index) in displayedList" v-show="articleMatchesFilter(item)" :key="item.id">
+        <nuxt-link :to="item.path" class="post">
           <article class="post__article">
-            <p v-if="props.suggested.titles.includes(item.fields.title)" class="post__banner">Suggested</p>
-            <nuxt-picture class="post__img" provider="contentful" :src="item.fields.image!.fields.file!.url" :alt="item.fields.image!.fields.description" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
+            <p v-if="props.suggested.titles.includes(item.title)" class="post__banner">Suggested</p>
+            <nuxt-picture class="post__img" :src="`${item.path}/cover_image.jpg`" alt="" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
             <div class="post__details">
               <ul class="post__tags">
-                <li v-for="tag in item.fields.tags" :key="tag" class="tag" :class="{ 'tag--bold': props.suggested.tags.includes(tag) }">
+                <li v-for="tag in item.tags" :key="tag" class="tag" :class="{ 'tag--bold': props.suggested.tags.includes(tag) }">
                   {{ tag }}
                 </li>
               </ul>
-              <h2 class="post__title">{{ item.fields.title }}</h2>
-              <p class="post__description">{{ item.fields.description }}</p>
+              <h2 class="post__title">{{ item.title }}</h2>
+              <p class="post__description">{{ item.description }}</p>
               <footer>
                 <p class="post__date">
                   <span class="sr-only">Publish date:</span>
-                  <time :datetime="dayjs(new Date(item.fields.publishDate)).format('YYYY-MM-DD')">
-                    {{ dayjs(new Date(item.fields.publishDate)).format('MMMM D, YYYY') }}
+                  <time :datetime="dayjs(new Date(item.published_time)).format('YYYY-MM-DD')">
+                    {{ dayjs(new Date(item.published_time)).format('MMMM D, YYYY') }}
                   </time>
                 </p>
               </footer>
@@ -36,10 +36,8 @@
 <script lang="ts" setup>
 import { type PropType } from 'vue';
 import dayjs from 'dayjs'
-import type { LastArrayElement } from 'type-fest';
-import type { ContentfulEntries } from '@/types/CMS/Entries'
-import { formatCMSVariables } from '@/utilities/cmsVariables';
 import type { ComboboxOption } from '@/types/components/ComboboxInput'
+import { ArticleCollectionItem } from '@nuxt/content';
 
 interface Suggested {
   current: string;
@@ -83,27 +81,28 @@ const props = defineProps({
   }
 })
 
-const { data: blog } = await useAsyncData(`article-list-${$route.params.slug}`, (ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.Article['fields'], 'title'|'description'|'image'|'tags'|'publishDate'|'slug'>, contentTypeId: ContentfulEntries.Article['contentTypeId'] }>({ content_type: 'article', limit: 1000, order: ['-fields.publishDate'], select: ['fields.title', 'fields.description', 'fields.image', 'fields.tags', 'fields.publishDate', 'fields.slug'] })})
-const list = formatCMSVariables(blog.value!.items)
+const { data: list } = await useAsyncData($route.path, () => {
+  return queryCollection('article').order('published_time', 'DESC').all()
+})
 
-const displayedList = ref<typeof list>([]);
+const displayedList = ref<ArticleCollectionItem[]>([]);
 
 if (props.suggested.current) {
   // Remove current article from the suggested article list
-  list.splice(list.indexOf(list.filter(article => article.fields.title === props.suggested.current)[0]), 1)
+  list.value!.splice(list.value!.indexOf(list.value!.filter(article => article.title === props.suggested.current)[0]), 1)
 
   if (props.suggested.titles.length > 0) {
-    const suggestedArticles = list.filter(x => props.suggested.titles.includes(x.fields.title))
+    const suggestedArticles = list.value!.filter(x => props.suggested.titles.includes(x.title))
     for (const article of suggestedArticles) {
       if (!displayedList.value.includes(article)) {
-        displayedList.value.push(article)
+        displayedList.value!.push(article)
       }
     }
   }
 
   if (!props.limit || displayedList.value.length < props.limit) {
     for (const tag of props.suggested.tags) {
-      const similarArticles = list.filter(x => x.fields.tags.includes(tag))
+      const similarArticles = list.value!.filter(x => x.tags.includes(tag))
       for (const article of similarArticles) {
         if (!displayedList.value.includes(article)) {
           displayedList.value.push(article)
@@ -113,7 +112,7 @@ if (props.suggested.current) {
   }
 
   if (!props.limit || displayedList.value.length < props.limit) {
-    for (const article of list) {
+    for (const article of list.value) {
       if (!displayedList.value.includes(article)) {
         displayedList.value.push(article)
       }
@@ -121,7 +120,7 @@ if (props.suggested.current) {
   }
 }
 else {
-  displayedList.value = [...list] // Create a clone of the array
+  displayedList.value = [...list.value!] // Create a clone of the array
 }
 
 if (props.limit && props.limit <= displayedList.value.length) {
@@ -132,16 +131,16 @@ if (props.limit && props.limit <= displayedList.value.length) {
 /** Filtering **/
 /***************/
 
-const tags = [...new Set(list.map(x => x.fields.tags.join(',')).join(',').split(','))].filter(Boolean).sort()
-const years = [...new Set(list.map(x => `${new Date(x.fields.publishDate).getFullYear()}`))].filter(Boolean)
+const tags = [...new Set(list.value!.map(x => x.tags.join(',')).join(',').split(','))].filter(Boolean).sort()
+const years = [...new Set(list.value!.map(x => `${new Date(x.published_time).getFullYear()}`))].filter(Boolean)
 const filterOptions: ComboboxOption[] = [...tags.map(x => { return { value: x, text: x }}), ...years.map(x => { return { value: x, text: x } })]
 const routeFilters: ComboboxOption[] = ($route.query.filters ? ($route.query.filters as string).split(',').map(filter => { return filterOptions.find(x => x.value.toLowerCase() === filter.toLowerCase() || x.text.toLowerCase() === filter.toLowerCase())! }) : []).filter(Boolean)
 
-function articleMatchesFilter(article: LastArrayElement<typeof list>): boolean {
-  if (!filters.value.length || !article.fields.tags.length) return true
+function articleMatchesFilter(article: ArticleCollectionItem): boolean {
+  if (!filters.value.length || !article.tags.length) return true
   else {
     for (const filter of filters.value) {
-      if (article.fields.tags.map(x => x.toLowerCase()).includes(filter.toLowerCase()) || `${new Date(article.fields.publishDate).getFullYear()}` === filter) return true
+      if (article.tags.map(x => x.toLowerCase()).includes(filter.toLowerCase()) || `${new Date(article.published_time).getFullYear()}` === filter) return true
     }
     return false
   }

@@ -2,7 +2,9 @@
   <div class="blog-hub">
     <header class="container">
       <h1 class="blog-hub__title">Blog</h1>
-      <div v-if="blogHub.fields.hubDescription" class="blog-hub__description" v-html="parseRichText(blogHub.fields.hubDescription)" />
+      <p class="blog-hub__description">
+        Welcome to my blog. I try to write articles about frontend development, careers in tech, my experiences and more <span class="blog-hub__del-ins"><del aria-hidden="true">when</del> <ins>if</ins></span> I get the time. All articles are my own writing.
+      </p>
     </header>
     <ArticleList class="blog-hub__list" :preload-article-images="3" :show-filter="true" />
   </div>
@@ -10,12 +12,6 @@
 
 <script lang="ts" setup>
 import ArticleList from '@/components/ArticleList.vue';
-import { parseRichText } from '@/utilities/parseRichText'
-import { formatCMSVariables } from '@/utilities/cmsVariables';
-import type { ContentfulEntries } from '@/types/CMS/Entries';
-
-const blogDetailsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<{ fields: Pick<ContentfulEntries.BlogDetails['fields'], 'hubDescription'>, contentTypeId: ContentfulEntries.BlogDetails['contentTypeId'] }>({ content_type: 'blogDetails', limit: 1, select: ['fields.hubDescription'] })})
-const blogHub = formatCMSVariables(blogDetailsEntries.data.value!.items[0])
 
 useHead({
   title: 'Blog'
@@ -42,6 +38,41 @@ useHead({
 
   &__description {
     font-size: var(--text-body);
+    line-height: 2;
+  }
+
+  &__del-ins {
+    position: relative;
+
+    del {
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        mask: url(~/assets/illustrations/squiggle.svg);
+        mask-repeat: no-repeat;
+        background-color: currentColor;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    ins {
+      font-family: var(--font-family-nothing-you-could-do);
+      text-decoration: none;
+      position: absolute;
+      top: -24px;
+      right: 8px;
+      transform: rotate(-25deg);
+      font-size: 120%;
+    }
   }
 
   &__list {

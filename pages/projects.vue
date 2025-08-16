@@ -2,30 +2,27 @@
   <div class="projects">
     <header class="container">
       <h1 class="projects__title">Projects</h1>
-      <div v-if="projects.fields.description" class="projects__description" v-html="parseRichText(projects.fields.description)" />
+      <p class="projects__description">
+        I enjoy creating different types of projects in my spare time using a range of technologies. You can find all of my featured projects here, and many more projects on <nuxt-link :to="variables.GITHUB_URL">GitHub</nuxt-link> and <nuxt-link :to="variables.CODEPEN_URL">CodePen</nuxt-link>.
+      </p>
     </header>
     <div class="container">
-      <ProjectList class="projects__list" type="Project" :preload-project-images="3" />
+      <ProjectList class="projects__list" type="project" :preload-project-images="3" />
     </div>
     <section id="mini" class="container">
       <h2 class="projects__subtitle">Mini Projects</h2>
-      <ProjectList class="projects__list" type="Mini" />
+      <ProjectList class="projects__list" type="mini" />
     </section>
-    <section id="mini" class="container">
+    <section id="client" class="container">
       <h2 class="projects__subtitle">Client Projects</h2>
-      <ProjectList class="projects__list" type="Client" />
+      <ProjectList class="projects__list" type="client" />
     </section>
   </div>
 </template>
 
 <script lang="ts" setup>
 import ProjectList from '@/components/ProjectList.vue';
-import { parseRichText } from '@/utilities/parseRichText'
-import { formatCMSVariables } from '@/utilities/cmsVariables';
-import type { ContentfulEntries } from '@/types/CMS/Entries';
-
-const projectsEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Projects>({ content_type: 'projects', limit: 1 })})
-const projects = formatCMSVariables(projectsEntries.data.value!.items[0])
+import variables from '@/utilities/variables';
 
 useHead({
   title: 'Projects'

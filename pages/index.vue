@@ -3,27 +3,37 @@
     <header class="hero">
       <div class="container container--thinner">
         <div class="hero__row">
-          <nuxt-picture class="hero__img" :src="home!.fields.heroImage!.fields.file!.url" :alt="home!.fields.heroImage!.fields.description" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" provider="contentful" preload />
-          <h1 class="hero__title" v-html="home!.fields.title" />
+          <nuxt-picture class="hero__img" src="/me.webp" alt="Jack Domleo portrait" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" preload />
+          <h1 class="hero__title">Jack Domleo</h1>
         </div>
-        <div class="hero__body" v-html="parseRichText(home!.fields.heroBody)" />
+        <p class="hero__body">Frontend & UX Developer</p>
       </div>
     </header>
     <section id="about" class="container about">
       <div class="about__inner">
         <div class="about__img">
-          <nuxt-picture :src="home!.fields.aboutImage!.fields.file!.url" :alt="home!.fields.aboutImage!.fields.description" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" provider="contentful" />
+          <nuxt-picture src="/me.webp" alt="Jack Domleo portrait" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" />
         </div>
-        <h2 class="about__header">{{ home!.fields.aboutTitle }}</h2>
-        <div class="about__text" v-html="parseRichText(home!.fields.aboutBody)" />
+        <h2 class="about__header">About me</h2>
+        <div class="about__text">
+          <p>
+            Hi, I'm Jack Domleo, a Nottinghamshire-based developer in the UK, currently working as a Senior Frontend Developer at <nuxt-link to="https://www.oceanfinance.co.uk">Ocean Finance</nuxt-link>.
+          </p>
+          <p>
+            I have {{ variables.NO_OF_YEARS_EXPERIENCE }} years of professional experience working as a developer. I often work with Vue.js, TypeScript, Vite, Vitest, SCSS, Storybook, and PlayWright.
+          </p>
+          <p>
+            I have a passion for frontend technologies, and writing clean websites and applications while maintaining high accessibility standards.
+          </p>
+        </div>
       </div>
     </section>
     <section id="skills" class="skills">
       <div class="skills__inner">
-        <h2 class="skills__heading container">{{ home!.fields.skillsTitle }}</h2>
+        <h2 class="skills__heading container">Skills</h2>
         <div class="skills__grid">
           <ul class="skills__list">
-            <li v-for="skill in home!.fields.skillsList" :key="skill.id">
+            <li v-for="skill in skills" :key="skill.key">
               <nuxt-icon class="skills__icon" :name="skill.key" />
               <span class="skills__text">{{ skill.value }}</span>
             </li>
@@ -43,19 +53,23 @@
 </template>
 
 <script lang="ts" setup>
-import { parseRichText } from '@/utilities/parseRichText'
 import ProjectList from '@/components/ProjectList.vue'
-import type { ContentfulEntries } from '@/types/CMS/Entries'
-import { formatCMSVariables } from '@/utilities/cmsVariables'
+import variables from '@/utilities/variables';
 
-const homeEntries = await useAsyncData((ctx) => { return ctx!.$contentful.getEntries<ContentfulEntries.Home>({ content_type: 'home', limit: 1 })})
-const home = formatCMSVariables(homeEntries.data.value!.items[0])
-
-useHead({
-  meta: [
-    { name: 'description', content: home.fields.metaDescription }
-  ]
-})
+const skills: { key: string; value: string }[] = [
+  { key: 'vue', value: 'Vue.js' },
+  { key: 'nuxt', value: 'Nuxt.js' },
+  { key: 'typescript', value: 'TypeScript' },
+  { key: 'jest', value: 'Jest' },
+  { key: 'storybook', value: 'Storybook' },
+  { key: 'sass', value: 'Sass/SCSS' },
+  { key: 'a11y', value: 'Accessibility' },
+  { key: 'node_js', value: 'Node.js' },
+  { key: 'npm', value: 'npm' },
+  { key: 'vs_code', value: 'VS Code' },
+  { key: 'javascript', value: 'JavaScript' },
+  { key: 'html', value: 'HTML' }
+];
 </script>
 
 <style lang="scss" scoped>
