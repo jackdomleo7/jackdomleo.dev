@@ -123,8 +123,7 @@ const projects: Project[] = [{
   url: 'https://github.com/jackdomleo7/tmdip.co.uk',
   description: "Designed and built a fully responsive static website for a small shop-fitting & interior design company. This website needed a modern but minimal feel to it so they could clearly get their message across to visitors. Unfortunately, the company closed in October 2021.",
   image: '/projects/tmdip-interiors.png',
-  tech: ['Nuxt 2', 'TypeScript', 'Prismic'],
-  isUrlDeactivated: false
+  tech: ['Nuxt 2', 'TypeScript', 'Prismic']
 },{
   name: 'Neumorphic Design Elements',
   type: 'mini',
@@ -152,7 +151,7 @@ const projects: Project[] = [{
   url: '/',
   description: 'Designed and built a fully responsive static website and blog for myself. This has been through many design variations as my UI skills have developed.',
   image: '/projects/jackdomleo.dev.png',
-  tech: ['Nuxt 3', 'TypeScript', 'SCSS']
+  tech: ['Nuxt 4', 'TypeScript', 'SCSS']
 }];
 
 let list = projects;

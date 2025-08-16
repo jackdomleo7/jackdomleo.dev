@@ -6,7 +6,7 @@
         <span class="sr-only"> - Home</span>
       </nuxt-link>
       <nuxt-link to="/" class="nav__logo">
-        <nuxt-icon name="j_icon" filled />
+        <Icon name="custom:j-icon" mode="svg" />
         <span class="sr-only">Home</span>
       </nuxt-link>
       <div v-if="!isMobile" class="nav__primary">
@@ -17,7 +17,7 @@
             </nuxt-link>
             <div v-else tabindex="0">
               <span>{{ navItem.text }}</span>
-              <nuxt-icon class="nav__item-chevron" name="chevron_down" />
+              <Icon class="nav__item-chevron" name="custom:chevron-down" mode="svg" />
             </div>
             <ul v-if="navItem.submenu">
               <li v-for="subItem in navItem.submenu" :key="subItem.text">

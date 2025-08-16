@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <nuxt-link to="/" class="footer__logo">
-      <nuxt-icon name="j_icon" filled />
+      <Icon name="custom:j-icon" mode="svg" />
     </nuxt-link>
     <ul class="footer__quick-links">
       <li v-for="link in links" :key="link.key">
@@ -13,7 +13,7 @@
     <ul class="footer__social">
       <li v-for="socialLink in socialLinks" :key="socialLink.key">
         <nuxt-link :href="socialLink.value" target="_blank" rel="noopener noreferrer" data-cooltipz-dir="top" :aria-label="socialLink.key">
-          <nuxt-icon class="footer__social-icon" :name="socialLink.key.toLowerCase()" />
+          <Icon class="footer__social-icon" :name="`custom:${socialLink.key.toLowerCase()}`" mode="svg" />
           <span class="sr-only">{{ socialLink.key }}</span>
         </nuxt-link>
       </li>

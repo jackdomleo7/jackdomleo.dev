@@ -48,13 +48,14 @@ a, button {
 }
 
 svg {
-  height: 100% !important;
-  width: 100% !important;
+  height: 100%;
+  width: 100%;
   pointer-events: none;
-  margin: 0 !important;
+  margin: 0;
+  fill: currentColor;
 }
 
-.nuxt-icon {
+.iconify, svg {
   path[fill="none"] {
     fill: none !important;
   }

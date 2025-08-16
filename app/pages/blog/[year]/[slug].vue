@@ -23,19 +23,19 @@
       <ul class="article__share">
         <li>
           <a :href="`https://twitter.com/intent/tweet?text=${article.title} by Jack Domleo&url=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on X">
-            <nuxt-icon name="twitter" />
+            <Icon name="custom:twitter" mode="svg" />
             <span class="sr-only">Share on X/Twitter</span>
           </a>
         </li>
         <li>
           <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${config.public.BASE_URL}${$route.path}&title=${article.title}&summary=${article.description} by Jack Domleo&source=${config.public.BASE_URL}${$route.path}`" rel="nofollow noopener" target="_blank" data-cooltipz-dir="top" aria-label="Share on LinkedIn">
-            <nuxt-icon name="linkedin" />
+            <Icon name="custom:linkedin" mode="svg" />
             <span class="sr-only">Share on LinkedIn</span>
           </a>
         </li>
         <li>
           <button data-cooltipz-dir="top" aria-label="Copy link" @click="copyLink()">
-            <nuxt-icon name="link" />
+            <Icon name="custom:link" mode="svg" />
             <span class="sr-only">Copy link</span>
           </button>
         </li>

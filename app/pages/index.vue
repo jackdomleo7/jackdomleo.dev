@@ -34,8 +34,8 @@
         <div class="skills__grid">
           <ul class="skills__list">
             <li v-for="skill in skills" :key="skill.key">
-              <nuxt-icon class="skills__icon" :name="skill.key" />
-              <span class="skills__text">{{ skill.value }}</span>
+              <Icon class="skills__icon" :name="`custom:${skill.key}`" mode="svg" />
+              <span class="skills__text" mode="svg">{{ skill.value }}</span>
             </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@
       <ProjectList class="projects__list" :limit="6" />
       <nuxt-link to="/projects" class="projects__more link">
         Check out more of my work
-        <nuxt-icon class="projects__more-icon" name="arrow_right" />
+        <Icon class="projects__more-icon" name="custom:arrow-right" mode="svg" />
       </nuxt-link>
     </section>
   </div>
@@ -64,9 +64,9 @@ const skills: { key: string; value: string }[] = [
   { key: 'storybook', value: 'Storybook' },
   { key: 'sass', value: 'Sass/SCSS' },
   { key: 'a11y', value: 'Accessibility' },
-  { key: 'node_js', value: 'Node.js' },
+  { key: 'node-js', value: 'Node.js' },
   { key: 'npm', value: 'npm' },
-  { key: 'vs_code', value: 'VS Code' },
+  { key: 'vs-code', value: 'VS Code' },
   { key: 'javascript', value: 'JavaScript' },
   { key: 'html', value: 'HTML' }
 ];
@@ -292,7 +292,7 @@ const skills: { key: string; value: string }[] = [
     @media (prefers-reduced-motion: no-preference) {
       &:hover,
       &:focus {
-        [class$="icon"] {
+        .projects__more-icon {
           animation: jumpy-arrow 0.8s forwards infinite;
         }
       }

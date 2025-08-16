@@ -1,3 +1,5 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
   ssr: true,
   typescript: {
@@ -15,10 +17,9 @@ export default defineNuxtConfig({
     '~/assets/styles/main.scss'
   ],
   modules: [
-    '@nuxt/test-utils/module',
     '@nuxt/content',
     '@nuxt/image',
-    'nuxt-icons',
+    '@nuxt/icon',
     // '@nuxtjs/sitemap'
   ],
   content: {
@@ -46,16 +47,23 @@ export default defineNuxtConfig({
       '4kdesktop': 3840
     }
   },
-  site: {
-    url: process.env.NUXT_BASE_URL
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/icons'
+      }
+    ]
   },
+  // site: {
+  //   url: process.env.NUXT_BASE_URL
+  // },
   vite: {
     css: {
       devSourcemap: true,
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/styles/scss/variables/responsive.scss" as *;@use "sass:math";',
-          api: 'modern-compiler'
+          additionalData: '@use "@/assets/styles/scss/variables/responsive.scss" as *;@use "sass:math";'
         }
       }
     }

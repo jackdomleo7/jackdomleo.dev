@@ -1,6 +1,6 @@
-import { defineVitestConfig } from '@nuxt/test-utils/config';
+import { defineConfig } from 'vitest/config'
 
-export default defineVitestConfig({
+export default defineConfig({
   test: {
     globals: true,
     environment: 'happy-dom',
@@ -16,7 +16,7 @@ export default defineVitestConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       all: true,
-      include: ['components', 'layouts', 'pages', 'utilities']
+      include: ['app/components', 'app/layouts', 'app/pages', 'app/utilities']
     },
     setupFiles: ['./vitest.setup.ts'],
     restoreMocks: true

@@ -8,7 +8,7 @@
         <li v-for="link in links" :key="link.name">
           <nuxt-link class="link" :to="`${link.url}`" :rel="`${link.url}`.startsWith('http') ? 'nofollow noopener' : undefined">
             {{ link.name }}
-            <nuxt-icon v-if="link.icon" :name="`${link.icon}`" filled />
+            <Icon v-if="link.icon" :name="`custom:${link.icon}`" mode="svg" />
           </nuxt-link>
         </li>
       </ul>
@@ -27,7 +27,7 @@ const links: { name: string, url: string, icon: string }[] = [
   {
       name: "Website",
       url: "/",
-      icon: "j_icon"
+      icon: "j-icon"
   },
   {
       name: "Blog",
@@ -114,7 +114,7 @@ const links: { name: string, url: string, icon: string }[] = [
     transform: scale(1.03);
   }
 
-  .nuxt-icon {
+  .iconify {
     height: 2rem;
     width: 2rem;
     position: absolute;

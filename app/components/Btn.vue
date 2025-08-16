@@ -1,7 +1,7 @@
 <template>
   <component :is="props.url ? defineNuxtLink({}) : 'button'" class="btn" :to="props.url" :rel="props.url?.startsWith('http') || props.url?.startsWith('//') ? 'nofollow noopener' : undefined" v-bind="$attrs">
     <slot />
-    <nuxt-icon v-if="props.icon" :name="props.icon" class="btn__icon" />
+    <Icon v-if="props.icon" :name="`custom:${props.icon}`" mode="svg" class="btn__icon" />
   </component>
 </template>
 

@@ -24,9 +24,9 @@
           @input="onInput($event)"
           @keydown="onKeydown($event)"
         />
-        <nuxt-icon v-if="!typedValue" class="combobox__header-icon combobox__chevron" name="chevron_down" />
+        <Icon v-if="!typedValue" class="combobox__header-icon combobox__chevron" name="custom:chevron-down" mode="svg" />
         <button v-else class="combobox__header-icon combobox__cross" @click="clearInput()">
-          <nuxt-icon name="cross" />
+          <Icon name="custom:cross" mode="svg" />
           <span class="sr-only">Clear</span>
         </button>
       </div>
@@ -51,7 +51,7 @@
           @mousedown="ignoreBlur = true"
         >
           <div v-if="multiselectable" class="combobox__tickbox">
-            <nuxt-icon name="tick" />
+            <Icon name="custom:tick" mode="svg" />
           </div>
           {{ option.text }}
         </div>
@@ -121,7 +121,7 @@ function checkValue(): void {
     typedValue.value = props.options.filter(x => props.value!.includes(x)).map(x => x.text).join(', ')
 
     if (!props.multiselectable) {
-      typedValue.value = typedValue.value.split(',')[0].trim()
+      typedValue.value = typedValue.value.split(',')[0]!.trim()
       activeIndex.value = props.options.indexOf(props.options.find(x => x.text === typedValue.value)!)
     }
   }
@@ -215,7 +215,7 @@ function onKeydown(event: KeyboardEvent): void {
       break
     case 'Enter':
       event.preventDefault()
-      optionSelect(props.options[activeIndex.value])
+      optionSelect(props.options[activeIndex.value]!)
   }
 }
 
@@ -359,7 +359,7 @@ $inputHeight: 2.5rem;
     padding: 0.25rem;
 
     :deep() {
-      .nuxt-icon {
+      .icon {
         display: none;
 
         .combobox__option:not(.combobox__option--selected):hover &,

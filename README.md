@@ -13,7 +13,7 @@ Website timeline:
 - **May 2020** - Redesigned & rebuilt website using Nuxt 2, TypeScript & SCSS. Introduced light & dark themes. Introduced blog using Nuxt Content.
 - **January 2022** - Redesigned site using newly improved UI skills (still not good UI skills, but better). Introduced Jest & Prismic CMS.
 - **January 2023** - Redesigned site to be more minimalistic & rebuilt using Nuxt 3, TypeScript & SCSS. Replaced Prismic CMS & Nuxt Content with Contentful.
-- **August 2025** - Removed Contentful and reverted back to Nuxt Content
+- **August 2025** - Removed Contentful & reverted back to Nuxt Content Upgraded to Nuxt 4.
 
 Key links:
 - [Linktree](https://jackdomleo.dev/links)
