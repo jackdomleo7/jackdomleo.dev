@@ -23,7 +23,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'pnpm'
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 make g++
 
       - name: Get dotenv secrets
         run: |
@@ -32,6 +36,9 @@ jobs:
 
       - name: Clean install Node dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Rebuild native dependencies
+        run: pnpm rebuild better-sqlite3
 
       - name: Run unit tests
         run: pnpm run test

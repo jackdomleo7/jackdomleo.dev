@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master
-  repository_dispatch:
-    types: [publish-event]
 
 jobs:
   deploy:
@@ -22,7 +20,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'pnpm'
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 make g++
 
       - name: Get dotenv secrets
         run: |
@@ -31,6 +33,9 @@ jobs:
 
       - name: Clean install Node dependencies
         run: pnpm i --frozen-lockfile
+
+      - name: Rebuild native dependencies
+        run: pnpm rebuild better-sqlite3
 
       - name: Generate files
         run: pnpm run generate
