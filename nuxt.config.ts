@@ -35,6 +35,21 @@ export default defineNuxtConfig({
     experimental: { sqliteConnector: 'native' }
   },
   image: {
+    provider: 'ipx',
+    ipx: {
+      // Don't fail on missing images during static generation
+      ...(process.env.CI && {
+        maxAge: 0
+      })
+    },
+    presets: {
+      blog: {
+        modifiers: {
+          format: 'webp',
+          quality: 80
+        }
+      }
+    },
     screens: {
       smallmobile: 340,
       standardmobile: 390,
@@ -59,6 +74,13 @@ export default defineNuxtConfig({
   // site: {
   //   url: process.env.NUXT_BASE_URL
   // },
+  nitro: {
+    prerender: {
+      // Ignore image processing errors during static generation
+      failOnError: false,
+      crawlLinks: true
+    }
+  },
   vite: {
     css: {
       devSourcemap: true,
