@@ -4,7 +4,10 @@
       <header>
         <h1 class="article__title">{{ article.title }}</h1>
       </header>
-      <nuxt-picture class="article__img" :src="cover_image" alt="" width="768" height="403" sizes="4kdesktop:768px" preload />
+      <picture class="article__img">
+        <source :srcset="cover_image" type="image/jpg">
+        <img :src="cover_image" alt="" width="768" height="403" loading="eager" />
+      </picture>
       <ul class="article__tags">
         <li v-for="tag in article.tags" :key="tag" class="tag">
           <nuxt-link :to="{ path: '/blog', query: { filters: tag.toLowerCase() } }">{{ tag }}</nuxt-link>

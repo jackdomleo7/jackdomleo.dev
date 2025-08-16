@@ -2,7 +2,10 @@
   <ul class="projects-list container">
     <li v-for="(project, index) in list" :key="project.image">
       <component :is="project.isUrlDeactivated ? 'div' : defineNuxtLink({})" :to="project.isUrlDeactivated ? undefined : project.url" class="project" :target="project.isUrlDeactivated ? undefined : '_blank'">
-        <nuxt-picture class="project__img" :src="project.image" alt="" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadProjectImages" :format="project.image.split('.').pop()" />
+        <picture class="project__img">
+          <source :srcset="project.image" :type="`image/${project.image.split('.').pop()}`">
+          <img :src="project.image" alt="" width="424" height="223" :loading="index <= props.preloadProjectImages ? 'eager' : 'lazy'" />
+        </picture>
         <div class="project__details">
           <ul class="project__tags">
             <li v-for="tech in project.tech" :key="tech" class="tag">

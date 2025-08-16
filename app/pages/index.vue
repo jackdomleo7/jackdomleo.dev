@@ -3,7 +3,10 @@
     <header class="hero">
       <div class="container container--thinner">
         <div class="hero__row">
-          <nuxt-picture class="hero__img" src="/me.webp" alt="Jack Domleo portrait" height="300" width="300" sizes="standardtablet:200px 4kdesktop:300px" preload />
+          <picture class="hero__img">
+            <source srcset="/me.webp" type="image/webp">
+            <img src="/me.webp" alt="Jack Domleo portrait" height="300" width="300" loading="eager" />
+          </picture>
           <h1 class="hero__title">Jack Domleo</h1>
         </div>
         <p class="hero__body">Frontend & UX Developer</p>
@@ -12,7 +15,10 @@
     <section id="about" class="container about">
       <div class="about__inner">
         <div class="about__img">
-          <nuxt-picture src="/me.webp" alt="Jack Domleo portrait" height="440" width="440" sizes="largemobile:144px standardtablet:192px smalldesktop:256px 4kdesktop:440px" loading="lazy" />
+          <picture>
+            <source srcset="/me.webp" type="image/webp">
+            <img src="/me.webp" alt="Jack Domleo portrait" height="440" width="440" loading="lazy" />
+          </picture>
         </div>
         <h2 class="about__header">About me</h2>
         <div class="about__text">

@@ -8,7 +8,10 @@
         <nuxt-link :to="item.path" class="post">
           <article class="post__article">
             <p v-if="props.suggested.titles.includes(item.title)" class="post__banner">Suggested</p>
-            <nuxt-picture class="post__img" :src="`${item.path}/cover_image.jpg`" alt="" width="424" height="223" sizes="4kdesktop:424px" loading="lazy" :preload="index <= props.preloadArticleImages" />
+            <picture class="post__img">
+              <source :srcset="`${item.path}/cover_image.jpg`" type="image/jpg">
+              <img :src="`${item.path}/cover_image.jpg`" alt="" width="424" height="223" :loading="index <= props.preloadArticleImages ? 'eager' : 'lazy'" />
+            </picture>
             <div class="post__details">
               <ul class="post__tags">
                 <li v-for="tag in item.tags" :key="tag" class="tag" :class="{ 'tag--bold': props.suggested.tags.includes(tag) }">

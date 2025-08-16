@@ -18,7 +18,6 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxt/content',
-    '@nuxt/image',
     '@nuxt/icon',
     // '@nuxtjs/sitemap'
   ],
@@ -34,29 +33,6 @@ export default defineNuxtConfig({
     },
     experimental: { sqliteConnector: 'native' }
   },
-  image: {
-    provider: 'ipx',
-    presets: {
-      blog: {
-        modifiers: {
-          format: 'webp',
-          quality: 80
-        }
-      }
-    },
-    screens: {
-      smallmobile: 340,
-      standardmobile: 390,
-      largemobile: 450,
-      smalltablet: 640,
-      standardtablet: 768,
-      largetablet: 1000,
-      smalldesktop: 1366,
-      standarddesktop: 1920,
-      largedesktop: 2880,
-      '4kdesktop': 3840
-    }
-  },
   icon: {
     customCollections: [
       {
@@ -68,11 +44,6 @@ export default defineNuxtConfig({
   // site: {
   //   url: process.env.NUXT_BASE_URL
   // },
-  nitro: {
-    prerender: {
-      crawlLinks: true
-    }
-  },
   vite: {
     css: {
       devSourcemap: true,

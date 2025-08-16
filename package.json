@@ -33,7 +33,6 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.26.8",
     "@libsql/client": "^0.15.11",
-    "@nuxt/image": "^1.9.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@types/node": "^22.13.8",
