@@ -25,13 +25,13 @@
     "@nuxt/content": "^3.6.3",
     "@nuxt/icon": "^2.0.0",
     "@vueuse/core": "^12.7.0",
-    "better-sqlite3": "^12.2.0",
     "cooltipz-css": "^2.3.1",
     "dayjs": "^1.11.13",
     "modern-normalize": "^3.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.26.8",
+    "@libsql/client": "^0.15.11",
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
