@@ -24,11 +24,6 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: Install build dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python3 make g++
-
       - name: Get dotenv secrets
         run: |
           touch .env
@@ -36,11 +31,6 @@ jobs:
 
       - name: Clean install Node dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Configure sqlite3
-        run: |
-          rm -rf .data
-          pnpm rebuild better-sqlite3
 
       - name: Run unit tests
         run: pnpm run test

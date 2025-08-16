@@ -25,6 +25,7 @@
     "@nuxt/content": "^3.6.3",
     "@nuxt/icon": "^2.0.0",
     "@vueuse/core": "^12.7.0",
+    "better-sqlite3": "^12.2.0",
     "cooltipz-css": "^2.3.1",
     "dayjs": "^1.11.13",
     "modern-normalize": "^3.0.1"

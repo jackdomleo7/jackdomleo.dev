@@ -32,12 +32,7 @@ export default defineNuxtConfig({
         }
       }
     },
-    // Use libsql as fallback for CI environments where better-sqlite3 fails
-    database: {
-      type: 'libsql',
-      url: 'file:local.db',
-      authToken: '' // Empty for local file-based database
-    }
+    experimental: { sqliteConnector: 'native' }
   },
   image: {
     provider: 'ipx',
