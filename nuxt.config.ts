@@ -55,7 +55,8 @@ export default defineNuxtConfig({
       ogImage: '/og.png',
       ogImageType: 'image/png',
       ogImageHeight: 630,
-      ogImageWidth: 1200
+      ogImageWidth: 1200,
+      googleSiteVerification: 'HvfUFnpoWCO9iiPCIT1lfhLf555vptzDdIsBIl2s0BY'
     }
   },
   content: {
