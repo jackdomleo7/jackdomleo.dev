@@ -62,6 +62,14 @@
 import ProjectList from '@/components/ProjectList.vue'
 import variables from '@/utilities/variables';
 
+const config = useRuntimeConfig()
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `${config.public.BASE_URL}` }
+  ]
+})
+
 const skills: { key: string; value: string }[] = [
   { key: 'vue', value: 'Vue.js' },
   { key: 'nuxt', value: 'Nuxt.js' },

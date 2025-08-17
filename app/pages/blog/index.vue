@@ -13,9 +13,17 @@
 <script lang="ts" setup>
 import ArticleList from '@/components/ArticleList.vue';
 
+const config = useRuntimeConfig()
+
 useSeoMeta({
   title: 'Blog'
 })
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `${config.public.BASE_URL}/blog` }
+  ]
+});
 </script>
 
 <style lang="scss" scoped>

@@ -16,6 +16,7 @@ import { ContentRenderer } from '#components';
 import variables from '@/utilities/variables';
 
 const $route = useRoute()
+const config = useRuntimeConfig()
 
 const { data: page } = await useAsyncData($route.path, () => {
   return queryCollection('basic').path($route.path).first()
@@ -31,6 +32,12 @@ useSeoMeta({
   title: `${page.value.title}`,
   description: page.value.description
 })
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `${config.public.BASE_URL}/${$route.params.slug}` }
+  ]
+});
 </script>
 
 <style lang="scss" scoped>

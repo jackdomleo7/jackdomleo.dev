@@ -24,8 +24,16 @@
 import ProjectList from '@/components/ProjectList.vue';
 import variables from '@/utilities/variables';
 
+const config = useRuntimeConfig()
+
 useSeoMeta({
   title: 'Projects'
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `${config.public.BASE_URL}/projects` }
+  ]
 })
 </script>
 

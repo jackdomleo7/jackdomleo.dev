@@ -19,8 +19,16 @@
 <script lang="ts" setup>
 import variables from '@/utilities/variables';
 
+const config = useRuntimeConfig()
+
 useSeoMeta({
   title: 'Links'
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `${config.public.BASE_URL}/links` }
+  ]
 })
 
 const links: { name: string, url: string, icon: string }[] = [

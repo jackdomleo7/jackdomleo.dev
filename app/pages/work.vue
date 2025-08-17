@@ -151,9 +151,17 @@
 <script lang="ts" setup>
 import variables from '@/utilities/variables'
 
+const config = useRuntimeConfig()
+
 useSeoMeta({
   title: 'Work'
 })
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `${config.public.BASE_URL}/work` }
+  ]
+});
 </script>
 
 <style lang="scss" scoped>
