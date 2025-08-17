@@ -58,7 +58,7 @@
     "type-fest": "^4.41.0",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4",
-    "vue-tsc": "2.2.12"
+    "vue-tsc": "^3.0.5"
   },
   "engines": {
     "node": "22",
