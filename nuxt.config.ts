@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   },
   modules: [
     'nuxt-seo-utils',
+    '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxt/icon'
