@@ -1,5 +1,10 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
+const SEO = {
+  TITLE: 'Jack Domleo - Frontend & UX Developer',
+  DESCRIPTION: 'A Nottinghamshire-based frontend & UX developer, primarily working with Vue.js, Nuxt.js, TypeScript, SCSS & many more technologies.'
+}
+
 export default defineNuxtConfig({
   ssr: true,
   typescript: {
@@ -16,11 +21,39 @@ export default defineNuxtConfig({
     'cooltipz-css/src/cooltipz.scss',
     '~/assets/styles/main.scss'
   ],
+  site: {
+    url: process.env.NUXT_BASE_URL
+  },
   modules: [
+    'nuxt-seo-utils',
+    '@nuxtjs/sitemap',
     '@nuxt/content',
-    '@nuxt/icon',
-    // '@nuxtjs/sitemap'
+    '@nuxt/icon'
   ],
+  seo: {
+    meta: {
+      charset: 'utf-8',
+      robots: 'index, follow',
+      titleTemplate: `%s - ${SEO.TITLE}`,
+      description: SEO.DESCRIPTION,
+      viewport: {
+        width: 'device-width',
+        initialScale: 1,
+        viewportFit: 'cover'
+      },
+      themeColor: [
+        { content: '#1b2024', media: '(prefers-color-scheme: dark)' },
+        { content: '#fbfaf9', media: '(prefers-color-scheme: light)' },
+      ],
+      author: 'Jack Domleo',
+      colorScheme: 'dark light',
+      formatDetection: 'telephone=no',
+      ogImage: '/og.png',
+      ogImageType: 'image/png',
+      ogImageHeight: 630,
+      ogImageWidth: 1200
+    }
+  },
   content: {
     build: {
       markdown: {
@@ -41,9 +74,6 @@ export default defineNuxtConfig({
       }
     ]
   },
-  // site: {
-  //   url: process.env.NUXT_BASE_URL
-  // },
   vite: {
     css: {
       devSourcemap: true,

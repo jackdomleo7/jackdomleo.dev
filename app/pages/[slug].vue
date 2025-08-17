@@ -27,17 +27,9 @@ if (!page.value) {
   })
 }
 
-useHead({
+useSeoMeta({
   title: `${page.value.title}`,
-  meta: [
-    ...(page.value.description ? [
-      { name: 'description', content: page.value.description },
-      { name: 'og:description', content: page.value.description }
-    ] : []),
-    ...(page.value.modified_time ? [
-      { name: 'og:updated_time', content: dayjs(new Date(page.value.modified_time)).format('YYYY-MM-DD') }
-    ] : [])
-  ]
+  description: page.value.description
 })
 </script>
 

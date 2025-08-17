@@ -84,21 +84,6 @@ function copyLink() {
 }
 
 useHead({
-  title: `${article.value.title} | Blog`,
-  meta: [
-    { name: 'author', content: 'Jack Domleo' },
-    { name: 'description', content: article.value.description },
-    { property: 'og:image', content: cover_image },
-    { property: 'og:image:type', content: 'jpg' },
-    { property: 'og:type', content: 'article' },
-    { property: 'article:author', content: 'Jack Domleo' },
-    { property: 'article:published_time', content: new Date(article.value.published_time).toString() },
-    ...(article.value.modified_time ? [
-      { property: 'article:modified_time', content: new Date(article.value.modified_time).toString() }
-    ] : []),
-    { property: 'article:tags', content: article.value.tags.join(', ') },
-    { name: 'twitter:image', content: cover_image }
-  ],
   link: [
     { rel: 'canonical', href: `${config.public.BASE_URL}/blog/${$route.params.year}/${$route.params.slug}` }
   ],
@@ -108,6 +93,19 @@ useHead({
   //     src: 'https://static.codepen.io/assets/embed/ei.js'
   //   }] : [])
   // ]
+})
+
+useSeoMeta({
+  title: `${article.value.title} | Blog`,
+  description: article.value.description,
+  ogImage: cover_image,
+  twitterImage: cover_image,
+  ogType: 'article',
+  articleAuthor: ['Jack Domleo'],
+  articleSection: 'Web Development',
+  articleTag: article.value.tags || [],
+  articlePublishedTime: dayjs(new Date(article.value.published_time)).format('YYYY-MM-DD'),
+  articleModifiedTime: dayjs(new Date(article.value.modified_time || article.value.published_time)).format('YYYY-MM-DD')
 })
 </script>
 

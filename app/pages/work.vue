@@ -151,7 +151,7 @@
 <script lang="ts" setup>
 import variables from '@/utilities/variables'
 
-useHead({
+useSeoMeta({
   title: 'Work'
 })
 </script>

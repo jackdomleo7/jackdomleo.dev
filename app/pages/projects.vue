@@ -24,7 +24,7 @@
 import ProjectList from '@/components/ProjectList.vue';
 import variables from '@/utilities/variables';
 
-useHead({
+useSeoMeta({
   title: 'Projects'
 })
 </script>

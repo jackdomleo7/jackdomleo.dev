@@ -1,15 +1,16 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 
 export default defineContentConfig({
   collections: {
-    basic: defineCollection({
+    basic: defineCollection(asSitemapCollection({
       type: 'page',
       source: '*.md',
       schema: z.object({
         modified_time: z.date().optional()
       })
-    }),
-    article: defineCollection({
+    })),
+    article: defineCollection(asSitemapCollection({
       type: 'page',
       source: 'blog/**/*.md',
       schema: z.object({
@@ -17,6 +18,6 @@ export default defineContentConfig({
         modified_time: z.date().optional(),
         tags: z.array(z.string())
       })
-    })
+    }))
   }
 })

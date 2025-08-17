@@ -11,6 +11,7 @@ vi.mock('nuxt/app', () => ({
   navigateTo: vi.fn(),
   defineNuxtLink: vi.fn(() => 'nuxt-link'),
   useHead: vi.fn(),
+  useSeoMeta: vi.fn()
 }));
 
 vi.mock('#imports', () => ({
@@ -20,6 +21,7 @@ vi.mock('#imports', () => ({
   navigateTo: vi.fn(),
   defineNuxtLink: vi.fn(() => 'nuxt-link'),
   useHead: vi.fn(),
+  useSeoMeta: vi.fn()
 }));
 
 afterEach(() => {
