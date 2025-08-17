@@ -22,7 +22,8 @@ export default defineNuxtConfig({
     '~/assets/styles/main.scss'
   ],
   site: {
-    url: process.env.NUXT_BASE_URL
+    url: process.env.NUXT_BASE_URL,
+    name: SEO.TITLE
   },
   modules: [
     'nuxt-seo-utils',
@@ -34,8 +35,6 @@ export default defineNuxtConfig({
   seo: {
     meta: {
       charset: 'utf-8',
-      robots: 'index, follow',
-      titleTemplate: `%s - ${SEO.TITLE}`,
       description: SEO.DESCRIPTION,
       viewport: {
         width: 'device-width',
