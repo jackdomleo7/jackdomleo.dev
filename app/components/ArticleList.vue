@@ -123,7 +123,7 @@ if (list.value && props.suggested.current) {
   }
 }
 else {
-  displayedList.value = [...list.value!] // Create a clone of the array
+  displayedList.value = list.value ? [...list.value] : [] // Create a clone of the array
 }
 
 if (props.limit && props.limit <= displayedList.value.length) {
