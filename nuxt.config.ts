@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   ],
   site: {
     url: process.env.NUXT_BASE_URL,
-    name: SEO.TITLE
+    name: SEO.TITLE,
+    trailingSlash: true
   },
   modules: [
     'nuxt-seo-utils',
