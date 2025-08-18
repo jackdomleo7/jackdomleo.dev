@@ -90,9 +90,9 @@ const { data: list } = await useAsyncData($route.path, () => {
 
 const displayedList = ref<ArticleCollectionItem[]>([]);
 
-if (props.suggested.current) {
+if (list.value && props.suggested.current) {
   // Remove current article from the suggested article list
-  list.value!.splice(list.value!.indexOf(list.value!.filter(article => article.title === props.suggested.current)[0]), 1)
+  list.value!.splice(list.value!.indexOf(list.value!.filter(article => article.title === props.suggested.current)[0]!), 1)
 
   if (props.suggested.titles.length > 0) {
     const suggestedArticles = list.value!.filter(x => props.suggested.titles.includes(x.title))
