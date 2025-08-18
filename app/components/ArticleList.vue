@@ -134,8 +134,8 @@ if (props.limit && props.limit <= displayedList.value.length) {
 /** Filtering **/
 /***************/
 
-const tags = [...new Set(list.value!.map(x => x.tags.join(',')).join(',').split(','))].filter(Boolean).sort()
-const years = [...new Set(list.value!.map(x => `${new Date(x.published_time).getFullYear()}`))].filter(Boolean)
+const tags = list.value ? [...new Set(list.value.map(x => x.tags.join(',')).join(',').split(','))].filter(Boolean).sort() : []
+const years = list.value ? [...new Set(list.value.map(x => `${new Date(x.published_time).getFullYear()}`))].filter(Boolean) : []
 const filterOptions: ComboboxOption[] = [...tags.map(x => { return { value: x, text: x }}), ...years.map(x => { return { value: x, text: x } })]
 const routeFilters: ComboboxOption[] = ($route.query.filters ? ($route.query.filters as string).split(',').map(filter => { return filterOptions.find(x => x.value.toLowerCase() === filter.toLowerCase() || x.text.toLowerCase() === filter.toLowerCase())! }) : []).filter(Boolean)
 
