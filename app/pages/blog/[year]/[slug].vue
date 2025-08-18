@@ -67,8 +67,9 @@ import variables from '@/utilities/variables';
 const $route = useRoute()
 const config = useRuntimeConfig()
 
-const { data: article } = await useAsyncData($route.path, () => {
-  return queryCollection('article').path($route.path).first()
+const path = $route.path.endsWith('/') ? $route.path.slice(0, -1) : $route.path
+const { data: article } = await useAsyncData(path, () => {
+  return queryCollection('article').path(path).first()
 })
 if (!article.value) {
   throw createError({

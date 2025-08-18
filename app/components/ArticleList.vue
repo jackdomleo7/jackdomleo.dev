@@ -84,7 +84,8 @@ const props = defineProps({
   }
 })
 
-const { data: list } = await useAsyncData($route.path, () => {
+const path = $route.path.endsWith('/') ? $route.path.slice(0, -1) : $route.path
+const { data: list } = await useAsyncData(path, () => {
   return queryCollection('article').order('published_time', 'DESC').all()
 })
 
