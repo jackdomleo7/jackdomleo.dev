@@ -1,8 +1,9 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import variables from './app/utilities/variables'
 
 const SEO = {
-  TITLE: 'Jack Domleo - Frontend & UX Developer',
-  DESCRIPTION: 'A Nottinghamshire-based frontend & UX developer, primarily working with Vue.js, Nuxt.js, TypeScript, SCSS & many more technologies.'
+  TITLE: `Jack Domleo - ${variables.OCCUPATION}`,
+  DESCRIPTION: `A Nottinghamshire-based ${variables.OCCUPATION.toLowerCase()}, primarily working with Vue.js, Nuxt.js, TypeScript, SCSS & many more technologies.`
 }
 
 export default defineNuxtConfig({
@@ -28,6 +29,7 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-seo-utils',
     '@nuxtjs/robots',
+    'nuxt-schema-org',
     '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxt/icon'
@@ -54,6 +56,43 @@ export default defineNuxtConfig({
       ogImageHeight: 630,
       ogImageWidth: 1200,
       googleSiteVerification: 'HvfUFnpoWCO9iiPCIT1lfhLf555vptzDdIsBIl2s0BY'
+    }
+  },
+  schemaOrg: {
+    // Global identity that other schemas can reference
+    identity: {
+      type: 'Person',
+      name: 'Jack Domleo',
+      url: process.env.NUXT_BASE_URL,
+      image: `${process.env.NUXT_BASE_URL}/me.webp`,
+      jobTitle: variables.OCCUPATION,
+      worksFor: {
+        type: 'Organization',
+        name: 'Ocean Finance',
+        url: 'https://www.oceanfinance.co.uk'
+      },
+      address: {
+        type: 'PostalAddress',
+        addressRegion: 'Nottinghamshire',
+        addressCountry: 'UK'
+      },
+      sameAs: [
+        variables.LINKEDIN_URL,
+        variables.GITHUB_URL,
+        variables.CODEPEN_URL
+      ],
+      knowsAbout: [
+        'Vue.js',
+        'Nuxt.js', 
+        'TypeScript',
+        'SCSS',
+        'Frontend Development',
+        'UX Design',
+        'Web Accessibility',
+        'Storybook',
+        'Vite',
+        'Vitest'
+      ]
     }
   },
   content: {

@@ -9,7 +9,7 @@
           </picture>
           <h1 class="hero__title">Jack Domleo</h1>
         </div>
-        <p class="hero__body">Frontend & UX Developer</p>
+        <p class="hero__body">{{ variables.OCCUPATION }}</p>
       </div>
     </header>
     <section id="about" class="container about">
@@ -69,6 +69,15 @@ useHead({
     { rel: 'canonical', href: `${config.public.BASE_URL}` }
   ]
 })
+
+useSchemaOrg([
+  defineWebSite({
+    name: 'Jack Domleo',
+    url: config.public.BASE_URL,
+    description: `Personal website and blog of Jack Domleo, ${variables.OCCUPATION}`,
+    inLanguage: 'en-GB'
+  })
+])
 
 const skills: { key: string; value: string }[] = [
   { key: 'vue', value: 'Vue.js' },

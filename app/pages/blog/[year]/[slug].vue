@@ -108,6 +108,26 @@ useSeoMeta({
   articlePublishedTime: dayjs(new Date(article.value.published_time)).format('YYYY-MM-DD'),
   articleModifiedTime: dayjs(new Date(article.value.modified_time || article.value.published_time)).format('YYYY-MM-DD')
 })
+
+useSchemaOrg([
+  {
+    '@type': 'BlogPosting',
+    headline: article.value.title,
+    description: article.value.description,
+    image: cover_image,
+    datePublished: article.value.published_time,
+    dateModified: article.value.modified_time || article.value.published_time,
+    // Reference the global Person identity
+    author: { '@id': '#identity' },
+    publisher: { '@id': '#identity' },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://jackdomleo.dev/blog/${$route.params.year}/${$route.params.slug}`
+    },
+    keywords: article.value.tags,
+    articleSection: 'Web Development'
+  }
+])
 </script>
 
 <style lang="scss" scoped>

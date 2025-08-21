@@ -23,7 +23,20 @@ useHead({
   link: [
     { rel: 'canonical', href: `${config.public.BASE_URL}/blog` }
   ]
-});
+})
+
+useSchemaOrg([
+  {
+    '@type': 'Blog',
+    name: "Jack Domleo's Blog",
+    description: 'Technical articles about Frontend development, Vue.js, TypeScript, and web accessibility',
+    url: `${config.public.BASE_URL}/blog`,
+    inLanguage: 'en-GB',
+    // Reference the global Person identity
+    author: { '@id': '#identity' },
+    publisher: { '@id': '#identity' }
+  }
+])
 </script>
 
 <style lang="scss" scoped>

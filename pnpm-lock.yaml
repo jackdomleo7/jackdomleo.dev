@@ -38,6 +38,9 @@ importers:
       modern-normalize:
         specifier: ^3.0.1
         version: 3.0.1
+      nuxt-schema-org:
+        specifier: ^5.0.6
+        version: 5.0.6(@unhead/vue@2.0.14(vue@3.5.18(typescript@5.9.2)))(magicast@0.3.5)(vue@3.5.18(typescript@5.9.2))
       nuxt-seo-utils:
         specifier: ^7.0.14
         version: 7.0.14(magicast@0.3.5)(rollup@4.46.2)(vue@3.5.18(typescript@5.9.2))
@@ -1839,6 +1842,23 @@ packages:
 
   '@unhead/addons@2.0.14':
     resolution: {integrity: sha512-+t5am0VCQfU+8nO422i5bxIts5lEjRVFZ/PGKsJvZ82ESJ3Ar1mFBom5aexOtWs9DUFFpiC+tO3nrVEHoirbLw==}
+
+  '@unhead/schema-org@2.0.14':
+    resolution: {integrity: sha512-ha28OIR7/kXRtWijSBUxEyFGmUv54i6n5128jJBMpa8XZcbF7arz4eopH7rxlADYvNn+zPlJah103uL1NaCgaw==}
+    peerDependencies:
+      '@unhead/react': 2.0.14
+      '@unhead/solid-js': 2.0.14
+      '@unhead/svelte': 2.0.14
+      '@unhead/vue': 2.0.14
+    peerDependenciesMeta:
+      '@unhead/react':
+        optional: true
+      '@unhead/solid-js':
+        optional: true
+      '@unhead/svelte':
+        optional: true
+      '@unhead/vue':
+        optional: true
 
   '@unhead/vue@2.0.14':
     resolution: {integrity: sha512-Ym9f+Kd2Afqek2FtUHvYvK+j2uZ2vbZ6Rr9NCnNGGBMdmafAuiZpT117YGyh0ARcueL6Znia0U8ySqPsnHOZIg==}
@@ -4709,6 +4729,14 @@ packages:
   nuxt-component-meta@0.12.2:
     resolution: {integrity: sha512-cosF2jUd47TnN7Y8PsRfzdsVomHpVxVjZZIDgyaPqe+wnl2Ys5LXMUt+K3CpXrJrGRFlDRP6ux47Ukevf9juVQ==}
     hasBin: true
+
+  nuxt-schema-org@5.0.6:
+    resolution: {integrity: sha512-ssNYeb/bARsTgbkIB+EdpXkwtX/+TKb/3vd0KxE6xuu60A4h4OCNwUnJhVhkpaLa+ry8nKDk30FUpgWdJyzNHA==}
+    peerDependencies:
+      '@unhead/vue': ^2.0.7
+    peerDependenciesMeta:
+      '@unhead/vue':
+        optional: true
 
   nuxt-seo-utils@7.0.14:
     resolution: {integrity: sha512-SvUCHWhnt8U/nKIpmnbe3lIvv6GewqxbxkLvcU6R7TeEIHoPnBtNLPN+nKOj12fMrDThv178/RAfw7KXq6meiw==}
@@ -8552,6 +8580,15 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
+  '@unhead/schema-org@2.0.14(@unhead/vue@2.0.14(vue@3.5.18(typescript@5.9.2)))':
+    dependencies:
+      defu: 6.1.4
+      ohash: 2.0.11
+      ufo: 1.6.1
+      unhead: 2.0.14
+    optionalDependencies:
+      '@unhead/vue': 2.0.14(vue@3.5.18(typescript@5.9.2))
+
   '@unhead/vue@2.0.14(vue@3.5.18(typescript@5.9.2))':
     dependencies:
       hookable: 5.5.3
@@ -12022,6 +12059,24 @@ snapshots:
     transitivePeerDependencies:
       - magicast
       - vue-component-type-helpers
+
+  nuxt-schema-org@5.0.6(@unhead/vue@2.0.14(vue@3.5.18(typescript@5.9.2)))(magicast@0.3.5)(vue@3.5.18(typescript@5.9.2)):
+    dependencies:
+      '@nuxt/kit': 3.18.1(magicast@0.3.5)
+      '@unhead/schema-org': 2.0.14(@unhead/vue@2.0.14(vue@3.5.18(typescript@5.9.2)))
+      defu: 6.1.4
+      nuxt-site-config: 3.2.2(magicast@0.3.5)(vue@3.5.18(typescript@5.9.2))
+      pathe: 2.0.3
+      pkg-types: 2.2.0
+      sirv: 3.0.1
+    optionalDependencies:
+      '@unhead/vue': 2.0.14(vue@3.5.18(typescript@5.9.2))
+    transitivePeerDependencies:
+      - '@unhead/react'
+      - '@unhead/solid-js'
+      - '@unhead/svelte'
+      - magicast
+      - vue
 
   nuxt-seo-utils@7.0.14(magicast@0.3.5)(rollup@4.46.2)(vue@3.5.18(typescript@5.9.2)):
     dependencies:
