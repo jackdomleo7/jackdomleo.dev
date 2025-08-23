@@ -5,7 +5,7 @@
         <div class="hero__row">
           <picture class="hero__img">
             <source srcset="/me.webp" type="image/webp">
-            <img src="/me.webp" alt="Jack Domleo portrait" height="300" width="300" loading="eager" />
+            <img src="/me.webp" alt="Jack Domleo portrait" height="300" width="300" loading="eager" fetchpriority="high" />
           </picture>
           <h1 class="hero__title">Jack Domleo</h1>
         </div>
@@ -17,7 +17,7 @@
         <div class="about__img">
           <picture>
             <source srcset="/me.webp" type="image/webp">
-            <img src="/me.webp" alt="Jack Domleo portrait" height="440" width="440" loading="lazy" />
+            <img src="/me.webp" alt="Jack Domleo portrait" height="440" width="440" loading="lazy" fetchpriority="low" />
           </picture>
         </div>
         <h2 class="about__header">About me</h2>

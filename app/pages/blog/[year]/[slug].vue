@@ -6,7 +6,7 @@
       </header>
       <picture class="article__img">
         <source :srcset="cover_image" type="image/webp">
-        <img :src="cover_image" alt="" width="768" height="403" loading="eager" />
+        <img :src="cover_image" alt="" width="768" height="403" loading="eager" fetchpriority="high" />
       </picture>
       <ul class="article__tags">
         <li v-for="tag in article.tags" :key="tag" class="tag">

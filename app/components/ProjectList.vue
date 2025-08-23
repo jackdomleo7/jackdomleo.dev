@@ -4,7 +4,7 @@
       <component :is="project.isUrlDeactivated ? 'div' : defineNuxtLink({})" :to="project.isUrlDeactivated ? undefined : project.url" class="project" :target="project.isUrlDeactivated ? undefined : '_blank'">
         <picture class="project__img">
           <source :srcset="project.image" :type="`image/${project.image.split('.').pop()}`">
-          <img :src="project.image" alt="" width="424" height="223" :loading="index <= props.preloadProjectImages ? 'eager' : 'lazy'" />
+          <img :src="project.image" alt="" width="424" height="223" :loading="index <= props.preloadProjectImages ? 'eager' : 'lazy'" :fetchpriority="index <= props.preloadProjectImages ? 'high' : 'low'" />
         </picture>
         <div class="project__details">
           <ul class="project__tags">
