@@ -359,7 +359,7 @@ $inputHeight: 2.5rem;
     padding: 0.25rem;
 
     :deep() {
-      .icon {
+      svg {
         display: none;
 
         .combobox__option:not(.combobox__option--selected):hover &,
