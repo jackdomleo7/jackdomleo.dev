@@ -6,19 +6,19 @@
             <image:loc>https://jackdomleo.dev/me.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/which-media-queries.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/which-media-queries.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/grassverse-nft.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/grassverse-nft.webp</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://jackdomleo.dev/projects/npx-jackdomleo7.gif</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/mad-parrot-crew-nft.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/mad-parrot-crew-nft.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/spring-clean-twitter-bot.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/spring-clean-twitter-bot.webp</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://jackdomleo.dev/projects/colour-theme-picker.gif</image:loc>
@@ -27,10 +27,10 @@
     <url>
         <loc>https://jackdomleo.dev/blog</loc>
         <image:image>
-            <image:loc>https://jackdomleo.dev/blog/2024/how-to-protect-state-in-pinia/cover_image.jpg</image:loc>
+            <image:loc>https://jackdomleo.dev/blog/2024/how-to-protect-state-in-pinia/cover_image.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/blog/2023/should-you-clean-out-your-blog/cover_image.jpg</image:loc>
+            <image:loc>https://jackdomleo.dev/blog/2023/should-you-clean-out-your-blog/cover_image.webp</image:loc>
         </image:image>
     </url>
     <url>
@@ -42,19 +42,19 @@
     <url>
         <loc>https://jackdomleo.dev/projects</loc>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/spring-clean-twitter-bot.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/spring-clean-twitter-bot.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/checka11y.css.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/checka11y.css.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/cooltipz.css.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/cooltipz.css.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/jackdomleo.dev.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/jackdomleo.dev.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/which-media-queries.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/which-media-queries.webp</image:loc>
         </image:image>
         <image:image>
             <image:loc>https://jackdomleo.dev/projects/npx-jackdomleo7.gif</image:loc>
@@ -69,52 +69,52 @@
             <image:loc>https://jackdomleo.dev/projects/spinning-smiley-face.gif</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/css-union-jack-flag.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/css-union-jack-flag.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/neumorphic-design-elements.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/neumorphic-design-elements.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/lightspeed.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/lightspeed.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/pixel-art-r2d2.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/pixel-art-r2d2.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/grassverse-nft.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/grassverse-nft.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/mad-parrot-crew-nft.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/mad-parrot-crew-nft.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/projects/tmdip-interiors.png</image:loc>
+            <image:loc>https://jackdomleo.dev/projects/tmdip-interiors.webp</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/work</loc>
         <image:image>
-            <image:loc>https://jackdomleo.dev/work/ocean-finance-logo.png</image:loc>
+            <image:loc>https://jackdomleo.dev/work/ocean-finance-logo.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/work/mitrefinch-logo.jpg</image:loc>
+            <image:loc>https://jackdomleo.dev/work/mitrefinch-logo.webp</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://jackdomleo.dev/work/flybmi-logo.png</image:loc>
+            <image:loc>https://jackdomleo.dev/work/flybmi-logo.webp</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog/2023/should-you-clean-out-your-blog</loc>
         <lastmod>2025-08-16</lastmod>
         <image:image>
-            <image:loc>https://jackdomleo.dev/blog/2023/should-you-clean-out-your-blog/cover_image.jpg</image:loc>
+            <image:loc>https://jackdomleo.dev/blog/2023/should-you-clean-out-your-blog/cover_image.webp</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://jackdomleo.dev/blog/2024/how-to-protect-state-in-pinia</loc>
         <lastmod>2024-04-07</lastmod>
         <image:image>
-            <image:loc>https://jackdomleo.dev/blog/2024/how-to-protect-state-in-pinia/cover_image.jpg</image:loc>
+            <image:loc>https://jackdomleo.dev/blog/2024/how-to-protect-state-in-pinia/cover_image.webp</image:loc>
         </image:image>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v7.4.3 at 2025-08-21T20:00:59.576Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v7.4.3 at 2025-08-23T10:53:26.653Z -->
