@@ -15,7 +15,11 @@ import SiteFooter from './components/SiteFooter.vue';
 useHead({
   htmlAttrs: {
     lang: 'en-GB'
-  }
+  },
+  link: [
+    { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'icon', type: 'image/png', href: '/icon.png' }
+  ],
 })
 </script>
 
