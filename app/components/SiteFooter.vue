@@ -108,12 +108,15 @@ const socialLinks: { key: string; value: string }[] = [
       border-radius: 50%;
       background-color: var(--color-bg);
       border: 1px solid var(--color-primary);
-      transition: all var(--standard-animation-timing) ease;
       padding: 0.375rem;
       color: var(--color-primary);
       width: 2.5rem;
       aspect-ratio: auto 1 / 1;
       outline-offset: 2px;
+      
+      @media (prefers-reduced-motion: no-preference) {
+        transition: all var(--standard-animation-timing) ease;
+      }
     }
 
     &-icon {

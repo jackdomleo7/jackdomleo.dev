@@ -295,8 +295,11 @@ $inputHeight: 2.5rem;
 
   &__chevron {
     pointer-events: none;
-    transition: transform 0.3s ease;
-    will-change: transform;
+    
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform 0.3s ease;
+      will-change: transform;
+    }
 
     .combobox__header--open & {
       transform: translateY(-50%) rotate(-90deg);

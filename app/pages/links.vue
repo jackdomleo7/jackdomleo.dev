@@ -112,7 +112,10 @@ const links: { name: string, url: string, icon: string }[] = [
   position: relative;
   text-decoration: none;
   padding-inline: 4rem;
-  transition: transform 280ms ease;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 280ms ease;
+  }
 
   @media (forced-colors: active) {
     border: 1px solid transparent;

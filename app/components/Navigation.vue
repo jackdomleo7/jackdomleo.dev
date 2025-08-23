@@ -159,10 +159,13 @@ $navBreak: $responsive-large-tablet;
   z-index: 99;
   position: fixed;
   height: 4rem;
-  transition: 360ms ease;
-  transition-property: box-shadow, background-color;
-  will-change: box-shadow, background-color;
   box-shadow: 0 0 0.5rem transparent;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    transition: 360ms ease;
+    transition-property: box-shadow, background-color;
+    will-change: box-shadow, background-color;
+  }
 
   &--sticky {
     box-shadow: var(--shadow);
@@ -212,9 +215,12 @@ $navBreak: $responsive-large-tablet;
     left: 50%;
     transform: translateX(-50%);
     top: 80%;
-    transition-property: top, transform, width;
-    transition: 360ms ease;
-    will-change: top, transform, width;
+    
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: top, transform, width;
+      transition: 360ms ease;
+      will-change: top, transform, width;
+    }
   }
 
   &__primary {
@@ -272,9 +278,12 @@ $navBreak: $responsive-large-tablet;
       color: var(--color-primary);
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
-      will-change: color, border-color;
-      transition-property: color, border-color;
-      transition: 160ms ease;
+      
+      @media (prefers-reduced-motion: no-preference) {
+        will-change: color, border-color;
+        transition-property: color, border-color;
+        transition: 160ms ease;
+      }
 
       &:hover,
       &:focus {
@@ -290,9 +299,6 @@ $navBreak: $responsive-large-tablet;
     ul {
       opacity: 0;
       visibility: hidden;
-      will-change: opacity, visibility;
-      transition-property: opacity, visibility;
-      transition: 160ms ease;
       position: absolute;
       top: 100%;
       margin: 0;
@@ -304,6 +310,12 @@ $navBreak: $responsive-large-tablet;
       flex-direction: column;
       gap: 0.5rem;
       font-size: var(--text-body);
+      
+      @media (prefers-reduced-motion: no-preference) {
+        will-change: opacity, visibility;
+        transition-property: opacity, visibility;
+        transition: 160ms ease;
+      }
       
       li {
         width: 100%;
@@ -359,8 +371,12 @@ $navBreak: $responsive-large-tablet;
         border-radius: var(--border-radius-standard);
         opacity: 1;
         left: 0;
-        transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
+        
+        @media (prefers-reduced-motion: no-preference) {
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
+          will-change: transform;
+        }
 
         @media (forced-colors: active) {
           background-color: ButtonText;
@@ -413,11 +429,14 @@ $navBreak: $responsive-large-tablet;
     min-width: 18rem;
     max-height: 24rem;
     list-style-type: none;
-    transition-property: height, padding, border;
-    transition: 260ms ease;
-    will-change: height, padding, border;
     overflow: hidden;
     visibility: hidden;
+    
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: height, padding, border;
+      transition: 260ms ease;
+      will-change: height, padding, border;
+    }
 
     @media (forced-colors: active) {
       border: 1px solid transparent;
