@@ -2,6 +2,7 @@
   <footer class="footer">
     <nuxt-link to="/" class="footer__logo">
       <Icon name="custom:j-icon" mode="svg" />
+      <span class="sr-only">Home</span>
     </nuxt-link>
     <ul class="footer__quick-links">
       <li v-for="link in links" :key="link.key">
