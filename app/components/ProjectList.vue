@@ -46,14 +46,14 @@ const projects: Project[] = [{
   type: 'mini',
   url: 'https://which-media-queries.jackdomleo.dev',
   description: 'A simple web app to detect the values of media queries on your device to be viewed at a glance.',
-  image: '/projects/which-media-queries.png',
+  image: '/projects/which-media-queries.webp',
   tech: ['JavaScript']
 },{
   name: 'Grassverse NFT <small>grassverse.org</small>',
   type: 'client',
   url: 'https://www.grassverse.org',
   description: 'This website came with pre-existing designs and includes a CMS and an account section for Grassverse asset owners to log in to view their assets and fellow owners of assets.',
-  image: '/projects/grassverse-nft.png',
+  image: '/projects/grassverse-nft.webp',
   tech: ['Nuxt 2', 'Web3', 'TypeScript'],
   isUrlDeactivated: true
 },{
@@ -68,7 +68,7 @@ const projects: Project[] = [{
   type: 'client',
   url: 'https://www.madparrotcrew.com',
   description: 'Created a fully responsive minting website based on existing designs for the Mad Parrot Crew NFT.',
-  image: '/projects/mad-parrot-crew-nft.png',
+  image: '/projects/mad-parrot-crew-nft.webp',
   tech: ['Nuxt 2', 'Web3', 'TypeScript'],
   isUrlDeactivated: true
 },{
@@ -76,7 +76,7 @@ const projects: Project[] = [{
   type: 'project',
   url: 'https://github.com/jackdomleo7/Spring_Clean_Twitter_Bot',
   description: 'A Twitter bot to automatically clean up my Twitter account.',
-  image: '/projects/spring-clean-twitter-bot.png',
+  image: '/projects/spring-clean-twitter-bot.webp',
   tech: ['TypeScript', 'Twitter API', 'CRON']
 },{
   name: 'Colour Theme Watcher & Switcher',
@@ -90,14 +90,14 @@ const projects: Project[] = [{
   type: 'project',
   url: 'https://checka11y.jackdomleo.dev',
   description: 'A CSS stylesheet to quickly highlight a11y concerns and a really good education project for those wanting to learn about accessibility.',
-  image: '/projects/checka11y.css.png',
+  image: '/projects/checka11y.css.webp',
   tech: ['SCSS', 'Cypress']
 },{
   name: 'Cooltipz.css',
   type: 'project',
   url: 'https://cooltipz.jackdomleo.dev',
   description: 'A pure CSS solution for adding highly customisable, accessible tooltips to HTML.',
-  image: '/projects/cooltipz.css.png',
+  image: '/projects/cooltipz.css.webp',
   tech: ['SCSS']
 },{
   name: 'Custom Car Colour Preview',
@@ -118,42 +118,42 @@ const projects: Project[] = [{
   type: 'mini',
   url: 'https://codepen.io/jackdomleo7/full/abvrgEo',
   description: "A pure CSS pixel-perfect Union Jack flag.",
-  image: '/projects/css-union-jack-flag.png',
+  image: '/projects/css-union-jack-flag.webp',
   tech: ['SCSS']
 },{
   name: 'TMD Interior Projects & Building Services Ltd <small>tmdip.co.uk</small>',
   type: 'client',
   url: 'https://github.com/jackdomleo7/tmdip.co.uk',
   description: "Designed and built a fully responsive static website for a small shop-fitting & interior design company. This website needed a modern but minimal feel to it so they could clearly get their message across to visitors. Unfortunately, the company closed in October 2021.",
-  image: '/projects/tmdip-interiors.png',
+  image: '/projects/tmdip-interiors.webp',
   tech: ['Nuxt 2', 'TypeScript', 'Prismic']
 },{
   name: 'Neumorphic Design Elements',
   type: 'mini',
   url: 'https://codepen.io/jackdomleo7/full/mdeowoz',
   description: 'Some common UI elements in the style of neumorphic design.',
-  image: '/projects/neumorphic-design-elements.png',
+  image: '/projects/neumorphic-design-elements.webp',
   tech: ['SCSS']
 },{
   name: 'Jumping into Lightspeed',
   type: 'mini',
   url: 'https://codepen.io/jackdomleo7/full/rNOYdwz',
   description: "A mini animation demonstrating Star Wars lightspeed using HTML, CSS & JS.",
-  image: '/projects/lightspeed.png',
+  image: '/projects/lightspeed.webp',
   tech: ['JavaScript', 'CSS']
 },{
   name: 'Pixel Art R2-D2',
   type: 'mini',
   url: 'https://codepen.io/jackdomleo7/full/ZEEqdxy',
   description: "A pure CSS, single div pixel art of the beloved Star Wars droid, R2-D2.",
-  image: '/projects/pixel-art-r2d2.png',
+  image: '/projects/pixel-art-r2d2.webp',
   tech: ['CSS']
 },{
   name: 'My website <small>jackdomleo.dev</small>',
   type: 'project',
   url: '/',
   description: 'Designed and built a fully responsive static website and blog for myself. This has been through many design variations as my UI skills have developed.',
-  image: '/projects/jackdomleo.dev.png',
+  image: '/projects/jackdomleo.dev.webp',
   tech: ['Nuxt 4', 'TypeScript', 'SCSS']
 }];
 

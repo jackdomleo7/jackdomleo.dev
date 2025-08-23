@@ -9,8 +9,8 @@
           <article class="post__article">
             <p v-if="props.suggested.titles.includes(item.title)" class="post__banner">Suggested</p>
             <picture class="post__img">
-              <source :srcset="`${item.path}/cover_image.jpg`" type="image/jpg">
-              <img :src="`${item.path}/cover_image.jpg`" alt="" width="424" height="223" :loading="index <= props.preloadArticleImages ? 'eager' : 'lazy'" />
+              <source :srcset="`${item.path}/cover_image.webp`" type="image/webp">
+              <img :src="`${item.path}/cover_image.webp`" alt="" width="424" height="223" :loading="index <= props.preloadArticleImages ? 'eager' : 'lazy'" />
             </picture>
             <div class="post__details">
               <ul class="post__tags">

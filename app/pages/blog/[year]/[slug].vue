@@ -5,7 +5,7 @@
         <h1 class="article__title">{{ article.title }}</h1>
       </header>
       <picture class="article__img">
-        <source :srcset="cover_image" type="image/jpg">
+        <source :srcset="cover_image" type="image/webp">
         <img :src="cover_image" alt="" width="768" height="403" loading="eager" />
       </picture>
       <ul class="article__tags">
@@ -77,7 +77,7 @@ if (!article.value) {
     statusMessage: 'Page not found'
   })
 }
-const cover_image = `${article.value.path}/cover_image.jpg`
+const cover_image = `${article.value.path}/cover_image.webp`
 
 function copyLink() {
   navigator.clipboard.writeText(`${config.public.BASE_URL}${article.value!.path}`)
@@ -100,6 +100,7 @@ useSeoMeta({
   title: `${article.value.title} | Blog`,
   description: article.value.description,
   ogImage: cover_image,
+  // ogImageType: 'image/webp', // TODO: OG doesn't support webp. Can I automatically convert to png somehow?
   twitterImage: cover_image,
   ogType: 'article',
   articleAuthor: ['Jack Domleo'],

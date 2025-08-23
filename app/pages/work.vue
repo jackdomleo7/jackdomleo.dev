@@ -8,7 +8,7 @@
       <ol class="work__places">
         <li class="place">
           <div class="place__details">
-            <img src="/work/ocean-finance-logo.png" alt="Ocean Finance" height="80" width="80" class="place__logo" />
+            <img src="/work/ocean-finance-logo.webp" alt="Ocean Finance" height="80" width="80" class="place__logo" />
             <h2 class="place__name">Ocean Finance</h2>
             <p class="place__duration">February 2021 - present</p>
           </div>
@@ -65,7 +65,7 @@
         </li>
         <li class="place">
           <div class="place__details">
-            <img src="/work/mitrefinch-logo.jpg" alt="Mitrefinch" height="80" width="80" class="place__logo" />
+            <img src="/work/mitrefinch-logo.webp" alt="Mitrefinch" height="80" width="80" class="place__logo" />
             <h2 class="place__name">Mitrefinch</h2>
             <p class="place__duration">March 2019 - February 2021</p>
           </div>
@@ -117,7 +117,7 @@
         </li>
         <li class="place">
           <div class="place__details">
-            <img src="/work/flybmi-logo.png" alt="flybmi" height="80" width="80" class="place__logo" />
+            <img src="/work/flybmi-logo.webp" alt="flybmi" height="80" width="80" class="place__logo" />
             <h2 class="place__name">flybmi</h2>
             <p class="place__duration">September 2018 - February 2019</p>
           </div>
