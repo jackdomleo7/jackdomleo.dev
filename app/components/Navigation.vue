@@ -1,5 +1,9 @@
 <template>
-  <nav class="nav" :class="{ 'nav--sticky': !navIsAtTop || isMobileNavOpen }">
+  <nav 
+    class="nav" 
+    :class="{ 'nav--sticky': !navIsAtTop || isMobileNavOpen }"
+    :aria-label="isMobileNavOpen ? 'Main navigation (expanded)' : 'Main navigation'"
+  >
     <div class="nav__wrapper">
       <nuxt-link to="/" class="nav__name">
         Jack Domleo
@@ -15,13 +19,30 @@
             <nuxt-link v-if="navItem.url" :to="navItem.url">
               <span>{{ navItem.text }}</span>
             </nuxt-link>
-            <div v-else tabindex="0">
+            <button 
+              v-else 
+              :aria-expanded="expandedSubmenus.has(navItem.text)"
+              :aria-controls="`submenu-${navItem.text.toLowerCase()}`"
+              aria-haspopup="true"
+              @click="toggleSubmenu(navItem.text)"
+              @keydown.esc="closeAllSubmenus"
+            >
               <span>{{ navItem.text }}</span>
               <Icon class="nav__item-chevron" name="custom:chevron-down" mode="svg" />
-            </div>
-            <ul v-if="navItem.submenu">
-              <li v-for="subItem in navItem.submenu" :key="subItem.text">
-                <nuxt-link v-if="subItem.url" :to="subItem.url">
+            </button>
+            <ul 
+              v-if="navItem.submenu"
+              :id="`submenu-${navItem.text.toLowerCase()}`"
+              :aria-hidden="!expandedSubmenus.has(navItem.text)"
+              role="menu"
+            >
+              <li v-for="subItem in navItem.submenu" :key="subItem.text" role="none">
+                <nuxt-link 
+                  v-if="subItem.url" 
+                  :to="subItem.url"
+                  role="menuitem"
+                  @click="closeAllSubmenus"
+                >
                   {{ subItem.text }}
                 </nuxt-link>
               </li>
@@ -33,6 +54,9 @@
         v-if="isMobile"
         class="nav__hamburger"
         :class="{ 'nav__hamburger--open': isMobileNavOpen }"
+        :aria-expanded="isMobileNavOpen"
+        :aria-controls="'mobile-nav'"
+        :aria-label="isMobileNavOpen ? 'Close navigation menu' : 'Open navigation menu'"
         @click="toggleMobileNav(!isMobileNavOpen)"
       >
         <div class="nav__hamburger-icon">
@@ -41,14 +65,23 @@
           <span></span>
           <span></span>
         </div>
-        <span class="sr-only">{{ isMobileNavOpen ? 'Close' : 'Menu' }}</span>
       </button>
     </div>
     <template v-if="isMobile">
       <div v-if="isMobileNavOpen" class="nav__scrim" @click="toggleMobileNav(false)" />
-      <ul class="nav__more" :class="{'nav__more--open': isMobile && isMobileNavOpen}">
-        <li v-for="navItem in getMobileNavItems()" :key="navItem.text">
-          <nuxt-link :to="navItem.url!" @click="toggleMobileNav(false)">
+      <ul 
+        id="mobile-nav"
+        class="nav__more" 
+        :class="{'nav__more--open': isMobile && isMobileNavOpen}"
+        :aria-hidden="!isMobileNavOpen"
+        role="menu"
+      >
+        <li v-for="navItem in getMobileNavItems()" :key="navItem.text" role="none">
+          <nuxt-link 
+            :to="navItem.url!" 
+            role="menuitem"
+            @click="toggleMobileNav(false)"
+          >
             {{ navItem.text }}
           </nuxt-link>
         </li>
@@ -75,6 +108,7 @@ const isMobile = ref(false)
 const isTouchscreen = ref(false)
 const isMobileNavOpen = ref(false)
 const navIsAtTop = ref(false)
+const expandedSubmenus = ref(new Set<string>())
 
 const navItems: FixedLengthArray<INav, 3> = [ // No more than 3 top-level items
   {
@@ -101,56 +135,172 @@ const navItems: FixedLengthArray<INav, 3> = [ // No more than 3 top-level items
   }
 ]
 
-function getMobileNavItems(): Omit<INav, 'submenu'>[] {
+// Performance optimizations - computed for mobile nav items
+const mobileNavItems = computed(() => {
   const items: Omit<INav, 'submenu'>[] = []
 
-  navItems.forEach(item => {
+  for (const item of navItems) {
     if (!item.submenu) {
       items.push(item)
+    } else {
+      items.push(...item.submenu)
     }
-    else {
-      item.submenu.forEach(subItem => {
-        items.push(subItem)
-      })
-    }
-  })
+  }
 
   return items.filter(x => x.url)
+})
+
+function getMobileNavItems(): Omit<INav, 'submenu'>[] {
+  return mobileNavItems.value
+}
+
+// Focus trap functionality - memoized selectors
+let focusableElements: HTMLElement[] = []
+let firstFocusableElement: HTMLElement | null = null
+let lastFocusableElement: HTMLElement | null = null
+
+const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+
+function setupFocusTrap() {
+  if (!isMobileNavOpen.value) return
+  
+  const nav = document.querySelector('nav.nav') as HTMLElement
+  if (!nav) return
+  
+  focusableElements = Array.from(nav.querySelectorAll(FOCUSABLE_SELECTOR)).filter(el => {
+    const element = el as HTMLElement
+    return element.offsetWidth > 0 && element.offsetHeight > 0
+  }) as HTMLElement[]
+  
+  firstFocusableElement = focusableElements[0] || null
+  lastFocusableElement = focusableElements[focusableElements.length - 1] || null
+  
+  // Focus the first element when opening (skip hamburger button)
+  const hamburger = document.querySelector('.nav__hamburger')
+  if (firstFocusableElement && firstFocusableElement !== hamburger) {
+    setTimeout(() => firstFocusableElement?.focus(), 100)
+  }
+}
+
+function handleFocusTrap(event: KeyboardEvent) {
+  if (!isMobileNavOpen.value || event.key !== 'Tab') return
+  
+  if (event.shiftKey) {
+    if (document.activeElement === firstFocusableElement) {
+      lastFocusableElement?.focus()
+      event.preventDefault()
+    }
+  } else {
+    if (document.activeElement === lastFocusableElement) {
+      firstFocusableElement?.focus()
+      event.preventDefault()
+    }
+  }
+}
+
+function toggleSubmenu(submenuName: string) {
+  if (expandedSubmenus.value.has(submenuName)) {
+    expandedSubmenus.value.delete(submenuName)
+  } else {
+    expandedSubmenus.value.add(submenuName)
+  }
+}
+
+function closeAllSubmenus() {
+  expandedSubmenus.value.clear()
+}
+
+function handleGlobalKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape') {
+    if (isMobileNavOpen.value) {
+      toggleMobileNav(false)
+    }
+    closeAllSubmenus()
+  }
+  
+  handleFocusTrap(event)
 }
 
 watch(route, () => {
   toggleMobileNav(false)
+  closeAllSubmenus()
 })
+
+watch(isMobileNavOpen, (newValue) => {
+  if (newValue) {
+    nextTick(() => setupFocusTrap())
+  }
+})
+
+// Optimized click outside handler
+const handleClickOutside = (event: Event) => {
+  if (!(event.target as Element)?.closest('.nav__item')) {
+    closeAllSubmenus()
+  }
+}
 
 onMounted(() => {
   setResponsiveness()
   handleScroll()
-  window.addEventListener('resize', setResponsiveness)
-  window.addEventListener('scroll', handleScroll)
+  window.addEventListener('resize', setResponsiveness, { passive: true })
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  document.addEventListener('keydown', handleGlobalKeydown)
+  document.addEventListener('click', handleClickOutside)
 })
 
 onUnmounted(() => {
+  // Clear timeouts to prevent memory leaks
+  if (resizeTimeout) clearTimeout(resizeTimeout)
+  if (scrollTimeout) clearTimeout(scrollTimeout)
+  
   window.removeEventListener('resize', setResponsiveness)
   window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('keydown', handleGlobalKeydown)
+  document.removeEventListener('click', handleClickOutside)
 })
 
-function setResponsiveness (): void {
-  const navBreak = window.getComputedStyle(document.querySelector('nav.nav')!).getPropertyValue('--nav-break')
-  isMobile.value = !window.matchMedia(`(min-width: ${navBreak})`).matches
-  isTouchscreen.value = !window.matchMedia('(hover: hover)').matches
+// Throttled event handlers for performance
+let resizeTimeout: NodeJS.Timeout | null = null
+let scrollTimeout: NodeJS.Timeout | null = null
 
-  if (window.matchMedia(`(min-width: ${navBreak})`).matches) {
-    toggleMobileNav(false)
-  }
+function setResponsiveness (): void {
+  if (resizeTimeout) return
+  
+  resizeTimeout = setTimeout(() => {
+    const navBreak = window.getComputedStyle(document.querySelector('nav.nav')!).getPropertyValue('--nav-break')
+    const wasMobile = isMobile.value
+    isMobile.value = !window.matchMedia(`(min-width: ${navBreak})`).matches
+    isTouchscreen.value = !window.matchMedia('(hover: hover)').matches
+
+    if (window.matchMedia(`(min-width: ${navBreak})`).matches) {
+      toggleMobileNav(false)
+    }
+    
+    // Close mobile nav if switching from mobile to desktop
+    if (wasMobile && !isMobile.value && isMobileNavOpen.value) {
+      toggleMobileNav(false)
+    }
+    
+    resizeTimeout = null
+  }, 100)
 }
 
 function handleScroll (): void {
-  navIsAtTop.value = !(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+  if (scrollTimeout) return
+  
+  scrollTimeout = setTimeout(() => {
+    navIsAtTop.value = !(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+    scrollTimeout = null
+  }, 16) // ~60fps
 }
 
 function toggleMobileNav (open: boolean): void {
   isMobileNavOpen.value = open
   document.body.style.overflow = isMobileNavOpen.value ? 'hidden' : ''
+  
+  if (open) {
+    nextTick(() => setupFocusTrap())
+  }
 }
 </script>
 
@@ -273,6 +423,7 @@ $navHeight: 4rem;
     }
 
     > a,
+    > button,
     > div {
       display: inline-flex;
       align-items: center;
@@ -285,6 +436,9 @@ $navHeight: 4rem;
       text-align: center;
       text-decoration: none;
       color: var(--color-primary);
+      background: transparent;
+      border: none;
+      cursor: pointer;
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
       
