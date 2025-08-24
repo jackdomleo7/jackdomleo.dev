@@ -3,7 +3,7 @@
     <header class="container">
       <h1 class="blog-hub__title">Blog</h1>
       <p class="blog-hub__description">
-        Welcome to my blog. I try to write articles about frontend development, careers in tech, my experiences and more <span class="blog-hub__del-ins"><del aria-hidden="true">when</del> <ins>if</ins></span> I get the time. All articles are my own writing.
+        Welcome to my blog. I write articles about Vue.js, JavaScript, web accessibility, developer productivity, and practical solutions to real-world problems in tech <span class="blog-hub__del-ins"><del aria-hidden="true">when</del> <ins>if</ins></span> I get the time to write. All articles are my own writing. 
       </p>
     </header>
     <ArticleList class="blog-hub__list" :preload-article-images="3" :show-filter="true" />
