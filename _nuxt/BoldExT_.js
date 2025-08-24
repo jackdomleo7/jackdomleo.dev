@@ -1,1 +1,0 @@
-import{_ as o,c as s,o as r,U as n}from"./TfkW-1t6.js";const t={};function c(e,a){return r(),s("ol",null,[n(e.$slots,"default")])}const _=Object.assign(o(t,[["render",c]]),{__name:"ProseOl"});export{_ as default};
