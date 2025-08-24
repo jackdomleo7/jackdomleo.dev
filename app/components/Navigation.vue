@@ -644,7 +644,7 @@ $navHeight: 4rem;
     }
   }
 
-  a.nuxt-link-active {
+  a.router-link-active {
     color: var(--color-accent);
   }
 }
