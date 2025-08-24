@@ -1,7 +1,7 @@
 @use 'sass:color';
 
 // All themes
-$colour-accent: #ff8311;
+$colour-accent: #e66f00;
 $colour-accent-faint: color.adjust($colour-accent, $alpha: -0.8);
 $colour-mid-grey: #888;
 
