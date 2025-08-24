@@ -33,7 +33,7 @@
         v-if="isMobile"
         class="nav__hamburger"
         :class="{ 'nav__hamburger--open': isMobileNavOpen }"
-        @click="isMobileNavOpen = !isMobileNavOpen"
+        @click="toggleMobileNav(!isMobileNavOpen)"
       >
         <div class="nav__hamburger-icon">
           <span></span>
@@ -44,13 +44,16 @@
         <span class="sr-only">{{ isMobileNavOpen ? 'Close' : 'Menu' }}</span>
       </button>
     </div>
-    <ul v-if="isMobile" class="nav__more" :class="{'nav__more--open': isMobile && isMobileNavOpen}">
-      <li v-for="navItem in getMobileNavItems()" :key="navItem.text">
-        <nuxt-link :to="navItem.url!" @click="isMobileNavOpen = false">
-          {{ navItem.text }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <template v-if="isMobile">
+      <div v-if="isMobileNavOpen" class="nav__scrim" @click="toggleMobileNav(false)" />
+      <ul class="nav__more" :class="{'nav__more--open': isMobile && isMobileNavOpen}">
+        <li v-for="navItem in getMobileNavItems()" :key="navItem.text">
+          <nuxt-link :to="navItem.url!" @click="toggleMobileNav(false)">
+            {{ navItem.text }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </template>
   </nav>
 </template>
 
@@ -116,7 +119,7 @@ function getMobileNavItems(): Omit<INav, 'submenu'>[] {
 }
 
 watch(route, () => {
-  isMobileNavOpen.value = false
+  toggleMobileNav(false)
 })
 
 onMounted(() => {
@@ -137,17 +140,23 @@ function setResponsiveness (): void {
   isTouchscreen.value = !window.matchMedia('(hover: hover)').matches
 
   if (window.matchMedia(`(min-width: ${navBreak})`).matches) {
-    isMobileNavOpen.value = false
+    toggleMobileNav(false)
   }
 }
 
 function handleScroll (): void {
   navIsAtTop.value = !(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
 }
+
+function toggleMobileNav (open: boolean): void {
+  isMobileNavOpen.value = open
+  document.body.style.overflow = isMobileNavOpen.value ? 'hidden' : ''
+}
 </script>
 
 <style lang="scss" scoped>
 $navBreak: $responsive-large-tablet;
+$navHeight: 4rem;
 
 .nav {
   --nav-break: #{$navBreak};
@@ -158,7 +167,7 @@ $navBreak: $responsive-large-tablet;
   color: var(--color-primary);
   z-index: 99;
   position: fixed;
-  height: 4rem;
+  height: $navHeight;
   box-shadow: 0 0 0.5rem transparent;
   
   @media (prefers-reduced-motion: no-preference) {
@@ -419,18 +428,17 @@ $navBreak: $responsive-large-tablet;
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
-    height: 0;
+    transform: translate(-50%, -100%);
     background-color: var(--color-bg);
     border-top: 0 solid var(--color-accent);
     box-shadow: var(--shadow);
     padding: 0 3rem;
     margin: 0;
-    min-width: 18rem;
-    max-height: 24rem;
+    width: 100vw;
+    max-height: calc(100vh - #{$navHeight});
     list-style-type: none;
-    overflow: hidden;
     visibility: hidden;
+    font-size: var(--text-large);
     
     @media (prefers-reduced-motion: no-preference) {
       transition-property: height, padding, border;
@@ -443,7 +451,7 @@ $navBreak: $responsive-large-tablet;
     }
 
     &--open {
-      height: max-content;
+      transform: translate(-50%, 0);
       padding-block: 1rem;
       border-top-width: 4px;
       visibility: visible;
@@ -466,6 +474,19 @@ $navBreak: $responsive-large-tablet;
       display: flex;
       padding: 0.5rem;
       color: var(--color-primary);
+    }
+  }
+
+  &__scrim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: background-color 260ms ease;
     }
   }
 
