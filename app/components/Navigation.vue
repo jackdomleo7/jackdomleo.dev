@@ -5,11 +5,11 @@
     :aria-label="isMobileNavOpen ? 'Main navigation (expanded)' : 'Main navigation'"
   >
     <div class="nav__wrapper">
-      <nuxt-link to="/" class="nav__name">
+      <nuxt-link v-once to="/" class="nav__name">
         Jack Domleo
         <span class="sr-only"> - Home</span>
       </nuxt-link>
-      <nuxt-link to="/" class="nav__logo">
+      <nuxt-link v-once to="/" class="nav__logo">
         <Icon v-once name="custom:j-icon" mode="svg" />
         <span class="sr-only">Home</span>
       </nuxt-link>
@@ -22,17 +22,17 @@
             <button 
               v-else 
               :aria-expanded="expandedSubmenus.has(navItem.text)"
-              :aria-controls="`submenu-${navItem.text.toLowerCase()}`"
+              :aria-controls="getSubmenuId(navItem.text)"
               aria-haspopup="true"
               @click="toggleSubmenu(navItem.text)"
               @keydown.esc="closeAllSubmenus"
             >
               <span>{{ navItem.text }}</span>
-              <Icon class="nav__item-chevron" name="custom:chevron-down" mode="svg" />
+              <Icon v-once class="nav__item-chevron" name="custom:chevron-down" mode="svg" />
             </button>
             <ul 
               v-if="navItem.submenu"
-              :id="`submenu-${navItem.text.toLowerCase()}`"
+              :id="getSubmenuId(navItem.text)"
               :aria-hidden="!expandedSubmenus.has(navItem.text)"
               role="menu"
             >
@@ -55,11 +55,11 @@
         class="nav__hamburger"
         :class="{ 'nav__hamburger--open': isMobileNavOpen }"
         :aria-expanded="isMobileNavOpen"
-        :aria-controls="'mobile-nav'"
+        aria-controls="mobile-nav"
         :aria-label="isMobileNavOpen ? 'Close navigation menu' : 'Open navigation menu'"
         @click="toggleMobileNav(!isMobileNavOpen)"
       >
-        <div class="nav__hamburger-icon">
+        <div v-once class="nav__hamburger-icon">
           <span></span>
           <span></span>
           <span></span>
@@ -76,7 +76,7 @@
         :aria-hidden="!isMobileNavOpen"
         role="menu"
       >
-        <li v-for="navItem in getMobileNavItems()" :key="navItem.text" role="none">
+        <li v-for="navItem in mobileNavItems" :key="navItem.text" role="none">
           <nuxt-link 
             :to="navItem.url!" 
             role="menuitem"
@@ -150,8 +150,19 @@ const mobileNavItems = computed(() => {
   return items.filter(x => x.url)
 })
 
-function getMobileNavItems(): Omit<INav, 'submenu'>[] {
-  return mobileNavItems.value
+// Memoized computed properties for static IDs
+const submenuIds = computed(() => {
+  const ids = new Map<string, string>()
+  for (const item of navItems) {
+    if (!item.url) {
+      ids.set(item.text, `submenu-${item.text.toLowerCase()}`)
+    }
+  }
+  return ids
+})
+
+function getSubmenuId(navItemText: string): string {
+  return submenuIds.value.get(navItemText) || `submenu-${navItemText.toLowerCase()}`
 }
 
 // Focus trap functionality - memoized selectors
@@ -161,24 +172,32 @@ let lastFocusableElement: HTMLElement | null = null
 
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
 
+// Optimized focus trap with early returns and cached queries
 function setupFocusTrap() {
   if (!isMobileNavOpen.value) return
   
   const nav = document.querySelector('nav.nav') as HTMLElement
   if (!nav) return
   
-  focusableElements = Array.from(nav.querySelectorAll(FOCUSABLE_SELECTOR)).filter(el => {
+  const elements = nav.querySelectorAll(FOCUSABLE_SELECTOR)
+  focusableElements = Array.from(elements).filter(el => {
     const element = el as HTMLElement
-    return element.offsetWidth > 0 && element.offsetHeight > 0
+    const rect = element.getBoundingClientRect()
+    return rect.width > 0 && rect.height > 0 && window.getComputedStyle(element).visibility !== 'hidden'
   }) as HTMLElement[]
+  
+  if (focusableElements.length === 0) return
   
   firstFocusableElement = focusableElements[0] || null
   lastFocusableElement = focusableElements[focusableElements.length - 1] || null
   
-  // Focus the first element when opening (skip hamburger button)
-  const hamburger = document.querySelector('.nav__hamburger')
-  if (firstFocusableElement && firstFocusableElement !== hamburger) {
-    setTimeout(() => firstFocusableElement?.focus(), 100)
+  // Focus the first non-hamburger element when opening
+  const hamburger = document.querySelector('.nav__hamburger') as HTMLElement
+  const targetElement = firstFocusableElement !== hamburger ? firstFocusableElement : focusableElements[1]
+  
+  if (targetElement) {
+    // Use requestAnimationFrame for smoother focus
+    requestAnimationFrame(() => targetElement.focus())
   }
 }
 
@@ -198,27 +217,44 @@ function handleFocusTrap(event: KeyboardEvent) {
   }
 }
 
+// Optimized submenu toggle with early returns
 function toggleSubmenu(submenuName: string) {
-  if (expandedSubmenus.value.has(submenuName)) {
+  const hasSubmenu = expandedSubmenus.value.has(submenuName)
+  if (hasSubmenu) {
     expandedSubmenus.value.delete(submenuName)
   } else {
+    // Close other submenus for better UX (optional)
+    expandedSubmenus.value.clear()
     expandedSubmenus.value.add(submenuName)
   }
 }
 
 function closeAllSubmenus() {
+  if (expandedSubmenus.value.size === 0) return // Early return if already empty
   expandedSubmenus.value.clear()
 }
 
+// Optimized event handlers with early returns
 function handleGlobalKeydown(event: KeyboardEvent) {
-  if (event.key === 'Escape') {
-    if (isMobileNavOpen.value) {
-      toggleMobileNav(false)
-    }
-    closeAllSubmenus()
+  if (event.key !== 'Escape') {
+    handleFocusTrap(event)
+    return
   }
   
-  handleFocusTrap(event)
+  let handled = false
+  if (isMobileNavOpen.value) {
+    toggleMobileNav(false)
+    handled = true
+  }
+  
+  if (expandedSubmenus.value.size > 0) {
+    closeAllSubmenus()
+    handled = true
+  }
+  
+  if (handled) {
+    event.preventDefault()
+  }
 }
 
 watch(route, () => {
