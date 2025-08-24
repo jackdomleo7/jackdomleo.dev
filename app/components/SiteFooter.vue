@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer v-once class="footer">
     <nuxt-link to="/" class="footer__logo">
       <Icon name="custom:j-icon" mode="svg" />
       <span class="sr-only">Home</span>

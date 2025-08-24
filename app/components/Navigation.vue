@@ -6,7 +6,7 @@
         <span class="sr-only"> - Home</span>
       </nuxt-link>
       <nuxt-link to="/" class="nav__logo">
-        <Icon name="custom:j-icon" mode="svg" />
+        <Icon v-once name="custom:j-icon" mode="svg" />
         <span class="sr-only">Home</span>
       </nuxt-link>
       <div v-if="!isMobile" class="nav__primary">

@@ -2,7 +2,7 @@
   <div class="projects">
     <header class="container">
       <h1 class="projects__title">Projects</h1>
-      <p class="projects__description">
+      <p v-once class="projects__description">
         I enjoy creating different types of projects in my spare time using a range of technologies. You can find all of my featured projects here, and many more projects on <nuxt-link :to="variables.GITHUB_URL">GitHub</nuxt-link> and <nuxt-link :to="variables.CODEPEN_URL">CodePen</nuxt-link>.
       </p>
     </header>

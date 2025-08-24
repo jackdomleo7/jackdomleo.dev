@@ -1,5 +1,5 @@
 <template>
-  <article v-if="page" class="basic-page container container--thinner">
+  <article v-if="page" v-once class="basic-page container container--thinner">
     <header>
       <h1 class="basic-page__title">{{ page.title }}</h1>
     </header>

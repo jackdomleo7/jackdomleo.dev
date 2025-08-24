@@ -39,7 +39,7 @@
         <h2 class="skills__heading container">Skills</h2>
         <div class="skills__grid">
           <ul class="skills__list">
-            <li v-for="skill in skills" :key="skill.key">
+            <li v-once v-for="skill in skills" :key="skill.key">
               <Icon class="skills__icon" :name="`custom:${skill.key}`" mode="svg" />
               <span class="skills__text" mode="svg">{{ skill.value }}</span>
             </li>
@@ -52,7 +52,7 @@
       <ProjectList class="projects__list" :limit="6" />
       <nuxt-link to="/projects" class="projects__more link">
         Check out more of my work
-        <Icon class="projects__more-icon" name="custom:arrow-right" mode="svg" />
+        <Icon v-once class="projects__more-icon" name="custom:arrow-right" mode="svg" />
       </nuxt-link>
     </section>
   </div>

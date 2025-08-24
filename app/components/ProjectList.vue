@@ -1,5 +1,5 @@
 <template>
-  <ul class="projects-list container">
+  <ul v-once class="projects-list container">
     <li v-for="(project, index) in list" :key="project.image">
       <component :is="project.isUrlDeactivated ? 'div' : defineNuxtLink({})" :to="project.isUrlDeactivated ? undefined : project.url" class="project" :target="project.isUrlDeactivated ? undefined : '_blank'">
         <picture class="project__img">

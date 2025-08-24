@@ -1,5 +1,5 @@
 <template>
-  <div class="links">
+  <div v-once class="links">
     <header class="container">
       <h1 class="links__title">Links</h1>
     </header>
