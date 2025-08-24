@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
-modified_time: 2025-08-24
+sitemap:
+  lastmod: 2025-08-24
 ---
 
 ## Privacy Commitment

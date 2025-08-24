@@ -3,8 +3,8 @@
     <header>
       <h1 class="basic-page__title">{{ page.title }}</h1>
     </header>
-    <p v-if="page.modified_time">
-      Last updated: <time :datetime="dayjs(new Date(page.modified_time)).format('YYYY-MM-DD')">{{ dayjs(new Date(page.modified_time)).format('MMMM D, YYYY') }}</time>
+    <p v-if="page.sitemap?.lastmod">
+      Last updated: <time :datetime="dayjs(new Date(page.sitemap.lastmod)).format('YYYY-MM-DD')">{{ dayjs(new Date(page.sitemap.lastmod)).format('MMMM D, YYYY') }}</time>
     </p>
     <ContentRenderer class="rich-text basic-page__content" :value="page.body" :data="variables" />
   </article>

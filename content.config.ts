@@ -5,10 +5,7 @@ export default defineContentConfig({
   collections: {
     basic: defineCollection(asSitemapCollection({
       type: 'page',
-      source: '*.md',
-      schema: z.object({
-        modified_time: z.date().optional()
-      })
+      source: '*.md'
     })),
     article: defineCollection(asSitemapCollection({
       type: 'page',
