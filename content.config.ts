@@ -16,7 +16,7 @@ export default defineContentConfig({
       schema: z.object({
         published_time: z.date(),
         modified_time: z.date().optional(),
-        tags: z.array(z.string())
+        tags: z.array(z.enum(['HTML', 'CSS', 'JavaScript', 'Vue', 'Nuxt', 'Accessibility', 'Tips', 'Problem Solving']))
       })
     }))
   }

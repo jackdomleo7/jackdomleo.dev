@@ -3,7 +3,7 @@ title: Should You Clean Out Your Blog? A Complete Content Audit Guide
 description: Learn when and how to clean out your blog for better SEO and user experience. Discover proven strategies for updating, redirecting, or removing outdated content.
 published_time: 2023-02-16
 modified_time: 2025-08-24
-tags: [Tips, Productivity, HTML]
+tags: [Tips, HTML]
 ---
 
 If like me, you own a blog, you may ask yourself if it's ever a good idea to clean it out from time to time.

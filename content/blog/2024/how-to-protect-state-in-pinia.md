@@ -3,7 +3,7 @@ title: How to Create Readonly State in Pinia
 description: Learn how to create readonly state in Pinia to protect your Vue.js store data. Discover type-safe methods for state protection with practical examples and best practices.
 published_time: 2024-04-07
 modified_time: 2025-08-24
-tags: [Vue]
+tags: [Vue, JavaScript, Tips]
 ---
 
 [Pinia](https://pinia.vuejs.org/) is a relatively new state management tool for the Vue ecosystem. It is the new preferred state management tool recommended by the Vue core team replacing Vuex. Compared to [Vuex](https://vuex.vuejs.org/), Pinia is type-safe by default ([direct-vuex](https://github.com/paroi-tech/direct-vuex) was needed to make Vuex type-safe), extremely lightweight, and modular by design (meaning you can create multiple stores instead of multiple modules inside one store, which optimises performance). Similar to Vuex, Pinia has state, computed properties (getters) and methods (mutations and actions). _Read more about Pinia and its usage to understand the similarities and differences between Pinia and Vuex._
