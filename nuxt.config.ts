@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   },
   css: [
     'modern-normalize/modern-normalize.css',
-    'cooltipz-css/src/cooltipz.scss',
+    'cooltipz-css/src/cooltipz-classes.scss',
     '~/assets/styles/main.scss'
   ],
   site: {

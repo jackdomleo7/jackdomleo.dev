@@ -27,8 +27,8 @@ importers:
         specifier: ^12.2.0
         version: 12.2.0
       cooltipz-css:
-        specifier: ^2.3.1
-        version: 2.3.1(sass@1.90.0)
+        specifier: ^2.4.0
+        version: 2.4.0(sass@1.90.0)
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
@@ -2640,8 +2640,8 @@ packages:
     resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
     engines: {node: '>=18'}
 
-  cooltipz-css@2.3.1:
-    resolution: {integrity: sha512-bHnPNPBX+uv+mcfA8N9m1IXM6ZPlzsdr/t5OGm7U3QdZ2ZAQiej16meDb/SCJcWCw4k9+kF8KSNfrAhrjg1tNA==}
+  cooltipz-css@2.4.0:
+    resolution: {integrity: sha512-d3obNXohOZj2Col0sCwUEV6AJlANlRRpxnckKbiOhz/DyhS9Rmi/2leZK9Dlm7wRDKNcGOGm3d/n8epl2B7vAA==}
     engines: {node: '>=14'}
     peerDependencies:
       sass: 1.x
@@ -9492,7 +9492,7 @@ snapshots:
 
   cookie@1.0.2: {}
 
-  cooltipz-css@2.3.1(sass@1.90.0):
+  cooltipz-css@2.4.0(sass@1.90.0):
     optionalDependencies:
       sass: 1.90.0
 
