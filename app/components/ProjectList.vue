@@ -42,6 +42,13 @@ const props = withDefaults(defineProps<{
 })
 
 const projects: Project[] = [{
+  name: 'Storybook Addon: CSS Properties',
+  type: 'project',
+  url: 'https://github.com/jackdomleo7/storybook-addon-css-properties',
+  description: 'A Storybook addon that allows you to edit CSS custom properties to see how your stories react.',
+  image: '/projects/storybook-addon-css-properties.webp',
+  tech: ['Storybook', 'React']
+},{
   name: 'Which Media Queries <small>which-media-queries.jackdomleo.dev</small>',
   type: 'mini',
   url: 'https://which-media-queries.jackdomleo.dev',
