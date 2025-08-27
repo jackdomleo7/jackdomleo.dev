@@ -35,11 +35,8 @@ $ pnpm run generate
 # Launch staging server
 $ pnpm run preview
 
-# Check project linting
-$ pnpm run lint:check
-
 # Lint & fix
-$ pnpm run lint:fix
+$ pnpm run lint
 
 # Run tests
 $ pnpm run test
