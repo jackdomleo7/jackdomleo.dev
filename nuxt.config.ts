@@ -96,15 +96,6 @@ export default defineNuxtConfig({
     }
   },
   content: {
-    build: {
-      markdown: {
-        highlight: {
-          theme: {
-            default: 'min-dark'
-          }
-        }
-      }
-    },
     experimental: { sqliteConnector: 'native' }
   },
   icon: {
