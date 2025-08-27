@@ -1,34 +1,17 @@
 ---
 title: Privacy Policy
 sitemap:
-  lastmod: 2025-08-24
+  lastmod: 2025-08-27
 ---
 
-## Privacy Commitment
+**Definitions**: 'I', 'me', 'my': Jack Domleo - owner of this website.
 
-Your privacy is important to me. This policy outlines how I handle information on jackdomleo.dev.
+Your privacy is important to me. It is my policy to respect your privacy regarding any information I may collect from you across this website, jackdomleo.dev.
 
-## Information Collection
+I do not collect any personal information. I do not use cookies or any tracking software.
 
-**I do not collect any personal information.** Specifically:
+My website may link to external sites that are not operated by me. Please be aware that I have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.
 
-- No cookies or tracking technologies
-- No analytics or user data collection  
-- No user accounts or registration
-- No personal information storage
+My website may link to external sites via an affiliate link. Please be aware that each site may have its own way of tracking the affiliate back to me, whether it be via cookies or my own discount code. Please review their respective privacy policies regarding affiliate tracking.
 
-## Third-Party Links
-
-My website contains links to external sites. I have no control over these third-party websites and am not responsible for their privacy practices. Please review their respective privacy policies.
-
-## Affiliate Links
-
-Some external links may be affiliate links. Third-party sites may use their own tracking methods (cookies, promotional codes) to attribute referrals. I do not receive personal information from these partners.
-
-## Policy Updates
-
-I may update this policy occasionally. Continued use of my website constitutes acceptance of any changes. The "Last Updated" date above reflects the most recent revision.
-
-## Contact
-
-Questions about this privacy policy? Contact me via <a v-once :href="LINKEDIN_URL">LinkedIn</a>.
+Your continued use of my website will be regarded as acceptance of my practices around privacy and personal information. If you have any questions about how I handle user data and personal information, feel free to contact me via <a :href="LINKEDIN_URL">LinkedIn</a>.
