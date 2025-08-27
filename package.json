@@ -29,11 +29,9 @@
     "better-sqlite3": "^12.2.0",
     "cooltipz-css": "^2.4.0",
     "dayjs": "^1.11.13",
-    "i": "^0.3.7",
     "modern-normalize": "^3.0.1",
     "nuxt-schema-org": "^5.0.6",
-    "nuxt-seo-utils": "^7.0.14",
-    "pnpm": "^10.14.0"
+    "nuxt-seo-utils": "^7.0.14"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.0",
