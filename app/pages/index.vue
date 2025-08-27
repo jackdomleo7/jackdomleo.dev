@@ -74,7 +74,7 @@ useSchemaOrg([
   defineWebSite({
     name: 'Jack Domleo',
     url: config.public.BASE_URL,
-    description: `Personal website and blog of Jack Domleo, ${variables.OCCUPATION}`,
+    description: `Personal website of Jack Domleo, ${variables.OCCUPATION}`,
     inLanguage: 'en-GB'
   })
 ])

@@ -38,11 +38,6 @@ const links: { name: string, url: string, icon: string }[] = [
       icon: "j-icon"
   },
   {
-      name: "Blog",
-      url: "/blog",
-      icon: "blog"
-  },
-  {
       name: "GitHub",
       url: variables.GITHUB_URL,
       icon: "github"

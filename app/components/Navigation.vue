@@ -120,18 +120,8 @@ const navItems: FixedLengthArray<INav, 3> = [ // No more than 3 top-level items
     url: '/work'
   },
   {
-    text: 'More',
-    url: null,
-    submenu: [
-      {
-        text: 'Blog',
-        url: '/blog'
-      },
-      {
-        text: 'Links',
-        url: '/links'
-      }
-    ]
+    text: 'Links',
+    url: '/links'
   }
 ]
 

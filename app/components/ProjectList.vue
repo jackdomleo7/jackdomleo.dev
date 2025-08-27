@@ -152,7 +152,7 @@ const projects: Project[] = [{
   name: 'My website <small>jackdomleo.dev</small>',
   type: 'project',
   url: '/',
-  description: 'Designed and built a fully responsive static website and blog for myself. This has been through many design variations as my UI skills have developed.',
+  description: 'Designed and built a fully responsive static portfolio website. This has been through many design variations as my UI skills have developed.',
   image: '/projects/jackdomleo.dev.webp',
   tech: ['Nuxt 4', 'TypeScript', 'SCSS']
 }];
