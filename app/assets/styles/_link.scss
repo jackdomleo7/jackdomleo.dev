@@ -12,7 +12,7 @@ a[class=""] {
   @media (prefers-reduced-motion: no-preference) {
     &:hover,
     &:focus {
-      text-decoration: none;
+      color: color-mix(in srgb, var(--link-color), #000 10%);
     }
   }
 }
