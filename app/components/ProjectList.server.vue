@@ -42,6 +42,13 @@ const props = withDefaults(defineProps<{
 })
 
 const projects: Project[] = [{
+  name: 'Butter CMS Utilities',
+  type: 'project',
+  url: 'https://jackdomleo7.github.io/Butter_CMS_Utilities/',
+  description: "An unofficial collection of client-side utilities for Butter CMS that I found myself needing but aren't available out of the box (yet).",
+  image: '/projects/butter-cms-utilities.webp',
+  tech: ['Vue', 'Butter CMS']
+},{
   name: 'Storybook Addon: CSS Properties',
   type: 'project',
   url: 'https://github.com/jackdomleo7/storybook-addon-css-properties',
