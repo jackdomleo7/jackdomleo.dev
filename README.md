@@ -19,7 +19,7 @@ Website timeline:
 
 ## Local Setup
 
-- Node: v22
+- Node: v24
 - pnpm: v10
 
 Create a `.env` file with the following properties:
