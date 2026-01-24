@@ -96,7 +96,7 @@ const projects: Project[] = [{
   name: 'Checka11y.css',
   type: 'project',
   url: 'https://checka11y.jackdomleo.dev',
-  description: 'A CSS stylesheet to quickly highlight a11y concerns and a really good education project for those wanting to learn about accessibility.',
+  description: 'A CSS stylesheet (also available as a Chrome/Firefox browser extension) to quickly highlight a11y concerns and a really good education project for those wanting to learn about accessibility.',
   image: '/projects/checka11y.css.webp',
   tech: ['SCSS', 'Cypress']
 },{
