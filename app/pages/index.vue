@@ -83,7 +83,7 @@ const skills: { key: string; value: string }[] = [
   { key: 'vue', value: 'Vue.js' },
   { key: 'nuxt', value: 'Nuxt.js' },
   { key: 'typescript', value: 'TypeScript' },
-  { key: 'jest', value: 'Jest' },
+  { key: 'vite', value: 'Vite' },
   { key: 'storybook', value: 'Storybook' },
   { key: 'sass', value: 'Sass/SCSS' },
   { key: 'a11y', value: 'Accessibility' },
