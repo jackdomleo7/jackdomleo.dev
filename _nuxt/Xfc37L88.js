@@ -1,1 +1,0 @@
-import{_ as s,c as o,o as r,a0 as n}from"./BivYFm5t.js";const t={};function a(e,c){return r(),o("em",null,[n(e.$slots,"default")])}const l=Object.assign(s(t,[["render",a]]),{__name:"ProseEm"});export{l as default};
