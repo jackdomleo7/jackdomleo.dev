@@ -34,7 +34,7 @@ import variables from '@/utilities/variables';
 
 const links: { key: string; value: string }[] = [
   { key: 'Home', value: '/' },
-  { key: 'Projects', value: '/projects' },
+  { key: 'Lab', value: '/lab' },
   { key: 'Work', value: '/work' },
   { key: 'Links', value: '/links' }
 ]

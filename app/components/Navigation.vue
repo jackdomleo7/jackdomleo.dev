@@ -112,8 +112,8 @@ const expandedSubmenus = ref(new Set<string>())
 
 const navItems: FixedLengthArray<INav, 3> = [ // No more than 3 top-level items
   {
-    text: 'Projects',
-    url: '/projects'
+    text: 'Lab',
+    url: '/lab'
   },
   {
     text: 'Work',

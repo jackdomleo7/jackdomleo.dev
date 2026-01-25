@@ -47,12 +47,13 @@
         </div>
       </div>
     </section>
-    <section id="projects" class="container projects">
-      <h2 class="projects__heading">Projects</h2>
-      <ProjectList class="projects__list" :limit="6" />
-      <nuxt-link to="/projects" class="projects__more link">
-        Check out more of my work
-        <Icon v-once class="projects__more-icon" name="custom:arrow-right" mode="svg" />
+    <section id="lab" class="container lab">
+      <h2 class="lab__heading">The Lab</h2>
+      <p>A collection of personal experiments, projects, AI-assisted prototypes, and more.</p>
+      <ProjectList class="lab__list" :limit="6" />
+      <nuxt-link to="/lab" class="lab__more link">
+        Explore my lab
+        <Icon v-once class="lab__more-icon" name="custom:arrow-right" mode="svg" />
       </nuxt-link>
     </section>
   </div>
@@ -290,7 +291,7 @@ const skills: { key: string; value: string }[] = [
   }
 }
 
-.projects {
+.lab {
   display: flex;
   flex-direction: column;
 
@@ -315,7 +316,7 @@ const skills: { key: string; value: string }[] = [
     @media (prefers-reduced-motion: no-preference) {
       &:hover,
       &:focus {
-        .projects__more-icon {
+        .lab__more-icon {
           animation: jumpy-arrow 0.8s forwards infinite;
         }
       }
