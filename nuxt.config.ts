@@ -3,7 +3,7 @@ import variables from './app/utilities/variables'
 
 const SEO = {
   TITLE: `Jack Domleo - ${variables.OCCUPATION}`,
-  DESCRIPTION: `A Nottinghamshire-based ${variables.OCCUPATION.toLowerCase()}, primarily working with Vue.js, Nuxt.js, TypeScript, SCSS & many more technologies.`
+  DESCRIPTION: `Personal website of Jack Domleo, a ${variables.OCCUPATION.toLowerCase()} specialising in JavaScript-based technologies and web development.`
 }
 
 export default defineNuxtConfig({
@@ -82,16 +82,12 @@ export default defineNuxtConfig({
         variables.CODEPEN_URL
       ],
       knowsAbout: [
+        'Frontend Engineering',
         'Vue.js',
-        'Nuxt.js', 
+        'Nuxt.js',
         'TypeScript',
-        'SCSS',
-        'Frontend Development',
-        'UX Design',
-        'Web Accessibility',
-        'Storybook',
-        'Vite',
-        'Vitest'
+        'Web Accessibility (WCAG)',
+        'Technical Leadership'
       ]
     }
   },
