@@ -8,12 +8,13 @@ Jack Domleo's personal website.
 My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
 
 Website timeline:
-- **September 2018** - Created first website using HTML, CSS, JavaScript & Bootstrap 4.
-- **September 2019** - Redesigned & rebuilt website using Vue.js, TypeScript & SCSS.
-- **May 2020** - Redesigned & rebuilt website using Nuxt 2, TypeScript & SCSS. Introduced light & dark themes. Introduced blog using Nuxt Content.
-- **January 2022** - Redesigned site using newly improved UI skills (still not good UI skills, but better). Introduced Jest & Prismic CMS.
-- **January 2023** - Redesigned site to be more minimalistic & rebuilt using Nuxt 3, TypeScript & SCSS. Replaced Prismic CMS & Nuxt Content with Contentful.
-- **August 2025** - Removed Contentful & reverted back to Nuxt Content while removing blog. Upgraded to Nuxt 4.
+- **September 2018**: Initial launch using fundamental web technologies and Bootstrap 4.
+- **September 2019**: Major migration to Vue.js and TypeScript, adopting SCSS for styling.
+- **May 2020**: Rebuilt with Nuxt 2 to improve performance; introduced dual-theming and a markdown-based blog with Nuxt Content.
+- **January 2022**: UI/UX overhaul focused on design refinement and integration of Jest for testing and Prismic as a CMS.
+- **January 2023**: Minimalist redesign and migration to Nuxt 3; transitioned to Contentful for headless CMS management.
+- **August 2025**: Streamlined architecture by returning to Nuxt Content and upgrading to Nuxt 4. Removed blog.
+- **February 2026**: Repurposed to focus on technical leadership and high-leverage workflows, reflecting a shift toward architectural oversight.
 
 ---
 
