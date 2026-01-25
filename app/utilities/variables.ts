@@ -4,7 +4,7 @@ export default {
   LINKEDIN_URL: 'https://linkedin.com/in/jackdomleo7/',
   GITHUB_URL: 'https://github.com/jackdomleo7',
   CODEPEN_URL: 'https://codepen.io/jackdomleo7',
-  OCCUPATION: 'Senior Frontend & UX Developer',
+  OCCUPATION: 'Senior Frontend Developer',
   CURRENT_YEAR: new Date().getFullYear(),
   NO_OF_YEARS_EXPERIENCE: (() => {
     const firstDayAsDeveloper = dayjs(new Date('2018-09-03'))
@@ -14,6 +14,7 @@ export default {
   
     let yearsExperience = ''
   
+    // TODO: From Sept 2028, change to just outputting yearsDifference
     if (yearsDifferenceRemainder === 1) {
       yearsExperience = `just over ${yearsDifference}`
     }
