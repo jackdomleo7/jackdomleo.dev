@@ -413,7 +413,7 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 1.75rem;
+    gap: 0.75rem 1.75rem;
 
     li {
       display: flex;
