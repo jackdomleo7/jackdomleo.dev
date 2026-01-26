@@ -48,13 +48,13 @@
         </div>
       </div>
     </section>
-    <section id="lab" class="container lab">
-      <h2 class="lab__heading">The Lab</h2>
-      <p class="lab__description container">A collection of personal experiments, projects, AI-assisted prototypes, and more.</p>
-      <ProjectList class="lab__list" :limit="6" />
-      <nuxt-link to="/lab" class="lab__more link">
-        Explore my lab
-        <Icon v-once class="lab__more-icon" name="custom:arrow-right" mode="svg" />
+    <section id="projects" class="container projects">
+      <h2 class="projects__heading">Projects</h2>
+      <p class="projects__description container">A collection of personal experiments, projects, AI-assisted prototypes, and more.</p>
+      <ProjectList class="projects__list" :limit="6" />
+      <nuxt-link to="/projects" class="projects__more link">
+        Explore more projects
+        <Icon v-once class="projects__more-icon" name="custom:arrow-right" mode="svg" />
       </nuxt-link>
     </section>
   </div>
@@ -319,10 +319,10 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
   }
 }
 
-.lab {
+.projects {
   display: flex;
   flex-direction: column;
-  padding-block: 2rem;
+  padding-top: 4rem;
 
   &__heading {
     font-size: var(--text-title);
@@ -339,6 +339,8 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
 
   &__list {
     margin-block: 1.25rem;
+    padding-inline: 1rem;
+    margin-inline: 0;
   }
 
   &__more {
@@ -352,7 +354,7 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
     @media (prefers-reduced-motion: no-preference) {
       &:hover,
       &:focus {
-        .lab__more-icon {
+        .projects__more-icon {
           animation: jumpy-arrow 0.8s forwards infinite;
         }
       }
