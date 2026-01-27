@@ -8,11 +8,11 @@
       >
         <div class="project-row">
           <div class="project-row__content">
-            <nav class="project-row__meta">
-              <span v-for="tech in project.tech" :key="tech" class="tech-tag">
+            <ul class="project-row__meta">
+              <li v-for="tech in project.tech" :key="tech" class="tech-tag">
                 {{ tech }}
-              </span>
-            </nav>
+              </li>
+            </ul>
 
             <div class="project-row__header">
               <component 
@@ -209,7 +209,9 @@ $row-padding-h: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem 0;
+    list-style-type: none;
+    padding: 0;
   }
 
   &__header {
@@ -238,8 +240,7 @@ $row-padding-h: 1rem;
     margin-top: 0.75rem;
     font-size: 0.9rem;
     line-height: 1.5;
-    max-width: 65ch;
-    color: var(--color-text-muted, #ccc);
+    opacity: 0.8;
     @media (min-width: $responsive-standard-tablet) { font-size: 1rem; }
   }
 }
@@ -249,7 +250,6 @@ $row-padding-h: 1rem;
   font-size: .75rem;
   text-transform: uppercase;
   color: var(--color-accent);
-  background: rgba(var(--color-accent-rgb), 0.08);
   padding: 1px 6px;
   border-radius: 2px;
 
@@ -263,7 +263,6 @@ $row-padding-h: 1rem;
   font-size: 0.6rem;
   padding: 1px 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--color-text-muted);
   border-radius: 2px;
   text-transform: uppercase;
 }
