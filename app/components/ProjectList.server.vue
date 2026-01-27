@@ -70,9 +70,9 @@ const props = withDefaults(defineProps<{
 const projects: Project[] = [{
   name: 'Butter CMS Utilities',
   url: 'https://jackdomleo7.github.io/Butter_CMS_Utilities/',
-  description: "An unofficial collection of client-side utilities for Butter CMS that I found myself needing but aren't available out of the box (yet).",
+  description: 'An open-source utility suite addressing native limitations in Butter CMS. Features high-performance cross-page content searching and a roadmap for automated HTML sanitization to preserve design integrity. Designed for and validated by production content teams to streamline editorial workflows.',
   image: '/projects/butter-cms-utilities.webp',
-  tech: ['Vue', 'Butter CMS']
+  tech: ['Vue 3', 'TypeScript', 'Tooling']
 },{
   name: 'Storybook Addon: CSS Properties',
   url: 'https://github.com/jackdomleo7/storybook-addon-css-properties',
