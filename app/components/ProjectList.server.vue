@@ -136,12 +136,6 @@ const projects: Project[] = [{
   image: '/projects/custom-car-colour-preview.gif',
   tech: ['SVG', 'SCSS']
 },{
-  name: 'Spinning Smiley Face',
-  url: 'https://codepen.io/jackdomleo7/full/wvKLjVb',
-  description: "A fun little animation of a spinning smiley face while learning GSAP.",
-  image: '/projects/spinning-smiley-face.gif',
-  tech: ['GSAP', 'SCSS']
-},{
   name: 'CSS Union Jack Flag',
   url: 'https://codepen.io/jackdomleo7/full/abvrgEo',
   description: "A pure CSS pixel-perfect Union Jack flag.",
@@ -153,18 +147,6 @@ const projects: Project[] = [{
   description: "Designed and built a fully responsive static website for a small shop-fitting & interior design company. This website needed a modern but minimal feel to it so they could clearly get their message across to visitors. Unfortunately, the company closed in October 2021.",
   image: '/projects/tmdip-interiors.webp',
   tech: ['Nuxt 2', 'TypeScript', 'Prismic']
-},{
-  name: 'Neumorphic Design Elements',
-  url: 'https://codepen.io/jackdomleo7/full/mdeowoz',
-  description: 'Some common UI elements in the style of neumorphic design.',
-  image: '/projects/neumorphic-design-elements.webp',
-  tech: ['SCSS']
-},{
-  name: 'Jumping into Lightspeed',
-  url: 'https://codepen.io/jackdomleo7/full/rNOYdwz',
-  description: "A mini animation demonstrating Star Wars lightspeed using HTML, CSS & JS.",
-  image: '/projects/lightspeed.webp',
-  tech: ['JavaScript', 'CSS']
 },{
   name: 'Pixel Art R2-D2',
   url: 'https://codepen.io/jackdomleo7/full/ZEEqdxy',
