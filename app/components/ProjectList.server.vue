@@ -108,9 +108,8 @@ const projects: Project[] = [{
 },{
   name: 'Spring Clean Twitter Bot',
   url: 'https://github.com/jackdomleo7/Spring_Clean_Twitter_Bot',
-  description: 'A Twitter bot to automatically clean up my Twitter account.',
-  image: '/projects/spring-clean-twitter-bot.webp',
-  tags: ['TypeScript', 'Twitter API', 'CRON']
+  description: 'An automated utility designed to manage and reduce Twitter account bloat. Built with TypeScript and deployed on Heroku, it utilized scheduled CRON tasks and the Twitter API to maintain account hygiene through automated content pruning.',
+  tags: ['TypeScript', 'Twitter API', 'CRON', 'Heroku']
 },{
   name: 'Colour Theme Watcher & Switcher',
   url: 'https://codepen.io/jackdomleo7/full/OJWaeem',
