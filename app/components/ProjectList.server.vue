@@ -76,9 +76,9 @@ const projects: Project[] = [{
 },{
   name: 'Storybook Addon: CSS Properties',
   url: 'https://github.com/jackdomleo7/storybook-addon-css-properties',
-  description: 'A Storybook addon that allows you to edit CSS custom properties to see how your stories react.',
+  description: "An experimental exploration into Storybook's internal messaging APIs. Designed to provide real-time control over CSS custom properties within the Storybook manager. This project served as a deep dive into state synchronization between the manager and preview frames.",
   image: '/projects/storybook-addon-css-properties.webp',
-  tech: ['Storybook', 'React']
+  tech: ['React', 'TypeScript', 'Storybook']
 },{
   name: 'Which Media Queries',
   url: 'https://which-media-queries.jackdomleo.dev',
