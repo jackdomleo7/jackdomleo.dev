@@ -101,9 +101,9 @@ const projects: Project[] = [{
 },{
   name: 'Mad Parrot Crew NFT',
   url: 'https://www.madparrotcrew.com',
-  description: 'Created a fully responsive minting website based on existing designs for the Mad Parrot Crew NFT.',
+  description: 'A freelance commercial delivery with pre-existing designs for the Mad Parrot Crew NFT ecosystem. Architected a fully responsive minting platform using Nuxt 2 and Web3 technologies. Managed complex frontend state and successfully navigated eight major design pivots to deliver a high-performance launch experience for the client.',
   image: '/projects/mad-parrot-crew-nft.webp',
-  tags: ['Nuxt 2', 'Web3', 'TypeScript'],
+  tags: ['Nuxt 2', 'TypeScript', 'Web3'],
   isUrlDeactivated: true
 },{
   name: 'Spring Clean Twitter Bot',
