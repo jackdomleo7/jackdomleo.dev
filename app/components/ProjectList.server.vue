@@ -82,7 +82,7 @@ const projects: Project[] = [{
 },{
   name: 'Which Media Queries',
   url: 'https://which-media-queries.jackdomleo.dev',
-  description: 'A diagnostic utility designed to verify browser detection of system-level accessibility preferences. It provides an at-a-glance validation of media queries such as reduced motion, high contrast, and color schemes to streamline cross-device QA testing.',
+  description: 'A diagnostic utility designed to verify browser detection of system-level accessibility preferences. It provides an at-a-glance validation of media queries such as reduced motion, high contrast, and colour schemes to streamline cross-device QA testing.',
   image: '/projects/which-media-queries.webp',
   tags: ['Vue 3', 'TypeScript', 'Accessibility']
 },{
@@ -131,7 +131,7 @@ const projects: Project[] = [{
 },{
   name: 'Custom Car Colour Preview',
   url: 'https://codepen.io/jackdomleo7/full/wvoYjNP',
-  description: "An application to preview different colours of a car.",
+  description: "An interactive product configurator demonstrating dynamic asset colourisation. I utilized SVG masking and CSS blend modes to solve the 'flat colour' limitation, preserving realistic specular highlights and shadows to maintain the vehicle's metallic finish across the entire colour spectrum.",
   image: '/projects/custom-car-colour-preview.gif',
   tags: ['SVG', 'SCSS']
 },{
