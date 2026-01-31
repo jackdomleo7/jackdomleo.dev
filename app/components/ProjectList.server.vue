@@ -125,7 +125,7 @@ const projects: Project[] = [{
 },{
   name: 'Cooltipz.css',
   url: 'https://cooltipz.jackdomleo.dev',
-  description: 'A pure CSS solution for adding highly customisable, accessible tooltips to HTML.',
+  description: 'A lightweight, library-agnostic tooltip library built with pure SCSS. Engineered for high performance and zero-dependency environments, it provides an accessible, fully customizable solution for surfacing contextual information without the overhead of JavaScript-heavy alternatives.',
   image: '/projects/cooltipz.css.webp',
   tags: ['SCSS']
 },{
