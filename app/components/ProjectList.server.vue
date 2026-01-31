@@ -184,7 +184,7 @@ $row-padding-h: 1rem;
   margin: 0 calc($row-padding-h * -1);
   border-top: 1px solid var(--color-fg2, #333);
   transition: background-color 0.2s ease, opacity 0.3s ease;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 
   &:hover:not(.is-offline) {
     background-color: rgba(255, 255, 255, 0.03);
@@ -249,8 +249,8 @@ $row-padding-h: 1rem;
   font-size: .75rem;
   text-transform: uppercase;
   color: var(--color-accent);
-  padding: 1px 6px;
-  border-radius: 2px;
+  padding: 0.0625rem 0.375rem;
+  border-radius: 0.125rem;
 
   &:first-of-type {
     padding-left: 0;
@@ -260,9 +260,9 @@ $row-padding-h: 1rem;
 .offline-tag {
   font-family: var(--font-mono);
   font-size: 0.6rem;
-  padding: 1px 6px;
+  padding: 0.0625rem 0.375rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
+  border-radius: 0.125rem;
   text-transform: uppercase;
 }
 
@@ -273,16 +273,16 @@ $row-padding-h: 1rem;
 
   &__trigger {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 8.875rem;
+    height: 5rem;
     cursor: zoom-in;
-    @media (min-width: $responsive-standard-tablet) { width: 100px; height: 100px; }
+    @media (min-width: $responsive-standard-tablet) { width: 11.125rem; height: 6.25rem; }
     
     .thumb {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       border: 1px solid var(--color-fg2, #333);
       transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
       &:hover { transform: scale(1.02); }
@@ -306,7 +306,7 @@ $row-padding-h: 1rem;
     .full-view { 
       max-width: 100%; 
       max-height: 100%; 
-      border-radius: 4px; 
+      border-radius: 0.25rem; 
       transform: scale(0.98); 
       transition: transform 0.2s ease; 
       filter: none !important;
