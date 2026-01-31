@@ -95,9 +95,9 @@ const projects: Project[] = [{
 },{
   name: 'npx jackdomleo7',
   url: 'https://github.com/jackdomleo7/npx_business_card',
-  description: 'A simple npm script to show some details about me directly in the terminal, like a digital business card.',
-  image: '/projects/npx-jackdomleo7.gif',
-  tags: ['JavaScript', 'npx']
+  description: 'An interactive Command Line Interface (CLI) business card distributed via NPM. This project demonstrates a creative approach to personal branding and an understanding of terminal-based user experiences and package distribution.',
+  image: '/projects/npx-jackdomleo7.webp',
+  tags: ['Node.js', 'CLI', 'NPX']
 },{
   name: 'Mad Parrot Crew NFT',
   url: 'https://www.madparrotcrew.com',
