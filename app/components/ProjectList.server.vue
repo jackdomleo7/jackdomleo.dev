@@ -4,7 +4,7 @@
       <li 
         v-for="(project, index) in list" 
         :key="project.name" 
-        :class="['project-item', { 'is-offline': project.isUrlDeactivated }]"
+        class="project-item"
       >
         <div class="project-row">
           <div class="project-row__content">
@@ -16,14 +16,13 @@
 
             <div class="project-row__header">
               <component 
-                :is="project.isUrlDeactivated ? 'span' : defineNuxtLink({})" 
-                :to="project.isUrlDeactivated ? undefined : project.url"
-                :target="!project.isUrlDeactivated && project.url.startsWith('http') ? '_blank' : undefined"
+                :is="project.url ? defineNuxtLink({}) : 'span'" 
+                :to="project.url ? project.url : undefined"
+                :target="project.url?.startsWith('http') ? '_blank' : undefined"
                 class="project-row__link"
               >
                 <h3 class="project-row__title">{{ project.name }}</h3>
               </component>
-              <span v-if="project.isUrlDeactivated" class="offline-tag">Offline</span>
             </div>
             
             <p class="project-row__description">{{ project.description }}</p>
@@ -34,7 +33,7 @@
             <label :for="`zoom-${index}`" class="lightbox__trigger">
               <img 
                 :src="project.image" 
-                alt="" 
+                :alt="`${project.name} preview`" 
                 class="thumb"
                 :loading="index <= props.preloadProjectImages ? 'eager' : 'lazy'"
               />
@@ -52,11 +51,10 @@
 <script lang="ts" setup>
 interface Project {
   name: string;
-  url: string;
   description: string;
-  image?: string;
   tags: string[];
-  isUrlDeactivated?: boolean;
+  url?: string;
+  image?: string;
 }
 
 const props = withDefaults(defineProps<{
@@ -70,7 +68,7 @@ const props = withDefaults(defineProps<{
 const projects: Project[] = [{
   name: 'Butter CMS Utilities',
   url: 'https://jackdomleo7.github.io/Butter_CMS_Utilities/',
-  description: 'An open-source utility suite addressing native limitations in Butter CMS. Features high-performance cross-page content searching and a roadmap for automated HTML sanitization to preserve design integrity. Designed for and validated by production content teams to streamline editorial workflows.',
+  description: 'An open-source utility suite addressing native limitations in Butter CMS. Features custom high-performance cross-page content searching and a roadmap for automated HTML sanitization to preserve design integrity. Designed for and validated by production content teams to streamline editorial workflows.',
   image: '/projects/butter-cms-utilities.webp',
   tags: ['Vue 3', 'TypeScript', 'Tooling']
 },{
@@ -90,8 +88,7 @@ const projects: Project[] = [{
   url: 'https://www.grassverse.org',
   description: 'A freelance commercial project with pre-existing designs delivering community utility for the Grassverse NFT ecosystem. I integrated multiple OpenSea API endpoints to aggregate ownership data, enabling NFT holders to identify and connect with members sharing matching asset traits.',
   image: '/projects/grassverse-nft.webp',
-  tags: ['Nuxt 2', 'TypeScript', 'Web3'],
-  isUrlDeactivated: true
+  tags: ['Nuxt 2', 'TypeScript', 'Web3']
 },{
   name: 'npx jackdomleo7',
   url: 'https://github.com/jackdomleo7/npx_business_card',
@@ -100,11 +97,9 @@ const projects: Project[] = [{
   tags: ['Node.js', 'CLI', 'NPX']
 },{
   name: 'Mad Parrot Crew NFT',
-  url: 'https://www.madparrotcrew.com',
   description: 'A freelance commercial delivery with pre-existing designs for the Mad Parrot Crew NFT ecosystem. Architected a fully responsive minting platform using Nuxt 2 and Web3 technologies. Managed complex frontend state and successfully navigated eight major design pivots to deliver a high-performance launch experience for the client.',
   image: '/projects/mad-parrot-crew-nft.webp',
-  tags: ['Nuxt 2', 'TypeScript', 'Web3'],
-  isUrlDeactivated: true
+  tags: ['Nuxt 2', 'TypeScript', 'Web3']
 },{
   name: 'Spring Clean Twitter Bot',
   url: 'https://github.com/jackdomleo7/Spring_Clean_Twitter_Bot',
@@ -145,8 +140,7 @@ const projects: Project[] = [{
   url: 'https://github.com/jackdomleo7/tmdip.co.uk',
   description: "A commercial project for a boutique shop-fitting firm. I delivered a high-performance static site with a CAD-inspired aesthetic, integrating Prismic CMS to allow for seamless content management and optimized SEO.",
   image: '/projects/tmdip-interiors.webp',
-  tags: ['Nuxt 2', 'TypeScript', 'Prismic'],
-  isUrlDeactivated: true
+  tags: ['Nuxt 2', 'TypeScript', 'Prismic']
 },{
   name: 'Single-Div Pixel Art R2-D2',
   url: 'https://codepen.io/jackdomleo7/full/ZEEqdxy',
@@ -187,7 +181,7 @@ $row-padding-h: 1rem;
   transition: background-color 0.2s ease, opacity 0.3s ease;
   border-radius: 0.25rem;
 
-  &:hover:not(.is-offline) {
+  &:hover {
     background-color: rgba(255, 255, 255, 0.03);
   }
 
@@ -258,15 +252,6 @@ $row-padding-h: 1rem;
   }
 }
 
-.offline-tag {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  padding: 0.0625rem 0.375rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.125rem;
-  text-transform: uppercase;
-}
-
 .lightbox {
   flex-shrink: 0;
   
@@ -318,19 +303,6 @@ $row-padding-h: 1rem;
     opacity: 1;
     pointer-events: auto;
     .full-view { transform: scale(1); }
-  }
-}
-
-.is-offline {
-  .project-row__content,
-  .lightbox__trigger .thumb {
-    opacity: 0.6;
-    filter: saturate(0.5);
-  }
-
-  .project-row__title {
-    font-weight: 500;
-    cursor: default;
   }
 }
 </style>
