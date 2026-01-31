@@ -9,8 +9,8 @@
         <div class="project-row">
           <div class="project-row__content">
             <ul class="project-row__meta">
-              <li v-for="tech in project.tech" :key="tech" class="tech-tag">
-                {{ tech }}
+              <li v-for="tag in project.tags" :key="tag" class="tech-tag">
+                {{ tag }}
               </li>
             </ul>
 
@@ -55,7 +55,7 @@ interface Project {
   url: string;
   description: string;
   image?: string;
-  tech: string[];
+  tags: string[];
   isUrlDeactivated?: boolean;
 }
 
@@ -72,93 +72,93 @@ const projects: Project[] = [{
   url: 'https://jackdomleo7.github.io/Butter_CMS_Utilities/',
   description: 'An open-source utility suite addressing native limitations in Butter CMS. Features high-performance cross-page content searching and a roadmap for automated HTML sanitization to preserve design integrity. Designed for and validated by production content teams to streamline editorial workflows.',
   image: '/projects/butter-cms-utilities.webp',
-  tech: ['Vue 3', 'TypeScript', 'Tooling']
+  tags: ['Vue 3', 'TypeScript', 'Tooling']
 },{
   name: 'Storybook Addon: CSS Properties',
   url: 'https://github.com/jackdomleo7/storybook-addon-css-properties',
   description: "An experimental exploration into Storybook's internal messaging APIs. Designed to provide real-time control over CSS custom properties within the Storybook manager. This project served as a deep dive into state synchronization between the manager and preview frames.",
   image: '/projects/storybook-addon-css-properties.webp',
-  tech: ['React', 'TypeScript', 'Storybook']
+  tags: ['React', 'TypeScript', 'Storybook']
 },{
   name: 'Which Media Queries',
   url: 'https://which-media-queries.jackdomleo.dev',
   description: 'A diagnostic utility designed to verify browser detection of system-level accessibility preferences. It provides an at-a-glance validation of media queries such as reduced motion, high contrast, and color schemes to streamline cross-device QA testing.',
   image: '/projects/which-media-queries.webp',
-  tech: ['Vue 3', 'TypeScript', 'Accessibility']
+  tags: ['Vue 3', 'TypeScript', 'Accessibility']
 },{
   name: 'Grassverse NFT',
   url: 'https://www.grassverse.org',
   description: 'This website came with pre-existing designs and includes a CMS and an account section for Grassverse asset owners to log in to view their assets and fellow owners of assets.',
   image: '/projects/grassverse-nft.webp',
-  tech: ['Nuxt 2', 'Web3', 'TypeScript'],
+  tags: ['Nuxt 2', 'Web3', 'TypeScript'],
   isUrlDeactivated: true
 },{
   name: 'npx jackdomleo7',
   url: 'https://github.com/jackdomleo7/npx_business_card',
   description: 'A simple npm script to show some details about me directly in the terminal, like a digital business card.',
   image: '/projects/npx-jackdomleo7.gif',
-  tech: ['JavaScript', 'npx']
+  tags: ['JavaScript', 'npx']
 },{
   name: 'Mad Parrot Crew NFT',
   url: 'https://www.madparrotcrew.com',
   description: 'Created a fully responsive minting website based on existing designs for the Mad Parrot Crew NFT.',
   image: '/projects/mad-parrot-crew-nft.webp',
-  tech: ['Nuxt 2', 'Web3', 'TypeScript'],
+  tags: ['Nuxt 2', 'Web3', 'TypeScript'],
   isUrlDeactivated: true
 },{
   name: 'Spring Clean Twitter Bot',
   url: 'https://github.com/jackdomleo7/Spring_Clean_Twitter_Bot',
   description: 'A Twitter bot to automatically clean up my Twitter account.',
   image: '/projects/spring-clean-twitter-bot.webp',
-  tech: ['TypeScript', 'Twitter API', 'CRON']
+  tags: ['TypeScript', 'Twitter API', 'CRON']
 },{
   name: 'Colour Theme Watcher & Switcher',
   url: 'https://codepen.io/jackdomleo7/full/OJWaeem',
   description: "A pure JavaScript snippet to watch/detect a user's colour theme and allow them to change it.",
   image: '/projects/colour-theme-picker.gif',
-  tech: ['JavaScript', 'CSS']
+  tags: ['JavaScript', 'CSS']
 },{
   name: 'Checka11y.css',
   url: 'https://checka11y.jackdomleo.dev',
   description: 'A CSS stylesheet (also available as a Chrome/Firefox browser extension) to quickly highlight a11y concerns and a really good education project for those wanting to learn about accessibility.',
   image: '/projects/checka11y.css.webp',
-  tech: ['SCSS', 'Cypress']
+  tags: ['SCSS', 'Cypress']
 },{
   name: 'Cooltipz.css',
   url: 'https://cooltipz.jackdomleo.dev',
   description: 'A pure CSS solution for adding highly customisable, accessible tooltips to HTML.',
   image: '/projects/cooltipz.css.webp',
-  tech: ['SCSS']
+  tags: ['SCSS']
 },{
   name: 'Custom Car Colour Preview',
   url: 'https://codepen.io/jackdomleo7/full/wvoYjNP',
   description: "An application to preview different colours of a car.",
   image: '/projects/custom-car-colour-preview.gif',
-  tech: ['SVG', 'SCSS']
+  tags: ['SVG', 'SCSS']
 },{
   name: 'CSS Union Jack Flag',
   url: 'https://codepen.io/jackdomleo7/full/abvrgEo',
   description: "A pure CSS pixel-perfect Union Jack flag.",
   image: '/projects/css-union-jack-flag.webp',
-  tech: ['SCSS']
+  tags: ['SCSS']
 },{
   name: 'TMD Interior Projects & Building Services Ltd',
   url: 'https://github.com/jackdomleo7/tmdip.co.uk',
   description: "Designed and built a fully responsive static website for a small shop-fitting & interior design company. This website needed a modern but minimal feel to it so they could clearly get their message across to visitors. Unfortunately, the company closed in October 2021.",
   image: '/projects/tmdip-interiors.webp',
-  tech: ['Nuxt 2', 'TypeScript', 'Prismic']
+  tags: ['Nuxt 2', 'TypeScript', 'Prismic']
 },{
   name: 'Pixel Art R2-D2',
   url: 'https://codepen.io/jackdomleo7/full/ZEEqdxy',
   description: "A pure CSS, single div pixel art of the beloved Star Wars droid, R2-D2.",
   image: '/projects/pixel-art-r2d2.webp',
-  tech: ['CSS']
+  tags: ['CSS']
 },{
   name: 'My website',
   url: '/',
   description: 'Designed and built a fully responsive static portfolio website. This has been through many design variations as my UI skills have developed.',
   image: '/projects/jackdomleo.dev.webp',
-  tech: ['Nuxt 4', 'TypeScript', 'SCSS']
+  tags: ['Nuxt 4', 'TypeScript', 'SCSS']
 }];
 
 let list = projects;
