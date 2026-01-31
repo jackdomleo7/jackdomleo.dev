@@ -82,9 +82,9 @@ const projects: Project[] = [{
 },{
   name: 'Which Media Queries',
   url: 'https://which-media-queries.jackdomleo.dev',
-  description: 'A simple web app to detect the values of media queries on your device to be viewed at a glance.',
+  description: 'A diagnostic utility designed to verify browser detection of system-level accessibility preferences. It provides an at-a-glance validation of media queries such as reduced motion, high contrast, and color schemes to streamline cross-device QA testing.',
   image: '/projects/which-media-queries.webp',
-  tech: ['JavaScript']
+  tech: ['Vue 3', 'TypeScript', 'Accessibility']
 },{
   name: 'Grassverse NFT',
   url: 'https://www.grassverse.org',
