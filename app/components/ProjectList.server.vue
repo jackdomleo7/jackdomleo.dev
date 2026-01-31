@@ -88,9 +88,9 @@ const projects: Project[] = [{
 },{
   name: 'Grassverse NFT',
   url: 'https://www.grassverse.org',
-  description: 'This website came with pre-existing designs and includes a CMS and an account section for Grassverse asset owners to log in to view their assets and fellow owners of assets.',
+  description: 'A freelance commercial project with pre-existing designs delivering community utility for the Grassverse NFT ecosystem. I integrated multiple OpenSea API endpoints to aggregate ownership data, enabling NFT holders to identify and connect with members sharing matching asset traits.',
   image: '/projects/grassverse-nft.webp',
-  tags: ['Nuxt 2', 'Web3', 'TypeScript'],
+  tags: ['Nuxt 2', 'TypeScript', 'Web3'],
   isUrlDeactivated: true
 },{
   name: 'npx jackdomleo7',
