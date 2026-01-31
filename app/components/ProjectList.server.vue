@@ -119,9 +119,9 @@ const projects: Project[] = [{
 },{
   name: 'Checka11y.css',
   url: 'https://checka11y.jackdomleo.dev',
-  description: 'A CSS stylesheet (also available as a Chrome/Firefox browser extension) to quickly highlight a11y concerns and a really good education project for those wanting to learn about accessibility.',
+  description: 'An open-source diagnostic tool and browser extension designed to surface accessibility concerns through visual feedback. Recognized by the global developer community and featured at international tech conferences, it serves as both a production-ready utility and an educational resource for mastering accessible markup.',
   image: '/projects/checka11y.css.webp',
-  tags: ['SCSS', 'Cypress']
+  tags: ['SCSS', 'Accessibility']
 },{
   name: 'Cooltipz.css',
   url: 'https://cooltipz.jackdomleo.dev',
