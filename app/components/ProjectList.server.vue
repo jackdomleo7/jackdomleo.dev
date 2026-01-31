@@ -137,25 +137,26 @@ const projects: Project[] = [{
 },{
   name: 'CSS Union Jack Flag',
   url: 'https://codepen.io/jackdomleo7/full/abvrgEo',
-  description: "A pure CSS pixel-perfect Union Jack flag.",
+  description: "A technical exercise in mathematical CSS. This project involved recreatng the complex geometry of the Union Jack with pixel-perfect accuracy, utilizing advanced SCSS calculations to maintain correct proportions across all scales.",
   image: '/projects/css-union-jack-flag.webp',
   tags: ['SCSS']
 },{
   name: 'TMD Interior Projects & Building Services Ltd',
   url: 'https://github.com/jackdomleo7/tmdip.co.uk',
-  description: "Designed and built a fully responsive static website for a small shop-fitting & interior design company. This website needed a modern but minimal feel to it so they could clearly get their message across to visitors. Unfortunately, the company closed in October 2021.",
+  description: "A commercial project for a boutique shop-fitting firm. I delivered a high-performance static site with a CAD-inspired aesthetic, integrating Prismic CMS to allow for seamless content management and optimized SEO.",
   image: '/projects/tmdip-interiors.webp',
-  tags: ['Nuxt 2', 'TypeScript', 'Prismic']
+  tags: ['Nuxt 2', 'TypeScript', 'Prismic'],
+  isUrlDeactivated: true
 },{
-  name: 'Pixel Art R2-D2',
+  name: 'Single-Div Pixel Art R2-D2',
   url: 'https://codepen.io/jackdomleo7/full/ZEEqdxy',
-  description: "A pure CSS, single div pixel art of the beloved Star Wars droid, R2-D2.",
+  description: "An exploration into CSS render performance and the box-shadow property. This 'Single-Div' challenge demonstrates the ability to create complex visual assets using purely declarative code without external assets or extra DOM nodes.",
   image: '/projects/pixel-art-r2d2.webp',
-  tags: ['CSS']
+  tags: ['SCSS']
 },{
   name: 'My website',
   url: '/',
-  description: 'Designed and built a fully responsive static portfolio website. This has been through many design variations as my UI skills have developed.',
+  description: 'The current iteration of my personal corner of the web. This site acts as a living history of my development journey, evolving through multiple refactors to stay aligned with modern performance standards and my own growth as a developer.',
   image: '/projects/jackdomleo.dev.webp',
   tags: ['Nuxt 4', 'TypeScript', 'SCSS']
 }];
