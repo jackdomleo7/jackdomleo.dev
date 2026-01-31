@@ -113,9 +113,9 @@ const projects: Project[] = [{
 },{
   name: 'Colour Theme Watcher & Switcher',
   url: 'https://codepen.io/jackdomleo7/full/OJWaeem',
-  description: "A pure JavaScript snippet to watch/detect a user's colour theme and allow them to change it.",
+  description: "A lightweight JavaScript experiment that synchronizes web application themes with OS-level user preferences. It utilizes the matchMedia API to detect and react to system changes in real-time, ensuring a consistent and accessible user experience.",
   image: '/projects/colour-theme-picker.gif',
-  tags: ['JavaScript', 'CSS']
+  tags: ['JavaScript', 'CSS', 'UX', 'Accessibility']
 },{
   name: 'Checka11y.css',
   url: 'https://checka11y.jackdomleo.dev',
