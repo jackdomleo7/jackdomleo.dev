@@ -29,7 +29,7 @@
           </div>
 
           <div v-if="project.image" class="lightbox">
-            <input :id="`zoom-${index}`" type="checkbox" class="lightbox__toggle" />
+            <input :id="`zoom-${index}`" type="checkbox" class="lightbox__toggle" aria-label="Open preview" />
             <label :for="`zoom-${index}`" class="lightbox__trigger">
               <img 
                 :src="project.image" 
