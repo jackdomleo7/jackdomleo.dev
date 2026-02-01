@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 sitemap:
-  lastmod: 2026-01-25
+  lastmod: 2026-02-01
 ---
 
 ## Overview
