@@ -263,7 +263,7 @@ useHead({
   padding: 0;
 
   &__name {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem;
     font-size: var(--text-heading);
   }
 

@@ -203,7 +203,7 @@ $row-padding-h: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem;
     list-style-type: none;
     padding: 0;
   }
