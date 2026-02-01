@@ -4,44 +4,42 @@
       <li 
         v-for="(project, index) in list" 
         :key="project.name" 
-        class="project-item"
+        class="project-row"
       >
-        <div class="project-row">
-          <div class="project-row__content">
-            <ul class="project-row__meta">
-              <li v-for="tag in project.tags" :key="tag" class="tech-tag">
-                {{ tag }}
-              </li>
-            </ul>
+        <div class="project-row__content">
+          <ul class="project-row__meta">
+            <li v-for="tag in project.tags" :key="tag" class="tech-tag">
+              {{ tag }}
+            </li>
+          </ul>
 
-            <div class="project-row__header">
-              <component 
-                :is="project.url ? defineNuxtLink({}) : 'span'" 
-                :to="project.url ? project.url : undefined"
-                :target="project.url?.startsWith('http') ? '_blank' : undefined"
-                class="project-row__link"
-              >
-                <h3 class="project-row__title">{{ project.name }}</h3>
-              </component>
-            </div>
-            
-            <p class="project-row__description">{{ project.description }}</p>
+          <div class="project-row__header">
+            <component 
+              :is="project.url ? defineNuxtLink({}) : 'span'" 
+              :to="project.url ? project.url : undefined"
+              :target="project.url?.startsWith('http') ? '_blank' : undefined"
+              class="project-row__link"
+            >
+              <h3 class="project-row__title">{{ project.name }}</h3>
+            </component>
           </div>
+          
+          <p class="project-row__description">{{ project.description }}</p>
+        </div>
 
-          <div v-if="project.image" class="lightbox">
-            <input :id="`zoom-${index}`" type="checkbox" class="lightbox__toggle" aria-label="Open preview" />
-            <label :for="`zoom-${index}`" class="lightbox__trigger">
-              <img 
-                :src="project.image" 
-                :alt="`${project.name} preview`" 
-                class="thumb"
-                :loading="index <= props.preloadProjectImages ? 'eager' : 'lazy'"
-              />
-            </label>
-            <label :for="`zoom-${index}`" class="lightbox__overlay">
-              <img :src="project.image" alt="" class="full-view" />
-            </label>
-          </div>
+        <div v-if="project.image" class="lightbox">
+          <input :id="`zoom-${index}`" type="checkbox" class="lightbox__toggle" aria-label="Open preview" />
+          <label :for="`zoom-${index}`" class="lightbox__trigger">
+            <img 
+              :src="project.image" 
+              :alt="`${project.name} preview`" 
+              class="thumb"
+              :loading="index <= props.preloadProjectImages ? 'eager' : 'lazy'"
+            />
+          </label>
+          <label :for="`zoom-${index}`" class="lightbox__overlay">
+            <img :src="project.image" alt="" class="full-view" />
+          </label>
         </div>
       </li>
     </ul>
@@ -177,9 +175,10 @@ $row-padding-h: 1rem;
   gap: 1rem;
   padding: $row-padding-v $row-padding-h;
   margin: 0 calc($row-padding-h * -1);
-  border-top: 1px solid var(--color-fg2, #333);
+  border-top: 1px solid var(--color-fg1);
   transition: background-color 0.2s ease, opacity 0.3s ease;
-  border-radius: 0.25rem;
+
+  &:first-of-type { border-top: none; }
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.03);
@@ -191,10 +190,6 @@ $row-padding-h: 1rem;
     gap: 2rem;
     padding: 2rem 1.5rem;
     margin: 0 -1.5rem;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid var(--color-fg2, #333);
   }
 
   &__content { flex: 1; }
@@ -269,7 +264,7 @@ $row-padding-h: 1rem;
       height: 100%;
       object-fit: cover;
       border-radius: 0.25rem;
-      border: 1px solid var(--color-fg2, #333);
+      border: 1px solid var(--color-fg1);
       transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
       &:hover { transform: scale(1.02); }
     }
