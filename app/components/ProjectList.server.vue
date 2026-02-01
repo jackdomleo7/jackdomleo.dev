@@ -65,7 +65,7 @@ const props = withDefaults(defineProps<{
 
 const projects: Project[] = [{
   name: 'Butter CMS Utilities',
-  url: 'https://jackdomleo7.github.io/Butter_CMS_Utilities/',
+  url: 'https://buttercmsutilities.jackdomleo.dev',
   description: 'An open-source utility suite addressing native limitations in Butter CMS. Features custom high-performance cross-page content searching and a roadmap for automated HTML sanitization to preserve design integrity. Designed for and validated by production content teams to streamline editorial workflows.',
   image: '/projects/butter-cms-utilities.webp',
   tags: ['Vue 3', 'TypeScript', 'Tooling']
