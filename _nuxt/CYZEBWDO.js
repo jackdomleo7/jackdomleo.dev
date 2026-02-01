@@ -1,1 +1,0 @@
-import{_ as r,c as s,o,a0 as t}from"./lFUTIujI.js";const n={};function a(e,c){return o(),s("tr",null,[t(e.$slots,"default")])}const l=Object.assign(r(n,[["render",a]]),{__name:"ProseTr"});export{l as default};
