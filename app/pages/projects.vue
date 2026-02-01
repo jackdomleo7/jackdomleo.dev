@@ -3,20 +3,12 @@
     <header class="container">
       <h1 class="projects__title">Projects</h1>
       <p v-once class="projects__description">
-        I enjoy creating different types of projects in my spare time using a range of technologies. You can find all of my featured projects here, and many more projects on <nuxt-link :to="variables.GITHUB_URL">GitHub</nuxt-link> and <nuxt-link :to="variables.CODEPEN_URL">CodePen</nuxt-link>.
+        A curated archive of production applications, technical experiments, and automated tools. Source available on <nuxt-link :to="variables.GITHUB_URL">GitHub</nuxt-link> and <nuxt-link :to="variables.CODEPEN_URL">CodePen</nuxt-link>.
       </p>
     </header>
     <div class="container">
-      <ProjectList class="projects__list" type="project" :preload-project-images="3" />
+      <ProjectList class="projects__list" :preload-project-images="3" />
     </div>
-    <section id="mini" class="container">
-      <h2 class="projects__subtitle">Mini Projects</h2>
-      <ProjectList class="projects__list" type="mini" />
-    </section>
-    <section id="client" class="container">
-      <h2 class="projects__subtitle">Client Projects</h2>
-      <ProjectList class="projects__list" type="client" />
-    </section>
   </div>
 </template>
 

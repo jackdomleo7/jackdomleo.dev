@@ -1,17 +1,29 @@
 ---
 title: Privacy Policy
 sitemap:
-  lastmod: 2025-08-27
+  lastmod: 2026-02-01
 ---
 
-**Definitions**: 'I', 'me', 'my': Jack Domleo - owner of this website.
+## Overview
 
-Your privacy is important to me. It is my policy to respect your privacy regarding any information I may collect from you across this website, jackdomleo.dev.
+Your privacy is important. This Privacy Policy outlines how jackdomleo.dev handles information and your data privacy rights.
 
-I do not collect any personal information. I do not use cookies or any tracking software.
+## Data Collection
 
-My website may link to external sites that are not operated by me. Please be aware that I have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.
+This website does **not collect, store, or process any personal data**. We do not use cookies, analytics tools, or any form of user tracking software. Your visits to this site leave no data footprint with us.
 
-My website may link to external sites via an affiliate link. Please be aware that each site may have its own way of tracking the affiliate back to me, whether it be via cookies or my own discount code. Please review their respective privacy policies regarding affiliate tracking.
+## Hosting
 
-Your continued use of my website will be regarded as acceptance of my practices around privacy and personal information. If you have any questions about how I handle user data and personal information, feel free to contact me via <a :href="LINKEDIN_URL">LinkedIn</a>.
+This website is hosted on GitHub Pages. Please refer to [GitHub's Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) for information about how GitHub may process data related to hosting and infrastructure.
+
+## External Links
+
+This website may contain links to external sites not operated by us. We have no control over the content, practices, or privacy policies of these external sites and assume no responsibility for them. We encourage you to review their privacy policies before providing any personal information.
+
+## Changes to This Policy
+
+We may update this Privacy Policy periodically. Any changes will be reflected on this page with an updated modification date.
+
+## Contact
+
+If you have questions about this Privacy Policy or our privacy practices, please contact us via <a :href="LINKEDIN_URL">LinkedIn</a>.

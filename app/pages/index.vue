@@ -23,13 +23,13 @@
         <h2 class="about__header">About me</h2>
         <div class="about__text">
           <p>
-            Hi, I'm Jack Domleo, a Nottinghamshire-based developer in the UK, currently working as a Senior Frontend Developer at <nuxt-link to="https://www.oceanfinance.co.uk">Ocean Finance</nuxt-link>.
+            Hi, I'm Jack. I'm a {{ variables.OCCUPATION }} at <nuxt-link to="https://www.oceanfinance.co.uk?ref=jackdomleo.dev">Ocean Finance</nuxt-link> with {{ variables.NO_OF_YEARS_EXPERIENCE }} years of professional experience.
           </p>
           <p>
-            I have {{ variables.NO_OF_YEARS_EXPERIENCE }} years of professional experience working as a developer. I often work with Vue.js, TypeScript, Vite, Vitest, SCSS, Storybook, and PlayWright.
+            Rather than just building applications, I focus on engineering accessible customer journeys and technical solutions across our financial product range. I have established a standard for high-quality, readable code and a bit of a reputation for my love of refactoring - I'm a firm believer that high-quality, readable code is a gift to the next developer who has to touch it (whether that developer is me or someone else).
           </p>
           <p>
-            I have a passion for frontend technologies, and writing clean websites and applications while maintaining high accessibility standards.
+            My work is centered on the Vue.js ecosystem, with a heavy emphasis on performance optimization, technical SEO, web accessibility (WCAG), and maintaining robust component libraries. Outside of work you'll likely find me building LEGO, tinkering with electronics/hardware/software, or following the latest in Formula 1, musical theatre, and theme parks.
           </p>
         </div>
       </div>
@@ -37,9 +37,10 @@
     <section id="skills" class="skills">
       <div class="skills__inner">
         <h2 class="skills__heading container">Skills</h2>
-        <div class="skills__grid">
-          <ul class="skills__list">
-            <li v-once v-for="skill in skills" :key="skill.key">
+        <div v-once v-for="(category, categoryName) in skills" :key="categoryName" class="skills__section container">
+          <h3 class="skills__heading skills__heading--sub container">{{ categoryName }}</h3>
+          <ul class="skills__list container">
+            <li v-for="skill in category" :key="skill.key">
               <Icon class="skills__icon" :name="`custom:${skill.key}`" mode="svg" />
               <span class="skills__text" mode="svg">{{ skill.value }}</span>
             </li>
@@ -49,9 +50,10 @@
     </section>
     <section id="projects" class="container projects">
       <h2 class="projects__heading">Projects</h2>
+      <p class="projects__description container">A collection of personal experiments, projects, AI-assisted prototypes, and more.</p>
       <ProjectList class="projects__list" :limit="6" />
       <nuxt-link to="/projects" class="projects__more link">
-        Check out more of my work
+        Explore more projects
         <Icon v-once class="projects__more-icon" name="custom:arrow-right" mode="svg" />
       </nuxt-link>
     </section>
@@ -79,20 +81,39 @@ useSchemaOrg([
   })
 ])
 
-const skills: { key: string; value: string }[] = [
-  { key: 'vue', value: 'Vue.js' },
-  { key: 'nuxt', value: 'Nuxt.js' },
-  { key: 'typescript', value: 'TypeScript' },
-  { key: 'vite', value: 'Vite' },
-  { key: 'storybook', value: 'Storybook' },
-  { key: 'sass', value: 'Sass/SCSS' },
-  { key: 'a11y', value: 'Accessibility' },
-  { key: 'node-js', value: 'Node.js' },
-  { key: 'npm', value: 'npm' },
-  { key: 'vs-code', value: 'VS Code' },
-  { key: 'javascript', value: 'JavaScript' },
-  { key: 'html', value: 'HTML' }
-];
+const skills: { [key: string]: { key: string; value: string }[] } = {
+  'Core Engineering': [
+    { key: 'html', value: 'HTML' },
+    { key: 'css', value: 'CSS' },
+    { key: 'javascript', value: 'JavaScript' },
+    { key: 'typescript', value: 'TypeScript' },
+    { key: 'vue', value: 'Vue.js' },
+    { key: 'nuxt', value: 'Nuxt.js' },
+    { key: 'vite', value: 'Vite' },
+    { key: 'sass', value: 'SCSS' },
+    { key: 'pinia', value: 'Pinia' },
+  ],
+  'Quality & Workflow': [
+    { key: 'vitest', value: 'Vitest' },
+    { key: 'playwright', value: 'PlayWright' },
+    { key: 'storybook', value: 'Storybook' },
+    { key: 'node-js', value: 'Node.js' },
+    { key: 'git', value: 'Git' },
+    { key: 'a11y', value: 'Accessibility' },
+    { key: 'performance', value: 'Web Performance' },
+    { key: 'seo', value: 'Technical SEO' },
+    { key: 'ai', value: 'AI-Assisted Workflows' }
+  ],
+  'Leadership': [
+    { key: 'users', value: 'Mentoring' },
+    { key: 'screwdriver-wrench', value: 'Strategic Refactoring' },
+    { key: 'balanced-scale', value: 'Technical Decision Making' }
+  ],
+  'Tinkering': [
+    { key: 'raspberry-pi', value: 'Raspberry Pi' },
+    { key: 'python', value: 'Python' }
+  ]
+};
 </script>
 
 <style lang="scss" scoped>
@@ -169,7 +190,7 @@ const skills: { key: string; value: string }[] = [
   }
 
   &__body {
-    font-size: var(--text-large);
+    font-size: var(--text-heading);
     margin-top: 2rem;
     text-align: center;
   }
@@ -179,7 +200,11 @@ const skills: { key: string; value: string }[] = [
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
+
+  @media (min-width: $responsive-large-tablet) {
+    padding-block: 1rem;
+  }
 
   &__inner {
     display: grid;
@@ -272,7 +297,7 @@ const skills: { key: string; value: string }[] = [
       }
     }
 
-    :deep(img) {
+    img {
       border-radius: 50%;
       position: relative;
     }
@@ -287,12 +312,17 @@ const skills: { key: string; value: string }[] = [
   &__text {
     grid-area: about-text;
     font-size: var(--text-body);
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
 .projects {
   display: flex;
   flex-direction: column;
+  padding-top: 4rem;
 
   &__heading {
     font-size: var(--text-title);
@@ -300,8 +330,17 @@ const skills: { key: string; value: string }[] = [
     padding-inline: 1rem;
   }
 
+  &__description {
+    font-size: var(--text-body);
+    margin-top: 1rem;
+    padding-inline: 1rem;
+    width: 100%;
+  }
+
   &__list {
     margin-block: 1.25rem;
+    padding-inline: 1rem;
+    margin-inline: 0;
   }
 
   &__more {
@@ -342,72 +381,66 @@ const skills: { key: string; value: string }[] = [
     font-size: var(--text-title);
     margin-block: 0;
     padding-inline: 1rem;
+
+    &--sub {
+      font-size: var(--text-large);
+      line-height: var(--text-large);
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      margin-left: 0;
+      position: relative;
+
+      &::after {
+        content: ':';
+      }
+    }
   }
 
-  &__grid {
-    padding-block: 2rem;
+  &__section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
 
-    @media (min-width: $responsive-small-desktop) {
-      padding-block: 5rem;
+    @media (min-width: $responsive-large-tablet) {
+      flex-direction: row;
     }
   }
 
   &__list {
-    margin: 0;
-    padding-inline: 0.5rem;
+    padding-inline: 1rem;
+    margin-block: 0;
+    width: 100%;
     list-style-type: none;
-    max-width: 95rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    gap: 2.5rem 4.25rem;
-
-    @media (min-width: $responsive-standard-mobile) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (min-width: $responsive-small-tablet) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media (min-width: $responsive-large-tablet) {
-      grid-template-columns: repeat(6, 1fr);
-      padding-inline: 0;
-    }
-
-    @media (min-width: $responsive-small-desktop) {
-      gap: 4rem 7.5rem;
-    }
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.75rem 1.75rem;
 
     li {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
+      gap: 0.5rem;
+      white-space: nowrap;
+      line-height: var(--text-large);
     }
   }
 
   &__icon {
-    height: 3.75rem;
-    width: 3.75rem;
+    height: 1rem;
+    width: 1rem;
     display: block;
 
     @media (min-width: $responsive-large-tablet) {
-      height: 5rem;
-      width: 5rem;
-    }
-
-    @media (min-width: $responsive-small-desktop) {
-      height: 6.25rem;
-      width: 6.25rem;
+      height: 1.125rem;
+      width: 1.125rem;
     }
   }
 
   &__text {
     text-align: center;
     font-size: var(--text-body);
+    font-weight: 300;
   }
 }
 </style>

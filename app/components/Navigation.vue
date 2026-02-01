@@ -342,7 +342,6 @@ $navHeight: 4rem;
   background-color: var(--color-bg);
   color: var(--color-primary);
   z-index: 99;
-  position: fixed;
   height: $navHeight;
   box-shadow: 0 0 0.5rem transparent;
   

@@ -3,24 +3,24 @@
 ![Website status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fjackdomleo.dev "Website status")
 [![deploy](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/deploy.yml/badge.svg)](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/deploy.yml)
 
-Jack Domleo's personal website.
+The central hub of my professional presence, built with **Nuxt 4**. This project serves as a production testbed for my architectural standards and frontend expertise.
 
-My online portfolio has transformed over the years from a static HTML, CSS and JavaScript site, to a Vue.js SPA application, to now a Nuxt.js static site.
+## ⏳ Project Evolution
 
-Website timeline:
-- **September 2018** - Created first website using HTML, CSS, JavaScript & Bootstrap 4.
-- **September 2019** - Redesigned & rebuilt website using Vue.js, TypeScript & SCSS.
-- **May 2020** - Redesigned & rebuilt website using Nuxt 2, TypeScript & SCSS. Introduced light & dark themes. Introduced blog using Nuxt Content.
-- **January 2022** - Redesigned site using newly improved UI skills (still not good UI skills, but better). Introduced Jest & Prismic CMS.
-- **January 2023** - Redesigned site to be more minimalistic & rebuilt using Nuxt 3, TypeScript & SCSS. Replaced Prismic CMS & Nuxt Content with Contentful.
-- **August 2025** - Removed Contentful & reverted back to Nuxt Content while removing blog. Upgraded to Nuxt 4.
+- **Sept 2018**: Initial launch using fundamental web technologies and Bootstrap 4.
+- **Sept 2019**: Migration to **Vue.js** and **TypeScript**, adopting **SCSS** for architecture-first styling.
+- **May 2020**: Rebuilt with **Nuxt 2** for SSG performance; introduced a markdown-based blog.
+- **Jan 2022**: UI/UX overhaul; integrated **Jest** and **Prismic** for headless CMS management.
+- **Jan 2023**: Minimalist redesign and migration to **Nuxt 3** and **Contentful**.
+- **Aug 2025**: Streamlined architecture by returning to **Nuxt Content** and upgrading to **Nuxt 4**. 
+- **Feb 2026**: Repurposed to focus on **technical leadership** and high-leverage workflows, reflecting a shift toward architectural oversight.
 
 ---
 
-## Local Setup
+## 🛠 Local Setup
 
-- Node: v24
-- pnpm: v10
+- **Node**: v24
+- **pnpm**: v10
 
 Create a `.env` file with the following properties:
 - `NUXT_BASE_URL`

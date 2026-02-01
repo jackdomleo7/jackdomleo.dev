@@ -1,5 +1,9 @@
 .rich-text {
   :deep() {
+    * {
+      line-height: 1.5;
+    }
+
     h2 {
       font-size: var(--text-subtitle);
       margin-top: 5rem;
@@ -53,95 +57,6 @@
         &:last-child {
           margin-bottom: 0;
         }
-      }
-    }
-
-    pre:has(code) {
-      margin-block: 2rem;
-      background-color: var(--color-fg1);
-      border-radius: var(--border-radius-standard);
-      padding: 1rem;
-      overflow-x: auto;
-    }
-
-    .table {
-      overflow-x: auto;
-      margin-block: 2rem;
-
-      table {
-        border: 0;
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: 100%;
-      }
-      
-      th {
-        border-bottom: 2px solid var(--color-primary);
-      }
-      
-      tbody {
-        tr:nth-child(even) {
-          background-color: var(--color-fg1);
-        }
-      }
-      
-      td,
-      th {
-        padding: 1rem 0.5rem;
-        vertical-align: top;
-        min-width: 14rem;
-      }
-      
-      th {
-        font-weight: 700;
-        text-align: left;
-      }
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .youtube {
-      min-height: 25rem;
-    }
-
-    .cp_embed_iframe,
-    .codepen {
-      height: 40rem;
-      max-height: 80vh;
-      min-height: 20rem;
-      width: 100%;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--colour-primary);
-    }
-
-    blockquote {
-      margin: 0;
-      padding: 1rem 1rem 1rem 4rem;
-      background-color: var(--color-bg);
-      display: inline-block;
-      position: relative;
-
-      &::after {
-        content: "“";
-        color: var(--color-accent-faint);
-        position: absolute;
-        z-index: 0;
-        font-family: sans-serif;
-        font-size: 8rem;
-        line-height: 1;
-        top: -0.75rem;
-        left: 0;
-        transform: rotate(8deg);
-        pointer-events: none;
-      }
-
-      cite {
-        display: block;
-        font-style: italic;
-        text-align: right;
       }
     }
   }
