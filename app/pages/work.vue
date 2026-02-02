@@ -152,7 +152,7 @@
                 </ul>
 
                 <h4>Key technologies:</h4>
-                <p>React JS, Grav CMS, HTML, CSS, Bootstrap, JavaScript, jQuery, Git</p>
+                <p>React.js, Grav CMS, HTML, CSS, Bootstrap, JavaScript, jQuery, Git</p>
               </div>
             </li>
           </ol>
