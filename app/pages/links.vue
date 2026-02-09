@@ -61,6 +61,11 @@ const links: { name: string, url: string, icon: string }[] = [
       name: "Goodreads",
       url: "https://www.goodreads.com/user/show/126653182-jack-domleo",
       icon: "goodreads"
+  },
+  {
+      name: "Codecademy",
+      url: "https://www.codecademy.com/profiles/jackdomleo7",
+      icon: "codecademy"
   }
 ]
 </script>
