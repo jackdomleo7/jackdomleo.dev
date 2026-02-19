@@ -322,7 +322,7 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
 .projects {
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 6rem;
 
   &__heading {
     font-size: var(--text-title);
@@ -368,10 +368,7 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
 }
 
 .skills {
-  padding-block: 2rem;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  padding-block: 4rem;
 
   &__inner {
     width: 100%;
@@ -379,30 +376,36 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
 
   &__heading {
     font-size: var(--text-title);
-    margin-block: 0;
+    margin-block: 0 2rem;
     padding-inline: 1rem;
 
     &--sub {
-      font-size: var(--text-large);
-      line-height: var(--text-large);
-      margin-top: 2.25rem;
-      margin-bottom: 1rem;
-      margin-left: 0;
-      position: relative;
-
-      &::after {
-        content: ':';
-      }
+      font-size: var(--text-small);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-mid-grey);
+      line-height: 1;
+      margin: 0;
+      min-width: 12rem;
+      padding-top: 0.125rem;
     }
   }
 
   &__section {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    gap: 0.75rem;
+    padding-block: 1.25rem;
+
+    & + & {
+      border-top: 1px solid color-mix(in srgb, var(--color-mid-grey), transparent 80%);
+    }
 
     @media (min-width: $responsive-large-tablet) {
       flex-direction: row;
+      align-items: flex-start;
+      gap: 0;
     }
   }
 
@@ -415,7 +418,7 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 0.75rem 1.75rem;
+    gap: 0.5rem 1.25rem;
 
     li {
       display: flex;
@@ -427,20 +430,18 @@ const skills: { [key: string]: { key: string; value: string }[] } = {
   }
 
   &__icon {
-    height: 1rem;
-    width: 1rem;
+    height: 1.125rem;
+    width: 1.125rem;
     display: block;
 
     @media (min-width: $responsive-large-tablet) {
-      height: 1.125rem;
-      width: 1.125rem;
+      height: 1.25rem;
+      width: 1.25rem;
     }
   }
 
   &__text {
-    text-align: center;
     font-size: var(--text-body);
-    font-weight: 300;
   }
 }
 </style>
