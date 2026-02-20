@@ -4,7 +4,7 @@ export default {
   LINKEDIN_URL: 'https://linkedin.com/in/jackdomleo7/',
   GITHUB_URL: 'https://github.com/jackdomleo7',
   CODEPEN_URL: 'https://codepen.io/jackdomleo7',
-  OCCUPATION: 'Senior Frontend Developer',
+  OCCUPATION: 'Lead Frontend Engineer',
   CURRENT_YEAR: new Date().getFullYear(),
   NO_OF_YEARS_EXPERIENCE: (() => {
     const firstDayAsDeveloper = dayjs(new Date('2018-09-03'))

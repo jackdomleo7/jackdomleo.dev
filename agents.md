@@ -1,6 +1,6 @@
 # agents.md — AI Agent Context for jackdomleo.dev
 
-Personal portfolio site for Jack Domleo, Senior Frontend Developer.  
+Personal portfolio site for Jack Domleo, Lead Frontend Engineer.
 Live URL: https://jackdomleo.dev | Repo: https://github.com/jackdomleo7/jackdomleo.dev
 
 ---

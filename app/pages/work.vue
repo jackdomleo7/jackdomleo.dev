@@ -14,19 +14,38 @@
           </div>
           <ol class="place__roles">
             <li class="role">
-              <h3 class="role__name">Senior Frontend Developer</h3>
-              <p class="role__dates">June 2023 - present</p>
+              <h3 class="role__name">Lead Frontend Engineer</h3>
+              <p class="role__dates">February 2026 - present</p>
               <div class="rich-text">
-                <p>I was promoted to lead the frontend strategy for our Credit Card product - the business's highest-revenue vertical. Beyond my primary product, I spend a lot of my time on cross-product collaboration, ensuring our technical standards and shared systems are consistent across the entire engineering team.</p>
+                <p>Promoted to lead the technical direction of the frontend projects and infrastructure. I am responsible for the overarching architectural health of our web products, ensuring that our engineering culture prioritises scalability, accessibility, and high-leverage developer workflows.</p>
 
                 <h4>Key responsibilities:</h4>
                 <ul>
-                  <li><strong>Leading the Stack:</strong> Managing the transition from legacy Vue 2 and JavaScript to a modern, type-safe Vue 3 and TypeScript ecosystem.</li>
-                  <li><strong>Planning & Feasibility:</strong> Acting as a technical spokesperson during project planning to help teams estimate work and define realistic roadmaps.</li>
-                  <li><strong>Feature Engineering:</strong> Architecting and delivering complex user features primarily for the Credit Card journey (but also other products), ensuring they are performant, accessible, and align with business requirements.</li>
-                  <li><strong>Cross-Product Collaboration:</strong> Working across different product teams to implement shared standards and improve our overall frontend architecture.</li>
-                  <li><strong>Quality & Stability:</strong> Driving strategic refactoring to keep our systems maintainable and writing the automated tests that protect our most important customer journeys.</li>
-                  <li><strong>AI Workflow Integration:</strong> Utilizing AI-assisted development tools (since early 2025) to accelerate feature delivery, automate boilerplate, and perform deep code analysis for architectural improvements.</li>
+                  <li><strong>Technical Governance:</strong> Defining and enforcing frontend standards across all product squads to ensure a unified and maintainable ecosystem.</li>
+                  <li><strong>Strategic Mentorship:</strong> Guiding senior and mid-level developers through complex architectural challenges and fostering a culture of continuous technical improvement.</li>
+                  <li><strong>System Architecture:</strong> Overseeing the evolution of our shared core systems and internal libraries, ensuring they remain robust as the business scales.</li>
+                  <li><strong>Discovery & Innovation:</strong> Evaluating emerging technologies (like Nuxt 4 and advanced AI integration) to determine their feasibility and value for our long-term roadmap.</li>
+                  <li><strong>Stakeholder Liaison:</strong> Translating high-level business objectives into actionable technical strategies for engineering teams.</li>
+                </ul>
+
+                <h4>Key technologies:</h4>
+                <p>Vue.js, Nuxt.js, TypeScript, Architecture Design, Technical Leadership, Frontend Governance</p>
+              </div>
+            </li>
+            <li class="role">
+              <h3 class="role__name">Senior Frontend Developer</h3>
+              <p class="role__dates">June 2023 - February 2026</p>
+              <div class="rich-text">
+                <p>In this role, I led the frontend strategy for our Credit Card product - the business's highest-revenue vertical. Beyond my primary product focus, I dedicated significant time to cross-product collaboration, ensuring technical standards and shared systems remained consistent across the entire engineering department.</p>
+
+                <h4>Key responsibilities:</h4>
+                <ul>
+                  <li><strong>Leading the Stack:</strong> Managed the transition from legacy Vue 2 and JavaScript to a modern, type-safe Vue 3 and TypeScript ecosystem.</li>
+                  <li><strong>Planning & Feasibility:</strong> Acted as a technical spokesperson during project planning to help teams estimate work and define realistic roadmaps.</li>
+                  <li><strong>Feature Engineering:</strong> Architected and delivered complex user features primarily for the Credit Card journey, ensuring they were performant, accessible, and aligned with business requirements.</li>
+                  <li><strong>Cross-Product Collaboration:</strong> Worked across different product teams to implement shared standards and improve our overall frontend architecture.</li>
+                  <li><strong>Quality & Stability:</strong> Drove strategic refactoring to maintain system health and authored the automated tests protecting critical customer journeys.</li>
+                  <li><strong>AI Workflow Integration:</strong> Integrated AI-assisted development tools to accelerate feature delivery, automate boilerplate, and perform deep code analysis for architectural improvements.</li>
                 </ul>
 
                 <h4>Key achievements:</h4>
