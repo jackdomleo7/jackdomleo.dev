@@ -292,7 +292,7 @@
         
         <div class="container">
           <div class="header">
-            <h1>Jack Domleo - Senior Frontend Developer</h1>
+            <h1>Jack Domleo - Lead Frontend Engineer</h1>
             <div class="header-meta">
               
               <xsl:if test="count(sitemap:sitemapindex/sitemap:sitemap) &gt; 0">
