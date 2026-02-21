@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ul v-once class="project-feed">
+    <ul class="project-feed">
       <li 
         v-for="(project, index) in list" 
         :key="project.name" 
@@ -20,7 +20,7 @@
               :target="project.url?.startsWith('http') ? '_blank' : undefined"
               class="project-row__link"
             >
-              <h3 class="project-row__title">{{ project.name }}</h3>
+              <component :is="headingLevel" class="project-row__title">{{ project.name }}</component>
             </component>
           </div>
           
@@ -28,21 +28,38 @@
         </div>
 
         <div v-if="project.image" class="lightbox">
-          <input :id="`zoom-${index}`" type="checkbox" class="lightbox__toggle" aria-label="Open preview" />
-          <label :for="`zoom-${index}`" class="lightbox__trigger">
+          <button 
+            class="lightbox__trigger"
+            :aria-label="`Open ${project.name} preview`"
+            @click="openLightbox(project)"
+          >
             <img 
               :src="project.image" 
               :alt="`${project.name} preview`" 
               class="thumb"
-              :loading="index <= props.preloadProjectImages ? 'eager' : 'lazy'"
+              :loading="index < props.preloadProjectImages ? 'eager' : 'lazy'"
             />
-          </label>
-          <label :for="`zoom-${index}`" class="lightbox__overlay">
-            <img :src="project.image" alt="" class="full-view" />
-          </label>
+          </button>
         </div>
       </li>
     </ul>
+
+    <dialog
+      ref="dialogEl"
+      class="lightbox-dialog"
+      aria-label="Project image preview"
+      @click.self="closeLightbox"
+    >
+      <button class="lightbox-dialog__close" aria-label="Close preview" @click="closeLightbox">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <img 
+        v-if="activeProject"
+        :src="activeProject.image" 
+        :alt="`${activeProject.name} preview`" 
+        class="lightbox-dialog__img"
+      />
+    </dialog>
   </div>
 </template>
 
@@ -58,9 +75,31 @@ interface Project {
 const props = withDefaults(defineProps<{
   limit?: number;
   preloadProjectImages?: number;
+  headingLevel?: 'h2' | 'h3';
 }>(), {
   limit: undefined,
-  preloadProjectImages: 0
+  preloadProjectImages: 0,
+  headingLevel: 'h2'
+})
+
+const dialogEl = ref<HTMLDialogElement | null>(null)
+const activeProject = ref<Project | null>(null)
+
+function openLightbox(project: Project): void {
+  activeProject.value = project
+  nextTick(() => {
+    dialogEl.value?.showModal()
+  })
+}
+
+function closeLightbox(): void {
+  dialogEl.value?.close()
+}
+
+onMounted(() => {
+  dialogEl.value?.addEventListener('close', () => {
+    activeProject.value = null
+  })
 })
 
 const projects: Project[] = [{
@@ -248,14 +287,16 @@ $row-padding-h: 1rem;
 
 .lightbox {
   flex-shrink: 0;
-  
-  &__toggle { display: none; }
 
   &__trigger {
     display: block;
     width: 8.875rem;
     height: 5rem;
     cursor: zoom-in;
+    padding: 0;
+    background: none;
+    border: none;
+
     @media (min-width: $responsive-standard-tablet) { width: 11.125rem; height: 6.25rem; }
     
     .thumb {
@@ -264,39 +305,55 @@ $row-padding-h: 1rem;
       object-fit: cover;
       border-radius: 0.25rem;
       border: 1px solid var(--color-fg1);
-      transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
-      &:hover { transform: scale(1.02); }
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: transform 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
+        &:hover { transform: scale(1.02); }
+      }
+    }
+  }
+}
+
+.lightbox-dialog {
+  padding: 0;
+  background: rgba(0, 0, 0, 0.92);
+  border: none;
+  border-radius: 0.5rem;
+  max-width: min(90vw, 72rem);
+  max-height: 90vh;
+  width: fit-content;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  &__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 255, 255, 0.3);
     }
   }
 
-  &__overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.92);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10000;
-    cursor: zoom-out;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-    padding: 1.5rem;
-
-    .full-view { 
-      max-width: 100%; 
-      max-height: 100%; 
-      border-radius: 0.25rem; 
-      transform: scale(0.98); 
-      transition: transform 0.2s ease; 
-      filter: none !important;
-    }
-  }
-
-  &__toggle:checked ~ &__overlay {
-    opacity: 1;
-    pointer-events: auto;
-    .full-view { transform: scale(1); }
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 0.5rem;
   }
 }
 </style>
