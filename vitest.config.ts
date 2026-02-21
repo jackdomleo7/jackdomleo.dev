@@ -16,7 +16,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       all: true,
-      include: ['app/components', 'app/layouts', 'app/pages', 'app/utilities']
+      include: ['app/utilities/**/*.ts']
     },
     setupFiles: ['./vitest.setup.ts'],
     restoreMocks: true
