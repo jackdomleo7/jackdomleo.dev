@@ -16,7 +16,6 @@ import { ContentRenderer } from '#components';
 import variables from '@/utilities/variables';
 
 const $route = useRoute()
-const config = useRuntimeConfig()
 
 const path = $route.path.endsWith('/') ? $route.path.slice(0, -1) : $route.path
 const { data: page } = await useAsyncData(path, () => {

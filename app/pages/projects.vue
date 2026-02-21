@@ -16,8 +16,6 @@
 import ProjectList from '@/components/ProjectList.vue';
 import variables from '@/utilities/variables';
 
-const config = useRuntimeConfig()
-
 useSeoMeta({
   title: 'Projects'
 })

@@ -184,8 +184,6 @@
 <script lang="ts" setup>
 import variables from '@/utilities/variables'
 
-const config = useRuntimeConfig()
-
 useSeoMeta({
   title: 'Work'
 })
