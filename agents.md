@@ -35,45 +35,6 @@ pnpm test:report  # Open HTML coverage report
 
 ---
 
-## Folder Structure
-
-```
-app/
-  assets/
-    fonts/          # Self-hosted Roboto & Roboto Mono
-    icons/          # Custom SVG icons used with @nuxt/icon
-    styles/         # Global SCSS partials (imported via main.scss)
-      _colors.scss  # CSS custom properties for colour tokens
-      _font-sizes.scss
-      _responsive.scss  # CSS variables (DO NOT use in media queries)
-      scss/variables/responsive.scss  # SCSS variables — USE THESE in @media queries
-  components/
-    Navigation.vue
-    ProjectList.server.vue  # Server component — rendered at build time
-    SiteFooter.vue
-  layouts/
-    default.vue
-  pages/
-    index.vue       # Homepage: hero, about, skills, projects preview
-    projects.vue
-    work.vue
-    links.vue
-    [slug].vue      # Dynamic pages driven by Nuxt Content
-  utilities/
-    variables.ts    # Shared runtime constants (occupation, URLs, year, experience)
-content/
-  privacy-policy.md
-public/
-  projects/         # Project screenshots
-  work/             # Work/employer logos
-nuxt.config.ts
-content.config.ts
-vitest.config.ts
-vitest.setup.ts
-```
-
----
-
 ## Key Conventions
 
 ### SCSS
@@ -90,36 +51,21 @@ vitest.setup.ts
 - Shared constants (occupation title, URLs, computed years of experience, current year) live in `app/utilities/variables.ts`.
 - Runtime env vars are exposed via `useRuntimeConfig()` — see `nuxt.config.ts` `runtimeConfig.public`.
 
-### SEO / Schema
-- Per-page canonical URLs are set with `useHead()`.
-- Schema.org structured data uses `useSchemaOrg()` from `nuxt-schema-org`.
-- Global identity (Person schema for Jack Domleo) is configured in `nuxt.config.ts`.
-
-### Components
-- `ProjectList.server.vue` is a Nuxt server component — keep data fetching server-side only.
-- `v-once` is used on static sub-trees (icons, navigation items) for performance.
-
 ### Content
 - Markdown pages in `content/` are served via `[slug].vue` using `<ContentRenderer>`.
 - Rich text styles are in `app/assets/styles/rich-text.scss`.
 
 ### Performance
 - `v-once` is applied to all static sub-trees (icons, nav items, footer) to prevent unnecessary re-renders.
-- `ProjectList.server.vue` is a Nuxt server component — data fetching is server-side only, reducing client JS.
-- Hero image uses `loading="eager"` and `fetchpriority="high"`; all other images use `loading="lazy" fetchpriority="low"`.
+- Use `ComponentName.server.vue` where applicable to keep data fetching server-side only.
+- Core web vitals are important so consider optimum performance without change behaviour or content.
 - Fonts are self-hosted (no remote font requests); `font-display: swap` is set in `_fonts.scss`.
 - The site is statically generated (`nuxi generate`) — all pages are pre-rendered HTML.
-- Animations are wrapped in `@media (prefers-reduced-motion: no-preference)` guards throughout.
 
 ### Accessibility
 - Follow WCAG 2.2 AA as a minimum standard.
-- Use semantic HTML elements (`<nav>`, `<header>`, `<footer>`, `<section>`, `<main>`, etc.) rather than divs where appropriate.
+- Use semantic HTML.
 - The `.sr-only` global utility class is used to provide screen-reader-only context (e.g. icon button labels, decorative link supplements).
-- Interactive elements (links, buttons) must always have an accessible label — either visible text or `aria-label` / `.sr-only` text.
-- Navigation uses `aria-label`, `aria-expanded`, `aria-controls`, `aria-hidden`, and `role="menu"` / `role="menuitem"` correctly.
-- All images must have meaningful `alt` text; decorative images use `alt=""`.
-- Focus management is handled for mobile nav open/close interactions.
-- `touch-action: manipulation` is applied globally to links and buttons to prevent 300ms tap delay on mobile.
 
 ---
 
