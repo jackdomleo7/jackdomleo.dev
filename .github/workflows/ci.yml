@@ -30,5 +30,12 @@ jobs:
       - name: Run unit tests
         run: pnpm run test
 
-      - name: Check generate files
+      - name: Generate files
         run: pnpm run generate
+
+      - name: Deploy to gh-pages
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
