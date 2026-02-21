@@ -27,6 +27,9 @@ jobs:
       - name: Clean install Node dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: TypeScript type checking
+        run: pnpm run typecheck
+
       - name: Run unit tests
         run: pnpm run test
 
