@@ -42,12 +42,12 @@
     "@typescript-eslint/parser": "^8.56.0",
     "@vitest/coverage-v8": "^4.0.18",
     "@vue/test-utils": "^2.4.6",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^10.8.0",
-    "happy-dom": "^20.6.3",
+    "happy-dom": "^20.7.0",
     "nuxt": "^4.3.1",
     "nuxt-site-config": "^3.2.20",
     "open-cli": "^8.0.0",
@@ -58,7 +58,7 @@
     "type-fest": "^5.4.4",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18",
-    "vue-tsc": "^3.2.4"
+    "vue-tsc": "^3.2.5"
   },
   "engines": {
     "node": "24",
