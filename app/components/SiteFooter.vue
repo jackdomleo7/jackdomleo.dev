@@ -113,10 +113,6 @@ const socialLinks: { key: string; value: string }[] = [
       width: 2.5rem;
       aspect-ratio: auto 1 / 1;
       outline-offset: 2px;
-      
-      @media (prefers-reduced-motion: no-preference) {
-        transition: all var(--standard-animation-timing) ease;
-      }
     }
 
     &-icon {
