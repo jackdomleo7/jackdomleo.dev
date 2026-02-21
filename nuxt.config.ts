@@ -1,10 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import variables from './app/utilities/variables'
 
-if (!process.env.NUXT_BASE_URL) {
-  throw new Error('NUXT_BASE_URL environment variable is required. Set it before running the build.')
-}
-
 const SEO = {
   TITLE: `Jack Domleo - ${variables.OCCUPATION}`,
   DESCRIPTION: `Personal website of Jack Domleo, a ${variables.OCCUPATION.toLowerCase()} specialising in JavaScript-based technologies and web development.`
@@ -38,18 +34,13 @@ export default defineNuxtConfig({
     typeCheck: process.env.NODE_ENV === 'dev',
     strict: true
   },
-  runtimeConfig: {
-    public: {
-      BASE_URL: process.env.NUXT_BASE_URL
-    }
-  },
   css: [
     'modern-normalize/modern-normalize.css',
     'cooltipz-css/src/cooltipz-classes.scss',
     '~/assets/styles/main.scss'
   ],
   site: {
-    url: process.env.NUXT_BASE_URL,
+    url: 'https://jackdomleo.dev',
     name: SEO.TITLE
   },
   modules: [
@@ -89,8 +80,8 @@ export default defineNuxtConfig({
     identity: {
       type: 'Person',
       name: 'Jack Domleo',
-      url: process.env.NUXT_BASE_URL,
-      image: `${process.env.NUXT_BASE_URL}/me.webp`,
+      url: 'https://jackdomleo.dev',
+      image: 'https://jackdomleo.dev/me.webp',
       jobTitle: variables.OCCUPATION,
       worksFor: {
         type: 'Organization',

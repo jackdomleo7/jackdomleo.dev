@@ -192,7 +192,7 @@ useSeoMeta({
 
 useHead({
   link: [
-    { rel: 'canonical', href: `${config.public.BASE_URL}/work` }
+    { rel: 'canonical', href: 'https://jackdomleo.dev/work' }
   ]
 });
 </script>

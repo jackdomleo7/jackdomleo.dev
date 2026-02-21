@@ -21,11 +21,6 @@ jobs:
         with:
           node-version: '24.x'
 
-      - name: Get dotenv secrets
-        run: |
-          touch .env
-          echo NUXT_BASE_URL = ${{ secrets.NUXT_BASE_URL }} >> .env
-
       - name: Clean install Node dependencies
         run: pnpm i --frozen-lockfile
 

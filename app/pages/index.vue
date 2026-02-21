@@ -68,14 +68,14 @@ const config = useRuntimeConfig()
 
 useHead({
   link: [
-    { rel: 'canonical', href: `${config.public.BASE_URL}` }
+    { rel: 'canonical', href: `https://jackdomleo.dev` }
   ]
 })
 
 useSchemaOrg([
   defineWebSite({
     name: 'Jack Domleo',
-    url: config.public.BASE_URL,
+    url: 'https://jackdomleo.dev',
     description: `Personal website of Jack Domleo, ${variables.OCCUPATION}`,
     inLanguage: 'en-GB'
   })

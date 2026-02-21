@@ -36,7 +36,7 @@ useSeoMeta({
 
 useHead({
   link: [
-    { rel: 'canonical', href: `${config.public.BASE_URL}/${$route.params.slug}` }
+    { rel: 'canonical', href: `https://jackdomleo.dev/${$route.params.slug}` }
   ]
 });
 </script>

@@ -22,9 +22,6 @@ The central hub of my professional presence, built with **Nuxt 4**. This project
 - **Node**: v24
 - **pnpm**: v10
 
-Create a `.env` file with the following properties:
-- `NUXT_BASE_URL`
-
 ```bash
 # Serve with hot reload at localhost:3000
 $ pnpm run dev
