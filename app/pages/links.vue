@@ -6,7 +6,7 @@
     <div class="container container--thinner">
       <ul class="links__list">
         <li v-for="link in links" :key="link.name">
-          <nuxt-link class="link" :to="`${link.url}`" :rel="`${link.url}`.startsWith('http') ? 'nofollow noopener' : undefined">
+          <nuxt-link class="link" :to="`${link.url}`" :rel="`${link.url}`.startsWith('http') ? 'nofollow noopener noreferrer' : undefined">
             {{ link.name }}
             <Icon v-if="link.icon" :name="`custom:${link.icon}`" mode="svg" />
           </nuxt-link>
