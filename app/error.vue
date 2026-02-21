@@ -1,6 +1,5 @@
 <template>
   <div class="page">
-    <a href="#maincontent" class="sr-only sr-only--focusable skip-link">Skip to main content</a>
     <Navigation />
     <main id="maincontent">
       <div class="container container--thinner error-page">
@@ -27,14 +26,7 @@ defineProps<{
 }>();
 
 useHead({
-  title: '404 — Page Not Found | Jack Domleo',
-  htmlAttrs: {
-    lang: 'en-GB'
-  },
-  link: [
-    { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
-    { rel: 'icon', type: 'image/png', href: '/icon.png' }
-  ],
+  title: 'Page Not Found',
 });
 
 function handleGoHome() {
@@ -56,20 +48,6 @@ function handleGoHome() {
       margin-top: 8rem;
     }
   }
-}
-
-.skip-link {
-  display: block;
-  position: fixed !important;
-  top: 1rem;
-  left: 1rem;
-  z-index: 9999;
-  padding: 0.5rem 1rem !important;
-  background-color: var(--color-fg1);
-  color: var(--color-accent);
-  border-radius: 0.25rem;
-  font-weight: 700;
-  text-decoration: none;
 }
 
 .error-page {

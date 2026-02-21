@@ -10,6 +10,13 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en-GB'
+      },
+      link: [
+        { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/icon.png' }
+      ],
       meta: [
         {
           // Content-Security-Policy restricts which resources the browser is allowed to load. GitHub Pages does not support custom response headers, so this must be set as a <meta http-equiv> tag instead. Note: frame-ancestors is ignored by browsers when set via a meta tag (it only works as a response header), but all other directives are honoured. Key directives:
