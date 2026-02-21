@@ -296,6 +296,7 @@ $row-padding-h: 1rem;
     padding: 0;
     background: none;
     border: none;
+    outline-offset: 0.25rem;
 
     @media (min-width: $responsive-standard-tablet) { width: 11.125rem; height: 6.25rem; }
     

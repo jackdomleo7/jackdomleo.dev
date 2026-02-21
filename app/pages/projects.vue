@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import ProjectList from '@/components/ProjectList.server.vue';
+import ProjectList from '@/components/ProjectList.vue';
 import variables from '@/utilities/variables';
 
 const config = useRuntimeConfig()

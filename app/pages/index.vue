@@ -51,7 +51,7 @@
     <section id="projects" class="container projects">
       <h2 class="projects__heading">Projects</h2>
       <p class="projects__description container">A collection of personal experiments, projects, AI-assisted prototypes, and more.</p>
-      <ProjectList class="projects__list" :limit="6" />
+      <ProjectList class="projects__list" :limit="6" :heading-level="'h3'" />
       <nuxt-link to="/projects" class="projects__more link">
         Explore more projects
         <Icon v-once class="projects__more-icon" name="custom:arrow-right" mode="svg" />
@@ -61,7 +61,7 @@
 </template>
 
 <script lang="ts" setup>
-import ProjectList from '@/components/ProjectList.server.vue'
+import ProjectList from '@/components/ProjectList.vue'
 import variables from '@/utilities/variables';
 
 const config = useRuntimeConfig()
