@@ -1,6 +1,10 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import variables from './app/utilities/variables'
 
+if (!process.env.NUXT_BASE_URL) {
+  throw new Error('NUXT_BASE_URL environment variable is required. Set it before running the build.')
+}
+
 const SEO = {
   TITLE: `Jack Domleo - ${variables.OCCUPATION}`,
   DESCRIPTION: `Personal website of Jack Domleo, a ${variables.OCCUPATION.toLowerCase()} specialising in JavaScript-based technologies and web development.`
@@ -8,6 +12,28 @@ const SEO = {
 
 export default defineNuxtConfig({
   ssr: true,
+  app: {
+    head: {
+      meta: [
+        {
+          // Content-Security-Policy restricts which resources the browser is allowed to load. GitHub Pages does not support custom response headers, so this must be set as a <meta http-equiv> tag instead. Note: frame-ancestors is ignored by browsers when set via a meta tag (it only works as a response header), but all other directives are honoured. Key directives:
+          // - default-src 'self'      → block all resources not explicitly permitted
+          // - script-src 'unsafe-inline' → required by Nuxt's inline hydration scripts
+          // - style-src 'unsafe-inline'  → required for Vue's scoped style injection
+          // - frame-ancestors 'none'  → prevents this page being embedded in an iframe (clickjacking)
+          // - base-uri 'self'         → prevents <base> tag hijacking
+          // - form-action 'self'      → prevents forms from submitting to external URLs
+          'http-equiv': 'Content-Security-Policy',
+          content: "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+        },
+        {
+          // Referrer-Policy controls how much referrer information is sent with outbound requests. strict-origin-when-cross-origin: sends the full URL for same-origin requests, but only the origin (no path/query) for cross-origin requests, and nothing over HTTP. This prevents leaking page URLs to third-party services via the Referer header.
+          name: 'referrer',
+          content: 'strict-origin-when-cross-origin'
+        }
+      ]
+    }
+  },
   typescript: {
     typeCheck: process.env.NODE_ENV === 'dev',
     strict: true
