@@ -2,17 +2,16 @@
   <nav 
     class="nav" 
     :class="{ 'nav--sticky': !navIsAtTop || isMobileNavOpen }"
-    :aria-label="isMobileNavOpen ? 'Main navigation (expanded)' : 'Main navigation'"
+    aria-label="Main navigation"
   >
     <div class="nav__wrapper">
       <nuxt-link v-once to="/" class="nav__name">
         Jack Domleo
         <span class="sr-only"> - Home</span>
       </nuxt-link>
-      <nuxt-link v-once to="/" class="nav__logo">
+      <span v-once class="nav__logo" aria-hidden="true">
         <Icon v-once name="custom:j-icon" mode="svg" />
-        <span class="sr-only">Home</span>
-      </nuxt-link>
+      </span>
       <div v-if="!isMobile" class="nav__primary">
         <ul class="nav__primary-list">
           <li v-for="navItem in navItems" :key="navItem.text" class="nav__item">
@@ -23,7 +22,6 @@
               v-else 
               :aria-expanded="expandedSubmenus.has(navItem.text)"
               :aria-controls="getSubmenuId(navItem.text)"
-              aria-haspopup="true"
               @click="toggleSubmenu(navItem.text)"
               @keydown.esc="closeAllSubmenus"
             >
@@ -34,13 +32,11 @@
               v-if="navItem.submenu"
               :id="getSubmenuId(navItem.text)"
               :aria-hidden="!expandedSubmenus.has(navItem.text)"
-              role="menu"
             >
-              <li v-for="subItem in navItem.submenu" :key="subItem.text" role="none">
+              <li v-for="subItem in navItem.submenu" :key="subItem.text">
                 <nuxt-link 
                   v-if="subItem.url" 
                   :to="subItem.url"
-                  role="menuitem"
                   @click="closeAllSubmenus"
                 >
                   {{ subItem.text }}
@@ -74,12 +70,10 @@
         class="nav__more" 
         :class="{'nav__more--open': isMobile && isMobileNavOpen}"
         :aria-hidden="!isMobileNavOpen"
-        role="menu"
       >
-        <li v-for="navItem in mobileNavItems" :key="navItem.text" role="none">
+        <li v-for="navItem in mobileNavItems" :key="navItem.text">
           <nuxt-link 
             :to="navItem.url!" 
-            role="menuitem"
             @click="toggleMobileNav(false)"
           >
             {{ navItem.text }}
@@ -107,7 +101,7 @@ interface INav {
 const isMobile = ref(false)
 const isTouchscreen = ref(false)
 const isMobileNavOpen = ref(false)
-const navIsAtTop = ref(false)
+const navIsAtTop = ref(true)
 const expandedSubmenus = ref(new Set<string>())
 
 const navItems: FixedLengthArray<INav, 3> = [ // No more than 3 top-level items
@@ -155,39 +149,33 @@ function getSubmenuId(navItemText: string): string {
   return submenuIds.value.get(navItemText) || `submenu-${navItemText.toLowerCase()}`
 }
 
-// Focus trap functionality - memoized selectors
+// Focus trap functionality
 let focusableElements: HTMLElement[] = []
 let firstFocusableElement: HTMLElement | null = null
 let lastFocusableElement: HTMLElement | null = null
 
-const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
-
-// Optimized focus trap with early returns and cached queries
+// Build the focusable list from known, named elements rather than filtering by
+// getBoundingClientRect(). The nav slides in via CSS transform, so dimensions are
+// unreliable mid-animation — elements appear off-screen until the transition settles.
 function setupFocusTrap() {
   if (!isMobileNavOpen.value) return
-  
-  const nav = document.querySelector('nav.nav') as HTMLElement
-  if (!nav) return
-  
-  const elements = nav.querySelectorAll(FOCUSABLE_SELECTOR)
-  focusableElements = Array.from(elements).filter(el => {
-    const element = el as HTMLElement
-    const rect = element.getBoundingClientRect()
-    return rect.width > 0 && rect.height > 0 && window.getComputedStyle(element).visibility !== 'hidden'
-  }) as HTMLElement[]
-  
-  if (focusableElements.length === 0) return
-  
+
+  const homeName = document.querySelector<HTMLElement>('.nav__name')
+  const hamburger = document.querySelector<HTMLElement>('.nav__hamburger')
+  const mobileNavLinks = Array.from(
+    document.querySelectorAll<HTMLElement>('#mobile-nav a[href]')
+  )
+
+  focusableElements = [homeName, hamburger, ...mobileNavLinks].filter(
+    (el): el is HTMLElement => el !== null
+  )
+
   firstFocusableElement = focusableElements[0] || null
   lastFocusableElement = focusableElements[focusableElements.length - 1] || null
-  
-  // Focus the first non-hamburger element when opening
-  const hamburger = document.querySelector('.nav__hamburger') as HTMLElement
-  const targetElement = firstFocusableElement !== hamburger ? firstFocusableElement : focusableElements[1]
-  
-  if (targetElement) {
-    // Use requestAnimationFrame for smoother focus
-    requestAnimationFrame(() => targetElement.focus())
+
+  // Move focus to the first nav link so the user lands directly in the list
+  if (mobileNavLinks[0]) {
+    mobileNavLinks[0].focus()
   }
 }
 
@@ -254,6 +242,8 @@ watch(route, () => {
 
 watch(isMobileNavOpen, (newValue) => {
   if (newValue) {
+    // nextTick ensures Vue has flushed DOM updates (--open class applied)
+    // before we query #mobile-nav links.
     nextTick(() => setupFocusTrap())
   }
 })
@@ -275,9 +265,9 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  // Clear timeouts to prevent memory leaks
+  // Clear pending timers/frames to prevent memory leaks
   if (resizeTimeout) clearTimeout(resizeTimeout)
-  if (scrollTimeout) clearTimeout(scrollTimeout)
+  if (scrollRafId) cancelAnimationFrame(scrollRafId)
   
   window.removeEventListener('resize', setResponsiveness)
   window.removeEventListener('scroll', handleScroll)
@@ -287,7 +277,7 @@ onUnmounted(() => {
 
 // Throttled event handlers for performance
 let resizeTimeout: NodeJS.Timeout | null = null
-let scrollTimeout: NodeJS.Timeout | null = null
+let scrollRafId: number | null = null
 
 function setResponsiveness (): void {
   if (resizeTimeout) return
@@ -312,12 +302,12 @@ function setResponsiveness (): void {
 }
 
 function handleScroll (): void {
-  if (scrollTimeout) return
-  
-  scrollTimeout = setTimeout(() => {
+  if (scrollRafId) return
+
+  scrollRafId = requestAnimationFrame(() => {
     navIsAtTop.value = !(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
-    scrollTimeout = null
-  }, 16) // ~60fps
+    scrollRafId = null
+  })
 }
 
 function toggleMobileNav (open: boolean): void {
@@ -325,8 +315,8 @@ function toggleMobileNav (open: boolean): void {
   document.body.style.overflow = isMobileNavOpen.value ? 'hidden' : ''
   
   if (open) {
-    nextTick(() => setupFocusTrap())
-  }
+      nextTick(() => setupFocusTrap())
+    }
 }
 </script>
 
@@ -403,7 +393,6 @@ $navHeight: 4rem;
     @media (prefers-reduced-motion: no-preference) {
       transition-property: top, transform, width;
       transition: 360ms ease;
-      will-change: top, transform, width;
     }
   }
 
@@ -468,7 +457,6 @@ $navHeight: 4rem;
       border-bottom: 1px solid transparent;
       
       @media (prefers-reduced-motion: no-preference) {
-        will-change: color, border-color;
         transition-property: color, border-color;
         transition: 160ms ease;
       }
@@ -620,9 +608,10 @@ $navHeight: 4rem;
     font-size: var(--text-large);
     
     @media (prefers-reduced-motion: no-preference) {
-      transition-property: height, padding, border;
-      transition: 260ms ease;
-      will-change: height, padding, border;
+      // Use a single longhand list rather than transition-property + transition shorthand.
+      // The shorthand resets transition-property to 'all', which would animate visibility
+      // and transform — causing the focus trap's element queries to run mid-animation.
+      transition: transform 260ms ease, padding 260ms ease, border-top-width 260ms ease;
     }
 
     @media (forced-colors: active) {
