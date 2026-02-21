@@ -15,7 +15,6 @@
       <li v-for="socialLink in socialLinks" :key="socialLink.key">
         <nuxt-link :href="socialLink.value" target="_blank" rel="noopener noreferrer" class="cooltipz--top" :aria-label="socialLink.key">
           <Icon class="footer__social-icon" :name="`custom:${socialLink.key.toLowerCase()}`" mode="svg" />
-          <span class="sr-only">{{ socialLink.key }}</span>
         </nuxt-link>
       </li>
     </ul>
