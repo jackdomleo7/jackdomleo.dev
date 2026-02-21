@@ -1,7 +1,7 @@
 # [jackdomleo.dev](https://jackdomleo.dev)
 
 ![Website status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fjackdomleo.dev "Website status")
-[![deploy](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/deploy.yml/badge.svg)](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/deploy.yml)
+[![CI workflow](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/ci.yml/badge.svg)](https://github.com/jackdomleo7/jackdomleo.dev/actions/workflows/ci.yml)
 
 The central hub of my professional presence, built with **Nuxt 4**. This project serves as a production testbed for my architectural standards and frontend expertise.
 
