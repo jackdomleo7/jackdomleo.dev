@@ -40,9 +40,10 @@
         <div v-once v-for="(category, categoryName) in skills" :key="categoryName" class="skills__section container">
           <h3 class="skills__heading skills__heading--sub container">{{ categoryName }}</h3>
           <ul class="skills__list container">
-            <li v-for="skill in category" :key="skill.key">
+            <li v-for="skill in category" :key="skill.key" class="skills__item">
               <Icon class="skills__icon" :name="`custom:${skill.key}`" mode="svg" />
               <span class="skills__text" mode="svg">{{ skill.value }}</span>
+              <CertifiedBadge v-if="skill.certified" :certification-url="skill.certified.url" />
             </li>
           </ul>
         </div>
@@ -79,13 +80,27 @@ useSchemaOrg([
   })
 ])
 
-const skills: { [key: string]: { key: string; value: string }[] } = {
+interface Skill {
+  key: string
+  value: string
+  certified?: {
+    url: string
+  }
+}
+
+const skills: { [key: string]: Skill[] } = {
   'Core Engineering': [
     { key: 'html', value: 'HTML' },
     { key: 'css', value: 'CSS' },
     { key: 'javascript', value: 'JavaScript' },
     { key: 'typescript', value: 'TypeScript' },
-    { key: 'vue', value: 'Vue.js' },
+    { 
+      key: 'vue', 
+      value: 'Vue.js',
+      certified: {
+        url: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.url
+      }
+    },
     { key: 'nuxt', value: 'Nuxt.js' },
     { key: 'vite', value: 'Vite' },
     { key: 'sass', value: 'SCSS' },

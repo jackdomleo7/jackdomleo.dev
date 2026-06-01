@@ -23,5 +23,13 @@ export default {
   CODEPEN_URL: 'https://codepen.io/jackdomleo7',
   OCCUPATION: 'Lead Frontend Engineer',
   CURRENT_YEAR: new Date().getFullYear(),
-  NO_OF_YEARS_EXPERIENCE: computeYearsExperience()
+  NO_OF_YEARS_EXPERIENCE: computeYearsExperience(),
+  CERTIFICATIONS: {
+    VUE_JS_MID_LEVEL: {
+      title: 'Vue.js Developer Level I',
+      url: 'https://certificates.dev/c/a1e72840-92b3-46d6-8d35-b39ec633c902',
+      localPath: '/certifications/vue_js_mid_level_certificate.pdf',
+      dateEarned: '2026-05-30'
+    }
+  }
 }

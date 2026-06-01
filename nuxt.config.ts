@@ -112,6 +112,15 @@ export default defineNuxtConfig({
         'TypeScript',
         'Web Accessibility (WCAG)',
         'Technical Leadership'
+      ],
+      hasCredential: [
+        {
+          type: 'EducationalOccupationalCredential',
+          name: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.title,
+          url: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.url,
+          credentialCategory: 'Professional Certification',
+          dateCreated: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.dateEarned
+        }
       ]
     }
   },
