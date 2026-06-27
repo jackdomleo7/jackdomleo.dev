@@ -23,14 +23,14 @@
   "dependencies": {
     "@nuxt/content": "^3.14.0",
     "@nuxt/icon": "^2.2.4",
-    "@nuxtjs/robots": "^5.7.1",
-    "@nuxtjs/sitemap": "^7.6.0",
+    "@nuxtjs/robots": "^6.1.2",
+    "@nuxtjs/sitemap": "^8.2.2",
     "better-sqlite3": "^12.11.1",
     "cooltipz-css": "^2.5.1",
     "dayjs": "^1.11.21",
     "modern-normalize": "^3.0.1",
-    "nuxt-schema-org": "^5.0.10",
-    "nuxt-seo-utils": "^7.0.19"
+    "nuxt-schema-org": "^6.2.3",
+    "nuxt-seo-utils": "^8.3.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^8.0.1",
@@ -48,7 +48,7 @@
     "eslint-plugin-vue": "^10.9.2",
     "happy-dom": "^20.10.6",
     "nuxt": "^4.4.8",
-    "nuxt-site-config": "^3.2.21",
+    "nuxt-site-config": "^4.1.1",
     "prettier": "^3.8.5",
     "rimraf": "^6.1.3",
     "sass": "^1.101.0",
