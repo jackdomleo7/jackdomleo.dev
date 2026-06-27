@@ -14,10 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Setup pnpm 10
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
 
       - name: Setup Node 24
         uses: actions/setup-node@v6
