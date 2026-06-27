@@ -54,7 +54,7 @@
     "sass": "^1.101.0",
     "ts-node": "^10.9.2",
     "type-fest": "^5.7.0",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.9",
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.5"
