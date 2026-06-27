@@ -116,10 +116,10 @@ export default defineNuxtConfig({
       hasCredential: [
         {
           type: 'EducationalOccupationalCredential',
-          name: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.title,
-          url: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.url,
+          name: variables.CERTIFICATIONS.VUE_JS_SENIOR_LEVEL.title,
+          url: variables.CERTIFICATIONS.VUE_JS_SENIOR_LEVEL.url,
           credentialCategory: 'Professional Certification',
-          dateCreated: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.dateEarned
+          dateCreated: variables.CERTIFICATIONS.VUE_JS_SENIOR_LEVEL.dateEarned
         }
       ]
     }

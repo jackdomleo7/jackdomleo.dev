@@ -43,7 +43,7 @@
             <li v-for="skill in category" :key="skill.key" class="skills__item">
               <Icon class="skills__icon" :name="`custom:${skill.key}`" mode="svg" />
               <span class="skills__text" mode="svg">{{ skill.value }}</span>
-              <CertifiedBadge v-if="skill.certified" :certification-url="skill.certified.url" />
+              <CertifiedBadge v-if="skill.certified" :title="skill.certified.title" :certification-url="skill.certified.url" />
             </li>
           </ul>
         </div>
@@ -84,6 +84,7 @@ interface Skill {
   key: string
   value: string
   certified?: {
+    title: string
     url: string
   }
 }
@@ -98,7 +99,8 @@ const skills: { [key: string]: Skill[] } = {
       key: 'vue', 
       value: 'Vue.js',
       certified: {
-        url: variables.CERTIFICATIONS.VUE_JS_MID_LEVEL.url
+        title: variables.CERTIFICATIONS.VUE_JS_SENIOR_LEVEL.topic,
+        url: variables.CERTIFICATIONS.VUE_JS_SENIOR_LEVEL.url
       }
     },
     { key: 'nuxt', value: 'Nuxt.js' },

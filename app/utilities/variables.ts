@@ -25,11 +25,12 @@ export default {
   CURRENT_YEAR: new Date().getFullYear(),
   NO_OF_YEARS_EXPERIENCE: computeYearsExperience(),
   CERTIFICATIONS: {
-    VUE_JS_MID_LEVEL: {
-      title: 'Vue.js Developer Level I',
-      url: 'https://certificates.dev/c/a1e72840-92b3-46d6-8d35-b39ec633c902',
-      localPath: '/certifications/vue_js_mid_level_certificate.pdf',
-      dateEarned: '2026-05-30'
+    VUE_JS_SENIOR_LEVEL: {
+      title: 'Senior Vue.js Developer',
+      topic: 'Vue.js',
+      url: 'https://certificates.dev/c/a21f18d3-da03-44a1-8b0a-bf2cc10dfc2f',
+      localPath: '/certifications/vue_js_senior_certificate.pdf',
+      dateEarned: '2026-06-27'
     }
   }
 }

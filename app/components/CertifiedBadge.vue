@@ -5,15 +5,16 @@
     target="_blank"
     rel="noopener noreferrer"
     class="certified-badge cooltipz--top"
-    aria-label="Certified"
+    :aria-label="`${title} - ✓ Certified`"
   >
     <Icon name="custom:star" mode="svg" class="certified-badge__icon" />
-    <span class="sr-only">Certified - View certificate</span>
+    <span class="sr-only">{{ title }}Certified - View certificate</span>
   </nuxt-link>
 </template>
 
 <script lang="ts" setup>
 defineProps<{
+  title: string
   certificationUrl: string
 }>();
 </script>
@@ -25,6 +26,7 @@ defineProps<{
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s ease;
+  margin: -0.625rem 0 0 -0.375rem;
 
   &:hover,
   &:focus-visible {
