@@ -18,8 +18,7 @@
     "preview": "nuxi preview",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint --max-warnings=0 --cache --fix .",
-    "test": "rimraf ./coverage && vitest run --pass-with-no-tests",
-    "test:report": "open-cli coverage/index.html"
+    "test": "rimraf ./coverage && vitest run --pass-with-no-tests"
   },
   "dependencies": {
     "@nuxt/content": "^3.14.0",
@@ -50,7 +49,6 @@
     "happy-dom": "^20.10.6",
     "nuxt": "^4.4.8",
     "nuxt-site-config": "^3.2.21",
-    "open-cli": "^8.0.0",
     "prettier": "^3.8.5",
     "rimraf": "^6.1.3",
     "sass": "^1.101.0",
