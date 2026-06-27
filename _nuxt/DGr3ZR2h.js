@@ -1,0 +1,1 @@
+import{i as s,o,a as r,L as t}from"./CMKHghkd.js";const n={};function a(e,c){return o(),r("td",null,[t(e.$slots,"default")])}const _=Object.assign(s(n,[["render",a]]),{__name:"ProseTd"});export{_ as default};

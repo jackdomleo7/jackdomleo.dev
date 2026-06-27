@@ -1,0 +1,1 @@
+import{i as o,o as s,a as r,L as t}from"./CMKHghkd.js";const n={};function a(e,c){return s(),r("tbody",null,[t(e.$slots,"default")])}const _=Object.assign(o(n,[["render",a]]),{__name:"ProseTbody"});export{_ as default};

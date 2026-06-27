@@ -1,0 +1,1 @@
+import{i as o,o as s,a as r,L as n}from"./CMKHghkd.js";const t={};function a(e,c){return s(),r("ol",null,[n(e.$slots,"default")])}const _=Object.assign(o(t,[["render",a]]),{__name:"ProseOl"});export{_ as default};

@@ -1,0 +1,1 @@
+import{i as o,o as r,a as n,L as s}from"./CMKHghkd.js";const t={};function a(e,c){return r(),n("strong",null,[s(e.$slots,"default")])}const _=Object.assign(o(t,[["render",a]]),{__name:"ProseStrong"});export{_ as default};
