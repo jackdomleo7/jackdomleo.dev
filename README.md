@@ -19,9 +19,6 @@ The central hub of my professional presence, built with **Nuxt 4**. This project
 
 ## 🛠 Local Setup
 
-- **Node**: v24
-- **pnpm**: v10
-
 ```bash
 # Serve with hot reload at localhost:3000
 $ pnpm run dev
