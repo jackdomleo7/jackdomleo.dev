@@ -37,7 +37,7 @@
     "@libsql/client": "^0.18.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
-    "@types/node": "^24.19.1",
+    "@types/node": "^26.6.4",
     "@typescript-eslint/eslint-plugin": "^8.71.0",
     "@typescript-eslint/parser": "^8.71.0",
     "@vitest/coverage-v8": "^4.1.11",
@@ -61,6 +61,6 @@
   },
   "packageManager": "pnpm@11.28.4",
   "engines": {
-    "node": "24"
+    "node": "26"
   }
 }
