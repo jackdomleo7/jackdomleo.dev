@@ -25,7 +25,7 @@
     "@nuxt/icon": "^2.5.1",
     "@nuxtjs/robots": "^6.2.4",
     "@nuxtjs/sitemap": "^8.6.1",
-    "better-sqlite3": "^12.11.1",
+    "better-sqlite3": "^13.0.3",
     "cooltipz-css": "^2.5.1",
     "dayjs": "^1.11.23",
     "modern-normalize": "^3.0.1",
