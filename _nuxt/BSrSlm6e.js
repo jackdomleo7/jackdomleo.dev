@@ -1,1 +1,0 @@
-import{i as s,o,a as r,L as n}from"./CMKHghkd.js";const t={};function a(e,c){return o(),r("p",null,[n(e.$slots,"default")])}const _=Object.assign(s(t,[["render",a]]),{__name:"ProseP"});export{_ as default};

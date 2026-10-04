@@ -1,0 +1,1 @@
+import{F as e,m as t,z as n}from"./BLA-_YXI.js";import{t as r}from"./BDNMzG2s.js";var i={};function a(r,i){return e(),t(`ol`,null,[n(r.$slots,`default`)])}var o=Object.assign(r(i,[[`render`,a]]),{__name:`ProseOl`});export{o as default};
